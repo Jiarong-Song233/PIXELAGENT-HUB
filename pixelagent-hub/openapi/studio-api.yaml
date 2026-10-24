@@ -1357,7 +1357,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/BrowserAction'
-          maxItems: 8
+          maxItems: 16
         selector:
           type: string
           maxLength: 160

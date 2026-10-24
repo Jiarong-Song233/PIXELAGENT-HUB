@@ -377,3 +377,20 @@ it('reads computed styles and compares class-driven changes and stable samples',
     expect(results.map(({ actual }) => actual)).toEqual(['matrix(-1, 0, 0, -1, 0, 0)', '', ...Array(4).fill('rgb(255, 0, 0)')]);
   } finally { vi.useRealTimers(); }
 });
+
+it('inputs replace contenteditable text and fire input, change and blur, but reject plain divs', async () => {
+  const events: Event[] = [];
+  const node = { textContent: '<b>Updated note</b>' };
+  const target = { tagName: 'DIV', isContentEditable: true, textContent: 'Old note', replaceChildren: vi.fn((child: typeof node) => { target.textContent = child.textContent; }), dispatchEvent: (event: Event) => { events.push(event); } };
+  const document = { querySelectorAll: () => [target], createTextNode: vi.fn(() => node) } as unknown as Document;
+  const check = { name: 'Edit note', actions: [{ type: 'input' as const, selector: 'div', value: node.textContent }], selector: 'div', expected: node.textContent };
+  expect(await runDOMChecks(document, [check])).toEqual([{ name: 'Edit note', status: 'passed', actual: node.textContent }]);
+  expect(document.createTextNode).toHaveBeenCalledWith(node.textContent);
+  expect(target.replaceChildren).toHaveBeenCalledWith(node);
+  expect(events.map(({ type }) => type)).toEqual(['input', 'change', 'blur']);
+  expect(events.slice(0, 2).every(({ bubbles }) => bubbles)).toBe(true);
+  target.isContentEditable = false;
+  events.length = 0;
+  expect((await runDOMChecks(document, [check]))[0]).toMatchObject({ status: 'failed', error: 'Input action requires an input, textarea, select or contenteditable element' });
+  expect(events).toEqual([]);
+});

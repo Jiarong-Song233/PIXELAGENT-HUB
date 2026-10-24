@@ -26,7 +26,7 @@ const action = z.discriminatedUnion('type', [
   z.object({ type: z.literal('key'), selector, nth, key: z.string().min(1).max(32) }).strict(),
 ]);
 // changed/unchanged: text or attribute relative to before actions; text: rendered text; disabled: native :disabled state; visible: shown; count: matches; attribute: exact attribute or live value.
-export const browserCheckSchema = z.object({ name: z.string().min(1).max(120), trace: z.string().max(300).optional(), actions: z.array(action).max(8), selector, nth, expected: z.string().max(300), assertion: z.enum(['text', 'matches', 'disabled', 'visible', 'count', 'attribute', 'changed', 'unchanged', 'stable']).optional(), attribute: z.string().regex(/^(?:[a-z][a-z0-9-]{0,49}|(?:style|css)\.[a-z][a-z-]{0,39})$/).optional() }).strict()
+export const browserCheckSchema = z.object({ name: z.string().min(1).max(120), trace: z.string().max(300).optional(), actions: z.array(action).max(16), selector, nth, expected: z.string().max(300), assertion: z.enum(['text', 'matches', 'disabled', 'visible', 'count', 'attribute', 'changed', 'unchanged', 'stable']).optional(), attribute: z.string().regex(/^(?:[a-z][a-z0-9-]{0,49}|(?:style|css)\.[a-z][a-z-]{0,39})$/).optional() }).strict()
   .refine((check) => check.actions.reduce((total, action) => total + (action.type === 'wait' ? action.ms : 0), 0) <= 8000, 'Waits must total at most 8000 ms per check')
   .refine((check) => check.assertion !== 'count' || check.nth === undefined, 'Count forbids nth')
   .refine((check) => {

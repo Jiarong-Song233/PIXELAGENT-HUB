@@ -54,7 +54,7 @@ if (explicitArms) await writeFile(join(out, 'arms.json'), JSON.stringify(arms.ma
 try {
   for (const testCase of cases) for (let run = 1; run <= runs; run++) for (const arm of rotateArms(arms, run)) {
     const directory = explicitArms ? join(out, arm.arm) : out;
-    const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+    const context = await browser.newContext({ locale: 'en-US', timezoneId: 'UTC', viewport: { width: 1280, height: 900 } });
     const page = await context.newPage();
     let tokens = 0;
     // With --base-url the page talks to a local OpenAI-compatible server (no key); otherwise to DeepSeek with the real key.

@@ -351,3 +351,30 @@ test('real browser reads class-driven computed styles and leaves inline styles e
     assert.deepEqual(run.checks.map(({ actual }) => actual), ['matrix(-1, 0, 0, -1, 0, 0)', '', 'matrix(-1, 0, 0, -1, 0, 0)', 'matrix(-1, 0, 0, -1, 0, 0)', 'none', 'matrix(-1, 0, 0, -1, 0, 0)']);
   } finally { await rm(root, { recursive: true, force: true }); }
 });
+
+test('real browser edits contenteditable text and fixes locale and timezone', { skip: process.env.RUN_STUDIO_BROWSER_TESTS !== '1' }, async () => {
+  const root = await mkdtemp(join(tmpdir(), 'browser-editable-locale-'));
+  try {
+    const content = `<html><body><div id="note" contenteditable><b>Old note</b></div><output id="events"></output><output id="currency"></output><output id="timezone"></output><div id="plain"></div><button>Count</button><output id="count">0</output><script>
+      const note = document.querySelector('#note');
+      for (const type of ['input', 'change', 'blur']) note.addEventListener(type, () => { document.querySelector('#events').textContent += type + ' '; });
+      document.querySelector('#currency').textContent = new Intl.NumberFormat(undefined, {style:'currency',currency:'USD'}).format(0);
+      document.querySelector('#timezone').textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      document.querySelector('button').onclick = () => document.querySelector('#count').textContent++;
+    </script></body></html>`;
+    const actions = [{ type: 'input', selector: '#note', value: '<b>New note</b>' }];
+    const checks = { checks: [
+      { name: 'Text', actions, selector: '#note', expected: '<b>New note</b>' },
+      { name: 'Events', actions, selector: '#events', expected: 'input change blur' },
+      { name: 'Markup removed', actions, selector: '#note b', assertion: 'count', expected: '0' },
+      { name: 'Currency', actions: [], selector: '#currency', expected: '$0.00' },
+      { name: 'Timezone', actions: [], selector: '#timezone', expected: 'UTC' },
+      { name: 'Sixteen clicks', actions: Array.from({ length: 16 }, () => ({ type: 'click', selector: 'button' })), selector: '#count', expected: '16' },
+      { name: 'Plain div rejected', actions: [{ type: 'input', selector: '#plain', value: 'No' }], selector: '#plain', expected: 'No' },
+    ], limitations: [], isolation: 'fresh' };
+    const run = await executeBrowserRun({ root, run: makeRun(content, checks), html: content, plan: checks, signal: new AbortController().signal, executablePath: process.env.STUDIO_BROWSER_EXECUTABLE });
+    assert.equal(run.error, undefined);
+    assert.deepEqual(run.checks.map(({ status }) => status), ['passed', 'passed', 'passed', 'passed', 'passed', 'passed', 'failed'], JSON.stringify(run));
+    assert.equal(run.checks[6].error, 'Input action requires an input, textarea, select or contenteditable element');
+  } finally { await rm(root, { recursive: true, force: true }); }
+});

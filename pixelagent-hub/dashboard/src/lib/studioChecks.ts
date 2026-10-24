@@ -40,15 +40,17 @@ export async function runDOMChecks(document: Document, checks: BrowserCheck[], e
         const target = element(action.selector, action.nth);
         if (action.type === 'click') target.click();
         else if (action.type === 'input') {
-          if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) throw new Error('Input action requires an input, textarea or select');
+          if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) && !target.isContentEditable) throw new Error('Input action requires an input, textarea, select or contenteditable element');
           // Checkboxes and radios are clicked into the wanted state (click, input and change fire
           // natively), like Playwright's check()/uncheck() on the server.
           if (target.tagName === 'INPUT' && ['checkbox', 'radio'].includes((target as HTMLInputElement).type)) {
             if ((target as HTMLInputElement).checked !== (action.value !== 'false')) target.click();
           } else {
-            (target as HTMLInputElement).value = action.value;
+            if (target.isContentEditable) target.replaceChildren(document.createTextNode(action.value));
+            else (target as HTMLInputElement).value = action.value;
             target.dispatchEvent(new Event('input', { bubbles: true }));
             target.dispatchEvent(new Event('change', { bubbles: true }));
+            if (target.isContentEditable) target.dispatchEvent(new Event('blur'));
           }
         } else if (action.type === 'key') {
           target.focus(); target.dispatchEvent(new KeyboardEvent('keydown', { key: action.key, bubbles: true }));
