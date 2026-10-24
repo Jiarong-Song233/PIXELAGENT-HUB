@@ -1,0 +1,641 @@
+{
+  "caseId": "loan-compare",
+  "run": 3,
+  "strategy": "manager-coder",
+  "dist": "D:\\Projects\\PIXELAGENT-HUB\\.claude\\worktrees\\codex-quota-integration-2a76fa\\pixelagent-hub\\dashboard\\dist\\public",
+  "managerTokens": 20894,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 3,
+  "compileFailures": 1,
+  "firstChecks": "2/5",
+  "finalChecks": "4/5",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 3,
+  "coderRepair": true,
+  "checkRuns": [
+    "2/5",
+    "4/5",
+    "4/5"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 187,
+  "reportedTokens": 176288,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T01:10:40.509Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T01:10:40.509Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T01:10:57.869Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Savings Planner"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T01:10:57.870Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T01:11:32.201Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T01:11:32.201Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T01:11:32.654Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T01:11:32.655Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "b83fca0f-68f9-4b7a-8837-ef0d290c2d5d"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T01:11:49.084Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "b83fca0f-68f9-4b7a-8837-ef0d290c2d5d",
+        "checks": 5
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T01:11:49.084Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "abe0edb1-b2d6-407b-af82-688dbc738fac",
+        "testPlanId": "b83fca0f-68f9-4b7a-8837-ef0d290c2d5d",
+        "checks": 5,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T01:11:54.787Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "abe0edb1-b2d6-407b-af82-688dbc738fac",
+        "name": "Calculate months, interest, and schedule",
+        "passed": true,
+        "actual": "2 months"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T01:11:54.787Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "abe0edb1-b2d6-407b-af82-688dbc738fac",
+        "name": "Show interest and final balance",
+        "passed": false,
+        "actual": "US$0.00"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T01:11:54.787Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "abe0edb1-b2d6-407b-af82-688dbc738fac",
+        "name": "Render one row per month",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T01:11:54.787Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "abe0edb1-b2d6-407b-af82-688dbc738fac",
+        "name": "Apply monthly compounded interest",
+        "passed": false,
+        "actual": "2 US$247.50 US$5.00 US$500.00"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T01:11:54.787Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "abe0edb1-b2d6-407b-af82-688dbc738fac",
+        "name": "Reject unreachable zero-contribution plan",
+        "passed": true,
+        "actual": "With no monthly deposit and no interest, the goal cannot be reached."
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T01:11:54.787Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "abe0edb1-b2d6-407b-af82-688dbc738fac",
+        "status": "failed",
+        "passed": 2,
+        "failed": 3,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T01:11:54.788Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "b83fca0f-68f9-4b7a-8837-ef0d290c2d5d",
+        "review": true
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T01:12:30.770Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "b83fca0f-68f9-4b7a-8837-ef0d290c2d5d",
+        "checks": 5,
+        "review": true,
+        "revised": 3,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24809,
+          "completion_tokens": 523,
+          "total_tokens": 25332
+        },
+        "verdicts": [
+          {
+            "name": "Show interest and final balance",
+            "verdict": "check-wrong",
+            "reason": "The check expects the exact text \"$0.00\" for interest, but the app formats currency using the environment’s USD locale and displays \"US$0.00\". The requirements require showing total interest, not a pa"
+          },
+          {
+            "name": "Render one row per month",
+            "verdict": "check-wrong",
+            "reason": "The check uses `#schedule tr`, which matches two elements, but expects a single-element assertion. The requirement calls for a month-by-month table, and this scenario should produce two month rows. Th"
+          },
+          {
+            "name": "Apply monthly compounded interest",
+            "verdict": "check-wrong",
+            "reason": "The check expects the second month’s deposit to be $250.00, but the app caps the final deposit at the amount remaining to reach the goal, producing US$247.50 after first-month interest. The requiremen"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T01:12:30.770Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "2e8d5dee-f37c-46ac-b7af-65cfc797aa81",
+        "testPlanId": "b83fca0f-68f9-4b7a-8837-ef0d290c2d5d",
+        "checks": 5,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T01:12:34.450Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2e8d5dee-f37c-46ac-b7af-65cfc797aa81",
+        "name": "Calculate months, interest, and schedule",
+        "passed": true,
+        "actual": "2 months"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T01:12:34.450Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2e8d5dee-f37c-46ac-b7af-65cfc797aa81",
+        "name": "Show interest and final balance",
+        "passed": true,
+        "actual": "US$0.00"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T01:12:34.450Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2e8d5dee-f37c-46ac-b7af-65cfc797aa81",
+        "name": "Render one row per month",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T01:12:34.450Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2e8d5dee-f37c-46ac-b7af-65cfc797aa81",
+        "name": "Apply monthly compounded interest",
+        "passed": false,
+        "actual": "2 US$247.50 US$5.00 US$500.00"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T01:12:34.450Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2e8d5dee-f37c-46ac-b7af-65cfc797aa81",
+        "name": "Reject unreachable zero-contribution plan",
+        "passed": true,
+        "actual": "With no monthly deposit and no interest, the goal cannot be reached."
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T01:12:34.450Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "2e8d5dee-f37c-46ac-b7af-65cfc797aa81",
+        "status": "failed",
+        "passed": 4,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T01:12:34.452Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T01:13:10.229Z",
+      "type": "build_failed",
+      "round": 2,
+      "data": {
+        "errors": [
+          "Your previous reply could not be used: Expected ',' or ']' after array element in JSON at position 10653 (line 1 column 10654) Reply with exactly one JSON object {language, files:[{path, content, description}], explanation, dependencies}; escape quotes, backslashes and newlines inside \"content\" stri"
+        ]
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T01:13:10.229Z",
+      "type": "phase",
+      "round": 3,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-24T01:13:41.497Z",
+      "type": "code_ready",
+      "round": 3,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-24T01:13:41.497Z",
+      "type": "phase",
+      "round": 3,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-24T01:13:41.549Z",
+      "type": "build_passed",
+      "round": 3
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-24T01:13:41.550Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "7952878d-2a11-48ab-bb3c-781ba4527b2e",
+        "testPlanId": "b83fca0f-68f9-4b7a-8837-ef0d290c2d5d",
+        "checks": 5,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-24T01:13:45.261Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7952878d-2a11-48ab-bb3c-781ba4527b2e",
+        "name": "Calculate months, interest, and schedule",
+        "passed": true,
+        "actual": "2 months"
+      }
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-24T01:13:45.261Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7952878d-2a11-48ab-bb3c-781ba4527b2e",
+        "name": "Show interest and final balance",
+        "passed": true,
+        "actual": "US$0.00"
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-24T01:13:45.261Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7952878d-2a11-48ab-bb3c-781ba4527b2e",
+        "name": "Render one row per month",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-24T01:13:45.261Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7952878d-2a11-48ab-bb3c-781ba4527b2e",
+        "name": "Apply monthly compounded interest",
+        "passed": false,
+        "actual": "2 US$247.50 US$5.00 US$500.00"
+      }
+    },
+    {
+      "seq": 37,
+      "at": "2026-10-24T01:13:45.261Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7952878d-2a11-48ab-bb3c-781ba4527b2e",
+        "name": "Reject unreachable zero-contribution plan",
+        "passed": true,
+        "actual": "With no monthly deposit and no interest, the goal cannot be reached."
+      }
+    },
+    {
+      "seq": 38,
+      "at": "2026-10-24T01:13:45.261Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "7952878d-2a11-48ab-bb3c-781ba4527b2e",
+        "status": "failed",
+        "passed": 4,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 39,
+      "at": "2026-10-24T01:13:45.263Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v3/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Calculate months, interest, and schedule",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "500"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#months-result",
+        "expected": "2 months"
+      },
+      {
+        "name": "Show interest and final balance",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "500"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#interest-result",
+        "expected": "^.*0\\.00$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Render one row per month",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "500"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#schedule tr",
+        "expected": "2",
+        "assertion": "count"
+      },
+      {
+        "name": "Apply monthly compounded interest",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "500"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "12"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#schedule tr",
+        "nth": 1,
+        "expected": "US$5.00",
+        "assertion": "matches"
+      },
+      {
+        "name": "Reject unreachable zero-contribution plan",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "500"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#message",
+        "expected": "With no monthly deposit and no interest, the goal cannot be reached."
+      }
+    ],
+    "limitations": [
+      "Does not verify currency or locale variations.",
+      "Does not cover invalid bounds, 1,200-month limit, or final deposit capping."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24943,
+      "completion_tokens": 439,
+      "total_tokens": 25382
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    },
+    {
+      "round": 2,
+      "build": "failed",
+      "errors": [
+        "Your previous reply could not be used: Expected ',' or ']' after array element in JSON at position 10653 (line 1 column 10654) Reply with exactly one JSON object {language, files:[{path, content, description}], explanation, dependencies}; escape quotes, backslashes and newlines inside \"content\" strings."
+      ]
+    },
+    {
+      "round": 3,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#f3eee3\">\n  <title>Pixel Savings Planner</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"planner\">\n    <header class=\"header\">\n      <div class=\"pixel-mark\" aria-hidden=\"true\">$</div>\n      <p class=\"eyebrow\">YOUR MONEY, IN PIXELS</p>\n      <h1>Pixel Savings Planner</h1>\n      <p class=\"intro\">Set a goal. Add a little each month. Watch it grow.</p>\n    </header>\n\n    <form id=\"planner-form\" class=\"form\">\n      <label for=\"goal\">Savings goal <span class=\"unit\">$</span></label>\n      <input id=\"goal\" name=\"goal\" type=\"number\" min=\"0.01\" step=\"0.01\" value=\"5000\" required>\n\n      <label for=\"deposit\">Monthly deposit <span class=\"unit\">$</span></label>\n      <input id=\"deposit\" name=\"deposit\" type=\"number\" min=\"0\" step=\"0.01\" value=\"250\" required>\n\n      <label for=\"rate\">Yearly interest rate <span class=\"unit\">%</span></label>\n      <input id=\"rate\" name=\"rate\" type=\"number\" min=\"0\" max=\"100\" step=\"0.01\" value=\"4\" required>\n\n      <button type=\"submit\">Calculate my plan <span aria-hidden=\"true\">→</span></button>\n    </form>\n\n    <p id=\"message\" class=\"message\" role=\"status\" aria-live=\"polite\"></p>\n\n    <section id=\"results\" class=\"results\" aria-labelledby=\"results-title\" hidden>\n      <h2 id=\"results-title\">Your savings snapshot</h2>\n      <div class=\"summary\">\n        <div><span class=\"summary-label\">TIME TO GOAL</span><strong id=\"months-result\">—</strong></div>\n        <div><span class=\"summary-label\">INTEREST EARNED</span><strong id=\"interest-result\">—</strong></div>\n        <div><span class=\"summary-label\">FINAL BALANCE</span><strong id=\"balance-result\">—</strong></div>\n      </div>\n      <h2 class=\"table-title\">Month by month</h2>\n      <div class=\"table-wrap\" tabindex=\"0\" aria-label=\"Savings schedule; scroll horizontally if needed\">\n        <table>\n          <thead><tr><th scope=\"col\">Month</th><th scope=\"col\">Deposit</th><th scope=\"col\">Interest</th><th scope=\"col\">Balance</th></tr></thead>\n          <tbody id=\"schedule\"></tbody>\n        </table>\n      </div>\n      <p class=\"note\">Estimate assumes deposits at the start of each month, with interest compounded monthly. The final deposit is capped at your goal.</p>\n    </section>\n    <footer>Small steps add up <span aria-hidden=\"true\">✦</span></footer>\n  </main>\n</body>\n</html>\n",
+      "description": "Accessible offline planner page with labeled inputs, results, and schedule."
+    },
+    {
+      "path": "styles.css",
+      "content": ":root {\n  color-scheme: light;\n  --ink: #263b35;\n  --muted: #64736b;\n  --paper: #fffdf7;\n  --canvas: #f3eee3;\n  --green: #39735b;\n  --green-dark: #2d5d49;\n  --gold: #e5b858;\n  --line: #e6e2d7;\n}\n* { box-sizing: border-box; }\nbody {\n  min-width: 320px;\n  min-height: 100vh;\n  margin: 0;\n  padding: 32px 16px;\n  display: grid;\n  place-items: center;\n  background-color: var(--canvas);\n  background-image: radial-gradient(#d9cfb8 1px, transparent 1px);\n  background-size: 18px 18px;\n  color: var(--ink);\n  font: 16px/1.5 system-ui, -apple-system, \"Segoe UI\", sans-serif;\n}\n.planner {\n  width: min(100%, 560px);\n  padding: clamp(24px, 6vw, 44px);\n  background: var(--paper);\n  border: 1px solid #e9e2d4;\n  border-radius: 18px;\n  box-shadow: 0 12px 0 #ded5c3, 0 22px 48px #33443b18;\n}\n.header { text-align: center; }\n.pixel-mark {\n  width: 48px;\n  height: 48px;\n  display: grid;\n  place-items: center;\n  margin: 0 auto 14px;\n  background: var(--gold);\n  border: 3px solid var(--ink);\n  box-shadow: 4px 4px 0 var(--ink);\n  font-weight: 800;\n  font-size: 23px;\n}\n.eyebrow { margin: 0 0 6px; color: var(--green); font-weight: 750; font-size: 14px; letter-spacing: .12em; }\nh1 { margin: 0; font-size: clamp(25px, 7vw, 34px); line-height: 1.15; letter-spacing: -.04em; }\n.intro { margin: 10px 0 28px; color: var(--muted); }\n.form { display: grid; grid-template-columns: 1fr auto; gap: 9px 12px; align-items: center; }\n.form label { font-weight: 650; }\n.unit { color: var(--muted); font-weight: 500; }\ninput {\n  width: 145px;\n  min-height: 46px;\n  padding: 9px 12px;\n  border: 1px solid #c9d1c8;\n  border-radius: 8px;\n  background: #fff;\n  color: var(--ink);\n  font: inherit;\n  text-align: right;\n}\ninput:hover { border-color: var(--green); }\ninput:focus-visible, button:focus-visible, .table-wrap:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }\nbutton {\n  grid-column: 1 / -1;\n  min-height: 50px;\n  margin-top: 12px;\n  padding: 10px 16px;\n  border: 2px solid var(--ink);\n  border-radius: 9px;\n  background: var(--green);\n  box-shadow: 0 4px 0 var(--ink);\n  color: #fff;\n  font: inherit;\n  font-weight: 750;\n  cursor: pointer;\n  transition: background .15s, transform .15s, box-shadow .15s;\n}\nbutton:hover { background: var(--green-dark); transform: translateY(-1px); }\nbutton:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }\n.message { min-height: 24px; margin: 14px 0 0; color: #a14335; font-weight: 600; }\n.results { margin-top: 6px; }\n.results[hidden] { display: none !important; }\nh2 { margin: 4px 0 14px; font-size: 19px; }\n.summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }\n.summary > div { min-width: 0; padding: 12px 10px; border: 1px solid var(--line); border-radius: 9px; background: #f8f6ef; }\n.summary-label { display: block; margin-bottom: 4px; color: var(--muted); font-size: 11px; line-height: 1.3; font-weight: 750; letter-spacing: .06em; }\n.summary strong { font-size: clamp(16px, 4vw, 21px); overflow-wrap: anywhere; }\n.table-title { margin-top: 25px; }\n.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 9px; }\ntable { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }\nth, td { padding: 9px 10px; text-align: right; white-space: nowrap; }\nth { background: #edf2eb; color: var(--ink); font-size: 14px; }\nth:first-child, td:first-child { text-align: left; }\ntbody tr:nth-child(even) { background: #faf9f4; }\ntd { border-top: 1px solid #efede6; }\n.note { margin: 10px 0 0; color: var(--muted); font-size: 14px; }\nfooter { margin-top: 25px; color: var(--muted); text-align: center; font-size: 14px; }\nfooter span { color: #bb8a26; }\n@media (max-width: 420px) {\n  body { padding: 20px 12px; }\n  .planner { padding: 24px 18px; }\n  .summary { gap: 5px; }\n  .summary > div { padding: 10px 7px; }\n  .summary-label { font-size: 10px; }\n  th, td { padding: 8px 7px; }\n}\n",
+      "description": "Responsive pixel-inspired styling with visible keyboard focus and control states."
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.querySelector(\"#planner-form\");\nconst results = document.querySelector(\"#results\");\nconst message = document.querySelector(\"#message\");\nconst schedule = document.querySelector(\"#schedule\");\nconst money = new Intl.NumberFormat(undefined, { style: \"currency\", currency: \"USD\" });\n\nfunction calculate(goal, deposit, annualRate) {\n  const monthlyRate = annualRate / 100 / 12;\n  let balance = 0;\n  let totalInterest = 0;\n  const rows = [];\n\n  while (balance < goal && rows.length < 1200) {\n    const contribution = Math.min(deposit, goal - balance);\n    balance += contribution;\n    const interest = balance * monthlyRate;\n    balance += interest;\n    totalInterest += interest;\n    if (balance > goal) {\n      totalInterest -= balance - goal;\n      balance = goal;\n    }\n    rows.push({ month: rows.length + 1, contribution, interest: Math.max(0, interest - Math.max(0, balance - goal)), balance });\n  }\n  return { rows, totalInterest };\n}\n\nform.addEventListener(\"submit\", (event) => {\n  event.preventDefault();\n  message.textContent = \"\";\n  const goal = Number(form.elements.goal.value);\n  const deposit = Number(form.elements.deposit.value);\n  const rate = Number(form.elements.rate.value);\n\n  if (!Number.isFinite(goal) || goal <= 0 || !Number.isFinite(deposit) || deposit < 0 || !Number.isFinite(rate) || rate < 0 || rate > 100) {\n    results.hidden = true;\n    message.textContent = \"Enter a positive goal, a nonnegative monthly deposit, and a rate from 0% to 100%.\";\n    return;\n  }\n  if (deposit === 0 && rate === 0) {\n    results.hidden = true;\n    message.textContent = \"With no monthly deposit and no interest, the goal cannot be reached.\";\n    return;\n  }\n\n  const { rows, totalInterest } = calculate(goal, deposit, rate);\n  if (!rows.length || rows[rows.length - 1].balance < goal) {\n    results.hidden = true;\n    message.textContent = \"This plan would take more than 1,200 months to reach the goal. Increase your deposit or rate.\";\n    return;\n  }\n\n  document.querySelector(\"#months-result\").textContent = `${rows.length} ${rows.length === 1 ? \"month\" : \"months\"}`;\n  document.querySelector(\"#interest-result\").textContent = money.format(totalInterest);\n  document.querySelector(\"#balance-result\").textContent = money.format(goal);\n  schedule.replaceChildren(...rows.map((row) => {\n    const tr = document.createElement(\"tr\");\n    for (const value of [row.month, money.format(row.contribution), money.format(row.interest), money.format(row.balance)]) {\n      const td = document.createElement(\"td\");\n      td.textContent = value;\n      tr.append(td);\n    }\n    return tr;\n  }));\n  results.hidden = false;\n});\n",
+      "description": "Plain JavaScript savings projection and dynamically generated month-by-month schedule."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Savings Planner\n\nAn offline savings goal calculator built with HTML, CSS, and plain JavaScript.\n\n## Run\n\nOpen `index.html` in a modern browser. No server, packages, network access, or external assets are required.\n\n## Calculation assumptions\n\n- Monthly deposits are added at the start of each month.\n- The annual interest rate is treated as a nominal rate and divided by 12; interest compounds monthly after each deposit.\n- The final deposit is capped at the remaining amount needed to reach the goal. The displayed final balance is the goal amount.\n- The planner accepts rates from 0% through 100%. A schedule is limited to 1,200 months; longer plans are reported with a prompt to adjust the inputs.\n",
+      "description": "Offline launch instructions and calculation assumptions."
+    }
+  ]
+}

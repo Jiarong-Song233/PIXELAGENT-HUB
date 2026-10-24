@@ -1,0 +1,378 @@
+{
+  "caseId": "thermostat",
+  "run": 2,
+  "strategy": "manager-coder",
+  "dist": "D:\\Projects\\PIXELAGENT-HUB\\.claude\\worktrees\\codex-quota-integration-2a76fa\\pixelagent-hub\\dashboard\\dist\\public",
+  "managerTokens": 21105,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "7/7",
+  "finalChecks": "7/7",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "7/7"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 69,
+  "reportedTokens": 69184,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T01:24:41.574Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T01:24:41.574Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T01:24:59.196Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "A Pixel Thermostat"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T01:24:59.196Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T01:25:28.461Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T01:25:28.461Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T01:25:28.959Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T01:25:28.960Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "37875350-9b26-42ea-a3d6-f0ff6fd722c9"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T01:25:46.154Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "37875350-9b26-42ea-a3d6-f0ff6fd722c9",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T01:25:46.155Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "testPlanId": "37875350-9b26-42ea-a3d6-f0ff6fd722c9",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T01:25:48.434Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "name": "Initial target and status",
+        "passed": true,
+        "actual": "21.0"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T01:25:48.434Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "name": "Heat above room",
+        "passed": true,
+        "actual": "Heating"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T01:25:48.434Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "name": "Cool below room",
+        "passed": true,
+        "actual": "Cooling"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T01:25:48.434Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "name": "Off is idle",
+        "passed": true,
+        "actual": "Idle"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T01:25:48.434Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "name": "Target at room temperature is idle",
+        "passed": true,
+        "actual": "Idle"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T01:25:48.434Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "name": "Increase by half a degree",
+        "passed": true,
+        "actual": "21.5"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T01:25:48.434Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "name": "Minimum target is bounded",
+        "passed": true,
+        "actual": "17.0"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T01:25:48.434Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "730c228e-5d42-4552-85de-974c09149cfe",
+        "status": "passed",
+        "passed": 7,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T01:25:48.435Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial target and status",
+        "actions": [],
+        "selector": "#temperature",
+        "expected": "21.0"
+      },
+      {
+        "name": "Heat above room",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#plus"
+          },
+          {
+            "type": "input",
+            "selector": "#mode",
+            "value": "Heat"
+          }
+        ],
+        "selector": "#statusText",
+        "expected": "Heating"
+      },
+      {
+        "name": "Cool below room",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#minus"
+          },
+          {
+            "type": "input",
+            "selector": "#mode",
+            "value": "Cool"
+          }
+        ],
+        "selector": "#statusText",
+        "expected": "Cooling"
+      },
+      {
+        "name": "Off is idle",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#plus"
+          },
+          {
+            "type": "input",
+            "selector": "#mode",
+            "value": "Off"
+          }
+        ],
+        "selector": "#statusText",
+        "expected": "Idle"
+      },
+      {
+        "name": "Target at room temperature is idle",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#mode",
+            "value": "Heat"
+          }
+        ],
+        "selector": "#statusText",
+        "expected": "Idle"
+      },
+      {
+        "name": "Increase by half a degree",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#plus"
+          }
+        ],
+        "selector": "#temperature",
+        "expected": "21.5"
+      },
+      {
+        "name": "Minimum target is bounded",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#minus"
+          },
+          {
+            "type": "click",
+            "selector": "#minus"
+          },
+          {
+            "type": "click",
+            "selector": "#minus"
+          },
+          {
+            "type": "click",
+            "selector": "#minus"
+          },
+          {
+            "type": "click",
+            "selector": "#minus"
+          },
+          {
+            "type": "click",
+            "selector": "#minus"
+          },
+          {
+            "type": "click",
+            "selector": "#minus"
+          },
+          {
+            "type": "click",
+            "selector": "#minus"
+          }
+        ],
+        "selector": "#temperature",
+        "expected": "17.0"
+      }
+    ],
+    "limitations": [
+      "The 17.0 check confirms repeated decreases and half-degree steps; eight actions cannot reach the 10°C lower bound.",
+      "The 30°C upper bound likewise requires more than eight clicks from the initial target."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24159,
+      "completion_tokens": 369,
+      "total_tokens": 24528
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Thermostat</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"thermostat\" aria-labelledby=\"title\">\n    <p class=\"eyebrow\">ROOM CONTROL · 01</p>\n    <h1 id=\"title\">Pixel thermostat</h1>\n    <p class=\"room\">ROOM TEMPERATURE <strong>21°</strong></p>\n\n    <section class=\"display\" aria-label=\"Target temperature\">\n      <span class=\"display-label\">TARGET</span>\n      <output id=\"temperature\" class=\"temperature\" aria-live=\"polite\">21.0</output>\n      <span class=\"unit\">°C</span>\n    </section>\n\n    <div class=\"adjustments\" aria-label=\"Adjust target temperature\">\n      <button id=\"minus\" class=\"adjust\" type=\"button\" aria-label=\"Decrease target temperature by 0.5 degrees\">−</button>\n      <span class=\"step\">STEP 0.5°</span>\n      <button id=\"plus\" class=\"adjust\" type=\"button\" aria-label=\"Increase target temperature by 0.5 degrees\">+</button>\n    </div>\n\n    <label class=\"mode-label\" for=\"mode\">SYSTEM MODE</label>\n    <select id=\"mode\">\n      <option value=\"Heat\">Heat</option>\n      <option value=\"Cool\">Cool</option>\n      <option value=\"Off\">Off</option>\n    </select>\n\n    <p id=\"status\" class=\"status\" role=\"status\" aria-live=\"polite\"><span class=\"status-dot\" aria-hidden=\"true\"></span><span id=\"statusText\">Idle</span></p>\n    <p class=\"range\">TARGET RANGE <span>10° — 30°C</span></p>\n  </main>\n</body>\n</html>",
+      "description": "Offline thermostat app interface"
+    },
+    {
+      "path": "style.css",
+      "content": "* { box-sizing: border-box; }\n\n:root {\n  color-scheme: dark;\n  font-family: system-ui, sans-serif;\n  font-size: 16px;\n  background: #142b2b;\n  color: #f4f0dc;\n}\n\nbody {\n  min-width: 360px;\n  min-height: 100vh;\n  margin: 0;\n  padding: 24px;\n  display: grid;\n  place-items: center;\n  background-color: #142b2b;\n  background-image: linear-gradient(#244040 1px, transparent 1px), linear-gradient(90deg, #244040 1px, transparent 1px);\n  background-size: 24px 24px;\n}\n\n.thermostat {\n  width: min(100%, 440px);\n  padding: 32px;\n  background: #203a39;\n  border: 4px solid #91b49a;\n  box-shadow: 8px 8px 0 #0b1d1d;\n}\n\n.eyebrow, .display-label, .mode-label, .step, .range {\n  font-size: .875rem;\n  font-weight: 750;\n  letter-spacing: .12em;\n}\n\n.eyebrow { margin: 0 0 8px; color: #a8cbb0; }\nh1 { margin: 0; font-size: clamp(1.65rem, 7vw, 2rem); line-height: 1.2; }\n.room { display: flex; justify-content: space-between; align-items: center; margin: 24px 0 12px; color: #bed0bc; font-size: .9rem; letter-spacing: .06em; }\n.room strong { color: #f4f0dc; font-size: 1.1rem; }\n\n.display {\n  position: relative;\n  min-height: 150px;\n  padding: 18px 20px;\n  display: flex;\n  align-items: baseline;\n  justify-content: center;\n  background: #142b2b;\n  border: 3px solid #52776b;\n}\n.display-label { position: absolute; top: 12px; left: 14px; color: #91b49a; }\n.temperature { align-self: center; margin-top: 18px; font-size: clamp(3.5rem, 16vw, 5rem); font-variant-numeric: tabular-nums; font-weight: 750; line-height: 1; color: #d6e9ae; }\n.unit { align-self: center; margin: 20px 0 0 8px; color: #d6e9ae; font-size: 1.5rem; }\n\n.adjustments { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; margin: 18px 0 24px; }\n.adjust {\n  min-height: 54px;\n  border: 3px solid #91b49a;\n  background: #31524c;\n  color: #f4f0dc;\n  font: inherit;\n  font-size: 1.8rem;\n  font-weight: 750;\n  cursor: pointer;\n  box-shadow: 3px 3px 0 #0b1d1d;\n}\n.adjust:hover { background: #42665c; }\n.adjust:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #0b1d1d; }\n.adjust:focus-visible, select:focus-visible { outline: 3px solid #e4d276; outline-offset: 3px; }\n.step { color: #bed0bc; text-align: center; white-space: nowrap; }\n\n.mode-label { display: block; margin-bottom: 8px; color: #a8cbb0; }\nselect {\n  width: 100%;\n  min-height: 52px;\n  padding: 0 14px;\n  border: 3px solid #91b49a;\n  border-radius: 0;\n  background: #142b2b;\n  color: #f4f0dc;\n  font: inherit;\n  font-size: 1rem;\n  cursor: pointer;\n}\n.status { display: flex; align-items: center; gap: 10px; min-height: 56px; margin: 20px 0 0; padding: 12px 14px; border: 2px solid #52776b; font-size: 1.05rem; font-weight: 700; }\n.status-dot { width: 12px; height: 12px; flex: 0 0 12px; background: #d6e9ae; box-shadow: 0 0 0 3px #31524c; }\n.status[data-state=\"heating\"] .status-dot { background: #e4a66d; }\n.status[data-state=\"cooling\"] .status-dot { background: #83c6d0; }\n.status[data-state=\"idle\"] .status-dot { background: #d6e9ae; }\n.range { display: flex; justify-content: space-between; gap: 12px; margin: 18px 0 0; color: #91b49a; font-size: .75rem; }\n.range span { color: #bed0bc; letter-spacing: .04em; }\n\n@media (max-width: 420px) {\n  body { padding: 16px; }\n  .thermostat { padding: 24px 20px; }\n  .adjustments { gap: 10px; }\n  .step { font-size: .75rem; }\n}",
+      "description": "Responsive pixel-inspired thermostat styling"
+    },
+    {
+      "path": "app.js",
+      "content": "const roomTemperature = 21;\nconst minTemperature = 10;\nconst maxTemperature = 30;\nconst step = 0.5;\n\nconst temperatureOutput = document.getElementById('temperature');\nconst modeSelect = document.getElementById('mode');\nconst status = document.getElementById('status');\nconst statusText = document.getElementById('statusText');\nlet targetTemperature = roomTemperature;\n\nfunction updateStatus() {\n  const mode = modeSelect.value;\n  let message = 'Idle';\n  let state = 'idle';\n\n  if (mode === 'Heat' && targetTemperature > roomTemperature) {\n    message = 'Heating';\n    state = 'heating';\n  } else if (mode === 'Cool' && targetTemperature < roomTemperature) {\n    message = 'Cooling';\n    state = 'cooling';\n  }\n\n  statusText.textContent = message;\n  status.dataset.state = state;\n}\n\nfunction adjustTemperature(amount) {\n  targetTemperature = Math.min(maxTemperature, Math.max(minTemperature, targetTemperature + amount));\n  temperatureOutput.value = targetTemperature.toFixed(1);\n  temperatureOutput.textContent = targetTemperature.toFixed(1);\n  updateStatus();\n}\n\ndocument.getElementById('minus').addEventListener('click', () => adjustTemperature(-step));\ndocument.getElementById('plus').addEventListener('click', () => adjustTemperature(step));\nmodeSelect.addEventListener('change', updateStatus);\nupdateStatus();",
+      "description": "Thermostat temperature, mode, and status behavior"
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Thermostat\n\nA small, offline browser thermostat built with HTML, CSS, and plain JavaScript.\n\n## Run\n\nOpen `index.html` in a modern browser. No server, packages, or network connection are needed.\n\n## Controls and behavior\n\n- Use the **−** and **+** buttons to change the target in 0.5°C steps, from 10°C to 30°C.\n- Choose Heat, Cool, or Off from the system mode selector.\n- The room temperature is fixed at 21°C. Heat reports **Heating** when the target is above room temperature; Cool reports **Cooling** when it is below. All other combinations report **Idle**, including a target of exactly 21°C.\n- Buttons and the mode selector are keyboard accessible and visibly indicate focus.\n\n## Build evidence\n\nThe app consists of `index.html`, `style.css`, and `app.js`, with no imports, external assets, network requests, or server code.",
+      "description": "Offline launch instructions and behavior summary"
+    }
+  ]
+}
