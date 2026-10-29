@@ -257,3 +257,10 @@ test('test plans preserve traces and reject traces over 300 characters', () => {
   assert.equal(parseTestPlanOutput({ checks: [{ ...check, trace: 'x'.repeat(300) }] }).checks[0].trace?.length, 300);
   assert.throws(() => parseTestPlanOutput({ checks: [{ ...check, trace: 'x'.repeat(301) }] }), /did not match/);
 });
+
+test('test plans accept 16 actions per check and reject 17', () => {
+  const actions = Array.from({ length: 16 }, () => ({ type: 'click', selector: 'button' }));
+  const check = { name: 'Sixteen clicks', actions, selector: 'output', expected: '16' };
+  assert.equal(parseTestPlanOutput({ checks: [check], limitations: [] }).checks[0].actions.length, 16);
+  assert.throws(() => parseTestPlanOutput({ checks: [{ ...check, actions: [...actions, actions[0]] }], limitations: [] }), /did not match/);
+});

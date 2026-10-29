@@ -1,0 +1,42 @@
+[
+  {
+    "id": "wiki-editor",
+    "title": "Inline editor",
+    "description": "A pixel profile card whose name, title and bio are edited in place by clicking them (contenteditable), with Save and Cancel buttons, a character limit of 120 for the bio and a 'Saved' message."
+  },
+  {
+    "id": "stepper-form",
+    "title": "Signup wizard",
+    "description": "A pixel three-step signup wizard: name and email, then a plan choice (Free, Pro, Team), then a summary with Back and Confirm; Next is disabled until the step is valid and a progress bar shows the step."
+  },
+  {
+    "id": "dice-poker",
+    "title": "Dice poker",
+    "description": "A pixel dice poker: roll five dice, click dice to hold them, up to two rerolls, then show the hand name (pair, two pair, three of a kind, straight, full house, four or five of a kind) and a New round button."
+  },
+  {
+    "id": "matrix-sum",
+    "title": "Number grid",
+    "description": "A pixel 4x4 grid of number inputs with the sum of every row and column and the grand total updating live, a Randomize button filling 1 to 9, and the largest row sum highlighted."
+  },
+  {
+    "id": "alarm",
+    "title": "Alarm list",
+    "description": "A pixel alarm list: add an alarm with an hour and minute and an optional label, toggle each alarm on or off, delete alarms, sort them by time, and show how many alarms are on."
+  },
+  {
+    "id": "bus-seats",
+    "title": "Bus booking",
+    "description": "A pixel bus booking: 10 rows of 4 seats with an aisle, a few seats pre-booked, pick up to 4 seats, show the chosen seat codes and the price at 12 per seat with a 10% discount for 4 seats."
+  },
+  {
+    "id": "chess-clock",
+    "title": "Chess clock",
+    "description": "A pixel chess clock for two players with 5 minutes each: tapping your side stops your clock and starts the other's, show both times as m:ss, a Pause button, and 'Flag!' when a clock hits zero."
+  },
+  {
+    "id": "todo-tags",
+    "title": "Tagged notes",
+    "description": "A pixel notes list where each note has text and comma-separated tags: add notes, click a tag to filter by it, show the active filter with a clear button, and count notes per tag."
+  }
+]

@@ -1,0 +1,498 @@
+{
+  "caseId": "playlist",
+  "run": 1,
+  "strategy": "manager-coder",
+  "dist": "D:\\Projects\\PIXELAGENT-HUB\\.claude\\worktrees\\codex-quota-integration-2a76fa\\pixelagent-hub\\dashboard\\dist\\public",
+  "managerTokens": 21036,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "6/8",
+  "finalChecks": "8/8",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 2,
+  "coderRepair": false,
+  "checkRuns": [
+    "6/8",
+    "8/8"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 96,
+  "reportedTokens": 94801,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T01:19:33.691Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T01:19:33.692Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T01:19:51.353Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Playlist"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T01:19:51.353Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T01:20:25.333Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T01:20:25.333Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T01:20:25.806Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T01:20:25.807Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "a018b3ff-93f9-4404-b893-1face37d8bd1"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T01:20:42.025Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "a018b3ff-93f9-4404-b893-1face37d8bd1",
+        "checks": 8
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T01:20:42.025Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "testPlanId": "a018b3ff-93f9-4404-b893-1face37d8bd1",
+        "checks": 8,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "name": "Initial count and duration",
+        "passed": true,
+        "actual": "6 songs"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "name": "Initial total duration",
+        "passed": false,
+        "actual": "0:21:10"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "name": "Move first song down",
+        "passed": true,
+        "actual": "Neon Rooftops"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "name": "Move second song up",
+        "passed": true,
+        "actual": "Moonlit Circuit"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "name": "Remove a song and update count",
+        "passed": true,
+        "actual": "5 songs"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "name": "Remove a song and update total",
+        "passed": false,
+        "actual": "0:18:03"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "name": "Shuffle changes order",
+        "passed": true,
+        "actual": "Last Level Lullaby"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "name": "End controls disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T01:20:48.771Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "4e758ec0-ddb6-4f30-be88-c100cdfa3173",
+        "status": "failed",
+        "passed": 6,
+        "failed": 2,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T01:20:48.775Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "a018b3ff-93f9-4404-b893-1face37d8bd1",
+        "review": true
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T01:21:04.697Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "a018b3ff-93f9-4404-b893-1face37d8bd1",
+        "checks": 8,
+        "review": true,
+        "revised": 2,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24391,
+          "completion_tokens": 210,
+          "total_tokens": 24601
+        },
+        "verdicts": [
+          {
+            "name": "Initial total duration",
+            "verdict": "check-wrong",
+            "reason": "The check expects 0:21:50, but the six built-in durations sum to 1270 seconds, or 0:21:10. The expected value contradicts the requirements as implemented by the specified song durations."
+          },
+          {
+            "name": "Remove a song and update total",
+            "verdict": "check-wrong",
+            "reason": "Removing the first song (187 seconds) from the 1270-second playlist leaves 1083 seconds, or 0:18:03. The check expects 0:17:47, which contradicts the required durations."
+          }
+        ]
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T01:21:04.698Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "testPlanId": "a018b3ff-93f9-4404-b893-1face37d8bd1",
+        "checks": 8,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T01:21:07.263Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "name": "Initial count and duration",
+        "passed": true,
+        "actual": "6 songs"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T01:21:07.264Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "name": "Initial total duration",
+        "passed": true,
+        "actual": "0:21:10"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T01:21:07.264Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "name": "Move first song down",
+        "passed": true,
+        "actual": "Neon Rooftops"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T01:21:07.264Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "name": "Move second song up",
+        "passed": true,
+        "actual": "Moonlit Circuit"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T01:21:07.264Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "name": "Remove a song and update count",
+        "passed": true,
+        "actual": "5 songs"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T01:21:07.264Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "name": "Remove a song and update total",
+        "passed": true,
+        "actual": "0:18:03"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-24T01:21:07.264Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "name": "Shuffle changes order",
+        "passed": true,
+        "actual": "Moonlit Circuit"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-24T01:21:07.264Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "name": "End controls disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-24T01:21:07.264Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "5f703ad9-bab4-44ab-ac74-9e5e989a95dc",
+        "status": "passed",
+        "passed": 8,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-24T01:21:07.267Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial count and duration",
+        "actions": [],
+        "selector": "#song-count",
+        "expected": "6 songs"
+      },
+      {
+        "name": "Initial total duration",
+        "actions": [],
+        "selector": "#total-time",
+        "expected": "0:21:10"
+      },
+      {
+        "name": "Move first song down",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#playlist li:first-child button[aria-label='↓ Move down']"
+          }
+        ],
+        "selector": "#playlist li:nth-child(2) .track-title",
+        "expected": "Neon Rooftops"
+      },
+      {
+        "name": "Move second song up",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#playlist li:nth-child(2) button[aria-label='↑ Move up']"
+          }
+        ],
+        "selector": "#playlist li:first-child .track-title",
+        "expected": "Moonlit Circuit"
+      },
+      {
+        "name": "Remove a song and update count",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#playlist li:first-child button[aria-label='Remove']"
+          }
+        ],
+        "selector": "#song-count",
+        "expected": "5 songs"
+      },
+      {
+        "name": "Remove a song and update total",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#playlist li:first-child button[aria-label='Remove']"
+          }
+        ],
+        "selector": "#total-time",
+        "expected": "0:18:03"
+      },
+      {
+        "name": "Shuffle changes order",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#shuffle-button"
+          }
+        ],
+        "selector": "#playlist li:first-child .track-title",
+        "expected": "",
+        "assertion": "changed"
+      },
+      {
+        "name": "End controls disabled",
+        "actions": [],
+        "selector": "#playlist li:first-child button[aria-label='↑ Move up']",
+        "expected": "true",
+        "assertion": "disabled"
+      }
+    ],
+    "limitations": [
+      "Shuffle check can fail if the randomized order happens to start unchanged."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24786,
+      "completion_tokens": 343,
+      "total_tokens": 25129
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#17192d\">\n  <title>Pixel Playlist</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"card\" aria-labelledby=\"page-title\">\n    <header class=\"header\">\n      <div class=\"brand-mark\" aria-hidden=\"true\">♫</div>\n      <div>\n        <p class=\"eyebrow\">YOUR POCKET JUKEBOX</p>\n        <h1 id=\"page-title\">Pixel Playlist</h1>\n      </div>\n    </header>\n\n    <section class=\"summary\" aria-label=\"Playlist summary\">\n      <div><span class=\"summary-label\">TRACKS</span><strong id=\"song-count\">6 songs</strong></div>\n      <div><span class=\"summary-label\">TOTAL TIME</span><strong id=\"total-time\">0:00:00</strong></div>\n    </section>\n\n    <div class=\"list-heading\"><h2>Now playing</h2><span class=\"pixel-dot\" aria-hidden=\"true\"></span></div>\n    <ol id=\"playlist\" class=\"playlist\" aria-label=\"Playlist\"></ol>\n\n    <button id=\"shuffle-button\" class=\"shuffle-button\" type=\"button\">\n      <span aria-hidden=\"true\">⤨</span> Shuffle playlist\n    </button>\n    <p id=\"status\" class=\"sr-only\" role=\"status\" aria-live=\"polite\"></p>\n  </main>\n</body>\n</html>\n",
+      "description": "Responsive, accessible page structure for the playlist."
+    },
+    {
+      "path": "styles.css",
+      "content": "* { box-sizing: border-box; }\n:root { color-scheme: dark; font-family: system-ui, -apple-system, \"Segoe UI\", sans-serif; color: #f4f0ff; background: #17192d; }\nbody { min-height: 100vh; margin: 0; padding: 32px 16px; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 0%, #303354 0, #17192d 64%); font-size: 16px; }\n.card { width: min(100%, 520px); padding: 30px; border: 2px solid #484b70; border-radius: 18px; background: #22243c; box-shadow: 0 18px 60px #0b0c18aa; }\n.header { display: flex; align-items: center; gap: 16px; }\n.brand-mark { width: 54px; height: 54px; display: grid; place-items: center; border: 2px solid #8ee6ca; border-radius: 12px; background: #303354; color: #8ee6ca; font-size: 32px; box-shadow: 4px 4px 0 #111326; }\n.eyebrow, .summary-label { margin: 0; color: #aaaed0; font-size: 12px; font-weight: 800; letter-spacing: .12em; }\nh1 { margin: 3px 0 0; font-size: clamp(25px, 7vw, 32px); line-height: 1.15; }\n.summary { display: flex; justify-content: space-between; gap: 12px; margin: 26px 0 28px; padding: 17px 19px; border: 1px solid #484b70; border-radius: 12px; background: #1b1d32; }\n.summary > div { display: grid; gap: 5px; }\n.summary > div:last-child { text-align: right; }\n.summary strong { font-size: 19px; font-variant-numeric: tabular-nums; }\n.list-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }\nh2 { margin: 0; font-size: 18px; }\n.pixel-dot { width: 10px; height: 10px; background: #8ee6ca; box-shadow: 4px 0 #8ee6ca, 0 4px #8ee6ca, 4px 4px #8ee6ca; }\n.playlist { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }\n.track { min-width: 0; display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 11px 12px; border: 1px solid #3d405f; border-radius: 11px; background: #292b46; }\n.track-number { color: #aaaed0; font-size: 14px; font-variant-numeric: tabular-nums; }\n.track-copy { min-width: 0; }\n.track-title { overflow: hidden; color: #f4f0ff; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }\n.track-artist { margin-top: 2px; color: #aaaed0; font-size: 14px; }\n.track-duration { color: #d8d4ec; font-size: 14px; font-variant-numeric: tabular-nums; }\n.track-actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; gap: 7px; margin-top: 2px; }\nbutton { min-height: 40px; padding: 7px 11px; border: 1px solid #66698d; border-radius: 8px; background: #303354; color: #f4f0ff; font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; transition: background .15s, transform .1s, border-color .15s; }\nbutton:hover:not(:disabled) { border-color: #8ee6ca; background: #3b3e61; }\nbutton:focus-visible { outline: 3px solid #8ee6ca; outline-offset: 3px; }\nbutton:active:not(:disabled) { transform: translateY(2px); }\nbutton:disabled { opacity: .4; cursor: not-allowed; }\n.remove-button { color: #ffd1c9; }\n.shuffle-button { width: 100%; min-height: 50px; margin-top: 20px; border-color: #8ee6ca; background: #8ee6ca; color: #17192d; font-size: 16px; }\n.shuffle-button:hover { background: #a9f3dc !important; color: #17192d; }\n.shuffle-button span { margin-right: 7px; font-size: 22px; vertical-align: -2px; }\n.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }\n@media (min-width: 460px) { .track { grid-template-columns: 34px minmax(0, 1fr) auto auto; } .track-actions { grid-column: auto; margin: 0; } }\n@media (max-width: 400px) { .card { padding: 22px 18px; } .summary { padding: 14px; } .summary strong { font-size: 17px; } }\n",
+      "description": "Pixel-inspired responsive styling with clear focus and pressed states."
+    },
+    {
+      "path": "app.js",
+      "content": "const songs = [\n  { title: \"Neon Rooftops\", artist: \"Chiptune Arcade\", seconds: 187 },\n  { title: \"Moonlit Circuit\", artist: \"Bitwave\", seconds: 243 },\n  { title: \"Save Point Sunrise\", artist: \"Tiny Quest\", seconds: 156 },\n  { title: \"Crystal Caverns\", artist: \"8-Bit Wanderer\", seconds: 212 },\n  { title: \"Last Level Lullaby\", artist: \"Pixel Pilot\", seconds: 278 },\n  { title: \"Bonus Stage\", artist: \"Coin Drop Kids\", seconds: 194 }\n];\nlet playlist = [...songs];\nconst list = document.querySelector(\"#playlist\");\nconst count = document.querySelector(\"#song-count\");\nconst total = document.querySelector(\"#total-time\");\nconst status = document.querySelector(\"#status\");\n\nfunction formatTime(seconds) {\n  const hours = Math.floor(seconds / 3600);\n  const minutes = Math.floor((seconds % 3600) / 60);\n  const remaining = seconds % 60;\n  return `${hours}:${String(minutes).padStart(2, \"0\")}:${String(remaining).padStart(2, \"0\")}`;\n}\n\nfunction render() {\n  list.replaceChildren();\n  playlist.forEach((song, index) => {\n    const item = document.createElement(\"li\");\n    item.className = \"track\";\n    const number = document.createElement(\"span\");\n    number.className = \"track-number\";\n    number.textContent = `#${String(index + 1).padStart(2, \"0\")}`;\n    const copy = document.createElement(\"div\");\n    copy.className = \"track-copy\";\n    const title = document.createElement(\"div\");\n    title.className = \"track-title\";\n    title.textContent = song.title;\n    const artist = document.createElement(\"div\");\n    artist.className = \"track-artist\";\n    artist.textContent = song.artist;\n    copy.append(title, artist);\n    const duration = document.createElement(\"span\");\n    duration.className = \"track-duration\";\n    duration.textContent = formatTime(song.seconds);\n    const actions = document.createElement(\"div\");\n    actions.className = \"track-actions\";\n    const up = makeButton(\"↑ Move up\", index === 0, () => move(index, -1));\n    const down = makeButton(\"↓ Move down\", index === playlist.length - 1, () => move(index, 1));\n    const remove = makeButton(\"Remove\", false, () => {\n      const [removed] = playlist.splice(index, 1);\n      render();\n      status.textContent = `${removed.title} removed.`;\n    });\n    remove.classList.add(\"remove-button\");\n    actions.append(up, down, remove);\n    item.append(number, copy, duration, actions);\n    list.append(item);\n  });\n  count.textContent = `${playlist.length} ${playlist.length === 1 ? \"song\" : \"songs\"}`;\n  total.textContent = formatTime(playlist.reduce((sum, song) => sum + song.seconds, 0));\n}\n\nfunction makeButton(label, disabled, action) {\n  const button = document.createElement(\"button\");\n  button.type = \"button\";\n  button.textContent = label;\n  button.setAttribute(\"aria-label\", label);\n  button.disabled = disabled;\n  button.addEventListener(\"click\", action);\n  return button;\n}\n\nfunction move(index, offset) {\n  const target = index + offset;\n  [playlist[index], playlist[target]] = [playlist[target], playlist[index]];\n  render();\n  status.textContent = `${playlist[target].title} moved ${offset < 0 ? \"up\" : \"down\"}.`;\n}\n\ndocument.querySelector(\"#shuffle-button\").addEventListener(\"click\", () => {\n  for (let i = playlist.length - 1; i > 0; i--) {\n    const j = Math.floor(Math.random() * (i + 1));\n    [playlist[i], playlist[j]] = [playlist[j], playlist[i]];\n  }\n  render();\n  status.textContent = \"Playlist shuffled.\";\n});\n\nrender();\n",
+      "description": "Six built-in tracks, accessible reordering/removal controls, shuffle, and live totals."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Playlist\n\nA small offline playlist manager built with HTML, CSS, and plain JavaScript. It starts with six built-in chiptune tracks and lets you reorder, remove, or shuffle them while keeping the track count and total duration up to date.\n\n## Run\n\nOpen `index.html` in any modern browser. No server, network connection, package installation, or build step is required.\n\n## Controls\n\n- **Move up / Move down** reorder a track. The unavailable direction is disabled at each end of the list.\n- **Remove** deletes a track from the current playlist.\n- **Shuffle playlist** randomizes the current order.\n- The summary displays the number of remaining songs and total duration in `h:mm:ss` format.\n\nAll controls are native buttons and work with keyboard activation. Changes are announced to assistive technology. The layout supports narrow screens down to 360px.\n\n## Build evidence\n\nThe app uses relative local files only: `index.html`, `styles.css`, and `app.js`. It contains no imports, packages, external assets, network requests, iframes, or server code. Playlist changes redraw the rows and calculate the count and duration from the current list.\n",
+      "description": "Offline launch and interaction instructions."
+    }
+  ]
+}

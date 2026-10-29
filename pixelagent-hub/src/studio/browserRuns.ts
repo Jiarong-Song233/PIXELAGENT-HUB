@@ -59,7 +59,8 @@ export async function executeBrowserRun(options: { root: string; run: BrowserRun
     browser = await chromium.launch({ headless: true, chromiumSandbox: true, executablePath: options.executablePath, timeout: 10_000 });
     if (controller.signal.aborted) { close(); controller.signal.throwIfAborted(); }
     run.browserVersion = browser.version();
-    const context = await browser.newContext({ viewport: run.viewport, serviceWorkers: 'block', acceptDownloads: false });
+    // Keep currency, date and time formatting independent of the host machine.
+    const context = await browser.newContext({ locale: 'en-US', timezoneId: 'UTC', viewport: run.viewport, serviceWorkers: 'block', acceptDownloads: false });
     await context.route('**/*', async (route) => { boundedPush(run.blockedRequests, route.request().url()); await route.abort(); });
     await context.routeWebSocket('**/*', (socket) => { boundedPush(run.blockedRequests, socket.url()); socket.close(); });
     const page = await context.newPage();
@@ -115,12 +116,23 @@ export async function executeBrowserRun(options: { root: string; run: BrowserRun
           const target = await element(action.selector, action.nth);
           if (action.type === 'click') await target.click();
           else if (action.type === 'input') {
-            const kind = await target.evaluate((element) => element.tagName === 'INPUT' ? (element as HTMLInputElement).type : element.tagName);
+            const kind = await target.evaluate((element) => (element as HTMLElement).isContentEditable ? 'contenteditable' : element.tagName === 'INPUT' ? (element as HTMLInputElement).type : element.tagName);
             if (kind === 'checkbox' || kind === 'radio') {
               if (action.value === 'false') await target.uncheck();
               else await target.check();
             } else if (kind === 'SELECT') await target.selectOption(action.value);
-            else await target.fill(action.value);
+            else {
+              if (kind !== 'contenteditable' && !await target.evaluate((element) => ['INPUT', 'TEXTAREA'].includes(element.tagName))) throw new Error('Input action requires an input, textarea, select or contenteditable element');
+              // Contenteditable text is replaced exactly as the in-page runner does it (fill() keeps old
+              // markup around the typed text); inline because evaluate() code runs in the page.
+              if (kind === 'contenteditable') await target.evaluate((element, value) => {
+                element.replaceChildren(document.createTextNode(value));
+                element.dispatchEvent(new Event('input', { bubbles: true }));
+                element.dispatchEvent(new Event('change', { bubbles: true }));
+                element.dispatchEvent(new Event('blur'));
+              }, action.value);
+              else await target.fill(action.value);
+            }
           }
           else await target.press(action.key);
         }

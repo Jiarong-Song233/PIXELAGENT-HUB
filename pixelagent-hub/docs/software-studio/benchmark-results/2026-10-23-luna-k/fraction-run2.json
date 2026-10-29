@@ -1,0 +1,436 @@
+{
+  "caseId": "fraction",
+  "run": 2,
+  "strategy": "manager-coder",
+  "dist": "D:\\Projects\\PIXELAGENT-HUB\\.claude\\worktrees\\codex-quota-integration-2a76fa\\pixelagent-hub\\dashboard\\dist\\public",
+  "managerTokens": 21058,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "6/6",
+  "finalChecks": "6/6",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "6/6"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 78,
+  "reportedTokens": 70910,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T01:36:05.385Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T01:36:05.385Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T01:36:23.779Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Fraction Calculator"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T01:36:23.779Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T01:37:00.356Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T01:37:00.356Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T01:37:00.848Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T01:37:00.849Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "25ce1a27-ebb9-4311-8c73-c5621670822a"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T01:37:17.994Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "25ce1a27-ebb9-4311-8c73-c5621670822a",
+        "checks": 6
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T01:37:17.994Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "77e9317f-0608-4562-b545-1a7fd946ba7d",
+        "testPlanId": "25ce1a27-ebb9-4311-8c73-c5621670822a",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T01:37:19.973Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "77e9317f-0608-4562-b545-1a7fd946ba7d",
+        "name": "Add and reduce fraction",
+        "passed": true,
+        "actual": "5 / 6"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T01:37:19.973Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "77e9317f-0608-4562-b545-1a7fd946ba7d",
+        "name": "Addition decimal",
+        "passed": true,
+        "actual": "0.833"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T01:37:19.973Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "77e9317f-0608-4562-b545-1a7fd946ba7d",
+        "name": "Subtract fraction",
+        "passed": true,
+        "actual": "1 / 2"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T01:37:19.973Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "77e9317f-0608-4562-b545-1a7fd946ba7d",
+        "name": "Multiply fraction",
+        "passed": true,
+        "actual": "1 / 2"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T01:37:19.973Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "77e9317f-0608-4562-b545-1a7fd946ba7d",
+        "name": "Divide fraction",
+        "passed": true,
+        "actual": "15 / 8"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T01:37:19.973Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "77e9317f-0608-4562-b545-1a7fd946ba7d",
+        "name": "Zero denominator error",
+        "passed": true,
+        "actual": "Denominators cannot be zero."
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T01:37:19.973Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "77e9317f-0608-4562-b545-1a7fd946ba7d",
+        "status": "passed",
+        "passed": 6,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T01:37:19.975Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Add and reduce fraction",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#n1",
+            "value": "1"
+          },
+          {
+            "type": "input",
+            "selector": "#d1",
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": "#n2",
+            "value": "1"
+          },
+          {
+            "type": "input",
+            "selector": "#d2",
+            "value": "3"
+          },
+          {
+            "type": "click",
+            "selector": "[data-op='+']"
+          }
+        ],
+        "selector": "#exact",
+        "expected": "5 / 6"
+      },
+      {
+        "name": "Addition decimal",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#n1",
+            "value": "1"
+          },
+          {
+            "type": "input",
+            "selector": "#d1",
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": "#n2",
+            "value": "1"
+          },
+          {
+            "type": "input",
+            "selector": "#d2",
+            "value": "3"
+          },
+          {
+            "type": "click",
+            "selector": "[data-op='+']"
+          }
+        ],
+        "selector": "#decimal",
+        "expected": "0.833"
+      },
+      {
+        "name": "Subtract fraction",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#n1",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": "#d1",
+            "value": "4"
+          },
+          {
+            "type": "input",
+            "selector": "#n2",
+            "value": "1"
+          },
+          {
+            "type": "input",
+            "selector": "#d2",
+            "value": "4"
+          },
+          {
+            "type": "click",
+            "selector": "[data-op='-']"
+          }
+        ],
+        "selector": "#exact",
+        "expected": "1 / 2"
+      },
+      {
+        "name": "Multiply fraction",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#n1",
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": "#d1",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": "#n2",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": "#d2",
+            "value": "4"
+          },
+          {
+            "type": "click",
+            "selector": "[data-op='*']"
+          }
+        ],
+        "selector": "#exact",
+        "expected": "1 / 2"
+      },
+      {
+        "name": "Divide fraction",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#n1",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": "#d1",
+            "value": "4"
+          },
+          {
+            "type": "input",
+            "selector": "#n2",
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": "#d2",
+            "value": "5"
+          },
+          {
+            "type": "click",
+            "selector": "[data-op='/']"
+          }
+        ],
+        "selector": "#exact",
+        "expected": "15 / 8"
+      },
+      {
+        "name": "Zero denominator error",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#n1",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": "#d1",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#n2",
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": "#d2",
+            "value": "5"
+          },
+          {
+            "type": "click",
+            "selector": "[data-op='+']"
+          }
+        ],
+        "selector": "#status",
+        "expected": "Denominators cannot be zero."
+      }
+    ],
+    "limitations": [
+      "Separate decimal rounding coverage is shown for addition; other operations are checked in lowest terms."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24877,
+      "completion_tokens": 576,
+      "total_tokens": 25453
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Fraction Calculator</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"card\">\n    <header>\n      <div class=\"pixel-mark\" aria-hidden=\"true\">÷</div>\n      <p class=\"eyebrow\">PIXEL MATH LAB</p>\n      <h1>Fraction calculator</h1>\n      <p class=\"intro\">Choose an operation and see your answer in simplest form.</p>\n    </header>\n\n    <form id=\"calculator\" novalidate>\n      <div class=\"fractions\">\n        <fieldset class=\"fraction\">\n          <legend>First fraction</legend>\n          <label for=\"n1\">Numerator</label>\n          <input id=\"n1\" name=\"n1\" type=\"number\" step=\"1\" value=\"3\" inputmode=\"numeric\">\n          <span class=\"fraction-line\" aria-hidden=\"true\"></span>\n          <label for=\"d1\">Denominator</label>\n          <input id=\"d1\" name=\"d1\" type=\"number\" step=\"1\" value=\"4\" inputmode=\"numeric\">\n        </fieldset>\n        <span class=\"between\" aria-hidden=\"true\">and</span>\n        <fieldset class=\"fraction\">\n          <legend>Second fraction</legend>\n          <label for=\"n2\">Numerator</label>\n          <input id=\"n2\" name=\"n2\" type=\"number\" step=\"1\" value=\"2\" inputmode=\"numeric\">\n          <span class=\"fraction-line\" aria-hidden=\"true\"></span>\n          <label for=\"d2\">Denominator</label>\n          <input id=\"d2\" name=\"d2\" type=\"number\" step=\"1\" value=\"5\" inputmode=\"numeric\">\n        </fieldset>\n      </div>\n\n      <fieldset class=\"operations\">\n        <legend>Choose operation</legend>\n        <div class=\"operation-buttons\">\n          <button type=\"button\" data-op=\"+\" aria-label=\"Add\">+</button>\n          <button type=\"button\" data-op=\"-\" aria-label=\"Subtract\">−</button>\n          <button type=\"button\" data-op=\"*\" aria-label=\"Multiply\">×</button>\n          <button type=\"button\" data-op=\"/\" aria-label=\"Divide\">÷</button>\n        </div>\n      </fieldset>\n    </form>\n\n    <section class=\"result\" aria-labelledby=\"result-heading\" aria-live=\"polite\">\n      <h2 id=\"result-heading\">Your result</h2>\n      <p id=\"status\" class=\"status\">Select an operation to calculate.</p>\n      <div id=\"answer\" class=\"answer\" hidden>\n        <p class=\"exact-label\">LOWEST TERMS</p>\n        <p id=\"exact\" class=\"exact\"></p>\n        <p class=\"decimal-label\">Decimal <span id=\"decimal\"></span></p>\n      </div>\n    </section>\n    <p class=\"footnote\">Fractions are reduced automatically · decimals are rounded to 3 places</p>\n  </main>\n</body>\n</html>",
+      "description": "Offline fraction calculator interface"
+    },
+    {
+      "path": "styles.css",
+      "content": ":root {\n  color-scheme: light;\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n  font-size: 16px;\n  color: #173b39;\n  background: #e9f2ec;\n}\n\n* { box-sizing: border-box; }\n[hidden] { display: none !important; }\n\nbody {\n  min-width: 360px;\n  min-height: 100vh;\n  margin: 0;\n  display: grid;\n  place-items: center;\n  padding: 24px 16px;\n  background-color: #e9f2ec;\n  background-image: linear-gradient(30deg, #dce9df 12%, transparent 12.5%, transparent 87%, #dce9df 87.5%, #dce9df), linear-gradient(150deg, #dce9df 12%, transparent 12.5%, transparent 87%, #dce9df 87.5%, #dce9df), linear-gradient(30deg, #dce9df 12%, transparent 12.5%, transparent 87%, #dce9df 87.5%, #dce9df), linear-gradient(150deg, #dce9df 12%, transparent 12.5%, transparent 87%, #dce9df 87.5%, #dce9df);\n  background-size: 56px 98px;\n  background-position: 0 0, 0 0, 28px 49px, 28px 49px;\n}\n\n.card {\n  width: min(100%, 620px);\n  padding: clamp(24px, 6vw, 44px);\n  border: 2px solid #173b39;\n  border-radius: 18px;\n  background: #fffdf5;\n  box-shadow: 8px 8px 0 #173b39;\n  text-align: center;\n}\n\n.pixel-mark {\n  width: 48px;\n  height: 48px;\n  display: grid;\n  place-items: center;\n  margin: 0 auto 14px;\n  border: 2px solid #173b39;\n  border-radius: 10px;\n  background: #f5bd5b;\n  font-size: 28px;\n  font-weight: 800;\n}\n.eyebrow, .exact-label { margin: 0; color: #52716a; font-size: .78rem; font-weight: 800; letter-spacing: .12em; }\nh1 { margin: 8px 0; font-size: clamp(1.8rem, 6vw, 2.5rem); line-height: 1.1; }\n.intro { margin: 0 auto 28px; color: #52716a; line-height: 1.5; }\n\n.fractions { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 14px; }\n.fraction, .operations { min-width: 0; margin: 0; padding: 16px; border: 1px solid #b8cdc0; border-radius: 12px; }\n.fraction legend, .operations legend { padding: 0 6px; font-weight: 700; }\n.fraction label { display: block; margin: 5px 0; color: #52716a; font-size: .88rem; }\n.fraction input {\n  width: 100%; min-height: 46px; padding: 8px;\n  border: 1px solid #8ca99a; border-radius: 8px;\n  background: #fff; color: #173b39; font: inherit; text-align: center;\n}\n.fraction input:focus-visible, button:focus-visible { outline: 3px solid #d68a25; outline-offset: 3px; }\n.fraction-line { display: block; height: 2px; margin: 7px 4px; background: #173b39; }\n.between { color: #52716a; font-size: .9rem; }\n.operations { margin-top: 24px; }\n.operation-buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }\nbutton {\n  min-height: 52px; border: 2px solid #173b39; border-radius: 10px;\n  background: #d7e9dc; color: #173b39; font: inherit; font-size: 1.55rem; font-weight: 750; cursor: pointer;\n  transition: transform .12s ease, background-color .12s ease, box-shadow .12s ease;\n}\nbutton:hover { background: #f5bd5b; transform: translateY(-2px); }\nbutton:active { transform: translateY(1px); box-shadow: inset 0 2px 3px #173b3940; }\nbutton[aria-pressed=\"true\"] { background: #f5bd5b; box-shadow: inset 0 0 0 2px #fffdf5; }\n.result { margin-top: 26px; padding: 20px 16px; border-radius: 12px; background: #173b39; color: #fffdf5; }\n.result h2 { margin: 0 0 8px; font-size: 1rem; }\n.status { margin: 0; color: #d7e9dc; }\n.status.error { color: #ffd28a; font-weight: 700; }\n.answer { margin-top: 14px; }\n.exact-label { color: #b8cdc0; }\n.exact { margin: 5px 0 10px; font-size: 2rem; font-weight: 800; }\n.decimal-label { margin: 0; color: #d7e9dc; }\n.decimal-label span { color: #f5bd5b; font-weight: 750; }\n.footnote { margin: 20px 0 0; color: #52716a; font-size: .85rem; }\n\n@media (max-width: 440px) {\n  .card { padding: 24px 18px; }\n  .fractions { gap: 8px; }\n  .fraction { padding: 12px 9px; }\n  .between { font-size: .8rem; }\n  .operation-buttons { gap: 7px; }\n}\n",
+      "description": "Responsive styling and accessible interaction states"
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.querySelector('#calculator');\nconst status = document.querySelector('#status');\nconst answer = document.querySelector('#answer');\nconst exact = document.querySelector('#exact');\nconst decimal = document.querySelector('#decimal');\nconst buttons = [...document.querySelectorAll('[data-op]')];\nlet selectedOperation = null;\n\nfunction gcd(a, b) {\n  a = Math.abs(a);\n  b = Math.abs(b);\n  while (b) [a, b] = [b, a % b];\n  return a || 1;\n}\n\nfunction readInteger(id) {\n  const field = document.getElementById(id);\n  const value = field.value.trim();\n  if (value === '' || !Number.isSafeInteger(Number(value))) {\n    field.focus();\n    throw new Error('Enter a whole number in every field.');\n  }\n  return Number(value);\n}\n\nfunction calculate(operation) {\n  answer.hidden = true;\n  status.classList.remove('error');\n  try {\n    let a = readInteger('n1');\n    let b = readInteger('d1');\n    let c = readInteger('n2');\n    let d = readInteger('d2');\n    if (b === 0 || d === 0) throw new Error('Denominators cannot be zero.');\n    if (b < 0) { a = -a; b = -b; }\n    if (d < 0) { c = -c; d = -d; }\n\n    let numerator;\n    let denominator;\n    if (operation === '+') { numerator = a * d + c * b; denominator = b * d; }\n    if (operation === '-') { numerator = a * d - c * b; denominator = b * d; }\n    if (operation === '*') { numerator = a * c; denominator = b * d; }\n    if (operation === '/') {\n      if (c === 0) throw new Error('Cannot divide by a fraction equal to zero.');\n      numerator = a * d;\n      denominator = b * c;\n    }\n    if (denominator < 0) { numerator = -numerator; denominator = -denominator; }\n    const divisor = gcd(numerator, denominator);\n    numerator /= divisor;\n    denominator /= divisor;\n    exact.textContent = denominator === 1 ? String(numerator) : `${numerator} / ${denominator}`;\n    decimal.textContent = (numerator / denominator).toFixed(3);\n    answer.hidden = false;\n    status.textContent = 'Calculation complete.';\n  } catch (error) {\n    status.textContent = error.message;\n    status.classList.add('error');\n  }\n}\n\nbuttons.forEach(button => {\n  button.addEventListener('click', () => {\n    selectedOperation = button.dataset.op;\n    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));\n    calculate(selectedOperation);\n  });\n});\n\nform.addEventListener('input', () => {\n  if (selectedOperation) calculate(selectedOperation);\n});\n",
+      "description": "Fraction validation, arithmetic, simplification, and result rendering"
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Fraction Calculator\n\nA small offline browser app for adding, subtracting, multiplying, and dividing two fractions. Results are reduced to lowest terms and shown as decimals rounded to three places.\n\n## Run\n\nOpen `index.html` in a modern browser. No server, packages, or network connection are needed.\n\n## Use\n\nEnter whole-number numerators and denominators, then choose an operation button. Denominators must be nonzero; division by a zero-valued second fraction is also reported as an error. Inputs have visible labels and all operation buttons can be reached and activated with a keyboard.",
+      "description": "Offline run instructions and feature summary"
+    }
+  ]
+}

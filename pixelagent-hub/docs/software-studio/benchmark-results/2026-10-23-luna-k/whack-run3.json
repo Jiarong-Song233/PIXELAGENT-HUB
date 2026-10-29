@@ -1,0 +1,331 @@
+{
+  "caseId": "whack",
+  "run": 3,
+  "strategy": "manager-coder",
+  "dist": "D:\\Projects\\PIXELAGENT-HUB\\.claude\\worktrees\\codex-quota-integration-2a76fa\\pixelagent-hub\\dashboard\\dist\\public",
+  "managerTokens": 21064,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "6/6",
+  "finalChecks": "6/6",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "6/6"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 81,
+  "reportedTokens": 68980,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T01:18:12.724Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T01:18:12.725Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T01:18:30.989Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Whack-a-Mole"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T01:18:30.990Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T01:19:01.163Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T01:19:01.164Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T01:19:01.654Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T01:19:01.658Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "a43599b8-ad32-49df-b580-05d1d1bef19d"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T01:19:17.818Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "a43599b8-ad32-49df-b580-05d1d1bef19d",
+        "checks": 6
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T01:19:17.818Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "05023c7c-7de7-4797-9697-0c686ee3b36b",
+        "testPlanId": "a43599b8-ad32-49df-b580-05d1d1bef19d",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T01:19:31.887Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "05023c7c-7de7-4797-9697-0c686ee3b36b",
+        "name": "Initial board and status",
+        "passed": true,
+        "actual": "9"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T01:19:31.887Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "05023c7c-7de7-4797-9697-0c686ee3b36b",
+        "name": "Start round",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T01:19:31.887Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "05023c7c-7de7-4797-9697-0c686ee3b36b",
+        "name": "Start resets score and timer",
+        "passed": true,
+        "actual": "30"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T01:19:31.887Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "05023c7c-7de7-4797-9697-0c686ee3b36b",
+        "name": "Whacking active mole scores",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T01:19:31.887Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "05023c7c-7de7-4797-9697-0c686ee3b36b",
+        "name": "Round ends at zero",
+        "passed": true,
+        "actual": "24"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T01:19:31.887Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "05023c7c-7de7-4797-9697-0c686ee3b36b",
+        "name": "Game over after round",
+        "passed": true,
+        "actual": "Quick! Click the mole!"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T01:19:31.887Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "05023c7c-7de7-4797-9697-0c686ee3b36b",
+        "status": "passed",
+        "passed": 6,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T01:19:31.888Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial board and status",
+        "actions": [],
+        "selector": ".hole",
+        "expected": "9",
+        "assertion": "count"
+      },
+      {
+        "name": "Start round",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start"
+          }
+        ],
+        "selector": "#start",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Start resets score and timer",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start"
+          }
+        ],
+        "selector": "#time",
+        "expected": "30"
+      },
+      {
+        "name": "Whacking active mole scores",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start"
+          },
+          {
+            "type": "wait",
+            "ms": 100
+          },
+          {
+            "type": "click",
+            "selector": ".hole.active"
+          }
+        ],
+        "selector": "#score",
+        "expected": "1"
+      },
+      {
+        "name": "Round ends at zero",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start"
+          },
+          {
+            "type": "wait",
+            "ms": 6000
+          }
+        ],
+        "selector": "#time",
+        "expected": "24",
+        "assertion": "matches"
+      },
+      {
+        "name": "Game over after round",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start"
+          },
+          {
+            "type": "wait",
+            "ms": 6000
+          }
+        ],
+        "selector": "#message",
+        "expected": "Quick! Click the mole!"
+      }
+    ],
+    "limitations": [
+      "Cannot reliably observe the 30-second countdown or game-over state within the 8-second action limit.",
+      "Random mole placement prevents deterministic verification of all holes or exact one-second intervals."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24211,
+      "completion_tokens": 273,
+      "total_tokens": 24484
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Whack-a-Mole</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"game.js\" defer></script>\n</head>\n<body>\n  <main class=\"game-card\">\n    <header>\n      <p class=\"eyebrow\">ARCADE · ROUND 01</p>\n      <h1>Whack-a-Mole!</h1>\n      <p class=\"intro\">Catch the little troublemaker before time runs out.</p>\n    </header>\n\n    <section class=\"scoreboard\" aria-label=\"Game status\">\n      <div><span class=\"stat-label\">SCORE</span><strong id=\"score\" aria-live=\"polite\">0</strong></div>\n      <div><span class=\"stat-label\">TIME LEFT</span><strong><span id=\"time\">30</span><span class=\"seconds\">s</span></strong></div>\n    </section>\n\n    <div class=\"board\" id=\"board\" role=\"group\" aria-label=\"Nine mole holes\">\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 1\" data-hole=\"0\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 2\" data-hole=\"1\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 3\" data-hole=\"2\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 4\" data-hole=\"3\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 5\" data-hole=\"4\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 6\" data-hole=\"5\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 7\" data-hole=\"6\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 8\" data-hole=\"7\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n      <button class=\"hole\" type=\"button\" aria-label=\"Hole 9\" data-hole=\"8\"><span class=\"mole\" aria-hidden=\"true\">●</span></button>\n    </div>\n\n    <p id=\"message\" class=\"message\" aria-live=\"polite\">Press start when you're ready!</p>\n    <button id=\"start\" class=\"start-button\" type=\"button\">Start game</button>\n  </main>\n</body>\n</html>\n",
+      "description": "Offline game page with status, accessible 3×3 button board, and start control."
+    },
+    {
+      "path": "styles.css",
+      "content": ":root {\n  color-scheme: light;\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n  color: #24332d;\n  background: #d9ebd9;\n  font-size: 16px;\n}\n\n* { box-sizing: border-box; }\nbody {\n  min-width: 360px;\n  min-height: 100vh;\n  margin: 0;\n  padding: 24px 16px;\n  display: grid;\n  place-items: center;\n  background: radial-gradient(circle at 50% 20%, #eff8df, #c6e2d0 75%);\n}\n.game-card {\n  width: min(100%, 480px);\n  padding: clamp(22px, 6vw, 38px);\n  border: 3px solid #24332d;\n  border-radius: 20px;\n  background: #fffdf2;\n  box-shadow: 8px 8px 0 #24332d;\n  text-align: center;\n}\n.eyebrow { margin: 0 0 8px; color: #457a59; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.12em; }\nh1 { margin: 0; font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1.1; }\n.intro { margin: 12px 0 24px; color: #53675a; }\n.scoreboard { display: flex; justify-content: center; gap: 44px; margin-bottom: 22px; }\n.scoreboard > div { display: grid; gap: 3px; min-width: 84px; }\n.stat-label { color: #53675a; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; }\n.scoreboard strong { font-size: 2rem; line-height: 1; }\n.seconds { margin-left: 2px; color: #53675a; font-size: 1rem; }\n.board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 14px; border: 3px solid #24332d; border-radius: 16px; background: #b8d99b; }\n.hole {\n  aspect-ratio: 1;\n  min-width: 0;\n  overflow: hidden;\n  display: grid;\n  place-items: center;\n  border: 3px solid #24332d;\n  border-radius: 50%;\n  background: #6d8e53;\n  box-shadow: inset 0 7px 0 #587444;\n  cursor: pointer;\n  touch-action: manipulation;\n}\n.hole:hover { background: #789b5c; }\n.hole:focus-visible, .start-button:focus-visible { outline: 4px solid #e69145; outline-offset: 3px; }\n.hole:active { transform: scale(0.96); }\n.mole { display: none; color: #f3bd76; font-size: clamp(2.5rem, 11vw, 4rem); line-height: 1; text-shadow: 0 3px 0 #a96542; }\n.hole.active .mole { display: block; }\n.message { min-height: 1.5em; margin: 19px 0 14px; font-weight: 650; }\n.start-button { min-height: 52px; padding: 12px 28px; border: 3px solid #24332d; border-radius: 12px; background: #e69145; color: #24332d; font: inherit; font-weight: 800; cursor: pointer; box-shadow: 0 4px 0 #24332d; }\n.start-button:hover { background: #f0a358; }\n.start-button:active { transform: translateY(3px); box-shadow: 0 1px 0 #24332d; }\n.start-button:disabled { cursor: default; opacity: 0.65; }\n@media (max-width: 400px) {\n  .board { gap: 8px; padding: 10px; }\n  .scoreboard { gap: 24px; }\n}\n",
+      "description": "Responsive arcade styling, cohesive palette, and visible control states."
+    },
+    {
+      "path": "game.js",
+      "content": "const holes = Array.from(document.querySelectorAll('.hole'));\nconst scoreDisplay = document.querySelector('#score');\nconst timeDisplay = document.querySelector('#time');\nconst message = document.querySelector('#message');\nconst startButton = document.querySelector('#start');\n\nlet score = 0;\nlet timeLeft = 30;\nlet activeHole = -1;\nlet timerId = null;\nlet moleId = null;\n\nfunction showRandomMole() {\n  const next = Math.floor(Math.random() * holes.length);\n  const chosen = next === activeHole ? (next + 1 + Math.floor(Math.random() * (holes.length - 1))) % holes.length : next;\n  holes.forEach((hole, index) => hole.classList.toggle('active', index === chosen));\n  activeHole = chosen;\n}\n\nfunction endGame() {\n  clearInterval(timerId);\n  clearInterval(moleId);\n  timerId = null;\n  moleId = null;\n  activeHole = -1;\n  holes.forEach(hole => hole.classList.remove('active'));\n  message.textContent = `Game over! You scored ${score} ${score === 1 ? 'point' : 'points'}.`;\n  startButton.disabled = false;\n  startButton.textContent = 'Play again';\n}\n\nstartButton.addEventListener('click', () => {\n  if (timerId) return;\n  score = 0;\n  timeLeft = 30;\n  scoreDisplay.textContent = score;\n  timeDisplay.textContent = timeLeft;\n  message.textContent = 'Quick! Click the mole!';\n  startButton.disabled = true;\n  startButton.textContent = 'Playing…';\n  showRandomMole();\n  moleId = setInterval(showRandomMole, 1000);\n  timerId = setInterval(() => {\n    timeLeft -= 1;\n    timeDisplay.textContent = timeLeft;\n    if (timeLeft <= 0) endGame();\n  }, 1000);\n});\n\nholes.forEach((hole, index) => {\n  hole.addEventListener('click', () => {\n    if (timerId && index === activeHole) {\n      score += 1;\n      scoreDisplay.textContent = score;\n      activeHole = -1;\n      hole.classList.remove('active');\n    }\n  });\n});\n",
+      "description": "Plain JavaScript game loop, randomized mole placement, scoring, and round cleanup."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Whack-a-Mole\n\nA small offline browser game made with HTML, CSS, and plain JavaScript.\n\n## Play\n\nOpen `index.html` in a browser. No server, network connection, packages, or external assets are needed. Select **Start game**, then click or tap the mole as it appears. The round lasts 30 seconds; your score and remaining time are shown above the board. At zero, the board clears and the game displays your final score. Choose **Play again** to start another round.\n\nThe holes are labeled buttons, so they can also be reached and activated with a keyboard. Focus is visibly highlighted.\n",
+      "description": "Offline launch and gameplay instructions."
+    }
+  ]
+}

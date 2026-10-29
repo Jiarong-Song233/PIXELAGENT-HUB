@@ -66,7 +66,7 @@ async function main() {
     let next = 0;
     let completed = 0;
     async function replay(html: string, checks: BrowserCheck[], isolation: 'fresh' | 'shared'): Promise<Run> {
-      const context = await browser!.newContext({ viewport: { width: 1280, height: 720 }, serviceWorkers: 'block' });
+      const context = await browser!.newContext({ locale: 'en-US', timezoneId: 'UTC', viewport: { width: 1280, height: 720 }, serviceWorkers: 'block' });
       try {
         await context.route('**/*', (route) => route.request().url() === `${origin}/` && route.request().isNavigationRequest()
           ? route.continue() : route.abort());

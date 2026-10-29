@@ -1,0 +1,402 @@
+{
+  "caseId": "parking-lot",
+  "run": 2,
+  "strategy": "manager-coder",
+  "dist": "D:\\Projects\\PIXELAGENT-HUB\\.claude\\worktrees\\codex-quota-integration-2a76fa\\pixelagent-hub\\dashboard\\dist\\public",
+  "managerTokens": 21075,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "7/7",
+  "finalChecks": "7/7",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "7/7"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 82,
+  "reportedTokens": 72293,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T01:28:20.051Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T01:28:20.051Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T01:28:37.944Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Parking Lot"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T01:28:37.944Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T01:29:19.578Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T01:29:19.578Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T01:29:20.115Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T01:29:20.117Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "c2f6c225-5f71-46a2-b7a8-21ef3f4ab2f2"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T01:29:37.171Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "c2f6c225-5f71-46a2-b7a8-21ef3f4ab2f2",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T01:29:37.171Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "testPlanId": "c2f6c225-5f71-46a2-b7a8-21ef3f4ab2f2",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T01:29:39.490Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "name": "12 spaces and initial counts",
+        "passed": true,
+        "actual": "12"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T01:29:39.490Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "name": "Park a typed plate and update counts",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T01:29:39.490Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "name": "Parked plate appears in its space",
+        "passed": true,
+        "actual": "ABC 123"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T01:29:39.490Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "name": "Free count decreases after parking",
+        "passed": true,
+        "actual": "11"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T01:29:39.490Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "name": "Search highlights matching plate",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T01:29:39.490Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "name": "Search reports no match",
+        "passed": true,
+        "actual": "No matching plates found."
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T01:29:39.490Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "name": "Clear search removes highlight",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T01:29:39.490Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "1d047c78-a02f-4086-a458-cfad45f39974",
+        "status": "passed",
+        "passed": 7,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T01:29:39.492Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "12 spaces and initial counts",
+        "actions": [],
+        "selector": ".space",
+        "expected": "12",
+        "assertion": "count"
+      },
+      {
+        "name": "Park a typed plate and update counts",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".space",
+            "nth": 0
+          },
+          {
+            "type": "input",
+            "selector": "#plate-input",
+            "value": "ABC 123"
+          },
+          {
+            "type": "click",
+            "selector": ".park-button"
+          }
+        ],
+        "selector": "#occupied-count",
+        "expected": "1"
+      },
+      {
+        "name": "Parked plate appears in its space",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".space",
+            "nth": 0
+          },
+          {
+            "type": "input",
+            "selector": "#plate-input",
+            "value": "ABC 123"
+          },
+          {
+            "type": "click",
+            "selector": ".park-button"
+          }
+        ],
+        "selector": ".plate-label",
+        "nth": 0,
+        "expected": "ABC 123"
+      },
+      {
+        "name": "Free count decreases after parking",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".space",
+            "nth": 0
+          },
+          {
+            "type": "input",
+            "selector": "#plate-input",
+            "value": "ABC 123"
+          },
+          {
+            "type": "click",
+            "selector": ".park-button"
+          }
+        ],
+        "selector": "#free-count",
+        "expected": "11"
+      },
+      {
+        "name": "Search highlights matching plate",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".space",
+            "nth": 0
+          },
+          {
+            "type": "input",
+            "selector": "#plate-input",
+            "value": "ABC 123"
+          },
+          {
+            "type": "click",
+            "selector": ".park-button"
+          },
+          {
+            "type": "input",
+            "selector": "#plate-search",
+            "value": "ABC"
+          }
+        ],
+        "selector": ".space.match",
+        "expected": "1",
+        "assertion": "count"
+      },
+      {
+        "name": "Search reports no match",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#plate-search",
+            "value": "ZZZ"
+          }
+        ],
+        "selector": "#search-status",
+        "expected": "No matching plates found."
+      },
+      {
+        "name": "Clear search removes highlight",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".space",
+            "nth": 0
+          },
+          {
+            "type": "input",
+            "selector": "#plate-input",
+            "value": "ABC 123"
+          },
+          {
+            "type": "click",
+            "selector": ".park-button"
+          },
+          {
+            "type": "input",
+            "selector": "#plate-search",
+            "value": "ABC"
+          },
+          {
+            "type": "click",
+            "selector": "#clear-search"
+          }
+        ],
+        "selector": ".space.match",
+        "expected": "0",
+        "assertion": "count"
+      }
+    ],
+    "limitations": [
+      "Occupied-space removal requires a native confirm dialog; unavailable actions prevent verifying confirmation and removal."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 25733,
+      "completion_tokens": 461,
+      "total_tokens": 26194
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#172a27\">\n  <title>Pixel Parking Lot</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"card\">\n    <header class=\"header\">\n      <div class=\"brand\"><span class=\"brand-icon\" aria-hidden=\"true\">P</span><span>PIXEL PARKING</span></div>\n      <h1>Your little corner of the lot.</h1>\n      <p class=\"intro\">Pick a space to park. Click it again when it’s time to go.</p>\n    </header>\n\n    <section class=\"stats\" aria-label=\"Parking space totals\">\n      <div class=\"stat\"><span class=\"stat-dot free-dot\" aria-hidden=\"true\"></span><span class=\"stat-label\">FREE</span><strong id=\"free-count\" aria-live=\"polite\">12</strong></div>\n      <div class=\"stat\"><span class=\"stat-dot occupied-dot\" aria-hidden=\"true\"></span><span class=\"stat-label\">OCCUPIED</span><strong id=\"occupied-count\" aria-live=\"polite\">0</strong></div>\n      <div class=\"lot-label\">LOT A <span aria-hidden=\"true\">·</span> 12 SPACES</div>\n    </section>\n\n    <section class=\"lot\" aria-label=\"Parking spaces\">\n      <div class=\"lot-sign\"><span>ENTRANCE</span><span aria-hidden=\"true\">↓</span></div>\n      <div class=\"spaces\" id=\"spaces\"></div>\n      <div class=\"driveway\" aria-hidden=\"true\"><span>←</span><span>DRIVE LANE</span><span>→</span></div>\n    </section>\n\n    <section class=\"tools\" aria-label=\"Parking controls\">\n      <label for=\"plate-search\">Find a plate</label>\n      <div class=\"search-wrap\"><span aria-hidden=\"true\">⌕</span><input id=\"plate-search\" type=\"search\" placeholder=\"Try ABC 123\" autocomplete=\"off\"><button id=\"clear-search\" class=\"clear-button\" type=\"button\" aria-label=\"Clear plate search\">×</button></div>\n      <p id=\"search-status\" class=\"search-status\" aria-live=\"polite\">Search highlights matching plates.</p>\n    </section>\n    <footer><span class=\"legend\"><i class=\"legend-box free-key\" aria-hidden=\"true\"></i>Free</span><span class=\"legend\"><i class=\"legend-box occupied-key\" aria-hidden=\"true\"></i>Occupied</span><span class=\"hint\">Select a space to get started</span></footer>\n  </main>\n  <dialog id=\"park-dialog\" aria-labelledby=\"dialog-title\">\n    <form id=\"park-form\" method=\"dialog\">\n      <p class=\"dialog-kicker\">SPACE <span id=\"dialog-space\"></span></p>\n      <h2 id=\"dialog-title\">Park your car</h2>\n      <label for=\"plate-input\">License plate</label>\n      <input id=\"plate-input\" name=\"plate\" maxlength=\"12\" autocomplete=\"off\" required placeholder=\"e.g. ABC 123\">\n      <div class=\"dialog-actions\"><button class=\"cancel-button\" type=\"button\" id=\"cancel-park\">Cancel</button><button class=\"park-button\" type=\"submit\">Park car</button></div>\n      <p id=\"form-error\" class=\"form-error\" aria-live=\"polite\"></p>\n    </form>\n  </dialog>\n</body>\n</html>\n",
+      "description": "Offline app structure and accessible parking controls."
+    },
+    {
+      "path": "style.css",
+      "content": "*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:32px 16px;display:grid;place-items:center;background-color:#172a27;background-image:radial-gradient(#355049 1px,transparent 1px);background-size:16px 16px;color:#20312d;font-family:system-ui,-apple-system,\"Segoe UI\",sans-serif;font-size:16px}.card{width:min(100%,600px);padding:clamp(22px,5vw,40px);background:#f5f2e9;border:4px solid #203a34;border-radius:10px;box-shadow:9px 9px 0 #0e1d1a}.header{margin-bottom:28px}.brand{display:flex;align-items:center;gap:10px;color:#44715d;font-size:14px;font-weight:800;letter-spacing:.12em}.brand-icon{display:grid;place-items:center;width:30px;height:30px;background:#d4ed7b;border:2px solid #203a34;border-radius:5px;color:#203a34;font-size:17px}.header h1{margin:18px 0 6px;font-size:clamp(25px,6vw,34px);line-height:1.15;letter-spacing:-.04em}.intro{margin:0;color:#63716a}.stats{display:flex;align-items:center;gap:24px;padding:15px 0;border-top:2px solid #dce0d4;border-bottom:2px solid #dce0d4}.stat{display:grid;grid-template-columns:12px auto;align-items:center;column-gap:7px;row-gap:1px}.stat-dot{grid-row:span 2;width:10px;height:10px;border-radius:50%}.free-dot{background:#76a47a}.occupied-dot{background:#e7a65c}.stat-label{font-size:11px;font-weight:800;letter-spacing:.1em;color:#68766e}.stat strong{font-size:20px;line-height:1.1}.lot-label{margin-left:auto;font-size:12px;font-weight:800;letter-spacing:.09em;color:#65726c}.lot-label span{padding:0 4px;color:#d09b58}.lot{margin-top:20px;padding:14px 14px 0;background:#dce8d8;border:2px solid #b4c8b1;border-radius:6px}.lot-sign{display:flex;justify-content:space-between;padding:0 3px 10px;color:#66816c;font-size:11px;font-weight:800;letter-spacing:.12em}.spaces{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.space{position:relative;display:grid;place-items:center;min-width:0;height:88px;padding:8px 4px 5px;border:2px solid #94b49b;border-bottom:0;border-radius:5px 5px 0 0;background:#eaf0e4;color:#54785e;cursor:pointer;transition:transform .12s,background .12s,border-color .12s,box-shadow .12s}.space:hover{transform:translateY(-2px);background:#f5f6e9;border-color:#628b6b}.space:active{transform:translateY(1px)}.space:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #d39950;outline-offset:3px}.space-number{position:absolute;top:5px;left:7px;font-size:12px;font-weight:800}.car{width:27px;height:45px;border:2px solid #203a34;border-radius:8px 8px 6px 6px;background:#d4ed7b;box-shadow:inset 0 -7px #b2d353;position:relative}.car:before{content:\"\";position:absolute;top:8px;left:4px;right:4px;height:13px;border:1px solid #809d69;border-radius:4px;background:#dce8d8}.car:after{content:\"\";position:absolute;left:-4px;top:8px;width:3px;height:7px;background:#203a34;box-shadow:28px 0 #203a34,0 20px #203a34,28px 20px #203a34}.plate-label{position:absolute;bottom:5px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px;font-weight:800;letter-spacing:.06em;color:#233c32}.space.occupied{background:#f2e4ca;border-color:#d6aa72;color:#986e3e}.space.occupied .car{background:#e7a65c;box-shadow:inset 0 -7px #ce8544}.space.occupied .car:before{border-color:#ba8651}.space.occupied .plate-label{color:#714b27}.space.match{outline:3px solid #d39950;outline-offset:2px;z-index:1;background:#fff4c8}.space.no-match{opacity:.38}.driveway{height:35px;display:flex;align-items:center;justify-content:space-between;padding:0 7px;color:#87a288;font-size:10px;font-weight:800;letter-spacing:.15em}.driveway span:first-child,.driveway span:last-child{font-size:15px}.tools{margin-top:24px}.tools>label,dialog label{display:block;margin-bottom:8px;font-size:14px;font-weight:750}.search-wrap{display:flex;align-items:center;gap:9px;height:48px;padding:0 12px;border:2px solid #c6d0c1;border-radius:5px;background:#fffdf7;color:#718076}.search-wrap:focus-within{border-color:#588169}.search-wrap>span{font-size:22px}.search-wrap input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:#20312d;font:inherit}.search-wrap input:focus-visible{outline:0}.clear-button{display:none;width:28px;height:28px;border:0;border-radius:4px;background:transparent;color:#65766a;font-size:22px;cursor:pointer}.clear-button.visible{display:block}.clear-button:hover{background:#e9eee2}.search-status{min-height:20px;margin:7px 0 0;color:#718076;font-size:13px}footer{display:flex;align-items:center;gap:16px;margin-top:18px;padding-top:15px;border-top:2px solid #dce0d4}.legend{display:flex;align-items:center;gap:6px;color:#65736b;font-size:12px}.legend-box{width:11px;height:11px;border:1px solid #94b49b;border-radius:2px}.free-key{background:#eaf0e4}.occupied-key{border-color:#d6aa72;background:#f2e4ca}.hint{margin-left:auto;color:#879187;font-size:12px}dialog{width:min(calc(100% - 32px),390px);padding:26px;border:3px solid #203a34;border-radius:8px;background:#f5f2e9;color:#20312d;box-shadow:8px 8px 0 #0e1d1a}dialog::backdrop{background:#10211ed1}dialog h2{margin:4px 0 20px;font-size:25px}.dialog-kicker{margin:0;color:#66816c;font-size:12px;font-weight:800;letter-spacing:.1em}dialog input{width:100%;height:48px;padding:0 12px;border:2px solid #c6d0c1;border-radius:5px;background:#fffdf7;color:#20312d;font:inherit;text-transform:uppercase}.dialog-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}.dialog-actions button{min-height:44px;padding:0 16px;border:2px solid #203a34;border-radius:5px;font:inherit;font-weight:750;cursor:pointer;transition:transform .1s,filter .1s}.dialog-actions button:hover{filter:brightness(.95)}.dialog-actions button:active{transform:translateY(2px)}.cancel-button{background:#f5f2e9;color:#203a34}.park-button{background:#d4ed7b;color:#203a34}.form-error{min-height:18px;margin:10px 0 0;color:#a44d34;font-size:13px}@media(max-width:420px){body{padding:18px 12px}.card{padding:22px 18px}.stats{gap:15px}.lot{padding:11px 9px 0}.spaces{gap:6px}.space{height:78px}.hint{max-width:112px;text-align:right}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}\n",
+      "description": "Responsive themed board, car illustrations, and clear interactive states."
+    },
+    {
+      "path": "app.js",
+      "content": "const spacesEl=document.querySelector('#spaces');\nconst freeCount=document.querySelector('#free-count');\nconst occupiedCount=document.querySelector('#occupied-count');\nconst dialog=document.querySelector('#park-dialog');\nconst plateInput=document.querySelector('#plate-input');\nconst form=document.querySelector('#park-form');\nconst formError=document.querySelector('#form-error');\nconst searchInput=document.querySelector('#plate-search');\nconst searchStatus=document.querySelector('#search-status');\nconst clearSearch=document.querySelector('#clear-search');\nconst cars=Array(12).fill(null);\nlet selectedSpace=-1;\n\nfor(let i=0;i<cars.length;i++){\n  const button=document.createElement('button');\n  button.type='button';\n  button.className='space';\n  button.dataset.index=i;\n  button.setAttribute('aria-label',`Space ${i+1}, free`);\n  button.innerHTML=`<span class=\"space-number\">${String(i+1).padStart(2,'0')}</span><span class=\"car\" aria-hidden=\"true\"></span><span class=\"plate-label\"></span>`;\n  button.addEventListener('click',()=>{\n    if(cars[i]){\n      const plate=cars[i];\n      if(window.confirm(`Remove ${plate} from space ${i+1}?`)){\n        cars[i]=null;\n        render();\n      }\n    }else{\n      selectedSpace=i;\n      document.querySelector('#dialog-space').textContent=String(i+1).padStart(2,'0');\n      plateInput.value='';\n      formError.textContent='';\n      dialog.showModal();\n      plateInput.focus();\n    }\n  });\n  spacesEl.append(button);\n}\n\nfunction render(){\n  let occupied=0;\n  [...spacesEl.children].forEach((button,i)=>{\n    const plate=cars[i];\n    const label=button.querySelector('.plate-label');\n    button.classList.toggle('occupied',Boolean(plate));\n    label.textContent=plate||'';\n    button.setAttribute('aria-label',`Space ${i+1}, ${plate?`occupied by ${plate}`:'free'}`);\n    if(plate)occupied++;\n  });\n  occupiedCount.textContent=occupied;\n  freeCount.textContent=cars.length-occupied;\n  updateSearch();\n}\n\nfunction updateSearch(){\n  const query=searchInput.value.trim().toUpperCase();\n  let matches=0;\n  [...spacesEl.children].forEach((button,i)=>{\n    button.classList.remove('match','no-match');\n    if(query&&cars[i]){\n      if(cars[i].includes(query)){\n        button.classList.add('match');\n        matches++;\n      }else button.classList.add('no-match');\n    }\n  });\n  clearSearch.classList.toggle('visible',Boolean(searchInput.value));\n  searchStatus.textContent=query?(matches?`${matches} matching ${matches===1?'plate':'plates'} highlighted.`:'No matching plates found.'):'Search highlights matching plates.';\n}\n\nform.addEventListener('submit',event=>{\n  event.preventDefault();\n  const plate=plateInput.value.trim().replace(/\\s+/g,' ').toUpperCase();\n  if(!plate){formError.textContent='Enter a license plate to continue.';return;}\n  if(cars.some((value,i)=>i!==selectedSpace&&value===plate)){\n    formError.textContent='That plate is already parked.';\n    plateInput.focus();\n    return;\n  }\n  cars[selectedSpace]=plate;\n  dialog.close();\n  render();\n});\n\ndocument.querySelector('#cancel-park').addEventListener('click',()=>dialog.close());\ndialog.addEventListener('close',()=>{selectedSpace=-1;formError.textContent='';});\nsearchInput.addEventListener('input',updateSearch);\nclearSearch.addEventListener('click',()=>{searchInput.value='';updateSearch();searchInput.focus();});\nrender();\n",
+      "description": "Plain JavaScript parking, removal confirmation, live counts, and plate search."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Parking Lot\n\nA small offline parking lot app built with HTML, CSS, and plain JavaScript. It has 12 numbered spaces, typed license plate entry, removal, free and occupied totals, and search highlighting.\n\n## Run\n\nOpen `index.html` in a modern browser. No server, network connection, packages, or build step are needed.\n\n## Use\n\n- Select a free space, enter a plate, and choose **Park car**.\n- Select an occupied space and confirm to remove its car.\n- Type part or all of a plate in **Find a plate** to highlight matching spaces.\n- Use Tab and Enter/Space to navigate and activate the parking spaces and controls.\n",
+      "description": "Offline launch and usage instructions."
+    }
+  ]
+}

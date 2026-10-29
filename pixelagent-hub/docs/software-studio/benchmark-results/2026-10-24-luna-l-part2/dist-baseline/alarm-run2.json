@@ -1,0 +1,541 @@
+{
+  "caseId": "alarm",
+  "run": 2,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\baseline",
+  "managerTokens": 21036,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "4/6",
+  "finalChecks": "6/6",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 2,
+  "coderRepair": false,
+  "checkRuns": [
+    "4/6",
+    "6/6"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 99,
+  "reportedTokens": 96333,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T03:06:42.095Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T03:06:42.095Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T03:06:59.515Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "A Pixel Alarm List"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T03:06:59.515Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T03:07:37.160Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T03:07:37.160Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T03:07:37.647Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T03:07:37.651Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "ea462deb-f41c-4526-8146-638dc179703b"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T03:07:54.291Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "ea462deb-f41c-4526-8146-638dc179703b",
+        "checks": 6
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T03:07:54.292Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "7ae6cbdc-9d75-4ae8-b6f3-d87532f1ce1d",
+        "testPlanId": "ea462deb-f41c-4526-8146-638dc179703b",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T03:08:00.300Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ae6cbdc-9d75-4ae8-b6f3-d87532f1ce1d",
+        "name": "Add labeled alarm",
+        "passed": true,
+        "actual": "07:05 Stretch On ×"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T03:08:00.300Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ae6cbdc-9d75-4ae8-b6f3-d87532f1ce1d",
+        "name": "Add unlabeled alarm",
+        "passed": true,
+        "actual": "No label"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T03:08:00.300Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ae6cbdc-9d75-4ae8-b6f3-d87532f1ce1d",
+        "name": "Toggle alarm off and count",
+        "passed": false,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T03:08:00.300Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ae6cbdc-9d75-4ae8-b6f3-d87532f1ce1d",
+        "name": "Sort alarms by time",
+        "passed": true,
+        "actual": "07:00"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T03:08:00.300Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ae6cbdc-9d75-4ae8-b6f3-d87532f1ce1d",
+        "name": "Delete alarm",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T03:08:00.300Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ae6cbdc-9d75-4ae8-b6f3-d87532f1ce1d",
+        "name": "Empty state after deletion",
+        "passed": false,
+        "actual": "No alarms yet. Add one to get started."
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T03:08:00.300Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "7ae6cbdc-9d75-4ae8-b6f3-d87532f1ce1d",
+        "status": "failed",
+        "passed": 4,
+        "failed": 2,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T03:08:00.303Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "ea462deb-f41c-4526-8146-638dc179703b",
+        "review": true
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T03:08:16.915Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "ea462deb-f41c-4526-8146-638dc179703b",
+        "checks": 6,
+        "review": true,
+        "revised": 2,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24865,
+          "completion_tokens": 311,
+          "total_tokens": 25176
+        },
+        "verdicts": [
+          {
+            "name": "Toggle alarm off and count",
+            "verdict": "check-wrong",
+            "reason": "The check reads the text of `#enabled-count`, which displays only the number `0`; the requirement asks the app to show how many alarms are on, and the app does. The expected value `0 alarms on` contra"
+          },
+          {
+            "name": "Empty state after deletion",
+            "verdict": "check-wrong",
+            "reason": "The check expects the text `true` from `#empty-state`; after deleting the only alarm, the app displays the empty-state message and makes the element visible. The requirement does not ask for the text "
+          }
+        ]
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T03:08:16.916Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "e67ffa70-7f74-4e3c-a375-84f72eeb3a1b",
+        "testPlanId": "ea462deb-f41c-4526-8146-638dc179703b",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T03:08:18.811Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e67ffa70-7f74-4e3c-a375-84f72eeb3a1b",
+        "name": "Add labeled alarm",
+        "passed": true,
+        "actual": "07:05 Stretch On ×"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T03:08:18.811Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e67ffa70-7f74-4e3c-a375-84f72eeb3a1b",
+        "name": "Add unlabeled alarm",
+        "passed": true,
+        "actual": "No label"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T03:08:18.811Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e67ffa70-7f74-4e3c-a375-84f72eeb3a1b",
+        "name": "Toggle alarm off and count",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T03:08:18.811Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e67ffa70-7f74-4e3c-a375-84f72eeb3a1b",
+        "name": "Sort alarms by time",
+        "passed": true,
+        "actual": "07:00"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T03:08:18.811Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e67ffa70-7f74-4e3c-a375-84f72eeb3a1b",
+        "name": "Delete alarm",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T03:08:18.811Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e67ffa70-7f74-4e3c-a375-84f72eeb3a1b",
+        "name": "Empty state after deletion",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T03:08:18.811Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "e67ffa70-7f74-4e3c-a375-84f72eeb3a1b",
+        "status": "passed",
+        "passed": 6,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T03:08:18.813Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Add labeled alarm",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#alarm-hour",
+            "value": "7"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-minute",
+            "value": "5"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-label",
+            "value": "Stretch"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          }
+        ],
+        "selector": "#alarm-list .alarm-row",
+        "expected": "07:05 Stretch On ×"
+      },
+      {
+        "name": "Add unlabeled alarm",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#alarm-hour",
+            "value": "8"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-minute",
+            "value": "30"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          }
+        ],
+        "selector": "#alarm-list .alarm-name",
+        "expected": "No label"
+      },
+      {
+        "name": "Toggle alarm off and count",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#alarm-hour",
+            "value": "6"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-minute",
+            "value": "15"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "click",
+            "selector": "#alarm-list input[type=checkbox]"
+          }
+        ],
+        "selector": "#enabled-count",
+        "expected": "0",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort alarms by time",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#alarm-hour",
+            "value": "18"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-minute",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-hour",
+            "value": "7"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-minute",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          }
+        ],
+        "selector": ".alarm-time",
+        "nth": 0,
+        "expected": "07:00"
+      },
+      {
+        "name": "Delete alarm",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#alarm-hour",
+            "value": "9"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-minute",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "click",
+            "selector": ".delete-button"
+          }
+        ],
+        "selector": "#alarm-total",
+        "expected": "0"
+      },
+      {
+        "name": "Empty state after deletion",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#alarm-hour",
+            "value": "9"
+          },
+          {
+            "type": "input",
+            "selector": "#alarm-minute",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "click",
+            "selector": ".delete-button"
+          }
+        ],
+        "selector": "#empty-state",
+        "expected": "true",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Cannot verify real alarm firing or persistence; alarms are in-memory only.",
+      "Form rejects out-of-range values; browser-native validation behavior is not checked."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 25191,
+      "completion_tokens": 506,
+      "total_tokens": 25697
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#17252a\">\n  <title>Pixel Alarm List</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"board\" aria-labelledby=\"page-title\">\n    <header class=\"board-header\">\n      <div class=\"pixel-clock\" aria-hidden=\"true\">▦</div>\n      <div>\n        <p class=\"eyebrow\">YOUR DAILY RHYTHM</p>\n        <h1 id=\"page-title\">Pixel alarms</h1>\n      </div>\n    </header>\n\n    <section class=\"summary\" aria-live=\"polite\" aria-atomic=\"true\">\n      <span class=\"status-dot\" aria-hidden=\"true\"></span>\n      <span><strong id=\"enabled-count\">0</strong> alarms on</span>\n      <span class=\"summary-note\">sorted by time</span>\n    </section>\n\n    <form id=\"alarm-form\" class=\"alarm-form\">\n      <div class=\"time-fields\">\n        <div class=\"field\">\n          <label for=\"alarm-hour\">Hour</label>\n          <input id=\"alarm-hour\" name=\"hour\" type=\"number\" min=\"0\" max=\"23\" inputmode=\"numeric\" placeholder=\"07\" required>\n        </div>\n        <span class=\"time-colon\" aria-hidden=\"true\">:</span>\n        <div class=\"field\">\n          <label for=\"alarm-minute\">Minute</label>\n          <input id=\"alarm-minute\" name=\"minute\" type=\"number\" min=\"0\" max=\"59\" inputmode=\"numeric\" placeholder=\"30\" required>\n        </div>\n      </div>\n      <div class=\"field label-field\">\n        <label for=\"alarm-label\">Label <span>(optional)</span></label>\n        <input id=\"alarm-label\" name=\"label\" type=\"text\" maxlength=\"40\" placeholder=\"Morning stretch\">\n      </div>\n      <button class=\"add-button\" type=\"submit\"><span aria-hidden=\"true\">＋</span> Add alarm</button>\n    </form>\n\n    <section class=\"alarm-section\" aria-labelledby=\"list-title\">\n      <div class=\"list-heading\">\n        <h2 id=\"list-title\">Your alarms</h2>\n        <span id=\"alarm-total\" class=\"total-badge\">0</span>\n      </div>\n      <p id=\"empty-state\" class=\"empty-state\">No alarms yet. Add one to get started.</p>\n      <ul id=\"alarm-list\" class=\"alarm-list\" aria-label=\"Alarms\"></ul>\n    </section>\n    <footer>Small reminders, right on time <span aria-hidden=\"true\">✦</span></footer>\n  </main>\n</body>\n</html>\n",
+      "description": "Offline alarm list markup with labeled controls and accessible status."
+    },
+    {
+      "path": "styles.css",
+      "content": ":root {\n  color-scheme: light;\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n  font-size: 16px;\n  color: #17252a;\n  background: #d9e5dc;\n  font-synthesis: none;\n}\n\n* { box-sizing: border-box; }\nbody {\n  min-width: 360px;\n  min-height: 100vh;\n  margin: 0;\n  padding: 48px 18px;\n  display: grid;\n  place-items: center;\n  background-color: #d9e5dc;\n  background-image: radial-gradient(#b9cfc1 1px, transparent 1px);\n  background-size: 20px 20px;\n}\nbutton, input { font: inherit; }\n.board {\n  width: min(100%, 570px);\n  padding: 32px;\n  background: #fffdf5;\n  border: 3px solid #17252a;\n  box-shadow: 8px 8px 0 #17252a;\n}\n.board-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }\n.pixel-clock {\n  width: 58px; height: 58px; display: grid; place-items: center;\n  color: #fffdf5; background: #df6b4c; border: 3px solid #17252a;\n  font-size: 30px; line-height: 1; box-shadow: 3px 3px 0 #17252a;\n}\n.eyebrow { margin: 0 0 4px; color: #4e6963; font-size: 0.78rem; font-weight: 800; letter-spacing: .13em; }\nh1 { margin: 0; font-size: clamp(1.65rem, 6vw, 2.1rem); line-height: 1.1; }\n.summary {\n  display: flex; align-items: center; gap: 9px; padding: 12px 14px;\n  background: #eaf1e8; border: 2px solid #c7d7ca; font-weight: 700;\n}\n.status-dot { width: 10px; height: 10px; border-radius: 50%; background: #498c68; box-shadow: 0 0 0 3px #c8dfcf; }\n.summary-note { margin-left: auto; color: #60736d; font-size: .88rem; font-weight: 500; }\n.alarm-form { display: grid; grid-template-columns: 1fr 1.4fr; gap: 16px; margin: 24px 0 30px; }\n.time-fields { display: flex; align-items: end; gap: 8px; }\n.field { display: grid; gap: 7px; min-width: 0; }\n.field label { font-size: .9rem; font-weight: 750; }\n.field label span { color: #687a74; font-weight: 500; }\ninput {\n  width: 100%; min-height: 48px; padding: 9px 11px;\n  color: #17252a; background: #fff; border: 2px solid #9eb1a5; border-radius: 2px;\n}\ninput::placeholder { color: #87958f; }\ninput:focus-visible, button:focus-visible { outline: 3px solid #df6b4c; outline-offset: 3px; }\n.time-fields .field { flex: 1; }\n.time-fields input { text-align: center; }\n.time-colon { padding-bottom: 10px; font-size: 1.5rem; font-weight: 800; }\n.label-field { grid-column: 1 / -1; }\n.add-button {\n  grid-column: 1 / -1; min-height: 50px; border: 2px solid #17252a;\n  color: #fffdf5; background: #17252a; font-weight: 750; cursor: pointer;\n  transition: transform .12s, box-shadow .12s, background .12s;\n}\n.add-button span { margin-right: 6px; font-size: 1.25rem; vertical-align: -1px; }\n.add-button:hover { background: #30474a; box-shadow: 3px 3px 0 #df6b4c; }\n.add-button:active { transform: translate(2px, 2px); box-shadow: none; }\n.list-heading { display: flex; align-items: center; gap: 10px; padding-bottom: 11px; border-bottom: 2px solid #dce5dc; }\nh2 { margin: 0; font-size: 1.15rem; }\n.total-badge { min-width: 27px; padding: 2px 8px; text-align: center; border: 1px solid #b9c9bc; background: #eaf1e8; font-size: .85rem; font-weight: 750; }\n.empty-state { margin: 20px 0 10px; color: #61736c; text-align: center; }\n.alarm-list { display: grid; gap: 10px; margin: 14px 0 0; padding: 0; list-style: none; }\n.alarm-row {\n  display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 12px;\n  min-height: 72px; padding: 12px 14px; background: #f3f5eb; border: 2px solid #d8e1d5;\n}\n.alarm-row.is-off { opacity: .62; }\n.alarm-time { font-variant-numeric: tabular-nums; font-size: 1.55rem; font-weight: 800; letter-spacing: .03em; }\n.alarm-name { overflow-wrap: anywhere; color: #60736d; font-size: .9rem; }\n.switch-control { display: flex; align-items: center; gap: 8px; font-size: .85rem; font-weight: 700; cursor: pointer; }\n.switch-control input { width: 22px; min-height: 22px; height: 22px; margin: 0; accent-color: #498c68; cursor: pointer; }\n.delete-button { min-width: 42px; min-height: 42px; border: 2px solid transparent; color: #9e4935; background: transparent; font-size: 1.3rem; cursor: pointer; }\n.delete-button:hover { border-color: #df6b4c; background: #fff0e8; }\n.delete-button:active { transform: scale(.94); }\nfooter { margin-top: 26px; color: #687a74; text-align: center; font-size: .85rem; }\nfooter span { color: #df6b4c; }\n@media (max-width: 460px) {\n  body { padding: 24px 14px; }\n  .board { padding: 23px 18px; box-shadow: 5px 5px 0 #17252a; }\n  .alarm-form { grid-template-columns: 1fr 1fr; gap: 13px 10px; }\n  .alarm-row { grid-template-columns: 1fr auto auto; gap: 7px; padding: 10px 8px; }\n  .alarm-time { font-size: 1.35rem; }\n  .switch-control { gap: 5px; }\n}\n",
+      "description": "Responsive pixel-inspired card styling with visible interactive states."
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.querySelector('#alarm-form');\nconst hourInput = document.querySelector('#alarm-hour');\nconst minuteInput = document.querySelector('#alarm-minute');\nconst labelInput = document.querySelector('#alarm-label');\nconst list = document.querySelector('#alarm-list');\nconst emptyState = document.querySelector('#empty-state');\nconst enabledCount = document.querySelector('#enabled-count');\nconst alarmTotal = document.querySelector('#alarm-total');\n\nlet alarms = [];\nlet nextId = 1;\n\nfunction render() {\n  alarms.sort((a, b) => a.hour - b.hour || a.minute - b.minute || a.id - b.id);\n  list.replaceChildren();\n  emptyState.hidden = alarms.length > 0;\n  alarmTotal.textContent = String(alarms.length);\n  enabledCount.textContent = String(alarms.filter(alarm => alarm.enabled).length);\n\n  for (const alarm of alarms) {\n    const item = document.createElement('li');\n    item.className = `alarm-row${alarm.enabled ? '' : ' is-off'}`;\n\n    const details = document.createElement('div');\n    const time = document.createElement('div');\n    time.className = 'alarm-time';\n    time.textContent = `${String(alarm.hour).padStart(2, '0')}:${String(alarm.minute).padStart(2, '0')}`;\n    const name = document.createElement('div');\n    name.className = 'alarm-name';\n    name.textContent = alarm.label || 'No label';\n    details.append(time, name);\n\n    const toggleLabel = document.createElement('label');\n    toggleLabel.className = 'switch-control';\n    const toggle = document.createElement('input');\n    toggle.type = 'checkbox';\n    toggle.checked = alarm.enabled;\n    toggle.setAttribute('aria-label', `Turn ${alarm.label || time.textContent} alarm ${alarm.enabled ? 'off' : 'on'}`);\n    toggle.addEventListener('change', () => {\n      alarm.enabled = toggle.checked;\n      render();\n    });\n    const toggleText = document.createElement('span');\n    toggleText.textContent = alarm.enabled ? 'On' : 'Off';\n    toggleLabel.append(toggle, toggleText);\n\n    const remove = document.createElement('button');\n    remove.type = 'button';\n    remove.className = 'delete-button';\n    remove.textContent = '×';\n    remove.setAttribute('aria-label', `Delete ${alarm.label || time.textContent} alarm`);\n    remove.addEventListener('click', () => {\n      alarms = alarms.filter(entry => entry.id !== alarm.id);\n      render();\n    });\n\n    item.append(details, toggleLabel, remove);\n    list.append(item);\n  }\n}\n\nform.addEventListener('submit', event => {\n  event.preventDefault();\n  const hour = Number(hourInput.value);\n  const minute = Number(minuteInput.value);\n  if (!Number.isInteger(hour) || hour < 0 || hour > 23 || !Number.isInteger(minute) || minute < 0 || minute > 59) return;\n\n  alarms.push({ id: nextId++, hour, minute, label: labelInput.value.trim(), enabled: true });\n  form.reset();\n  hourInput.focus();\n  render();\n});\n\nrender();\n",
+      "description": "Plain JavaScript alarm creation, validation, sorting, toggling, deletion, and count."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Alarm List\n\nA small, offline alarm list built with HTML, CSS, and plain JavaScript. No packages, network requests, or server are needed.\n\n## Run\n\nOpen `index.html` in a modern browser. Add an hour from 0–23 and a minute from 0–59; the label is optional. Alarms start enabled, sort by time, and can be toggled or deleted. The summary shows the enabled alarm count.\n\n## Files\n\n- `index.html` — accessible page structure and form\n- `styles.css` — responsive pixel-inspired styling\n- `app.js` — alarm list behavior\n\nAlarms live in memory and reset when the page is reloaded.\n",
+      "description": "Run instructions, feature summary, and file overview."
+    }
+  ]
+}

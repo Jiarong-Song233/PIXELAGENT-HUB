@@ -1,0 +1,546 @@
+{
+  "caseId": "loan-compare",
+  "run": 1,
+  "strategy": "manager-coder",
+  "dist": "D:\\Projects\\PIXELAGENT-HUB\\.claude\\worktrees\\codex-quota-integration-2a76fa\\pixelagent-hub\\dashboard\\dist\\public",
+  "managerTokens": 20902,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "2/6",
+  "finalChecks": "6/6",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 4,
+  "coderRepair": false,
+  "checkRuns": [
+    "2/6",
+    "6/6"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 109,
+  "reportedTokens": 96459,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T01:07:11.070Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T01:07:11.071Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T01:07:27.924Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Savings Planner"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T01:07:27.924Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T01:08:04.329Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T01:08:04.329Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T01:08:04.850Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T01:08:04.850Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "b345c435-7907-4540-ac74-2747805c9f2f"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T01:08:22.227Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "b345c435-7907-4540-ac74-2747805c9f2f",
+        "checks": 6
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T01:08:22.228Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "70ed78e9-5908-49b5-bc1f-fcb45f349534",
+        "testPlanId": "b345c435-7907-4540-ac74-2747805c9f2f",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T01:08:32.364Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70ed78e9-5908-49b5-bc1f-fcb45f349534",
+        "name": "Default plan summary and schedule",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T01:08:32.364Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70ed78e9-5908-49b5-bc1f-fcb45f349534",
+        "name": "Default plan month count",
+        "passed": false,
+        "actual": "20 months"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T01:08:32.364Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70ed78e9-5908-49b5-bc1f-fcb45f349534",
+        "name": "Default plan interest total",
+        "passed": false,
+        "actual": "US$161.53"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T01:08:32.364Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70ed78e9-5908-49b5-bc1f-fcb45f349534",
+        "name": "Monthly schedule rows",
+        "passed": false,
+        "actual": "20"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T01:08:32.364Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70ed78e9-5908-49b5-bc1f-fcb45f349534",
+        "name": "Zero-rate plan",
+        "passed": true,
+        "actual": "2 months"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T01:08:32.364Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70ed78e9-5908-49b5-bc1f-fcb45f349534",
+        "name": "Invalid zero deposit message",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T01:08:32.364Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "70ed78e9-5908-49b5-bc1f-fcb45f349534",
+        "status": "failed",
+        "passed": 2,
+        "failed": 4,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T01:08:32.368Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "b345c435-7907-4540-ac74-2747805c9f2f",
+        "review": true
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T01:08:56.237Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "b345c435-7907-4540-ac74-2747805c9f2f",
+        "checks": 6,
+        "review": true,
+        "revised": 4,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24938,
+          "completion_tokens": 577,
+          "total_tokens": 25515
+        },
+        "verdicts": [
+          {
+            "name": "Default plan month count",
+            "verdict": "check-wrong",
+            "reason": "The check expects 21 months, but the stated calculation adds monthly deposits and interest until the goal is reached; with these inputs the app reaches $5,000 in 20 months. The expected value contradi"
+          },
+          {
+            "name": "Default plan interest total",
+            "verdict": "check-wrong",
+            "reason": "The check expects $176.19, but the app calculates monthly interest on the existing balance, rounds each month to cents, and caps the final deposit at the goal. That produces $161.53, so the expected v"
+          },
+          {
+            "name": "Monthly schedule rows",
+            "verdict": "check-wrong",
+            "reason": "The check expects 21 schedule rows, but the plan reaches the $5,000 goal after 20 months, so the month-by-month schedule correctly has 20 rows. The expected count contradicts the requirements."
+          },
+          {
+            "name": "Invalid zero deposit message",
+            "verdict": "check-wrong",
+            "reason": "The check expects a validation message after entering a zero deposit and clicking submit, but the browser blocks submission because the required number input has min=\"0.01\". The check action cannot re"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T01:08:56.238Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "328908dc-6be5-4fb0-a875-4f8cacf01c21",
+        "testPlanId": "b345c435-7907-4540-ac74-2747805c9f2f",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T01:08:58.163Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "328908dc-6be5-4fb0-a875-4f8cacf01c21",
+        "name": "Default plan summary and schedule",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T01:08:58.164Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "328908dc-6be5-4fb0-a875-4f8cacf01c21",
+        "name": "Default plan month count",
+        "passed": true,
+        "actual": "20 months"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T01:08:58.164Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "328908dc-6be5-4fb0-a875-4f8cacf01c21",
+        "name": "Default plan interest total",
+        "passed": true,
+        "actual": "US$161.53"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T01:08:58.164Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "328908dc-6be5-4fb0-a875-4f8cacf01c21",
+        "name": "Monthly schedule rows",
+        "passed": true,
+        "actual": "20"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T01:08:58.164Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "328908dc-6be5-4fb0-a875-4f8cacf01c21",
+        "name": "Zero-rate plan",
+        "passed": true,
+        "actual": "2 months"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T01:08:58.164Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "328908dc-6be5-4fb0-a875-4f8cacf01c21",
+        "name": "Invalid zero deposit message",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T01:08:58.164Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "328908dc-6be5-4fb0-a875-4f8cacf01c21",
+        "status": "passed",
+        "passed": 6,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T01:08:58.168Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Default plan summary and schedule",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "5000"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "4"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#results",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Default plan month count",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "5000"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "4"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#row-count",
+        "expected": "20 months"
+      },
+      {
+        "name": "Default plan interest total",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "5000"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "4"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": ".stat-value",
+        "nth": 1,
+        "expected": "US$161.53"
+      },
+      {
+        "name": "Monthly schedule rows",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "5000"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "4"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#schedule tr",
+        "expected": "20",
+        "assertion": "count"
+      },
+      {
+        "name": "Zero-rate plan",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "500"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "250"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "0"
+          },
+          {
+            "type": "click",
+            "selector": "#planner-form button"
+          }
+        ],
+        "selector": "#row-count",
+        "expected": "2 months"
+      },
+      {
+        "name": "Invalid zero deposit message",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#goal",
+            "value": "500"
+          },
+          {
+            "type": "input",
+            "selector": "#deposit",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#rate",
+            "value": "0"
+          }
+        ],
+        "selector": "#deposit",
+        "expected": "0",
+        "assertion": "attribute",
+        "attribute": "value"
+      }
+    ],
+    "limitations": [
+      "The results visibility check does not verify scroll position or visual styling."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 25057,
+      "completion_tokens": 491,
+      "total_tokens": 25548
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Savings Planner</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"card\">\n    <header class=\"header\">\n      <div class=\"pixel-mark\" aria-hidden=\"true\">▦</div>\n      <p class=\"eyebrow\">YOUR LITTLE MONEY QUEST</p>\n      <h1>Pixel Savings Planner</h1>\n      <p class=\"intro\">Set a goal, make a plan, and watch your savings grow one month at a time.</p>\n    </header>\n\n    <form id=\"planner-form\" class=\"form\">\n      <div class=\"fields\">\n        <div class=\"field\">\n          <label for=\"goal\">Savings goal</label>\n          <div class=\"input-wrap\"><span aria-hidden=\"true\">$</span><input id=\"goal\" name=\"goal\" type=\"number\" min=\"0.01\" step=\"0.01\" value=\"5000\" required></div>\n        </div>\n        <div class=\"field\">\n          <label for=\"deposit\">Monthly deposit</label>\n          <div class=\"input-wrap\"><span aria-hidden=\"true\">$</span><input id=\"deposit\" name=\"deposit\" type=\"number\" min=\"0.01\" step=\"0.01\" value=\"250\" required></div>\n        </div>\n        <div class=\"field\">\n          <label for=\"rate\">Yearly interest rate</label>\n          <div class=\"input-wrap\"><input id=\"rate\" name=\"rate\" type=\"number\" min=\"0\" step=\"0.01\" value=\"4\" required><span aria-hidden=\"true\">%</span></div>\n        </div>\n      </div>\n      <button type=\"submit\">Calculate my plan <span aria-hidden=\"true\">→</span></button>\n      <p class=\"note\">Deposits are added at the end of each month. Interest compounds monthly.</p>\n    </form>\n\n    <section id=\"results\" class=\"results\" aria-live=\"polite\" hidden>\n      <div id=\"summary\" class=\"summary\"></div>\n      <div class=\"table-heading\"><h2>Your month-by-month plan</h2><span id=\"row-count\" class=\"badge\"></span></div>\n      <div class=\"table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Monthly savings schedule\">\n        <table>\n          <thead><tr><th scope=\"col\">Month</th><th scope=\"col\">Deposit</th><th scope=\"col\">Interest</th><th scope=\"col\">Balance</th></tr></thead>\n          <tbody id=\"schedule\"></tbody>\n        </table>\n      </div>\n      <p class=\"table-note\">Estimates are rounded to cents each month. Your actual account terms may differ.</p>\n    </section>\n    <p id=\"message\" class=\"message\" role=\"status\"></p>\n    <footer>SMALL STEPS. BIG PIXEL ENERGY.</footer>\n  </main>\n</body>\n</html>\n",
+      "description": "Offline savings planner interface"
+    },
+    {
+      "path": "styles.css",
+      "content": ":root { color-scheme: light; --ink: #24352d; --muted: #65746b; --cream: #fbf8ef; --green: #3b7657; --lime: #c7e58a; --line: #e3e7dc; }\n* { box-sizing: border-box; }\nbody { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 28px 16px; background-color: #eaf0df; background-image: linear-gradient(45deg, #dce8d1 25%, transparent 25%), linear-gradient(-45deg, #dce8d1 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #dce8d1 75%), linear-gradient(-45deg, transparent 75%, #dce8d1 75%); background-size: 32px 32px; background-position: 0 0, 0 16px, 16px -16px, -16px 0; color: var(--ink); font: 16px/1.5 system-ui, sans-serif; }\n.card { width: min(100%, 760px); padding: clamp(24px, 5vw, 48px); border: 2px solid var(--ink); border-radius: 18px; background: var(--cream); box-shadow: 8px 8px 0 var(--ink); }\n.header { text-align: center; }\n.pixel-mark { margin: 0 auto 12px; width: 48px; height: 48px; display: grid; place-items: center; border: 2px solid var(--ink); border-radius: 12px; background: var(--lime); font-size: 30px; line-height: 1; }\n.eyebrow, footer { color: var(--green); font-size: 13px; font-weight: 800; letter-spacing: .12em; }\nh1 { margin: 4px 0 8px; font-size: clamp(27px, 6vw, 38px); line-height: 1.15; letter-spacing: -.04em; }\n.intro { max-width: 480px; margin: 0 auto; color: var(--muted); }\n.form { margin-top: 30px; padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: #fffdf7; }\n.fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }\n.field label { display: block; margin-bottom: 7px; font-weight: 700; }\n.input-wrap { display: flex; align-items: center; gap: 8px; min-height: 50px; padding: 0 13px; border: 1.5px solid #bbc8b7; border-radius: 9px; background: white; color: var(--muted); }\n.input-wrap:focus-within { border-color: var(--green); box-shadow: 0 0 0 3px #c7e58a88; }\ninput { width: 100%; min-width: 0; padding: 10px 0; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; }\nbutton { width: 100%; margin-top: 20px; padding: 14px 18px; border: 2px solid var(--ink); border-radius: 10px; background: var(--green); color: white; font: inherit; font-weight: 800; cursor: pointer; transition: transform .12s, background .12s, box-shadow .12s; }\nbutton:hover { background: #2f6448; box-shadow: 0 4px 0 var(--ink); transform: translateY(-2px); }\nbutton:active { box-shadow: none; transform: translateY(2px); }\nbutton:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }\n.note, .table-note { margin: 12px 0 0; color: var(--muted); font-size: 14px; text-align: center; }\n.results { margin-top: 28px; }\n[hidden] { display: none !important; }\n.summary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }\n.stat { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #eef4e7; }\n.stat-label { display: block; color: var(--muted); font-size: 14px; font-weight: 700; }\n.stat-value { display: block; margin-top: 3px; font-size: clamp(22px, 5vw, 30px); font-weight: 850; letter-spacing: -.03em; }\n.table-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }\nh2 { margin: 0; font-size: 19px; }\n.badge { flex: none; padding: 4px 10px; border-radius: 99px; background: var(--lime); font-size: 13px; font-weight: 800; }\n.table-scroll { max-height: 360px; overflow: auto; border: 1px solid var(--line); border-radius: 10px; background: white; }\n.table-scroll:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }\ntable { width: 100%; border-collapse: collapse; text-align: right; font-variant-numeric: tabular-nums; }\nth, td { padding: 11px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }\nth { position: sticky; top: 0; background: #eef4e7; font-size: 14px; }\nth:first-child, td:first-child { text-align: left; }\ntbody tr:last-child td { border-bottom: 0; }\ntbody tr.goal-row { background: #f1f7e6; font-weight: 800; }\n.message { min-height: 24px; margin: 12px 0 0; color: #a54232; font-weight: 650; }\nfooter { margin-top: 22px; text-align: center; font-size: 11px; }\n@media (max-width: 600px) { .fields { grid-template-columns: 1fr; gap: 12px; } .form { padding: 18px; } .card { box-shadow: 5px 5px 0 var(--ink); } }\n@media (max-width: 400px) { body { padding: 14px 10px; } .card { padding: 22px 16px; } th, td { padding: 10px 9px; font-size: 14px; } }\n",
+      "description": "Responsive pixel-inspired styling"
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.getElementById('planner-form');\nconst results = document.getElementById('results');\nconst summary = document.getElementById('summary');\nconst schedule = document.getElementById('schedule');\nconst message = document.getElementById('message');\nconst rowCount = document.getElementById('row-count');\nconst money = new Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD' });\n\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  message.textContent = '';\n  const goal = Number(form.elements.goal.value);\n  const deposit = Number(form.elements.deposit.value);\n  const yearlyRate = Number(form.elements.rate.value);\n  if (!Number.isFinite(goal) || goal <= 0 || !Number.isFinite(deposit) || deposit <= 0 || !Number.isFinite(yearlyRate) || yearlyRate < 0) {\n    results.hidden = true;\n    message.textContent = 'Enter a positive goal and monthly deposit, and a non-negative yearly rate.';\n    return;\n  }\n\n  const monthlyRate = yearlyRate / 100 / 12;\n  let balance = 0;\n  let totalInterest = 0;\n  const rows = [];\n  const maxMonths = 1200;\n  for (let month = 1; month <= maxMonths && balance < goal; month += 1) {\n    const interest = Math.round(balance * monthlyRate * 100) / 100;\n    const contribution = Math.min(deposit, Math.max(0, goal - balance - interest));\n    balance = Math.round((balance + interest + contribution) * 100) / 100;\n    totalInterest = Math.round((totalInterest + interest) * 100) / 100;\n    rows.push({ month, contribution, interest, balance });\n  }\n  if (balance < goal) {\n    results.hidden = true;\n    message.textContent = 'This plan does not reach the goal within 100 years. Try a larger monthly deposit.';\n    return;\n  }\n\n  const months = rows.length;\n  const years = Math.floor(months / 12);\n  const remainingMonths = months % 12;\n  const duration = years ? `${years} yr${years === 1 ? '' : 's'}${remainingMonths ? ` ${remainingMonths} mo` : ''}` : `${months} mo`;\n  summary.innerHTML = `<div class=\"stat\"><span class=\"stat-label\">Time to your goal</span><span class=\"stat-value\">${duration}</span></div><div class=\"stat\"><span class=\"stat-label\">Interest earned</span><span class=\"stat-value\">${money.format(totalInterest)}</span></div>`;\n  schedule.replaceChildren(...rows.map((row) => {\n    const tr = document.createElement('tr');\n    if (row.month === months) tr.className = 'goal-row';\n    const values = [`Month ${row.month}`, money.format(row.contribution), money.format(row.interest), money.format(row.balance)];\n    values.forEach((value) => { const td = document.createElement('td'); td.textContent = value; tr.append(td); });\n    return tr;\n  }));\n  rowCount.textContent = `${months} month${months === 1 ? '' : 's'}`;\n  results.hidden = false;\n  results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });\n});\n",
+      "description": "Savings growth calculation and monthly schedule rendering"
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Savings Planner\n\nA small offline savings calculator built with HTML, CSS, and plain JavaScript. No packages, server, or network connection are needed.\n\n## Run it\n\nOpen `index.html` in a modern browser. Enter a savings goal, monthly deposit, and yearly interest rate, then select **Calculate my plan**. The results include the estimated months to reach the goal, total interest earned, and a scrollable monthly schedule.\n\n## Calculation\n\nThe planner starts with a zero balance. At each month end, it applies one twelfth of the yearly rate to the existing balance, rounds interest to cents, then adds the monthly deposit. On the final month, the contribution is capped at the amount needed to reach the goal. It supports a zero rate and reports when the goal would take more than 100 years at the chosen settings.\n",
+      "description": "Local run instructions and calculation notes"
+    }
+  ]
+}

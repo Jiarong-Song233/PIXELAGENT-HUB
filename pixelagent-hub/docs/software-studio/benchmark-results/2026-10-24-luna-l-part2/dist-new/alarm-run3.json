@@ -1,0 +1,551 @@
+{
+  "caseId": "alarm",
+  "run": 3,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\new",
+  "managerTokens": 21294,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "4/6",
+  "finalChecks": "6/6",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 2,
+  "coderRepair": false,
+  "checkRuns": [
+    "4/6",
+    "6/6"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 103,
+  "reportedTokens": 96028,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T03:09:39.388Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T03:09:39.388Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T03:09:58.655Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "A Pixel Alarm List"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T03:09:58.655Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T03:10:35.893Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T03:10:35.893Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T03:10:36.354Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T03:10:36.354Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "ff452e3c-6ec1-4478-b58f-aca9f4e14a5d"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T03:10:53.931Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "ff452e3c-6ec1-4478-b58f-aca9f4e14a5d",
+        "checks": 6
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T03:10:53.932Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "f9603535-20b9-40ee-b3b5-83c20350a7c3",
+        "testPlanId": "ff452e3c-6ec1-4478-b58f-aca9f4e14a5d",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T03:10:59.964Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f9603535-20b9-40ee-b3b5-83c20350a7c3",
+        "name": "Add labeled alarm and count",
+        "passed": false,
+        "actual": "07:05 Wake up ON ×"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T03:10:59.964Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f9603535-20b9-40ee-b3b5-83c20350a7c3",
+        "name": "Add unlabeled alarm",
+        "passed": true,
+        "actual": "09:00"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T03:10:59.964Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f9603535-20b9-40ee-b3b5-83c20350a7c3",
+        "name": "Toggle alarm off and update count",
+        "passed": true,
+        "actual": "0 ON"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T03:10:59.964Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f9603535-20b9-40ee-b3b5-83c20350a7c3",
+        "name": "Delete alarm",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T03:10:59.964Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f9603535-20b9-40ee-b3b5-83c20350a7c3",
+        "name": "Sort alarms by time",
+        "passed": false,
+        "actual": "06:15 Earlier ON × 18:00 Later ON ×"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T03:10:59.964Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f9603535-20b9-40ee-b3b5-83c20350a7c3",
+        "name": "Initial empty state and count",
+        "passed": true,
+        "actual": "0 ON"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T03:10:59.965Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "f9603535-20b9-40ee-b3b5-83c20350a7c3",
+        "status": "failed",
+        "passed": 4,
+        "failed": 2,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T03:10:59.969Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "ff452e3c-6ec1-4478-b58f-aca9f4e14a5d",
+        "review": true
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T03:11:18.178Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "ff452e3c-6ec1-4478-b58f-aca9f4e14a5d",
+        "checks": 6,
+        "review": true,
+        "revised": 2,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24683,
+          "completion_tokens": 354,
+          "total_tokens": 25037
+        },
+        "verdicts": [
+          {
+            "name": "Add labeled alarm and count",
+            "verdict": "check-wrong",
+            "reason": "The check compares the entire alarm list text, which includes each alarm’s ON toggle and delete button. The requirement asks to add an alarm with a label, not for the list’s text to equal only the ala"
+          },
+          {
+            "name": "Sort alarms by time",
+            "verdict": "check-wrong",
+            "reason": "The check compares the entire alarm list text, which also includes each alarm’s ON toggle and delete button. The requirement is to sort alarms by time, and those controls make the expected exact list "
+          }
+        ]
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T03:11:18.178Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "c4172327-c6a2-412a-89da-cc6b5020abaf",
+        "testPlanId": "ff452e3c-6ec1-4478-b58f-aca9f4e14a5d",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T03:11:20.099Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c4172327-c6a2-412a-89da-cc6b5020abaf",
+        "name": "Add labeled alarm and count",
+        "passed": true,
+        "actual": "07:05"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T03:11:20.099Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c4172327-c6a2-412a-89da-cc6b5020abaf",
+        "name": "Add unlabeled alarm",
+        "passed": true,
+        "actual": "09:00"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T03:11:20.099Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c4172327-c6a2-412a-89da-cc6b5020abaf",
+        "name": "Toggle alarm off and update count",
+        "passed": true,
+        "actual": "0 ON"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T03:11:20.099Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c4172327-c6a2-412a-89da-cc6b5020abaf",
+        "name": "Delete alarm",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T03:11:20.099Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c4172327-c6a2-412a-89da-cc6b5020abaf",
+        "name": "Sort alarms by time",
+        "passed": true,
+        "actual": "06:15"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T03:11:20.099Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c4172327-c6a2-412a-89da-cc6b5020abaf",
+        "name": "Initial empty state and count",
+        "passed": true,
+        "actual": "0 ON"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T03:11:20.099Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "c4172327-c6a2-412a-89da-cc6b5020abaf",
+        "status": "passed",
+        "passed": 6,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T03:11:20.102Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Add labeled alarm and count",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#hour",
+            "value": "7"
+          },
+          {
+            "type": "input",
+            "selector": "#minute",
+            "value": "5"
+          },
+          {
+            "type": "input",
+            "selector": "#label",
+            "value": "Wake up"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          }
+        ],
+        "selector": ".alarm-time",
+        "expected": "07:05",
+        "assertion": "text"
+      },
+      {
+        "name": "Add unlabeled alarm",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#hour",
+            "value": "9"
+          },
+          {
+            "type": "input",
+            "selector": "#minute",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#label",
+            "value": ""
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          }
+        ],
+        "selector": ".alarm-time",
+        "expected": "09:00",
+        "assertion": "text"
+      },
+      {
+        "name": "Toggle alarm off and update count",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#hour",
+            "value": "8"
+          },
+          {
+            "type": "input",
+            "selector": "#minute",
+            "value": "30"
+          },
+          {
+            "type": "input",
+            "selector": "#label",
+            "value": "Test"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "click",
+            "selector": ".toggle-button"
+          }
+        ],
+        "selector": "#enabled-count",
+        "expected": "0 ON",
+        "assertion": "text"
+      },
+      {
+        "name": "Delete alarm",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#hour",
+            "value": "8"
+          },
+          {
+            "type": "input",
+            "selector": "#minute",
+            "value": "30"
+          },
+          {
+            "type": "input",
+            "selector": "#label",
+            "value": "Test"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "click",
+            "selector": ".delete-button"
+          }
+        ],
+        "selector": "#empty-state",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Sort alarms by time",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#hour",
+            "value": "18"
+          },
+          {
+            "type": "input",
+            "selector": "#minute",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#label",
+            "value": "Later"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "input",
+            "selector": "#hour",
+            "value": "6"
+          },
+          {
+            "type": "input",
+            "selector": "#minute",
+            "value": "15"
+          },
+          {
+            "type": "input",
+            "selector": "#label",
+            "value": "Earlier"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          }
+        ],
+        "selector": ".alarm-time",
+        "nth": 0,
+        "expected": "06:15",
+        "assertion": "text"
+      },
+      {
+        "name": "Initial empty state and count",
+        "actions": [],
+        "selector": "#enabled-count",
+        "expected": "0 ON",
+        "assertion": "text"
+      }
+    ],
+    "limitations": [
+      "Count is directly checked after toggling; adding also displays a newly enabled alarm.",
+      "Input range validation is not covered."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24926,
+      "completion_tokens": 529,
+      "total_tokens": 25455
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Alarm List</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"board\" aria-labelledby=\"title\">\n    <header class=\"board-header\">\n      <div class=\"eyebrow\">★ DAILY ROUTINE ★</div>\n      <h1 id=\"title\">Pixel Alarm List</h1>\n      <p class=\"subtitle\">A little nudge, right on time.</p>\n    </header>\n\n    <form id=\"alarm-form\" class=\"alarm-form\">\n      <div class=\"time-fields\">\n        <div class=\"field\">\n          <label for=\"hour\">Hour</label>\n          <input id=\"hour\" name=\"hour\" type=\"number\" min=\"0\" max=\"23\" placeholder=\"08\" inputmode=\"numeric\" required>\n        </div>\n        <span class=\"time-colon\" aria-hidden=\"true\">:</span>\n        <div class=\"field\">\n          <label for=\"minute\">Minute</label>\n          <input id=\"minute\" name=\"minute\" type=\"number\" min=\"0\" max=\"59\" placeholder=\"30\" inputmode=\"numeric\" required>\n        </div>\n      </div>\n      <div class=\"field label-field\">\n        <label for=\"label\">Label <span>(optional)</span></label>\n        <input id=\"label\" name=\"label\" type=\"text\" maxlength=\"40\" placeholder=\"Morning stretch\">\n      </div>\n      <button class=\"add-button\" type=\"submit\"><span aria-hidden=\"true\">＋</span> Add alarm</button>\n    </form>\n\n    <section class=\"alarms-section\" aria-labelledby=\"alarms-title\">\n      <div class=\"list-heading\">\n        <h2 id=\"alarms-title\">Your alarms</h2>\n        <p id=\"enabled-count\" class=\"count\" aria-live=\"polite\">0 ON</p>\n      </div>\n      <ul id=\"alarm-list\" class=\"alarm-list\" aria-label=\"Alarms\"></ul>\n      <p id=\"empty-state\" class=\"empty-state\">No alarms yet. Add one to get started!</p>\n    </section>\n    <footer class=\"board-footer\"><span aria-hidden=\"true\">■</span> TAKE IT ONE DAY AT A TIME <span aria-hidden=\"true\">■</span></footer>\n  </main>\n</body>\n</html>",
+      "description": "Offline pixel-inspired alarm list app"
+    },
+    {
+      "path": "styles.css",
+      "content": "* { box-sizing: border-box; }\n:root { color-scheme: light; --ink: #263238; --paper: #fff9e9; --mint: #b9e4c9; --coral: #ed795d; --gold: #f4c95d; }\nbody { margin: 0; min-height: 100vh; padding: 32px 16px; display: grid; place-items: center; background-color: #d9efd9; background-image: linear-gradient(45deg, rgba(255,255,255,.28) 25%, transparent 25%), linear-gradient(-45deg, rgba(255,255,255,.28) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255,255,255,.28) 75%), linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.28) 75%); background-size: 28px 28px; color: var(--ink); font-family: system-ui, sans-serif; font-size: 16px; }\n.board { width: min(100%, 520px); padding: 32px; background: var(--paper); border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); }\n.board-header { text-align: center; padding-bottom: 24px; border-bottom: 2px dashed #b8b39f; }\n.eyebrow, .board-footer { font-size: 14px; font-weight: 800; letter-spacing: .12em; }\n.eyebrow { color: #567b63; }\nh1 { margin: 10px 0 4px; font-size: clamp(28px, 7vw, 38px); line-height: 1.15; }\n.subtitle { margin: 0; color: #626d69; }\n.alarm-form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 14px; padding: 24px 0; border-bottom: 2px dashed #b8b39f; }\n.time-fields { display: flex; align-items: end; gap: 10px; }\n.field { min-width: 0; display: grid; gap: 6px; }\n.field label { font-weight: 700; }\n.field label span { color: #68716d; font-weight: 400; }\n.field input { width: 100%; min-height: 48px; padding: 10px 12px; border: 2px solid var(--ink); border-radius: 0; background: #fffdf6; color: var(--ink); font: inherit; }\n.time-fields .field { flex: 1; }\n.time-fields input { text-align: center; font-size: 20px; font-weight: 700; }\n.time-colon { padding-bottom: 10px; font-size: 24px; font-weight: 800; }\n.label-field { grid-column: 1 / -1; }\nbutton { min-height: 48px; border: 2px solid var(--ink); border-radius: 0; color: var(--ink); font: inherit; font-weight: 800; cursor: pointer; transition: transform .08s ease, box-shadow .08s ease, background-color .15s ease; }\n.add-button { grid-column: 1 / -1; background: var(--gold); box-shadow: 3px 3px 0 var(--ink); }\nbutton:hover { filter: brightness(1.04); }\nbutton:active { transform: translate(3px, 3px); box-shadow: none !important; }\nbutton:focus-visible, input:focus-visible { outline: 3px solid #567b63; outline-offset: 3px; }\n.alarms-section { padding-top: 24px; }\n.list-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }\nh2 { margin: 0; font-size: 21px; }\n.count { margin: 0; padding: 5px 9px; background: var(--mint); border: 2px solid var(--ink); font-size: 14px; font-weight: 900; }\n.alarm-list { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }\n.alarm-item { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 10px; padding: 12px; border: 2px solid var(--ink); background: #fffdf6; box-shadow: 3px 3px 0 #b8b39f; }\n.alarm-item.is-off { opacity: .62; background: #f1eee3; }\n.alarm-info { min-width: 0; }\n.alarm-time { display: block; font-size: 24px; font-weight: 850; font-variant-numeric: tabular-nums; line-height: 1.1; }\n.alarm-label { display: block; overflow-wrap: anywhere; margin-top: 3px; color: #626d69; }\n.toggle-button { min-width: 64px; padding: 7px; background: var(--mint); }\n.is-off .toggle-button { background: #e5e0d2; }\n.delete-button { min-width: 44px; padding: 7px; background: #ffe0d6; font-size: 20px; }\n.empty-state { margin: 20px 0 4px; color: #626d69; text-align: center; }\n.board-footer { display: flex; justify-content: center; gap: 9px; margin-top: 28px; color: #567b63; text-align: center; font-size: 12px; }\n@media (max-width: 420px) { body { padding: 18px 12px; } .board { padding: 22px 18px; box-shadow: 5px 5px 0 var(--ink); } .alarm-form { grid-template-columns: 1fr; gap: 14px; } .time-fields, .label-field, .add-button { grid-column: 1; } .alarm-item { gap: 7px; padding: 10px 8px; } .toggle-button { min-width: 56px; } }\n",
+      "description": "Responsive pixel-inspired styling"
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.querySelector('#alarm-form');\nconst hourInput = document.querySelector('#hour');\nconst minuteInput = document.querySelector('#minute');\nconst labelInput = document.querySelector('#label');\nconst list = document.querySelector('#alarm-list');\nconst count = document.querySelector('#enabled-count');\nconst emptyState = document.querySelector('#empty-state');\n\nlet alarms = [];\nlet nextId = 1;\n\nfunction render() {\n  const sorted = [...alarms].sort((a, b) => a.hour * 60 + a.minute - (b.hour * 60 + b.minute));\n  list.replaceChildren();\n\n  for (const alarm of sorted) {\n    const item = document.createElement('li');\n    item.className = `alarm-item${alarm.enabled ? '' : ' is-off'}`;\n    const info = document.createElement('div');\n    info.className = 'alarm-info';\n    const time = document.createElement('span');\n    time.className = 'alarm-time';\n    time.textContent = `${String(alarm.hour).padStart(2, '0')}:${String(alarm.minute).padStart(2, '0')}`;\n    info.append(time);\n    if (alarm.label) {\n      const label = document.createElement('span');\n      label.className = 'alarm-label';\n      label.textContent = alarm.label;\n      info.append(label);\n    }\n\n    const toggle = document.createElement('button');\n    toggle.type = 'button';\n    toggle.className = 'toggle-button';\n    toggle.textContent = alarm.enabled ? 'ON' : 'OFF';\n    toggle.setAttribute('aria-label', `${alarm.enabled ? 'Turn off' : 'Turn on'} alarm at ${time.textContent}${alarm.label ? `, ${alarm.label}` : ''}`);\n    toggle.setAttribute('aria-pressed', String(alarm.enabled));\n    toggle.addEventListener('click', () => {\n      alarm.enabled = !alarm.enabled;\n      render();\n    });\n\n    const remove = document.createElement('button');\n    remove.type = 'button';\n    remove.className = 'delete-button';\n    remove.textContent = '×';\n    remove.setAttribute('aria-label', `Delete alarm at ${time.textContent}${alarm.label ? `, ${alarm.label}` : ''}`);\n    remove.addEventListener('click', () => {\n      alarms = alarms.filter(entry => entry.id !== alarm.id);\n      render();\n    });\n\n    item.append(info, toggle, remove);\n    list.append(item);\n  }\n\n  count.textContent = `${alarms.filter(alarm => alarm.enabled).length} ON`;\n  emptyState.hidden = alarms.length > 0;\n}\n\nform.addEventListener('submit', event => {\n  event.preventDefault();\n  const hour = Number(hourInput.value);\n  const minute = Number(minuteInput.value);\n  if (!Number.isInteger(hour) || hour < 0 || hour > 23) {\n    hourInput.setCustomValidity('Enter an hour from 0 to 23.');\n    hourInput.reportValidity();\n    return;\n  }\n  hourInput.setCustomValidity('');\n  if (!Number.isInteger(minute) || minute < 0 || minute > 59) {\n    minuteInput.setCustomValidity('Enter a minute from 0 to 59.');\n    minuteInput.reportValidity();\n    return;\n  }\n  minuteInput.setCustomValidity('');\n  alarms.push({ id: nextId++, hour, minute, label: labelInput.value.trim(), enabled: true });\n  form.reset();\n  hourInput.focus();\n  render();\n});\n\nhourInput.addEventListener('input', () => hourInput.setCustomValidity(''));\nminuteInput.addEventListener('input', () => minuteInput.setCustomValidity(''));\nrender();",
+      "description": "Alarm list behavior: validation, sorting, toggles, deletion, and count"
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Alarm List\n\nA small alarm-list app made with HTML, CSS, and plain JavaScript. It runs entirely in your browser and keeps its alarms for the current page session.\n\n## Run\n\nOpen `index.html` in any modern browser. No installation, server, or internet connection is needed.\n\n## Use\n\n- Enter an hour from 0–23 and a minute from 0–59. Add a label if you like, then choose **Add alarm**.\n- Alarms are displayed in time order. Use each **ON/OFF** button to change its enabled state, or its delete button to remove it.\n- The badge shows the number of enabled alarms.\n- All controls can be reached and operated with a keyboard.\n\nAlarm data is kept in memory and resets when the page is reloaded.",
+      "description": "Offline usage and controls"
+    }
+  ]
+}

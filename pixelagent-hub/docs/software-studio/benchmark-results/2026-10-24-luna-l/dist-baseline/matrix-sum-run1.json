@@ -1,0 +1,690 @@
+{
+  "caseId": "matrix-sum",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\baseline",
+  "managerTokens": 21289,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 2,
+  "compileFailures": 0,
+  "firstChecks": "2/7",
+  "finalChecks": "6/7",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 5,
+  "coderRepair": true,
+  "checkRuns": [
+    "2/7",
+    "6/7",
+    "6/7"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 135,
+  "reportedTokens": 121232,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T02:33:33.973Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T02:33:33.973Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T02:33:54.239Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Live 4×4 Sum Grid"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T02:33:54.239Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T02:34:24.895Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T02:34:24.895Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T02:34:25.274Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T02:34:25.276Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "662d7663-5fc2-4894-bad3-effe79d640e9"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T02:34:43.278Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "662d7663-5fc2-4894-bad3-effe79d640e9",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T02:34:43.279Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "testPlanId": "662d7663-5fc2-4894-bad3-effe79d640e9",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T02:34:45.569Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "name": "Initial grid and zero totals",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T02:34:45.569Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "name": "Edit cell updates all sums",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T02:34:45.569Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "name": "Edited row sum",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T02:34:45.569Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "name": "Edited column sum",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T02:34:45.569Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "name": "Largest row highlights",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T02:34:45.569Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "name": "Randomize changes totals",
+        "passed": true,
+        "actual": "94"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T02:34:45.569Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "name": "Randomized cells are 1 to 9",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T02:34:45.569Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "2f5689c3-d6d8-40d9-9995-067c7e098b6f",
+        "status": "failed",
+        "passed": 2,
+        "failed": 5,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T02:34:45.572Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "662d7663-5fc2-4894-bad3-effe79d640e9",
+        "review": true
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T02:35:07.882Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "662d7663-5fc2-4894-bad3-effe79d640e9",
+        "checks": 7,
+        "review": true,
+        "revised": 5,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24234,
+          "completion_tokens": 740,
+          "total_tokens": 24974
+        },
+        "verdicts": [
+          {
+            "name": "Edit cell updates all sums",
+            "verdict": "check-wrong",
+            "reason": "The check inputs into `.cell` without `nth`, but that selector matches 16 inputs, so its action cannot run. The requirements call for editing a number and checking the live grand total; a corrected ch"
+          },
+          {
+            "name": "Edited row sum",
+            "verdict": "check-wrong",
+            "reason": "The check inputs into `.cell` without `nth`, but that selector matches 16 inputs, so its action cannot run. The requirements call for live row sums; a corrected check can target the relevant cells and"
+          },
+          {
+            "name": "Edited column sum",
+            "verdict": "check-wrong",
+            "reason": "The check inputs into `.cell` without `nth`, but that selector matches 16 inputs, so its action cannot run. The requirements call for live column sums; a corrected check can target the relevant cells "
+          },
+          {
+            "name": "Largest row highlights",
+            "verdict": "check-wrong",
+            "reason": "The check inputs into `.cell` without `nth`, but that selector matches 16 inputs, so its action cannot run. The requirements require highlighting the largest row; a corrected check can set values in t"
+          },
+          {
+            "name": "Randomized cells are 1 to 9",
+            "verdict": "check-wrong",
+            "reason": "The check selects `.cell` without `nth`, but that selector matches 16 inputs, so its assertion cannot run. The requirements say Randomize fills every cell with a value from 1 to 9; a corrected check c"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T02:35:07.883Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "testPlanId": "662d7663-5fc2-4894-bad3-effe79d640e9",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T02:35:12.171Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "name": "Initial grid and zero totals",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T02:35:12.171Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "name": "Edit cell updates all sums",
+        "passed": true,
+        "actual": "10"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T02:35:12.171Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "name": "Edited row sum",
+        "passed": true,
+        "actual": "7"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T02:35:12.171Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "name": "Edited column sum",
+        "passed": true,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T02:35:12.171Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "name": "Largest row highlights",
+        "passed": true,
+        "actual": "sum is-largest"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T02:35:12.171Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "name": "Randomize changes totals",
+        "passed": true,
+        "actual": "67"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T02:35:12.171Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "name": "Randomized cells are 1 to 9",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-24T02:35:12.171Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "f52ea1bb-ef54-49bf-be99-ae4937771414",
+        "status": "failed",
+        "passed": 6,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-24T02:35:12.173Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-24T02:35:42.658Z",
+      "type": "code_ready",
+      "round": 2,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-24T02:35:42.658Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-24T02:35:42.704Z",
+      "type": "build_passed",
+      "round": 2
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-24T02:35:42.704Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "testPlanId": "662d7663-5fc2-4894-bad3-effe79d640e9",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-24T02:35:47.016Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "name": "Initial grid and zero totals",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-24T02:35:47.016Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "name": "Edit cell updates all sums",
+        "passed": true,
+        "actual": "10"
+      }
+    },
+    {
+      "seq": 37,
+      "at": "2026-10-24T02:35:47.016Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "name": "Edited row sum",
+        "passed": true,
+        "actual": "7"
+      }
+    },
+    {
+      "seq": 38,
+      "at": "2026-10-24T02:35:47.016Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "name": "Edited column sum",
+        "passed": true,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 39,
+      "at": "2026-10-24T02:35:47.016Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "name": "Largest row highlights",
+        "passed": true,
+        "actual": "sum is-largest"
+      }
+    },
+    {
+      "seq": 40,
+      "at": "2026-10-24T02:35:47.016Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "name": "Randomize changes totals",
+        "passed": true,
+        "actual": "79"
+      }
+    },
+    {
+      "seq": 41,
+      "at": "2026-10-24T02:35:47.016Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "name": "Randomized cells are 1 to 9",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 42,
+      "at": "2026-10-24T02:35:47.016Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "539fefbd-324d-4444-a1bd-c6ee091bab61",
+        "status": "failed",
+        "passed": 6,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 43,
+      "at": "2026-10-24T02:35:47.020Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v2/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial grid and zero totals",
+        "actions": [],
+        "selector": "#grand-total",
+        "expected": "0",
+        "assertion": "text"
+      },
+      {
+        "name": "Edit cell updates all sums",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 0,
+            "value": "5"
+          },
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 1,
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 4,
+            "value": "3"
+          }
+        ],
+        "selector": "#grand-total",
+        "expected": "10",
+        "assertion": "text"
+      },
+      {
+        "name": "Edited row sum",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 0,
+            "value": "5"
+          },
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 1,
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 4,
+            "value": "3"
+          }
+        ],
+        "selector": ".sum",
+        "nth": 0,
+        "expected": "7",
+        "assertion": "text"
+      },
+      {
+        "name": "Edited column sum",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 0,
+            "value": "5"
+          },
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 1,
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 4,
+            "value": "3"
+          }
+        ],
+        "selector": ".column-sum",
+        "nth": 0,
+        "expected": "8",
+        "assertion": "text"
+      },
+      {
+        "name": "Largest row highlights",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 0,
+            "value": "8"
+          },
+          {
+            "type": "input",
+            "selector": ".cell",
+            "nth": 1,
+            "value": "1"
+          }
+        ],
+        "selector": ".sum",
+        "nth": 0,
+        "expected": "is-largest",
+        "assertion": "attribute",
+        "attribute": "class"
+      },
+      {
+        "name": "Randomize changes totals",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#randomize"
+          }
+        ],
+        "selector": "#grand-total",
+        "expected": "",
+        "assertion": "changed"
+      },
+      {
+        "name": "Randomized cells are 1 to 9",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#randomize"
+          }
+        ],
+        "selector": ".cell",
+        "nth": 0,
+        "expected": "^[1-9]$",
+        "assertion": "matches"
+      }
+    ],
+    "limitations": [
+      "Cannot verify all 16 randomized values are within 1–9 with one-element assertions."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24495,
+      "completion_tokens": 430,
+      "total_tokens": 24925
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    },
+    {
+      "round": 2,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#102a2a\">\n  <title>Live 4×4 Sum Grid</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"card\">\n    <header class=\"header\">\n      <p class=\"eyebrow\">A little number play</p>\n      <h1>Live sum grid</h1>\n      <p class=\"intro\">Change any number and watch the rows, columns, and total add up.</p>\n    </header>\n\n    <section class=\"board\" aria-label=\"4 by 4 number grid with live sums\">\n      <div class=\"grid-wrap\">\n        <div class=\"grid\" id=\"number-grid\" role=\"group\" aria-label=\"Grid of 16 numbers\"></div>\n        <div class=\"row-sums\" id=\"row-sums\" aria-label=\"Row sums\"></div>\n      </div>\n      <div class=\"column-sums\" id=\"column-sums\" aria-label=\"Column sums\"></div>\n    </section>\n\n    <div class=\"total-row\" aria-live=\"polite\" aria-atomic=\"true\">\n      <span>Grand total</span>\n      <strong id=\"grand-total\">0</strong>\n    </div>\n    <button class=\"randomize\" id=\"randomize\" type=\"button\">Randomize <span aria-hidden=\"true\">↻</span></button>\n    <p class=\"hint\">The highlighted row has the highest sum. Ties highlight every matching row.</p>\n  </main>\n</body>\n</html>\n",
+      "description": "Offline app markup for the 4×4 sum grid."
+    },
+    {
+      "path": "styles.css",
+      "content": ":root {\n  color-scheme: light;\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n  font-size: 16px;\n  background: #102a2a;\n  color: #183838;\n}\n\n* { box-sizing: border-box; }\n\nbody {\n  min-width: 360px;\n  min-height: 100vh;\n  margin: 0;\n  padding: 28px 16px;\n  display: grid;\n  place-items: center;\n  background: radial-gradient(ellipse at 50% 0%, #24514b 0, #102a2a 68%);\n}\n\n.card {\n  width: min(100%, 520px);\n  padding: clamp(22px, 6vw, 38px);\n  border: 1px solid #d6e6d8;\n  border-radius: 24px;\n  background: #f5f3e9;\n  box-shadow: 0 24px 70px #06161580;\n}\n\n.header { margin-bottom: 28px; }\n.eyebrow { margin: 0 0 7px; color: #b45e3e; font-size: .82rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }\nh1 { margin: 0; color: #183838; font-size: clamp(1.8rem, 8vw, 2.35rem); line-height: 1.1; letter-spacing: -.04em; }\n.intro { margin: 12px 0 0; color: #52706a; line-height: 1.5; }\n\n.board { width: min(100%, 390px); margin: 0 auto; }\n.grid-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 70px; gap: 8px; }\n.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }\n.cell {\n  width: 100%; min-width: 0; aspect-ratio: 1;\n  border: 1px solid #c5d9ce; border-radius: 12px;\n  background: #e2eee5; color: #183838;\n  font: inherit; font-size: clamp(1rem, 5vw, 1.25rem); font-weight: 700; text-align: center;\n  outline: none; transition: background .15s, border-color .15s, box-shadow .15s;\n}\n.cell:hover { border-color: #5f9580; background: #d6e9dd; }\n.cell:focus { border-color: #b45e3e; box-shadow: 0 0 0 3px #b45e3e55; }\n.row-sums { display: grid; grid-template-rows: repeat(4, 1fr); gap: 7px; }\n.sum, .column-sum { display: grid; place-items: center; border-radius: 12px; background: #e8e6da; color: #52706a; font-weight: 700; }\n.sum { min-height: 44px; transition: background .15s, color .15s; }\n.sum.is-largest { background: #b45e3e; color: white; }\n.column-sums { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; margin: 8px 78px 0 0; }\n.column-sum { min-height: 38px; font-size: .9rem; }\n.total-row { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; padding: 16px 0; border-top: 1px solid #d6dfd4; color: #52706a; }\n.total-row strong { color: #183838; font-size: 1.5rem; font-variant-numeric: tabular-nums; }\n.randomize {\n  width: 100%; min-height: 52px; border: 0; border-radius: 13px;\n  background: #183f3b; color: #fff; cursor: pointer;\n  font: inherit; font-weight: 750; transition: background .15s, transform .1s, box-shadow .15s;\n}\n.randomize:hover { background: #245b50; }\n.randomize:focus-visible { outline: 3px solid #b45e3e; outline-offset: 3px; }\n.randomize:active { transform: translateY(1px); background: #102a2a; }\n.randomize span { margin-left: 6px; font-size: 1.2rem; }\n.hint { margin: 15px 0 0; color: #71847a; font-size: .88rem; line-height: 1.45; text-align: center; }\n\n@media (max-width: 400px) {\n  body { padding: 16px 10px; }\n  .card { padding: 22px 18px; border-radius: 20px; }\n  .grid-wrap { grid-template-columns: minmax(0, 1fr) 58px; gap: 6px; }\n  .grid, .row-sums, .column-sums { gap: 5px; }\n  .column-sums { margin-right: 64px; }\n  .sum { min-height: 40px; }\n}\n",
+      "description": "Responsive styling and accessible focus states."
+    },
+    {
+      "path": "app.js",
+      "content": "const grid = document.querySelector('#number-grid');\nconst rowSums = document.querySelector('#row-sums');\nconst columnSums = document.querySelector('#column-sums');\nconst grandTotal = document.querySelector('#grand-total');\nconst cells = [];\nconst rowDisplays = [];\nconst columnDisplays = [];\n\nfor (let row = 0; row < 4; row += 1) {\n  for (let column = 0; column < 4; column += 1) {\n    const input = document.createElement('input');\n    input.className = 'cell';\n    input.type = 'number';\n    input.min = '0';\n    input.step = '1';\n    input.value = '0';\n    input.setAttribute('aria-label', `Row ${row + 1}, column ${column + 1}`);\n    input.addEventListener('input', updateSums);\n    grid.append(input);\n    cells.push(input);\n  }\n\n  const sum = document.createElement('div');\n  sum.className = 'sum';\n  sum.setAttribute('aria-label', `Row ${row + 1} sum`);\n  rowSums.append(sum);\n  rowDisplays.push(sum);\n}\n\nfor (let column = 0; column < 4; column += 1) {\n  const sum = document.createElement('div');\n  sum.className = 'column-sum';\n  sum.setAttribute('aria-label', `Column ${column + 1} sum`);\n  columnSums.append(sum);\n  columnDisplays.push(sum);\n}\n\nfunction updateSums() {\n  const values = cells.map((cell) => Math.max(0, Number.parseInt(cell.value, 10) || 0));\n  const rows = [0, 1, 2, 3].map((row) => values.slice(row * 4, row * 4 + 4).reduce((sum, value) => sum + value, 0));\n  const columns = [0, 1, 2, 3].map((column) => values.reduce((sum, value, index) => sum + (index % 4 === column ? value : 0), 0));\n  const largest = Math.max(...rows);\n\n  rowDisplays.forEach((display, index) => {\n    display.textContent = rows[index];\n    display.classList.toggle('is-largest', rows[index] === largest);\n  });\n  columnDisplays.forEach((display, index) => { display.textContent = columns[index]; });\n  grandTotal.textContent = values.reduce((sum, value) => sum + value, 0);\n}\n\ndocument.querySelector('#randomize').addEventListener('click', () => {\n  cells.forEach((cell) => { cell.value = Math.floor(Math.random() * 9) + 1; });\n  updateSums();\n});\n\nupdateSums();\n",
+      "description": "Plain JavaScript grid creation, live sums, highlighting, and randomization."
+    },
+    {
+      "path": "README.md",
+      "content": "# Live 4×4 Sum Grid\n\nA small offline browser app for exploring row and column totals.\n\n## Run\n\nOpen `index.html` in any modern browser. The app uses only local HTML, CSS, and JavaScript; no server or internet connection is required.\n\n## Features\n\n- Sixteen labeled number inputs in a 4×4 grid\n- Row sums, column sums, and grand total update as values change\n- Randomize fills every cell with a value from 1 through 9\n- Every row tied for the highest sum is highlighted\n- Responsive layout and visible keyboard focus states\n",
+      "description": "Offline launch instructions and feature summary."
+    }
+  ]
+}

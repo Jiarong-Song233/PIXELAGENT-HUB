@@ -1,0 +1,343 @@
+{
+  "caseId": "dice-poker",
+  "run": 2,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\baseline",
+  "managerTokens": 21183,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "6/6",
+  "finalChecks": "6/6",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "6/6"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 77,
+  "reportedTokens": 69609,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T02:29:55.885Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T02:29:55.885Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T02:30:14.827Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Dice Poker"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T02:30:14.827Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T02:30:52.137Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T02:30:52.137Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T02:30:52.547Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T02:30:52.548Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "7a176568-514c-4f21-9b91-0cabfecf80f5"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T02:31:08.555Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "7a176568-514c-4f21-9b91-0cabfecf80f5",
+        "checks": 6
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T02:31:08.555Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "7ff57913-44ca-46f9-bfdd-920ee812ecee",
+        "testPlanId": "7a176568-514c-4f21-9b91-0cabfecf80f5",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T02:31:10.527Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ff57913-44ca-46f9-bfdd-920ee812ecee",
+        "name": "Initial state",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T02:31:10.527Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ff57913-44ca-46f9-bfdd-920ee812ecee",
+        "name": "First roll shows a hand and leaves one reroll",
+        "passed": true,
+        "actual": "Three of a kind"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T02:31:10.527Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ff57913-44ca-46f9-bfdd-920ee812ecee",
+        "name": "Hold a die and reroll",
+        "passed": true,
+        "actual": "Die 1: 1, held"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T02:31:10.527Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ff57913-44ca-46f9-bfdd-920ee812ecee",
+        "name": "Rerolls run out and roll locks",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T02:31:10.527Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ff57913-44ca-46f9-bfdd-920ee812ecee",
+        "name": "New round resets the game",
+        "passed": true,
+        "actual": "Ready to roll"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T02:31:10.527Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7ff57913-44ca-46f9-bfdd-920ee812ecee",
+        "name": "Five dice are shown",
+        "passed": true,
+        "actual": "5"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T02:31:10.527Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "7ff57913-44ca-46f9-bfdd-920ee812ecee",
+        "status": "passed",
+        "passed": 6,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T02:31:10.530Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial state",
+        "actions": [],
+        "selector": "#rerolls",
+        "expected": "2"
+      },
+      {
+        "name": "First roll shows a hand and leaves one reroll",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#roll"
+          }
+        ],
+        "selector": "#hand",
+        "expected": "^(Pair|Two pair|Three of a kind|Straight|Full house|Four of a kind|Five of a kind|High die)$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Hold a die and reroll",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#roll"
+          },
+          {
+            "type": "click",
+            "selector": ".die",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": "#roll"
+          }
+        ],
+        "selector": ".die",
+        "nth": 0,
+        "expected": "held",
+        "assertion": "matches",
+        "attribute": "aria-label"
+      },
+      {
+        "name": "Rerolls run out and roll locks",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#roll"
+          },
+          {
+            "type": "click",
+            "selector": "#roll"
+          },
+          {
+            "type": "click",
+            "selector": "#roll"
+          }
+        ],
+        "selector": "#roll",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "New round resets the game",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#roll"
+          },
+          {
+            "type": "click",
+            "selector": "#roll"
+          },
+          {
+            "type": "click",
+            "selector": "#roll"
+          },
+          {
+            "type": "click",
+            "selector": "#new-round"
+          }
+        ],
+        "selector": "#hand",
+        "expected": "Ready to roll"
+      },
+      {
+        "name": "Five dice are shown",
+        "actions": [],
+        "selector": ".die",
+        "expected": "5",
+        "assertion": "count"
+      }
+    ],
+    "limitations": [
+      "Random rolls prevent deterministic coverage of each hand type.",
+      "Keyboard hold behavior is not verified; key events are synthetic."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24359,
+      "completion_tokens": 333,
+      "total_tokens": 24692
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Dice Poker</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"game.js\" defer></script>\n</head>\n<body>\n  <main class=\"board\" aria-labelledby=\"title\">\n    <header>\n      <p class=\"eyebrow\">A little luck, a little strategy</p>\n      <h1 id=\"title\">Pixel Dice Poker</h1>\n      <p class=\"instructions\">Choose dice to hold, then roll again.</p>\n    </header>\n\n    <section class=\"game\" aria-label=\"Dice poker game\">\n      <div class=\"status\">\n        <span>Rerolls left</span>\n        <strong id=\"rerolls\">2</strong>\n      </div>\n      <div class=\"dice\" id=\"dice\" role=\"group\" aria-label=\"Your five dice\"></div>\n      <p class=\"hand-label\">YOUR HAND</p>\n      <p class=\"hand\" id=\"hand\" aria-live=\"polite\">Ready to roll</p>\n      <button class=\"roll-button\" id=\"roll\" type=\"button\">Roll dice</button>\n      <button class=\"new-button\" id=\"new-round\" type=\"button\">New round</button>\n      <p class=\"hint\" id=\"hint\">Click or focus a die and press Enter to hold it.</p>\n    </section>\n    <footer>Five dice · Three rolls · One best hand</footer>\n  </main>\n</body>\n</html>\n",
+      "description": "Offline game page and accessible controls."
+    },
+    {
+      "path": "style.css",
+      "content": "* { box-sizing: border-box; }\n[hidden] { display: none !important; }\n:root { color-scheme: dark; font-family: system-ui, sans-serif; font-size: 16px; background: #172b35; color: #f8f0db; }\nbody { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: radial-gradient(ellipse at top, #31515a, #172b35 70%); }\n.board { width: min(100%, 560px); padding: clamp(24px, 6vw, 44px); text-align: center; background: #203942; border: 3px solid #52716c; border-radius: 18px; box-shadow: 0 12px 0 #101f27, 0 24px 55px #0b171c88; }\n.eyebrow, .hand-label { margin: 0; color: #efb85e; font-size: .85rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }\nh1 { margin: 8px 0; font-size: clamp(2rem, 8vw, 3rem); line-height: 1.1; }\n.instructions { margin: 0; color: #c7d5c9; }\n.game { margin-top: 28px; padding: 22px 18px; border-radius: 12px; background: #182e36; border: 1px solid #46645f; }\n.status { display: flex; align-items: center; justify-content: center; gap: 9px; color: #c7d5c9; }\n.status strong { display: inline-grid; place-items: center; min-width: 34px; height: 34px; border-radius: 50%; color: #172b35; background: #efb85e; }\n.dice { display: flex; justify-content: center; gap: clamp(6px, 2vw, 12px); margin: 22px 0 25px; }\n.die { width: clamp(48px, 14vw, 72px); aspect-ratio: 1; padding: 5px; border: 3px solid #f8f0db; border-radius: 12px; background: #f8f0db; color: #203942; font: 900 clamp(1.8rem, 7vw, 2.8rem)/1 system-ui, sans-serif; cursor: pointer; box-shadow: 0 5px 0 #ad9e7d; transition: transform .12s, background .12s, box-shadow .12s; }\n.die:hover { transform: translateY(-3px); }\n.die:active { transform: translateY(2px); box-shadow: 0 1px 0 #ad9e7d; }\n.die:focus-visible, button:focus-visible { outline: 3px solid #efb85e; outline-offset: 4px; }\n.die.held { background: #efb85e; border-color: #efb85e; box-shadow: 0 5px 0 #aa7736; transform: translateY(-4px); }\n.die.held::after { content: \"HELD\"; display: block; margin-top: 5px; font-size: .58rem; line-height: 1; letter-spacing: .08em; }\n.hand-label { font-size: .75rem; }\n.hand { min-height: 2.2rem; margin: 5px 0 17px; color: #f8f0db; font-size: 1.6rem; font-weight: 850; }\nbutton { min-height: 48px; padding: 11px 20px; border: 0; border-radius: 8px; font: 750 1rem system-ui, sans-serif; cursor: pointer; transition: transform .12s, filter .12s; }\nbutton:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-2px); }\nbutton:active:not(:disabled) { transform: translateY(2px); }\n.roll-button { width: 100%; color: #172b35; background: #efb85e; box-shadow: 0 4px 0 #aa7736; }\n.roll-button:disabled { cursor: default; opacity: .5; box-shadow: none; }\n.new-button { margin-top: 12px; color: #f8f0db; background: #46645f; }\n.hint { min-height: 1.25em; margin: 15px 0 0; color: #b8c9bd; font-size: .9rem; }\nfooter { margin-top: 22px; color: #b8c9bd; font-size: .9rem; }\n@media (max-width: 390px) { .game { padding-inline: 10px; } .die { border-radius: 9px; } }\n",
+      "description": "Responsive pixel-inspired styling with clear control states."
+    },
+    {
+      "path": "game.js",
+      "content": "const diceElement = document.getElementById('dice');\nconst handElement = document.getElementById('hand');\nconst rerollsElement = document.getElementById('rerolls');\nconst rollButton = document.getElementById('roll');\nconst hintElement = document.getElementById('hint');\nlet dice = [1, 1, 1, 1, 1];\nlet held = [false, false, false, false, false];\nlet rerolls = 2;\nlet started = false;\n\nfunction handName(values) {\n  const counts = Object.values(values.reduce((map, value) => {\n    map[value] = (map[value] || 0) + 1;\n    return map;\n  }, {})).sort((a, b) => b - a);\n  const unique = [...new Set(values)].sort((a, b) => a - b);\n  if (counts[0] === 5) return 'Five of a kind';\n  if (counts[0] === 4) return 'Four of a kind';\n  if (counts[0] === 3 && counts[1] === 2) return 'Full house';\n  if (unique.length === 5 && (unique[4] - unique[0] === 4 || unique.join(',') === '1,2,3,4,6')) return 'Straight';\n  if (counts[0] === 3) return 'Three of a kind';\n  if (counts[0] === 2 && counts[1] === 2) return 'Two pair';\n  if (counts[0] === 2) return 'Pair';\n  return 'High die';\n}\n\nfunction render() {\n  diceElement.replaceChildren();\n  dice.forEach((value, index) => {\n    const die = document.createElement('button');\n    die.type = 'button';\n    die.className = `die${held[index] ? ' held' : ''}`;\n    die.textContent = String(value);\n    die.setAttribute('aria-label', `Die ${index + 1}: ${value}${held[index] ? ', held' : ', not held'}`);\n    die.setAttribute('aria-pressed', String(held[index]));\n    die.addEventListener('click', () => {\n      if (!started || rerolls === 2) return;\n      held[index] = !held[index];\n      render();\n    });\n    diceElement.append(die);\n  });\n  rerollsElement.textContent = String(rerolls);\n  rollButton.disabled = rerolls === 0;\n}\n\nrollButton.addEventListener('click', () => {\n  if (rerolls === 0) return;\n  started = true;\n  dice = dice.map((value, index) => held[index] ? value : Math.floor(Math.random() * 6) + 1);\n  rerolls -= 1;\n  handElement.textContent = handName(dice);\n  hintElement.textContent = rerolls ? 'Select any dice to hold before your next roll.' : 'Round complete. Start a new round to play again.';\n  render();\n});\n\ndocument.getElementById('new-round').addEventListener('click', () => {\n  dice = [1, 1, 1, 1, 1];\n  held = [false, false, false, false, false];\n  rerolls = 2;\n  started = false;\n  handElement.textContent = 'Ready to roll';\n  hintElement.textContent = 'Click or focus a die and press Enter to hold it.';\n  render();\n});\n\nrender();\n",
+      "description": "Plain JavaScript game logic, hand scoring, and keyboard-operable hold buttons."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Dice Poker\n\nA small offline dice poker game made with HTML, CSS, and plain JavaScript.\n\n## Play\n\nOpen `index.html` in a modern browser. Press **Roll dice** to roll five dice. After your first roll, click a die (or focus it and press Enter/Space) to hold or release it, then roll again. You get three total rolls per round. Your current hand is shown after each roll. Select **New round** to reset.\n\nHand names include pair, two pair, three of a kind, straight, full house, four of a kind, five of a kind, and high die.\n\nAll files are local; the game needs no server, packages, network connection, or external assets.\n",
+      "description": "Launch and gameplay instructions."
+    }
+  ]
+}

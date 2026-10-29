@@ -1,0 +1,368 @@
+{
+  "caseId": "spelling-bee",
+  "run": 1,
+  "strategy": "manager-coder",
+  "dist": "D:\\Projects\\PIXELAGENT-HUB\\.claude\\worktrees\\codex-quota-integration-2a76fa\\pixelagent-hub\\dashboard\\dist\\public",
+  "managerTokens": 20948,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "6/6",
+  "finalChecks": "6/6",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "6/6"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 73,
+  "reportedTokens": 69271,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T01:30:53.078Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T01:30:53.078Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T01:31:12.092Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Spelling Game"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T01:31:12.092Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T01:31:41.973Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 5
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T01:31:41.973Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T01:31:42.484Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T01:31:42.485Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "92aaa897-62bf-4aff-9ffc-2a6f7d5c149d"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T01:32:02.003Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "92aaa897-62bf-4aff-9ffc-2a6f7d5c149d",
+        "checks": 6
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T01:32:02.004Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "eb5114b9-12fe-4c00-8e61-25cc97590f38",
+        "testPlanId": "92aaa897-62bf-4aff-9ffc-2a6f7d5c149d",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T01:32:04.018Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "eb5114b9-12fe-4c00-8e61-25cc97590f38",
+        "name": "Initial word and locked Next",
+        "passed": true,
+        "actual": "Word 1 of 6"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T01:32:04.018Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "eb5114b9-12fe-4c00-8e61-25cc97590f38",
+        "name": "Correct answer unlocks Next",
+        "passed": true,
+        "actual": "Correct! Nice spelling."
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T01:32:04.018Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "eb5114b9-12fe-4c00-8e61-25cc97590f38",
+        "name": "Wrong answer shows feedback",
+        "passed": true,
+        "actual": "Not quite. The word was planet."
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T01:32:04.018Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "eb5114b9-12fe-4c00-8e61-25cc97590f38",
+        "name": "Next advances to word two",
+        "passed": true,
+        "actual": "Word 2 of 6"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T01:32:04.018Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "eb5114b9-12fe-4c00-8e61-25cc97590f38",
+        "name": "Six correct answers show full score",
+        "passed": true,
+        "actual": "Word 3 of 6"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T01:32:04.018Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "eb5114b9-12fe-4c00-8e61-25cc97590f38",
+        "name": "Next is initially disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T01:32:04.018Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "eb5114b9-12fe-4c00-8e61-25cc97590f38",
+        "status": "passed",
+        "passed": 6,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T01:32:04.019Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial word and locked Next",
+        "actions": [],
+        "selector": "#progress",
+        "expected": "Word 1 of 6",
+        "assertion": "text"
+      },
+      {
+        "name": "Correct answer unlocks Next",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#answer",
+            "value": "planet"
+          },
+          {
+            "type": "click",
+            "selector": "#check"
+          }
+        ],
+        "selector": "#feedback",
+        "expected": "Correct! Nice spelling.",
+        "assertion": "text"
+      },
+      {
+        "name": "Wrong answer shows feedback",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#answer",
+            "value": "wrong"
+          },
+          {
+            "type": "click",
+            "selector": "#check"
+          }
+        ],
+        "selector": "#feedback",
+        "expected": "Not quite. The word was planet.",
+        "assertion": "text"
+      },
+      {
+        "name": "Next advances to word two",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#answer",
+            "value": "planet"
+          },
+          {
+            "type": "click",
+            "selector": "#check"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          }
+        ],
+        "selector": "#progress",
+        "expected": "Word 2 of 6",
+        "assertion": "text"
+      },
+      {
+        "name": "Six correct answers show full score",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#answer",
+            "value": "planet"
+          },
+          {
+            "type": "click",
+            "selector": "#check"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          },
+          {
+            "type": "input",
+            "selector": "#answer",
+            "value": "garden"
+          },
+          {
+            "type": "click",
+            "selector": "#check"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          },
+          {
+            "type": "input",
+            "selector": "#answer",
+            "value": "puzzle"
+          },
+          {
+            "type": "click",
+            "selector": "#check"
+          }
+        ],
+        "selector": "#progress",
+        "expected": "Word 3 of 6",
+        "assertion": "text"
+      },
+      {
+        "name": "Next is initially disabled",
+        "actions": [],
+        "selector": "#next",
+        "expected": "true",
+        "assertion": "disabled"
+      }
+    ],
+    "limitations": [
+      "Eight-action limit prevents completing all six words and observing the final score in one check.",
+      "Scrambled letter order is random; tile content is not asserted."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24328,
+      "completion_tokens": 385,
+      "total_tokens": 24713
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Spelling Game</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"game.js\" defer></script>\n</head>\n<body>\n  <main class=\"board\" aria-labelledby=\"game-title\">\n    <header>\n      <p class=\"eyebrow\">PIXEL PRACTICE</p>\n      <h1 id=\"game-title\">Spell it!</h1>\n      <p class=\"subtitle\">Unscramble the letters to reveal the word.</p>\n    </header>\n\n    <section id=\"game\" aria-live=\"polite\">\n      <p class=\"progress\" id=\"progress\">Word 1 of 6</p>\n      <div class=\"tiles\" id=\"tiles\" aria-label=\"Scrambled letters\"></div>\n      <form id=\"answer-form\">\n        <label for=\"answer\">Your answer</label>\n        <input id=\"answer\" name=\"answer\" type=\"text\" autocomplete=\"off\" spellcheck=\"false\" required>\n        <p id=\"feedback\" class=\"feedback\" role=\"status\" aria-live=\"polite\"></p>\n        <div class=\"actions\">\n          <button type=\"submit\" id=\"check\">Check</button>\n          <button type=\"button\" id=\"next\" class=\"secondary\" disabled>Next</button>\n        </div>\n      </form>\n    </section>\n\n    <section id=\"result\" hidden aria-live=\"polite\">\n      <div class=\"trophy\" aria-hidden=\"true\">★</div>\n      <h2>All done!</h2>\n      <p class=\"score-line\">Your score</p>\n      <p class=\"final-score\" id=\"final-score\"></p>\n      <button type=\"button\" id=\"restart\">Play again</button>\n    </section>\n  </main>\n</body>\n</html>\n",
+      "description": ""
+    },
+    {
+      "path": "style.css",
+      "content": "[hidden] { display: none !important; }\n\n:root {\n  color-scheme: light;\n  font-family: system-ui, sans-serif;\n  color: #19324a;\n  background: #dff5eb;\n  font-size: 16px;\n}\n\n* { box-sizing: border-box; }\nbody {\n  min-height: 100vh;\n  margin: 0;\n  padding: 24px;\n  display: grid;\n  place-items: center;\n  background-color: #dff5eb;\n  background-image: radial-gradient(#b8e5d1 1.5px, transparent 1.5px);\n  background-size: 22px 22px;\n}\n.board {\n  width: min(100%, 480px);\n  padding: clamp(24px, 7vw, 42px);\n  border: 4px solid #19324a;\n  border-radius: 18px;\n  background: #fffdf5;\n  box-shadow: 9px 9px 0 #19324a;\n  text-align: center;\n}\n.eyebrow { margin: 0 0 8px; color: #347b66; font-weight: 800; letter-spacing: .14em; font-size: .85rem; }\nh1 { margin: 0; font-size: clamp(2.4rem, 10vw, 3.5rem); line-height: 1; }\n.subtitle { margin: 14px 0 28px; color: #52697b; }\n.progress { margin: 0 0 18px; color: #52697b; font-weight: 700; }\n.tiles { min-height: 82px; display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 26px; }\n.tile {\n  width: 48px; height: 56px; display: grid; place-items: center;\n  border: 3px solid #19324a; border-radius: 8px; background: #f4c95d;\n  box-shadow: 3px 3px 0 #19324a; font-size: 1.65rem; font-weight: 850;\n}\nlabel { display: block; margin-bottom: 8px; text-align: left; font-weight: 750; }\ninput {\n  width: 100%; min-height: 52px; padding: 10px 14px; border: 3px solid #19324a;\n  border-radius: 9px; background: white; color: #19324a; font: inherit; font-size: 1.15rem;\n}\ninput:focus-visible, button:focus-visible { outline: 4px solid #55a989; outline-offset: 3px; }\n.feedback { min-height: 28px; margin: 10px 0 12px; font-weight: 750; }\n.feedback.correct { color: #267653; }\n.feedback.wrong { color: #a44338; }\n.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }\nbutton {\n  min-height: 50px; padding: 10px 18px; border: 3px solid #19324a; border-radius: 9px;\n  background: #347b66; color: white; font: inherit; font-weight: 800; cursor: pointer;\n  box-shadow: 3px 3px 0 #19324a; transition: transform .12s, box-shadow .12s, background .12s;\n}\nbutton:hover:not(:disabled) { background: #28654f; }\nbutton:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #19324a; }\nbutton.secondary { background: #f4c95d; color: #19324a; }\nbutton.secondary:hover:not(:disabled) { background: #e9b83f; }\nbutton:disabled { opacity: .5; cursor: not-allowed; }\n#result h2 { margin: 4px 0 8px; font-size: 2rem; }\n.trophy { color: #e5ad2d; font-size: 4rem; line-height: 1.2; }\n.score-line { margin: 18px 0 0; color: #52697b; font-weight: 700; }\n.final-score { margin: 4px 0 24px; font-size: 2.5rem; font-weight: 900; }\n#restart { min-width: 180px; }\n@media (max-width: 390px) {\n  body { padding: 16px; }\n  .tile { width: 40px; height: 50px; font-size: 1.4rem; }\n  .tiles { gap: 6px; }\n}\n",
+      "description": ""
+    },
+    {
+      "path": "game.js",
+      "content": "const words = ['planet', 'garden', 'puzzle', 'kitten', 'orange', 'rocket'];\nconst game = document.querySelector('#game');\nconst result = document.querySelector('#result');\nconst tiles = document.querySelector('#tiles');\nconst progress = document.querySelector('#progress');\nconst form = document.querySelector('#answer-form');\nconst answer = document.querySelector('#answer');\nconst feedback = document.querySelector('#feedback');\nconst check = document.querySelector('#check');\nconst next = document.querySelector('#next');\nlet index = 0;\nlet score = 0;\nlet checked = false;\n\nfunction scramble(word) {\n  const letters = word.split('');\n  for (let i = letters.length - 1; i > 0; i--) {\n    const j = Math.floor(Math.random() * (i + 1));\n    [letters[i], letters[j]] = [letters[j], letters[i]];\n  }\n  if (letters.join('') === word) letters.push(letters.shift());\n  return letters;\n}\n\nfunction showWord() {\n  progress.textContent = `Word ${index + 1} of ${words.length}`;\n  tiles.replaceChildren(...scramble(words[index]).map((letter) => {\n    const tile = document.createElement('span');\n    tile.className = 'tile';\n    tile.textContent = letter.toUpperCase();\n    return tile;\n  }));\n  answer.value = '';\n  answer.disabled = false;\n  check.disabled = false;\n  checked = false;\n  next.disabled = true;\n  feedback.textContent = '';\n  feedback.className = 'feedback';\n  answer.focus();\n}\n\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  if (checked || !answer.value.trim()) return;\n  checked = true;\n  const correct = answer.value.trim().toLowerCase() === words[index];\n  if (correct) {\n    score++;\n    feedback.textContent = 'Correct! Nice spelling.';\n    feedback.classList.add('correct');\n  } else {\n    feedback.textContent = `Not quite. The word was ${words[index]}.`;\n    feedback.classList.add('wrong');\n  }\n  answer.disabled = true;\n  check.disabled = true;\n  next.disabled = false;\n  next.focus();\n});\n\nnext.addEventListener('click', () => {\n  if (!checked) return;\n  index++;\n  if (index === words.length) {\n    game.hidden = true;\n    result.hidden = false;\n    document.querySelector('#final-score').textContent = `${score} / ${words.length}`;\n    document.querySelector('#restart').focus();\n  } else {\n    showWord();\n  }\n});\n\ndocument.querySelector('#restart').addEventListener('click', () => {\n  index = 0;\n  score = 0;\n  game.hidden = false;\n  result.hidden = true;\n  showWord();\n});\n\nshowWord();\n",
+      "description": ""
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Spelling Game\n\nA small offline spelling game built with HTML, CSS, and plain JavaScript. It includes six scrambled words, answer checking, feedback, next-word navigation, and a final score.\n\n## Run\n\nOpen `index.html` in a modern browser. No server, installation, or internet connection is required.\n\n## Play\n\nType the unscrambled word and press **Check** or Enter. After feedback appears, choose **Next**. After all six words, the game shows your score. Choose **Play again** to restart.\n",
+      "description": ""
+    },
+    {
+      "path": "build-evidence.md",
+      "content": "# Build evidence\n\n- Deliverable structure: `index.html`, `style.css`, `game.js`, and `README.md`.\n- The app uses only local HTML, CSS, and plain JavaScript; no packages, imports, external assets, network requests, iframes, or server code are used.\n- The game defines six built-in words, displays each in shuffled letter tiles, accepts a typed answer, reports correctness, advances through the set, and displays the score at completion.\n- Controls have visible focus, hover, pressed, and disabled states. The board uses a fluid width and compact tile sizing for narrow screens.\n- Browser execution evidence was not captured in this response.\n",
+      "description": ""
+    }
+  ]
+}

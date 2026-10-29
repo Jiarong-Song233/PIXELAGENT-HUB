@@ -3,7 +3,7 @@
  * can run on a ChatGPT subscription instead of a paid API key. Each request runs one
  * `codex exec` in an empty read-only sandbox and streams its final message back as one SSE chunk.
  *
- *   npx tsx scripts/codex-chat-server.ts [--port 8787] [--effort low]
+ *   npx tsx scripts/codex-chat-server.ts [--port 8787] [--effort low] [--timeout 240]
  *
  * Point PLAY LIVE (or benchmark-live.ts --provider custom) at http://localhost:8787/v1. Codex adds
  * its own agent prompt, so replies are slower (tens of seconds) and usage counts include that
@@ -19,6 +19,7 @@ const argument = (name: string) => { const index = process.argv.indexOf(name); r
 const port = Number(argument('--port') || 8787);
 const effort = argument('--effort') || 'low';
 if (!['minimal', 'low', 'medium', 'high', 'xhigh'].includes(effort)) throw new Error('--effort must be minimal, low, medium, high or xhigh');
+const timeoutMs = Number(argument('--timeout') || 240) * 1000;
 let queue = Promise.resolve();
 
 type Message = { role: string; content: string };
@@ -39,10 +40,22 @@ async function codex(model: string, messages: Message[]): Promise<{ content: str
       const child = spawn('codex', args, { cwd, shell: process.platform === 'win32' });
       let stdout = '';
       let stderr = '';
+      // A hung CLI would block the one-at-a-time queue forever: kill its whole process tree.
+      let timedOut = false;
+      const timer = setTimeout(() => {
+        timedOut = true;
+        if (process.platform === 'win32' && child.pid) spawn('taskkill', ['/PID', String(child.pid), '/T', '/F']);
+        else child.kill('SIGKILL');
+      }, timeoutMs);
       child.stdout.on('data', (chunk) => { stdout += chunk; });
       child.stderr.on('data', (chunk) => { stderr += chunk; });
-      child.on('error', reject);
-      child.on('close', (code) => code === 0 ? resolve(stdout) : reject(new Error(`codex exited ${code}: ${(stdout.match(/"message":"([^"]+)"/)?.[1] || stderr).slice(0, 300)}`)));
+      child.on('error', (error) => { clearTimeout(timer); reject(error); });
+      child.on('close', (code) => {
+        clearTimeout(timer);
+        if (timedOut) reject(new Error(`codex exceeded ${timeoutMs / 1000} s and was stopped`));
+        else if (code === 0) resolve(stdout);
+        else reject(new Error(`codex exited ${code}: ${(stdout.match(/"message":"([^"]+)"/)?.[1] || stderr).slice(0, 300)}`));
+      });
       child.stdin.end(prompt);
     });
     const raw = [...events.matchAll(/"usage":\{"input_tokens":(\d+)[^}]*"output_tokens":(\d+)/g)].at(-1);
