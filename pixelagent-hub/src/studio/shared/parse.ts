@@ -5,9 +5,20 @@ import { browserCheckSchema, codeSchema, planSchema, testPlanSchema } from './sc
 export function parseModelObject(raw: string): Record<string, unknown> {
   // Reasoning models (qwen3, R1-style) may prefix their reply with a <think> block.
   const trimmed = raw.replace(/^\s*<think>[\s\S]*?<\/think>/, '').trim();
-  const object = JSON.parse(trimmed.match(/```(?:json)?\s*([\s\S]*?)```/)?.[1] ?? trimmed);
+  // A bare object may itself contain fenced blocks (a README inside a file), so it is taken whole.
+  const text = /^\{[\s\S]*\}$/.test(trimmed) ? trimmed : trimmed.match(/```(?:json)?\s*([\s\S]*?)```/)?.[1] ?? trimmed;
+  let object: unknown;
+  try {
+    object = JSON.parse(text);
+  } catch (error) {
+    // Some models drop the quotes of a key (`"actions":[],selector":"#count"` or `],selector:"#count"`;
+    // about a quarter of gemini-3.8-flash replies). Retry once with keys quoted where one follows `{`
+    // or the end of a value; otherwise keep the real error.
+    const repaired = text.replace(/((?:\{|(?:["\]}\d]|true|false|null)\s*,)\s*)"?([A-Za-z_][\w-]*)"?\s*:/g, '$1"$2":');
+    try { object = JSON.parse(repaired); } catch { throw error; }
+  }
   if (!object || typeof object !== 'object' || Array.isArray(object)) throw new Error('Expected a JSON object');
-  return object;
+  return object as Record<string, unknown>;
 }
 
 /** Schema failures read as one short sentence instead of a raw issue dump. */
@@ -33,7 +44,7 @@ const normaliseCheck = (check: unknown) => {
   const { assertion, attribute, nth, actions, ...rest } = check as Record<string, unknown>;
   const normalisedActions = Array.isArray(actions) ? actions.map((action) => {
     if (!action || typeof action !== 'object' || Array.isArray(action)) return action;
-    if (action.type === 'wait') return { type: action.type, ms: action.ms };
+    if (action.type === 'wait' || action.type === 'advance') return { type: action.type, ms: action.ms };
     const { nth, ...rest } = action;
     return { ...rest, ...(nth == null ? {} : { nth }) };
   }) : actions;

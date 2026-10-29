@@ -1,0 +1,369 @@
+{
+  "caseId": "roman",
+  "run": 2,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\new",
+  "managerTokens": 8976,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "8/8",
+  "finalChecks": "8/8",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "8/8"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 116,
+  "reportedTokens": 38790,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:57:41.143Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:57:41.143Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:58:14.027Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Roman Numeral Converter"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:58:14.027Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:59:07.186Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:59:07.187Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:59:07.708Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:59:07.710Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "c2918031-a2f2-4239-a12d-71ca444760b7"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:59:29.396Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "c2918031-a2f2-4239-a12d-71ca444760b7",
+        "checks": 8
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:59:29.397Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "testPlanId": "c2918031-a2f2-4239-a12d-71ca444760b7",
+        "checks": 8,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "name": "Number to Roman conversion for 1994",
+        "passed": true,
+        "actual": "MCMXCIV"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "name": "Roman to number conversion for MCMXCIV",
+        "passed": true,
+        "actual": "1994"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "name": "Number input out of upper range shows Not valid",
+        "passed": true,
+        "actual": "Not valid"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "name": "Number input below 1 shows Not valid",
+        "passed": true,
+        "actual": "Not valid"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "name": "Invalid Roman numeral string shows Not valid",
+        "passed": true,
+        "actual": "Not valid"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "name": "Non-numeral text in Roman input shows Not valid",
+        "passed": true,
+        "actual": "Not valid"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "name": "Number input boundary 1 converts to I",
+        "passed": true,
+        "actual": "I"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "name": "Number input boundary 3999 converts to MMMCMXCIX",
+        "passed": true,
+        "actual": "MMMCMXCIX"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:59:32.003Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "95791291-8adb-4d5e-8514-7e32056906d3",
+        "status": "passed",
+        "passed": 8,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:59:32.006Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Number to Roman conversion for 1994",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "1994"
+          }
+        ],
+        "selector": "#number-output",
+        "expected": "MCMXCIV"
+      },
+      {
+        "name": "Roman to number conversion for MCMXCIV",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#roman-input",
+            "value": "MCMXCIV"
+          }
+        ],
+        "selector": "#roman-output",
+        "expected": "1994"
+      },
+      {
+        "name": "Number input out of upper range shows Not valid",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "4000"
+          }
+        ],
+        "selector": "#number-output",
+        "expected": "Not valid"
+      },
+      {
+        "name": "Number input below 1 shows Not valid",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "0"
+          }
+        ],
+        "selector": "#number-output",
+        "expected": "Not valid"
+      },
+      {
+        "name": "Invalid Roman numeral string shows Not valid",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#roman-input",
+            "value": "IIII"
+          }
+        ],
+        "selector": "#roman-output",
+        "expected": "Not valid"
+      },
+      {
+        "name": "Non-numeral text in Roman input shows Not valid",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#roman-input",
+            "value": "ABC"
+          }
+        ],
+        "selector": "#roman-output",
+        "expected": "Not valid"
+      },
+      {
+        "name": "Number input boundary 1 converts to I",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "1"
+          }
+        ],
+        "selector": "#number-output",
+        "expected": "I"
+      },
+      {
+        "name": "Number input boundary 3999 converts to MMMCMXCIX",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "3999"
+          }
+        ],
+        "selector": "#number-output",
+        "expected": "MMMCMXCIX"
+      }
+    ],
+    "limitations": [
+      "Native browser spinner interaction cannot be directly simulated across all browser engines."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 15012,
+      "completion_tokens": 384,
+      "total_tokens": 15396
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Roman Numeral Converter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"card-container\">\n    <section class=\"pixel-card\" aria-labelledby=\"app-title\">\n      <header class=\"card-header\">\n        <div class=\"header-badge\" aria-hidden=\"true\">I · V · X · L · C · D · M</div>\n        <h1 id=\"app-title\" class=\"title\">PIXEL ROMAN</h1>\n        <p class=\"subtitle\">Bidirectional Numeral Converter (1 &ndash; 3999)</p>\n      </header>\n\n      <div class=\"converter-body\">\n        <!-- Number to Roman Section -->\n        <div class=\"field-group\">\n          <label for=\"number-input\" class=\"pixel-label\">\n            <span class=\"label-tag\">DEC</span> Decimal Number (1 - 3999)\n          </label>\n          <div class=\"input-wrapper\">\n            <input\n              type=\"number\"\n              id=\"number-input\"\n              name=\"numberInput\"\n              min=\"1\"\n              max=\"3999\"\n              step=\"1\"\n              placeholder=\"e.g. 1994\"\n              autocomplete=\"off\"\n            />\n          </div>\n          <div class=\"live-preview\" aria-live=\"polite\">\n            <span class=\"preview-label\">Roman Value:</span>\n            <span id=\"number-output\" class=\"preview-value\">&mdash;</span>\n          </div>\n        </div>\n\n        <!-- Divider flourish -->\n        <div class=\"pixel-divider\" aria-hidden=\"true\">\n          <span>&#x25C6;</span>\n          <span>&#x25C6;</span>\n          <span>&#x25C6;</span>\n        </div>\n\n        <!-- Roman to Number Section -->\n        <div class=\"field-group\">\n          <label for=\"roman-input\" class=\"pixel-label\">\n            <span class=\"label-tag\">ROM</span> Roman Numeral\n          </label>\n          <div class=\"input-wrapper\">\n            <input\n              type=\"text\"\n              id=\"roman-input\"\n              name=\"romanInput\"\n              placeholder=\"e.g. MCMXCIV\"\n              autocomplete=\"off\"\n              spellcheck=\"false\"\n              maxlength=\"15\"\n            />\n          </div>\n          <div class=\"live-preview\" aria-live=\"polite\">\n            <span class=\"preview-label\">Decimal Value:</span>\n            <span id=\"roman-output\" class=\"preview-value\">&mdash;</span>\n          </div>\n        </div>\n\n        <!-- Quick Reference Guide -->\n        <div class=\"quick-ref\" aria-label=\"Reference values\">\n          <div class=\"ref-item\"><span class=\"ref-sym\">I</span><span class=\"ref-val\">1</span></div>\n          <div class=\"ref-item\"><span class=\"ref-sym\">V</span><span class=\"ref-val\">5</span></div>\n          <div class=\"ref-item\"><span class=\"ref-sym\">X</span><span class=\"ref-val\">10</span></div>\n          <div class=\"ref-item\"><span class=\"ref-sym\">L</span><span class=\"ref-val\">50</span></div>\n          <div class=\"ref-item\"><span class=\"ref-sym\">C</span><span class=\"ref-val\">100</span></div>\n          <div class=\"ref-item\"><span class=\"ref-sym\">D</span><span class=\"ref-val\">500</span></div>\n          <div class=\"ref-item\"><span class=\"ref-sym\">M</span><span class=\"ref-val\">1000</span></div>\n        </div>\n      </div>\n    </section>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Single-page HTML document containing the structure and semantic markup for the pixel-styled bidirectional Roman numeral converter."
+    },
+    {
+      "path": "style.css",
+      "content": "/* ==========================================\n   Pixel Roman Numeral Converter - Styles\n   Cohesive 4-Color Retro Palette:\n   1. Deep Ink Background: #181425\n   2. Antique Parchment:   #fee761\n   3. Warm Brick/Crimson:  #c23a4b\n   4. Stone Slate Panel:   #262b44\n   5. Soft White Highlight:#ffffff\n   ========================================== */\n\n:root {\n  --bg-color: #181425;\n  --card-bg: #262b44;\n  --card-border: #0b0c15;\n  --accent-gold: #fee761;\n  --accent-crimson: #c23a4b;\n  --accent-mint: #38b764;\n  --text-main: #ffffff;\n  --text-muted: #8b9bb4;\n  --font-stack: 'Courier New', Courier, monospace, monospace;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n[hidden] {\n  display: none !important;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--bg-color);\n  background-image:\n    linear-gradient(45deg, #141020 25%, transparent 25%),\n    linear-gradient(-45deg, #141020 25%, transparent 25%),\n    linear-gradient(45deg, transparent 75%, #141020 75%),\n    linear-gradient(-45deg, transparent 75%, #141020 75%);\n  background-size: 16px 16px;\n  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;\n  color: var(--text-main);\n  font-family: var(--font-stack);\n  font-size: 16px;\n  line-height: 1.5;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px 12px;\n}\n\n.card-container {\n  width: 100%;\n  max-width: 480px;\n  display: flex;\n  justify-content: center;\n}\n\n/* Pixel Card Container with Stepped Borders */\n.pixel-card {\n  width: 100%;\n  background: var(--card-bg);\n  border: 4px solid var(--card-border);\n  box-shadow:\n    0 0 0 4px var(--card-bg),\n    0 0 0 8px var(--card-border),\n    8px 8px 0 8px #00000088;\n  padding: 24px 20px;\n}\n\n.card-header {\n  text-align: center;\n  margin-bottom: 24px;\n  border-bottom: 4px dashed #3a4466;\n  padding-bottom: 16px;\n}\n\n.header-badge {\n  display: inline-block;\n  background: #181425;\n  color: var(--accent-gold);\n  font-size: 14px;\n  font-weight: bold;\n  letter-spacing: 2px;\n  padding: 4px 10px;\n  margin-bottom: 10px;\n  border: 2px solid #3a4466;\n}\n\n.title {\n  font-size: 28px;\n  letter-spacing: 2px;\n  color: var(--accent-gold);\n  text-shadow: 3px 3px 0 #0b0c15;\n  margin-bottom: 6px;\n}\n\n.subtitle {\n  font-size: 16px;\n  color: var(--text-muted);\n}\n\n/* Form Field Controls */\n.converter-body {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.field-group {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n\n.pixel-label {\n  font-size: 16px;\n  font-weight: bold;\n  color: var(--text-main);\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.label-tag {\n  font-size: 12px;\n  background: var(--accent-gold);\n  color: #181425;\n  padding: 2px 6px;\n  font-weight: 900;\n  border: 2px solid var(--card-border);\n}\n\n.input-wrapper {\n  position: relative;\n}\n\ninput[type=\"number\"],\ninput[type=\"text\"] {\n  width: 100%;\n  font-family: var(--font-stack);\n  font-size: 20px;\n  font-weight: bold;\n  padding: 10px 14px;\n  color: #ffffff;\n  background-color: #181425;\n  border: 4px solid #3a4466;\n  outline: none;\n  box-shadow: inset 3px 3px 0 #0b0c15;\n  transition: border-color 0.1s ease, box-shadow 0.1s ease;\n}\n\ninput[type=\"number\"]:hover,\ninput[type=\"text\"]:hover {\n  border-color: #5a6988;\n}\n\ninput[type=\"number\"]:focus,\ninput[type=\"text\"]:focus {\n  border-color: var(--accent-gold);\n  box-shadow:\n    inset 3px 3px 0 #0b0c15,\n    0 0 0 3px #fee76144;\n}\n\n/* Remove number spinner arrows for consistent pixel look */\ninput[type=\"number\"]::-webkit-outer-spin-button,\ninput[type=\"number\"]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\ninput[type=\"number\"] {\n  -moz-appearance: textfield;\n}\n\n/* Live Display Box */\n.live-preview {\n  background: #181425;\n  border: 3px solid #3a4466;\n  padding: 10px 14px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  min-height: 48px;\n  gap: 12px;\n}\n\n.preview-label {\n  font-size: 14px;\n  color: var(--text-muted);\n}\n\n.preview-value {\n  font-size: 20px;\n  font-weight: bold;\n  color: var(--accent-mint);\n  text-align: right;\n  word-break: break-all;\n}\n\n.preview-value.invalid {\n  color: var(--accent-crimson);\n  text-shadow: 1px 1px 0 #000000;\n}\n\n.preview-value.empty {\n  color: #4f5a72;\n}\n\n/* Pixel divider between fields */\n.pixel-divider {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 16px;\n  color: #3a4466;\n  font-size: 14px;\n  margin: 4px 0;\n}\n\n/* Quick Reference Bar */\n.quick-ref {\n  display: grid;\n  grid-template-columns: repeat(7, 1fr);\n  gap: 4px;\n  margin-top: 10px;\n  padding-top: 14px;\n  border-top: 3px dashed #3a4466;\n}\n\n.ref-item {\n  background: #181425;\n  border: 2px solid #3a4466;\n  padding: 4px 2px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\n\n.ref-sym {\n  font-size: 13px;\n  font-weight: bold;\n  color: var(--accent-gold);\n}\n\n.ref-val {\n  font-size: 11px;\n  color: var(--text-muted);\n}\n\n/* Responsive Layout for small screens */\n@media (max-width: 400px) {\n  .pixel-card {\n    padding: 18px 12px;\n  }\n  .title {\n    font-size: 22px;\n  }\n  input[type=\"number\"],\n  input[type=\"text\"] {\n    font-size: 17px;\n  }\n  .preview-value {\n    font-size: 17px;\n  }\n  .quick-ref {\n    grid-template-columns: repeat(4, 1fr);\n  }\n}\n",
+      "description": "Pixel-art themed stylesheet with a cohesive 4-color retro palette, custom borders, responsive layout, and interactive states."
+    },
+    {
+      "path": "app.js",
+      "content": "/**\n * Pixel Roman Numeral Converter\n * Standard Subtractive Notation Range: 1 to 3999\n */\n\nconst ROMAN_MAP = [\n  { value: 1000, numeral: 'M' },\n  { value: 900,  numeral: 'CM' },\n  { value: 500,  numeral: 'D' },\n  { value: 400,  numeral: 'CD' },\n  { value: 100,  numeral: 'C' },\n  { value: 90,   numeral: 'XC' },\n  { value: 50,   numeral: 'L' },\n  { value: 40,   numeral: 'XL' },\n  { value: 10,   numeral: 'X' },\n  { value: 9,    numeral: 'IX' },\n  { value: 5,    numeral: 'V' },\n  { value: 4,    numeral: 'IV' },\n  { value: 1,    numeral: 'I' }\n];\n\n// Canonical standard Roman numeral regex (strictly 1 to 3999)\nconst STRICT_ROMAN_REGEX = /^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/;\n\n/**\n * Converts an integer (1 to 3999) to its standard Roman numeral representation.\n * Returns 'Not valid' for invalid inputs.\n */\nfunction intToRoman(num) {\n  if (typeof num !== 'number' || !Number.isInteger(num) || num < 1 || num > 3999) {\n    return 'Not valid';\n  }\n\n  let result = '';\n  let remaining = num;\n\n  for (let i = 0; i < ROMAN_MAP.length; i++) {\n    const entry = ROMAN_MAP[i];\n    while (remaining >= entry.value) {\n      result += entry.numeral;\n      remaining -= entry.value;\n    }\n  }\n\n  return result;\n}\n\n/**\n * Converts a standard Roman numeral string to its integer value.\n * Returns 'Not valid' for non-canonical, malformed, or out-of-range Roman numerals.\n */\nfunction romanToInt(romanStr) {\n  if (typeof romanStr !== 'string') {\n    return 'Not valid';\n  }\n\n  const clean = romanStr.trim().toUpperCase();\n  if (clean.length === 0 || !STRICT_ROMAN_REGEX.test(clean)) {\n    return 'Not valid';\n  }\n\n  const charValues = {\n    I: 1,\n    V: 5,\n    X: 10,\n    L: 50,\n    C: 100,\n    D: 500,\n    M: 1000\n  };\n\n  let total = 0;\n  for (let i = 0; i < clean.length; i++) {\n    const currentVal = charValues[clean[i]];\n    const nextVal = charValues[clean[i + 1]];\n\n    if (nextVal && currentVal < nextVal) {\n      total -= currentVal;\n    } else {\n      total += currentVal;\n    }\n  }\n\n  if (total < 1 || total > 3999) {\n    return 'Not valid';\n  }\n\n  // Round-trip check ensures canonical strict form\n  if (intToRoman(total) !== clean) {\n    return 'Not valid';\n  }\n\n  return total;\n}\n\n// DOM Element References\nconst numberInput = document.getElementById('number-input');\nconst romanInput = document.getElementById('roman-input');\nconst numberOutput = document.getElementById('number-output');\nconst romanOutput = document.getElementById('roman-output');\n\n// Guard flag to prevent mutual event loop ping-pong\nlet isSyncing = false;\n\nfunction updateOutputUI(element, value) {\n  if (value === 'Not valid') {\n    element.textContent = 'Not valid';\n    element.className = 'preview-value invalid';\n  } else if (value === '' || value === null || value === undefined) {\n    element.innerHTML = '&mdash;';\n    element.className = 'preview-value empty';\n  } else {\n    element.textContent = value;\n    element.className = 'preview-value';\n  }\n}\n\nfunction handleNumberChange() {\n  if (isSyncing) return;\n  isSyncing = true;\n\n  const rawValue = numberInput.value.trim();\n\n  if (rawValue === '') {\n    updateOutputUI(numberOutput, '');\n    updateOutputUI(romanOutput, '');\n    romanInput.value = '';\n    isSyncing = false;\n    return;\n  }\n\n  const num = Number(rawValue);\n  if (!Number.isInteger(num) || num < 1 || num > 3999) {\n    updateOutputUI(numberOutput, 'Not valid');\n  } else {\n    const roman = intToRoman(num);\n    updateOutputUI(numberOutput, roman);\n    romanInput.value = roman;\n    updateOutputUI(romanOutput, num);\n  }\n\n  isSyncing = false;\n}\n\nfunction handleRomanChange() {\n  if (isSyncing) return;\n  isSyncing = true;\n\n  const rawValue = romanInput.value.trim();\n\n  if (rawValue === '') {\n    updateOutputUI(romanOutput, '');\n    updateOutputUI(numberOutput, '');\n    numberInput.value = '';\n    isSyncing = false;\n    return;\n  }\n\n  const convertedNum = romanToInt(rawValue);\n  if (convertedNum === 'Not valid') {\n    updateOutputUI(romanOutput, 'Not valid');\n  } else {\n    updateOutputUI(romanOutput, convertedNum);\n    numberInput.value = convertedNum;\n    updateOutputUI(numberOutput, rawValue.toUpperCase());\n  }\n\n  isSyncing = false;\n}\n\n// Attach listeners via addEventListener (no inline handlers)\nnumberInput.addEventListener('input', handleNumberChange);\nromanInput.addEventListener('input', handleRomanChange);\n\n// Set initial placeholder values\nupdateOutputUI(numberOutput, '');\nupdateOutputUI(romanOutput, '');\n",
+      "description": "Bidirectional conversion logic between decimals and standard Roman numerals, strict format validation, and DOM event synchronization."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Roman Numeral Converter\n\nA retro pixel-art themed, offline browser application built with vanilla HTML, CSS, and JavaScript. It provides real-time, bidirectional conversion between decimal integers (1 to 3999) and standard Roman numerals, featuring strict subtractive notation validation and informative error messaging.\n\n## Features\n\n- **Live Bidirectional Conversion**:\n  - Typing a number from 1 to 3999 immediately displays its Roman equivalent and updates the companion Roman field.\n  - Typing a Roman numeral string (e.g., `MCMXCIV`) immediately converts it to `1994` and syncs the decimal input.\n- **Strict Roman Validation**:\n  - Non-canonical patterns (e.g., `IIII`, `IC`, `VX`, `MMMM`) and invalid characters show `'Not valid'`.\n  - Numbers below 1 or exceeding 3999 show `'Not valid'`.\n- **Pixel-Art Aesthetic**:\n  - Cohesive 4-color retro color scheme without external images, fonts, or network requests.\n  - Beveled pixel frame styles, distinct hover and focus rings, and responsive card presentation designed for screens down to 360px.\n- **Accessibility & Standards**:\n  - Semantic `<main>`, `<section>`, `<header>`, and explicitly associated `<label>` elements.\n  - `aria-live=\"polite\"` announcements for screen readers.\n  - Pure `addEventListener` event bindings without inline handlers.\n  - Includes the `[hidden] { display: none !important; }` safeguard.\n\n## Quick Start\n\nOpen `index.html` directly in any modern web browser. No installation, build step, or server is required.\n",
+      "description": "Project documentation including feature overview, algorithm description, accessibility considerations, and offline usage guide."
+    }
+  ]
+}

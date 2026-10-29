@@ -1,0 +1,429 @@
+{
+  "caseId": "quiz-timer",
+  "run": 1,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\new",
+  "managerTokens": 8977,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "8/8",
+  "finalChecks": "8/8",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "8/8"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 92,
+  "reportedTokens": 51684,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:06:37.547Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:06:37.548Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:06:55.272Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Timed Quiz"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:06:55.272Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:07:35.849Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:07:35.849Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:07:36.446Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:07:36.447Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "915e1e76-0079-45ce-9a08-10471f2a6b39"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:08:04.384Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "915e1e76-0079-45ce-9a08-10471f2a6b39",
+        "checks": 8
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:08:04.385Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "testPlanId": "915e1e76-0079-45ce-9a08-10471f2a6b39",
+        "checks": 8,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "name": "Initial screen shows start button and HUD",
+        "passed": true,
+        "actual": "START QUIZ"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "name": "Start quiz presents first question and 4 choices",
+        "passed": true,
+        "actual": "4"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "name": "Correct answer updates live score in HUD",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "name": "Completing all 5 questions shows final score",
+        "passed": true,
+        "actual": "5 / 5"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "name": "Play again button is visible on quiz completion",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "name": "Timer countdown decreases after advance",
+        "passed": true,
+        "actual": "57s"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "name": "Running out of time displays Game Over screen",
+        "passed": true,
+        "actual": "GAME OVER"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "name": "Restarting after game over resets timer to 60s",
+        "passed": true,
+        "actual": "60s"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:08:07.038Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "70985a06-31c3-49de-ae8c-1ab1f38ce7cc",
+        "status": "passed",
+        "passed": 8,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:08:07.040Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial screen shows start button and HUD",
+        "actions": [],
+        "selector": "#start-btn",
+        "expected": "START QUIZ"
+      },
+      {
+        "name": "Start quiz presents first question and 4 choices",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          }
+        ],
+        "selector": ".answer-option",
+        "expected": "4",
+        "assertion": "count"
+      },
+      {
+        "name": "Correct answer updates live score in HUD",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 0
+          }
+        ],
+        "selector": "#score-display",
+        "expected": "1"
+      },
+      {
+        "name": "Completing all 5 questions shows final score",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 1
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 1
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 3
+          }
+        ],
+        "selector": "#final-score",
+        "expected": "5 / 5"
+      },
+      {
+        "name": "Play again button is visible on quiz completion",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 1
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 1
+          },
+          {
+            "type": "click",
+            "selector": ".answer-option",
+            "nth": 3
+          }
+        ],
+        "selector": "#restart-btn",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Timer countdown decreases after advance",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "advance",
+            "ms": 3000
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "57s"
+      },
+      {
+        "name": "Running out of time displays Game Over screen",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "advance",
+            "ms": 61000
+          }
+        ],
+        "selector": "#result-title",
+        "expected": "GAME OVER"
+      },
+      {
+        "name": "Restarting after game over resets timer to 60s",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "advance",
+            "ms": 61000
+          },
+          {
+            "type": "click",
+            "selector": "#restart-btn"
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "60s"
+      }
+    ],
+    "limitations": [
+      "Cannot test audio effects if any are added in the future."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14175,
+      "completion_tokens": 531,
+      "total_tokens": 14706
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Pixel Timed Quiz</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <main class=\"quiz-container\" role=\"main\">\n    <header class=\"quiz-header\">\n      <h1 class=\"pixel-title\">PIXEL QUIZ</h1>\n      <div class=\"hud-bar\" aria-label=\"Quiz Status\">\n        <div class=\"hud-item\">\n          <span class=\"hud-label\">TIME:</span>\n          <span id=\"timer-display\" class=\"hud-value\" aria-live=\"polite\">60s</span>\n        </div>\n        <div class=\"hud-item\">\n          <span class=\"hud-label\">SCORE:</span>\n          <span id=\"score-display\" class=\"hud-value\" aria-live=\"polite\">0</span>\n        </div>\n      </div>\n    </header>\n\n    <!-- Start Screen -->\n    <section id=\"start-screen\" class=\"screen active\">\n      <p class=\"screen-desc\">Answer 5 pixel trivia questions before the 60-second clock expires!</p>\n      <button id=\"start-btn\" class=\"pixel-btn\" type=\"button\">START QUIZ</button>\n    </section>\n\n    <!-- Question Screen -->\n    <section id=\"question-screen\" class=\"screen\" hidden aria-live=\"polite\">\n      <div class=\"progress-indicator\">\n        <span id=\"question-number\">QUESTION 1 / 5</span>\n      </div>\n      <h2 id=\"question-text\" class=\"question-heading\">Question content goes here?</h2>\n      <div id=\"answers-container\" class=\"answers-grid\" role=\"group\" aria-label=\"Answer choices\">\n        <!-- Buttons dynamically rendered here -->\n      </div>\n    </section>\n\n    <!-- Result Screen -->\n    <section id=\"result-screen\" class=\"screen\" hidden aria-live=\"polite\">\n      <h2 id=\"result-title\" class=\"result-heading\">GAME OVER</h2>\n      <p id=\"result-reason\" class=\"result-reason\"></p>\n      <div class=\"final-score-box\">\n        <span class=\"score-label\">FINAL SCORE:</span>\n        <span id=\"final-score\" class=\"score-big\">0 / 5</span>\n      </div>\n      <button id=\"restart-btn\" class=\"pixel-btn\" type=\"button\">Play again</button>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main HTML file containing the semantic layout for the pixel quiz app, status HUD, question card, and results screen."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Strict display override for hidden attribute */\n[hidden] {\n  display: none !important;\n}\n\n/* 4-Color Retro Palette */\n:root {\n  --bg-color: #1a102f;\n  --card-bg: #2d1b4e;\n  --pixel-accent: #f4b41b;\n  --pixel-highlight: #45b6fe;\n  --text-main: #f5f5f5;\n  --text-dim: #b8b0cf;\n  --btn-bg: #3f266d;\n  --btn-hover: #583399;\n  --pixel-border: #0d0718;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--bg-color);\n  color: var(--text-main);\n  font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;\n  font-size: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n  background-image:\n    radial-gradient(circle at 50% 50%, rgba(69, 182, 254, 0.08) 1px, transparent 1px),\n    radial-gradient(circle at 20% 20%, rgba(244, 180, 27, 0.08) 1px, transparent 1px);\n  background-size: 24px 24px;\n}\n\n.quiz-container {\n  width: 100%;\n  max-width: 540px;\n  min-width: 320px;\n  background-color: var(--card-bg);\n  border: 4px solid var(--pixel-border);\n  box-shadow:\n    -6px 0 0 0 var(--pixel-border),\n    6px 0 0 0 var(--pixel-border),\n    0 -6px 0 0 var(--pixel-border),\n    0 6px 0 0 var(--pixel-border),\n    8px 8px 0 0 rgba(0, 0, 0, 0.6);\n  padding: 1.75rem 1.5rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1.25rem;\n}\n\n.quiz-header {\n  border-bottom: 4px solid var(--pixel-border);\n  padding-bottom: 1rem;\n  text-align: center;\n}\n\n.pixel-title {\n  font-size: 1.75rem;\n  letter-spacing: 3px;\n  color: var(--pixel-accent);\n  text-shadow: 2px 2px 0 #000;\n  margin-bottom: 0.75rem;\n}\n\n.hud-bar {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: var(--pixel-border);\n  padding: 0.5rem 1rem;\n  border: 2px solid var(--pixel-accent);\n}\n\n.hud-item {\n  display: flex;\n  gap: 0.5rem;\n  font-weight: bold;\n  font-size: 1.1rem;\n}\n\n.hud-label {\n  color: var(--text-dim);\n}\n\n.hud-value {\n  color: var(--pixel-highlight);\n  min-width: 2.5ch;\n  text-align: right;\n}\n\n.screen {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 1.25rem;\n  text-align: center;\n}\n\n.screen-desc {\n  font-size: 1.1rem;\n  line-height: 1.5;\n  color: var(--text-dim);\n  padding: 1rem 0;\n}\n\n.progress-indicator {\n  font-size: 0.95rem;\n  color: var(--pixel-highlight);\n  letter-spacing: 1.5px;\n  font-weight: bold;\n  align-self: flex-start;\n}\n\n.question-heading {\n  font-size: 1.25rem;\n  line-height: 1.4;\n  text-align: left;\n  width: 100%;\n  min-height: 3.5rem;\n  color: var(--text-main);\n}\n\n.answers-grid {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  gap: 0.75rem;\n}\n\n.pixel-btn {\n  appearance: none;\n  background-color: var(--btn-bg);\n  color: var(--text-main);\n  border: 3px solid var(--pixel-border);\n  box-shadow:\n    -3px 0 0 0 var(--pixel-border),\n    3px 0 0 0 var(--pixel-border),\n    0 -3px 0 0 var(--pixel-border),\n    0 3px 0 0 var(--pixel-border),\n    0 4px 0 0 #000;\n  padding: 0.85rem 1.25rem;\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: bold;\n  cursor: pointer;\n  text-align: center;\n  text-decoration: none;\n  user-select: none;\n  transition: background-color 0.1s ease;\n}\n\n.pixel-btn:hover {\n  background-color: var(--btn-hover);\n  color: #fff;\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px dashed var(--pixel-accent);\n  outline-offset: 4px;\n}\n\n.pixel-btn:active {\n  transform: translateY(2px);\n  box-shadow:\n    -3px 0 0 0 var(--pixel-border),\n    3px 0 0 0 var(--pixel-border),\n    0 -3px 0 0 var(--pixel-border),\n    0 3px 0 0 var(--pixel-border),\n    0 2px 0 0 #000;\n}\n\n.answer-option {\n  width: 100%;\n  text-align: left;\n  display: flex;\n  align-items: center;\n  gap: 0.75rem;\n}\n\n.option-prefix {\n  color: var(--pixel-accent);\n  font-weight: bold;\n}\n\n.result-heading {\n  font-size: 1.6rem;\n  letter-spacing: 2px;\n  color: var(--pixel-accent);\n}\n\n.result-reason {\n  color: var(--text-dim);\n  font-size: 1.05rem;\n}\n\n.final-score-box {\n  background-color: var(--pixel-border);\n  border: 3px solid var(--pixel-highlight);\n  padding: 1.25rem 2.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 0.5rem;\n}\n\n.score-label {\n  font-size: 0.95rem;\n  letter-spacing: 1px;\n  color: var(--text-dim);\n}\n\n.score-big {\n  font-size: 2.25rem;\n  color: var(--pixel-accent);\n  font-weight: bold;\n}\n\n@media (max-width: 440px) {\n  .quiz-container {\n    padding: 1.25rem 1rem;\n  }\n  .pixel-title {\n    font-size: 1.4rem;\n  }\n  .question-heading {\n    font-size: 1.1rem;\n  }\n  .hud-bar {\n    padding: 0.4rem 0.6rem;\n  }\n  .hud-item {\n    font-size: 0.95rem;\n  }\n}\n",
+      "description": "CSS stylesheet providing cohesive 4-color pixel art aesthetics, retro borders, accessible focus states, and responsive layout."
+    },
+    {
+      "path": "app.js",
+      "content": "const QUESTIONS = [\n  {\n    question: \"What does 'RGB' stand for in digital graphics?\",\n    options: [\"Red, Green, Blue\", \"Real Graphic Bits\", \"Raster Grid Block\", \"Radial Glow Base\"],\n    answer: 0\n  },\n  {\n    question: \"How many bits are in a standard single byte?\",\n    options: [\"4 bits\", \"8 bits\", \"16 bits\", \"32 bits\"],\n    answer: 1\n  },\n  {\n    question: \"Which classic console popularized 8-bit pixel art in 1983?\",\n    options: [\"Atari 2600\", \"Sega Genesis\", \"NES / Famicom\", \"PlayStation\"],\n    answer: 2\n  },\n  {\n    question: \"What is the main purpose of CSS 'image-rendering: pixelated'?\",\n    options: [\"Blur images\", \"Sharpen pixel edges on scale\", \"Add 3D lighting\", \"Compress file size\"],\n    answer: 1\n  },\n  {\n    question: \"What is the hex color code for pure bright white?\",\n    options: [\"#000000\", \"#111111\", \"#EEEEEE\", \"#FFFFFF\"],\n    answer: 3\n  }\n];\n\nconst TOTAL_TIME = 60;\nlet timeRemaining = TOTAL_TIME;\nlet currentQuestionIndex = 0;\nlet score = 0;\nlet timerInterval = null;\n\n// DOM Elements\nconst timerDisplay = document.getElementById(\"timer-display\");\nconst scoreDisplay = document.getElementById(\"score-display\");\nconst startScreen = document.getElementById(\"start-screen\");\nconst questionScreen = document.getElementById(\"question-screen\");\nconst resultScreen = document.getElementById(\"result-screen\");\nconst startBtn = document.getElementById(\"start-btn\");\nconst restartBtn = document.getElementById(\"restart-btn\");\nconst questionNumberEl = document.getElementById(\"question-number\");\nconst questionTextEl = document.getElementById(\"question-text\");\nconst answersContainer = document.getElementById(\"answers-container\");\nconst resultReasonEl = document.getElementById(\"result-reason\");\nconst finalScoreEl = document.getElementById(\"final-score\");\n\nfunction updateHUD() {\n  timerDisplay.textContent = `${timeRemaining}s`;\n  scoreDisplay.textContent = `${score}`;\n}\n\nfunction startQuiz() {\n  score = 0;\n  currentQuestionIndex = 0;\n  timeRemaining = TOTAL_TIME;\n  updateHUD();\n\n  startScreen.hidden = true;\n  resultScreen.hidden = true;\n  questionScreen.hidden = false;\n\n  startTimer();\n  renderQuestion();\n}\n\nfunction startTimer() {\n  clearInterval(timerInterval);\n  timerInterval = setInterval(() => {\n    timeRemaining -= 1;\n    if (timeRemaining <= 0) {\n      timeRemaining = 0;\n      updateHUD();\n      endQuiz(\"Time's up!\");\n    } else {\n      updateHUD();\n    }\n  }, 1000);\n}\n textAlign = \"left\";\nfunction renderQuestion() {\n  if (currentQuestionIndex >= QUESTIONS.length) {\n    endQuiz(\"All questions answered!\");\n    return;\n  }\n\n  const current = QUESTIONS[currentQuestionIndex];\n  questionNumberEl.textContent = `QUESTION ${currentQuestionIndex + 1} / ${QUESTIONS.length}`;\n  questionTextEl.textContent = current.question;\n  answersContainer.innerHTML = \"\";\n\n  const prefixes = [\"A\", \"B\", \"C\", \"D\"];\n  current.options.forEach((optionText, index) => {\n    const btn = document.createElement(\"button\");\n    btn.type = \"button\";\n    btn.className = \"pixel-btn answer-option\";\n    btn.setAttribute(\"aria-label\", `Option ${prefixes[index]}: ${optionText}`);\n\n    const prefixSpan = document.createElement(\"span\");\n    prefixSpan.className = \"option-prefix\";\n    prefixSpan.textContent = `[${prefixes[index]}]`;\n\n    const labelSpan = document.createElement(\"span\");\n    labelSpan.textContent = optionText;\n\n    btn.appendChild(prefixSpan);\n    btn.appendChild(labelSpan);\n\n    btn.addEventListener(\"click\", () => handleAnswer(index));\n    answersContainer.appendChild(btn);\n  });\n\n  const firstOption = answersContainer.querySelector(\"button\");\n  if (firstOption) {\n    firstOption.focus();\n  }\n}\n\nfunction handleAnswer(selectedIndex) {\n  const current = QUESTIONS[currentQuestionIndex];\n  if (selectedIndex === current.answer) {\n    score += 1;\n  }\n  currentQuestionIndex += 1;\n  updateHUD();\n  renderQuestion();\n}\n\nfunction endQuiz(reason) {\n  clearInterval(timerInterval);\n  questionScreen.hidden = true;\n  startScreen.hidden = true;\n  resultScreen.hidden = false;\n\n  resultReasonEl.textContent = reason;\n  finalScoreEl.textContent = `${score} / ${QUESTIONS.length}`;\n  restartBtn.focus();\n}\n\n// Event Listeners\nstartBtn.addEventListener(\"click\", startQuiz);\nrestartBtn.addEventListener(\"click\", startQuiz);\n",
+      "description": "Quiz engine script handling question data, 60s countdown timer, live score, DOM updates, and play again logic."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Timed Quiz\n\nA retro pixel-styled timed quiz game built with vanilla HTML, CSS, and JavaScript. Complete all 5 trivia questions within 60 seconds!\n\n## Features\n\n- **60-Second Total Timer**: A global countdown clock runs continuously throughout the quiz.\n- **Live Scoreboard**: Heads-Up Display (HUD) tracks your remaining time and score in real time.\n- **Built-in 5 Questions**: 5 retro-themed multiple-choice questions with 4 options each.\n- **End Screen & Replay**: Shows the final score with a prompt to play again when time runs out or when all questions are answered.\n- **Accessible & Responsive**: Fully keyboard navigable with clear focus states, screen reader compatible attributes, and fluid layout starting at 360px viewport width.\n- **Pure Offline Vanilla Code**: No external libraries, fonts, or assets.\n\n## How to Run\n\n1. Clone or download this project folder.\n2. Open `index.html` in any modern web browser.\n3. Click **START QUIZ** (or navigate using the keyboard `Tab` + `Enter`/`Space`) and test your knowledge!\n",
+      "description": "Project documentation explaining how to launch and play the pixel timed quiz."
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "caseId": "quiz-timer",
+  "run": 3,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\baseline",
+  "managerTokens": 8956,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "8/8",
+  "finalChecks": "8/8",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "8/8"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 94,
+  "reportedTokens": 36430,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:11:29.536Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:11:29.536Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:11:46.137Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Timed Quiz App"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:11:46.138Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:12:32.112Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:12:32.112Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:12:32.653Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:12:32.654Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "a5034b87-536d-4a5e-b153-25a6832b5172"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:12:56.365Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "a5034b87-536d-4a5e-b153-25a6832b5172",
+        "checks": 8
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:12:56.365Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "testPlanId": "a5034b87-536d-4a5e-b153-25a6832b5172",
+        "checks": 8,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "name": "Initial view displays 60s timer and start button",
+        "passed": true,
+        "actual": "60"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "name": "Starting quiz displays first question text",
+        "passed": true,
+        "actual": "Which company created the classic arcade game Pong?"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "name": "First question offers four answer choice buttons",
+        "passed": true,
+        "actual": "4"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "name": "Correct answer updates live score to 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "name": "Timer counts down while quiz is in progress",
+        "passed": true,
+        "actual": "59"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "name": "Completing all 5 questions reveals final score",
+        "passed": true,
+        "actual": "5 / 5"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "name": "Completing quiz shows Play again button",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "name": "Clicking Play again resets to question 1 and restarts quiz",
+        "passed": true,
+        "actual": "Question 1 of 5"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:13:00.054Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "7f66e69e-c6ba-4082-9e98-61fd0709d35f",
+        "status": "passed",
+        "passed": 8,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:13:00.056Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial view displays 60s timer and start button",
+        "actions": [],
+        "selector": "#timer-display",
+        "expected": "60"
+      },
+      {
+        "name": "Starting quiz displays first question text",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          }
+        ],
+        "selector": "#question-text",
+        "expected": "Which company created the classic arcade game Pong?"
+      },
+      {
+        "name": "First question offers four answer choice buttons",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          }
+        ],
+        "selector": ".answer-btn",
+        "expected": "4",
+        "assertion": "count"
+      },
+      {
+        "name": "Correct answer updates live score to 1",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='1']"
+          }
+        ],
+        "selector": "#score-display",
+        "expected": "1"
+      },
+      {
+        "name": "Timer counts down while quiz is in progress",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "^(5[0-9])$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Completing all 5 questions reveals final score",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='1']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='2']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='1']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='2']"
+          }
+        ],
+        "selector": "#final-score-display",
+        "expected": "5 / 5"
+      },
+      {
+        "name": "Completing quiz shows Play again button",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          }
+        ],
+        "selector": "#restart-btn",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Clicking Play again resets to question 1 and restarts quiz",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#start-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": ".answer-btn[data-index='0']"
+          },
+          {
+            "type": "click",
+            "selector": "#restart-btn"
+          }
+        ],
+        "selector": "#question-progress",
+        "expected": "Question 1 of 5"
+      }
+    ],
+    "limitations": [
+      "Waiting for the full 60-second countdown to expire exceeds the per-check 8s wait limit."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13481,
+      "completion_tokens": 1056,
+      "total_tokens": 14537
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Timed Quiz</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"quiz-wrapper\">\n    <header class=\"quiz-header\">\n      <h1 class=\"pixel-title\">Pixel Quiz</h1>\n      <div class=\"status-bar\" aria-live=\"polite\">\n        <div class=\"status-item\">\n          <span class=\"label\">TIME</span>\n          <span id=\"timer-display\" class=\"value\">60</span>s\n        </div>\n        <div class=\"status-item\">\n          <span class=\"label\">SCORE</span>\n          <span id=\"score-display\" class=\"value\">0</span>\n        </div>\n      </div>\n    </header>\n\n    <!-- Start Screen -->\n    <section id=\"start-screen\" class=\"card active-view\">\n      <p class=\"description\">Answer 5 retro trivia questions before the 60-second timer hits zero!</p>\n      <button id=\"start-btn\" class=\"pixel-btn primary-btn\" type=\"button\">Start Quiz</button>\n    </section>\n\n    <!-- Question Screen -->\n    <section id=\"quiz-screen\" class=\"card\" hidden aria-live=\"assertive\">\n      <div class=\"question-meta\">\n        <span id=\"question-progress\" class=\"badge\">Question 1 of 5</span>\n      </div>\n      <h2 id=\"question-text\" class=\"question-title\">Loading question...</h2>\n      <div id=\"answers-container\" class=\"answers-grid\" role=\"group\" aria-label=\"Answer choices\">\n        <button type=\"button\" class=\"pixel-btn answer-btn\" data-index=\"0\"></button>\n        <button type=\"button\" class=\"pixel-btn answer-btn\" data-index=\"1\"></button>\n        <button type=\"button\" class=\"pixel-btn answer-btn\" data-index=\"2\"></button>\n        <button type=\"button\" class=\"pixel-btn answer-btn\" data-index=\"3\"></button>\n      </div>\n    </section>\n\n    <!-- Game Over Screen -->\n    <section id=\"result-screen\" class=\"card\" hidden tabIndex=\"-1\">\n      <h2 id=\"result-title\" class=\"pixel-title\">Game Over</h2>\n      <p id=\"result-message\" class=\"result-msg\">Time's up!</p>\n      <div class=\"final-score-box\">\n        <span class=\"label\">FINAL SCORE</span>\n        <span id=\"final-score-display\" class=\"final-score\">0 / 5</span>\n      </div>\n      <button id=\"restart-btn\" class=\"pixel-btn primary-btn\" type=\"button\">Play again</button>\n    </section>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Semantic HTML layout providing retro pixel-styled containers for start, quiz question, and game-over views with live accessibility regions."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Enforce hidden attribute overriding display declarations */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #181425;\n  --color-card: #262b44;\n  --color-border: #ffbe44;\n  --color-text: #f4f4f4;\n  --color-accent: #00e436;\n  --color-btn: #3a4466;\n  --color-btn-hover: #5a6988;\n  --color-btn-active: #21253a;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--color-bg);\n  color: var(--color-text);\n  font-family: 'Courier New', Courier, monospace, system-ui;\n  font-size: 16px;\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 16px;\n}\n\n.quiz-wrapper {\n  width: 100%;\n  max-width: 520px;\n  background: var(--color-card);\n  border: 4px solid var(--color-border);\n  box-shadow: 6px 6px 0px #000000;\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.quiz-header {\n  border-bottom: 2px dashed var(--color-border);\n  padding-bottom: 16px;\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  text-align: center;\n}\n\n.pixel-title {\n  font-size: 1.75rem;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  color: var(--color-border);\n  text-shadow: 2px 2px 0px #000;\n}\n\n.status-bar {\n  display: flex;\n  justify-content: space-around;\n  background: #141724;\n  padding: 8px 12px;\n  border: 2px solid #3a4466;\n}\n\n.status-item {\n  font-weight: bold;\n  letter-spacing: 1px;\n}\n\n.status-item .label {\n  color: #8b9bb4;\n  font-size: 0.85rem;\n  margin-right: 6px;\n}\n\n.status-item .value {\n  color: var(--color-accent);\n  font-size: 1.25rem;\n}\n\n.card {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  align-items: center;\n  text-align: center;\n}\n\n.description {\n  line-height: 1.5;\n  color: #c0cbdc;\n  font-size: 1.05rem;\n}\n\n.question-meta {\n  width: 100%;\n  display: flex;\n  justify-content: flex-start;\n}\n\n.badge {\n  background: #141724;\n  border: 1px solid var(--color-border);\n  color: var(--color-border);\n  font-size: 0.85rem;\n  padding: 4px 8px;\n  font-weight: bold;\n}\n\n.question-title {\n  font-size: 1.25rem;\n  line-height: 1.4;\n  min-height: 54px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.answers-grid {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 12px;\n}\n\n.pixel-btn {\n  appearance: none;\n  background-color: var(--color-btn);\n  color: var(--color-text);\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: bold;\n  padding: 12px 16px;\n  border: 2px solid #f4f4f4;\n  box-shadow: 3px 3px 0px #000000;\n  cursor: pointer;\n  text-align: center;\n  transition: none;\n  outline: none;\n}\n\n.pixel-btn:hover {\n  background-color: var(--color-btn-hover);\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px solid var(--color-border);\n  outline-offset: 2px;\n}\n\n.pixel-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0px #000000;\n  background-color: var(--color-btn-active);\n}\n\n.primary-btn {\n  background-color: #216a3e;\n  border-color: var(--color-accent);\n  color: #fff;\n  width: 100%;\n  max-width: 240px;\n}\n\n.primary-btn:hover {\n  background-color: #28824c;\n}\n\n.final-score-box {\n  background: #141724;\n  border: 2px solid var(--color-border);\n  padding: 16px 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n}\n\n.final-score-box .label {\n  font-size: 0.9rem;\n  color: #8b9bb4;\n}\n\n.final-score {\n  font-size: 2.2rem;\n  color: var(--color-accent);\n  font-weight: bold;\n}\n\n.result-msg {\n  font-size: 1.15rem;\n  color: #ffbe44;\n}\n\n@media (min-width: 480px) {\n  .answers-grid {\n    grid-template-columns: 1fr 1fr;\n  }\n}\n",
+      "description": "Retro pixel aesthetic styles with distinct button states, responsive layout down to 360px, cohesive palette, and crucial [hidden] rule."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const QUIZ_QUESTIONS = [\n    {\n      question: 'Which company created the classic arcade game Pong?',\n      answers: ['Nintendo', 'Atari', 'Sega', 'Namco'],\n      correct: 1\n    },\n    {\n      question: 'What is the highest possible score in classic Pac-Man?',\n      answers: ['999,990', '1,000,000', '3,333,360', '5,000,000'],\n      correct: 2\n    },\n    {\n      question: 'What color is the ghost named Blinky in Pac-Man?',\n      answers: ['Red', 'Pink', 'Cyan', 'Orange'],\n      correct: 0\n    },\n    {\n      question: 'What was Mario originally known as in Donkey Kong?',\n      answers: ['Plumber', 'Jumpman', 'Luigi', 'Red Hat'],\n      correct: 1\n    },\n    {\n      question: 'Which console introduced the Game Boy in 1989?',\n      answers: ['Sony', 'Bandai', 'Nintendo', 'Atari'],\n      correct: 2\n    }\n  ];\n\n  const TOTAL_TIME = 60;\n  let currentQuestionIndex = 0;\n  let score = 0;\n  let remainingTime = TOTAL_TIME;\n  let timerInterval = null;\n\n  // Elements\n  const timerDisplay = document.getElementById('timer-display');\n  const scoreDisplay = document.getElementById('score-display');\n  const startScreen = document.getElementById('start-screen');\n  const quizScreen = document.getElementById('quiz-screen');\n  const resultScreen = document.getElementById('result-screen');\n  const questionProgress = document.getElementById('question-progress');\n  const questionText = document.getElementById('question-text');\n  const answersContainer = document.getElementById('answers-container');\n  const answerButtons = answersContainer.querySelectorAll('.answer-btn');\n  const startBtn = document.getElementById('start-btn');\n  const restartBtn = document.getElementById('restart-btn');\n  const resultTitle = document.getElementById('result-title');\n  const resultMessage = document.getElementById('result-message');\n  const finalScoreDisplay = document.getElementById('final-score-display');\n\n  function startQuiz() {\n    score = 0;\n    currentQuestionIndex = 0;\n    remainingTime = TOTAL_TIME;\n    scoreDisplay.textContent = score;\n    timerDisplay.textContent = remainingTime;\n\n    startScreen.hidden = true;\n    resultScreen.hidden = true;\n    quizScreen.hidden = false;\n\n    loadQuestion();\n    startTimer();\n  }\n\n  function startTimer() {\n    clearInterval(timerInterval);\n    timerInterval = setInterval(() => {\n      remainingTime -= 1;\n      timerDisplay.textContent = remainingTime;\n\n      if (remainingTime <= 0) {\n        clearInterval(timerInterval);\n        endQuiz(false);\n      }\n    }, 1000);\n  }\n\n  function loadQuestion() {\n    const current = QUIZ_QUESTIONS[currentQuestionIndex];\n    questionProgress.textContent = `Question ${currentQuestionIndex + 1} of ${QUIZ_QUESTIONS.length}`;\n    questionText.textContent = current.question;\n\n    answerButtons.forEach((button, index) => {\n      button.textContent = current.answers[index];\n    });\n\n    if (answerButtons.length > 0) {\n      answerButtons[0].focus();\n    }\n  }\n\n  function handleAnswer(selectedIndex) {\n    const current = QUIZ_QUESTIONS[currentQuestionIndex];\n    if (selectedIndex === current.correct) {\n      score += 1;\n      scoreDisplay.textContent = score;\n    }\n\n    currentQuestionIndex += 1;\n\n    if (currentQuestionIndex < QUIZ_QUESTIONS.length) {\n      loadQuestion();\n    } else {\n      endQuiz(true);\n    }\n  }\n\n  function endQuiz(completedAll) {\n    clearInterval(timerInterval);\n    quizScreen.hidden = true;\n    startScreen.hidden = true;\n    resultScreen.hidden = false;\n\n    if (completedAll) {\n      resultTitle.textContent = 'Quiz Completed!';\n      resultMessage.textContent = score === QUIZ_QUESTIONS.length\n        ? 'Perfect score! True retro master!'\n        : 'Great run! Can you get 5 out of 5?';\n    } else {\n      resultTitle.textContent = \"Time's Up!\";\n      resultMessage.textContent = 'You ran out of time!';\n    }\n\n    finalScoreDisplay.textContent = `${score} / ${QUIZ_QUESTIONS.length}`;\n    restartBtn.focus();\n  }\n\n  // Event Listeners\n  startBtn.addEventListener('click', startQuiz);\n  restartBtn.addEventListener('click', startQuiz);\n\n  answersContainer.addEventListener('click', (event) => {\n    const target = event.target.closest('.answer-btn');\n    if (!target) return;\n    const chosenIndex = parseInt(target.getAttribute('data-index'), 10);\n    handleAnswer(chosenIndex);\n  });\n});\n",
+      "description": "Pure JavaScript state management handling the 60s countdown timer, live score tracking, question progression, and game reset."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Timed Quiz\n\nA retro pixel-styled, offline-capable browser quiz game constructed in pure HTML, CSS, and JavaScript without dependencies or external resources.\n\n## Features\n\n- **Timed Challenge**: 60-second shared countdown timer for the full 5-question quiz.\n- **Real-Time Scoring**: Score updates dynamically on the screen as questions are answered.\n- **Built-in Dataset**: 5 multiple-choice questions with 4 options each.\n- **Game Over & Replay**: Shows the final score with a prompt to play again when either all questions are answered or the timer runs out.\n- **Accessibility**: Semantic elements, ARIA attributes, full keyboard navigation, and proper focus management.\n- **Responsive Design**: Styled using a pixel-art theme that scales down smoothly to 360px mobile viewports.\n\n## Getting Started\n\nSimply open `index.html` in any modern web browser. No server, build step, or network connection is required.\n",
+      "description": "Project documentation detailing offline execution, feature set, and accessibility attributes."
+    }
+  ]
+}

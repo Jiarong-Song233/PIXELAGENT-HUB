@@ -1,0 +1,433 @@
+{
+  "caseId": "seating-chart",
+  "run": 2,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\baseline",
+  "managerTokens": 8989,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 98,
+  "reportedTokens": 52396,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:49:46.329Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:49:46.329Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:50:05.653Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Classroom Seating Planner"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:50:05.653Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:50:53.166Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:50:53.166Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:50:53.644Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:50:53.645Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "4a0e0ea4-426b-4e79-b626-a15636e2059c"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:51:19.926Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "4a0e0ea4-426b-4e79-b626-a15636e2059c",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:51:19.927Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "testPlanId": "4a0e0ea4-426b-4e79-b626-a15636e2059c",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:51:22.804Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Initial empty counter",
+        "passed": true,
+        "actual": "0 / 12 seats filled"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Seat count of desks",
+        "passed": true,
+        "actual": "12"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Empty desk prompt when clicking without name",
+        "passed": true,
+        "actual": "Please type a student name first to seat them!"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Seat student at first desk",
+        "passed": true,
+        "actual": "Alice"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Counter updates after seating one student",
+        "passed": true,
+        "actual": "1 / 12 seats filled"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Input clears after seating",
+        "passed": true,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Clear seated desk by clicking it",
+        "passed": true,
+        "actual": "EMPTY"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Counter decrements after clearing desk",
+        "passed": true,
+        "actual": "0 / 12 seats filled"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "name": "Seat two students updates counter",
+        "passed": true,
+        "actual": "2 / 12 seats filled"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:51:22.805Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "7cd61fdd-711c-43b0-ba0a-c859848f3c8a",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:51:22.808Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial empty counter",
+        "actions": [],
+        "selector": "#seatCounter",
+        "expected": "0 / 12 seats filled"
+      },
+      {
+        "name": "Seat count of desks",
+        "actions": [],
+        "selector": ".desk-btn",
+        "expected": "12",
+        "assertion": "count"
+      },
+      {
+        "name": "Empty desk prompt when clicking without name",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          }
+        ],
+        "selector": "#inputFeedback",
+        "expected": "Please type a student name first to seat them!"
+      },
+      {
+        "name": "Seat student at first desk",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#studentNameInput",
+            "value": "Alice"
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          }
+        ],
+        "selector": ".desk-btn .desk-name",
+        "nth": 0,
+        "expected": "Alice"
+      },
+      {
+        "name": "Counter updates after seating one student",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#studentNameInput",
+            "value": "Alice"
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          }
+        ],
+        "selector": "#seatCounter",
+        "expected": "1 / 12 seats filled"
+      },
+      {
+        "name": "Input clears after seating",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#studentNameInput",
+            "value": "Alice"
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          }
+        ],
+        "selector": "#studentNameInput",
+        "expected": "",
+        "assertion": "attribute",
+        "attribute": "value"
+      },
+      {
+        "name": "Clear seated desk by clicking it",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#studentNameInput",
+            "value": "Alice"
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          }
+        ],
+        "selector": ".desk-btn .desk-status-tag",
+        "nth": 0,
+        "expected": "EMPTY"
+      },
+      {
+        "name": "Counter decrements after clearing desk",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#studentNameInput",
+            "value": "Alice"
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          }
+        ],
+        "selector": "#seatCounter",
+        "expected": "0 / 12 seats filled"
+      },
+      {
+        "name": "Seat two students updates counter",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#studentNameInput",
+            "value": "Alice"
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 0
+          },
+          {
+            "type": "input",
+            "selector": "#studentNameInput",
+            "value": "Bob"
+          },
+          {
+            "type": "click",
+            "selector": ".desk-btn",
+            "nth": 1
+          }
+        ],
+        "selector": "#seatCounter",
+        "expected": "2 / 12 seats filled"
+      }
+    ],
+    "limitations": [],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14318,
+      "completion_tokens": 523,
+      "total_tokens": 14841
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Classroom Seating Planner</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"classroom-card\">\n    <header class=\"classroom-header\">\n      <div class=\"blackboard\">\n        <h1 class=\"classroom-title\">PIXEL CLASSROOM</h1>\n        <p class=\"blackboard-sub\">3 Rows &times; 4 Desks</p>\n      </div>\n    </header>\n\n    <section class=\"dashboard-panel\" aria-label=\"Controls and occupancy\">\n      <div class=\"status-container\">\n        <span class=\"status-label\">OCCUPANCY</span>\n        <div class=\"counter-badge\" id=\"seatCounter\" aria-live=\"polite\">0 / 12 seats filled</div>\n      </div>\n\n      <form class=\"input-group\" id=\"seatForm\" onsubmit=\"return false;\">\n        <label for=\"studentNameInput\" class=\"input-label\">Student Name</label>\n        <div class=\"input-row\">\n          <input\n            type=\"text\"\n            id=\"studentNameInput\"\n            class=\"pixel-input\"\n            placeholder=\"Enter name...\"\n            maxlength=\"14\"\n            autocomplete=\"off\"\n          >\n        </div>\n        <p id=\"inputFeedback\" class=\"feedback-msg\" role=\"status\" aria-live=\"polite\"></p>\n      </form>\n    </section>\n\n    <section class=\"room-floor\" aria-label=\"Classroom Seating Grid\">\n      <div class=\"teacher-desk\" aria-hidden=\"true\">\n        <span class=\"teacher-label\">TEACHER'S PODIUM</span>\n      </div>\n      <div class=\"grid-container\" id=\"deskGrid\" role=\"region\" aria-label=\"Desks grid\">\n        <!-- 12 Desks generated dynamically via script.js -->\n      </div>\n    </section>\n\n    <footer class=\"instructions\">\n      <p>Click empty desk to seat student &bull; Click seated desk to clear</p>\n    </footer>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+      "description": "Main single-page application structure featuring the header, seating status counter, student name input, and 3x4 pixel classroom desk grid."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Mandatory reset & hidden attribute rule */\n[hidden] {\n  display: none !important;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n:root {\n  /* Cohesive retro pixel palette (4 key colors + shades) */\n  --color-bg: #2b2353;\n  --color-board: #1f3d2e;\n  --color-wood: #c07a3e;\n  --color-wood-dark: #824419;\n  --color-desk-empty: #e2ab70;\n  --color-occupied: #4a9fd5;\n  --color-occupied-dark: #27658d;\n  --color-cream: #f4ecd8;\n  --color-chalk: #fefefe;\n  --color-shadow: #141026;\n  --color-alert: #e05b5b;\n}\n\nbody {\n  font-family: \"Courier New\", Courier, monospace, monospace;\n  font-size: 16px;\n  background-color: var(--color-bg);\n  color: var(--color-cream);\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 16px;\n  /* Subtle pixel checkerboard backdrop */\n  background-image:\n    linear-gradient(45deg, #221c44 25%, transparent 25%),\n    linear-gradient(-45deg, #221c44 25%, transparent 25%),\n    linear-gradient(45deg, transparent 75%, #221c44 75%),\n    linear-gradient(-45deg, transparent 75%, #221c44 75%);\n  background-size: 32px 32px;\n  background-position: 0 0, 0 16px, 16px -16px, -16px 0px;\n}\n\n.classroom-card {\n  background-color: #3b306b;\n  width: 100%;\n  max-width: 680px;\n  border: 4px solid var(--color-shadow);\n  box-shadow: 8px 8px 0px var(--color-shadow);\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  gap: 18px;\n}\n\n/* Blackboard Title Banner */\n.blackboard {\n  background-color: var(--color-board);\n  border: 4px solid var(--color-wood);\n  box-shadow: inset 0 0 0 2px var(--color-wood-dark), 4px 4px 0 var(--color-shadow);\n  text-align: center;\n  padding: 12px 8px;\n}\n\n.classroom-title {\n  font-size: 1.5rem;\n  letter-spacing: 2px;\n  color: var(--color-chalk);\n  text-shadow: 2px 2px 0 var(--color-shadow);\n}\n\n.blackboard-sub {\n  font-size: 0.95rem;\n  color: #bfdbcd;\n  margin-top: 4px;\n  letter-spacing: 1px;\n}\n\n/* Dashboard Panel */\n.dashboard-panel {\n  background-color: #2e2655;\n  border: 3px solid var(--color-shadow);\n  padding: 14px 16px;\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n}\n\n.status-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n\n.status-label {\n  font-weight: bold;\n  font-size: 1rem;\n  letter-spacing: 1px;\n  color: #f7d070;\n}\n\n.counter-badge {\n  background: var(--color-board);\n  border: 2px solid var(--color-chalk);\n  padding: 6px 12px;\n  font-weight: bold;\n  font-size: 1.1rem;\n  color: var(--color-chalk);\n  box-shadow: 2px 2px 0 var(--color-shadow);\n}\n\n.input-group {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n}\n\n.input-label {\n  font-weight: bold;\n  font-size: 0.95rem;\n}\n\n.pixel-input {\n  font-family: inherit;\n  font-size: 1rem;\n  padding: 10px 12px;\n  background-color: var(--color-cream);\n  color: var(--color-shadow);\n  border: 3px solid var(--color-shadow);\n  box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.25);\n  outline: none;\n  width: 100%;\n}\n\n.pixel-input:focus {\n  outline: 3px solid #f7d070;\n  outline-offset: 1px;\n  background-color: #fffdf8;\n}\n\n.feedback-msg {\n  font-size: 0.85rem;\n  min-height: 1.1rem;\n  color: #ffd685;\n}\n\n.feedback-msg.alert {\n  color: var(--color-alert);\n  font-weight: bold;\n}\n\n/* Room Floor & Podium */\n.room-floor {\n  background: #32295e;\n  border: 3px solid var(--color-shadow);\n  padding: 14px;\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n}\n\n.teacher-desk {\n  background: var(--color-wood);\n  border: 3px solid var(--color-wood-dark);\n  box-shadow: 0 4px 0 var(--color-shadow);\n  color: var(--color-cream);\n  text-align: center;\n  padding: 6px;\n  width: 60%;\n  max-width: 240px;\n  margin: 0 auto;\n}\n\n.teacher-label {\n  font-size: 0.8rem;\n  font-weight: bold;\n  letter-spacing: 1px;\n  display: block;\n}\n\n/* 3 Rows x 4 Columns Desk Grid */\n.grid-container {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 10px;\n}\n\n@media (max-width: 520px) {\n  .grid-container {\n    gap: 6px;\n  }\n}\n\n/* Desk Button Card */\n.desk-btn {\n  font-family: inherit;\n  cursor: pointer;\n  border-radius: 0;\n  border: 3px solid var(--color-shadow);\n  box-shadow: 3px 3px 0 var(--color-shadow);\n  padding: 10px 4px;\n  min-height: 86px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-between;\n  text-align: center;\n  position: relative;\n  transition: transform 0.05s ease, box-shadow 0.05s ease;\n  outline: none;\n}\n\n.desk-btn:focus-visible {\n  outline: 3px solid #ffea79;\n  outline-offset: 2px;\n  z-index: 2;\n}\n\n.desk-btn:hover {\n  filter: brightness(1.08);\n}\n\n.desk-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0 var(--color-shadow);\n}\n\n/* Empty Desk Theme */\n.desk-btn.vacant {\n  background-color: var(--color-desk-empty);\n  color: var(--color-wood-dark);\n}\n\n.desk-btn.vacant .desk-glyph {\n  font-size: 1.2rem;\n  line-height: 1;\n}\n\n.desk-btn.vacant .desk-pos {\n  font-size: 0.75rem;\n  font-weight: bold;\n  text-transform: uppercase;\n}\n\n.desk-btn.vacant .desk-status-tag {\n  font-size: 0.75rem;\n  border: 1px dashed var(--color-wood-dark);\n  padding: 2px 4px;\n  background: rgba(255, 255, 255, 0.25);\n}\n\n/* Occupied Desk Theme */\n.desk-btn.occupied {\n  background-color: var(--color-occupied);\n  color: var(--color-chalk);\n  border-color: var(--color-shadow);\n}\n\n.desk-btn.occupied .desk-glyph {\n  font-size: 1.2rem;\n  line-height: 1;\n}\n\n.desk-btn.occupied .desk-name {\n  font-weight: bold;\n  font-size: 0.85rem;\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  padding: 2px 2px;\n  background-color: var(--color-occupied-dark);\n  width: 95%;\n}\n\n.desk-btn.occupied .desk-action {\n  font-size: 0.7rem;\n  color: #ffd685;\n  text-decoration: underline;\n}\n\n/* Footer Info */\n.instructions {\n  text-align: center;\n  font-size: 0.85rem;\n  color: #b8abd9;\n  line-height: 1.4;\n}\n",
+      "description": "Pixel-art inspired retro styling, responsive grid layout, tactile button states, and accessibility rules."
+    },
+    {
+      "path": "script.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const TOTAL_DESKS = 12;\n  const ROWS = 3;\n  const COLS = 4;\n\n  // State: Array of 12 elements storing either student name string or null\n  const desks = Array.from({ length: TOTAL_DESKS }, () => null);\n\n  // DOM references\n  const deskGrid = document.getElementById('deskGrid');\n  const seatCounter = document.getElementById('seatCounter');\n  const studentNameInput = document.getElementById('studentNameInput');\n  const inputFeedback = document.getElementById('inputFeedback');\n\n  /**\n   * Returns the count of currently occupied seats.\n   */\n  function getOccupiedCount() {\n    return desks.filter(student => student !== null).length;\n  }\n\n  /**\n   * Updates the counter element and accessibility attributes.\n   */\n  function updateCounter() {\n    const filled = getOccupiedCount();\n    seatCounter.textContent = `${filled} / ${TOTAL_DESKS} seats filled`;\n  }\n\n  /**\n   * Helper to set feedback messages.\n   */\n  function setFeedback(message, isAlert = false) {\n    inputFeedback.textContent = message;\n    if (isAlert) {\n      inputFeedback.classList.add('alert');\n    } else {\n      inputFeedback.classList.remove('alert');\n    }\n  }\n\n  /**\n   * Render a single desk button element based on current state.\n   */\n  function renderDesk(index) {\n    const student = desks[index];\n    const deskBtn = deskGrid.children[index];\n    if (!deskBtn) return;\n\n    const row = Math.floor(index / COLS) + 1;\n    const col = (index % COLS) + 1;\n    const deskLabel = `R${row}C${col}`;\n\n    if (student === null) {\n      deskBtn.className = 'desk-btn vacant';\n      deskBtn.setAttribute('aria-label', `Desk row ${row}, column ${col}, Empty. Click to seat student.`);\n      deskBtn.innerHTML = `\n        <span class=\"desk-pos\">${deskLabel}</span>\n        <span class=\"desk-glyph\" aria-hidden=\"true\">&#9633;</span>\n        <span class=\"desk-status-tag\">EMPTY</span>\n      `;\n    } else {\n      deskBtn.className = 'desk-btn occupied';\n      deskBtn.setAttribute('aria-label', `Desk row ${row}, column ${col}, occupied by ${student}. Click to clear desk.`);\n      deskBtn.innerHTML = `\n        <span class=\"desk-glyph\" aria-hidden=\"true\">&#9632;</span>\n        <span class=\"desk-name\" title=\"${student}\">${student}</span>\n        <span class=\"desk-action\">CLEAR</span>\n      `;\n    }\n  }\n\n  /**\n   * Handles clicking or pressing Enter/Space on any desk.\n   */\n  function handleDeskClick(index) {\n    const currentOccupant = desks[index];\n    const row = Math.floor(index / COLS) + 1;\n    const col = (index % COLS) + 1;\n\n    if (currentOccupant !== null) {\n      // Clicking an occupied desk clears it\n      desks[index] = null;\n      renderDesk(index);\n      updateCounter();\n      setFeedback(`Cleared ${currentOccupant} from Desk R${row}C${col}.`);\n    } else {\n      // Clicking an empty desk seats the student from input\n      const name = studentNameInput.value.trim();\n      if (!name) {\n        setFeedback('Please type a student name first to seat them!', true);\n        studentNameInput.focus();\n        return;\n      }\n\n      desks[index] = name;\n      renderDesk(index);\n      updateCounter();\n      setFeedback(`Seated ${name} at Desk R${row}C${col}.`);\n      studentNameInput.value = '';\n      studentNameInput.focus();\n    }\n  }\n\n  /**\n   * Initialize the grid container with desk buttons and event listeners.\n   */\n  function initGrid() {\n    deskGrid.innerHTML = '';\n    for (let i = 0; i < TOTAL_DESKS; i++) {\n      const btn = document.createElement('button');\n      btn.type = 'button';\n      btn.className = 'desk-btn vacant';\n      btn.dataset.index = i;\n      btn.addEventListener('click', () => handleDeskClick(i));\n      deskGrid.appendChild(btn);\n      renderDesk(i);\n    }\n    updateCounter();\n    setFeedback('Type a name and choose an empty desk.');\n  }\n\n  initGrid();\n});\n",
+      "description": "State management for 12 desks, occupancy counter logic, student assignment/clearing events, and dynamic DOM rendering."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Classroom Seating Planner\n\nA retro pixel-art styled, offline single-page classroom seating planner featuring 3 rows by 4 desks (12 desks total).\n\n## Features\n\n- **12 Pixel Desks (3 &times; 4 Grid)**: Visualized classroom layout with teacher podium and student desks.\n- **Assign Students**: Type a student name into the labeled text field and click any vacant desk to seat them.\n- **Clear Desks**: Click any already-seated desk to remove the student and free the seat.\n- **Real-time Occupancy Counter**: Dynamically reports filled capacity (`X / 12 seats filled`).\n- **Full Keyboard Accessibility**: Every desk is a semantic `<button>` reachable via `Tab` and activated with `Enter` or `Space` with screen reader announcements (`aria-label`, `aria-live`).\n- **100% Offline & Pure Vanilla**: Zero external fonts, frameworks, libraries, images, or network dependencies.\n- **Responsive Design**: Clean pixel layout that scales nicely down to 360px viewports.\n\n## Getting Started\n\nOpen `index.html` directly in any modern web browser. No installation, server, or build step is required.\n",
+      "description": "Project overview, setup instructions, key features, and constraint compliance documentation."
+    }
+  ]
+}

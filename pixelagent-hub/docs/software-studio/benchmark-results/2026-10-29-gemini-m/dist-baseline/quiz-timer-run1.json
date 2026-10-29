@@ -1,0 +1,439 @@
+{
+  "caseId": "quiz-timer",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\baseline",
+  "managerTokens": 8922,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 94,
+  "reportedTokens": 50024,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:05:03.918Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:05:03.918Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:05:18.259Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Timed Quiz App"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:05:18.259Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:05:56.490Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:05:56.491Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:05:57.058Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:05:57.060Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "7332a65b-6839-467d-98ad-67bd34e160d3"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:06:31.584Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "7332a65b-6839-467d-98ad-67bd34e160d3",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:06:31.584Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "testPlanId": "7332a65b-6839-467d-98ad-67bd34e160d3",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:06:34.478Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Initial screen shows first question",
+        "passed": true,
+        "actual": "QUESTION 1 OF 5"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Initial timer shows 60s countdown start",
+        "passed": true,
+        "actual": "60s"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Initial score displays 0",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Correct answer updates live score to 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Answering advances to question 2",
+        "passed": true,
+        "actual": "QUESTION 2 OF 5"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Incorrect answer keeps score unchanged",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Answer all questions shows game over screen",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Answer all correctly displays final score 5 / 5",
+        "passed": true,
+        "actual": "5 / 5"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "name": "Play again button resets quiz to question 1",
+        "passed": true,
+        "actual": "QUESTION 1 OF 5"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:06:34.479Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "bb1dc1e6-4104-4d3a-a5e5-c1f73090b434",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T13:06:34.480Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial screen shows first question",
+        "actions": [],
+        "selector": "#question-counter",
+        "expected": "QUESTION 1 OF 5"
+      },
+      {
+        "name": "Initial timer shows 60s countdown start",
+        "actions": [],
+        "selector": "#timer-display",
+        "expected": "60s"
+      },
+      {
+        "name": "Initial score displays 0",
+        "actions": [],
+        "selector": "#score-display",
+        "expected": "0"
+      },
+      {
+        "name": "Correct answer updates live score to 1",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 0
+          }
+        ],
+        "selector": "#score-display",
+        "expected": "1"
+      },
+      {
+        "name": "Answering advances to question 2",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 0
+          }
+        ],
+        "selector": "#question-counter",
+        "expected": "QUESTION 2 OF 5"
+      },
+      {
+        "name": "Incorrect answer keeps score unchanged",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 1
+          }
+        ],
+        "selector": "#score-display",
+        "expected": "0"
+      },
+      {
+        "name": "Answer all questions shows game over screen",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 1
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 1
+          }
+        ],
+        "selector": "#game-over-screen",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Answer all correctly displays final score 5 / 5",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 1
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 1
+          }
+        ],
+        "selector": "#final-score-display",
+        "expected": "5 / 5"
+      },
+      {
+        "name": "Play again button resets quiz to question 1",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 1
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#options-grid button",
+            "nth": 1
+          },
+          {
+            "type": "click",
+            "selector": "#restart-btn"
+          }
+        ],
+        "selector": "#question-counter",
+        "expected": "QUESTION 1 OF 5"
+      }
+    ],
+    "limitations": [
+      "Full 60-second countdown expiration cannot be verified due to the 8000ms maximum wait limit per check."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13602,
+      "completion_tokens": 584,
+      "total_tokens": 14186
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Timed Quiz</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"quiz-container\" role=\"main\">\n    <header class=\"quiz-header\">\n      <h1 class=\"title\">PIXEL TRIVIA</h1>\n      <div class=\"status-bar\" role=\"region\" aria-label=\"Game Status\">\n        <div class=\"status-item\">\n          <span class=\"label\">TIME:</span>\n          <span id=\"timer-display\" class=\"value\" aria-live=\"polite\">60s</span>\n        </div>\n        <div class=\"status-item\">\n          <span class=\"label\">SCORE:</span>\n          <span id=\"score-display\" class=\"value\" aria-live=\"polite\">0</span>\n        </div>\n      </div>\n    </header>\n\n    <!-- Quiz Active Screen -->\n    <section id=\"quiz-screen\" class=\"card-panel\" aria-labelledby=\"question-text\">\n      <div class=\"question-meta\">\n        <span id=\"question-counter\" class=\"badge\">QUESTION 1 OF 5</span>\n      </div>\n      <h2 id=\"question-text\" class=\"question-text\">Loading question...</h2>\n      <div id=\"options-grid\" class=\"options-grid\" role=\"group\" aria-label=\"Answer options\">\n        <!-- Dynamic Options Injected by JavaScript -->\n      </div>\n    </section>\n\n    <!-- Game Over Screen -->\n    <section id=\"game-over-screen\" class=\"card-panel text-center\" hidden aria-labelledby=\"game-over-title\">\n      <h2 id=\"game-over-title\" class=\"game-over-title\">GAME OVER</h2>\n      <p id=\"finish-reason\" class=\"finish-reason\">Quiz Completed!</p>\n      <div class=\"final-score-box\">\n        <span class=\"final-label\">FINAL SCORE</span>\n        <span id=\"final-score-display\" class=\"final-score-value\">0 / 5</span>\n      </div>\n      <button id=\"restart-btn\" class=\"pixel-btn action-btn\" type=\"button\">PLAY AGAIN</button>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML file containing the pixel-themed quiz structure, live status headers, question cards, and game over screen."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Ensure hidden attribute is never overridden by display declarations */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #1a102f;\n  --color-panel: #2b1f4d;\n  --color-accent: #fcd34d;\n  --color-text: #f8fafc;\n  --color-btn: #3b82f6;\n  --color-btn-hover: #2563eb;\n  --color-btn-active: #1d4ed8;\n  --color-border: #0f0a1c;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--color-bg);\n  color: var(--color-text);\n  font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;\n  font-size: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 16px;\n  line-height: 1.5;\n  background-image: \n    linear-gradient(45deg, #150d27 25%, transparent 25%), \n    linear-gradient(-45deg, #150d27 25%, transparent 25%), \n    linear-gradient(45deg, transparent 75%, #150d27 75%), \n    linear-gradient(-45deg, transparent 75%, #150d27 75%);\n  background-size: 32px 32px;\n  background-position: 0 0, 0 16px, 16px -16px, -16px 0;\n}\n\n.quiz-container {\n  width: 100%;\n  max-width: 580px;\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n\n.quiz-header {\n  background-color: var(--color-panel);\n  border: 4px solid var(--color-border);\n  box-shadow: 6px 6px 0px var(--color-border);\n  padding: 16px;\n  text-align: center;\n}\n\n.title {\n  font-size: 1.75rem;\n  letter-spacing: 2px;\n  color: var(--color-accent);\n  text-shadow: 2px 2px 0px var(--color-border);\n  margin-bottom: 12px;\n}\n\n.status-bar {\n  display: flex;\n  justify-content: space-around;\n  background: var(--color-bg);\n  border: 3px solid var(--color-border);\n  padding: 8px 16px;\n  font-size: 1.1rem;\n  font-weight: bold;\n}\n\n.status-item {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n}\n\n.label {\n  color: var(--color-accent);\n}\n\n.value {\n  color: #fff;\n}\n\n.card-panel {\n  background-color: var(--color-panel);\n  border: 4px solid var(--color-border);\n  box-shadow: 6px 6px 0px var(--color-border);\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.question-meta {\n  display: flex;\n  justify-content: flex-start;\n}\n\n.badge {\n  background-color: var(--color-bg);\n  border: 2px solid var(--color-border);\n  color: var(--color-accent);\n  padding: 4px 10px;\n  font-size: 0.85rem;\n  font-weight: bold;\n}\n\n.question-text {\n  font-size: 1.25rem;\n  font-weight: 700;\n  line-height: 1.4;\n  min-height: 56px;\n}\n\n.options-grid {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 12px;\n}\n\n@media (min-width: 500px) {\n  .options-grid {\n    grid-template-columns: 1fr 1fr;\n  }\n}\n\n.pixel-btn {\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: bold;\n  color: #ffffff;\n  background-color: var(--color-btn);\n  border: 3px solid var(--color-border);\n  box-shadow: 4px 4px 0px var(--color-border);\n  padding: 14px 16px;\n  cursor: pointer;\n  text-align: left;\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  outline: none;\n  transition: none;\n  user-select: none;\n}\n\n.pixel-btn:hover {\n  background-color: var(--color-btn-hover);\n  transform: translate(-1px, -1px);\n  box-shadow: 5px 5px 0px var(--color-border);\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px dashed var(--color-accent);\n  outline-offset: 2px;\n}\n\n.pixel-btn:active {\n  transform: translate(3px, 3px);\n  box-shadow: 1px 1px 0px var(--color-border);\n  background-color: var(--color-btn-active);\n}\n\n.option-prefix {\n  background-color: rgba(0, 0, 0, 0.25);\n  padding: 2px 6px;\n  border: 1px solid var(--color-border);\n  font-size: 0.9rem;\n}\n\n.text-center {\n  text-align: center;\n  align-items: center;\n}\n\n.game-over-title {\n  font-size: 2rem;\n  color: var(--color-accent);\n  letter-spacing: 2px;\n}\n\n.finish-reason {\n  font-size: 1.1rem;\n  color: var(--color-text);\n}\n\n.final-score-box {\n  background: var(--color-bg);\n  border: 3px solid var(--color-border);\n  padding: 16px 32px;\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n  margin: 12px 0;\n}\n\n.final-label {\n  font-size: 0.9rem;\n  color: var(--color-accent);\n}\n\n.final-score-value {\n  font-size: 2.2rem;\n  font-weight: bold;\n}\n\n.action-btn {\n  text-align: center;\n  justify-content: center;\n  width: 100%;\n  max-width: 240px;\n  background-color: #10b981;\n}\n\n.action-btn:hover {\n  background-color: #059669;\n}\n\n.action-btn:active {\n  background-color: #047857;\n}",
+      "description": "Pixelated aesthetic styling featuring a cohesive 4-color palette, chunky borders, box shadows, and responsive controls."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const questions = [\n    {\n      question: 'Which HTML element holds JavaScript code?',\n      options: ['<script>', '<javascript>', '<js>', '<code>'],\n      answer: 0\n    },\n    {\n      question: 'What is the correct syntax for a CSS class selector?',\n      options: ['#class', '.class', '*class', '$class'],\n      answer: 1\n    },\n    {\n      question: 'Which method adds an event listener to an element?',\n      options: ['attachEvent()', 'listen()', 'addEventListener()', 'onEvent()'],\n      answer: 2\n    },\n    {\n      question: 'What value is returned by typeof null in JavaScript?',\n      options: ['\"undefined\"', '\"null\"', '\"object\"', '\"boolean\"'],\n      answer: 2\n    },\n    {\n      question: 'Which keyword creates a block-scoped variable in modern JS?',\n      options: ['var', 'let', 'global', 'set'],\n      answer: 1\n    }\n  ];\n\n  const TOTAL_TIME = 60;\n  let timeLeft = TOTAL_TIME;\n  let timerInterval = null;\n  let currentQuestionIndex = 0;\n  let score = 0;\n\n  const timerDisplay = document.getElementById('timer-display');\n  const scoreDisplay = document.getElementById('score-display');\n  const quizScreen = document.getElementById('quiz-screen');\n  const gameOverScreen = document.getElementById('game-over-screen');\n  const questionCounter = document.getElementById('question-counter');\n  const questionText = document.getElementById('question-text');\n  const optionsGrid = document.getElementById('options-grid');\n  const finalScoreDisplay = document.getElementById('final-score-display');\n  const finishReason = document.getElementById('finish-reason');\n  const restartBtn = document.getElementById('restart-btn');\n\n  function startTimer() {\n    clearInterval(timerInterval);\n    timeLeft = TOTAL_TIME;\n    timerDisplay.textContent = `${timeLeft}s`;\n\n    timerInterval = setInterval(() => {\n      timeLeft -= 1;\n      if (timeLeft <= 0) {\n        timeLeft = 0;\n        timerDisplay.textContent = '0s';\n        clearInterval(timerInterval);\n        endQuiz('Time Expired!');\n      } else {\n        timerDisplay.textContent = `${timeLeft}s`;\n      }\n    }, 1000);\n  }\n\n  function showQuestion(index) {\n    const currentQ = questions[index];\n    questionCounter.textContent = `QUESTION ${index + 1} OF ${questions.length}`;\n    questionText.textContent = currentQ.question;\n    optionsGrid.innerHTML = '';\n\n    const prefixes = ['A', 'B', 'C', 'D'];\n    currentQ.options.forEach((optText, i) => {\n      const btn = document.createElement('button');\n      btn.type = 'button';\n      btn.className = 'pixel-btn';\n      btn.setAttribute('data-index', i.toString());\n      \n      const prefixSpan = document.createElement('span');\n      prefixSpan.className = 'option-prefix';\n      prefixSpan.textContent = prefixes[i];\n\n      const textNode = document.createTextNode(optText);\n      btn.appendChild(prefixSpan);\n      btn.appendChild(textNode);\n\n      btn.addEventListener('click', () => handleAnswer(i));\n      optionsGrid.appendChild(btn);\n    });\n  }\n\n  function handleAnswer(selectedIndex) {\n    if (selectedIndex === questions[currentQuestionIndex].answer) {\n      score += 1;\n      scoreDisplay.textContent = score.toString();\n    }\n\n    currentQuestionIndex += 1;\n    if (currentQuestionIndex < questions.length) {\n      showQuestion(currentQuestionIndex);\n    } else {\n      endQuiz('All Questions Answered!');\n    }\n  }\n\n  function endQuiz(reason) {\n    clearInterval(timerInterval);\n    quizScreen.hidden = true;\n    gameOverScreen.hidden = false;\n    finishReason.textContent = reason;\n    finalScoreDisplay.textContent = `${score} / ${questions.length}`;\n    restartBtn.focus();\n  }\n\n  function restartQuiz() {\n    score = 0;\n    currentQuestionIndex = 0;\n    scoreDisplay.textContent = '0';\n    gameOverScreen.hidden = true;\n    quizScreen.hidden = false;\n    showQuestion(currentQuestionIndex);\n    startTimer();\n  }\n\n  restartBtn.addEventListener('click', restartQuiz);\n\n  // Initial boot\n  restartQuiz();\n});",
+      "description": "Quiz engine handling the 60-second timer countdown, live scoring, question cycling, and restart functionality."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Timed Quiz App\n\nA retro pixel-styled timed quiz game built with vanilla HTML, CSS, and plain JavaScript. Works completely offline with zero external assets, libraries, or network calls.\n\n## Features\n\n- **Timed Challenge:** 60-second total countdown for the entire quiz.\n- **5 Built-in Questions:** 4 answer choices per question.\n- **Live Score Tracking:** Real-time score counter updating immediately upon selection.\n- **Game Over Screen:** Displays final result when either 60 seconds lapse or all questions are completed.\n- **Play Again Button:** Instantly restarts score, timer, and question progression.\n- **Retro Aesthetics:** Chunky pixel borders, high-contrast palette, and responsive design supporting mobile viewports down to 360px.\n- **Full Accessibility:** Built with semantic tags, keyboard-navigable buttons (Tab, Enter, Space), and explicit `[hidden]` CSS override.\n\n## Running the Project\n\nSimply open `index.html` in any modern web browser. No web server, dependencies, or installation required.",
+      "description": "Project overview, features, and setup instructions."
+    }
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "caseId": "auction",
+  "run": 3,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\new",
+  "managerTokens": 8996,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 137,
+  "reportedTokens": 51407,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:31:34.298Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:31:34.299Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:31:58.651Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Auction App"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:31:58.651Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:32:47.086Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:32:47.086Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:32:48.094Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:32:48.096Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "2f961a04-f79b-4660-b156-f3ec706a03c8"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:33:43.353Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "2f961a04-f79b-4660-b156-f3ec706a03c8",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:33:43.354Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "testPlanId": "2f961a04-f79b-4660-b156-f3ec706a03c8",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Initial price is 10",
+        "passed": true,
+        "actual": "10"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Initial timer is 45s",
+        "passed": true,
+        "actual": "45s"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Bid +1 increments price to 11",
+        "passed": true,
+        "actual": "11"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Bid +5 increments price to 15",
+        "passed": true,
+        "actual": "15"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Timer counts down after advance",
+        "passed": true,
+        "actual": "40s"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Bid resets timer to 10s when under 10s",
+        "passed": true,
+        "actual": "10s"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Auction ends and displays Sold for N",
+        "passed": true,
+        "actual": "Sold for 10!"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Sold banner is visible when auction ends",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Bidding with increments displays final sold price",
+        "passed": true,
+        "actual": "Sold for 16!"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "name": "Bid button disabled after auction ends",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T13:33:46.697Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "d71c398f-0dcd-4f2b-877c-a5b2ae7c0ede",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T13:33:46.700Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial price is 10",
+        "actions": [],
+        "selector": "#currentPrice",
+        "expected": "10",
+        "assertion": "text"
+      },
+      {
+        "name": "Initial timer is 45s",
+        "actions": [],
+        "selector": "#timerDisplay",
+        "expected": "45s",
+        "assertion": "text"
+      },
+      {
+        "name": "Bid +1 increments price to 11",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#bidOneBtn"
+          }
+        ],
+        "selector": "#currentPrice",
+        "expected": "11",
+        "assertion": "text"
+      },
+      {
+        "name": "Bid +5 increments price to 15",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#bidFiveBtn"
+          }
+        ],
+        "selector": "#currentPrice",
+        "expected": "15",
+        "assertion": "text"
+      },
+      {
+        "name": "Timer counts down after advance",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 5000
+          }
+        ],
+        "selector": "#timerDisplay",
+        "expected": "40s",
+        "assertion": "text"
+      },
+      {
+        "name": "Bid resets timer to 10s when under 10s",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 38000
+          },
+          {
+            "type": "click",
+            "selector": "#bidOneBtn"
+          }
+        ],
+        "selector": "#timerDisplay",
+        "expected": "10s",
+        "assertion": "text"
+      },
+      {
+        "name": "Auction ends and displays Sold for N",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 46000
+          }
+        ],
+        "selector": "#soldText",
+        "expected": "^Sold for 10!$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Sold banner is visible when auction ends",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 46000
+          }
+        ],
+        "selector": "#statusMessage",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Bidding with increments displays final sold price",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#bidFiveBtn"
+          },
+          {
+            "type": "click",
+            "selector": "#bidOneBtn"
+          },
+          {
+            "type": "advance",
+            "ms": 46000
+          }
+        ],
+        "selector": "#soldText",
+        "expected": "^Sold for 16!$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Bid button disabled after auction ends",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 46000
+          }
+        ],
+        "selector": "#bidOneBtn",
+        "expected": "true",
+        "assertion": "disabled"
+      }
+    ],
+    "limitations": [
+      "Canvas pixel artwork rendering details cannot be directly asserted via DOM inspect"
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14120,
+      "completion_tokens": 452,
+      "total_tokens": 14572
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Auction</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"auction-container\">\n    <article class=\"auction-card\" role=\"region\" aria-labelledby=\"item-title\">\n      <header class=\"card-header\">\n        <div class=\"badge\">LIVE AUCTION</div>\n        <h1 id=\"item-title\" class=\"item-title\">Legendary Pixel Relic</h1>\n      </header>\n\n      <div class=\"item-preview\" aria-label=\"Pixel Relic visual illustration\">\n        <canvas id=\"itemCanvas\" width=\"128\" height=\"128\" aria-hidden=\"true\"></canvas>\n      </div>\n\n      <section class=\"stats-grid\" aria-live=\"polite\">\n        <div class=\"stat-box\">\n          <span class=\"stat-label\">Current Bid</span>\n          <span id=\"currentPrice\" class=\"stat-value price\">10</span>\n        </div>\n        <div class=\"stat-box\">\n          <span class=\"stat-label\">Time Left</span>\n          <span id=\"timerDisplay\" class=\"stat-value timer\">45s</span>\n        </div>\n      </section>\n\n      <div class=\"actions\" role=\"group\" aria-label=\"Bidding Controls\">\n        <button type=\"button\" id=\"bidOneBtn\" class=\"btn btn-primary\" aria-label=\"Increase bid by 1\">\n          Bid +1\n        </button>\n        <button type=\"button\" id=\"bidFiveBtn\" class=\"btn btn-primary\" aria-label=\"Increase bid by 5\">\n          Bid +5\n        </button>\n      </div>\n\n      <div id=\"statusMessage\" class=\"status-banner\" hidden aria-live=\"assertive\" role=\"status\">\n        <span id=\"soldText\"></span>\n      </div>\n\n      <footer class=\"card-footer\">\n        <p class=\"rules-text\">\n          Starts at 10. Bids in the last 10 seconds reset the timer back to 10 seconds.\n        </p>\n        <button type=\"button\" id=\"restartBtn\" class=\"btn btn-secondary\" hidden>\n          Restart Auction\n        </button>\n      </footer>\n    </article>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Root single-page application structure for the Pixel Auction game, including semantic HTML markup and accessibility attributes."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Hidden attribute safeguard */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #141124;\n  --color-card: #201a35;\n  --color-card-border: #3d325d;\n  --color-text: #f0edf9;\n  --color-muted: #9990b8;\n  --color-accent: #fcd34d;\n  --color-accent-hover: #fbbf24;\n  --color-primary: #7c3aed;\n  --color-primary-hover: #6d28d9;\n  --color-primary-active: #5b21b6;\n  --color-danger: #ef4444;\n  --color-success: #10b981;\n  --focus-ring: #60a5fa;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5;\n  color: var(--color-text);\n  background-color: var(--color-bg);\n  background-image:\n    radial-gradient(circle at 50% 20%, rgba(124, 58, 237, 0.15), transparent 60%),\n    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);\n  background-size: 100% 100%, 24px 24px, 24px 24px;\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 1.5rem 1rem;\n}\n\n.auction-container {\n  width: 100%;\n  max-width: 440px;\n  margin: 0 auto;\n}\n\n.auction-card {\n  background-color: var(--color-card);\n  border: 2px solid var(--color-card-border);\n  border-radius: 12px;\n  padding: 1.75rem;\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);\n  display: flex;\n  flex-direction: column;\n  gap: 1.25rem;\n}\n\n.card-header {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 0.5rem;\n}\n\n.badge {\n  font-size: 0.8rem;\n  font-weight: 700;\n  letter-spacing: 0.08em;\n  color: #000;\n  background-color: var(--color-accent);\n  padding: 0.2rem 0.65rem;\n  border-radius: 999px;\n  text-transform: uppercase;\n}\n\n.item-title {\n  font-size: 1.45rem;\n  font-weight: 700;\n  color: var(--color-text);\n}\n\n.item-preview {\n  background: rgba(0, 0, 0, 0.35);\n  border: 2px dashed var(--color-card-border);\n  border-radius: 8px;\n  padding: 1rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n#itemCanvas {\n  image-rendering: pixelated;\n  display: block;\n}\n\n.stats-grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n}\n\n.stat-box {\n  background: rgba(0, 0, 0, 0.25);\n  border: 1px solid var(--color-card-border);\n  border-radius: 8px;\n  padding: 0.75rem;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  gap: 0.25rem;\n}\n\n.stat-label {\n  font-size: 0.85rem;\n  color: var(--color-muted);\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n}\n\n.stat-value {\n  font-size: 1.6rem;\n  font-weight: 800;\n}\n\n.stat-value.price {\n  color: var(--color-accent);\n}\n\n.stat-value.timer {\n  color: var(--color-text);\n  transition: color 0.2s ease;\n}\n\n.stat-value.timer.warning {\n  color: var(--color-danger);\n  animation: pulse 1s infinite alternate;\n}\n\n@keyframes pulse {\n  0% { transform: scale(1); }\n  100% { transform: scale(1.05); }\n}\n\n.actions {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n}\n\n.btn {\n  font-family: inherit;\n  font-size: 1.05rem;\n  font-weight: 700;\n  padding: 0.75rem 1rem;\n  border: none;\n  border-radius: 8px;\n  cursor: pointer;\n  transition: background-color 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;\n  outline: none;\n  text-align: center;\n}\n\n.btn:focus-visible {\n  outline: 3px solid var(--focus-ring);\n  outline-offset: 2px;\n}\n\n.btn:disabled {\n  opacity: 0.45;\n  cursor: not-allowed;\n  transform: none;\n  box-shadow: none;\n}\n\n.btn-primary {\n  background-color: var(--color-primary);\n  color: #ffffff;\n  box-shadow: 0 4px 0 var(--color-primary-active);\n}\n\n.btn-primary:hover:not(:disabled) {\n  background-color: var(--color-primary-hover);\n}\n\n.btn-primary:active:not(:disabled) {\n  transform: translateY(3px);\n  box-shadow: 0 1px 0 var(--color-primary-active);\n}\n\n.btn-secondary {\n  background-color: #374151;\n  color: #f3f4f6;\n  width: 100%;\n  margin-top: 0.5rem;\n}\n\n.btn-secondary:hover:not(:disabled) {\n  background-color: #4b5563;\n}\n\n.status-banner {\n  background: rgba(16, 185, 129, 0.15);\n  border: 1px solid var(--color-success);\n  color: #a7f3d0;\n  border-radius: 8px;\n  padding: 0.85rem 1rem;\n  text-align: center;\n  font-weight: 700;\n  font-size: 1.25rem;\n}\n\n.card-footer {\n  border-top: 1px solid var(--color-card-border);\n  padding-top: 0.75rem;\n  text-align: center;\n}\n\n.rules-text {\n  font-size: 0.85rem;\n  color: var(--color-muted);\n  margin: 0;\n}\n\n@media (max-width: 360px) {\n  .auction-card {\n    padding: 1rem;\n  }\n  .stat-value {\n    font-size: 1.35rem;\n  }\n  .btn {\n    font-size: 0.95rem;\n    padding: 0.65rem 0.5rem;\n  }\n}\n",
+      "description": "Retro-themed responsive CSS layout with visual hierarchy, keyboard focus indicators, and state styling."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const START_PRICE = 10;\n  const INITIAL_COUNTDOWN = 45;\n  const RESET_THRESHOLD = 10;\n  const RESET_TARGET = 10;\n\n  let currentPrice = START_PRICE;\n  let timeLeft = INITIAL_COUNTDOWN;\n  let timerInterval = null;\n  let isAuctionOver = false;\n\n  const priceEl = document.getElementById('currentPrice');\n  const timerEl = document.getElementById('timerDisplay');\n  const bidOneBtn = document.getElementById('bidOneBtn');\n  const bidFiveBtn = document.getElementById('bidFiveBtn');\n  const statusMessage = document.getElementById('statusMessage');\n  const soldText = document.getElementById('soldText');\n  const restartBtn = document.getElementById('restartBtn');\n  const canvas = document.getElementById('itemCanvas');\n\n  function drawPixelArt() {\n    if (!canvas) return;\n    const ctx = canvas.getContext('2d');\n    const pixelGrid = [\n      [0, 0, 0, 1, 1, 1, 1, 0, 0, 0],\n      [0, 0, 1, 2, 2, 2, 2, 1, 0, 0],\n      [0, 1, 2, 3, 3, 3, 3, 2, 1, 0],\n      [1, 2, 3, 3, 4, 4, 3, 3, 2, 1],\n      [1, 2, 3, 4, 4, 4, 4, 3, 2, 1],\n      [1, 2, 3, 4, 4, 4, 4, 3, 2, 1],\n      [0, 1, 2, 3, 4, 4, 3, 2, 1, 0],\n      [0, 0, 1, 2, 3, 3, 2, 1, 0, 0],\n      [0, 0, 0, 1, 2, 2, 1, 0, 0, 0],\n      [0, 0, 0, 0, 1, 1, 0, 0, 0, 0]\n    ];\n\n    const palette = {\n      0: null,\n      1: '#f59e0b',\n      2: '#fbbf24',\n      3: '#fde68a',\n      4: '#ffffff'\n    };\n\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    const pixelSize = Math.floor(canvas.width / 10);\n\n    for (let r = 0; r < 10; r++) {\n      for (let c = 0; c < 10; c++) {\n        const colorCode = pixelGrid[r][c];\n        if (colorCode && palette[colorCode]) {\n          ctx.fillStyle = palette[colorCode];\n          ctx.fillRect(c * pixelSize, r * pixelSize, pixelSize, pixelSize);\n        }\n      }\n    }\n  }\n\n  function updateDisplays() {\n    priceEl.textContent = currentPrice;\n    timerEl.textContent = `${timeLeft}s`;\n\n    if (timeLeft <= RESET_THRESHOLD && !isAuctionOver) {\n      timerEl.classList.add('warning');\n    } else {\n      timerEl.classList.remove('warning');\n    }\n  }\n\n  function handleBid(amount) {\n    if (isAuctionOver) return;\n\n    currentPrice += amount;\n\n    if (timeLeft <= RESET_THRESHOLD) {\n      timeLeft = RESET_TARGET;\n    }\n\n    updateDisplays();\n  }\n\n  function endAuction() {\n    isAuctionOver = true;\n    clearInterval(timerInterval);\n    timerInterval = null;\n    timeLeft = 0;\n    updateDisplays();\n\n    bidOneBtn.disabled = true;\n    bidFiveBtn.disabled = true;\n\n    soldText.textContent = `Sold for ${currentPrice}!`;\n    statusMessage.removeAttribute('hidden');\n    restartBtn.removeAttribute('hidden');\n  }\n\n  function startTimer() {\n    if (timerInterval) clearInterval(timerInterval);\n    timerInterval = setInterval(() => {\n      if (timeLeft > 1) {\n        timeLeft -= 1;\n        updateDisplays();\n      } else {\n        endAuction();\n      }\n    }, 1000);\n  }\n\n  function initAuction() {\n    currentPrice = START_PRICE;\n    timeLeft = INITIAL_COUNTDOWN;\n    isAuctionOver = false;\n\n    bidOneBtn.disabled = false;\n    bidFiveBtn.disabled = false;\n    statusMessage.setAttribute('hidden', '');\n    restartBtn.setAttribute('hidden', '');\n    soldText.textContent = '';\n\n    updateDisplays();\n    startTimer();\n  }\n\n  bidOneBtn.addEventListener('click', () => handleBid(1));\n  bidFiveBtn.addEventListener('click', () => handleBid(5));\n  restartBtn.addEventListener('click', initAuction);\n\n  drawPixelArt();\n  initAuction();\n});\n",
+      "description": "Vanilla JavaScript handling the pixel graphic rendering, state machine, countdown logic, resets under 10 seconds, and sold state announcements."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Auction App\n\nAn offline, zero-dependency browser game representing a real-time pixel relic auction.\n\n## Features\n\n- **Starting Price:** Begins at 10.\n- **Interactive Bidding:** 'Bid +1' and 'Bid +5' buttons increment the price accordingly.\n- **Dynamic Timer:** 45-second countdown timer.\n- **Sniping Prevention / Reset Logic:** If a bid is placed within the final 10 seconds (timer <= 10s), the timer resets back to 10 seconds.\n- **End Condition:** Once the countdown reaches 0 seconds, controls are disabled and the status displays `Sold for N` (where N is the final amount).\n- **Offline & Pure Vanilla:** Built without external fonts, CDNs, packages, or network calls.\n- **Responsive & Accessible:** Fully usable on mobile screens down to 360px wide, with visible focus rings and ARIA live regions.\n\n## Getting Started\n\nOpen `index.html` in any modern web browser.\n",
+      "description": "Project documentation covering features, countdown reset behavior, and how to run offline."
+    }
+  ]
+}

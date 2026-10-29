@@ -1,0 +1,431 @@
+{
+  "caseId": "roman",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\baseline",
+  "managerTokens": 8896,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 68,
+  "reportedTokens": 35268,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:55:01.134Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:55:01.135Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:55:13.633Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Roman Numeral Converter"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:55:13.633Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:55:47.902Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:55:47.902Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:55:48.405Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:55:48.405Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "5c12e7cb-f7ec-4ebb-8c47-ce39b3491c37"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:56:03.847Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "5c12e7cb-f7ec-4ebb-8c47-ce39b3491c37",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:56:03.847Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "testPlanId": "5c12e7cb-f7ec-4ebb-8c47-ce39b3491c37",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Initial ready status text",
+        "passed": true,
+        "actual": "Ready"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Decimal 1994 converts to MCMXCIV in roman input",
+        "passed": true,
+        "actual": "MCMXCIV"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Decimal 1994 shows formatted live status",
+        "passed": true,
+        "actual": "1994 = MCMXCIV"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Roman MCMXCIV converts back to 1994 in number input",
+        "passed": true,
+        "actual": "1994"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Roman MCMXCIV shows formatted live status",
+        "passed": true,
+        "actual": "MCMXCIV = 1994"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Decimal over 3999 displays Not valid",
+        "passed": true,
+        "actual": "Not valid"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Decimal 0 displays Not valid",
+        "passed": true,
+        "actual": "Not valid"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Invalid Roman string displays Not valid",
+        "passed": true,
+        "actual": "Not valid"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Clear button resets status back to Ready",
+        "passed": true,
+        "actual": "Ready"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:56:07.041Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "name": "Clear button empties roman input",
+        "passed": true,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:56:07.042Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "2a780bb1-4e90-4677-bb93-e31a8aa9b488",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T16:56:07.044Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial ready status text",
+        "actions": [],
+        "selector": "#status-text",
+        "expected": "Ready",
+        "assertion": "text"
+      },
+      {
+        "name": "Decimal 1994 converts to MCMXCIV in roman input",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "1994"
+          }
+        ],
+        "selector": "#roman-input",
+        "expected": "MCMXCIV",
+        "assertion": "attribute",
+        "attribute": "value"
+      },
+      {
+        "name": "Decimal 1994 shows formatted live status",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "1994"
+          }
+        ],
+        "selector": "#status-text",
+        "expected": "1994 = MCMXCIV",
+        "assertion": "text"
+      },
+      {
+        "name": "Roman MCMXCIV converts back to 1994 in number input",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#roman-input",
+            "value": "MCMXCIV"
+          }
+        ],
+        "selector": "#number-input",
+        "expected": "1994",
+        "assertion": "attribute",
+        "attribute": "value"
+      },
+      {
+        "name": "Roman MCMXCIV shows formatted live status",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#roman-input",
+            "value": "MCMXCIV"
+          }
+        ],
+        "selector": "#status-text",
+        "expected": "MCMXCIV = 1994",
+        "assertion": "text"
+      },
+      {
+        "name": "Decimal over 3999 displays Not valid",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "4000"
+          }
+        ],
+        "selector": "#status-text",
+        "expected": "Not valid",
+        "assertion": "text"
+      },
+      {
+        "name": "Decimal 0 displays Not valid",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "0"
+          }
+        ],
+        "selector": "#status-text",
+        "expected": "Not valid",
+        "assertion": "text"
+      },
+      {
+        "name": "Invalid Roman string displays Not valid",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#roman-input",
+            "value": "IIII"
+          }
+        ],
+        "selector": "#status-text",
+        "expected": "Not valid",
+        "assertion": "text"
+      },
+      {
+        "name": "Clear button resets status back to Ready",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "50"
+          },
+          {
+            "type": "click",
+            "selector": "#clear-btn"
+          }
+        ],
+        "selector": "#status-text",
+        "expected": "Ready",
+        "assertion": "text"
+      },
+      {
+        "name": "Clear button empties roman input",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#number-input",
+            "value": "50"
+          },
+          {
+            "type": "click",
+            "selector": "#clear-btn"
+          }
+        ],
+        "selector": "#roman-input",
+        "expected": "",
+        "assertion": "attribute",
+        "attribute": "value"
+      }
+    ],
+    "limitations": [
+      "Cannot test native audio or OS-level screen reader announcements for aria-live.",
+      "Cannot verify retro pixel font rendering aesthetics or GPU-accelerated styling."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13202,
+      "completion_tokens": 548,
+      "total_tokens": 13750
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Roman Numeral Converter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"container\">\n    <div class=\"card\">\n      <header class=\"header\">\n        <h1 class=\"title\">PIXEL ROMAN CONVERTER</h1>\n        <p class=\"subtitle\">Convert numbers between 1 and 3999 live</p>\n      </header>\n\n      <section class=\"converter-section\">\n        <div class=\"field-group\">\n          <label for=\"number-input\" class=\"field-label\">Decimal Number (1 - 3999)</label>\n          <input \n            type=\"number\" \n            id=\"number-input\" \n            class=\"pixel-input\" \n            min=\"1\" \n            max=\"3999\" \n            placeholder=\"e.g. 1994\" \n            autocomplete=\"off\"\n          >\n        </div>\n\n        <div class=\"swap-indicator\" aria-hidden=\"true\">&#x21C5;</div>\n\n        <div class=\"field-group\">\n          <label for=\"roman-input\" class=\"field-label\">Roman Numeral (I - MMMCMXCIX)</label>\n          <input \n            type=\"text\" \n            id=\"roman-input\" \n            class=\"pixel-input uppercase\" \n            placeholder=\"e.g. MCMXCIV\" \n            autocomplete=\"off\" \n            spellcheck=\"false\"\n          >\n        </div>\n\n        <div class=\"status-box\" role=\"status\" aria-live=\"polite\">\n          <span id=\"status-text\" class=\"status-text\">Ready</span>\n        </div>\n\n        <div class=\"button-group\">\n          <button type=\"button\" id=\"clear-btn\" class=\"pixel-btn\">Clear</button>\n        </div>\n      </section>\n    </div>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Semantic HTML layout providing accessible labeled inputs for Arabic and Roman numerals, status feedback region, and buttons."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Pixel Roman Converter - 4-color retro palette:\n   - Deep Slate: #1a1c23\n   - Parchment Gray: #f0f2ea\n   - Pixel Gold: #e2b714\n   - Pixel Ruby (Error): #d64045\n*/\n\n[hidden] {\n  display: none !important;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: #1a1c23;\n  background-image: \n    linear-gradient(#242733 1px, transparent 1px),\n    linear-gradient(90deg, #242733 1px, transparent 1px);\n  background-size: 20px 20px;\n  color: #f0f2ea;\n  font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;\n  font-size: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 16px;\n}\n\n.container {\n  width: 100%;\n  max-width: 480px;\n}\n\n.card {\n  background-color: #242733;\n  border: 4px solid #f0f2ea;\n  box-shadow: 6px 6px 0px 0px #000000;\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.header {\n  text-align: center;\n  border-bottom: 3px dashed #3a3f52;\n  padding-bottom: 16px;\n}\n\n.title {\n  font-size: 1.35rem;\n  letter-spacing: 1px;\n  color: #e2b714;\n  text-transform: uppercase;\n  line-height: 1.3;\n}\n\n.subtitle {\n  margin-top: 6px;\n  font-size: 0.85rem;\n  color: #a4acb9;\n}\n\n.converter-section {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n\n.field-group {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n}\n\n.field-label {\n  font-size: 0.9rem;\n  font-weight: bold;\n  color: #f0f2ea;\n  letter-spacing: 0.5px;\n}\n\n.pixel-input {\n  background-color: #1a1c23;\n  color: #f0f2ea;\n  font-family: inherit;\n  font-size: 1.15rem;\n  padding: 12px;\n  border: 3px solid #f0f2ea;\n  box-shadow: 3px 3px 0px 0px #000000;\n  outline: none;\n  width: 100%;\n  transition: border-color 0.1s, box-shadow 0.1s;\n}\n\n.pixel-input.uppercase {\n  text-transform: uppercase;\n}\n\n.pixel-input:hover {\n  border-color: #e2b714;\n}\n\n.pixel-input:focus {\n  border-color: #e2b714;\n  box-shadow: 3px 3px 0px 0px #e2b714;\n}\n\n.swap-indicator {\n  text-align: center;\n  font-size: 1.5rem;\n  color: #e2b714;\n  user-select: none;\n  line-height: 1;\n}\n\n.status-box {\n  min-height: 48px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: #1a1c23;\n  border: 2px solid #3a3f52;\n  padding: 8px 12px;\n  text-align: center;\n}\n\n.status-text {\n  font-weight: bold;\n  letter-spacing: 1px;\n  font-size: 0.95rem;\n  color: #a4acb9;\n}\n\n.status-text.error {\n  color: #d64045;\n}\n\n.status-text.valid {\n  color: #e2b714;\n}\n\n.button-group {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.pixel-btn {\n  background-color: #e2b714;\n  color: #1a1c23;\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: bold;\n  border: 3px solid #f0f2ea;\n  box-shadow: 3px 3px 0px 0px #000000;\n  padding: 10px 18px;\n  cursor: pointer;\n  outline: none;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n}\n\n.pixel-btn:hover {\n  background-color: #f7ce3e;\n}\n\n.pixel-btn:focus-visible {\n  outline: 2px solid #f0f2ea;\n  outline-offset: 2px;\n}\n\n.pixel-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0px 0px #000000;\n}\n\n@media (max-width: 400px) {\n  .card {\n    padding: 16px;\n  }\n  .title {\n    font-size: 1.15rem;\n  }\n}",
+      "description": "Pixel retro aesthetic styles with 4-color palette, chunky borders, box shadows, focus states, responsive rules, and display overrides protection."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const numberInput = document.getElementById('number-input');\n  const romanInput = document.getElementById('roman-input');\n  const statusText = document.getElementById('status-text');\n  const clearBtn = document.getElementById('clear-btn');\n\n  const ROMAN_MAP = [\n    { value: 1000, symbol: 'M' },\n    { value: 900, symbol: 'CM' },\n    { value: 500, symbol: 'D' },\n    { value: 400, symbol: 'CD' },\n    { value: 100, symbol: 'C' },\n    { value: 90, symbol: 'XC' },\n    { value: 50, symbol: 'L' },\n    { value: 40, symbol: 'XL' },\n    { value: 10, symbol: 'X' },\n    { value: 9, symbol: 'IX' },\n    { value: 5, symbol: 'V' },\n    { value: 4, symbol: 'IV' },\n    { value: 1, symbol: 'I' }\n  ];\n\n  // Strict standard Roman numeral syntax pattern for values 1 to 3999\n  const ROMAN_REGEX = /^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/;\n\n  let isUpdating = false;\n\n  function setStatus(message, type) {\n    statusText.textContent = message;\n    statusText.className = 'status-text' + (type ? ' ' + type : '');\n  }\n\n  function toRoman(num) {\n    if (!Number.isInteger(num) || num < 1 || num > 3999) {\n      return null;\n    }\n    let result = '';\n    let remaining = num;\n    for (let i = 0; i < ROMAN_MAP.length; i++) {\n      while (remaining >= ROMAN_MAP[i].value) {\n        result += ROMAN_MAP[i].symbol;\n        remaining -= ROMAN_MAP[i].value;\n      }\n    }\n    return result;\n  }\n\n  function fromRoman(str) {\n    const cleanStr = str.trim().toUpperCase();\n    if (!cleanStr || !ROMAN_REGEX.test(cleanStr)) {\n      return null;\n    }\n\n    let sum = 0;\n    let i = 0;\n    while (i < cleanStr.length) {\n      const twoChar = cleanStr.substring(i, i + 2);\n      const matchedTwo = ROMAN_MAP.find(entry => entry.symbol === twoChar);\n      if (matchedTwo) {\n        sum += matchedTwo.value;\n        i += 2;\n        continue;\n      }\n\n      const oneChar = cleanStr.substring(i, i + 1);\n      const matchedOne = ROMAN_MAP.find(entry => entry.symbol === oneChar);\n      if (matchedOne) {\n        sum += matchedOne.value;\n        i += 1;\n        continue;\n      }\n\n      return null;\n    }\n\n    if (sum < 1 || sum > 3999) {\n      return null;\n    }\n\n    // Verify canonical representation (e.g. rejects improper duplicate combinations)\n    if (toRoman(sum) !== cleanStr) {\n      return null;\n    }\n\n    return sum;\n  }\n\n  numberInput.addEventListener('input', () => {\n    if (isUpdating) return;\n    isUpdating = true;\n\n    const rawValue = numberInput.value.trim();\n    if (rawValue === '') {\n      romanInput.value = '';\n      setStatus('Ready', '');\n      isUpdating = false;\n      return;\n    }\n\n    const num = Number(rawValue);\n    if (Number.isInteger(num) && num >= 1 && num <= 3999) {\n      const roman = toRoman(num);\n      romanInput.value = roman;\n      setStatus(num + ' = ' + roman, 'valid');\n    } else {\n      romanInput.value = '';\n      setStatus('Not valid', 'error');\n    }\n\n    isUpdating = false;\n  });\n\n  romanInput.addEventListener('input', () => {\n    if (isUpdating) return;\n    isUpdating = true;\n\n    const rawRoman = romanInput.value.trim().toUpperCase();\n    if (rawRoman === '') {\n      numberInput.value = '';\n      setStatus('Ready', '');\n      isUpdating = false;\n      return;\n    }\n\n    const num = fromRoman(rawRoman);\n    if (num !== null) {\n      numberInput.value = num;\n      setStatus(rawRoman + ' = ' + num, 'valid');\n    } else {\n      numberInput.value = '';\n      setStatus('Not valid', 'error');\n    }\n\n    isUpdating = false;\n  });\n\n  clearBtn.addEventListener('click', () => {\n    numberInput.value = '';\n    romanInput.value = '';\n    setStatus('Ready', '');\n    numberInput.focus();\n  });\n});",
+      "description": "Bidirectional conversion algorithms between integer and canonical Roman numerals with strict validation, loop guard, and event listeners."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Roman Numeral Converter\n\nAn offline, responsive browser application for converting numbers (1 to 3999) to Roman numerals and back in real time.\n\n## Features\n\n- **Live Bidirectional Conversion**: Typing in the integer box computes Roman numerals immediately, and vice versa.\n- **Strict Validation**: Displays `'Not valid'` whenever input is out of the 1–3999 range or contains invalid/non-standard Roman numeral syntax.\n- **Retro Pixel UI**: Styled with a cohesive retro pixel theme, crisp shadows, and responsive layout scaling down to 360px.\n- **Accessibility**: Includes explicitly associated labels, keyboard focus highlights, and `aria-live` status announcements.\n- **Zero External Dependencies**: Works purely with vanilla HTML, CSS, and JavaScript.\n\n## Running the Project\n\nOpen `index.html` directly in any modern web browser.",
+      "description": "Project documentation outlining functionality, validation rules, design, and execution instructions."
+    }
+  ]
+}

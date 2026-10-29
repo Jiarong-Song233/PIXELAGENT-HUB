@@ -1,4 +1,4 @@
-export type BrowserCheck = { name: string; trace?: string; actions: ({ type: 'click'; selector: string; nth?: number } | { type: 'input'; selector: string; nth?: number; value: string } | { type: 'key'; selector: string; nth?: number; key: string } | { type: 'wait'; ms: number })[]; selector: string; nth?: number; expected: string; assertion?: 'text' | 'matches' | 'disabled' | 'visible' | 'count' | 'attribute' | 'changed' | 'unchanged' | 'stable'; attribute?: string };
+export type BrowserCheck = { name: string; trace?: string; actions: ({ type: 'click'; selector: string; nth?: number } | { type: 'input'; selector: string; nth?: number; value: string } | { type: 'key'; selector: string; nth?: number; key: string } | { type: 'wait'; ms: number } | { type: 'advance'; ms: number })[]; selector: string; nth?: number; expected: string; assertion?: 'text' | 'matches' | 'disabled' | 'visible' | 'count' | 'attribute' | 'changed' | 'unchanged' | 'stable'; attribute?: string };
 export type BrowserCheckResult = { name: string; status: 'passed' | 'failed'; actual: string; error?: string };
 
 // This function is serialized into the sandbox. Keep all helpers local; no eval or model code.
@@ -37,6 +37,11 @@ export async function runDOMChecks(document: Document, checks: BrowserCheck[], e
       let expected = baseline ? check.attribute ? readAttribute(baseline, check.attribute) : collapse(baseline.innerText ?? baseline.textContent ?? '') : assertion === 'text' ? collapse(check.expected) : check.expected;
       for (const action of check.actions) {
         if (action.type === 'wait') { await new Promise((resolve) => setTimeout(resolve, action.ms)); continue; }
+        if (action.type === 'advance') {
+          const clock = (document.defaultView as (Window & { __studioClock?: { runFor(ms: number): Promise<void> } }) | null)?.__studioClock;
+          if (!clock) throw new Error('advance needs the virtual clock');
+          await clock.runFor(action.ms); continue;
+        }
         const target = element(action.selector, action.nth);
         if (action.type === 'click') target.click();
         else if (action.type === 'input') {

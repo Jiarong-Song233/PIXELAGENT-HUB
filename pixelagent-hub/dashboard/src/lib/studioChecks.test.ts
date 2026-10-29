@@ -394,3 +394,15 @@ it('inputs replace contenteditable text and fire input, change and blur, but rej
   expect((await runDOMChecks(document, [check]))[0]).toMatchObject({ status: 'failed', error: 'Input action requires an input, textarea, select or contenteditable element' });
   expect(events).toEqual([]);
 });
+
+
+it('requires the clock for advance and calls it before the assertion', async () => {
+  const output = { textContent: 'Playing' };
+  const clock = { runFor: vi.fn(async () => { output.textContent = 'Game over'; }) };
+  const document = { defaultView: {}, querySelectorAll: () => [output] } as unknown as Document;
+  const check = { name: 'Round', actions: [{ type: 'advance' as const, ms: 31000 }], selector: '#status', expected: 'Game over' };
+  expect((await runDOMChecks(document, [check]))[0].error).toContain('advance needs the virtual clock');
+  Object.assign(document.defaultView!, { __studioClock: clock });
+  expect((await runDOMChecks(document, [check]))[0].status).toBe('passed');
+  expect(clock.runFor).toHaveBeenCalledWith(31000);
+});

@@ -1,0 +1,468 @@
+{
+  "caseId": "unit-shelf",
+  "run": 1,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\new",
+  "managerTokens": 8926,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 106,
+  "reportedTokens": 37867,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:45:56.671Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:45:56.672Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:46:21.784Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Bookshelf"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:46:21.784Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:47:13.746Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:47:13.746Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:47:14.444Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:47:14.445Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "4027c687-b249-4c99-8805-c6357dad10a6"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:47:36.093Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "4027c687-b249-4c99-8805-c6357dad10a6",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:47:36.094Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "testPlanId": "4027c687-b249-4c99-8805-c6357dad10a6",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Initial shelf renders 8 book cards",
+        "passed": true,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Initial sort by title ascending shows 1984 first",
+        "passed": true,
+        "actual": "1984"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Sort by title descending shows The Hobbit first",
+        "passed": true,
+        "actual": "The Hobbit"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Sort by author ascending shows Bram Stoker first",
+        "passed": true,
+        "actual": "Bram Stoker"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Sort by year ascending shows Pride and Prejudice (1813) first",
+        "passed": true,
+        "actual": "1813"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Sort by year descending shows 1984 (1949) first",
+        "passed": true,
+        "actual": "1949"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Search filter by title matching single book",
+        "passed": true,
+        "actual": "Frankenstein"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Search filter by author matching Herman Melville",
+        "passed": true,
+        "actual": "Herman Melville"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Search with no match displays no-results message",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "name": "Count indicator reflects filtered count",
+        "passed": true,
+        "actual": "Showing 1 of 8 books"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T13:47:39.311Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "7aa616ab-f338-41aa-b78c-53ec1ad4817f",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T13:47:39.315Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial shelf renders 8 book cards",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": ""
+          },
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "title"
+          }
+        ],
+        "selector": ".book-card",
+        "expected": "8",
+        "assertion": "count"
+      },
+      {
+        "name": "Initial sort by title ascending shows 1984 first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": ""
+          },
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "title"
+          }
+        ],
+        "selector": ".book-title",
+        "nth": 0,
+        "expected": "1984",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort by title descending shows The Hobbit first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": ""
+          },
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "title"
+          },
+          {
+            "type": "click",
+            "selector": "#direction-toggle"
+          }
+        ],
+        "selector": ".book-title",
+        "nth": 0,
+        "expected": "The Hobbit",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort by author ascending shows Bram Stoker first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": ""
+          },
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "author"
+          }
+        ],
+        "selector": ".book-author",
+        "nth": 0,
+        "expected": "Bram Stoker",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort by year ascending shows Pride and Prejudice (1813) first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": ""
+          },
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "year"
+          }
+        ],
+        "selector": ".book-year",
+        "nth": 0,
+        "expected": "1813",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort by year descending shows 1984 (1949) first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": ""
+          },
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "year"
+          },
+          {
+            "type": "click",
+            "selector": "#direction-toggle"
+          }
+        ],
+        "selector": ".book-year",
+        "nth": 0,
+        "expected": "1949",
+        "assertion": "text"
+      },
+      {
+        "name": "Search filter by title matching single book",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Frankenstein"
+          }
+        ],
+        "selector": ".book-title",
+        "nth": 0,
+        "expected": "Frankenstein",
+        "assertion": "text"
+      },
+      {
+        "name": "Search filter by author matching Herman Melville",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Melville"
+          }
+        ],
+        "selector": ".book-author",
+        "nth": 0,
+        "expected": "Herman Melville",
+        "assertion": "text"
+      },
+      {
+        "name": "Search with no match displays no-results message",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Nonexistent XYZ"
+          }
+        ],
+        "selector": "#no-results",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Count indicator reflects filtered count",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Tolkien"
+          }
+        ],
+        "selector": "#count-indicator",
+        "expected": "Showing 1 of 8 books",
+        "assertion": "text"
+      }
+    ],
+    "limitations": [],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14471,
+      "completion_tokens": 636,
+      "total_tokens": 15107
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Bookshelf</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <header class=\"shelf-header\">\n      <h1 class=\"pixel-title\">Pixel Bookshelf</h1>\n      <p class=\"pixel-subtitle\">8 curated classics on a retro pixel shelf</p>\n    </header>\n\n    <section class=\"controls-card\" aria-label=\"Book catalog controls\">\n      <div class=\"control-group\">\n        <label for=\"search-input\" class=\"control-label\">Filter Books</label>\n        <input \n          type=\"text\" \n          id=\"search-input\" \n          class=\"pixel-input\" \n          placeholder=\"Search title or author...\" \n          autocomplete=\"off\"\n        >\n      </div>\n\n      <div class=\"control-group-inline\">\n        <div class=\"control-subgroup\">\n          <label for=\"sort-select\" class=\"control-label\">Sort By</label>\n          <select id=\"sort-select\" class=\"pixel-select\">\n            <option value=\"title\">Title</option>\n            <option value=\"author\">Author</option>\n            <option value=\"year\">Year</option>\n          </select>\n        </div>\n\n        <div class=\"control-subgroup btn-wrapper\">\n          <span class=\"control-label\" id=\"dir-label\">Direction</span>\n          <button \n            type=\"button\" \n            id=\"direction-toggle\" \n            class=\"pixel-btn\" \n            aria-labelledby=\"dir-label direction-toggle\"\n            aria-pressed=\"false\"\n          >\n            <span id=\"direction-label\">Ascending (A–Z)</span>\n          </button>\n        </div>\n      </div>\n    </section>\n\n    <section class=\"shelf-wrapper\" aria-label=\"Pixel bookshelf display\">\n      <div class=\"shelf-board\" id=\"bookshelf\" role=\"region\" aria-live=\"polite\">\n        <!-- Books rendered here -->\n      </div>\n      <div class=\"shelf-plank\" aria-hidden=\"true\"></div>\n      <p id=\"no-results\" class=\"no-results-msg\" hidden>No matching books found.</p>\n    </section>\n\n    <footer class=\"shelf-footer\">\n      <p id=\"count-indicator\" class=\"pixel-counter\">Showing 8 of 8 books</p>\n    </footer>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML file containing the semantic layout, controls, bookshelf display, and script references."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Enforce hidden attribute */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #222034;\n  --color-panel: #45283c;\n  --color-panel-border: #693130;\n  --color-accent: #f4b41b;\n  --color-accent-dark: #b86f18;\n  --color-wood-top: #8f563b;\n  --color-wood-body: #663931;\n  --color-wood-shadow: #3b1d22;\n  --color-text-main: #fbf5ef;\n  --color-text-muted: #d9a066;\n  --color-focus: #76428a;\n  --pixel-border: 4px solid #140c1c;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--color-bg);\n  color: var(--color-text-main);\n  font-family: \"Courier New\", Courier, monospace, monospace;\n  font-size: 16px;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 24px 16px;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 840px;\n  background-color: var(--color-panel);\n  border: var(--pixel-border);\n  box-shadow: 8px 8px 0px #140c1c;\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.shelf-header {\n  text-align: center;\n}\n\n.pixel-title {\n  font-size: 28px;\n  font-weight: 800;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  color: var(--color-accent);\n  text-shadow: 3px 3px 0px #140c1c;\n  margin-bottom: 6px;\n}\n\n.pixel-subtitle {\n  color: var(--color-text-muted);\n  font-size: 16px;\n}\n\n.controls-card {\n  background: #321b2c;\n  border: 3px solid #140c1c;\n  padding: 16px;\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  box-shadow: inset 3px 3px 0px rgba(0,0,0,0.4);\n}\n\n.control-group {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n}\n\n.control-group-inline {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 16px;\n  align-items: flex-end;\n}\n\n.control-subgroup {\n  flex: 1;\n  min-width: 160px;\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n}\n\n.btn-wrapper {\n  min-width: 200px;\n}\n\n.control-label {\n  font-size: 16px;\n  font-weight: bold;\n  color: var(--color-accent);\n  text-transform: uppercase;\n}\n\n.pixel-input,\n.pixel-select,\n.pixel-btn {\n  font-family: inherit;\n  font-size: 16px;\n  background-color: var(--color-text-main);\n  color: #140c1c;\n  border: 3px solid #140c1c;\n  border-radius: 0;\n  padding: 10px 12px;\n  outline: none;\n  box-shadow: 3px 3px 0px #140c1c;\n  width: 100%;\n}\n\n.pixel-input:focus,\n.pixel-select:focus,\n.pixel-btn:focus {\n  outline: 3px dashed var(--color-accent);\n  background-color: #fff9e6;\n}\n\n.pixel-btn {\n  cursor: pointer;\n  background-color: var(--color-accent);\n  font-weight: bold;\n  text-transform: uppercase;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: none;\n}\n\n.pixel-btn:hover {\n  background-color: #ffd15c;\n}\n\n.pixel-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0px #140c1c;\n}\n\n.shelf-wrapper {\n  margin-top: 8px;\n  display: flex;\n  flex-direction: column;\n}\n\n.shelf-board {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));\n  gap: 16px;\n  align-items: end;\n  min-height: 220px;\n  padding: 12px 12px 0 12px;\n}\n\n.shelf-plank {\n  height: 20px;\n  background-color: var(--color-wood-top);\n  border: 3px solid #140c1c;\n  border-top: 4px solid #ab7556;\n  box-shadow: 0px 6px 0px var(--color-wood-shadow);\n  margin-top: -3px;\n}\n\n.book-card {\n  position: relative;\n  border: 3px solid #140c1c;\n  padding: 12px 10px;\n  color: #140c1c;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  min-height: 190px;\n  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);\n  user-select: none;\n  transition: none;\n}\n\n.book-card:hover {\n  transform: translateY(-4px);\n  box-shadow: 4px 8px 0px #140c1c;\n}\n\n.book-spine-line {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 6px;\n  width: 4px;\n  background: rgba(0, 0, 0, 0.25);\n}\n\n.book-title {\n  font-size: 16px;\n  font-weight: bold;\n  line-height: 1.25;\n  margin-left: 8px;\n  word-break: break-word;\n}\n\n.book-meta {\n  margin-left: 8px;\n  margin-top: 8px;\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n}\n\n.book-author {\n  font-size: 14px;\n  font-weight: 600;\n  opacity: 0.9;\n}\n\n.book-year {\n  font-size: 13px;\n  font-weight: bold;\n  background-color: rgba(0, 0, 0, 0.15);\n  display: inline-block;\n  padding: 2px 4px;\n  align-self: flex-start;\n}\n\n/* Palette styles for books */\n.theme-emerald {\n  background-color: #5b9b76;\n  border-left-width: 6px;\n}\n.theme-crimson {\n  background-color: #c75c5c;\n  border-left-width: 6px;\n}\n.theme-amber {\n  background-color: #e69c47;\n  border-left-width: 6px;\n}\n.theme-azure {\n  background-color: #4b80ca;\n  border-left-width: 6px;\n}\n.theme-purple {\n  background-color: #925fa3;\n  border-left-width: 6px;\n}\n.theme-sand {\n  background-color: #d1b87c;\n  border-left-width: 6px;\n}\n.theme-teal {\n  background-color: #438f99;\n  border-left-width: 6px;\n}\n.theme-coral {\n  background-color: #d47065;\n  border-left-width: 6px;\n}\n\n.no-results-msg {\n  text-align: center;\n  padding: 40px 16px;\n  color: var(--color-accent);\n  font-size: 18px;\n  font-weight: bold;\n}\n\n.shelf-footer {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.pixel-counter {\n  font-size: 14px;\n  color: var(--color-text-muted);\n}\n\n@media (max-width: 500px) {\n  .shelf-board {\n    grid-template-columns: 1fr;\n  }\n  .control-group-inline {\n    flex-direction: column;\n    align-items: stretch;\n  }\n  .pixel-title {\n    font-size: 22px;\n  }\n}",
+      "description": "Pixel-art themed stylesheet with retro borders, custom color palette, responsive layout, and states."
+    },
+    {
+      "path": "app.js",
+      "content": "const BOOKS = [\n  {\n    id: 1,\n    title: \"Moby Dick\",\n    author: \"Herman Melville\",\n    year: 1851,\n    theme: \"theme-azure\"\n  },\n  {\n    id: 2,\n    title: \"Pride and Prejudice\",\n    author: \"Jane Austen\",\n    year: 1813,\n    theme: \"theme-coral\"\n  },\n  {\n    id: 3,\n    title: \"The Great Gatsby\",\n    author: \"F. Scott Fitzgerald\",\n    year: 1925,\n    theme: \"theme-emerald\"\n  },\n  {\n    id: 4,\n    title: \"Frankenstein\",\n    author: \"Mary Shelley\",\n    year: 1818,\n    theme: \"theme-purple\"\n  },\n  {\n    id: 5,\n    title: \"1984\",\n    author: \"George Orwell\",\n    year: 1949,\n    theme: \"theme-amber\"\n  },\n  {\n    id: 6,\n    title: \"Jane Eyre\",\n    author: \"Charlotte Brontë\",\n    year: 1847,\n    theme: \"theme-teal\"\n  },\n  {\n    id: 7,\n    title: \"The Hobbit\",\n    author: \"J.R.R. Tolkien\",\n    year: 1937,\n    theme: \"theme-emerald\"\n  },\n  {\n    id: 8,\n    title: \"Dracula\",\n    author: \"Bram Stoker\",\n    year: 1897,\n    theme: \"theme-crimson\"\n  }\n];\n\nconst state = {\n  searchQuery: \"\",\n  sortBy: \"title\",\n  ascending: true\n};\n\nconst searchInput = document.getElementById(\"search-input\");\nconst sortSelect = document.getElementById(\"sort-select\");\nconst directionToggle = document.getElementById(\"direction-toggle\");\nconst directionLabel = document.getElementById(\"direction-label\");\nconst bookshelf = document.getElementById(\"bookshelf\");\nconst noResultsMsg = document.getElementById(\"no-results\");\nconst countIndicator = document.getElementById(\"count-indicator\");\n\nfunction getProcessedBooks() {\n  const query = state.searchQuery.trim().toLowerCase();\n\n  const filtered = BOOKS.filter(book => {\n    if (!query) return true;\n    return (\n      book.title.toLowerCase().includes(query) ||\n      book.author.toLowerCase().includes(query)\n    );\n  });\n\n  filtered.sort((a, b) => {\n    let comparison = 0;\n    if (state.sortBy === \"year\") {\n      comparison = a.year - b.year;\n    } else if (state.sortBy === \"author\") {\n      comparison = a.author.localeCompare(b.author);\n    } else {\n      comparison = a.title.localeCompare(b.title);\n    }\n    return state.ascending ? comparison : -comparison;\n  });\n\n  return filtered;\n}\n\nfunction render() {\n  const books = getProcessedBooks();\n  bookshelf.innerHTML = \"\";\n\n  if (books.length === 0) {\n    noResultsMsg.hidden = false;\n  } else {\n    noResultsMsg.hidden = true;\n    books.forEach(book => {\n      const card = document.createElement(\"article\");\n      card.className = `book-card ${book.theme}`;\n      card.setAttribute(\"tabindex\", \"0\");\n      card.setAttribute(\"aria-label\", `${book.title} by ${book.author}, published in ${book.year}`);\n\n      const spineLine = document.createElement(\"div\");\n      spineLine.className = \"book-spine-line\";\n      spineLine.setAttribute(\"aria-hidden\", \"true\");\n\n      const title = document.createElement(\"h2\");\n      title.className = \"book-title\";\n      title.textContent = book.title;\n\n      const meta = document.createElement(\"div\");\n      meta.className = \"book-meta\";\n\n      const author = document.createElement(\"span\");\n      author.className = \"book-author\";\n      author.textContent = book.author;\n\n      const year = document.createElement(\"span\");\n      year.className = \"book-year\";\n      year.textContent = book.year;\n\n      meta.appendChild(author);\n      meta.appendChild(year);\n\n      card.appendChild(spineLine);\n      card.appendChild(title);\n      card.appendChild(meta);\n\n      bookshelf.appendChild(card);\n    });\n  }\n\n  countIndicator.textContent = `Showing ${books.length} of ${BOOKS.length} books`;\n}\n\nsearchInput.addEventListener(\"input\", (e) => {\n  state.searchQuery = e.target.value;\n  render();\n});\n\nsortSelect.addEventListener(\"change\", (e) => {\n  state.sortBy = e.target.value;\n  render();\n});\n\ndirectionToggle.addEventListener(\"click\", () => {\n  state.ascending = !state.ascending;\n  directionToggle.setAttribute(\"aria-pressed\", (!state.ascending).toString());\n  const orderType = state.sortBy === \"year\" ? \"Old-New\" : \"A–Z\";\n  const reverseType = state.sortBy === \"year\" ? \"New-Old\" : \"Z–A\";\n  directionLabel.textContent = state.ascending\n    ? `Ascending (${orderType})`\n    : `Descending (${reverseType})`;\n  render();\n});\n\n// Initial render\nrender();",
+      "description": "Vanilla JavaScript handling the book dataset, dynamic filtering, multi-field sorting, and DOM updates."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Bookshelf\n\nA standalone, retro-themed browser application featuring 8 built-in books. Users can filter titles and authors dynamically, sort by Title, Author, or Year, and toggle between ascending and descending order.\n\n## Features\n\n- **8 Built-in Books**: Pre-populated catalog with classic literature titles, authors, and publication years.\n- **Live Search**: Instant filtering by either title or author.\n- **3-Way Sorting**: Sort the books by Title, Author, or Publication Year.\n- **Ascending / Descending Toggle**: Invert sort order with accessible label updates.\n- **Pixel Art Aesthetic**: Retro color scheme, custom pixel borders, styled spine lines, and wooden bookshelf shelf plank.\n- **Zero Dependencies**: Pure HTML5, CSS3, and Vanilla JavaScript with no external font or library network calls.\n- **Keyboard & Accessibility**: Styled focus outlines, ARIA labels, semantic elements, and explicit CSS `[hidden] { display: none !important; }` safeguard.\n\n## Getting Started\n\nOpen `index.html` directly in any modern web browser. No web server or package installations are required.",
+      "description": "Documentation for setup, architectural decisions, and usage instructions."
+    }
+  ]
+}

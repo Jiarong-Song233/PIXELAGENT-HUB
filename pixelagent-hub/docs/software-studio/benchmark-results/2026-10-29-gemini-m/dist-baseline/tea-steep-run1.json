@@ -1,0 +1,406 @@
+{
+  "caseId": "tea-steep",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\baseline",
+  "managerTokens": 8917,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 117,
+  "reportedTokens": 50519,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:33:49.981Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:33:49.982Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:34:14.788Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Tea Timer"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:34:14.789Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:35:02.226Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:35:02.226Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:35:02.906Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:35:02.907Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "2f116d24-611f-4407-abdb-f61a5ecbfe81"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:35:39.182Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "2f116d24-611f-4407-abdb-f61a5ecbfe81",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:35:39.183Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "testPlanId": "2f116d24-611f-4407-abdb-f61a5ecbfe81",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Default Green preset displays 2:00",
+        "passed": true,
+        "actual": "2:00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Select Black preset updates display to 4:00",
+        "passed": true,
+        "actual": "4:00"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Select Herbal preset updates display to 6:00",
+        "passed": true,
+        "actual": "6:00"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Start countdown decrements timer",
+        "passed": true,
+        "actual": "1:59"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Start disables start button",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Start enables cancel button",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Cancel stops and resets timer to preset",
+        "passed": true,
+        "actual": "4:00"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Cancel reenables start button",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "name": "Status message hidden initially",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:35:44.373Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "148d41f2-4020-42e4-868b-b410952ce58b",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T13:35:44.375Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Default Green preset displays 2:00",
+        "actions": [],
+        "selector": "#timeDisplay",
+        "expected": "2:00"
+      },
+      {
+        "name": "Select Black preset updates display to 4:00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#presetBlack"
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "4:00"
+      },
+      {
+        "name": "Select Herbal preset updates display to 6:00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#presetHerbal"
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "6:00"
+      },
+      {
+        "name": "Start countdown decrements timer",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#presetGreen"
+          },
+          {
+            "type": "click",
+            "selector": "#startBtn"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "1:59"
+      },
+      {
+        "name": "Start disables start button",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#startBtn"
+          }
+        ],
+        "selector": "#startBtn",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Start enables cancel button",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#startBtn"
+          }
+        ],
+        "selector": "#cancelBtn",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Cancel stops and resets timer to preset",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#presetBlack"
+          },
+          {
+            "type": "click",
+            "selector": "#startBtn"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          },
+          {
+            "type": "click",
+            "selector": "#cancelBtn"
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "4:00"
+      },
+      {
+        "name": "Cancel reenables start button",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#startBtn"
+          },
+          {
+            "type": "wait",
+            "ms": 100
+          },
+          {
+            "type": "click",
+            "selector": "#cancelBtn"
+          }
+        ],
+        "selector": "#startBtn",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Status message hidden initially",
+        "actions": [],
+        "selector": "#statusMessage",
+        "expected": "false",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Waiting 120s or more for timer completion to reach zero and show 'Your tea is ready' exceeds the 8s check wait limit",
+      "Canvas pixel-art teacup rendering and steam animation cannot be asserted with DOM assertions"
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13882,
+      "completion_tokens": 437,
+      "total_tokens": 14319
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Tea Timer</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <div class=\"timer-card\" role=\"region\" aria-label=\"Pixel Tea Timer\">\n      <header class=\"card-header\">\n        <h1 class=\"title\">PIXEL TEA TIMER</h1>\n      </header>\n\n      <div class=\"pixel-art-container\" aria-hidden=\"true\">\n        <canvas id=\"teaCanvas\" width=\"96\" height=\"96\"></canvas>\n      </div>\n\n      <fieldset class=\"preset-fieldset\">\n        <legend class=\"visually-hidden\">Select Tea Variety</legend>\n        <div class=\"preset-buttons\" role=\"radiogroup\" aria-label=\"Tea Presets\">\n          <button type=\"button\" class=\"pixel-btn preset-btn active\" data-name=\"Green\" data-time=\"120\" id=\"presetGreen\" aria-pressed=\"true\">\n            Green<br><span class=\"sub-time\">2:00</span>\n          </button>\n          <button type=\"button\" class=\"pixel-btn preset-btn\" data-name=\"Black\" data-time=\"240\" id=\"presetBlack\" aria-pressed=\"false\">\n            Black<br><span class=\"sub-time\">4:00</span>\n          </button>\n          <button type=\"button\" class=\"pixel-btn preset-btn\" data-name=\"Herbal\" data-time=\"360\" id=\"presetHerbal\" aria-pressed=\"false\">\n            Herbal<br><span class=\"sub-time\">6:00</span>\n          </button>\n        </div>\n      </fieldset>\n\n      <div class=\"display-panel\">\n        <div class=\"time-display\" id=\"timeDisplay\" aria-live=\"polite\">02:00</div>\n        <div class=\"status-message\" id=\"statusMessage\" role=\"status\" aria-live=\"assertive\" hidden>Your tea is ready</div>\n      </div>\n\n      <div class=\"control-actions\">\n        <button type=\"button\" class=\"pixel-btn action-btn primary\" id=\"startBtn\">Start</button>\n        <button type=\"button\" class=\"pixel-btn action-btn secondary\" id=\"cancelBtn\" disabled>Cancel</button>\n      </div>\n    </div>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main single-page application structure with semantic and accessible controls for tea presets and timer display."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Base resets and palette (Dark Slate, Warm Cream, Matcha Green, Terracotta) */\n:root {\n  --bg-color: #262b44;\n  --card-bg: #3a4466;\n  --accent-light: #fbf5ef;\n  --accent-green: #68c279;\n  --accent-dark: #1b1e34;\n  --accent-warm: #d97559;\n  --pixel-border: 4px solid var(--accent-dark);\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  image-rendering: pixelated;\n}\n\n/* Ensure hidden attribute is never overridden by display styles */\n[hidden] {\n  display: none !important;\n}\n\n.visually-hidden {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  padding: 0;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n\nbody {\n  font-family: 'Courier New', Courier, monospace, monospace;\n  font-size: 16px;\n  line-height: 1.4;\n  background-color: var(--bg-color);\n  color: var(--accent-light);\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 1rem;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 420px;\n  min-width: 320px;\n  margin: 0 auto;\n}\n\n.timer-card {\n  background-color: var(--card-bg);\n  border: var(--pixel-border);\n  box-shadow: 6px 6px 0px var(--accent-dark);\n  padding: 1.5rem;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  gap: 1.25rem;\n}\n\n.title {\n  font-size: 1.4rem;\n  font-weight: 800;\n  letter-spacing: 2px;\n  color: var(--accent-light);\n  text-transform: uppercase;\n  text-shadow: 2px 2px 0 var(--accent-dark);\n}\n\n.pixel-art-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100px;\n}\n\n#teaCanvas {\n  image-rendering: pixelated;\n  width: 96px;\n  height: 96px;\n}\n\n.preset-fieldset {\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\n.preset-buttons {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 0.5rem;\n}\n\n.sub-time {\n  font-size: 0.85rem;\n  opacity: 0.9;\n}\n\n.pixel-btn {\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: bold;\n  background-color: var(--accent-light);\n  color: var(--accent-dark);\n  border: 3px solid var(--accent-dark);\n  box-shadow: 3px 3px 0px var(--accent-dark);\n  padding: 0.6rem 0.5rem;\n  cursor: pointer;\n  transition: transform 0.05s ease, box-shadow 0.05s ease;\n  outline: none;\n  user-select: none;\n}\n\n.pixel-btn:hover:not(:disabled) {\n  background-color: #ffffff;\n  transform: translate(-1px, -1px);\n  box-shadow: 4px 4px 0px var(--accent-dark);\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px dashed var(--accent-light);\n  outline-offset: 3px;\n}\n\n.pixel-btn:active:not(:disabled) {\n  transform: translate(3px, 3px);\n  box-shadow: 0px 0px 0px var(--accent-dark);\n}\n\n.preset-btn.active {\n  background-color: var(--accent-green);\n  color: var(--accent-dark);\n  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.2);\n}\n\n.pixel-btn:disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n  box-shadow: 2px 2px 0px var(--accent-dark);\n  transform: none;\n}\n\n.display-panel {\n  background-color: var(--accent-dark);\n  border: 3px solid #141726;\n  padding: 1rem;\n  min-height: 95px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 0.35rem;\n}\n\n.time-display {\n  font-size: 2.5rem;\n  font-weight: 800;\n  letter-spacing: 3px;\n  color: var(--accent-light);\n  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);\n}\n\n.status-message {\n  font-size: 1rem;\n  font-weight: bold;\n  color: var(--accent-warm);\n  letter-spacing: 1px;\n  animation: blink 0.9s infinite alternate ease-in-out;\n}\n\n@keyframes blink {\n  from { opacity: 0.3; }\n  to { opacity: 1; }\n}\n\n.control-actions {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n}\n\n.action-btn.primary {\n  background-color: var(--accent-green);\n}\n\n.action-btn.secondary {\n  background-color: var(--accent-warm);\n}\n",
+      "description": "Retro pixel-art aesthetic styling with high-contrast palette, accessible states, and responsive layout."
+    },
+    {
+      "path": "app.js",
+      "content": "(function () {\n  const presets = {\n    Green: 120,\n    Black: 240,\n    Herbal: 360\n  };\n\n  let currentTea = 'Green';\n  let totalSeconds = presets[currentTea];\n  let remainingSeconds = totalSeconds;\n  let timerId = null;\n  let isRunning = false;\n\n  // Elements\n  const timeDisplay = document.getElementById('timeDisplay');\n  const statusMessage = document.getElementById('statusMessage');\n  const startBtn = document.getElementById('startBtn');\n  const cancelBtn = document.getElementById('cancelBtn');\n  const presetButtons = document.querySelectorAll('.preset-btn');\n  const canvas = document.getElementById('teaCanvas');\n\n  function formatTime(seconds) {\n    const m = Math.floor(seconds / 60);\n    const s = seconds % 60;\n    const mm = m.toString();\n    const ss = s < 10 ? '0' + s : s.toString();\n    return mm + ':' + ss;\n  }\n\n  function updateDisplay() {\n    timeDisplay.textContent = formatTime(remainingSeconds);\n  }\n\n  function drawPixelTeacup(progress) {\n    if (!canvas || !canvas.getContext) return;\n    const ctx = canvas.getContext('2d');\n    const s = 4; // Pixel size multiplier (24x24 logical grid)\n\n    ctx.clearRect(0, 0, 96, 96);\n\n    const teaColors = {\n      Green: '#7bb35c',\n      Black: '#8c4b2d',\n      Herbal: '#d66d75'\n    };\n    const liquidColor = teaColors[currentTea] || '#7bb35c';\n\n    // Cup base and rim coordinates\n    ctx.fillStyle = '#1b1e34';\n    // Rim outline\n    ctx.fillRect(4 * s, 10 * s, 14 * s, 1 * s);\n    // Left wall\n    ctx.fillRect(4 * s, 11 * s, 1 * s, 8 * s);\n    // Right wall\n    ctx.fillRect(17 * s, 11 * s, 1 * s, 8 * s);\n    // Bottom outline\n    ctx.fillRect(5 * s, 19 * s, 12 * s, 1 * s);\n    // Saucer\n    ctx.fillRect(3 * s, 21 * s, 16 * s, 1 * s);\n\n    // Cup handle\n    ctx.fillRect(18 * s, 12 * s, 3 * s, 1 * s);\n    ctx.fillRect(20 * s, 13 * s, 1 * s, 4 * s);\n    ctx.fillRect(18 * s, 16 * s, 3 * s, 1 * s);\n\n    // Cup body porcelain\n    ctx.fillStyle = '#fbf5ef';\n    ctx.fillRect(5 * s, 11 * s, 12 * s, 8 * s);\n\n    // Tea liquid filling (height scales down with progress if desired or remains full)\n    ctx.fillStyle = liquidColor;\n    ctx.fillRect(6 * s, 13 * s, 10 * s, 5 * s);\n\n    // Steam puffs if running\n    if (isRunning && remainingSeconds > 0) {\n      ctx.fillStyle = 'rgba(251, 245, 239, 0.7)';\n      const alt = remainingSeconds % 2 === 0;\n      if (alt) {\n        ctx.fillRect(8 * s, 7 * s, 2 * s, 2 * s);\n        ctx.fillRect(12 * s, 5 * s, 2 * s, 2 * s);\n      } else {\n        ctx.fillRect(7 * s, 5 * s, 2 * s, 2 * s);\n        ctx.fillRect(13 * s, 7 * s, 2 * s, 2 * s);\n      }\n    }\n  }\n\n  function stopTimer() {\n    if (timerId !== null) {\n      clearInterval(timerId);\n      timerId = null;\n    }\n    isRunning = false;\n  }\n\n  function setPreset(name) {\n    if (isRunning) return;\n    currentTea = name;\n    totalSeconds = presets[name];\n    remainingSeconds = totalSeconds;\n    statusMessage.hidden = true;\n\n    presetButtons.forEach(btn => {\n      const isMatch = btn.getAttribute('data-name') === name;\n      btn.classList.toggle('active', isMatch);\n      btn.setAttribute('aria-pressed', isMatch ? 'true' : 'false');\n    });\n\n    updateDisplay();\n    drawPixelTeacup(1);\n  }\n\n  function tick() {\n    if (remainingSeconds > 0) {\n      remainingSeconds -= 1;\n      updateDisplay();\n      drawPixelTeacup(remainingSeconds / totalSeconds);\n    }\n\n    if (remainingSeconds <= 0) {\n      stopTimer();\n      startBtn.disabled = false;\n      cancelBtn.disabled = true;\n      presetButtons.forEach(btn => (btn.disabled = false));\n      statusMessage.textContent = 'Your tea is ready';\n      statusMessage.hidden = false;\n      drawPixelTeacup(0);\n    }\n  }\n\n  function onStart() {\n    if (isRunning) return;\n\n    if (remainingSeconds <= 0) {\n      remainingSeconds = totalSeconds;\n      updateDisplay();\n    }\n\n    statusMessage.hidden = true;\n    isRunning = true;\n    startBtn.disabled = true;\n    cancelBtn.disabled = false;\n    presetButtons.forEach(btn => (btn.disabled = true));\n\n    timerId = setInterval(tick, 1000);\n    drawPixelTeacup(remainingSeconds / totalSeconds);\n  }\n\n  function onCancel() {\n    stopTimer();\n    remainingSeconds = totalSeconds;\n    updateDisplay();\n    statusMessage.hidden = true;\n    startBtn.disabled = false;\n    cancelBtn.disabled = true;\n    presetButtons.forEach(btn => (btn.disabled = false));\n    drawPixelTeacup(1);\n  }\n\n  // Event listeners\n  startBtn.addEventListener('click', onStart);\n  cancelBtn.addEventListener('click', onCancel);\n\n  presetButtons.forEach(btn => {\n    btn.addEventListener('click', () => {\n      const name = btn.getAttribute('data-name');\n      if (name) {\n        setPreset(name);\n      }\n    });\n  });\n\n  // Initial render\n  updateDisplay();\n  drawPixelTeacup(1);\n})();\n",
+      "description": "Countdown timer logic, preset state handling, button bindings, and pixel tea graphics rendering."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Tea Timer\n\nA retro offline web application designed to brew the perfect cup of tea. Features classic pixel-art visuals, preset brewing timers, and clear accessible states.\n\n## Features\n- **Presets**: Quick-select buttons for Green (2:00), Black (4:00), and Herbal (6:00).\n- **Countdown Display**: Monospaced countdown formatted as `m:ss`.\n- **Status Alert**: Visible notification reading `Your tea is ready` upon reaching `0:00`.\n- **Zero External Dependencies**: Works 100% offline with plain HTML5, CSS3, and modern vanilla JavaScript.\n- **Pixel-Art Teacup**: Dynamically rendered canvas graphic reflecting the tea type and steam animation.\n- **Accessibility**: Semantically structured buttons, keyboard focus rings, `aria-pressed`, and screen-reader status announcements.\n\n## Getting Started\n1. Open `index.html` in any modern web browser.\n2. Choose a tea preset (`Green`, `Black`, or `Herbal`).\n3. Click **Start** to begin the countdown.\n4. Click **Cancel** at any time to abort and reset the timer.\n",
+      "description": "User documentation for running and interacting with the Pixel Tea Timer offline."
+    }
+  ]
+}

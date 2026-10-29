@@ -378,3 +378,17 @@ test('real browser edits contenteditable text and fixes locale and timezone', { 
     assert.equal(run.checks[6].error, 'Input action requires an input, textarea, select or contenteditable element');
   } finally { await rm(root, { recursive: true, force: true }); }
 });
+
+
+test('real browser advances a thirty second round and preserves plain waits', { skip: process.env.RUN_STUDIO_BROWSER_TESTS !== '1' }, async () => {
+  const root = await mkdtemp(join(tmpdir(), 'browser-advance-'));
+  try {
+    const content = '<html><body><output id="status">Playing</output><script>let remaining=30;const timer=setInterval(()=>{if(--remaining===0){document.querySelector("#status").textContent="Game over";clearInterval(timer)}},1000)</script></body></html>';
+    for (const advance of [true, false]) {
+      const check = { name: 'Round', actions: [{ type: advance ? 'advance' : 'wait', ms: advance ? 31000 : 100 }], selector: '#status', expected: advance ? 'Game over' : 'Playing' };
+      const plan = { checks: advance ? [check, { ...check, name: 'Fresh round' }] : [check], isolation: 'fresh', limitations: [] };
+      const run = await executeBrowserRun({ root, run: makeRun(content, plan), html: content, plan, signal: new AbortController().signal, executablePath: process.env.STUDIO_BROWSER_EXECUTABLE });
+      assert.equal(run.status, 'passed', JSON.stringify(run));
+    }
+  } finally { await rm(root, { recursive: true, force: true }); }
+});

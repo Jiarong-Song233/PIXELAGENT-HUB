@@ -1,0 +1,438 @@
+{
+  "caseId": "egg-timer",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\baseline",
+  "managerTokens": 8930,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 89,
+  "reportedTokens": 38188,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:01:13.397Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:01:13.398Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:01:30.353Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Egg Timer"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:01:30.353Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:02:12.865Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:02:12.865Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:02:13.275Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:02:13.275Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "b90d6f4f-da9c-41a7-8729-6457bfd82ffe"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:02:30.025Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "b90d6f4f-da9c-41a7-8729-6457bfd82ffe",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:02:30.025Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "testPlanId": "b90d6f4f-da9c-41a7-8729-6457bfd82ffe",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Initial display shows 0:00",
+        "passed": true,
+        "actual": "0:00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Clicking Soft (6 min) sets timer text",
+        "passed": true,
+        "actual": "6:00"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Clicking Medium (8 min) sets timer text",
+        "passed": true,
+        "actual": "8:00"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Clicking Hard (10 min) sets timer text",
+        "passed": true,
+        "actual": "10:00"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Timer counts down formatted as m:ss",
+        "passed": true,
+        "actual": "5:59"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Progress bar starts at 0% and increases",
+        "passed": true,
+        "actual": "0.277778%"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Pause button is disabled initially and enabled when running",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Pausing halts countdown and keeps remaining time stable",
+        "passed": true,
+        "actual": "5:59"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Resuming resumes countdown",
+        "passed": true,
+        "actual": "5:58"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "name": "Status banner hidden initially",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:02:40.304Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "cbd10f4b-5a0e-4b9f-8299-0da383cc25f7",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T16:02:40.306Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial display shows 0:00",
+        "actions": [],
+        "selector": "#timeDisplay",
+        "expected": "0:00",
+        "assertion": "text"
+      },
+      {
+        "name": "Clicking Soft (6 min) sets timer text",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnSoft"
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "6:00",
+        "assertion": "text"
+      },
+      {
+        "name": "Clicking Medium (8 min) sets timer text",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnMedium"
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "8:00",
+        "assertion": "text"
+      },
+      {
+        "name": "Clicking Hard (10 min) sets timer text",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnHard"
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "10:00",
+        "assertion": "text"
+      },
+      {
+        "name": "Timer counts down formatted as m:ss",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnSoft"
+          },
+          {
+            "type": "wait",
+            "ms": 1050
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "^\\d+:\\d{2}$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Progress bar starts at 0% and increases",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnSoft"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          }
+        ],
+        "selector": "#progressFill",
+        "expected": "",
+        "assertion": "changed",
+        "attribute": "style.width"
+      },
+      {
+        "name": "Pause button is disabled initially and enabled when running",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnSoft"
+          }
+        ],
+        "selector": "#btnPause",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Pausing halts countdown and keeps remaining time stable",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnSoft"
+          },
+          {
+            "type": "wait",
+            "ms": 1050
+          },
+          {
+            "type": "click",
+            "selector": "#btnPause"
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "",
+        "assertion": "stable"
+      },
+      {
+        "name": "Resuming resumes countdown",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnSoft"
+          },
+          {
+            "type": "wait",
+            "ms": 1050
+          },
+          {
+            "type": "click",
+            "selector": "#btnPause"
+          },
+          {
+            "type": "click",
+            "selector": "#btnResume"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          }
+        ],
+        "selector": "#timeDisplay",
+        "expected": "",
+        "assertion": "changed"
+      },
+      {
+        "name": "Status banner hidden initially",
+        "actions": [],
+        "selector": "#statusBanner",
+        "expected": "false",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Cannot test completion banner 'Eggs are done!' at zero because minimum timer is 360s, exceeding 8s wait limit."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14672,
+      "completion_tokens": 506,
+      "total_tokens": 15178
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Egg Timer</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <header class=\"header\">\n      <h1 class=\"title\">PIXEL EGG TIMER</h1>\n    </header>\n\n    <section class=\"card\" aria-label=\"Egg Timer controls and display\">\n      <!-- Pixel Art Egg Graphic -->\n      <div class=\"egg-stage\" aria-hidden=\"true\">\n        <div class=\"pixel-egg\" id=\"pixelEgg\"></div>\n      </div>\n\n      <!-- Preset Selection Controls -->\n      <div class=\"preset-group\" role=\"group\" aria-label=\"Preset Doneness Selection\">\n        <button type=\"button\" class=\"btn preset-btn\" data-seconds=\"360\" id=\"btnSoft\" aria-label=\"Soft boiled egg, 6 minutes\">\n          Soft (6 min)\n        </button>\n        <button type=\"button\" class=\"btn preset-btn\" data-seconds=\"480\" id=\"btnMedium\" aria-label=\"Medium boiled egg, 8 minutes\">\n          Medium (8 min)\n        </button>\n        <button type=\"button\" class=\"btn preset-btn\" data-seconds=\"600\" id=\"btnHard\" aria-label=\"Hard boiled egg, 10 minutes\">\n          Hard (10 min)\n        </button>\n      </div>\n\n      <!-- Countdown Display -->\n      <div class=\"timer-display-box\">\n        <div class=\"time-text\" id=\"timeDisplay\" role=\"timer\" aria-live=\"polite\">0:00</div>\n        <div class=\"progress-track\" role=\"progressbar\" id=\"progressBar\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"0\" aria-label=\"Cooking progress\">\n          <div class=\"progress-fill\" id=\"progressFill\"></div>\n        </div>\n      </div>\n\n      <!-- Timer Playback Controls -->\n      <div class=\"action-group\">\n        <button type=\"button\" class=\"btn action-btn\" id=\"btnPause\" disabled aria-label=\"Pause timer\">Pause</button>\n        <button type=\"button\" class=\"btn action-btn\" id=\"btnResume\" disabled aria-label=\"Resume timer\">Resume</button>\n        <button type=\"button\" class=\"btn action-btn btn-secondary\" id=\"btnReset\" disabled aria-label=\"Reset timer\">Reset</button>\n      </div>\n\n      <!-- Status / Completion Notification -->\n      <div class=\"status-banner\" id=\"statusBanner\" role=\"status\" aria-live=\"assertive\" hidden>\n        Eggs are done!\n      </div>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main entry point and markup containing accessible controls, timer display, progress bar, pixel art canvas/CSS container, and status message."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Hidden attribute override guarantee */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #2b213a;\n  --card-bg: #3f3156;\n  --accent-gold: #ffbe3b;\n  --accent-white: #ffffff;\n  --accent-yolk: #ff8e2b;\n  --text-primary: #f8f6f0;\n  --text-muted: #d0c8dd;\n  --border-color: #171120;\n  --progress-bg: #221830;\n  --font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Courier New\", monospace;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--bg-color);\n  color: var(--text-primary);\n  font-family: var(--font-family);\n  font-size: 16px;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 16px;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 440px;\n  min-width: 320px;\n}\n\n.header {\n  text-align: center;\n  margin-bottom: 16px;\n}\n\n.title {\n  font-size: 1.5rem;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  color: var(--accent-gold);\n  text-shadow: 2px 2px 0 var(--border-color);\n}\n\n.card {\n  background: var(--card-bg);\n  border: 4px solid var(--border-color);\n  box-shadow: 6px 6px 0 var(--border-color);\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n\n/* Pure CSS Pixel Egg Art */\n.egg-stage {\n  height: 96px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.pixel-egg {\n  width: 8px;\n  height: 8px;\n  background-color: transparent;\n  /* Render 10x12 grid pixel egg using box-shadow */\n  box-shadow:\n    /* Row 1 */\n    24px 0 var(--border-color), 32px 0 var(--border-color),\n    /* Row 2 */\n    16px 8px var(--border-color), 24px 8px var(--accent-white), 32px 8px var(--accent-white), 40px 8px var(--border-color),\n    /* Row 3 */\n    8px 16px var(--border-color), 16px 16px var(--accent-white), 24px 16px var(--accent-white), 32px 16px var(--accent-white), 40px 16px var(--accent-white), 48px 16px var(--border-color),\n    /* Row 4 */\n    8px 24px var(--border-color), 16px 24px var(--accent-white), 24px 24px var(--accent-gold), 32px 24px var(--accent-gold), 40px 24px var(--accent-white), 48px 24px var(--border-color),\n    /* Row 5 */\n    0px 32px var(--border-color), 8px 32px var(--accent-white), 16px 32px var(--accent-gold), 24px 32px var(--accent-yolk), 32px 32px var(--accent-gold), 40px 32px var(--accent-white), 48px 32px var(--accent-white), 56px 32px var(--border-color),\n    /* Row 6 */\n    0px 40px var(--border-color), 8px 40px var(--accent-white), 16px 40px var(--accent-gold), 24px 40px var(--accent-yolk), 32px 40px var(--accent-gold), 40px 40px var(--accent-white), 48px 40px var(--accent-white), 56px 40px var(--border-color),\n    /* Row 7 */\n    0px 48px var(--border-color), 8px 48px var(--accent-white), 16px 48px var(--accent-white), 24px 48px var(--accent-gold), 32px 48px var(--accent-gold), 40px 48px var(--accent-white), 48px 48px var(--accent-white), 56px 48px var(--border-color),\n    /* Row 8 */\n    8px 56px var(--border-color), 16px 56px var(--accent-white), 24px 56px var(--accent-white), 32px 56px var(--accent-white), 40px 56px var(--accent-white), 48px 56px var(--border-color),\n    /* Row 9 */\n    16px 64px var(--border-color), 24px 64px var(--border-color), 32px 64px var(--border-color), 40px 64px var(--border-color);\n  transform: translate(-28px, -32px);\n  transition: transform 0.2s ease;\n}\n\n.egg-stage.cooking .pixel-egg {\n  animation: pixel-wobble 1.2s infinite steps(2, start);\n}\n\n.egg-stage.done .pixel-egg {\n  animation: pixel-jump 0.6s infinite alternate steps(2, start);\n}\n\n@keyframes pixel-wobble {\n  0% { transform: translate(-28px, -32px) rotate(0deg); }\n  50% { transform: translate(-26px, -32px) rotate(4deg); }\n  100% { transform: translate(-30px, -32px) rotate(-4deg); }\n}\n\n@keyframes pixel-jump {\n  0% { transform: translate(-28px, -32px); }\n  100% { transform: translate(-28px, -44px); }\n}\n\n/* Buttons */\n.preset-group {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  gap: 10px;\n}\n\n.btn {\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: 600;\n  padding: 12px 14px;\n  background: #503d6e;\n  color: var(--text-primary);\n  border: 3px solid var(--border-color);\n  box-shadow: 3px 3px 0 var(--border-color);\n  cursor: pointer;\n  text-align: center;\n  text-decoration: none;\n  outline: none;\n  user-select: none;\n  transition: background-color 0.1s, transform 0.05s, box-shadow 0.05s;\n}\n\n.btn:hover:not(:disabled) {\n  background: #624b86;\n}\n\n.btn:focus-visible {\n  outline: 3px solid var(--accent-gold);\n  outline-offset: 2px;\n}\n\n.btn:active:not(:disabled) {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0 var(--border-color);\n}\n\n.btn.active {\n  background: var(--accent-gold);\n  color: var(--border-color);\n  border-color: var(--border-color);\n}\n\n.btn:disabled {\n  opacity: 0.4;\n  cursor: not-allowed;\n  box-shadow: none;\n  transform: none;\n}\n\n/* Timer Display */\n.timer-display-box {\n  width: 100%;\n  text-align: center;\n}\n\n.time-text {\n  font-size: 2.75rem;\n  font-weight: 700;\n  letter-spacing: 2px;\n  color: var(--accent-gold);\n  text-shadow: 2px 2px 0 var(--border-color);\n  margin-bottom: 12px;\n  font-variant-numeric: tabular-nums;\n}\n\n/* Progress Bar */\n.progress-track {\n  width: 100%;\n  height: 18px;\n  background-color: var(--progress-bg);\n  border: 3px solid var(--border-color);\n  box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.4);\n  overflow: hidden;\n  position: relative;\n}\n\n.progress-fill {\n  width: 0%;\n  height: 100%;\n  background-color: var(--accent-gold);\n  transition: width 0.3s ease;\n}\n\n/* Action Buttons */\n.action-group {\n  display: flex;\n  gap: 10px;\n  width: 100%;\n}\n\n.action-btn {\n  flex: 1;\n}\n\n.btn-secondary {\n  background: #39284d;\n}\n\n/* Status Banner */\n.status-banner {\n  width: 100%;\n  padding: 12px;\n  background-color: var(--accent-gold);\n  color: var(--border-color);\n  font-weight: 800;\n  font-size: 1.2rem;\n  text-align: center;\n  border: 3px solid var(--border-color);\n  box-shadow: 4px 4px 0 var(--border-color);\n  animation: flash 1s infinite alternate steps(2, start);\n}\n\n@keyframes flash {\n  0% { transform: scale(1); }\n  100% { transform: scale(1.03); }\n}\n\n/* Responsive Tweaks */\n@media (min-width: 400px) {\n  .preset-group {\n    flex-direction: row;\n  }\n  .preset-btn {\n    flex: 1;\n    padding: 10px 4px;\n    font-size: 0.95rem;\n  }\n}",
+      "description": "Retro pixel-themed styling with high-contrast palette, accessible focus indicators, responsive card layout, and pixel-grid egg drawing."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  // DOM Elements\n  const btnSoft = document.getElementById('btnSoft');\n  const btnMedium = document.getElementById('btnMedium');\n  const btnHard = document.getElementById('btnHard');\n  const presetButtons = [btnSoft, btnMedium, btnHard];\n\n  const btnPause = document.getElementById('btnPause');\n  const btnResume = document.getElementById('btnResume');\n  const btnReset = document.getElementById('btnReset');\n\n  const timeDisplay = document.getElementById('timeDisplay');\n  const progressFill = document.getElementById('progressFill');\n  const progressBar = document.getElementById('progressBar');\n  const statusBanner = document.getElementById('statusBanner');\n  const eggStage = document.querySelector('.egg-stage');\n\n  // State Variables\n  let totalSeconds = 0;\n  let remainingSeconds = 0;\n  let timerInterval = null;\n  let isPaused = false;\n  let isRunning = false;\n\n  function formatTime(totalSec) {\n    const minutes = Math.floor(totalSec / 60);\n    const seconds = totalSec % 60;\n    const paddedSeconds = seconds < 10 ? `0${seconds}` : seconds;\n    return `${minutes}:${paddedSeconds}`;\n  }\n\n  function updateUI() {\n    // Format time display as m:ss\n    timeDisplay.textContent = formatTime(remainingSeconds);\n\n    // Update progress bar percentage (0 to 100)\n    let percent = 0;\n    if (totalSeconds > 0) {\n      const elapsed = totalSeconds - remainingSeconds;\n      percent = Math.min(100, Math.max(0, (elapsed / totalSeconds) * 100));\n    }\n    progressFill.style.width = `${percent}%`;\n    progressBar.setAttribute('aria-valuenow', Math.round(percent).toString());\n  }\n\n  function clearTimerInterval() {\n    if (timerInterval !== null) {\n      clearInterval(timerInterval);\n      timerInterval = null;\n    }\n  }\n\n  function startTimer(seconds) {\n    clearTimerInterval();\n    totalSeconds = seconds;\n    remainingSeconds = seconds;\n    isRunning = true;\n    isPaused = false;\n\n    // Hide any previous completion message\n    statusBanner.hidden = true;\n    eggStage.classList.remove('done');\n    eggStage.classList.add('cooking');\n\n    // Controls state\n    btnPause.disabled = false;\n    btnResume.disabled = true;\n    btnReset.disabled = false;\n\n    updateUI();\n\n    timerInterval = setInterval(() => {\n      if (remainingSeconds > 0) {\n        remainingSeconds -= 1;\n        updateUI();\n      }\n\n      if (remainingSeconds <= 0) {\n        completeTimer();\n      }\n    }, 1000);\n  }\n\n  function pauseTimer() {\n    if (!isRunning || isPaused) return;\n    clearTimerInterval();\n    isPaused = true;\n    isRunning = false;\n\n    btnPause.disabled = true;\n    btnResume.disabled = false;\n    eggStage.classList.remove('cooking');\n  }\n\n  function resumeTimer() {\n    if (!isPaused || remainingSeconds <= 0) return;\n    isPaused = false;\n    isRunning = true;\n\n    btnPause.disabled = false;\n    btnResume.disabled = true;\n    eggStage.classList.add('cooking');\n\n    timerInterval = setInterval(() => {\n      if (remainingSeconds > 0) {\n        remainingSeconds -= 1;\n        updateUI();\n      }\n\n      if (remainingSeconds <= 0) {\n        completeTimer();\n      }\n    }, 1000);\n  }\n\n  function completeTimer() {\n    clearTimerInterval();\n    isRunning = false;\n    isPaused = false;\n    remainingSeconds = 0;\n    updateUI();\n\n    btnPause.disabled = true;\n    btnResume.disabled = true;\n    eggStage.classList.remove('cooking');\n    eggStage.classList.add('done');\n\n    // Reveal completion notification\n    statusBanner.hidden = false;\n  }\n\n  function resetTimer() {\n    clearTimerInterval();\n    isRunning = false;\n    isPaused = false;\n    totalSeconds = 0;\n    remainingSeconds = 0;\n\n    presetButtons.forEach(btn => btn.classList.remove('active'));\n    btnPause.disabled = true;\n    btnResume.disabled = true;\n    btnReset.disabled = true;\n    statusBanner.hidden = true;\n\n    eggStage.classList.remove('cooking', 'done');\n    updateUI();\n  }\n\n  function handlePresetClick(event) {\n    const btn = event.currentTarget;\n    const seconds = parseInt(btn.getAttribute('data-seconds'), 10);\n\n    presetButtons.forEach(b => b.classList.remove('active'));\n    btn.classList.add('active');\n\n    startTimer(seconds);\n  }\n\n  // Event Listeners\n  presetButtons.forEach(btn => {\n    btn.addEventListener('click', handlePresetClick);\n  });\n\n  btnPause.addEventListener('click', pauseTimer);\n  btnResume.addEventListener('click', resumeTimer);\n  btnReset.addEventListener('click', resetTimer);\n\n  // Initial UI Setup\n  updateUI();\n});",
+      "description": "Vanilla JavaScript handling accurate countdown timing, pause/resume state retention, progress calculation, and completion handling."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Egg Timer\n\nA retro, pixel-styled egg countdown timer created with pure HTML, CSS, and vanilla JavaScript without external dependencies or build tools.\n\n## Features\n\n- **Presets**:\n  - **Soft (6 min)**: 360 seconds\n  - **Medium (8 min)**: 480 seconds\n  - **Hard (10 min)**: 600 seconds\n- **Live Progress & Display**: Displays remaining time as `m:ss` and updates the styled progress bar dynamically.\n- **Pause & Resume**: Accurately pauses and resumes countdown without losing remaining time.\n- **Completion Notification**: Reveals **\"Eggs are done!\"** and triggers a pixel egg animation when the timer hits zero.\n- **No External Assets**: The pixel egg graphic is rendered using pure CSS box-shadow pixel art.\n- **Accessible**: Semantic elements, `aria-live` regions, keyboard focus states, and minimum 16px typography.\n\n## Running the Project\n\nOpen `index.html` in any modern web browser. No server, bundler, or network connection is required.\n",
+      "description": "Project documentation detailing setup, usage, accessibility, and architectural notes."
+    }
+  ]
+}

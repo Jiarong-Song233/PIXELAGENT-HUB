@@ -1265,6 +1265,21 @@ components:
             type:
               type: string
               enum:
+                - advance
+            ms:
+              type: integer
+              minimum: 100
+              maximum: 600000
+              description: Virtual timer duration in milliseconds; advances total at most 600000 ms per check.
+          additionalProperties: false
+        - type: object
+          required:
+            - type
+            - ms
+          properties:
+            type:
+              type: string
+              enum:
                 - wait
             ms:
               type: integer

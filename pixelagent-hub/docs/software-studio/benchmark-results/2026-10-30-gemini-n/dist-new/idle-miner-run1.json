@@ -1,0 +1,78 @@
+{
+  "caseId": "idle-miner",
+  "run": 1,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\new",
+  "managerTokens": 8897,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "failed",
+  "error": "localhost:8788 API error (502): {\"error\":{\"message\":\"agy failed: API error (attempt 1): request failed: Post \\\"https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse\\\": EOF\"}}",
+  "coderRounds": 0,
+  "compileFailures": 0,
+  "firstChecks": null,
+  "finalChecks": null,
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 71,
+  "reportedTokens": 8897,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:11:22.154Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:11:22.154Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:11:49.007Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Idle Miner"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:11:49.007Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:12:30.947Z",
+      "type": "failed",
+      "data": {
+        "stoppedPhase": "coding",
+        "error": "localhost:8788 API error (502): {\"error\":{\"message\":\"agy failed: API error (attempt 1): request failed: Post \\\"https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse\\\": EOF\"}}"
+      }
+    }
+  ],
+  "rounds": []
+}

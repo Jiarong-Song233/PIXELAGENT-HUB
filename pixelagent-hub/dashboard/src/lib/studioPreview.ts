@@ -1,8 +1,9 @@
+import { studioClockScript } from './studioClock';
 import { runDOMChecks } from './studioChecks';
 export type PreviewMessage = { channel: 'studio-preview'; nonce: string; kind: 'loaded' | 'error' | 'checks'; message: string };
 
 // Install before the generated scripts; readiness means loaded, never acceptance passed.
-export function prepareStudioPreview(html: string, nonce: string): string {
+export function prepareStudioPreview(html: string, nonce: string, options?: { clock?: boolean }): string {
   const token = JSON.stringify(nonce).replace(/</g, '\\u003c');
   const bridge = `<script>(()=>{
     const send=(kind,message)=>parent.postMessage({channel:'studio-preview',nonce:${token},kind,message:String(message).slice(0,kind==='checks'?30000:2000)},'*');
@@ -20,7 +21,7 @@ export function prepareStudioPreview(html: string, nonce: string): string {
       send('checks',JSON.stringify(await run(document,data.checks,()=>errors)));
     });
   })();</script>`;
-  return html.replace(/<head(?:\s[^>]*)?>/i, (head) => head + bridge);
+  return html.replace(/<head(?:\s[^>]*)?>/i, (head) => head + bridge + (options?.clock ? studioClockScript : ''));
 }
 
 export function readPreviewMessage(event: MessageEvent, frame: Window | null, nonce: string): PreviewMessage | null {

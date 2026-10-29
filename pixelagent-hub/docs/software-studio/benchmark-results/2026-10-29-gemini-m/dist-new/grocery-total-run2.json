@@ -1,0 +1,516 @@
+{
+  "caseId": "grocery-total",
+  "run": 2,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\new",
+  "managerTokens": 8891,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "8/8",
+  "finalChecks": "8/8",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "8/8"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 106,
+  "reportedTokens": 33503,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T14:26:02.143Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T14:26:02.143Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T14:26:20.102Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Grocery Budget Tracker"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T14:26:20.102Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T14:27:25.766Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T14:27:25.766Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T14:27:26.287Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T14:27:26.289Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "aa8fca9a-ec0c-4707-a990-c507a85429c8"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T14:27:43.703Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "aa8fca9a-ec0c-4707-a990-c507a85429c8",
+        "checks": 8
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T14:27:43.703Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "testPlanId": "aa8fca9a-ec0c-4707-a990-c507a85429c8",
+        "checks": 8,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "name": "Initial budget remaining matches default budget",
+        "passed": true,
+        "actual": "$50.00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "name": "Add single item updates total spent",
+        "passed": true,
+        "actual": "$10.00"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "name": "Add item shows correct remaining budget",
+        "passed": true,
+        "actual": "$41.00"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "name": "Add item increases list count",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "name": "Over budget marks total spent color red",
+        "passed": true,
+        "actual": "rgb(214, 34, 70)"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "name": "Over budget shows budget alert banner",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "name": "Remove item removes it from grocery list",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "name": "Remove item restores running total spent",
+        "passed": true,
+        "actual": "$0.00"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T14:27:46.351Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "fb0b577c-9045-484e-a9d8-3fffd7cb234d",
+        "status": "passed",
+        "passed": 8,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T14:27:46.353Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial budget remaining matches default budget",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          }
+        ],
+        "selector": "#budget-left",
+        "expected": "$50.00"
+      },
+      {
+        "name": "Add single item updates total spent",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Apples"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "5.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "2"
+          },
+          {
+            "type": "click",
+            "selector": "#add-btn"
+          }
+        ],
+        "selector": "#total-spent",
+        "expected": "$10.00"
+      },
+      {
+        "name": "Add item shows correct remaining budget",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Bread"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "4.50"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "2"
+          },
+          {
+            "type": "click",
+            "selector": "#add-btn"
+          }
+        ],
+        "selector": "#budget-left",
+        "expected": "$41.00"
+      },
+      {
+        "name": "Add item increases list count",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Milk"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "3.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-btn"
+          }
+        ],
+        "selector": ".grocery-item",
+        "expected": "1",
+        "assertion": "count"
+      },
+      {
+        "name": "Over budget marks total spent color red",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "20.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Steak"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "25.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-btn"
+          }
+        ],
+        "selector": "#total-spent",
+        "expected": "^rgb\\(214,\\s*34,\\s*70\\)$",
+        "assertion": "matches",
+        "attribute": "css.color"
+      },
+      {
+        "name": "Over budget shows budget alert banner",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "10.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Coffee"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "15.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-btn"
+          }
+        ],
+        "selector": "#budget-alert",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Remove item removes it from grocery list",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Eggs"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "4.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".remove-btn"
+          }
+        ],
+        "selector": ".grocery-item",
+        "expected": "0",
+        "assertion": "count"
+      },
+      {
+        "name": "Remove item restores running total spent",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Butter"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "6.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".remove-btn"
+          }
+        ],
+        "selector": "#total-spent",
+        "expected": "$0.00"
+      }
+    ],
+    "limitations": [
+      "Cannot test audio feedback if any retro sound effects were expected",
+      "Cannot test pixel art rendering accuracy on canvas"
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 8835,
+      "completion_tokens": 867,
+      "total_tokens": 9702
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Grocery Budget Tracker</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"pixel-card\" role=\"main\">\n    <header class=\"card-header\">\n      <div class=\"pixel-icon\" aria-hidden=\"true\">🛒</div>\n      <h1 class=\"title\">PIXEL PANTRY</h1>\n      <p class=\"subtitle\">BUDGET &amp; GROCERY TRACKER</p>\n    </header>\n\n    <!-- Budget Setting Section -->\n    <section class=\"panel\" aria-labelledby=\"budget-heading\">\n      <h2 id=\"budget-heading\" class=\"panel-title\">1. SET BUDGET</h2>\n      <div class=\"input-row\">\n        <label for=\"budget-input\" class=\"pixel-label\">Target Budget ($)</label>\n        <input \n          type=\"number\" \n          id=\"budget-input\" \n          class=\"pixel-input\" \n          min=\"0\" \n          step=\"0.01\" \n          placeholder=\"50.00\"\n          value=\"50.00\"\n        >\n      </div>\n    </section>\n\n    <!-- Item Addition Form -->\n    <section class=\"panel\" aria-labelledby=\"add-item-heading\">\n      <h2 id=\"add-item-heading\" class=\"panel-title\">2. ADD GROCERY ITEM</h2>\n      <form id=\"item-form\" novalidate>\n        <div class=\"form-grid\">\n          <div class=\"form-group\">\n            <label for=\"item-name\" class=\"pixel-label\">Item Name</label>\n            <input \n              type=\"text\" \n              id=\"item-name\" \n              class=\"pixel-input\" \n              placeholder=\"e.g. Pixel Apples\" \n              required\n            >\n          </div>\n          <div class=\"form-group small\">\n            <label for=\"item-price\" class=\"pixel-label\">Price ($)</label>\n            <input \n              type=\"number\" \n              id=\"item-price\" \n              class=\"pixel-input\" \n              min=\"0.01\" \n              step=\"0.01\" \n              placeholder=\"2.50\" \n              required\n            >\n          </div>\n          <div class=\"form-group small\">\n            <label for=\"item-qty\" class=\"pixel-label\">Qty</label>\n            <input \n              type=\"number\" \n              id=\"item-qty\" \n              class=\"pixel-input\" \n              min=\"1\" \n              step=\"1\" \n              value=\"1\" \n              required\n            >\n          </div>\n        </div>\n        <button type=\"submit\" id=\"add-btn\" class=\"pixel-button primary-btn\">+ ADD ITEM</button>\n      </form>\n    </section>\n\n    <!-- Grocery List -->\n    <section class=\"panel\" aria-labelledby=\"list-heading\">\n      <div class=\"list-header\">\n        <h2 id=\"list-heading\" class=\"panel-title\">3. GROCERY LIST</h2>\n        <span id=\"item-count\" class=\"badge\">0 ITEMS</span>\n      </div>\n      <ul id=\"grocery-list\" class=\"grocery-items\" aria-live=\"polite\">\n        <!-- Dynamically populated items -->\n      </ul>\n      <p id=\"empty-message\" class=\"empty-notice\">Cart is empty. Add your pixel supplies!</p>\n    </section>\n\n    <!-- Summary Dashboard -->\n    <footer class=\"panel summary-panel\" id=\"summary-panel\" aria-labelledby=\"summary-heading\">\n      <h2 id=\"summary-heading\" class=\"visually-hidden\">Budget Summary</h2>\n      <div class=\"summary-row\">\n        <span class=\"summary-label\">TOTAL SPENT:</span>\n        <span id=\"total-spent\" class=\"summary-val\">$0.00</span>\n      </div>\n      <div class=\"summary-row\">\n        <span class=\"summary-label\">REMAINING:</span>\n        <span id=\"budget-left\" class=\"summary-val positive\">$50.00</span>\n      </div>\n      <div id=\"budget-alert\" class=\"budget-banner\" hidden role=\"alert\">\n        ⚠️ OVER BUDGET! REDUCE CART! ⚠️\n      </div>\n    </footer>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Single-page HTML document containing the pixel-styled grocery budget tracker layout and UI elements."
+    },
+    {
+      "path": "style.css",
+      "content": "/* ==========================================================================\n   Pixel Grocery Budget Tracker Styles\n   Cohesive 4-Color Palette: #1a1a24 (Night), #e4e4e9 (Paper),\n   #2d936c (Pixel Green), #d62246 (Pixel Red), #f39237 (Pixel Amber)\n   ========================================================================== */\n\n[hidden] {\n  display: none !important;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: 'Courier New', Courier, monospace, monospace;\n  font-size: 16px;\n  background-color: #242234;\n  background-image: \n    linear-gradient(45deg, #1b1926 25%, transparent 25%), \n    linear-gradient(-45deg, #1b1926 25%, transparent 25%), \n    linear-gradient(45deg, transparent 75%, #1b1926 75%), \n    linear-gradient(-45deg, transparent 75%, #1b1926 75%);\n  background-size: 24px 24px;\n  background-position: 0 0, 0 12px, 12px -12px, -12px 0px;\n  color: #1a1a24;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 20px 12px;\n}\n\n/* Accessibility utility */\n.visually-hidden {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border: 0;\n}\n\n/* Main Pixel Card */\n.pixel-card {\n  background-color: #f7f6f2;\n  width: 100%;\n  max-width: 520px;\n  border: 4px solid #1a1a24;\n  box-shadow: 8px 8px 0px #0e0d16;\n  padding: 24px 20px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n/* Header */\n.card-header {\n  text-align: center;\n  border-bottom: 4px dashed #1a1a24;\n  padding-bottom: 16px;\n}\n\n.pixel-icon {\n  font-size: 32px;\n  margin-bottom: 4px;\n}\n\n.title {\n  font-size: 26px;\n  letter-spacing: 2px;\n  font-weight: 900;\n  text-transform: uppercase;\n  color: #1a1a24;\n}\n\n.subtitle {\n  font-size: 13px;\n  font-weight: 700;\n  letter-spacing: 1px;\n  color: #5b596d;\n}\n\n/* Panels */\n.panel {\n  background-color: #ffffff;\n  border: 3px solid #1a1a24;\n  box-shadow: 4px 4px 0px #1a1a24;\n  padding: 16px;\n}\n\n.panel-title {\n  font-size: 15px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  margin-bottom: 12px;\n  color: #1a1a24;\n}\n\n/* Inputs & Labels */\n.pixel-label {\n  display: block;\n  font-size: 13px;\n  font-weight: 800;\n  text-transform: uppercase;\n  margin-bottom: 6px;\n  color: #1a1a24;\n}\n\n.pixel-input {\n  width: 100%;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: bold;\n  padding: 10px 12px;\n  color: #1a1a24;\n  background-color: #fff;\n  border: 3px solid #1a1a24;\n  box-shadow: 3px 3px 0px #9795a5;\n  outline: none;\n  transition: box-shadow 0.1s ease;\n}\n\n.pixel-input:focus {\n  border-color: #1a1a24;\n  box-shadow: 4px 4px 0px #2d936c;\n  background-color: #fafaff;\n}\n\n.input-row {\n  display: flex;\n  flex-direction: column;\n}\n\n/* Form Layout */\n.form-grid {\n  display: grid;\n  grid-template-columns: 2fr 1fr 1fr;\n  gap: 10px;\n  margin-bottom: 14px;\n}\n\n@media (max-width: 440px) {\n  .form-grid {\n    grid-template-columns: 1fr;\n  }\n}\n\n.form-group {\n  display: flex;\n  flex-direction: column;\n}\n\n/* Pixel Buttons */\n.pixel-button {\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  text-transform: uppercase;\n  cursor: pointer;\n  border: 3px solid #1a1a24;\n  box-shadow: 4px 4px 0px #1a1a24;\n  padding: 12px 16px;\n  outline: none;\n  display: inline-block;\n  text-align: center;\n  user-select: none;\n}\n\n.pixel-button:hover {\n  transform: translate(-1px, -1px);\n  box-shadow: 5px 5px 0px #1a1a24;\n}\n\n.pixel-button:active {\n  transform: translate(2px, 2px);\n  box-shadow: 2px 2px 0px #1a1a24;\n}\n\n.pixel-button:focus-visible {\n  outline: 3px dashed #d62246;\n  outline-offset: 3px;\n}\n\n.primary-btn {\n  width: 100%;\n  background-color: #2d936c;\n  color: #ffffff;\n}\n\n.primary-btn:hover {\n  background-color: #247b59;\n}\n\n.remove-btn {\n  background-color: #d62246;\n  color: #ffffff;\n  font-size: 13px;\n  padding: 6px 10px;\n  border: 2px solid #1a1a24;\n  box-shadow: 2px 2px 0px #1a1a24;\n}\n\n.remove-btn:hover {\n  background-color: #b51939;\n}\n\n/* Grocery List Display */\n.list-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 10px;\n}\n\n.badge {\n  background: #1a1a24;\n  color: #fff;\n  font-size: 12px;\n  font-weight: 800;\n  padding: 3px 8px;\n  letter-spacing: 1px;\n}\n\n.grocery-items {\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  max-height: 240px;\n  overflow-y: auto;\n  padding-right: 4px;\n}\n\n/* Custom Retro Scrollbar */\n.grocery-items::-webkit-scrollbar {\n  width: 8px;\n}\n.grocery-items::-webkit-scrollbar-track {\n  background: #eae8e1;\n  border: 2px solid #1a1a24;\n}\n.grocery-items::-webkit-scrollbar-thumb {\n  background: #1a1a24;\n}\n\n.grocery-item {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  background: #fdfdfd;\n  border: 2px solid #1a1a24;\n  box-shadow: 2px 2px 0px #b2b0bf;\n  padding: 8px 10px;\n  gap: 8px;\n}\n\n.item-details {\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n}\n\n.item-name-text {\n  font-weight: 800;\n  font-size: 15px;\n  color: #1a1a24;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.item-sub-text {\n  font-size: 13px;\n  color: #636173;\n}\n\n.item-right {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  flex-shrink: 0;\n}\n\n.item-subtotal {\n  font-weight: 900;\n  font-size: 15px;\n  color: #1a1a24;\n}\n\n.empty-notice {\n  text-align: center;\n  font-size: 14px;\n  font-style: italic;\n  color: #727083;\n  padding: 16px 0;\n}\n\n/* Summary & Alerts */\n.summary-panel {\n  background-color: #f0eee6;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n\n.summary-row {\n  display: flex;\n  justify-content: space-between;\n  font-weight: 900;\n  font-size: 18px;\n  border-bottom: 2px dotted #c5c3b9;\n  padding-bottom: 4px;\n}\n\n.summary-val {\n  font-family: inherit;\n}\n\n.summary-val.positive {\n  color: #2d936c;\n}\n\n.summary-panel.over-budget {\n  background-color: #ffd8df;\n  border-color: #d62246;\n}\n\n.summary-panel.over-budget .summary-val {\n  color: #d62246 !important;\n}\n\n.summary-panel.over-budget #total-spent {\n  color: #d62246 !important;\n  animation: pixel-pulse 1s infinite alternate;\n}\n\n.budget-banner {\n  background-color: #d62246;\n  color: #ffffff;\n  font-weight: 900;\n  text-align: center;\n  padding: 8px 10px;\n  font-size: 14px;\n  letter-spacing: 1px;\n  border: 2px solid #1a1a24;\n  box-shadow: 2px 2px 0px #1a1a24;\n  margin-top: 6px;\n}\n\n@keyframes pixel-pulse {\n  from {\n    transform: scale(1);\n  }\n  to {\n    transform: scale(1.05);\n  }\n}\n",
+      "description": "Retro pixel-art styled CSS with custom blocky borders, cohesive palette, and responsive layouts."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  // State management\n  let budget = 50.00;\n  let items = [];\n\n  // DOM element selections\n  const budgetInput = document.getElementById('budget-input');\n  const itemForm = document.getElementById('item-form');\n  const itemNameInput = document.getElementById('item-name');\n  const itemPriceInput = document.getElementById('item-price');\n  const itemQtyInput = document.getElementById('item-qty');\n  const groceryListEl = document.getElementById('grocery-list');\n  const itemCountEl = document.getElementById('item-count');\n  const emptyMessageEl = document.getElementById('empty-message');\n  const totalSpentEl = document.getElementById('total-spent');\n  const budgetLeftEl = document.getElementById('budget-left');\n  const summaryPanel = document.getElementById('summary-panel');\n  const budgetAlert = document.getElementById('budget-alert');\n\n  // Currency formatting helper\n  const formatCurrency = (val) => '$' + Math.abs(val).toFixed(2);\n\n  // Update totals and over-budget visual states\n  function updateTotals() {\n    const totalSpent = items.reduce((acc, item) => acc + (item.price * item.quantity), 0);\n    const remaining = budget - totalSpent;\n    const isOver = totalSpent > budget;\n\n    // Render texts\n    totalSpentEl.textContent = formatCurrency(totalSpent);\n    itemCountEl.textContent = `${items.length} ${items.length === 1 ? 'ITEM' : 'ITEMS'}`;\n\n    if (remaining < 0) {\n      budgetLeftEl.textContent = `-${formatCurrency(remaining)}`;\n      budgetLeftEl.className = 'summary-val negative';\n    } else {\n      budgetLeftEl.textContent = formatCurrency(remaining);\n      budgetLeftEl.className = 'summary-val positive';\n    }\n\n    // Over-budget alert styling\n    if (isOver) {\n      summaryPanel.classList.add('over-budget');\n      totalSpentEl.style.color = '#d62246';\n      budgetAlert.removeAttribute('hidden');\n    } else {\n      summaryPanel.classList.remove('over-budget');\n      totalSpentEl.style.color = '';\n      budgetAlert.setAttribute('hidden', '');\n    }\n  }\n\n  // Render grocery items list\n  function renderList() {\n    groceryListEl.innerHTML = '';\n    \n    if (items.length === 0) {\n      emptyMessageEl.removeAttribute('hidden');\n    } else {\n      emptyMessageEl.setAttribute('hidden', '');\n    }\n\n    items.forEach((item) => {\n      const li = document.createElement('li');\n      li.className = 'grocery-item';\n\n      const detailsDiv = document.createElement('div');\n      detailsDiv.className = 'item-details';\n\n      const nameSpan = document.createElement('span');\n      nameSpan.className = 'item-name-text';\n      nameSpan.textContent = item.name;\n\n      const subSpan = document.createElement('span');\n      subSpan.className = 'item-sub-text';\n      subSpan.textContent = `${item.quantity} × $${item.price.toFixed(2)}`;\n\n      detailsDiv.appendChild(nameSpan);\n      detailsDiv.appendChild(subSpan);\n\n      const rightDiv = document.createElement('div');\n      rightDiv.className = 'item-right';\n\n      const subtotalSpan = document.createElement('span');\n      subtotalSpan.className = 'item-subtotal';\n      subtotalSpan.textContent = `$${(item.price * item.quantity).toFixed(2)}`;\n\n      const removeBtn = document.createElement('button');\n      removeBtn.type = 'button';\n      removeBtn.className = 'pixel-button remove-btn';\n      removeBtn.setAttribute('aria-label', `Remove ${item.name} from list`);\n      removeBtn.textContent = 'DEL';\n\n      removeBtn.addEventListener('click', () => {\n        removeItem(item.id);\n      });\n\n      rightDiv.appendChild(subtotalSpan);\n      rightDiv.appendChild(removeBtn);\n\n      li.appendChild(detailsDiv);\n      li.appendChild(rightDiv);\n      groceryListEl.appendChild(li);\n    });\n\n    updateTotals();\n  }\n\n  // Add item handler\n  function handleAddItem(e) {\n    e.preventDefault();\n    const name = itemNameInput.value.trim();\n    const price = parseFloat(itemPriceInput.value);\n    const qty = parseInt(itemQtyInput.value, 10);\n\n    if (!name) {\n      itemNameInput.focus();\n      return;\n    }\n    if (isNaN(price) || price < 0) {\n      itemPriceInput.focus();\n      return;\n    }\n    if (isNaN(qty) || qty < 1) {\n      itemQtyInput.focus();\n      return;\n    }\n\n    const newItem = {\n      id: Date.now().toString(),\n      name,\n      price,\n      quantity: qty\n    };\n\n    items.push(newItem);\n    renderList();\n\n    // Reset entry inputs and refocus\n    itemNameInput.value = '';\n    itemPriceInput.value = '';\n    itemQtyInput.value = '1';\n    itemNameInput.focus();\n  }\n\n  // Remove item handler\n  function removeItem(id) {\n    items = items.filter(item => item.id !== id);\n    renderList();\n  }\n\n  // Budget change handler\n  function handleBudgetChange() {\n    const newBudget = parseFloat(budgetInput.value);\n    if (!isNaN(newBudget) && newBudget >= 0) {\n      budget = newBudget;\n    } else {\n      budget = 0;\n    }\n    updateTotals();\n  }\n\n  // Event listeners\n  itemForm.addEventListener('submit', handleAddItem);\n  budgetInput.addEventListener('input', handleBudgetChange);\n\n  // Initial render\n  renderList();\n});\n",
+      "description": "Vanilla JavaScript handling state, form inputs, dynamic DOM updates, budget calculations, and over-budget styling."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Grocery Budget Tracker\n\nA retro, pixel-art styled grocery list and budget tracking application built with offline vanilla HTML, CSS, and plain JavaScript.\n\n## Features\n\n- **Target Budget Management**: Configure and update your target budget in real-time.\n- **Item Registration**: Add grocery items with custom names, prices, and quantities.\n- **Real-Time Running Totals**: Tracks total accumulated cost and remaining budget as items are added or removed.\n- **Over-Budget Warning**: Automatically marks the running total in bright red and highlights an active warning state when expenses exceed the allocated budget.\n- **Item Removal**: Easily delete any grocery item from your active list with reactive recalculation.\n- **Retro Pixel Aesthetic**: Tailored 4-color palette, chunky borders, offset box shadows, and arcade-like typography.\n- **Accessible & Responsive**: Fully accessible keyboard navigation, explicit ARIA attributes, and fluid layout down to 360px screen widths without external assets or dependencies.\n\n## Usage\n\n1. Open `index.html` in any modern web browser.\n2. Adjust your target budget in the **1. SET BUDGET** panel.\n3. Input your grocery items, prices, and quantities in the **2. ADD GROCERY ITEM** panel and click **+ ADD ITEM** (or hit Enter).\n4. View your items in the grocery list and monitor running totals and balance in the summary box.\n",
+      "description": "Documentation for the Pixel Grocery Budget Tracker project."
+    }
+  ]
+}

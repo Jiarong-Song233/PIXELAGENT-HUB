@@ -1,8 +1,11 @@
+import type { z } from 'zod';
+import type { browserCheckSchema } from './schemas.js';
+
 /**
  * Repair notes from a failed browser-check run: the exact text the Coder receives, shared by the
  * server (repair from a saved browser run) and PLAY LIVE (automatic repair round).
  */
-type PlannedCheck = { name: string; selector: string; nth?: number; expected: string; assertion?: 'text' | 'matches' | 'disabled' | 'visible' | 'count' | 'attribute' | 'changed' | 'unchanged' | 'stable'; attribute?: string; actions: unknown[] };
+type PlannedCheck = { name: string; selector: string; nth?: number; expected: string; assertion?: 'text' | 'matches' | 'disabled' | 'visible' | 'count' | 'attribute' | 'changed' | 'unchanged' | 'stable'; attribute?: string; actions: z.infer<typeof browserCheckSchema>['actions'] };
 type CheckResult = { name: string; status: 'passed' | 'failed'; actual: string; error?: string };
 
 export function browserFailureNotes(planned: PlannedCheck[], results: CheckResult[], runtimeErrors: string[] = [], blockedRequests: string[] = []): string[] {

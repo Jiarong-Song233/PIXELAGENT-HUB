@@ -4,7 +4,8 @@ import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'reac
 import { Code2, Download, Play, Plus, Radio, RefreshCw, RotateCcw, Share2, Square, Terminal, Volume2, VolumeX, Zap } from 'lucide-react';
 import { OFFLINE_MESSAGE, studioApi } from '../lib/recordsApi';
 import type { StudioChanges, StudioDiagnostic, StudioProject, StudioSummary, StudioVersions, StudioTestPlan } from '../types/studio';
-import { readCheckResults, type BrowserCheckResult } from '../lib/studioChecks';
+import type { BrowserCheckResult } from '../lib/studioChecks';
+import { runInPageChecks } from '../lib/live/checks';
 import { prepareStudioPreview, readPreviewMessage } from '../lib/studioPreview';
 import './Studio.css';
 import StudioReviewPanel from '../components/StudioReviewPanel';
@@ -64,12 +65,11 @@ export default function Studio() {
   const [changeRequest, setChangeRequest] = useState('');
   const [testPlans, setTestPlans] = useState<StudioTestPlan[]>([]);
   const [testPlanRefresh, setTestPlanRefresh] = useState(0);
-  const [qaRun, setQaRun] = useState(0);
   const [qaRunning, setQaRunning] = useState(false);
   const [qaResults, setQaResults] = useState<BrowserCheckResult[]>([]);
   const [qaSaved, setQaSaved] = useState(false);
   const qaPlan = useRef<StudioTestPlan | null>(null);
-  const qaTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const qaController = useRef<AbortController | undefined>(undefined);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
@@ -81,9 +81,7 @@ export default function Studio() {
   const preview = useMemo(() => {
     const nonce = crypto.randomUUID();
     return { nonce, html: prepareStudioPreview(html, nonce) };
-  // qaRun is deliberate: each Quick checks run gets a freshly loaded frame with a new nonce.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [html, qaRun]);
+  }, [html]);
 
   useEffect(() => {
     setRuntimeErrors([]); setPreviewLoaded(false); setSavedSnapshot('');
@@ -91,18 +89,8 @@ export default function Studio() {
       const message = readPreviewMessage(event, previewFrame.current?.contentWindow || null, preview.nonce);
       if (message?.kind === 'loaded') {
         setPreviewLoaded(true);
-        const plan = qaPlan.current;
-        if (plan?.projectId === projectId && qaTimer.current) previewFrame.current?.contentWindow?.postMessage({ channel: 'studio-checks', nonce: preview.nonce, checks: plan?.result?.output.checks }, '*');
       }
       if (message?.kind === 'error') setRuntimeErrors((errors) => errors.length < 20 ? [...errors, message.message] : errors);
-      if (message?.kind === 'checks' && qaTimer.current) {
-        const results = readCheckResults(message.message);
-        const checks = qaPlan.current?.result?.output.checks;
-        if (results && checks && results.length === checks.length && results.every((result, index) => result.name === checks[index].name)) {
-          clearTimeout(qaTimer.current); qaTimer.current = undefined;
-          setQaResults(results); setQaRunning(false);
-        }
-      }
     };
     window.addEventListener('message', receive);
     return () => window.removeEventListener('message', receive);
@@ -110,7 +98,7 @@ export default function Studio() {
 
   useEffect(() => {
     qaPlan.current = null; setQaRunning(false); setQaResults([]); setQaSaved(false);
-    return () => { clearTimeout(qaTimer.current); qaTimer.current = undefined; };
+    return () => { qaController.current?.abort(); };
   }, [projectId]);
 
   useEffect(() => {
@@ -293,13 +281,18 @@ export default function Studio() {
     if (!projectId) return;
     await studioApi.cancelTestPlan(projectId, id); setTestPlanRefresh((key) => key + 1);
   });
-  const runChecks = (plan: StudioTestPlan) => {
-    qaPlan.current = plan; setQaResults([]); setQaSaved(false); setQaRunning(true); setTab('preview');
-    qaTimer.current = setTimeout(() => {
-      qaTimer.current = undefined; setQaRunning(false);
-      setQaResults((plan.result?.output.checks || []).map((check) => ({ name: check.name, status: 'failed', actual: '', error: 'Sandbox checks did not finish within 20 seconds' })));
-    }, 20000);
-    setQaRun((value) => value + 1);
+  const runChecks = async (plan: StudioTestPlan) => {
+    const controller = new AbortController();
+    qaController.current?.abort(); qaController.current = controller;
+    qaPlan.current = plan; setQaResults([]); setQaSaved(false); setQaRunning(true);
+    try {
+      const run = await runInPageChecks(html, plan.result?.output.checks || [], controller.signal, plan.result?.output.isolation);
+      if (!controller.signal.aborted) { setQaResults(run.results); setRuntimeErrors(run.errors); }
+    } catch (error) {
+      if (!controller.signal.aborted) setError(error instanceof Error ? error.message : String(error));
+    } finally {
+      if (!controller.signal.aborted) setQaRunning(false);
+    }
   };
   const saveChecks = () => action(async () => {
     if (!projectId || !project?.previewFile || !qaPlan.current || !qaResults.length) return;
@@ -436,9 +429,9 @@ export default function Studio() {
 
           {ready && !REPLAY && <section className="studio-tester" aria-label="Quick checks">
             <h3 className="pixel-font">QUICK CHECKS</h3>
-            <p className="studio-hint">The Tester writes click-and-expect checks; they run inside the preview above. The full sandboxed browser test is below.</p>
+            <p className="studio-hint">The Tester writes click-and-expect checks; they run in a separate test preview. The full sandboxed browser test is below.</p>
             <button disabled={busy || qaRunning || testPlans.some((plan) => ['queued', 'running'].includes(plan.status))} onClick={() => void generateTests()}>Write checks</button>
-            {testPlans.map((plan) => <details key={plan.id}><summary>Plan {plan.id.slice(0, 8)} · {plan.status}</summary>{plan.error && <p role="alert">{plan.error}</p>}{['queued', 'running'].includes(plan.status) && <button onClick={() => void cancelTests(plan.id)} disabled={busy}>Cancel</button>}{plan.result?.output?.checks && <><ol>{plan.result.output.checks.map((check, index) => <li key={index}>{check.name}: {check.actions.length} actions → {check.selector}{check.nth === undefined ? '' : ` [nth ${check.nth}]`} {check.attribute ? `${check.assertion} attribute ${check.attribute}` : check.assertion || 'text'}{check.assertion === 'changed' ? ' from before actions (or just after if initially absent)' : check.assertion === 'unchanged' ? ' from before actions' : check.assertion === 'stable' ? ' stays the same after actions' : check.assertion === 'matches' ? ` pattern ${JSON.stringify(check.expected)} (u)` : ` = ${JSON.stringify(check.expected)}`}</li>)}</ol><button disabled={plan.status !== 'ready' || busy || qaRunning || plan.previewFile !== project?.previewFile} onClick={() => runChecks(plan)}>Run in preview</button></>}</details>)}
+            {testPlans.map((plan) => <details key={plan.id}><summary>Plan {plan.id.slice(0, 8)} · {plan.status}</summary>{plan.error && <p role="alert">{plan.error}</p>}{['queued', 'running'].includes(plan.status) && <button onClick={() => void cancelTests(plan.id)} disabled={busy}>Cancel</button>}{plan.result?.output?.checks && <><ol>{plan.result.output.checks.map((check, index) => <li key={index}>{check.name}: {check.actions.length} actions{check.actions.some((action) => action.type === 'advance') ? ` (advance ${check.actions.reduce((sum, action) => sum + (action.type === 'advance' ? action.ms : 0), 0)} ms)` : ''} → {check.selector}{check.nth === undefined ? '' : ` [nth ${check.nth}]`} {check.attribute ? `${check.assertion} attribute ${check.attribute}` : check.assertion || 'text'}{check.assertion === 'changed' ? ' from before actions (or just after if initially absent)' : check.assertion === 'unchanged' ? ' from before actions' : check.assertion === 'stable' ? ' stays the same after actions' : check.assertion === 'matches' ? ` pattern ${JSON.stringify(check.expected)} (u)` : ` = ${JSON.stringify(check.expected)}`}</li>)}</ol><button disabled={plan.status !== 'ready' || busy || qaRunning || plan.previewFile !== project?.previewFile} onClick={() => void runChecks(plan)}>Run in preview</button></>}</details>)}
             {qaRunning && <p role="status">Running checks…</p>}
             {qaResults.length > 0 && <><p role="status">{qaResults.filter((result) => result.status === 'passed').length} / {qaResults.length} passed</p><ul>{qaResults.map((result, index) => <li key={index}>{result.name} · {result.status} · got {JSON.stringify(result.actual)}{result.error && <pre>{result.error}</pre>}</li>)}</ul><button disabled={busy || qaSaved} onClick={() => void saveChecks()}>{qaSaved ? 'Saved' : 'Save results'}</button></>}
           </section>}

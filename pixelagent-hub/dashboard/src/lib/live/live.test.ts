@@ -514,3 +514,31 @@ it.each([true, false])('round-trips the Tester model through storage (remember: 
   key.forgetLiveCredentials();
   expect(sessionStore.size + localStore.size).toBe(0);
 });
+
+
+it('installs the clock only on frames containing advance checks', async () => {
+  const prepare = vi.fn<(html: string, nonce: string, options?: { clock?: boolean }) => string>(() => '<html></html>');
+  vi.doMock('../studioPreview', () => ({ prepareStudioPreview: prepare, readPreviewMessage: (event: { data: unknown }) => event.data }));
+  const receive = new Set<(event: unknown) => void>();
+  vi.stubGlobal('window', { addEventListener: (_: string, fn: (event: unknown) => void) => receive.add(fn), removeEventListener: (_: string, fn: (event: unknown) => void) => receive.delete(fn) });
+  let shared = false;
+  const advance = { name: 'Round', actions: [{ type: 'advance' as const, ms: 31000 }], selector: '#status', expected: 'Game over' };
+  const plain = { ...advance, name: 'Plain', actions: [] };
+  vi.stubGlobal('document', {
+    createElement: () => ({ setAttribute() {}, style: {}, remove() {}, contentWindow: {} }),
+    body: { append: () => {
+      const checks = shared ? [plain, advance] : prepare.mock.calls.length === 1 ? [advance] : [plain];
+      queueMicrotask(() => { for (const fn of receive) fn({ data: { kind: 'checks', message: JSON.stringify(checks.map((check) => ({ name: check.name, status: 'passed', actual: 'Game over' }))) } }); });
+    } },
+  });
+  try {
+    const { runInPageChecks } = await vi.importActual<typeof import('./checks')>('./checks');
+    const run = await runInPageChecks('<html></html>', [advance, plain], undefined, 'fresh');
+    expect(run.results.map((result) => result.status)).toEqual(['passed', 'passed']);
+    expect(prepare.mock.calls.map((call) => call[2])).toEqual([{ clock: true }, { clock: false }]);
+    shared = true;
+    const sharedRun = await runInPageChecks('<html></html>', [plain, advance], undefined, 'shared');
+    expect(sharedRun.results).toHaveLength(2);
+    expect(prepare.mock.calls[2][2]).toEqual({ clock: true });
+  } finally { vi.doUnmock('../studioPreview'); }
+});

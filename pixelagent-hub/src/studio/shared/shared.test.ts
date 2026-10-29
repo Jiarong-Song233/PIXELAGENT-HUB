@@ -7,6 +7,14 @@ import { coderPrompt, STUDIO_CONSTRAINTS } from './prompts.js';
 test('model replies parse from a fenced block or bare JSON, and must be one object', () => {
   assert.deepEqual(parseModelObject('Here you go:\n```json\n{"a":1}\n```'), { a: 1 });
   assert.deepEqual(parseModelObject(' {"a":2} '), { a: 2 });
+  // A key whose quotes were dropped is repaired; other invalid JSON still fails as before.
+  assert.deepEqual(parseModelObject('{"actions":[],selector:".desk",count:2}'), { actions: [], selector: '.desk', count: 2 });
+  assert.deepEqual(parseModelObject('{"note":"Time, left: 5",selector:"#t"}'), { note: 'Time, left: 5', selector: '#t' });
+  // A bare object is parsed whole even when a string inside it holds a fenced block.
+  assert.deepEqual(parseModelObject('{"readme":"Run:\\n```bash\\nnpm start\\n```"}'), { readme: 'Run:\n```bash\nnpm start\n```' });
+  assert.deepEqual(parseModelObject('{"checks":[{"name":"x","actions":[],selector":"#count","expected":"0"}]}'), { checks: [{ name: 'x', actions: [], selector: '#count', expected: '0' }] });
+  assert.deepEqual(parseModelObject('{"text":"a,b\\":c"}'), { text: 'a,b":c' });
+  assert.throws(() => parseModelObject('{"a":1,}'), SyntaxError);
   assert.throws(() => parseModelObject('[1,2]'), /Expected a JSON object/);
 });
 
@@ -263,4 +271,17 @@ test('test plans accept 16 actions per check and reject 17', () => {
   const check = { name: 'Sixteen clicks', actions, selector: 'output', expected: '16' };
   assert.equal(parseTestPlanOutput({ checks: [check], limitations: [] }).checks[0].actions.length, 16);
   assert.throws(() => parseTestPlanOutput({ checks: [{ ...check, actions: [...actions, actions[0]] }], limitations: [] }), /did not match/);
+});
+
+
+test('advance has independent bounds and normalises to type and ms', async () => {
+  const { browserCheckSchema } = await import('./schemas.js');
+  const check = { name: 'Round', actions: [{ type: 'advance', ms: 30000 }], selector: '#status', expected: 'Game over' };
+  assert.equal(browserCheckSchema.safeParse(check).success, true);
+  for (const actions of [[{ type: 'advance', ms: 50 }], [{ type: 'advance', ms: 700000 }], [{ type: 'advance', ms: 100.5 }], [{ type: 'advance', ms: 30000, selector: '#status' }], [{ type: 'advance', ms: 350000 }, { type: 'advance', ms: 350000 }]]) {
+    assert.equal(browserCheckSchema.safeParse({ ...check, actions }).success, false);
+  }
+  assert.equal(browserCheckSchema.safeParse({ ...check, actions: [{ type: 'advance', ms: 600000 }, { type: 'wait', ms: 6000 }, { type: 'wait', ms: 2000 }] }).success, true);
+  const parsed = parseTestPlanOutput({ checks: [{ ...check, actions: [{ type: 'advance', ms: 30000, selector: null, nth: null, value: 'discard' }] }], limitations: [] });
+  assert.deepEqual(parsed.checks[0].actions, check.actions);
 });
