@@ -56,7 +56,8 @@
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build",
     "smoke:live": "tsx scripts/smoke-live.ts",
-    "codex:chat": "tsx scripts/codex-chat-server.ts"
+    "codex:chat": "tsx scripts/codex-chat-server.ts",
+    "agy:chat": "tsx scripts/codex-chat-server.ts --backend agy"
   },
   "keywords": [
     "agent",
