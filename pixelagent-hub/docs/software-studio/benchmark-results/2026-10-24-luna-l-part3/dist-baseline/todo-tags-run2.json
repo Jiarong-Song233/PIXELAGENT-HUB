@@ -1,0 +1,579 @@
+{
+  "caseId": "todo-tags",
+  "run": 2,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\baseline",
+  "managerTokens": 20933,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 2,
+  "compileFailures": 0,
+  "firstChecks": "0/3",
+  "finalChecks": "1/3",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 3,
+  "coderRepair": true,
+  "checkRuns": [
+    "0/3",
+    "1/3",
+    "0/3",
+    "1/3"
+  ],
+  "repairTriggered": true,
+  "repairReverted": true,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 137,
+  "reportedTokens": 124387,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T07:15:33.554Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T07:15:33.554Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T07:15:52.156Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Notes List"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T07:15:52.156Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T07:16:32.617Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T07:16:32.618Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T07:16:33.021Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T07:16:33.023Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "3f5eb0c2-ef4b-433b-bb13-1f605d868aff"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T07:16:49.948Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "3f5eb0c2-ef4b-433b-bb13-1f605d868aff",
+        "checks": 3
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T07:16:49.949Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "796b835d-3fc1-44bc-ae5b-89e4679744a4",
+        "testPlanId": "3f5eb0c2-ef4b-433b-bb13-1f605d868aff",
+        "checks": 3,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T07:16:52.984Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "796b835d-3fc1-44bc-ae5b-89e4679744a4",
+        "name": "Add notes and count tags",
+        "passed": false,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T07:16:52.984Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "796b835d-3fc1-44bc-ae5b-89e4679744a4",
+        "name": "Filter by tag and clear",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T07:16:52.984Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "796b835d-3fc1-44bc-ae5b-89e4679744a4",
+        "name": "Clear filter restores all notes",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T07:16:52.984Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "796b835d-3fc1-44bc-ae5b-89e4679744a4",
+        "status": "failed",
+        "passed": 0,
+        "failed": 3,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T07:16:52.985Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "3f5eb0c2-ef4b-433b-bb13-1f605d868aff",
+        "review": true
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T07:17:12.100Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "3f5eb0c2-ef4b-433b-bb13-1f605d868aff",
+        "checks": 3,
+        "review": true,
+        "revised": 3,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 25150,
+          "completion_tokens": 593,
+          "total_tokens": 25743
+        },
+        "verdicts": [
+          {
+            "name": "Add notes and count tags",
+            "verdict": "check-wrong",
+            "reason": "The check counts elements in #tag-list and expects 3, but the requirements call for counting notes per tag. With the two notes added, there are two distinct tag entries: ideas and someday. The check c"
+          },
+          {
+            "name": "Filter by tag and clear",
+            "verdict": "check-wrong",
+            "reason": "The check tries to click a tag-list button whose label starts with “Filter notes by ideas,” but tag-list buttons are labeled “Show notes tagged ideas.” A requirement-compliant app can use that label, "
+          },
+          {
+            "name": "Clear filter restores all notes",
+            "verdict": "check-wrong",
+            "reason": "The check uses the same mismatched tag-list button selector, so its filtering action cannot occur. The page provides a note tag button labeled “Filter notes by ideas, 2 notes”; clicking it and then Cl"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T07:17:12.100Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "9489699c-8800-4c13-8f99-8d24e1e712a2",
+        "testPlanId": "3f5eb0c2-ef4b-433b-bb13-1f605d868aff",
+        "checks": 3,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T07:17:13.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "9489699c-8800-4c13-8f99-8d24e1e712a2",
+        "name": "Add notes and count tags",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T07:17:13.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "9489699c-8800-4c13-8f99-8d24e1e712a2",
+        "name": "Filter by tag and clear",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T07:17:13.054Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "9489699c-8800-4c13-8f99-8d24e1e712a2",
+        "name": "Clear filter restores all notes",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T07:17:13.054Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "9489699c-8800-4c13-8f99-8d24e1e712a2",
+        "status": "failed",
+        "passed": 1,
+        "failed": 2,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T07:17:13.056Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-29T07:17:46.080Z",
+      "type": "code_ready",
+      "round": 2,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-29T07:17:46.080Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-29T07:17:46.104Z",
+      "type": "build_passed",
+      "round": 2
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-29T07:17:46.104Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "946a4a94-bb27-4e7d-82e9-a78a098faf4d",
+        "testPlanId": "3f5eb0c2-ef4b-433b-bb13-1f605d868aff",
+        "checks": 3,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-29T07:17:47.087Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "946a4a94-bb27-4e7d-82e9-a78a098faf4d",
+        "name": "Add notes and count tags",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-29T07:17:47.087Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "946a4a94-bb27-4e7d-82e9-a78a098faf4d",
+        "name": "Filter by tag and clear",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-29T07:17:47.087Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "946a4a94-bb27-4e7d-82e9-a78a098faf4d",
+        "name": "Clear filter restores all notes",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-29T07:17:47.087Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "946a4a94-bb27-4e7d-82e9-a78a098faf4d",
+        "status": "failed",
+        "passed": 0,
+        "failed": 3,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-29T07:17:47.088Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "72e996b0-df00-41f9-b4d2-03e7620c4e8c",
+        "testPlanId": "3f5eb0c2-ef4b-433b-bb13-1f605d868aff",
+        "checks": 3,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-29T07:17:48.066Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "72e996b0-df00-41f9-b4d2-03e7620c4e8c",
+        "name": "Add notes and count tags",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-29T07:17:48.066Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "72e996b0-df00-41f9-b4d2-03e7620c4e8c",
+        "name": "Filter by tag and clear",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-29T07:17:48.066Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "72e996b0-df00-41f9-b4d2-03e7620c4e8c",
+        "name": "Clear filter restores all notes",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-29T07:17:48.066Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "72e996b0-df00-41f9-b4d2-03e7620c4e8c",
+        "status": "failed",
+        "passed": 1,
+        "failed": 2,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-29T07:17:48.070Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html",
+        "repairReverted": true
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Add notes and count tags",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#note-text",
+            "value": "Alpha"
+          },
+          {
+            "type": "input",
+            "selector": "#note-tags",
+            "value": "ideas, someday"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "input",
+            "selector": "#note-text",
+            "value": "Beta"
+          },
+          {
+            "type": "input",
+            "selector": "#note-tags",
+            "value": "ideas"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          }
+        ],
+        "selector": "#tag-list .tag-button[aria-label^='Show notes tagged ideas'] .tag-count",
+        "expected": "2",
+        "assertion": "text"
+      },
+      {
+        "name": "Filter by tag and clear",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#note-text",
+            "value": "Alpha"
+          },
+          {
+            "type": "input",
+            "selector": "#note-tags",
+            "value": "ideas, someday"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "click",
+            "selector": "#notes-list .tag-button[aria-label='Filter notes by ideas, 2 notes']"
+          }
+        ],
+        "selector": "#active-tag",
+        "expected": "ideas",
+        "assertion": "text"
+      },
+      {
+        "name": "Clear filter restores all notes",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#note-text",
+            "value": "Alpha"
+          },
+          {
+            "type": "input",
+            "selector": "#note-tags",
+            "value": "ideas, someday"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "input",
+            "selector": "#note-text",
+            "value": "Beta"
+          },
+          {
+            "type": "input",
+            "selector": "#note-tags",
+            "value": "ideas"
+          },
+          {
+            "type": "click",
+            "selector": ".add-button"
+          },
+          {
+            "type": "click",
+            "selector": "#notes-list .tag-button[aria-label='Filter notes by ideas, 2 notes']"
+          },
+          {
+            "type": "click",
+            "selector": "#clear-filter"
+          }
+        ],
+        "selector": "#note-total",
+        "expected": "2",
+        "assertion": "text"
+      }
+    ],
+    "limitations": [
+      "Tag list count checks item total; per-tag displayed counts are not directly verified.",
+      "Filter check does not assert which note remains visible."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 25008,
+      "completion_tokens": 401,
+      "total_tokens": 25409
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    },
+    {
+      "round": 2,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#f4efe3\">\n  <title>Pixel Notes</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"board\" aria-labelledby=\"page-title\">\n    <header class=\"header\">\n      <p class=\"eyebrow\">YOUR LITTLE CORNER</p>\n      <h1 id=\"page-title\">Pixel Notes<span aria-hidden=\"true\"> ✳</span></h1>\n      <p class=\"intro\">Catch a thought. Give it a tag. Find it later.</p>\n    </header>\n\n    <form id=\"note-form\" class=\"note-form\">\n      <label for=\"note-text\">Note</label>\n      <textarea id=\"note-text\" rows=\"3\" placeholder=\"What’s on your mind?\" required></textarea>\n      <label for=\"note-tags\">Tags <span class=\"hint\">(separate with commas)</span></label>\n      <input id=\"note-tags\" type=\"text\" placeholder=\"ideas, someday\">\n      <button class=\"add-button\" type=\"submit\">＋ Add note</button>\n    </form>\n\n    <section class=\"notes-section\" aria-labelledby=\"notes-heading\">\n      <div class=\"section-heading\">\n        <h2 id=\"notes-heading\">Your notes <span id=\"note-total\" class=\"count\">0</span></h2>\n        <div id=\"filter-status\" class=\"filter-status\" hidden>\n          <span>Showing <strong id=\"active-tag\"></strong></span>\n          <button id=\"clear-filter\" type=\"button\" class=\"clear-button\" aria-label=\"Clear tag filter\">Clear ×</button>\n        </div>\n      </div>\n      <ul id=\"notes-list\" class=\"notes-list\" aria-live=\"polite\"></ul>\n      <p id=\"empty-state\" class=\"empty-state\">Your page is blank. Add a note to get started.</p>\n    </section>\n\n    <aside class=\"tag-section\" aria-labelledby=\"tags-heading\">\n      <div class=\"section-heading\"><h2 id=\"tags-heading\">Tags <span class=\"hint\">note counts</span></h2></div>\n      <ul id=\"tag-list\" class=\"tag-list\" aria-label=\"Filter notes by tag\"></ul>\n      <p id=\"no-tags\" class=\"no-tags\">Tags you use will show up here.</p>\n    </aside>\n    <footer>MADE FOR YOUR THOUGHTS <span aria-hidden=\"true\">·</span> STORED ON THIS DEVICE</footer>\n  </main>\n</body>\n</html>\n",
+      "description": "Accessible page structure and note form."
+    },
+    {
+      "path": "styles.css",
+      "content": ":root {\n  color-scheme: light;\n  --paper: #fffdf7;\n  --ink: #282c27;\n  --muted: #74796e;\n  --green: #3d6653;\n  --mint: #e6efe7;\n  --coral: #d8755c;\n  --line: #e8e2d6;\n}\n* { box-sizing: border-box; }\n[hidden] { display: none !important; }\nbody {\n  margin: 0;\n  min-height: 100vh;\n  padding: 40px 18px;\n  display: grid;\n  place-items: start center;\n  background-color: #f4efe3;\n  background-image: radial-gradient(#d9d0bd 1px, transparent 1px);\n  background-size: 18px 18px;\n  color: var(--ink);\n  font: 16px/1.5 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n}\nbutton, input, textarea { font: inherit; }\n.board {\n  width: min(100%, 620px);\n  padding: 38px clamp(22px, 6vw, 48px) 24px;\n  background: var(--paper);\n  border: 2px solid var(--ink);\n  border-radius: 10px;\n  box-shadow: 8px 8px 0 var(--ink);\n}\n.header { margin-bottom: 28px; }\n.eyebrow, footer { color: var(--green); font-size: 12px; font-weight: 800; letter-spacing: .13em; }\n.eyebrow { margin: 0 0 6px; }\nh1 { margin: 0; font-size: clamp(30px, 7vw, 42px); line-height: 1.1; letter-spacing: -.04em; }\nh1 span { color: var(--coral); }\n.intro { margin: 9px 0 0; color: var(--muted); }\n.note-form { display: grid; gap: 9px; padding: 20px; background: #f7f3e9; border: 1px solid var(--line); border-radius: 8px; }\nlabel { font-weight: 700; }\n.hint { color: var(--muted); font-size: 14px; font-weight: 400; }\ntextarea, input {\n  width: 100%; padding: 11px 12px; color: var(--ink); background: var(--paper);\n  border: 1px solid #cfc8b9; border-radius: 5px; resize: vertical;\n}\ntextarea { min-height: 76px; }\ntextarea:focus, input:focus, button:focus-visible { outline: 3px solid #e7a18e; outline-offset: 2px; }\nbutton { cursor: pointer; }\n.add-button {\n  justify-self: start; margin-top: 4px; padding: 10px 16px; color: white; background: var(--green);\n  border: 2px solid var(--green); border-radius: 5px; font-weight: 750; transition: transform .12s, background .12s;\n}\n.add-button:hover { background: #2e5141; }\n.add-button:active { transform: translateY(2px); }\n.notes-section { margin-top: 32px; }\n.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }\nh2 { margin: 0; font-size: 20px; letter-spacing: -.02em; }\n.count { display: inline-grid; min-width: 25px; height: 25px; margin-left: 4px; place-items: center; color: var(--green); background: var(--mint); border-radius: 50%; font-size: 13px; vertical-align: 2px; }\n.filter-status { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 14px; }\n.filter-status strong { color: var(--green); }\n.clear-button { padding: 4px 8px; color: var(--green); background: transparent; border: 1px solid #b6c8b9; border-radius: 4px; font-size: 14px; }\n.clear-button:hover { background: var(--mint); }\n.notes-list, .tag-list { padding: 0; margin: 12px 0 0; list-style: none; }\n.notes-list { display: grid; gap: 10px; }\n.note-card { padding: 15px 16px; border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: 5px; overflow-wrap: anywhere; }\n.note-text { margin: 0; white-space: pre-wrap; }\n.note-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }\n.tag-button { padding: 4px 9px; color: var(--green); background: var(--mint); border: 1px solid transparent; border-radius: 20px; font-size: 14px; }\n.tag-button:hover, .tag-button[aria-pressed=\"true\"] { background: var(--green); color: white; }\n.empty-state, .no-tags { margin: 14px 0 0; color: var(--muted); }\n.tag-section { margin-top: 28px; padding-top: 21px; border-top: 1px dashed #d9d1c2; }\n.tag-list { display: flex; flex-wrap: wrap; gap: 8px; }\n.tag-count { margin-left: 5px; opacity: .72; }\nfooter { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 10px; text-align: center; }\n@media (max-width: 420px) {\n  body { padding: 20px 14px; }\n  .board { padding: 28px 20px 20px; box-shadow: 5px 5px 0 var(--ink); }\n  .note-form { padding: 16px; }\n  .section-heading { align-items: flex-start; flex-wrap: wrap; }\n  .filter-status { width: 100%; }\n}\n",
+      "description": "Responsive pixel-paper theme, accessible focus states, and controls styling."
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.querySelector('#note-form');\nconst textInput = document.querySelector('#note-text');\nconst tagsInput = document.querySelector('#note-tags');\nconst notesList = document.querySelector('#notes-list');\nconst tagList = document.querySelector('#tag-list');\nconst emptyState = document.querySelector('#empty-state');\nconst noTags = document.querySelector('#no-tags');\nconst noteTotal = document.querySelector('#note-total');\nconst filterStatus = document.querySelector('#filter-status');\nconst activeTagLabel = document.querySelector('#active-tag');\nconst clearFilterButton = document.querySelector('#clear-filter');\n\nconst notes = [];\nlet activeTag = null;\n\nfunction parseTags(value) {\n  return [...new Set(value.split(',').map(tag => tag.trim()).filter(Boolean))];\n}\n\nfunction makeTagButton(tag, count, isFilter = false) {\n  const li = document.createElement('li');\n  const button = document.createElement('button');\n  button.type = 'button';\n  button.className = 'tag-button';\n  button.setAttribute('aria-pressed', String(activeTag === tag));\n  button.setAttribute('aria-label', isFilter ? `Filter notes by ${tag}, ${count} notes` : `Show notes tagged ${tag}`);\n  button.append(document.createTextNode(tag));\n  if (!isFilter) {\n    const number = document.createElement('span');\n    number.className = 'tag-count';\n    number.textContent = String(count);\n    button.append(number);\n  }\n  button.addEventListener('click', () => {\n    activeTag = activeTag === tag ? null : tag;\n    render();\n  });\n  li.append(button);\n  return li;\n}\n\nfunction render() {\n  const visibleNotes = activeTag ? notes.filter(note => note.tags.includes(activeTag)) : notes;\n  notesList.replaceChildren();\n  for (const note of [...visibleNotes].reverse()) {\n    const item = document.createElement('li');\n    item.className = 'note-card';\n    const content = document.createElement('p');\n    content.className = 'note-text';\n    content.textContent = note.text;\n    item.append(content);\n    if (note.tags.length) {\n      const tags = document.createElement('div');\n      tags.className = 'note-tags';\n      for (const tag of note.tags) tags.append(makeTagButton(tag, 0, true));\n      item.append(tags);\n    }\n    notesList.append(item);\n  }\n  emptyState.hidden = visibleNotes.length > 0;\n  emptyState.textContent = notes.length === 0\n    ? 'Your page is blank. Add a note to get started.'\n    : activeTag ? `No notes tagged “${activeTag}”.` : 'No notes to show.';\n  noteTotal.textContent = String(visibleNotes.length);\n  filterStatus.hidden = activeTag === null;\n  activeTagLabel.textContent = activeTag ?? '';\n\n  const counts = new Map();\n  for (const note of notes) for (const tag of note.tags) counts.set(tag, (counts.get(tag) || 0) + 1);\n  tagList.replaceChildren();\n  for (const [tag, count] of [...counts].sort(([a], [b]) => a.localeCompare(b))) {\n    tagList.append(makeTagButton(tag, count));\n  }\n  noTags.hidden = counts.size > 0;\n}\n\nform.addEventListener('submit', event => {\n  event.preventDefault();\n  const text = textInput.value.trim();\n  if (!text) { textInput.focus(); return; }\n  notes.push({ text, tags: parseTags(tagsInput.value) });\n  form.reset();\n  activeTag = null;\n  render();\n  textInput.focus();\n});\n\nclearFilterButton.addEventListener('click', () => {\n  activeTag = null;\n  render();\n});\n\nrender();\n",
+      "description": "Plain JavaScript note creation, normalized unique tags, live filters, and per-tag counts."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Notes\n\nA small offline notes list built with HTML, CSS, and plain JavaScript. Notes stay in memory for the current page session; reload the page to start fresh.\n\n## Run\n\nOpen `index.html` in a modern browser. No server, packages, or network connection are required.\n\n## Use\n\n1. Enter a note and optionally add comma-separated tags.\n2. Select **Add note**. Leading/trailing spaces are removed from tags, blank entries are ignored, and duplicate tags on a note count once.\n3. Select any tag on a note or in the tag-count list to filter. Select it again or use **Clear** to remove the filter.\n\nThe note total reflects the current view. Tag counts show how many notes use each tag across the full list. The layout supports narrow screens and keyboard operation.\n",
+      "description": "Offline run instructions and behavior notes."
+    }
+  ]
+}

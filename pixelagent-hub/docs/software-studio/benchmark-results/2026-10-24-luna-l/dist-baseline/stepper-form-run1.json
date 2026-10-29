@@ -1,0 +1,435 @@
+{
+  "caseId": "stepper-form",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\baseline",
+  "managerTokens": 21055,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "7/7",
+  "finalChecks": "7/7",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "7/7"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 90,
+  "reportedTokens": 72555,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T02:16:26.412Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T02:16:26.413Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T02:16:44.669Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Three-Step Signup Wizard"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T02:16:44.670Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T02:17:32.929Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T02:17:32.929Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T02:17:33.415Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T02:17:33.416Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "365f14c6-5f0c-4119-9492-06c7f1107a3a"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T02:17:52.019Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "365f14c6-5f0c-4119-9492-06c7f1107a3a",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T02:17:52.020Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "testPlanId": "365f14c6-5f0c-4119-9492-06c7f1107a3a",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T02:17:54.378Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "name": "Step 1 starts invalid",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T02:17:54.378Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "name": "Valid details enable Next",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T02:17:54.378Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "name": "Details advance to plan step",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T02:17:54.378Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "name": "Plan choice enables Next",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T02:17:54.378Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "name": "Team appears in summary",
+        "passed": true,
+        "actual": "Team"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T02:17:54.378Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "name": "Back returns to plan choice",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T02:17:54.378Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "name": "Confirm completes signup",
+        "passed": true,
+        "actual": "You’re all set — welcome to Pixel Club!"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T02:17:54.378Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "8b58d968-0c30-4ecf-96d7-92f6d2ee8f29",
+        "status": "passed",
+        "passed": 7,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T02:17:54.379Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Step 1 starts invalid",
+        "actions": [],
+        "selector": "#next",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Valid details enable Next",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Rivera"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          }
+        ],
+        "selector": "#next",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Details advance to plan step",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Rivera"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          }
+        ],
+        "selector": "#progress",
+        "expected": "2",
+        "assertion": "attribute",
+        "attribute": "aria-valuenow"
+      },
+      {
+        "name": "Plan choice enables Next",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Rivera"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Pro\"]"
+          }
+        ],
+        "selector": "#next",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Team appears in summary",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Rivera"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Team\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          }
+        ],
+        "selector": "#summary-plan",
+        "expected": "Team"
+      },
+      {
+        "name": "Back returns to plan choice",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Rivera"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Free\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          },
+          {
+            "type": "click",
+            "selector": "#back"
+          }
+        ],
+        "selector": "#progress",
+        "expected": "2",
+        "assertion": "attribute",
+        "attribute": "aria-valuenow"
+      },
+      {
+        "name": "Confirm completes signup",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Rivera"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Free\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#next"
+          },
+          {
+            "type": "click",
+            "selector": "#confirm"
+          }
+        ],
+        "selector": "#message",
+        "expected": "You’re all set — welcome to Pixel Club!"
+      }
+    ],
+    "limitations": [
+      "Invalid name/email cases are not separately checked; only the initial disabled state and valid inputs are covered.",
+      "Free, Pro, and Team are selectable; summary is checked for Team only.",
+      "The progress bar value is checked after advancing and backing; intermediate labels and visual fill width are not asserted."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 25907,
+      "completion_tokens": 597,
+      "total_tokens": 26504
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#17152b\">\n  <title>Pixel Signup Wizard</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"shell\">\n    <section class=\"wizard\" aria-labelledby=\"page-title\">\n      <header class=\"header\">\n        <div class=\"pixel-mark\" aria-hidden=\"true\">✦</div>\n        <p class=\"eyebrow\">PIXEL CLUB · MEMBER SETUP</p>\n        <h1 id=\"page-title\">Join the good side.</h1>\n        <p class=\"intro\">A few quick steps and you’re in.</p>\n      </header>\n\n      <div class=\"progress-wrap\">\n        <div class=\"progress-meta\"><span id=\"step-label\">STEP 1 OF 3</span><span id=\"step-name\">Your details</span></div>\n        <div class=\"progress-track\" role=\"progressbar\" aria-label=\"Signup progress\" aria-valuemin=\"1\" aria-valuemax=\"3\" aria-valuenow=\"1\" id=\"progress\">\n          <span class=\"progress-fill\" id=\"progress-fill\"></span>\n        </div>\n      </div>\n\n      <form id=\"signup-form\" novalidate>\n        <section class=\"step\" id=\"step-1\" aria-labelledby=\"details-title\">\n          <h2 id=\"details-title\">Let’s start with you</h2>\n          <p class=\"step-copy\">Tell us who’s joining the party.</p>\n          <label for=\"name\">Your name</label>\n          <input id=\"name\" name=\"name\" type=\"text\" autocomplete=\"name\" placeholder=\"e.g. Alex Rivera\" required minlength=\"2\">\n          <label for=\"email\">Email address</label>\n          <input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\" required>\n          <p class=\"hint\">We’ll use this to set up your account.</p>\n        </section>\n\n        <section class=\"step\" id=\"step-2\" aria-labelledby=\"plan-title\" hidden>\n          <h2 id=\"plan-title\">Pick your power-up</h2>\n          <p class=\"step-copy\">You can always change your plan later.</p>\n          <fieldset class=\"plans\">\n            <legend class=\"visually-hidden\">Choose a plan</legend>\n            <label class=\"plan-card\">\n              <input type=\"radio\" name=\"plan\" value=\"Free\" required>\n              <span class=\"plan-icon\" aria-hidden=\"true\">◇</span><span class=\"plan-text\"><strong>Free</strong><small>Good things, no cost</small></span><span class=\"plan-price\">$0</span>\n            </label>\n            <label class=\"plan-card\">\n              <input type=\"radio\" name=\"plan\" value=\"Pro\">\n              <span class=\"plan-icon\" aria-hidden=\"true\">✦</span><span class=\"plan-text\"><strong>Pro</strong><small>More room to grow</small></span><span class=\"plan-price\">$12<span>/mo</span></span>\n            </label>\n            <label class=\"plan-card\">\n              <input type=\"radio\" name=\"plan\" value=\"Team\">\n              <span class=\"plan-icon\" aria-hidden=\"true\">▦</span><span class=\"plan-text\"><strong>Team</strong><small>Better, together</small></span><span class=\"plan-price\">$29<span>/mo</span></span>\n            </label>\n          </fieldset>\n        </section>\n\n        <section class=\"step\" id=\"step-3\" aria-labelledby=\"summary-title\" hidden>\n          <h2 id=\"summary-title\">Looking good!</h2>\n          <p class=\"step-copy\">Here’s your signup summary.</p>\n          <dl class=\"summary\">\n            <div><dt>Name</dt><dd id=\"summary-name\"></dd></div>\n            <div><dt>Email</dt><dd id=\"summary-email\"></dd></div>\n            <div><dt>Plan</dt><dd id=\"summary-plan\"></dd></div>\n          </dl>\n          <p class=\"hint\">Ready when you are. Confirm to finish signing up.</p>\n        </section>\n\n        <div class=\"form-message\" id=\"message\" role=\"status\" aria-live=\"polite\"></div>\n        <div class=\"actions\">\n          <button class=\"back-button\" type=\"button\" id=\"back\" hidden>← Back</button>\n          <button class=\"next-button\" type=\"button\" id=\"next\" disabled>Next <span aria-hidden=\"true\">→</span></button>\n          <button class=\"next-button\" type=\"submit\" id=\"confirm\" hidden>Confirm <span aria-hidden=\"true\">→</span></button>\n        </div>\n      </form>\n      <footer>MADE OF PIXELS <span aria-hidden=\"true\">·</span> BUILT FOR YOU</footer>\n    </section>\n  </main>\n</body>\n</html>\n",
+      "description": "Responsive, accessible three-step signup wizard markup."
+    },
+    {
+      "path": "styles.css",
+      "content": ":root {\n  color-scheme: dark;\n  --ink: #f8f5ff;\n  --muted: #aaa5bf;\n  --purple: #a78bfa;\n  --mint: #81f0c0;\n  --panel: #211e39;\n  --line: #393550;\n}\n* { box-sizing: border-box; }\n[hidden] { display: none !important; }\nbody { margin: 0; min-width: 320px; min-height: 100vh; color: var(--ink); background-color: #17152b; background-image: radial-gradient(ellipse at 50% 0%, #30274d 0, transparent 58%), linear-gradient(45deg, transparent 48%, #ffffff06 49%, #ffffff06 51%, transparent 52%); background-size: auto, 24px 24px; font: 16px/1.5 system-ui, -apple-system, \"Segoe UI\", sans-serif; }\n.shell { min-height: 100vh; display: grid; place-items: center; padding: 28px 16px; }\n.wizard { width: min(100%, 500px); padding: 36px 38px 22px; background: var(--panel); border: 1px solid #48425f; border-radius: 18px; box-shadow: 0 24px 80px #09081799, 0 4px 0 #111025; }\n.header { text-align: center; }\n.pixel-mark { width: 46px; height: 46px; margin: 0 auto 15px; display: grid; place-items: center; color: #17152b; background: var(--mint); border: 4px solid #b9ffe0; box-shadow: 4px 4px 0 #5da88c; font-size: 24px; }\n.eyebrow { margin: 0 0 7px; color: var(--mint); font-size: 12px; font-weight: 800; letter-spacing: .14em; }\nh1 { margin: 0; font-size: clamp(26px, 6vw, 34px); line-height: 1.15; letter-spacing: -.04em; }\n.intro, .step-copy { color: var(--muted); }\n.intro { margin: 9px 0 26px; }\n.progress-wrap { margin-bottom: 27px; }\n.progress-meta { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 9px; color: var(--muted); font-size: 13px; }\n#step-label { color: var(--mint); font-weight: 800; letter-spacing: .07em; }\n.progress-track { height: 8px; overflow: hidden; background: #393550; border-radius: 20px; }\n.progress-fill { display: block; width: 33.333%; height: 100%; background: var(--mint); border-radius: inherit; transition: width .25s ease; }\n.step h2 { margin: 0; font-size: 22px; }\n.step-copy { margin: 3px 0 21px; }\nform label:not(.plan-card) { display: block; margin: 15px 0 7px; font-weight: 650; }\ninput[type=\"text\"], input[type=\"email\"] { width: 100%; height: 50px; padding: 0 14px; color: var(--ink); background: #19172e; border: 1px solid #514c69; border-radius: 8px; font: inherit; }\ninput::placeholder { color: #77728e; }\ninput[type=\"text\"]:focus, input[type=\"email\"]:focus { outline: 3px solid #a78bfa66; border-color: var(--purple); }\n.hint { margin: 12px 0 0; color: var(--muted); font-size: 14px; }\n.plans { display: grid; gap: 10px; margin: 0; padding: 0; border: 0; }\n.plan-card { position: relative; display: flex; align-items: center; gap: 12px; min-height: 70px; padding: 11px 13px; cursor: pointer; background: #19172e; border: 1px solid #514c69; border-radius: 9px; transition: border-color .15s, background .15s, transform .1s; }\n.plan-card:hover { border-color: var(--purple); background: #24203e; }\n.plan-card:active { transform: translateY(1px); }\n.plan-card:has(input:checked) { border-color: var(--mint); background: #213b3a; box-shadow: inset 0 0 0 1px var(--mint); }\n.plan-card input { width: 18px; height: 18px; accent-color: var(--mint); }\n.plan-icon { display: grid; place-items: center; width: 34px; height: 34px; color: var(--mint); background: #34304d; border-radius: 7px; font-size: 20px; }\n.plan-text { display: grid; gap: 1px; }\n.plan-text small, .plan-price span { color: var(--muted); font-size: 13px; }\n.plan-price { margin-left: auto; font-weight: 750; }\n.summary { margin: 0; padding: 2px 16px; background: #19172e; border: 1px solid var(--line); border-radius: 10px; }\n.summary div { display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(--line); }\n.summary div:last-child { border: 0; }\n.summary dt { color: var(--muted); }\n.summary dd { margin: 0; max-width: 65%; overflow-wrap: anywhere; text-align: right; font-weight: 650; }\n.form-message { min-height: 22px; margin-top: 8px; color: #ffb4b4; font-size: 14px; }\n.actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; }\nbutton { min-height: 48px; padding: 0 20px; border: 0; border-radius: 8px; cursor: pointer; font: inherit; font-weight: 750; transition: transform .1s, background .15s, box-shadow .15s; }\nbutton:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; }\nbutton:active:not(:disabled) { transform: translateY(2px); }\n.back-button { color: var(--ink); background: #34304d; }\n.back-button:hover { background: #45405f; }\n.next-button { margin-left: auto; color: #17152b; background: var(--mint); box-shadow: 0 3px 0 #4f9c7e; }\n.next-button:hover:not(:disabled) { background: #a5ffd9; }\n.next-button:disabled { color: #858199; background: #3b3851; box-shadow: none; cursor: not-allowed; }\nfooter { margin-top: 27px; color: #77728e; text-align: center; font-size: 11px; font-weight: 750; letter-spacing: .13em; }\nfooter span { padding: 0 4px; color: var(--mint); }\n.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }\n@media (max-width: 420px) { .wizard { padding: 27px 20px 19px; } .progress-meta { font-size: 12px; } .plan-card { gap: 8px; padding-inline: 9px; } .plan-icon { width: 30px; height: 30px; } }\n",
+      "description": "Cohesive pixel-inspired theme, responsive layout, and interactive states."
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.querySelector('#signup-form');\nconst steps = [...document.querySelectorAll('.step')];\nconst nextButton = document.querySelector('#next');\nconst backButton = document.querySelector('#back');\nconst confirmButton = document.querySelector('#confirm');\nconst message = document.querySelector('#message');\nconst progress = document.querySelector('#progress');\nconst progressFill = document.querySelector('#progress-fill');\nconst stepLabel = document.querySelector('#step-label');\nconst stepName = document.querySelector('#step-name');\nlet currentStep = 0;\nconst names = ['Your details', 'Choose a plan', 'Review'];\n\nfunction isValid() {\n  if (currentStep === 0) {\n    const name = document.querySelector('#name');\n    const email = document.querySelector('#email');\n    return name.value.trim().length >= 2 && email.validity.valid && email.value.trim() !== '';\n  }\n  if (currentStep === 1) return Boolean(form.querySelector('input[name=\"plan\"]:checked'));\n  return true;\n}\n\nfunction update() {\n  steps.forEach((step, index) => { step.hidden = index !== currentStep; });\n  nextButton.hidden = currentStep === 2;\n  confirmButton.hidden = currentStep !== 2;\n  backButton.hidden = currentStep === 0;\n  nextButton.disabled = !isValid();\n  stepLabel.textContent = `STEP ${currentStep + 1} OF 3`;\n  stepName.textContent = names[currentStep];\n  progress.setAttribute('aria-valuenow', String(currentStep + 1));\n  progressFill.style.width = `${((currentStep + 1) / 3) * 100}%`;\n  message.textContent = '';\n  if (currentStep === 2) {\n    document.querySelector('#summary-name').textContent = document.querySelector('#name').value.trim();\n    document.querySelector('#summary-email').textContent = document.querySelector('#email').value.trim();\n    document.querySelector('#summary-plan').textContent = form.querySelector('input[name=\"plan\"]:checked').value;\n  }\n}\n\nform.addEventListener('input', () => { nextButton.disabled = !isValid(); });\nform.addEventListener('change', () => { nextButton.disabled = !isValid(); });\nnextButton.addEventListener('click', () => {\n  if (!isValid()) return;\n  currentStep += 1;\n  update();\n  const heading = steps[currentStep].querySelector('h2');\n  heading.setAttribute('tabindex', '-1');\n  heading.focus();\n});\nbackButton.addEventListener('click', () => {\n  currentStep -= 1;\n  update();\n  steps[currentStep].querySelector('h2').focus();\n});\nform.addEventListener('submit', event => {\n  event.preventDefault();\n  if (currentStep !== 2) return;\n  message.style.color = 'var(--mint)';\n  message.textContent = 'You’re all set — welcome to Pixel Club!';\n  confirmButton.disabled = true;\n});\nupdate();\n",
+      "description": "Step navigation, validation, summary, and confirmation behavior."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Club Signup Wizard\n\nA small, offline three-step signup flow built with plain HTML, CSS, and JavaScript. It collects a name and email, lets you choose Free, Pro, or Team, then presents a review summary before confirmation.\n\n## Run\n\nOpen `index.html` in any modern browser. No server, network connection, packages, or build step are needed.\n\n## Controls\n\nEnter a name and valid email to enable Next. Choose a plan to continue. Use Back to revisit earlier steps, and Confirm to finish. The progress bar announces and displays the current step. All fields and plan choices have labels and can be operated with a keyboard.\n",
+      "description": "Offline run instructions and interaction overview."
+    }
+  ]
+}

@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Added
+- `input` actions work on contenteditable elements, a check may have 16 actions, and check browsers run with locale en-US and time zone UTC. On held-out set L with gpt-6-luna this scored [22/24 strict against 17/24](docs/software-studio/benchmark-results/2026-10-24-luna-l/README.md); the contenteditable idea went from 0/3 to 3/3
+
+### Fixed
+- `codex:chat` kills a Codex run after 240 s (`--timeout`), so one hung call no longer blocks the queue. `benchmark-live.ts` turns a failed forward into a failed call instead of crashing, and still writes its summaries when `git` cannot run
+
 ## [2.8.0] — 2026-10-22
 
 ### Changed

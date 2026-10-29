@@ -1,0 +1,504 @@
+{
+  "caseId": "stepper-form",
+  "run": 3,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\baseline",
+  "managerTokens": 21213,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 82,
+  "reportedTokens": 97798,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T02:21:59.055Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T02:21:59.055Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T02:22:18.076Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Three-Step Signup Wizard"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T02:22:18.076Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T02:22:54.936Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T02:22:54.936Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T02:22:55.352Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T02:22:55.357Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "73fc0147-5fad-43b8-8248-74e9cb146595"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T02:23:16.563Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "73fc0147-5fad-43b8-8248-74e9cb146595",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T02:23:16.564Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "testPlanId": "73fc0147-5fad-43b8-8248-74e9cb146595",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Initial state",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Valid details enable Next",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Invalid email keeps Next disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Free plan opens summary with progress",
+        "passed": true,
+        "actual": "Free"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Pro plan appears in summary",
+        "passed": true,
+        "actual": "Pro"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Team plan appears in summary",
+        "passed": true,
+        "actual": "Team"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Back returns to plan choice",
+        "passed": true,
+        "actual": "Choose your plan"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Confirm shows success",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "name": "Progress reflects step two",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T02:23:19.501Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "79694431-4b3a-4714-b500-ed382665bd3d",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T02:23:19.503Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial state",
+        "actions": [],
+        "selector": "#next-button",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Valid details enable Next",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Pixel"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          }
+        ],
+        "selector": "#next-button",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Invalid email keeps Next disabled",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "not-an-email"
+          }
+        ],
+        "selector": "#next-button",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Free plan opens summary with progress",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Pixel"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Free\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          }
+        ],
+        "selector": "#summary-plan",
+        "expected": "Free"
+      },
+      {
+        "name": "Pro plan appears in summary",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Pixel"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Pro\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          }
+        ],
+        "selector": "#summary-plan",
+        "expected": "Pro"
+      },
+      {
+        "name": "Team plan appears in summary",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Pixel"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Team\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          }
+        ],
+        "selector": "#summary-plan",
+        "expected": "Team"
+      },
+      {
+        "name": "Back returns to plan choice",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Pixel"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Pro\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          },
+          {
+            "type": "click",
+            "selector": "#back-button"
+          }
+        ],
+        "selector": "#plan-title",
+        "expected": "Choose your plan"
+      },
+      {
+        "name": "Confirm shows success",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Pixel"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Free\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          },
+          {
+            "type": "click",
+            "selector": "#confirm-button"
+          }
+        ],
+        "selector": "#success-message",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Progress reflects step two",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Alex Pixel"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "alex@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "#next-button"
+          }
+        ],
+        "selector": "[role=\"progressbar\"]",
+        "expected": "2",
+        "assertion": "attribute",
+        "attribute": "aria-valuenow"
+      }
+    ],
+    "limitations": [
+      "Visual pixel styling and responsive layout are not verified."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 51071,
+      "completion_tokens": 741,
+      "total_tokens": 51812
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Signup Wizard</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"card\" aria-labelledby=\"title\">\n    <header class=\"heading\">\n      <span class=\"eyebrow\">PIXEL CLUB · SIGNUP</span>\n      <h1 id=\"title\">Make it yours.</h1>\n      <p>Three quick steps to get started.</p>\n    </header>\n\n    <div class=\"progress-wrap\">\n      <div class=\"progress-label\"><span id=\"step-label\">Step 1 of 3</span><span id=\"step-name\">Your details</span></div>\n      <div class=\"progress-track\" role=\"progressbar\" aria-label=\"Signup progress\" aria-valuemin=\"1\" aria-valuemax=\"3\" aria-valuenow=\"1\"><span id=\"progress-fill\"></span></div>\n      <ol class=\"step-dots\" aria-label=\"Wizard steps\">\n        <li class=\"active\" aria-current=\"step\">Details</li><li>Plan</li><li>Review</li>\n      </ol>\n    </div>\n\n    <form id=\"signup-form\" novalidate>\n      <section class=\"step-panel\" data-step=\"0\" aria-labelledby=\"details-title\">\n        <h2 id=\"details-title\">First, the basics</h2>\n        <p class=\"step-hint\">What should we call you?</p>\n        <label for=\"name\">Your name</label>\n        <input id=\"name\" name=\"name\" type=\"text\" autocomplete=\"name\" placeholder=\"Alex Pixel\" required minlength=\"2\">\n        <label for=\"email\">Email address</label>\n        <input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"alex@example.com\" required>\n        <p class=\"form-error\" id=\"details-error\" aria-live=\"polite\"></p>\n      </section>\n\n      <section class=\"step-panel\" data-step=\"1\" aria-labelledby=\"plan-title\" hidden>\n        <h2 id=\"plan-title\">Choose your plan</h2>\n        <p class=\"step-hint\">You can change this later.</p>\n        <fieldset class=\"plans\">\n          <legend class=\"sr-only\">Select a plan</legend>\n          <label class=\"plan-option\"><input type=\"radio\" name=\"plan\" value=\"Free\" required><span class=\"plan-copy\"><strong>Free</strong><small>For your side quests</small></span><span class=\"plan-price\">$0</span></label>\n          <label class=\"plan-option\"><input type=\"radio\" name=\"plan\" value=\"Pro\"><span class=\"plan-copy\"><strong>Pro</strong><small>For your next big thing</small></span><span class=\"plan-price\">$12<span>/mo</span></span></label>\n          <label class=\"plan-option\"><input type=\"radio\" name=\"plan\" value=\"Team\"><span class=\"plan-copy\"><strong>Team</strong><small>Better together</small></span><span class=\"plan-price\">$29<span>/mo</span></span></label>\n        </fieldset>\n        <p class=\"form-error\" id=\"plan-error\" aria-live=\"polite\"></p>\n      </section>\n\n      <section class=\"step-panel\" data-step=\"2\" aria-labelledby=\"review-title\" hidden>\n        <h2 id=\"review-title\">Ready to roll?</h2>\n        <p class=\"step-hint\">Give your details one last look.</p>\n        <dl class=\"summary\">\n          <div><dt>Name</dt><dd id=\"summary-name\"></dd></div>\n          <div><dt>Email</dt><dd id=\"summary-email\"></dd></div>\n          <div><dt>Plan</dt><dd id=\"summary-plan\"></dd></div>\n        </dl>\n        <p class=\"success\" id=\"success-message\" role=\"status\" hidden>You're on the list. Welcome aboard!</p>\n      </section>\n\n      <div class=\"actions\">\n        <button class=\"back-button\" id=\"back-button\" type=\"button\" hidden>← Back</button>\n        <button class=\"next-button\" id=\"next-button\" type=\"button\" disabled>Next <span aria-hidden=\"true\">→</span></button>\n        <button class=\"next-button\" id=\"confirm-button\" type=\"submit\" hidden>Confirm <span aria-hidden=\"true\">✓</span></button>\n      </div>\n    </form>\n    <footer>Made for your next bright idea <span aria-hidden=\"true\">✦</span></footer>\n  </main>\n</body>\n</html>",
+      "description": "Accessible three-step signup wizard entry point"
+    },
+    {
+      "path": "styles.css",
+      "content": "[hidden] { display: none !important; }\n:root { color-scheme: light; --ink: #20283a; --muted: #687287; --paper: #fffdf8; --line: #e8e5dc; --blue: #4967e8; --pink: #f29c9b; --mint: #bdebd9; }\n* { box-sizing: border-box; }\nbody { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 28px 16px; color: var(--ink); background-color: #f7c5a8; background-image: radial-gradient(circle at 12% 20%, #ffe4a8 0 7%, transparent 7.2%), radial-gradient(circle at 88% 78%, #bdebd9 0 10%, transparent 10.2%), linear-gradient(145deg, #f7c5a8, #f6d2bf 52%, #eec3da); font: 16px/1.5 system-ui, -apple-system, \"Segoe UI\", sans-serif; }\n.card { width: min(100%, 480px); padding: 36px 38px 24px; background: var(--paper); border: 3px solid var(--ink); border-radius: 18px; box-shadow: 8px 8px 0 var(--ink); }\n.heading { text-align: center; }\n.eyebrow { color: var(--blue); font-size: 14px; font-weight: 800; letter-spacing: .12em; }\nh1 { margin: 8px 0 2px; font-size: clamp(30px, 8vw, 38px); line-height: 1.15; letter-spacing: -.04em; }\n.heading p, .step-hint { margin: 0; color: var(--muted); }\n.progress-wrap { margin: 28px 0 30px; }\n.progress-label { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; font-weight: 700; }\n.progress-label span:last-child { color: var(--muted); }\n.progress-track { height: 10px; margin-top: 9px; overflow: hidden; border: 2px solid var(--ink); border-radius: 8px; background: #f1eee7; }\n#progress-fill { display: block; width: 0; height: 100%; background: var(--blue); transition: width .25s ease; }\n.step-dots { display: flex; justify-content: space-between; margin: 8px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }\n.step-dots li.active { color: var(--blue); font-weight: 800; }\n.step-panel h2 { margin: 0; font-size: 22px; }\n.step-hint { margin: 2px 0 20px; }\nform label:not(.plan-option) { display: block; margin: 14px 0 6px; font-weight: 700; }\ninput[type=\"text\"], input[type=\"email\"] { width: 100%; min-height: 48px; padding: 10px 12px; color: var(--ink); background: white; border: 2px solid #cfd3dc; border-radius: 9px; font: inherit; }\ninput::placeholder { color: #9299a7; }\ninput:focus-visible, button:focus-visible { outline: 3px solid #f29c9b; outline-offset: 3px; }\n.plans { display: grid; gap: 10px; margin: 0; padding: 0; border: 0; }\n.plan-option { display: flex; align-items: center; gap: 12px; min-height: 68px; padding: 11px 13px; border: 2px solid var(--line); border-radius: 10px; cursor: pointer; transition: border-color .15s, background .15s, transform .15s; }\n.plan-option:hover { border-color: var(--blue); transform: translateY(-1px); }\n.plan-option:has(input:checked) { border-color: var(--blue); background: #f0f2ff; }\n.plan-option input { width: 19px; height: 19px; accent-color: var(--blue); }\n.plan-copy { display: grid; flex: 1; }\n.plan-copy small { color: var(--muted); font-size: 14px; }\n.plan-price { font-weight: 800; }\n.plan-price span { color: var(--muted); font-size: 13px; font-weight: 500; }\n.summary { margin: 4px 0 0; border-top: 2px solid var(--line); }\n.summary div { display: flex; justify-content: space-between; gap: 12px; padding: 13px 2px; border-bottom: 2px solid var(--line); }\n.summary dt { color: var(--muted); }\n.summary dd { max-width: 65%; margin: 0; overflow-wrap: anywhere; font-weight: 750; text-align: right; }\n.form-error { min-height: 22px; margin: 7px 0 0; color: #b23542; font-size: 14px; }\n.success { padding: 12px; color: #175b45; background: #e3f7ed; border-radius: 8px; font-weight: 700; }\n.actions { display: flex; gap: 12px; margin-top: 19px; }\nbutton { min-height: 48px; padding: 10px 16px; border: 2px solid var(--ink); border-radius: 9px; font: inherit; font-weight: 800; cursor: pointer; transition: transform .12s, box-shadow .12s, background .12s; }\nbutton:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 3px 0 var(--ink); }\nbutton:active:not(:disabled) { transform: translateY(1px); box-shadow: none; }\n.back-button { color: var(--ink); background: transparent; }\n.next-button { flex: 1; color: white; background: var(--blue); }\n.next-button:disabled { color: #7b8290; background: #e3e4e8; border-color: #c9cbd1; cursor: not-allowed; }\nfooter { margin-top: 22px; color: var(--muted); font-size: 13px; text-align: center; }\nfooter span { color: var(--blue); }\n.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }\n@media (max-width: 420px) { .card { padding: 28px 22px 20px; box-shadow: 5px 5px 0 var(--ink); } .progress-wrap { margin: 23px 0 25px; } }\n@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }",
+      "description": "Responsive pixel-inspired wizard styling"
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.querySelector('#signup-form');\nconst panels = [...document.querySelectorAll('.step-panel')];\nconst dots = [...document.querySelectorAll('.step-dots li')];\nconst nextButton = document.querySelector('#next-button');\nconst backButton = document.querySelector('#back-button');\nconst confirmButton = document.querySelector('#confirm-button');\nconst progress = document.querySelector('[role=\"progressbar\"]');\nconst progressFill = document.querySelector('#progress-fill');\nlet step = 0;\n\nfunction validCurrentStep() {\n  if (step === 0) {\n    const name = form.elements.name;\n    const email = form.elements.email;\n    const error = document.querySelector('#details-error');\n    if (!name.value.trim() || name.value.trim().length < 2) error.textContent = 'Please enter a name with at least 2 characters.';\n    else if (!email.validity.valid || !email.value.trim()) error.textContent = 'Please enter a valid email address.';\n    else { error.textContent = ''; return true; }\n    return false;\n  }\n  const selected = form.querySelector('input[name=\"plan\"]:checked');\n  document.querySelector('#plan-error').textContent = selected ? '' : 'Choose a plan to continue.';\n  return Boolean(selected);\n}\n\nfunction update() {\n  panels.forEach((panel, index) => { panel.hidden = index !== step; });\n  dots.forEach((dot, index) => {\n    dot.classList.toggle('active', index === step);\n    if (index === step) dot.setAttribute('aria-current', 'step'); else dot.removeAttribute('aria-current');\n  });\n  document.querySelector('#step-label').textContent = `Step ${step + 1} of 3`;\n  document.querySelector('#step-name').textContent = ['Your details', 'Choose a plan', 'Review'][step];\n  progress.setAttribute('aria-valuenow', String(step + 1));\n  progressFill.style.width = `${((step + 1) / 3) * 100}%`;\n  backButton.hidden = step === 0;\n  nextButton.hidden = step === 2;\n  confirmButton.hidden = step !== 2;\n  nextButton.disabled = !validCurrentStep();\n  if (step === 2) {\n    document.querySelector('#summary-name').textContent = form.elements.name.value.trim();\n    document.querySelector('#summary-email').textContent = form.elements.email.value.trim();\n    document.querySelector('#summary-plan').textContent = form.querySelector('input[name=\"plan\"]:checked')?.value || '';\n  }\n}\n\nform.addEventListener('input', () => { if (step < 2) update(); });\nform.addEventListener('change', () => { if (step < 2) update(); });\nnextButton.addEventListener('click', () => {\n  if (!validCurrentStep()) { update(); return; }\n  step += 1;\n  update();\n  panels[step].querySelector('h2').focus?.();\n});\nbackButton.addEventListener('click', () => { step -= 1; update(); });\nform.addEventListener('submit', event => {\n  event.preventDefault();\n  if (step !== 2) return;\n  document.querySelector('#success-message').hidden = false;\n  confirmButton.disabled = true;\n  confirmButton.textContent = 'Confirmed ✓';\n});\nupdate();",
+      "description": "Wizard validation, navigation, progress, and confirmation behavior"
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Three-Step Signup Wizard\n\nA small, offline signup flow built with plain HTML, CSS, and JavaScript.\n\n## Run\n\nOpen `index.html` in any modern browser. No server, packages, or network connection are needed.\n\n## Flow\n\n1. Enter a name and valid email address.\n2. Select Free, Pro, or Team.\n3. Review the details, go Back to edit, or Confirm.\n\nNext stays disabled until the current step is valid. The wizard includes labeled controls, keyboard focus styles, live progress, and a responsive layout designed for narrow screens.",
+      "description": "Offline run instructions and feature overview"
+    }
+  ]
+}

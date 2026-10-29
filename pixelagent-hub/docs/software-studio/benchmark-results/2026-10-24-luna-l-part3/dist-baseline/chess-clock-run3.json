@@ -1,0 +1,529 @@
+{
+  "caseId": "chess-clock",
+  "run": 3,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\baseline",
+  "managerTokens": 21039,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 2,
+  "compileFailures": 0,
+  "firstChecks": "6/7",
+  "finalChecks": "6/7",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": true,
+  "checkRuns": [
+    "6/7",
+    "6/7"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 144,
+  "reportedTokens": 123038,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T07:05:36.650Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T07:05:36.650Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T07:05:55.641Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Chess Clock"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T07:05:55.641Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T07:06:32.144Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T07:06:32.144Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T07:06:32.612Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T07:06:32.613Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "5b93adc2-daf5-487a-b198-89426287734c"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T07:06:49.566Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "5b93adc2-daf5-487a-b198-89426287734c",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T07:06:49.567Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "testPlanId": "5b93adc2-daf5-487a-b198-89426287734c",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T07:06:59.890Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "name": "initial five minute clocks",
+        "passed": true,
+        "actual": "5:00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T07:06:59.890Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "name": "start player one",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T07:06:59.890Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "name": "switch to player two",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T07:06:59.890Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "name": "pause active clock",
+        "passed": true,
+        "actual": "Clock paused."
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T07:06:59.890Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "name": "resume paused clock",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T07:06:59.890Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "name": "flag after clock expires",
+        "passed": false,
+        "actual": "Player 1 to move."
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T07:06:59.890Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "name": "times retain m:ss format",
+        "passed": true,
+        "actual": "5:00"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T07:06:59.891Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "393b529c-7e44-40e5-8a34-ba38c84fbbf9",
+        "status": "failed",
+        "passed": 6,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T07:06:59.894Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "5b93adc2-daf5-487a-b198-89426287734c",
+        "review": true
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T07:07:14.726Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "5b93adc2-daf5-487a-b198-89426287734c",
+        "checks": 7,
+        "review": true,
+        "revised": 0,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24570,
+          "completion_tokens": 78,
+          "total_tokens": 24648
+        },
+        "verdicts": [
+          {
+            "name": "flag after clock expires",
+            "verdict": "app-wrong",
+            "reason": "The check starts Player 1’s clock and waits 6 seconds; the app starts each clock at 5 minutes, so the expected flag message contradicts the requirements. The failure stands because a compliant app wou"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T07:07:14.727Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T07:07:47.606Z",
+      "type": "code_ready",
+      "round": 2,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-29T07:07:47.606Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-29T07:07:47.638Z",
+      "type": "build_passed",
+      "round": 2
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-29T07:07:47.639Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "testPlanId": "5b93adc2-daf5-487a-b198-89426287734c",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-29T07:07:57.917Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "name": "initial five minute clocks",
+        "passed": true,
+        "actual": "5:00"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-29T07:07:57.917Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "name": "start player one",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-29T07:07:57.917Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "name": "switch to player two",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-29T07:07:57.917Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "name": "pause active clock",
+        "passed": true,
+        "actual": "Clock paused."
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-29T07:07:57.917Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "name": "resume paused clock",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-29T07:07:57.917Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "name": "flag after clock expires",
+        "passed": false,
+        "actual": "Player 1 to move."
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-29T07:07:57.917Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "name": "times retain m:ss format",
+        "passed": true,
+        "actual": "5:00"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-29T07:07:57.917Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "02adf83d-c753-4742-a5ee-57b02ca9e797",
+        "status": "failed",
+        "passed": 6,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-29T07:07:57.919Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v2/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "initial five minute clocks",
+        "actions": [],
+        "selector": "#time-one",
+        "expected": "5:00"
+      },
+      {
+        "name": "start player one",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#player-one"
+          }
+        ],
+        "selector": "#pause",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "switch to player two",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#player-one"
+          },
+          {
+            "type": "click",
+            "selector": "#player-two"
+          }
+        ],
+        "selector": "#player-two",
+        "expected": "true",
+        "assertion": "attribute",
+        "attribute": "aria-pressed"
+      },
+      {
+        "name": "pause active clock",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#player-one"
+          },
+          {
+            "type": "click",
+            "selector": "#pause"
+          }
+        ],
+        "selector": "#status",
+        "expected": "Clock paused."
+      },
+      {
+        "name": "resume paused clock",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#player-one"
+          },
+          {
+            "type": "click",
+            "selector": "#pause"
+          },
+          {
+            "type": "click",
+            "selector": "#pause"
+          }
+        ],
+        "selector": "#player-one",
+        "expected": "true",
+        "assertion": "attribute",
+        "attribute": "aria-pressed"
+      },
+      {
+        "name": "flag after clock expires",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#player-one"
+          },
+          {
+            "type": "wait",
+            "ms": 6000
+          }
+        ],
+        "selector": "#status",
+        "expected": "Flag! Player 1 ran out of time."
+      },
+      {
+        "name": "times retain m:ss format",
+        "actions": [],
+        "selector": "#time-one",
+        "expected": "^\\d+:\\d{2}$",
+        "assertion": "matches"
+      }
+    ],
+    "limitations": [
+      "Cannot verify both clocks decrement or stop precisely on switching without a controllable clock.",
+      "Cannot wait five minutes within the 8-second per-check action limit to observe zero naturally."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 25016,
+      "completion_tokens": 341,
+      "total_tokens": 25357
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    },
+    {
+      "round": 2,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#172321\">\n  <title>Pixel Chess Clock</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"clock-card\" aria-labelledby=\"title\">\n    <header class=\"card-header\">\n      <p class=\"eyebrow\">TWO PLAYER · BLITZ</p>\n      <h1 id=\"title\">Pixel Chess Clock</h1>\n      <p class=\"subtitle\">Five minutes each. Make your move.</p>\n    </header>\n\n    <section class=\"clocks\" aria-label=\"Player clocks\">\n      <button class=\"player-clock\" id=\"player-one\" type=\"button\" aria-label=\"Player one clock, 5 minutes remaining. Tap to start or switch to player one.\" aria-pressed=\"false\">\n        <span class=\"player-label\"><span class=\"dot\" aria-hidden=\"true\"></span>PLAYER ONE</span>\n        <span class=\"time\" id=\"time-one\" aria-hidden=\"true\">5:00</span>\n        <span class=\"clock-hint\" id=\"hint-one\">TAP TO START</span>\n      </button>\n      <div class=\"divider\" aria-hidden=\"true\"><span>VS</span></div>\n      <button class=\"player-clock\" id=\"player-two\" type=\"button\" aria-label=\"Player two clock, 5 minutes remaining. Tap to start or switch to player two.\" aria-pressed=\"false\">\n        <span class=\"player-label\"><span class=\"dot\" aria-hidden=\"true\"></span>PLAYER TWO</span>\n        <span class=\"time\" id=\"time-two\" aria-hidden=\"true\">5:00</span>\n        <span class=\"clock-hint\" id=\"hint-two\">TAP TO START</span>\n      </button>\n    </section>\n\n    <p class=\"status\" id=\"status\" role=\"status\" aria-live=\"polite\">Choose a side to start the clock.</p>\n    <div class=\"controls\">\n      <button class=\"pause-button\" id=\"pause\" type=\"button\" aria-label=\"Pause clock\" disabled>Ⅱ <span>Pause</span></button>\n      <button class=\"reset-button\" id=\"reset\" type=\"button\" aria-label=\"Reset both clocks to five minutes\">↻ <span>New game</span></button>\n    </div>\n    <footer>GOOD LUCK · PLAY FAIR</footer>\n  </main>\n</body>\n</html>\n",
+      "description": ""
+    },
+    {
+      "path": "styles.css",
+      "content": "* { box-sizing: border-box; }\n:root { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif; background: #172321; color: #f2f0e8; }\nbody { min-width: 360px; min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px 16px; background: radial-gradient(ellipse at 50% 0%, #29413a 0%, #172321 65%); }\n.clock-card { width: min(100%, 560px); padding: clamp(24px, 6vw, 44px); border: 1px solid #3a5148; border-radius: 20px; background: #202f2a; box-shadow: 0 24px 70px #0b1412a8; text-align: center; }\n.card-header { margin-bottom: 30px; }\n.eyebrow { margin: 0 0 10px; color: #d1a85d; font-size: 14px; font-weight: 750; letter-spacing: .16em; }\nh1 { margin: 0; font-size: clamp(26px, 7vw, 36px); line-height: 1.15; letter-spacing: -.03em; }\n.subtitle { margin: 10px 0 0; color: #bbc8bf; font-size: 16px; }\n.clocks { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }\n.player-clock { min-width: 0; min-height: 190px; padding: 22px 12px 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border: 2px solid #42554c; border-radius: 14px; background: #293a33; color: #f2f0e8; cursor: pointer; transition: background .15s, border-color .15s, transform .15s, box-shadow .15s; }\n.player-clock:hover { border-color: #d1a85d; background: #30453b; }\n.player-clock:active { transform: scale(.98); }\n.player-clock:focus-visible, .controls button:focus-visible { outline: 3px solid #f3cb75; outline-offset: 3px; }\n.player-clock.active { border-color: #d1a85d; background: #35483a; box-shadow: inset 0 0 0 1px #d1a85d55, 0 0 24px #d1a85d22; }\n.player-clock.active .dot { background: #e7bd6c; box-shadow: 0 0 10px #e7bd6c; }\n.player-clock.flagged { border-color: #db725e; background: #49312d; color: #ffd5c8; }\n.player-label { display: inline-flex; align-items: center; gap: 8px; color: #c1cdc4; font-size: 14px; font-weight: 750; letter-spacing: .12em; }\n.dot { width: 8px; height: 8px; border-radius: 50%; background: #718278; }\n.time { font-variant-numeric: tabular-nums; font-size: clamp(38px, 10vw, 54px); font-weight: 750; line-height: 1; letter-spacing: .01em; }\n.clock-hint { color: #d1a85d; font-size: 13px; font-weight: 700; letter-spacing: .1em; }\n.divider { position: absolute; top: 50%; left: 50%; z-index: 1; display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #516257; border-radius: 50%; background: #202f2a; color: #aebbb1; font-size: 11px; font-weight: 800; transform: translate(-50%, -50%); }\n.status { min-height: 24px; margin: 24px 0 18px; color: #c1cdc4; font-size: 16px; }\n.status.is-flag { color: #f08a73; font-weight: 750; }\n.controls { display: flex; justify-content: center; gap: 12px; }\n.controls button { min-height: 48px; padding: 0 20px; border: 1px solid #65766a; border-radius: 10px; background: #2b3c34; color: #f2f0e8; font: inherit; font-size: 16px; font-weight: 700; cursor: pointer; transition: background .15s, border-color .15s, transform .15s; }\n.controls button:hover:not(:disabled) { border-color: #d1a85d; background: #3b4d3f; }\n.controls button:active:not(:disabled) { transform: translateY(1px); }\n.controls button:disabled { cursor: not-allowed; opacity: .5; }\n.pause-button { min-width: 130px; }\n.pause-button span, .reset-button span { margin-left: 5px; }\nfooter { margin-top: 30px; color: #83948a; font-size: 12px; font-weight: 700; letter-spacing: .16em; }\n@media (max-width: 420px) { .player-clock { min-height: 168px; padding-inline: 8px; } .player-label { font-size: 12px; } .controls button { padding-inline: 14px; } }\n",
+      "description": ""
+    },
+    {
+      "path": "app.js",
+      "content": "const START_SECONDS = 5 * 60;\nconst remaining = [START_SECONDS, START_SECONDS];\nconst clockButtons = [document.querySelector('#player-one'), document.querySelector('#player-two')];\nconst timeLabels = [document.querySelector('#time-one'), document.querySelector('#time-two')];\nconst hints = [document.querySelector('#hint-one'), document.querySelector('#hint-two')];\nconst status = document.querySelector('#status');\nconst pauseButton = document.querySelector('#pause');\nconst resetButton = document.querySelector('#reset');\nlet activePlayer = null;\nlet deadline = 0;\nlet paused = false;\nlet flaggedPlayer = null;\nlet ticker = null;\n\nfunction formatTime(seconds) {\n  const whole = Math.max(0, Math.ceil(seconds));\n  return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}`;\n}\n\nfunction render() {\n  for (let i = 0; i < 2; i += 1) {\n    timeLabels[i].textContent = formatTime(remaining[i]);\n    clockButtons[i].classList.toggle('active', activePlayer === i && !paused);\n    clockButtons[i].classList.toggle('flagged', flaggedPlayer === i);\n    clockButtons[i].setAttribute('aria-pressed', String(activePlayer === i && !paused));\n    clockButtons[i].setAttribute('aria-label', `Player ${i + 1} clock, ${formatTime(remaining[i])} remaining. Tap to ${activePlayer === i && !paused ? 'switch to the other player' : 'start or switch to player ' + (i + 1)}.`);\n    hints[i].textContent = flaggedPlayer === i ? 'FLAG!' : activePlayer === i && !paused ? 'YOUR MOVE' : activePlayer === i && paused ? 'PAUSED' : 'TAP TO START';\n  }\n  pauseButton.disabled = activePlayer === null || flaggedPlayer !== null;\n  pauseButton.innerHTML = paused ? '▶ <span>Resume</span>' : 'Ⅱ <span>Pause</span>';\n  pauseButton.setAttribute('aria-label', paused ? 'Resume clock' : 'Pause clock');\n}\n\nfunction stopTicker() {\n  if (ticker !== null) window.clearInterval(ticker);\n  ticker = null;\n}\n\nfunction updateClock() {\n  if (activePlayer === null || paused) return;\n  const now = Date.now();\n  remaining[activePlayer] = Math.max(0, (deadline - now) / 1000);\n  if (remaining[activePlayer] <= 0) {\n    remaining[activePlayer] = 0;\n    flaggedPlayer = activePlayer;\n    activePlayer = null;\n    paused = false;\n    stopTicker();\n    status.textContent = `Flag! Player ${flaggedPlayer + 1} ran out of time.`;\n    status.classList.add('is-flag');\n  }\n  render();\n}\n\nfunction startTicker() {\n  stopTicker();\n  ticker = window.setInterval(updateClock, 100);\n}\n\nfunction switchTo(player) {\n  if (flaggedPlayer !== null) return;\n  if (activePlayer === player && !paused) return;\n  if (activePlayer !== null && !paused) {\n    updateClock();\n    if (flaggedPlayer !== null) return;\n  }\n  activePlayer = player;\n  paused = false;\n  deadline = Date.now() + remaining[player] * 1000;\n  status.textContent = `Player ${player + 1} to move.`;\n  status.classList.remove('is-flag');\n  startTicker();\n  render();\n}\n\nclockButtons.forEach((button, index) => button.addEventListener('click', () => switchTo(index)));\npauseButton.addEventListener('click', () => {\n  if (activePlayer === null || flaggedPlayer !== null) return;\n  if (!paused) {\n    updateClock();\n    if (flaggedPlayer !== null) return;\n    paused = true;\n    stopTicker();\n    status.textContent = 'Clock paused.';\n  } else {\n    paused = false;\n    deadline = Date.now() + remaining[activePlayer] * 1000;\n    status.textContent = `Player ${activePlayer + 1} to move.`;\n    startTicker();\n  }\n  render();\n});\nresetButton.addEventListener('click', () => {\n  stopTicker();\n  remaining[0] = START_SECONDS;\n  remaining[1] = START_SECONDS;\n  activePlayer = null;\n  flaggedPlayer = null;\n  paused = false;\n  status.textContent = 'Choose a side to start the clock.';\n  status.classList.remove('is-flag');\n  render();\n});\n\nrender();\n",
+      "description": ""
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Chess Clock\n\nAn offline, two-player chess clock. Each player starts with five minutes. Choose a side to begin; tap the other side after a move to switch turns. Use Pause to pause or resume and New game to reset both clocks. When a clock reaches zero, the display shows **Flag!** and the game stops.\n\n## Run\n\nOpen `index.html` in a modern browser. The app uses only local HTML, CSS, and JavaScript; it needs no server, packages, or network connection.\n\n## Controls\n\n- Click, tap, or focus a player clock and press Enter or Space to start or switch turns.\n- Activate Pause to pause or resume the active clock.\n- Activate New game to reset both clocks.\n\nThe clock measures elapsed time from the system clock, so display refresh timing does not accumulate interval drift.\n",
+      "description": ""
+    }
+  ]
+}

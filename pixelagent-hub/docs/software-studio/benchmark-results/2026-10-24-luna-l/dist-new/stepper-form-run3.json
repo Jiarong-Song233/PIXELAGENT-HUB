@@ -1,0 +1,569 @@
+{
+  "caseId": "stepper-form",
+  "run": 3,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\new",
+  "managerTokens": 21017,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "6/7",
+  "finalChecks": "7/7",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 1,
+  "coderRepair": false,
+  "checkRuns": [
+    "6/7",
+    "7/7"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 105,
+  "reportedTokens": 98474,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T02:23:20.950Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T02:23:20.950Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T02:23:39.218Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Three-Step Signup Wizard"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T02:23:39.218Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T02:24:21.555Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T02:24:21.555Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T02:24:22.070Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T02:24:22.070Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "2c05410c-cb1f-4e1c-9fba-660d68d25f83"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T02:24:41.713Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "2c05410c-cb1f-4e1c-9fba-660d68d25f83",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T02:24:41.714Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "testPlanId": "2c05410c-cb1f-4e1c-9fba-660d68d25f83",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T02:24:44.113Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "name": "Details validation",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T02:24:44.113Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "name": "Valid details enable next",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T02:24:44.113Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "name": "Details advance and progress",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T02:24:44.113Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "name": "Plan required and selectable",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T02:24:44.113Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "name": "Free plan enables review",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T02:24:44.113Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "name": "Summary and back navigation",
+        "passed": true,
+        "actual": "Team"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T02:24:44.113Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "name": "Confirm signup",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T02:24:44.113Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "dcea0f2a-5dc4-417f-a5b4-c0eb98a08f8a",
+        "status": "failed",
+        "passed": 6,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T02:24:44.119Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "2c05410c-cb1f-4e1c-9fba-660d68d25f83",
+        "review": true
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T02:25:01.927Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "2c05410c-cb1f-4e1c-9fba-660d68d25f83",
+        "checks": 7,
+        "review": true,
+        "revised": 1,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 25475,
+          "completion_tokens": 201,
+          "total_tokens": 25676
+        },
+        "verdicts": [
+          {
+            "name": "Confirm signup",
+            "verdict": "check-wrong",
+            "reason": "The check uses the malformed selector `[data-step=\"3]`, which matches no element; the app provides the success step as `[data-step=\"3\"]` after Confirm. The selector contradicts the requirement to reac"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T02:25:01.928Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "testPlanId": "2c05410c-cb1f-4e1c-9fba-660d68d25f83",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T02:25:04.159Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "name": "Details validation",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T02:25:04.159Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "name": "Valid details enable next",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T02:25:04.159Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "name": "Details advance and progress",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T02:25:04.159Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "name": "Plan required and selectable",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T02:25:04.159Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "name": "Free plan enables review",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T02:25:04.159Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "name": "Summary and back navigation",
+        "passed": true,
+        "actual": "Team"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T02:25:04.159Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "name": "Confirm signup",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-24T02:25:04.159Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "8f3996fa-a12e-4bdf-934b-dee2ec8018df",
+        "status": "passed",
+        "passed": 7,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-24T02:25:04.164Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Details validation",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "A"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "bad"
+          }
+        ],
+        "selector": "[data-step=\"0\"] [data-next]",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Valid details enable next",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Ada Lovelace"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "ada@example.com"
+          }
+        ],
+        "selector": "[data-step=\"0\"] [data-next]",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Details advance and progress",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Ada Lovelace"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "ada@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "[data-step=\"0\"] [data-next]"
+          }
+        ],
+        "selector": ".progress-track",
+        "expected": "2",
+        "assertion": "attribute",
+        "attribute": "aria-valuenow"
+      },
+      {
+        "name": "Plan required and selectable",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Ada Lovelace"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "ada@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "[data-step=\"0\"] [data-next]"
+          }
+        ],
+        "selector": "[data-step=\"1\"] [data-next]",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Free plan enables review",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Ada Lovelace"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "ada@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "[data-step=\"0\"] [data-next]"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Free\"]"
+          }
+        ],
+        "selector": "[data-step=\"1\"] [data-next]",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Summary and back navigation",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Ada Lovelace"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "ada@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "[data-step=\"0\"] [data-next]"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Team\"]"
+          },
+          {
+            "type": "click",
+            "selector": "[data-step=\"1\"] [data-next]"
+          }
+        ],
+        "selector": "#summary-plan",
+        "expected": "Team"
+      },
+      {
+        "name": "Confirm signup",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#name",
+            "value": "Ada Lovelace"
+          },
+          {
+            "type": "input",
+            "selector": "#email",
+            "value": "ada@example.com"
+          },
+          {
+            "type": "click",
+            "selector": "[data-step=\"0\"] [data-next]"
+          },
+          {
+            "type": "click",
+            "selector": "input[name=\"plan\"][value=\"Free\"]"
+          },
+          {
+            "type": "click",
+            "selector": "[data-step=\"1\"] [data-next]"
+          },
+          {
+            "type": "click",
+            "selector": "[data-step=\"2\"] button[type=\"submit\"]"
+          }
+        ],
+        "selector": "[data-step=\"3\"]",
+        "expected": "true",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "1 planned check(s) were dropped because they did not match the check format.",
+      "Visual pixel styling and responsive layout are not verified by DOM checks.",
+      "All plan choices are not individually checked; Free and Team summary plus Pro selection are covered."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 25864,
+      "completion_tokens": 813,
+      "total_tokens": 26677
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#172b3a\">\n  <title>Pixel Signup Wizard</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"card\" aria-labelledby=\"page-title\">\n    <div class=\"brand-mark\" aria-hidden=\"true\">✦</div>\n    <p class=\"eyebrow\">YOUR NEXT ADVENTURE</p>\n    <h1 id=\"page-title\">Create your account</h1>\n    <p class=\"intro\">A few quick steps and you’re ready to go.</p>\n\n    <div class=\"progress-wrap\">\n      <div class=\"progress-label\"><span id=\"step-label\">Step 1 of 3</span><span id=\"step-name\">Your details</span></div>\n      <div class=\"progress-track\" role=\"progressbar\" aria-label=\"Signup progress\" aria-valuemin=\"1\" aria-valuemax=\"3\" aria-valuenow=\"1\">\n        <div class=\"progress-fill\" id=\"progress-fill\"></div>\n      </div>\n    </div>\n\n    <form id=\"signup-form\" novalidate>\n      <section class=\"step\" data-step=\"0\" aria-labelledby=\"details-heading\">\n        <h2 id=\"details-heading\">Let’s meet you</h2>\n        <label for=\"name\">Your name</label>\n        <input id=\"name\" name=\"name\" type=\"text\" autocomplete=\"name\" minlength=\"2\" required placeholder=\"Ada Lovelace\">\n        <label for=\"email\">Email address</label>\n        <input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" required placeholder=\"ada@example.com\">\n        <p class=\"hint\">We’ll use this to set up your account.</p>\n        <div class=\"actions\"><span></span><button class=\"button primary\" type=\"button\" data-next disabled>Choose a plan <span aria-hidden=\"true\">→</span></button></div>\n      </section>\n\n      <section class=\"step\" data-step=\"1\" aria-labelledby=\"plan-heading\" hidden>\n        <h2 id=\"plan-heading\">Pick your path</h2>\n        <fieldset class=\"plans\">\n          <legend class=\"sr-only\">Choose an account plan</legend>\n          <label class=\"plan-card\"><input type=\"radio\" name=\"plan\" value=\"Free\" required><span class=\"plan-copy\"><strong>Free</strong><small>For getting started</small></span><span class=\"price\">$0</span></label>\n          <label class=\"plan-card featured\"><span class=\"badge\">POPULAR</span><input type=\"radio\" name=\"plan\" value=\"Pro\"><span class=\"plan-copy\"><strong>Pro</strong><small>For focused makers</small></span><span class=\"price\">$12<small>/mo</small></span></label>\n          <label class=\"plan-card\"><input type=\"radio\" name=\"plan\" value=\"Team\"><span class=\"plan-copy\"><strong>Team</strong><small>For building together</small></span><span class=\"price\">$29<small>/mo</small></span></label>\n        </fieldset>\n        <div class=\"actions\"><button class=\"button secondary\" type=\"button\" data-back><span aria-hidden=\"true\">←</span> Back</button><button class=\"button primary\" type=\"button\" data-next disabled>Review details <span aria-hidden=\"true\">→</span></button></div>\n      </section>\n\n      <section class=\"step\" data-step=\"2\" aria-labelledby=\"summary-heading\" hidden>\n        <h2 id=\"summary-heading\">Ready to roll?</h2>\n        <p class=\"summary-intro\">Here’s your signup snapshot.</p>\n        <dl class=\"summary\">\n          <div><dt>Name</dt><dd id=\"summary-name\"></dd></div>\n          <div><dt>Email</dt><dd id=\"summary-email\"></dd></div>\n          <div><dt>Plan</dt><dd id=\"summary-plan\"></dd></div>\n        </dl>\n        <p class=\"fine-print\">You can change your plan any time.</p>\n        <div class=\"actions\"><button class=\"button secondary\" type=\"button\" data-back><span aria-hidden=\"true\">←</span> Back</button><button class=\"button primary\" type=\"submit\">Confirm signup <span aria-hidden=\"true\">✓</span></button></div>\n      </section>\n\n      <section class=\"step success\" data-step=\"3\" aria-labelledby=\"success-heading\" hidden>\n        <div class=\"success-icon\" aria-hidden=\"true\">✓</div>\n        <h2 id=\"success-heading\">You’re on your way!</h2>\n        <p>Your <strong id=\"confirmed-plan\"></strong> account is ready, <strong id=\"confirmed-name\"></strong>.</p>\n        <p class=\"hint\">A welcome note is headed to <span id=\"confirmed-email\"></span>.</p>\n        <button class=\"button secondary restart\" type=\"button\" id=\"restart\">Start over</button>\n      </section>\n      <p id=\"form-message\" class=\"form-message\" role=\"status\" aria-live=\"polite\"></p>\n    </form>\n    <p class=\"footer-note\"><span aria-hidden=\"true\">◆</span> SIMPLE SETUP. BIG IDEAS.</p>\n  </main>\n</body>\n</html>",
+      "description": "Offline three-step signup wizard page"
+    },
+    {
+      "path": "styles.css",
+      "content": "* { box-sizing: border-box; }\n[hidden] { display: none !important; }\n:root { color-scheme: light; --ink: #172b3a; --muted: #617481; --paper: #fffdf7; --line: #d9e3df; --mint: #bdf2d5; --coral: #ff806e; }\nbody { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 28px 16px; background-color: #172b3a; background-image: linear-gradient(45deg, #203b4b 25%, transparent 25%), linear-gradient(-45deg, #203b4b 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #203b4b 75%), linear-gradient(-45deg, transparent 75%, #203b4b 75%); background-size: 28px 28px; background-position: 0 0, 0 14px, 14px -14px, -14px 0; color: var(--ink); font: 16px/1.5 system-ui, sans-serif; }\n.card { width: min(100%, 520px); padding: 34px clamp(22px, 7vw, 48px) 26px; background: var(--paper); border: 4px solid var(--ink); box-shadow: 8px 8px 0 #0c1b25; }\n.brand-mark { display: grid; place-items: center; width: 44px; height: 44px; background: var(--mint); border: 3px solid var(--ink); font-size: 25px; }\n.eyebrow, .footer-note { margin: 20px 0 5px; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .13em; }\nh1 { margin: 0; font-size: clamp(26px, 6vw, 34px); line-height: 1.2; letter-spacing: -.04em; }\n.intro, .summary-intro { margin: 9px 0 24px; color: var(--muted); }\n.progress-wrap { margin: 25px 0 28px; }\n.progress-label { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 9px; font-size: 14px; font-weight: 700; }\n.progress-label span:last-child { color: var(--muted); }\n.progress-track { height: 12px; overflow: hidden; border: 2px solid var(--ink); background: #e9efeb; }\n.progress-fill { width: 33.333%; height: 100%; background: var(--coral); transition: width .2s ease; }\n.step h2 { margin: 0 0 18px; font-size: 22px; }\n.step > label:not(.plan-card) { display: block; margin: 15px 0 6px; font-weight: 700; }\ninput[type=\"text\"], input[type=\"email\"] { width: 100%; min-height: 50px; padding: 12px 14px; border: 2px solid #aabbb5; border-radius: 0; background: white; color: var(--ink); font: inherit; }\ninput::placeholder { color: #84949c; }\ninput:focus-visible, button:focus-visible, .plan-card:focus-within { outline: 3px solid var(--coral); outline-offset: 3px; }\n.hint, .fine-print { margin: 10px 0 0; color: var(--muted); font-size: 14px; }\n.actions { display: flex; justify-content: space-between; gap: 12px; margin-top: 27px; }\n.button { min-height: 48px; padding: 10px 16px; border: 2px solid var(--ink); border-radius: 0; font: inherit; font-weight: 800; cursor: pointer; transition: transform .08s, box-shadow .08s, background-color .15s; }\n.button:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: none; }\n.primary { background: var(--mint); color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }\n.primary:hover:not(:disabled) { background: #a4e9c2; }\n.primary:disabled { opacity: .48; cursor: not-allowed; box-shadow: none; }\n.secondary { background: white; color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }\n.secondary:hover { background: #edf4ef; }\n.plans { display: grid; gap: 12px; margin: 0; padding: 0; border: 0; }\n.plan-card { position: relative; display: flex; align-items: center; gap: 13px; min-height: 76px; padding: 14px; border: 2px solid var(--line); background: white; cursor: pointer; }\n.plan-card:has(input:checked) { border-color: var(--ink); background: #effaf3; box-shadow: 3px 3px 0 var(--ink); }\n.plan-card input { width: 19px; height: 19px; accent-color: var(--ink); flex: 0 0 auto; }\n.plan-copy { display: grid; gap: 1px; flex: 1; }\n.plan-copy strong, .price { font-size: 17px; }\n.plan-copy small, .price small { color: var(--muted); font-size: 13px; }\n.price { font-weight: 800; white-space: nowrap; }\n.badge { position: absolute; top: -10px; right: 10px; padding: 1px 7px; background: var(--coral); border: 1px solid var(--ink); font-size: 10px; font-weight: 900; letter-spacing: .06em; }\n.summary { margin: 19px 0 0; border-top: 2px solid var(--line); }\n.summary div { display: flex; justify-content: space-between; gap: 18px; padding: 13px 0; border-bottom: 2px solid var(--line); }\n.summary dt { color: var(--muted); font-weight: 700; }\n.summary dd { max-width: 65%; margin: 0; overflow-wrap: anywhere; text-align: right; font-weight: 800; }\n.success { text-align: center; padding-top: 8px; }\n.success-icon { display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 18px; border: 3px solid var(--ink); background: var(--mint); font-size: 32px; font-weight: 900; }\n.success p { color: var(--muted); }\n.success strong { color: var(--ink); }\n.restart { margin-top: 18px; }\n.form-message { min-height: 22px; margin: 8px 0 0; color: #963c32; font-size: 14px; font-weight: 700; }\n.footer-note { margin: 25px 0 0; text-align: center; font-size: 10px; }\n.footer-note span { color: var(--coral); }\n.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }\n@media (max-width: 390px) { .card { padding-inline: 18px; } .actions .button { padding-inline: 11px; font-size: 15px; } }\n@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }",
+      "description": "Responsive pixel-inspired styling"
+    },
+    {
+      "path": "app.js",
+      "content": "const form = document.querySelector('#signup-form');\nconst steps = [...document.querySelectorAll('.step')];\nconst nextButtons = [...document.querySelectorAll('[data-next]')];\nconst progress = document.querySelector('.progress-track');\nconst progressFill = document.querySelector('#progress-fill');\nconst stepLabel = document.querySelector('#step-label');\nconst stepName = document.querySelector('#step-name');\nconst message = document.querySelector('#form-message');\nlet currentStep = 0;\nconst stepNames = ['Your details', 'Choose a plan', 'Review'];\n\nfunction validDetails() {\n  const name = form.elements.name;\n  const email = form.elements.email;\n  return name.value.trim().length >= 2 && email.validity.valid && email.value.trim() !== '';\n}\nfunction validPlan() { return Boolean(form.querySelector('input[name=\"plan\"]:checked')); }\nfunction updateNext() {\n  nextButtons[0].disabled = !validDetails();\n  nextButtons[1].disabled = !validPlan();\n}\nfunction showStep(index) {\n  currentStep = index;\n  steps.forEach((section, i) => { section.hidden = i !== index; });\n  const shown = Math.min(index, 2);\n  stepLabel.textContent = `Step ${shown + 1} of 3`;\n  stepName.textContent = stepNames[shown];\n  progress.setAttribute('aria-valuenow', String(shown + 1));\n  progressFill.style.width = `${((shown + 1) / 3) * 100}%`;\n  message.textContent = '';\n  updateNext();\n  const heading = steps[index].querySelector('h2');\n  heading.setAttribute('tabindex', '-1');\n  heading.focus();\n}\nfunction fillSummary() {\n  document.querySelector('#summary-name').textContent = form.elements.name.value.trim();\n  document.querySelector('#summary-email').textContent = form.elements.email.value.trim();\n  document.querySelector('#summary-plan').textContent = form.querySelector('input[name=\"plan\"]:checked').value;\n}\n\nform.addEventListener('input', updateNext);\nform.addEventListener('change', updateNext);\nnextButtons.forEach((button, index) => button.addEventListener('click', () => {\n  if (index === 0 && validDetails()) showStep(1);\n  if (index === 1 && validPlan()) { fillSummary(); showStep(2); }\n}));\ndocument.querySelectorAll('[data-back]').forEach(button => button.addEventListener('click', () => showStep(currentStep - 1)));\nform.addEventListener('submit', event => {\n  event.preventDefault();\n  if (currentStep !== 2) return;\n  document.querySelector('#confirmed-name').textContent = form.elements.name.value.trim();\n  document.querySelector('#confirmed-email').textContent = form.elements.email.value.trim();\n  document.querySelector('#confirmed-plan').textContent = form.querySelector('input[name=\"plan\"]:checked').value;\n  showStep(3);\n  stepLabel.textContent = 'Complete';\n  stepName.textContent = 'You’re all set';\n  progress.setAttribute('aria-valuenow', '3');\n});\ndocument.querySelector('#restart').addEventListener('click', () => {\n  form.reset();\n  showStep(0);\n  document.querySelector('#name').focus();\n});\nupdateNext();",
+      "description": "Wizard navigation, validation, summary, and confirmation behavior"
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Three-Step Signup Wizard\n\nA self-contained signup flow built with HTML, CSS, and plain JavaScript. It runs locally in any modern browser without a server or network access.\n\n## Run\n\nOpen `index.html` in a browser.\n\n## Flow\n\n1. Enter a name of at least two characters and a valid email address.\n2. Choose Free, Pro, or Team.\n3. Review the summary, go back to edit, or confirm to see the completion screen.\n\nThe Next buttons stay disabled until the current step is valid. The progress bar updates as the user moves through the three signup steps. Controls have labels, keyboard focus styles, and keyboard-operable radio choices.\n\n## Files\n\n- `index.html` — semantic wizard structure\n- `styles.css` — responsive pixel-inspired presentation\n- `app.js` — validation and step navigation",
+      "description": "Run instructions and validation notes"
+    }
+  ]
+}

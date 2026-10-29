@@ -1,0 +1,576 @@
+{
+  "caseId": "chess-clock",
+  "run": 2,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\new",
+  "managerTokens": 21007,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 2,
+  "compileFailures": 0,
+  "firstChecks": "4/6",
+  "finalChecks": "4/5",
+  "reviewTriggered": true,
+  "checksDropped": 1,
+  "checksRevised": 0,
+  "coderRepair": true,
+  "checkRuns": [
+    "4/6",
+    "4/5",
+    "4/5"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 154,
+  "reportedTokens": 119934,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T07:01:37.979Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T07:01:37.980Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T07:01:56.005Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Chess Clock"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T07:01:56.005Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T07:02:27.425Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T07:02:27.425Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T07:02:27.872Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T07:02:27.872Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "bb6d798e-a3c5-48f5-aebb-8e767e396ac5"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T07:02:44.205Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "bb6d798e-a3c5-48f5-aebb-8e767e396ac5",
+        "checks": 6
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T07:02:44.206Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "3df1550c-d827-48ee-bb13-908d15fa3775",
+        "testPlanId": "bb6d798e-a3c5-48f5-aebb-8e767e396ac5",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T07:02:59.305Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "3df1550c-d827-48ee-bb13-908d15fa3775",
+        "name": "Both clocks start at five minutes",
+        "passed": true,
+        "actual": "5:00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T07:02:59.305Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "3df1550c-d827-48ee-bb13-908d15fa3775",
+        "name": "Start White clock",
+        "passed": true,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T07:02:59.305Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "3df1550c-d827-48ee-bb13-908d15fa3775",
+        "name": "Switch turns to Black",
+        "passed": true,
+        "actual": "YOUR TURN"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T07:02:59.305Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "3df1550c-d827-48ee-bb13-908d15fa3775",
+        "name": "Pause stops the active clock",
+        "passed": false,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T07:02:59.305Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "3df1550c-d827-48ee-bb13-908d15fa3775",
+        "name": "Resume restarts the clock",
+        "passed": true,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T07:02:59.305Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "3df1550c-d827-48ee-bb13-908d15fa3775",
+        "name": "Clock flags at zero",
+        "passed": false,
+        "actual": "White to move"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T07:02:59.305Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "3df1550c-d827-48ee-bb13-908d15fa3775",
+        "status": "failed",
+        "passed": 4,
+        "failed": 2,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T07:02:59.306Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "bb6d798e-a3c5-48f5-aebb-8e767e396ac5",
+        "review": true
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T07:03:14.642Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "bb6d798e-a3c5-48f5-aebb-8e767e396ac5",
+        "checks": 5,
+        "review": true,
+        "revised": 0,
+        "dropped": 1,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24125,
+          "completion_tokens": 178,
+          "total_tokens": 24303
+        },
+        "verdicts": [
+          {
+            "name": "Pause stops the active clock",
+            "verdict": "app-wrong",
+            "reason": "The check compares the clock text before and after starting White’s clock, waiting, and pausing. The requirement says Pause must stop the active clock, so the time should stay the same after the pause"
+          },
+          {
+            "name": "Clock flags at zero",
+            "verdict": "unsupported",
+            "reason": "The check starts White’s clock and waits 6 seconds, but the requirement gives each player 5 minutes. White cannot reach zero in that time, so expecting “White Flag!” contradicts the requirements."
+          }
+        ]
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T07:03:14.643Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "5eed8795-20c8-4bc3-8ec0-0f4d6e134cc5",
+        "testPlanId": "bb6d798e-a3c5-48f5-aebb-8e767e396ac5",
+        "checks": 5,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T07:03:21.407Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5eed8795-20c8-4bc3-8ec0-0f4d6e134cc5",
+        "name": "Both clocks start at five minutes",
+        "passed": true,
+        "actual": "5:00"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T07:03:21.408Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5eed8795-20c8-4bc3-8ec0-0f4d6e134cc5",
+        "name": "Start White clock",
+        "passed": true,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-29T07:03:21.408Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5eed8795-20c8-4bc3-8ec0-0f4d6e134cc5",
+        "name": "Switch turns to Black",
+        "passed": true,
+        "actual": "YOUR TURN"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-29T07:03:21.408Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5eed8795-20c8-4bc3-8ec0-0f4d6e134cc5",
+        "name": "Pause stops the active clock",
+        "passed": false,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-29T07:03:21.408Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5eed8795-20c8-4bc3-8ec0-0f4d6e134cc5",
+        "name": "Resume restarts the clock",
+        "passed": true,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-29T07:03:21.408Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "5eed8795-20c8-4bc3-8ec0-0f4d6e134cc5",
+        "status": "failed",
+        "passed": 4,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-29T07:03:21.412Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-29T07:04:04.063Z",
+      "type": "code_ready",
+      "round": 2,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-29T07:04:04.063Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-29T07:04:04.104Z",
+      "type": "build_passed",
+      "round": 2
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-29T07:04:04.105Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "46aa6dbe-fbb6-4885-8e0a-086d82114921",
+        "testPlanId": "bb6d798e-a3c5-48f5-aebb-8e767e396ac5",
+        "checks": 5,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-29T07:04:10.862Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "46aa6dbe-fbb6-4885-8e0a-086d82114921",
+        "name": "Both clocks start at five minutes",
+        "passed": true,
+        "actual": "5:00"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-29T07:04:10.862Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "46aa6dbe-fbb6-4885-8e0a-086d82114921",
+        "name": "Start White clock",
+        "passed": true,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-29T07:04:10.862Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "46aa6dbe-fbb6-4885-8e0a-086d82114921",
+        "name": "Switch turns to Black",
+        "passed": true,
+        "actual": "YOUR TURN"
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-29T07:04:10.862Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "46aa6dbe-fbb6-4885-8e0a-086d82114921",
+        "name": "Pause stops the active clock",
+        "passed": false,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-29T07:04:10.862Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "46aa6dbe-fbb6-4885-8e0a-086d82114921",
+        "name": "Resume restarts the clock",
+        "passed": true,
+        "actual": "4:59"
+      }
+    },
+    {
+      "seq": 37,
+      "at": "2026-10-29T07:04:10.862Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "46aa6dbe-fbb6-4885-8e0a-086d82114921",
+        "status": "failed",
+        "passed": 4,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 38,
+      "at": "2026-10-29T07:04:10.864Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v2/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Both clocks start at five minutes",
+        "actions": [],
+        "selector": "#white-time",
+        "expected": "5:00"
+      },
+      {
+        "name": "Start White clock",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#white-clock"
+          },
+          {
+            "type": "wait",
+            "ms": 1200
+          }
+        ],
+        "selector": "#white-time",
+        "expected": "^4:5[89]$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Switch turns to Black",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#white-clock"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          },
+          {
+            "type": "click",
+            "selector": "#black-clock"
+          }
+        ],
+        "selector": "#black-label",
+        "expected": "YOUR TURN"
+      },
+      {
+        "name": "Pause stops the active clock",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#white-clock"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          },
+          {
+            "type": "click",
+            "selector": "#pause"
+          },
+          {
+            "type": "wait",
+            "ms": 600
+          }
+        ],
+        "selector": "#white-time",
+        "expected": "",
+        "assertion": "unchanged"
+      },
+      {
+        "name": "Resume restarts the clock",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#white-clock"
+          },
+          {
+            "type": "click",
+            "selector": "#pause"
+          },
+          {
+            "type": "click",
+            "selector": "#pause"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          }
+        ],
+        "selector": "#white-time",
+        "expected": "^4:5[89]$",
+        "assertion": "matches"
+      }
+    ],
+    "limitations": [
+      "Five-minute expiry cannot be verified within the 8-second action limit; zero-time flag behavior is untested.",
+      "Not checked: Clock flags at zero: The check starts White’s clock and waits 6 seconds, but the requirement gives each player 5 minutes. White cannot reach zero in that time, so expecting “White Flag!” contradicts the requirements."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24516,
+      "completion_tokens": 340,
+      "total_tokens": 24856
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    },
+    {
+      "round": 2,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#182321\">\n  <title>Pixel Chess Clock</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"clock.js\" defer></script>\n</head>\n<body>\n  <main class=\"board\" aria-labelledby=\"title\">\n    <header class=\"header\">\n      <p class=\"eyebrow\">TWO PLAYER · 5 MINUTES</p>\n      <h1 id=\"title\">Pixel Chess Clock</h1>\n      <p class=\"hint\" id=\"hint\">Tap your side to start. Tap again after your move.</p>\n    </header>\n\n    <section class=\"clocks\" aria-label=\"Player clocks\">\n      <button class=\"clock active\" id=\"white-clock\" type=\"button\" aria-label=\"White clock, 5 minutes remaining. Tap to start White's turn.\" aria-pressed=\"false\">\n        <span class=\"player\"><span class=\"piece white-piece\" aria-hidden=\"true\"></span> White</span>\n        <span class=\"time\" id=\"white-time\" aria-hidden=\"true\">5:00</span>\n        <span class=\"clock-label\" id=\"white-label\">READY</span>\n      </button>\n      <button class=\"clock\" id=\"black-clock\" type=\"button\" aria-label=\"Black clock, 5 minutes remaining. Tap to start Black's turn.\" aria-pressed=\"false\">\n        <span class=\"player\"><span class=\"piece black-piece\" aria-hidden=\"true\"></span> Black</span>\n        <span class=\"time\" id=\"black-time\" aria-hidden=\"true\">5:00</span>\n        <span class=\"clock-label\" id=\"black-label\">READY</span>\n      </button>\n    </section>\n\n    <div class=\"status\" id=\"status\" role=\"status\" aria-live=\"polite\">Choose a side to begin</div>\n    <button class=\"pause\" id=\"pause\" type=\"button\" aria-label=\"Pause clocks\" disabled>Ⅱ <span>Pause</span></button>\n    <p class=\"footer\">MAKE YOUR MOVE · KEEP THE GAME MOVING</p>\n  </main>\n</body>\n</html>\n",
+      "description": ""
+    },
+    {
+      "path": "style.css",
+      "content": "* { box-sizing: border-box; }\n:root { color-scheme: dark; font-family: system-ui, -apple-system, \"Segoe UI\", sans-serif; color: #f2efdf; background: #182321; }\nbody { min-height: 100vh; margin: 0; padding: 24px; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 0%, #31463d 0%, #202e29 45%, #182321 100%); }\n.board { width: min(100%, 560px); padding: clamp(24px, 6vw, 44px); border: 1px solid #536454; border-radius: 20px; background: #293731; box-shadow: 0 24px 70px #0c1512aa, inset 0 1px #ffffff12; text-align: center; }\n.header { margin-bottom: 28px; }\n.eyebrow, .footer { margin: 0; color: #b4bf9a; font-size: 16px; font-weight: 700; letter-spacing: .12em; }\nh1 { margin: 10px 0 8px; font-size: clamp(28px, 7vw, 40px); line-height: 1.1; letter-spacing: -.04em; }\n.hint { margin: 0; color: #c6c9b9; font-size: 16px; line-height: 1.5; }\n.clocks { display: grid; gap: 14px; }\n.clock { min-height: 150px; width: 100%; padding: 18px 22px; display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr; align-items: center; text-align: left; color: #f2efdf; background: #202b27; border: 2px solid #45554a; border-radius: 12px; cursor: pointer; transition: border-color .15s, background .15s, transform .15s, box-shadow .15s; }\n.clock:hover:not(:disabled) { border-color: #b4bf9a; background: #26332d; }\n.clock:active:not(:disabled) { transform: scale(.985); }\n.clock:focus-visible, .pause:focus-visible { outline: 3px solid #e2c46e; outline-offset: 4px; }\n.clock.active { border-color: #e2c46e; box-shadow: 0 0 0 1px #e2c46e33, 0 0 26px #e2c46e17; }\n.clock:disabled { cursor: default; }\n.player { display: flex; gap: 10px; align-items: center; font-size: 18px; font-weight: 700; }\n.piece { width: 14px; height: 14px; display: inline-block; border: 2px solid #e2c46e; border-radius: 2px; transform: rotate(45deg); }\n.white-piece { background: #f2efdf; border-color: #b4bf9a; }\n.black-piece { background: #182321; }\n.time { grid-column: 2; grid-row: 1 / 3; font-variant-numeric: tabular-nums; font-size: clamp(48px, 12vw, 68px); font-weight: 750; line-height: 1; letter-spacing: -.06em; }\n.clock-label { margin-top: 8px; color: #b4bf9a; font-size: 16px; font-weight: 800; letter-spacing: .12em; }\n.clock.active .clock-label { color: #e2c46e; }\n.status { min-height: 28px; margin: 22px 0 14px; color: #e2c46e; font-size: 18px; font-weight: 700; }\n.pause { min-width: 148px; min-height: 52px; padding: 10px 20px; color: #182321; background: #e2c46e; border: 0; border-radius: 8px; font: inherit; font-size: 18px; font-weight: 750; cursor: pointer; transition: background .15s, transform .15s; }\n.pause:hover:not(:disabled) { background: #f0d783; }\n.pause:active:not(:disabled) { transform: translateY(2px); }\n.pause:disabled { opacity: .45; cursor: not-allowed; }\n.pause span { margin-left: 6px; }\n.footer { margin-top: 28px; font-size: 13px; letter-spacing: .1em; }\n@media (max-width: 420px) { body { padding: 16px; } .board { padding: 24px 18px; } .clock { min-height: 132px; padding: 16px; } .player { font-size: 16px; } }\n",
+      "description": ""
+    },
+    {
+      "path": "clock.js",
+      "content": "(() => {\n  const START_MS = 5 * 60 * 1000;\n  const remaining = { white: START_MS, black: START_MS };\n  const buttons = { white: document.getElementById('white-clock'), black: document.getElementById('black-clock') };\n  const times = { white: document.getElementById('white-time'), black: document.getElementById('black-time') };\n  const labels = { white: document.getElementById('white-label'), black: document.getElementById('black-label') };\n  const status = document.getElementById('status');\n  const pauseButton = document.getElementById('pause');\n  let active = null;\n  let deadline = 0;\n  let paused = false;\n  let flagged = false;\n  let ticker = null;\n\n  const format = ms => {\n    const seconds = Math.ceil(ms / 1000);\n    return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;\n  };\n\n  function render() {\n    for (const side of ['white', 'black']) {\n      times[side].textContent = format(remaining[side]);\n      const isActive = side === active && !paused && !flagged;\n      buttons[side].classList.toggle('active', isActive || (!active && !flagged && side === 'white'));\n      buttons[side].setAttribute('aria-pressed', String(isActive));\n      buttons[side].setAttribute('aria-label', `${side[0].toUpperCase() + side.slice(1)} clock, ${format(remaining[side])} remaining. ${flagged ? 'Game over.' : paused ? 'Clock paused.' : isActive ? 'Your turn. Tap to switch.' : 'Tap to start or switch turns.'}`);\n      labels[side].textContent = flagged && remaining[side] === 0 ? 'FLAGGED' : isActive ? 'YOUR TURN' : paused && side === active ? 'PAUSED' : 'READY';\n    }\n    pauseButton.disabled = active === null || flagged;\n    pauseButton.innerHTML = paused ? '▶ <span>Resume</span>' : 'Ⅱ <span>Pause</span>';\n    pauseButton.setAttribute('aria-label', paused ? 'Resume clocks' : 'Pause clocks');\n  }\n\n  function update() {\n    if (active === null || paused || flagged) return;\n    remaining[active] = Math.max(0, deadline - Date.now());\n    if (remaining[active] === 0) {\n      flagged = true;\n      clearInterval(ticker);\n      ticker = null;\n      status.textContent = `${active[0].toUpperCase() + active.slice(1)} Flag!`;\n    }\n    render();\n  }\n\n  function start(side) {\n    if (flagged || paused) return;\n    if (active === side) return;\n    update();\n    if (flagged) return;\n    active = side;\n    deadline = Date.now() + remaining[active];\n    status.textContent = `${side[0].toUpperCase() + side.slice(1)} to move`;\n    if (ticker === null) ticker = setInterval(update, 100);\n    render();\n  }\n\n  for (const side of ['white', 'black']) buttons[side].addEventListener('click', () => start(side));\n\n  pauseButton.addEventListener('click', () => {\n    if (active === null || flagged) return;\n    if (!paused) {\n      const now = Date.now();\n      remaining[active] = Math.max(0, deadline - now);\n      if (remaining[active] === 0) {\n        flagged = true;\n        clearInterval(ticker);\n        ticker = null;\n        status.textContent = `${active[0].toUpperCase() + active.slice(1)} Flag!`;\n        render();\n        return;\n      }\n      paused = true;\n      clearInterval(ticker);\n      ticker = null;\n      status.textContent = 'Clock paused';\n    } else {\n      paused = false;\n      deadline = Date.now() + remaining[active];\n      status.textContent = `${active[0].toUpperCase() + active.slice(1)} to move`;\n      ticker = setInterval(update, 100);\n    }\n    render();\n  });\n\n  render();\n})();\n",
+      "description": ""
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Chess Clock\n\nAn offline, two-player chess clock built with plain HTML, CSS, and JavaScript. Open `index.html` directly in a modern browser; no server, packages, or network connection are needed.\n\n## How to play\n\n- Each side starts with five minutes.\n- Select a side to start its clock, then select the other side after each move.\n- Select **Pause** to pause or resume the active clock.\n- When a clock reaches zero, the side is flagged and the game stops.\n\nBoth clocks are labeled buttons, so they can be operated with a keyboard. The Pause/Resume control is also keyboard accessible.\n",
+      "description": ""
+    }
+  ]
+}

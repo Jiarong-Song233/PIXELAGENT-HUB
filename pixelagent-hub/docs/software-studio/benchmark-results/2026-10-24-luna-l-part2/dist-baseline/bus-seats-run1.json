@@ -1,0 +1,690 @@
+{
+  "caseId": "bus-seats",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab3\\baseline",
+  "managerTokens": 21132,
+  "model": "gpt-6-luna",
+  "testerModel": "gpt-6-luna",
+  "status": "ready_for_review",
+  "coderRounds": 2,
+  "compileFailures": 0,
+  "firstChecks": "2/7",
+  "finalChecks": "7/7",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 5,
+  "coderRepair": true,
+  "checkRuns": [
+    "2/7",
+    "5/7",
+    "7/7"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 146,
+  "reportedTokens": 121498,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T03:11:22.502Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8787",
+        "model": "gpt-6-luna"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T03:11:22.502Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T03:11:41.771Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Bus Booking"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T03:11:41.772Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T03:12:16.337Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T03:12:16.337Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T03:12:18.061Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T03:12:18.062Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "2fc7eff4-73b9-4908-8efc-ca4c1920708e"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T03:12:36.826Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "2fc7eff4-73b9-4908-8efc-ca4c1920708e",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T03:12:36.827Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "testPlanId": "2fc7eff4-73b9-4908-8efc-ca4c1920708e",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T03:12:39.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "name": "Seat map has 40 seats",
+        "passed": true,
+        "actual": "40"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T03:12:39.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "name": "Booked seats are disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T03:12:39.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "name": "Selecting one seat updates code and fare",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T03:12:39.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "name": "One seat costs 12",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T03:12:39.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "name": "Four seats apply discount",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T03:12:39.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "name": "Discount note appears for four seats",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T03:12:39.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "name": "Selection limit prevents fifth seat",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T03:12:39.094Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "24f9f170-33e1-45b2-a073-bc7f37636a91",
+        "status": "failed",
+        "passed": 2,
+        "failed": 5,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T03:12:39.095Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "2fc7eff4-73b9-4908-8efc-ca4c1920708e",
+        "review": true
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T03:12:59.596Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "2fc7eff4-73b9-4908-8efc-ca4c1920708e",
+        "checks": 7,
+        "review": true,
+        "revised": 5,
+        "dropped": 0,
+        "llmModel": "gpt-6-luna",
+        "llmUsage": {
+          "prompt_tokens": 24375,
+          "completion_tokens": 681,
+          "total_tokens": 25056
+        },
+        "verdicts": [
+          {
+            "name": "Selecting one seat updates code and fare",
+            "verdict": "check-wrong",
+            "reason": "The check clicks a selector matching 40 buttons without specifying an index, so the action is invalid; the requirement calls for selecting one seat and showing its code. This check is wrong."
+          },
+          {
+            "name": "One seat costs 12",
+            "verdict": "check-wrong",
+            "reason": "The check clicks a selector matching 40 buttons without specifying an index, so the action is invalid; the requirement says each seat costs 12. This check is wrong."
+          },
+          {
+            "name": "Four seats apply discount",
+            "verdict": "check-wrong",
+            "reason": "The check's first click matches 40 buttons without specifying an index, so that action is invalid; the requirement says four seats cost 43.20 after the discount. This check is wrong."
+          },
+          {
+            "name": "Discount note appears for four seats",
+            "verdict": "check-wrong",
+            "reason": "The check's first click matches 40 buttons without specifying an index, so that action is invalid; the requirement specifies a discount but does not require a note. This check is wrong."
+          },
+          {
+            "name": "Selection limit prevents fifth seat",
+            "verdict": "check-wrong",
+            "reason": "The check clicks a selector matching 40 buttons without specifying an index, so the first action is invalid; it also expects four selected seats plus a fifth, contrary to the up-to-four limit. This ch"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T03:12:59.597Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "testPlanId": "2fc7eff4-73b9-4908-8efc-ca4c1920708e",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T03:13:06.193Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "name": "Seat map has 40 seats",
+        "passed": true,
+        "actual": "40"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T03:13:06.193Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "name": "Booked seats are disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T03:13:06.193Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "name": "Selecting one seat updates code and fare",
+        "passed": true,
+        "actual": "1A"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T03:13:06.193Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "name": "One seat costs 12",
+        "passed": true,
+        "actual": "12"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T03:13:06.193Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "name": "Four seats apply discount",
+        "passed": false,
+        "actual": "43.20"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T03:13:06.193Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "name": "Discount note appears for four seats",
+        "passed": false,
+        "actual": "43.20"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T03:13:06.193Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "name": "Selection limit prevents fifth seat",
+        "passed": true,
+        "actual": "1A, 1C, 1D, 2A"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-24T03:13:06.193Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "b19629b6-0a14-420a-8fe5-d3c9e94d8617",
+        "status": "failed",
+        "passed": 5,
+        "failed": 2,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-24T03:13:06.195Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-24T03:13:43.906Z",
+      "type": "code_ready",
+      "round": 2,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-24T03:13:43.906Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-24T03:13:43.950Z",
+      "type": "build_passed",
+      "round": 2
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-24T03:13:43.951Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "testPlanId": "2fc7eff4-73b9-4908-8efc-ca4c1920708e",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-24T03:13:46.642Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "name": "Seat map has 40 seats",
+        "passed": true,
+        "actual": "40"
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-24T03:13:46.642Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "name": "Booked seats are disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 37,
+      "at": "2026-10-24T03:13:46.642Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "name": "Selecting one seat updates code and fare",
+        "passed": true,
+        "actual": "1A"
+      }
+    },
+    {
+      "seq": 38,
+      "at": "2026-10-24T03:13:46.642Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "name": "One seat costs 12",
+        "passed": true,
+        "actual": "12"
+      }
+    },
+    {
+      "seq": 39,
+      "at": "2026-10-24T03:13:46.642Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "name": "Four seats apply discount",
+        "passed": true,
+        "actual": "43.2"
+      }
+    },
+    {
+      "seq": 40,
+      "at": "2026-10-24T03:13:46.642Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "name": "Discount note appears for four seats",
+        "passed": true,
+        "actual": "43.2"
+      }
+    },
+    {
+      "seq": 41,
+      "at": "2026-10-24T03:13:46.642Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "name": "Selection limit prevents fifth seat",
+        "passed": true,
+        "actual": "1A, 1C, 1D, 2A"
+      }
+    },
+    {
+      "seq": 42,
+      "at": "2026-10-24T03:13:46.642Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "f1c9cb4c-b2d1-4d4a-a9d1-d91a97429db3",
+        "status": "passed",
+        "passed": 7,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 43,
+      "at": "2026-10-24T03:13:46.645Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v2/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Seat map has 40 seats",
+        "actions": [],
+        "selector": ".seat",
+        "expected": "40",
+        "assertion": "count"
+      },
+      {
+        "name": "Booked seats are disabled",
+        "actions": [],
+        "selector": "#seat-grid button:nth-of-type(2)",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Selecting one seat updates code and fare",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 0
+          },
+          {
+            "type": "wait",
+            "ms": 100
+          }
+        ],
+        "selector": "#chosen-seats",
+        "expected": "1A"
+      },
+      {
+        "name": "One seat costs 12",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 0
+          },
+          {
+            "type": "wait",
+            "ms": 100
+          }
+        ],
+        "selector": "#price",
+        "expected": "12"
+      },
+      {
+        "name": "Four seats apply discount",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 3
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 4
+          },
+          {
+            "type": "wait",
+            "ms": 100
+          }
+        ],
+        "selector": "#price",
+        "expected": "43.2"
+      },
+      {
+        "name": "Discount note appears for four seats",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 3
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 4
+          }
+        ],
+        "selector": "#price",
+        "expected": "43.2"
+      },
+      {
+        "name": "Selection limit prevents fifth seat",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 0
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 2
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 3
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 4
+          },
+          {
+            "type": "click",
+            "selector": "#seat-grid button",
+            "nth": 5
+          }
+        ],
+        "selector": "#chosen-seats",
+        "expected": "1A, 1C, 1D, 2A"
+      }
+    ],
+    "limitations": [],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 24421,
+      "completion_tokens": 437,
+      "total_tokens": 24858
+    },
+    "llmModel": "gpt-6-luna",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    },
+    {
+      "round": 2,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Pixel Bus Booking</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <script src=\"app.js\" defer></script>\n</head>\n<body>\n  <main class=\"booking-card\">\n    <header class=\"header\">\n      <span class=\"eyebrow\">NIGHT ROUTE · 08</span>\n      <h1>Pick your seats</h1>\n      <p>Choose up to four seats for your journey.</p>\n    </header>\n\n    <section class=\"bus\" aria-label=\"Bus seat map\">\n      <div class=\"driver\" aria-hidden=\"true\"><span>DRIVER</span><span class=\"wheel\">◉</span></div>\n      <div id=\"seat-grid\" class=\"seat-grid\" role=\"group\" aria-label=\"Available bus seats\"></div>\n      <div class=\"legend\" aria-label=\"Seat status key\">\n        <span><i class=\"key available\"></i>Available</span>\n        <span><i class=\"key selected\"></i>Selected</span>\n        <span><i class=\"key booked\"></i>Booked</span>\n      </div>\n    </section>\n\n    <section class=\"summary\" aria-live=\"polite\" aria-atomic=\"true\">\n      <div class=\"summary-row\"><span>Selected seats</span><strong id=\"chosen-seats\">None</strong></div>\n      <div class=\"summary-row\"><span>Price</span><strong id=\"price\">12</strong></div>\n      <p id=\"discount-note\" class=\"discount-note\" hidden>10% group discount applied</p>\n    </section>\n    <p id=\"status\" class=\"status\" role=\"status\"></p>\n  </main>\n</body>\n</html>\n",
+      "description": "Offline booking page structure with an accessible seat map, legend, and live price summary."
+    },
+    {
+      "path": "styles.css",
+      "content": "[hidden] { display: none !important; }\n:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101923; color: #f3f5ec; }\n* { box-sizing: border-box; }\nbody { min-width: 320px; min-height: 100vh; margin: 0; padding: 32px 16px; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 0%, #203541 0, #101923 65%); font-size: 16px; }\n.booking-card { width: min(100%, 480px); padding: 32px; border: 1px solid #344850; border-radius: 20px; background: #18252d; box-shadow: 0 24px 70px #080e13a8; }\n.header { text-align: center; margin-bottom: 28px; }\n.eyebrow { color: #f2b84b; font-size: 14px; font-weight: 800; letter-spacing: .16em; }\nh1 { margin: 10px 0 8px; font-size: clamp(28px, 7vw, 36px); line-height: 1.1; }\n.header p { margin: 0; color: #b9c5c7; }\n.bus { padding: 20px; border: 1px solid #40565c; border-radius: 18px 18px 28px 28px; background: #202f37; }\n.driver { display: flex; justify-content: space-between; align-items: center; margin: 0 0 18px; padding: 0 4px 12px; border-bottom: 1px dashed #587078; color: #9cabad; font-size: 13px; font-weight: 700; letter-spacing: .12em; }\n.wheel { color: #f2b84b; font-size: 24px; }\n.seat-grid { display: grid; grid-template-columns: 1fr 1fr 22px 1fr 1fr; gap: 9px 7px; }\n.seat { min-height: 40px; border: 1px solid #789090; border-radius: 10px 10px 7px 7px; background: #31464b; color: #f3f5ec; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .15s, transform .15s, border-color .15s; }\n.seat:hover:not(:disabled) { border-color: #f2b84b; background: #40595b; }\n.seat:active:not(:disabled) { transform: scale(.95); }\n.seat:focus-visible { outline: 3px solid #f2b84b; outline-offset: 3px; }\n.seat.selected { border-color: #f2b84b; background: #f2b84b; color: #17232b; }\n.seat:disabled { border-color: #485356; background: #394247; color: #929b9b; cursor: not-allowed; text-decoration: line-through; }\n.aisle { display: grid; place-items: center; color: #778b8d; font-size: 11px; writing-mode: vertical-rl; letter-spacing: .1em; }\n.legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin-top: 22px; color: #c4cecb; font-size: 14px; }\n.legend span { display: inline-flex; align-items: center; gap: 7px; }\n.key { width: 13px; height: 13px; border-radius: 4px; background: #31464b; border: 1px solid #789090; }\n.key.selected { background: #f2b84b; border-color: #f2b84b; }\n.key.booked { background: #394247; border-color: #485356; }\n.summary { margin-top: 24px; padding: 18px; border-radius: 14px; background: #101a20; }\n.summary-row { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; color: #b9c5c7; }\n.summary-row strong { color: #f3f5ec; text-align: right; }\n#price::before { content: '¢'; color: #f2b84b; }\n.discount-note { margin: 10px 0 0; color: #f2b84b; font-size: 14px; }\n.status { min-height: 20px; margin: 12px 0 0; color: #f2b84b; text-align: center; font-size: 14px; }\n@media (max-width: 400px) { body { padding: 18px 12px; } .booking-card { padding: 22px 16px; } .bus { padding: 15px 12px; } .seat-grid { gap: 8px 5px; } .seat { min-height: 42px; font-size: 13px; } .aisle { font-size: 10px; } }\n",
+      "description": "Responsive themed styling with clear seat states, focus indication, and narrow-screen layout."
+    },
+    {
+      "path": "app.js",
+      "content": "const grid = document.querySelector('#seat-grid');\nconst chosenSeats = document.querySelector('#chosen-seats');\nconst priceDisplay = document.querySelector('#price');\nconst discountNote = document.querySelector('#discount-note');\nconst status = document.querySelector('#status');\nconst booked = new Set(['1B', '3D', '5A', '7C', '9B']);\nconst selected = new Set();\n\nfunction updateSummary() {\n  const seats = [...selected].sort((a, b) => {\n    const [, rowA, colA] = a.match(/(\\d+)([A-D])/);\n    const [, rowB, colB] = b.match(/(\\d+)([A-D])/);\n    return Number(rowA) - Number(rowB) || colA.localeCompare(colB);\n  });\n  chosenSeats.textContent = seats.length ? seats.join(', ') : 'None';\n  const total = seats.length * 12 * (seats.length === 4 ? 0.9 : 1);\n  priceDisplay.textContent = String(Number(total.toFixed(2)));\n  discountNote.hidden = seats.length !== 4;\n}\n\nfor (let row = 1; row <= 10; row++) {\n  for (let col = 0; col < 5; col++) {\n    const cell = document.createElement(col === 2 ? 'span' : 'button');\n    if (col === 2) {\n      cell.className = 'aisle';\n      cell.setAttribute('aria-hidden', 'true');\n      cell.textContent = 'AISLE';\n    } else {\n      const letter = String.fromCharCode(65 + (col > 2 ? col - 1 : col));\n      const code = `${row}${letter}`;\n      cell.type = 'button';\n      cell.className = 'seat';\n      cell.textContent = code;\n      cell.setAttribute('aria-label', booked.has(code) ? `Seat ${code}, booked` : `Seat ${code}, available`);\n      if (booked.has(code)) {\n        cell.disabled = true;\n        cell.setAttribute('aria-pressed', 'false');\n        cell.title = 'Already booked';\n      } else {\n        cell.setAttribute('aria-pressed', 'false');\n        cell.addEventListener('click', () => {\n          if (selected.has(code)) {\n            selected.delete(code);\n            cell.classList.remove('selected');\n            cell.setAttribute('aria-pressed', 'false');\n            status.textContent = `Seat ${code} removed.`;\n          } else if (selected.size < 4) {\n            selected.add(code);\n            cell.classList.add('selected');\n            cell.setAttribute('aria-pressed', 'true');\n            status.textContent = `Seat ${code} selected.`;\n          } else {\n            status.textContent = 'You can select up to four seats.';\n          }\n          updateSummary();\n        });\n      }\n    }\n    grid.append(cell);\n  }\n}\nupdateSummary();\n",
+      "description": "Renders the seat map, manages selection, and calculates the fare with the four-seat discount."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Bus Booking\n\nA small offline browser app for choosing seats on a 10-row bus. Each row has seats A and B, an aisle, then seats C and D. Seat codes use the row number and column letter (for example, 1A or 10D).\n\n## Run\n\nOpen `index.html` in any modern browser. No server, packages, network access, or external assets are required.\n\n## Booking rules\n\n- Seats 1B, 3D, 5A, 7C, and 9B are already booked.\n- Select up to four available seats. Click a selected seat again to remove it.\n- Each seat costs 12. Selecting four seats applies a 10% discount to the total.\n- The chosen seat codes and current total update as you select seats.\n\nThe seat buttons support keyboard navigation and announce their status; the booking summary and selection updates are exposed to assistive technology.\n",
+      "description": "Offline run instructions and booking rules."
+    }
+  ]
+}

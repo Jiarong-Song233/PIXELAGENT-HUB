@@ -60,8 +60,14 @@ try {
     // With --base-url the page talks to a local OpenAI-compatible server (no key); otherwise to DeepSeek with the real key.
     await page.route(baseUrl ? `${baseUrl.replace(/\/$/, '')}/**` : 'https://api.deepseek.com/**', async (route) => {
       if (route.request().method() === 'OPTIONS') return route.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*', 'access-control-allow-headers': 'content-type, authorization', 'access-control-allow-methods': 'POST, OPTIONS' } });
-      const upstream = await fetch(baseUrl ? `${baseUrl.replace(/\/$/, '')}/chat/completions` : 'https://api.deepseek.com/chat/completions', { method: 'POST', headers: { 'content-type': 'application/json', ...(baseUrl ? {} : { authorization: `Bearer ${process.env.DEEPSEEK_API_KEY}` }) }, body: route.request().postData() || '{}' });
-      const body = Buffer.from(await upstream.arrayBuffer());
+      let upstream: Response, body: Buffer;
+      try {
+        upstream = await fetch(baseUrl ? `${baseUrl.replace(/\/$/, '')}/chat/completions` : 'https://api.deepseek.com/chat/completions', { method: 'POST', headers: { 'content-type': 'application/json', ...(baseUrl ? {} : { authorization: `Bearer ${process.env.DEEPSEEK_API_KEY}` }) }, body: route.request().postData() || '{}' });
+        body = Buffer.from(await upstream.arrayBuffer());
+      } catch (error) {
+        // A failed forward (e.g. a headers timeout on a slow local server) fails this call, not the whole benchmark.
+        return route.fulfill({ status: 502, headers: { 'content-type': 'application/json', 'access-control-allow-origin': '*' }, body: JSON.stringify({ error: { message: String((error as Error).message || error) } }) });
+      }
       for (const match of body.toString('utf8').matchAll(/"total_tokens":(\d+)/g)) tokens += Number(match[1]);
       await route.fulfill({ status: upstream.status, headers: { 'content-type': upstream.headers.get('content-type') || 'text/event-stream', 'access-control-allow-origin': '*' }, body });
     });
@@ -115,7 +121,9 @@ try {
 } finally {
   await browser.close();
   for (const { server } of servers.values()) server.close();
-  const revision = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
-  const dirty = execFileSync('git', ['status', '--porcelain', '--untracked-files=no'], { encoding: 'utf8' }).trim() !== '';
+  // The summaries must still be written if git cannot run (it would also hide the loop's own error).
+  const git = (args: string[]) => { try { return execFileSync('git', args, { encoding: 'utf8' }).trim(); } catch { return undefined; } };
+  const revision = git(['rev-parse', 'HEAD']) ?? 'unknown';
+  const dirty = (git(['status', '--porcelain', '--untracked-files=no']) ?? '') !== '';
   for (const arm of arms) await writeFile(join(explicitArms ? join(out, arm.arm) : out, 'summary.json'), JSON.stringify({ recordedAt: new Date().toISOString(), sourceRevision: revision, sourceDirty: dirty, model: arm.model, runsPerCase: runs, results: explicitArms ? results.filter((entry) => entry.arm === arm.arm) : results }, null, 2));
 }
