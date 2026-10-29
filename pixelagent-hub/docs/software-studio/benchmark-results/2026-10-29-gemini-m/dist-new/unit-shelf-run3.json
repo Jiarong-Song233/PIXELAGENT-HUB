@@ -1,0 +1,441 @@
+{
+  "caseId": "unit-shelf",
+  "run": 3,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\new",
+  "managerTokens": 8984,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 120,
+  "reportedTokens": 51749,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:53:48.234Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:53:48.234Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:54:11.439Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Bookshelf Offline Web App"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:54:11.439Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:54:55.908Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:54:55.908Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:54:56.365Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:54:56.366Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "91fff742-354c-432a-bf2f-6f9e29ab82e1"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:55:42.926Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "91fff742-354c-432a-bf2f-6f9e29ab82e1",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:55:42.927Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "testPlanId": "91fff742-354c-432a-bf2f-6f9e29ab82e1",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Default render displays 8 books",
+        "passed": true,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Default sort ascending by title first item is Dune",
+        "passed": true,
+        "actual": "Dune"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Sort descending by title first item is Ubik",
+        "passed": true,
+        "actual": "Ubik"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Sort ascending by author first item is Dan Simmons",
+        "passed": true,
+        "actual": "Dan Simmons"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Sort descending by author first item is William Gibson",
+        "passed": true,
+        "actual": "William Gibson"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Sort ascending by year first item is Foundation (1951)",
+        "passed": true,
+        "actual": "1951"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Sort descending by year first item is Snow Crash (1992)",
+        "passed": true,
+        "actual": "1992"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Filter by author name finds matching book",
+        "passed": true,
+        "actual": "Neuromancer"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Filter by book title displays single result",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "name": "Non-matching search displays empty message",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T13:55:46.108Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "d15bc4b2-07ba-47d2-88a4-370a24c53125",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T13:55:46.111Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Default render displays 8 books",
+        "actions": [],
+        "selector": ".book-item",
+        "expected": "8",
+        "assertion": "count"
+      },
+      {
+        "name": "Default sort ascending by title first item is Dune",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-by",
+            "value": "title"
+          },
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": ""
+          }
+        ],
+        "selector": ".book-title",
+        "nth": 0,
+        "expected": "Dune",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort descending by title first item is Ubik",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-by",
+            "value": "title"
+          },
+          {
+            "type": "click",
+            "selector": "#order-toggle"
+          }
+        ],
+        "selector": ".book-title",
+        "nth": 0,
+        "expected": "Ubik",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort ascending by author first item is Dan Simmons",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-by",
+            "value": "author"
+          }
+        ],
+        "selector": ".book-author",
+        "nth": 0,
+        "expected": "Dan Simmons",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort descending by author first item is William Gibson",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-by",
+            "value": "author"
+          },
+          {
+            "type": "click",
+            "selector": "#order-toggle"
+          }
+        ],
+        "selector": ".book-author",
+        "nth": 0,
+        "expected": "William Gibson",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort ascending by year first item is Foundation (1951)",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-by",
+            "value": "year"
+          }
+        ],
+        "selector": ".book-year",
+        "nth": 0,
+        "expected": "1951",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort descending by year first item is Snow Crash (1992)",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-by",
+            "value": "year"
+          },
+          {
+            "type": "click",
+            "selector": "#order-toggle"
+          }
+        ],
+        "selector": ".book-year",
+        "nth": 0,
+        "expected": "1992",
+        "assertion": "text"
+      },
+      {
+        "name": "Filter by author name finds matching book",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Gibson"
+          }
+        ],
+        "selector": ".book-title",
+        "nth": 0,
+        "expected": "Neuromancer",
+        "assertion": "text"
+      },
+      {
+        "name": "Filter by book title displays single result",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Solaris"
+          }
+        ],
+        "selector": ".book-item",
+        "expected": "1",
+        "assertion": "count"
+      },
+      {
+        "name": "Non-matching search displays empty message",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "nonexistent xyz"
+          }
+        ],
+        "selector": "#empty-message",
+        "expected": "true",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14204,
+      "completion_tokens": 540,
+      "total_tokens": 14744
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Bookshelf</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"shelf-app\" role=\"main\">\n    <header class=\"shelf-header\">\n      <h1 class=\"pixel-title\">Pixel Bookshelf</h1>\n      <p class=\"pixel-subtitle\">8 hand-crafted classics on retro display</p>\n    </header>\n\n    <section class=\"controls-card\" aria-label=\"Search and Sort Controls\">\n      <div class=\"control-group\">\n        <label for=\"search-input\" class=\"control-label\">Filter Books</label>\n        <input \n          type=\"text\" \n          id=\"search-input\" \n          class=\"pixel-input\" \n          placeholder=\"Search title or author...\" \n          autocomplete=\"off\"\n        >\n      </div>\n\n      <div class=\"control-row\">\n        <div class=\"control-group\">\n          <label for=\"sort-by\" class=\"control-label\">Sort By</label>\n          <select id=\"sort-by\" class=\"pixel-select\">\n            <option value=\"title\">Title</option>\n            <option value=\"author\">Author</option>\n            <option value=\"year\">Year</option>\n          </select>\n        </div>\n\n        <div class=\"control-group control-group-button\">\n          <span id=\"order-label\" class=\"control-label\">Sort Order</span>\n          <button \n            type=\"button\" \n            id=\"order-toggle\" \n            class=\"pixel-button\" \n            aria-labelledby=\"order-label order-toggle\"\n            aria-live=\"polite\"\n          >\n            Ascending (▲)\n          </button>\n        </div>\n      </div>\n    </section>\n\n    <section class=\"shelf-display\" aria-label=\"Bookcase\">\n      <div class=\"shelf-unit\">\n        <ul id=\"book-list\" class=\"book-grid\" aria-live=\"polite\"></ul>\n        <div class=\"shelf-board\" aria-hidden=\"true\"></div>\n      </div>\n      <p id=\"empty-message\" class=\"empty-alert\" hidden>No books match your criteria.</p>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Root entry point containing markup, pixel-styled UI, CSS, and interactive JavaScript logic."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Enforce hidden attribute precedence */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #261738;\n  --wood-main: #9c5c3d;\n  --wood-dark: #63331b;\n  --wood-light: #c9855b;\n  --pixel-card: #3f2a58;\n  --pixel-accent: #f4c264;\n  --pixel-accent-hover: #ffdb8a;\n  --text-main: #f8f0e5;\n  --text-dim: #d1b89d;\n  --border-shadow: #140d1e;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--bg-color);\n  color: var(--text-main);\n  font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;\n  font-size: 16px;\n  line-height: 1.5;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1.5rem 1rem;\n}\n\n.shelf-app {\n  width: 100%;\n  max-width: 820px;\n  background: var(--pixel-card);\n  border: 4px solid var(--border-shadow);\n  box-shadow: 6px 6px 0px 0px var(--border-shadow);\n  padding: 2rem 1.5rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1.75rem;\n}\n\n.shelf-header {\n  text-align: center;\n}\n\n.pixel-title {\n  font-size: 2rem;\n  font-weight: 800;\n  color: var(--pixel-accent);\n  letter-spacing: 2px;\n  text-shadow: 3px 3px 0 var(--border-shadow);\n}\n\n.pixel-subtitle {\n  color: var(--text-dim);\n  font-size: 1rem;\n  margin-top: 0.25rem;\n}\n\n.controls-card {\n  background: var(--bg-color);\n  border: 3px solid var(--border-shadow);\n  box-shadow: 4px 4px 0 0 var(--border-shadow);\n  padding: 1.25rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.control-row {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 1rem;\n}\n\n.control-group {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 200px;\n  gap: 0.35rem;\n}\n\n.control-group-button {\n  justify-content: flex-end;\n}\n\n.control-label {\n  font-size: 0.95rem;\n  font-weight: bold;\n  color: var(--pixel-accent);\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\n.pixel-input,\n.pixel-select,\n.pixel-button {\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: bold;\n  color: var(--text-main);\n  background: var(--pixel-card);\n  border: 3px solid var(--border-shadow);\n  box-shadow: 3px 3px 0 0 var(--border-shadow);\n  padding: 0.65rem 0.85rem;\n  outline: none;\n  transition: background-color 0.15s, transform 0.1s;\n}\n\n.pixel-input:hover,\n.pixel-select:hover,\n.pixel-button:hover {\n  background: #50376d;\n}\n\n.pixel-input:focus-visible,\n.pixel-select:focus-visible,\n.pixel-button:focus-visible {\n  border-color: var(--pixel-accent);\n  outline: 2px dashed var(--pixel-accent);\n  outline-offset: 2px;\n}\n\n.pixel-button {\n  cursor: pointer;\n  background: var(--wood-main);\n  color: #fff;\n  text-align: center;\n}\n\n.pixel-button:hover {\n  background: var(--wood-light);\n}\n\n.pixel-button:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0 0 var(--border-shadow);\n}\n\n.shelf-display {\n  display: flex;\n  flex-direction: column;\n  gap: 0.75rem;\n}\n\n.shelf-unit {\n  background: #1e112a;\n  border: 4px solid var(--border-shadow);\n  padding: 1.5rem 1rem 0 1rem;\n  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.6);\n}\n\n.book-grid {\n  list-style: none;\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));\n  gap: 1.25rem 1rem;\n  align-items: flex-end;\n}\n\n.book-item {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n}\n\n.pixel-book {\n  min-height: 190px;\n  background: var(--book-color, #7a3e3e);\n  border: 3px solid var(--border-shadow);\n  box-shadow: 3px -3px 0 0 rgba(255, 255, 255, 0.15) inset, 4px 4px 0 0 var(--border-shadow);\n  padding: 0.85rem 0.6rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  position: relative;\n  transition: transform 0.15s ease;\n}\n\n.pixel-book::before {\n  content: '';\n  position: absolute;\n  left: 6px;\n  top: 0;\n  bottom: 0;\n  width: 4px;\n  background: rgba(0, 0, 0, 0.25);\n}\n\n.pixel-book:hover {\n  transform: translateY(-4px);\n}\n\n.book-title {\n  font-size: 0.95rem;\n  font-weight: 800;\n  line-height: 1.25;\n  color: #ffffff;\n  word-break: break-word;\n  padding-left: 8px;\n  text-shadow: 1px 1px 0 #000;\n}\n\n.book-meta {\n  display: flex;\n  flex-direction: column;\n  gap: 0.2rem;\n  padding-left: 8px;\n  border-top: 2px dashed rgba(255, 255, 255, 0.3);\n  padding-top: 0.5rem;\n}\n\n.book-author {\n  font-size: 0.8rem;\n  color: #ffefcb;\n  font-weight: 600;\n  text-shadow: 1px 1px 0 #000;\n}\n\n.book-year {\n  font-size: 0.8rem;\n  font-weight: bold;\n  display: inline-block;\n  background: rgba(0, 0, 0, 0.4);\n  padding: 0.1rem 0.3rem;\n  border-radius: 2px;\n  width: fit-content;\n}\n\n.shelf-board {\n  height: 20px;\n  background: var(--wood-main);\n  border-top: 4px solid var(--wood-light);\n  border-bottom: 4px solid var(--wood-dark);\n  box-shadow: 0 4px 0 0 var(--border-shadow);\n  margin: 0.5rem -1rem 0 -1rem;\n}\n\n.empty-alert {\n  text-align: center;\n  background: var(--wood-dark);\n  color: var(--pixel-accent);\n  font-weight: bold;\n  padding: 1rem;\n  border: 3px solid var(--border-shadow);\n}\n\n@media (max-width: 480px) {\n  .shelf-app {\n    padding: 1.25rem 0.75rem;\n  }\n\n  .pixel-title {\n    font-size: 1.5rem;\n  }\n\n  .book-grid {\n    grid-template-columns: repeat(2, 1fr);\n    gap: 0.75rem;\n  }\n\n  .pixel-book {\n    min-height: 170px;\n  }\n}\n",
+      "description": "Pixel-art retro styling, color palette, responsive design, and state transitions."
+    },
+    {
+      "path": "app.js",
+      "content": "const BOOKS = [\n  { id: 1, title: 'Neuromancer', author: 'William Gibson', year: 1984, color: '#32527b' },\n  { id: 2, title: 'Snow Crash', author: 'Neal Stephenson', year: 1992, color: '#883e58' },\n  { id: 3, title: 'Dune', author: 'Frank Herbert', year: 1965, color: '#a2622a' },\n  { id: 4, title: 'Foundation', author: 'Isaac Asimov', year: 1951, color: '#396b52' },\n  { id: 5, title: 'Solaris', author: 'Stanislaw Lem', year: 1961, color: '#68457c' },\n  { id: 6, title: 'Ubik', author: 'Philip K. Dick', year: 1969, color: '#8b4f39' },\n  { id: 7, title: 'Hyperion', author: 'Dan Simmons', year: 1989, color: '#2b5f63' },\n  { id: 8, title: 'Left Hand of Darkness', author: 'Ursula K. Le Guin', year: 1969, color: '#5a4675' }\n];\n\nlet sortField = 'title';\nlet isAscending = true;\nlet searchQuery = '';\n\nconst bookListElement = document.getElementById('book-list');\nconst searchInputElement = document.getElementById('search-input');\nconst sortBySelectElement = document.getElementById('sort-by');\nconst orderToggleButton = document.getElementById('order-toggle');\nconst emptyMessageElement = document.getElementById('empty-message');\n\nfunction renderBooks() {\n  const filtered = BOOKS.filter((book) => {\n    const query = searchQuery.trim().toLowerCase();\n    if (!query) return true;\n    return (\n      book.title.toLowerCase().includes(query) ||\n      book.author.toLowerCase().includes(query)\n    );\n  });\n\n  filtered.sort((a, b) => {\n    let valA = a[sortField];\n    let valB = b[sortField];\n\n    if (typeof valA === 'string') {\n      const comparison = valA.localeCompare(valB, undefined, { sensitivity: 'base' });\n      return isAscending ? comparison : -comparison;\n    }\n\n    return isAscending ? valA - valB : valB - valA;\n  });\n\n  bookListElement.innerHTML = '';\n\n  if (filtered.length === 0) {\n    emptyMessageElement.hidden = false;\n  } else {\n    emptyMessageElement.hidden = true;\n\n    filtered.forEach((book) => {\n      const listItem = document.createElement('li');\n      listItem.className = 'book-item';\n\n      const bookArticle = document.createElement('article');\n      bookArticle.className = 'pixel-book';\n      bookArticle.style.setProperty('--book-color', book.color);\n\n      const titleEl = document.createElement('h2');\n      titleEl.className = 'book-title';\n      titleEl.textContent = book.title;\n\n      const metaDiv = document.createElement('div');\n      metaDiv.className = 'book-meta';\n\n      const authorEl = document.createElement('span');\n      authorEl.className = 'book-author';\n      authorEl.textContent = book.author;\n\n      const yearEl = document.createElement('time');\n      yearEl.className = 'book-year';\n      yearEl.dateTime = String(book.year);\n      yearEl.textContent = String(book.year);\n\n      metaDiv.appendChild(authorEl);\n      metaDiv.appendChild(yearEl);\n\n      bookArticle.appendChild(titleEl);\n      bookArticle.appendChild(metaDiv);\n      listItem.appendChild(bookArticle);\n      bookListElement.appendChild(listItem);\n    });\n  }\n}\n\nsearchInputElement.addEventListener('input', (event) => {\n  searchQuery = event.target.value;\n  renderBooks();\n});\n\nsortBySelectElement.addEventListener('change', (event) => {\n  sortField = event.target.value;\n  renderBooks();\n});\n\norderToggleButton.addEventListener('click', () => {\n  isAscending = !isAscending;\n  orderToggleButton.textContent = isAscending ? 'Ascending (▲)' : 'Descending (▼)';\n  orderToggleButton.setAttribute('aria-label', `Toggle sort order: currently ${isAscending ? 'Ascending' : 'Descending'}`);\n  renderBooks();\n});\n\n// Initial render\nrenderBooks();\n",
+      "description": "Book data and interactive sorting, filtering, and rendering behavior."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Bookshelf\n\nA retro pixel-art styled offline web application showcasing 8 built-in books with live filtering and sorting.\n\n## Features\n\n- **8 Built-in Books**: Classic science fiction novels populated with Title, Author, Year, and pixel-themed book spine colorings.\n- **Multi-field Sorting**: Sort by Title, Author, or Publication Year with immediate re-ordering.\n- **Order Toggle**: Switch between Ascending (▲) and Descending (▼) order with full keyboard accessibility.\n- **Live Filter**: Case-insensitive text search matching against Title or Author.\n- **Pixel Aesthetic**: Custom CSS borders, pixel shadows, retro wooden shelf visuals, and responsive grid layout.\n- **Completely Offline**: Zero external libraries, fonts, or network requests.\n\n## File Structure\n\n- `index.html`: Semantic markup and structure.\n- `style.css`: Pixel styling, CSS palette, responsive media queries, and `[hidden]` rule protection.\n- `app.js`: State management, event handling via `addEventListener`, and live DOM rendering.\n- `README.md`: Project summary and documentation.\n\n## Running the App\n\nOpen `index.html` directly in any modern browser without needing a web server.",
+      "description": "Project documentation covering features, usage, architecture, and offline constraints."
+    }
+  ]
+}

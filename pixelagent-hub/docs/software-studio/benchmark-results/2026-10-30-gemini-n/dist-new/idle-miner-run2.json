@@ -1,0 +1,585 @@
+{
+  "caseId": "idle-miner",
+  "run": 2,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\new",
+  "managerTokens": 8898,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 1,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/10",
+    "10/10"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 95,
+  "reportedTokens": 48638,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:12:33.100Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:12:33.100Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:12:54.115Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Idle Miner"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:12:54.115Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:13:33.596Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:13:33.596Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:13:34.019Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:13:34.022Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "0c05460c-8625-4a7d-9be2-be7bca002f5d"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:13:47.507Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "0c05460c-8625-4a7d-9be2-be7bca002f5d",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:13:47.508Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "testPlanId": "0c05460c-8625-4a7d-9be2-be7bca002f5d",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "initial-rate-display",
+        "passed": true,
+        "actual": "1/s"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "initial-gold-display",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "initial-buy-disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "gold-rises-after-three-seconds",
+        "passed": true,
+        "actual": "3"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "buy-enabled-at-ten-gold",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "gold-deducted-after-buying-drill",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "rate-increases-after-buying-drill",
+        "passed": true,
+        "actual": "2/s"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "buy-button-disabled-again-after-purchase",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "drill-count-increments-after-purchase",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "name": "gold-accrues-at-higher-rate",
+        "passed": false,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:13:52.966Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "03e931fe-6edc-4dbf-96c7-590cd665d995",
+        "status": "failed",
+        "passed": 9,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T16:13:52.971Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "0c05460c-8625-4a7d-9be2-be7bca002f5d",
+        "review": true
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-29T16:14:02.832Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "0c05460c-8625-4a7d-9be2-be7bca002f5d",
+        "checks": 10,
+        "review": true,
+        "revised": 1,
+        "dropped": 0,
+        "llmModel": "gemini-3.8-flash-low",
+        "llmUsage": {
+          "prompt_tokens": 12895,
+          "completion_tokens": 217,
+          "total_tokens": 13112
+        },
+        "verdicts": [
+          {
+            "name": "gold-accrues-at-higher-rate",
+            "verdict": "check-wrong",
+            "reason": "The check waits 10000 ms (accruing 10 gold at 1/s to reach 10 gold), buys a drill for 10 gold (leaving 0 gold, new rate 2/s), then advances 2000 ms (2 seconds at 2/s = 4 gold). The check expects \"2\", "
+          }
+        ]
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-29T16:14:02.832Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "testPlanId": "0c05460c-8625-4a7d-9be2-be7bca002f5d",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "initial-rate-display",
+        "passed": true,
+        "actual": "1/s"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "initial-gold-display",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "initial-buy-disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "gold-rises-after-three-seconds",
+        "passed": true,
+        "actual": "3"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "buy-enabled-at-ten-gold",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "gold-deducted-after-buying-drill",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "rate-increases-after-buying-drill",
+        "passed": true,
+        "actual": "2/s"
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "buy-button-disabled-again-after-purchase",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "drill-count-increments-after-purchase",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "name": "gold-accrues-at-higher-rate",
+        "passed": true,
+        "actual": "4"
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-29T16:14:06.143Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "fb8953dd-ddcb-42f5-8475-7dae6ee5b44b",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-29T16:14:06.145Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "initial-rate-display",
+        "actions": [],
+        "selector": "#rate-display",
+        "expected": "1/s"
+      },
+      {
+        "name": "initial-gold-display",
+        "actions": [],
+        "selector": "#gold-display",
+        "expected": "0"
+      },
+      {
+        "name": "initial-buy-disabled",
+        "actions": [],
+        "selector": "#buy-drill-btn",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "gold-rises-after-three-seconds",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 3000
+          }
+        ],
+        "selector": "#gold-display",
+        "expected": "3"
+      },
+      {
+        "name": "buy-enabled-at-ten-gold",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 10000
+          }
+        ],
+        "selector": "#buy-drill-btn",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "gold-deducted-after-buying-drill",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 10000
+          },
+          {
+            "type": "click",
+            "selector": "#buy-drill-btn"
+          }
+        ],
+        "selector": "#gold-display",
+        "expected": "0"
+      },
+      {
+        "name": "rate-increases-after-buying-drill",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 10000
+          },
+          {
+            "type": "click",
+            "selector": "#buy-drill-btn"
+          }
+        ],
+        "selector": "#rate-display",
+        "expected": "2/s"
+      },
+      {
+        "name": "buy-button-disabled-again-after-purchase",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 10000
+          },
+          {
+            "type": "click",
+            "selector": "#buy-drill-btn"
+          }
+        ],
+        "selector": "#buy-drill-btn",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "drill-count-increments-after-purchase",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 10000
+          },
+          {
+            "type": "click",
+            "selector": "#buy-drill-btn"
+          }
+        ],
+        "selector": "#drill-count",
+        "expected": "1"
+      },
+      {
+        "name": "gold-accrues-at-higher-rate",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 10000
+          },
+          {
+            "type": "click",
+            "selector": "#buy-drill-btn"
+          },
+          {
+            "type": "advance",
+            "ms": 2000
+          }
+        ],
+        "selector": "#gold-display",
+        "expected": "4"
+      }
+    ],
+    "limitations": [
+      "Canvas graphics and animations cannot be visually asserted directly."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13423,
+      "completion_tokens": 456,
+      "total_tokens": 13879
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Idle Miner</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"game-container\">\n    <header class=\"game-header\">\n      <h1>Pixel Idle Miner</h1>\n      <p class=\"subtitle\">Dig deep and build your mining empire</p>\n    </header>\n\n    <section class=\"scene-card\" aria-label=\"Mine shaft view\">\n      <canvas id=\"mine-canvas\" width=\"280\" height=\"140\" aria-label=\"Pixel art mine shaft with animated drills\"></canvas>\n    </section>\n\n    <section class=\"stats-card\" aria-live=\"polite\">\n      <div class=\"stat-item\">\n        <span class=\"stat-label\">Gold Reserve</span>\n        <span id=\"gold-display\" class=\"stat-value\">0</span>\n      </div>\n      <div class=\"stat-divider\" aria-hidden=\"true\"></div>\n      <div class=\"stat-item\">\n        <span class=\"stat-label\">Mining Rate</span>\n        <span id=\"rate-display\" class=\"stat-value\">1/s</span>\n      </div>\n    </section>\n\n    <section class=\"shop-card\">\n      <div class=\"item-info\">\n        <div class=\"item-title\">Mining Drill</div>\n        <div class=\"item-desc\">Adds +1 gold per second</div>\n        <div class=\"item-owned\">Owned: <span id=\"drill-count\">0</span></div>\n      </div>\n      <button id=\"buy-drill-btn\" type=\"button\" class=\"pixel-btn\" aria-label=\"Buy drill for 10 gold\" disabled>\n        <span class=\"btn-text\">Buy Drill</span>\n        <span class=\"btn-cost\">10 Gold</span>\n      </button>\n    </section>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main entry point containing semantic HTML structure, pixel canvas display, stats, and accessible controls."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Global & Reset */\n[hidden] {\n  display: none !important;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n:root {\n  --bg-color: #1a1423;\n  --card-bg: #2d1e2f;\n  --accent-gold: #f6c445;\n  --accent-gold-dark: #b8860b;\n  --text-main: #f7f4ea;\n  --text-muted: #bda0bc;\n  --btn-bg: #37718e;\n  --btn-hover: #488ea8;\n  --btn-active: #2b566c;\n  --btn-disabled: #4a4453;\n  --border-color: #4b384f;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--bg-color);\n  color: var(--text-main);\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n}\n\n.game-container {\n  width: 100%;\n  max-width: 420px;\n  min-width: 320px;\n  background-color: var(--card-bg);\n  border: 4px solid var(--border-color);\n  border-radius: 8px;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);\n  padding: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1.25rem;\n}\n\n.game-header {\n  text-align: center;\n}\n\n.game-header h1 {\n  font-size: 1.6rem;\n  color: var(--accent-gold);\n  letter-spacing: 0.05em;\n  margin-bottom: 0.25rem;\n}\n\n.subtitle {\n  font-size: 0.875rem;\n  color: var(--text-muted);\n}\n\n.scene-card {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #150e18;\n  border: 2px solid var(--border-color);\n  border-radius: 4px;\n  padding: 0.5rem;\n}\n\n#mine-canvas {\n  display: block;\n  image-rendering: pixelated;\n  background-color: #110d14;\n  width: 100%;\n  max-width: 280px;\n  height: auto;\n}\n\n.stats-card {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  background-color: #211523;\n  border: 2px solid var(--border-color);\n  border-radius: 6px;\n  padding: 0.85rem 0.5rem;\n}\n\n.stat-item {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 0.25rem;\n}\n\n.stat-label {\n  font-size: 0.85rem;\n  color: var(--text-muted);\n  text-transform: uppercase;\n  letter-spacing: 0.04em;\n}\n\n.stat-value {\n  font-size: 1.5rem;\n  font-weight: 700;\n  color: var(--accent-gold);\n}\n\n.stat-divider {\n  width: 2px;\n  height: 36px;\n  background-color: var(--border-color);\n}\n\n.shop-card {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #211523;\n  border: 2px solid var(--border-color);\n  border-radius: 6px;\n  padding: 1rem;\n  gap: 1rem;\n}\n\n.item-info {\n  display: flex;\n  flex-direction: column;\n  gap: 0.2rem;\n}\n\n.item-title {\n  font-weight: 700;\n  font-size: 1rem;\n  color: var(--text-main);\n}\n\n.item-desc {\n  font-size: 0.825rem;\n  color: var(--text-muted);\n}\n\n.item-owned {\n  font-size: 0.85rem;\n  color: var(--accent-gold);\n  margin-top: 0.25rem;\n}\n\n.pixel-btn {\n  cursor: pointer;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 0.6rem 1rem;\n  background-color: var(--btn-bg);\n  color: #ffffff;\n  border: 2px solid #579dbd;\n  border-radius: 4px;\n  font-size: 0.95rem;\n  font-weight: 600;\n  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);\n  box-shadow: 0 4px 0 #1b3a49;\n  transition: background-color 0.15s, transform 0.05s, box-shadow 0.05s;\n  white-space: nowrap;\n  min-width: 110px;\n}\n\n.pixel-btn:hover:not(:disabled) {\n  background-color: var(--btn-hover);\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px solid var(--accent-gold);\n  outline-offset: 2px;\n}\n\n.pixel-btn:active:not(:disabled) {\n  transform: translateY(3px);\n  box-shadow: 0 1px 0 #1b3a49;\n  background-color: var(--btn-active);\n}\n\n.pixel-btn:disabled {\n  background-color: var(--btn-disabled);\n  border-color: #5d5667;\n  box-shadow: 0 4px 0 #2a2531;\n  color: #8c8297;\n  cursor: not-allowed;\n  text-shadow: none;\n}\n\n.btn-cost {\n  font-size: 0.75rem;\n  font-weight: 400;\n  opacity: 0.9;\n}\n\n@media (max-width: 380px) {\n  .shop-card {\n    flex-direction: column;\n    align-items: stretch;\n    text-align: center;\n  }\n\n  .pixel-btn {\n    width: 100%;\n  }\n}",
+      "description": "Responsive styling featuring a cohesive retro-pixel palette, interactive states, and layout safeguards."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const DRILL_COST = 10;\n  const BASE_RATE = 1;\n  const DRILL_BONUS = 1;\n\n  const state = {\n    gold: 0,\n    drills: 0,\n    ratePerSecond: BASE_RATE\n  };\n\n  const goldDisplay = document.getElementById('gold-display');\n  const rateDisplay = document.getElementById('rate-display');\n  const drillCount = document.getElementById('drill-count');\n  const buyDrillBtn = document.getElementById('buy-drill-btn');\n  const canvas = document.getElementById('mine-canvas');\n  const ctx = canvas ? canvas.getContext('2d') : null;\n\n  function updateUI() {\n    goldDisplay.textContent = state.gold;\n    rateDisplay.textContent = `${state.ratePerSecond}/s`;\n    drillCount.textContent = state.drills;\n\n    const canAfford = state.gold >= DRILL_COST;\n    buyDrillBtn.disabled = !canAfford;\n  }\n\n  function handleBuyDrill() {\n    if (state.gold >= DRILL_COST) {\n      state.gold -= DRILL_COST;\n      state.drills += 1;\n      state.ratePerSecond = BASE_RATE + (state.drills * DRILL_BONUS);\n      updateUI();\n    }\n  }\n\n  buyDrillBtn.addEventListener('click', handleBuyDrill);\n\n  // Primary 1-second gold production loop\n  setInterval(() => {\n    state.gold += state.ratePerSecond;\n    updateUI();\n  }, 1000);\n\n  // Pixel art canvas rendering\n  let frame = 0;\n  function drawPixelMine() {\n    if (!ctx) return;\n    frame++;\n\n    ctx.fillStyle = '#18121d';\n    ctx.fillRect(0, 0, 280, 140);\n\n    // Cave walls and floor\n    ctx.fillStyle = '#3a273b';\n    for (let x = 0; x < 280; x += 14) {\n      ctx.fillRect(x, 126, 14, 14);\n      ctx.fillRect(x, 0, 14, 14);\n    }\n\n    // Golden ore veins\n    ctx.fillStyle = '#f6c445';\n    const oreOffsets = [40, 90, 160, 220];\n    oreOffsets.forEach((ox) => {\n      ctx.fillRect(ox, 120, 6, 6);\n      ctx.fillRect(ox + 4, 116, 4, 4);\n    });\n\n    // Miner pickaxe animation\n    const swing = Math.sin(frame * 0.1) * 6;\n    ctx.fillStyle = '#bda0bc'; // Miner body\n    ctx.fillRect(50, 85, 16, 35);\n    ctx.fillStyle = '#f7f4ea'; // Head\n    ctx.fillRect(52, 70, 12, 12);\n    ctx.fillStyle = '#f6c445'; // Hardhat\n    ctx.fillRect(50, 66, 16, 6);\n    ctx.fillStyle = '#9b829c'; // Pickaxe handle\n    ctx.fillRect(66 + swing, 75 + swing, 4, 20);\n    ctx.fillStyle = '#e0e0e0'; // Pickaxe head\n    ctx.fillRect(62 + swing, 72 + swing, 12, 4);\n\n    // Drills rendering\n    const activeDrills = Math.min(state.drills, 3);\n    for (let i = 0; i < activeDrills; i++) {\n      const dx = 120 + (i * 45);\n      const jitter = (frame % 4 < 2) ? 1 : 0;\n\n      ctx.fillStyle = '#37718e'; // Drill mount\n      ctx.fillRect(dx, 85, 18, 30);\n      ctx.fillStyle = '#a6b9c7'; // Drill bit\n      ctx.fillRect(dx + 6, 115 + jitter, 6, 10);\n      ctx.fillStyle = '#f6c445'; // Sparks\n      if (frame % 6 < 3) {\n        ctx.fillRect(dx + 2, 122, 2, 2);\n        ctx.fillRect(dx + 12, 121, 2, 2);\n      }\n    }\n\n    requestAnimationFrame(drawPixelMine);\n  }\n\n  updateUI();\n  drawPixelMine();\n});",
+      "description": "Game state engine, event listeners, timer ticks, and HTML5 canvas pixel animations."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Idle Miner\n\nA responsive, offline browser idle game built with semantic HTML, CSS, and vanilla JavaScript.\n\n## Features\n\n- **Incremental Gold Gain**: Gold accumulates at a baseline rate of 1 per second.\n- **Mining Drills**: Purchase drills for 10 gold each to increase the income rate by +1/second.\n- **Interactive Controls**: The \"Buy Drill\" button dynamically disables when unaffordable and provides distinct hover, active, and focus states.\n- **Pixel Art Visuals**: Real-time canvas graphics illustrating mining action, drill fixtures, and animated gold sparks.\n- **Accessibility**: Labeled interactive controls, keyboard navigation support with high-contrast outlines, and ARIA live regions for screen reader feedback.\n\n## Setup & Running\n\nNo build steps or external dependencies required:\n1. Clone or download the repository files.\n2. Open `index.html` in any modern web browser.\n3. Begin mining!",
+      "description": "Project documentation including gameplay details, architectural notes, and execution instructions."
+    }
+  ]
+}

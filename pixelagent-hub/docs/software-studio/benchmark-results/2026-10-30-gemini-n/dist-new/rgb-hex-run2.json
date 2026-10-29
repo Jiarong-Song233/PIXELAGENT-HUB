@@ -1,0 +1,504 @@
+{
+  "caseId": "rgb-hex",
+  "run": 2,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\new",
+  "managerTokens": 9061,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "6/7",
+  "finalChecks": "6/6",
+  "reviewTriggered": true,
+  "checksDropped": 1,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "6/7",
+    "6/6"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 89,
+  "reportedTokens": 48374,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:39:30.269Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:39:30.270Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:39:48.097Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Color Converter"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:39:48.097Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:40:23.362Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:40:23.362Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:40:23.885Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:40:23.886Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "3370e2af-30ca-4568-bfe7-1a33db81809c"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:40:38.815Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "3370e2af-30ca-4568-bfe7-1a33db81809c",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:40:38.815Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "testPlanId": "3370e2af-30ca-4568-bfe7-1a33db81809c",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:40:43.114Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "name": "initial hex output is #000000",
+        "passed": true,
+        "actual": "#000000"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:40:43.114Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "name": "converts 255, 136, 0 to #FF8800",
+        "passed": true,
+        "actual": "#FF8800"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:40:43.114Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "name": "swatch style updates to rgb background",
+        "passed": false,
+        "actual": "rgb(255, 136, 0)"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:40:43.114Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "name": "error message is hidden when inputs are valid",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:40:43.114Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "name": "value above 255 shows error message",
+        "passed": true,
+        "actual": "Invalid value"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:40:43.114Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "name": "value below 0 shows error message",
+        "passed": true,
+        "actual": "Invalid value"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:40:43.114Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "name": "invalid input updates hex output to Invalid value",
+        "passed": true,
+        "actual": "Invalid value"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:40:43.114Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "f7af0a6d-8774-471a-b150-f2377a80ab75",
+        "status": "failed",
+        "passed": 6,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:40:43.116Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "3370e2af-30ca-4568-bfe7-1a33db81809c",
+        "review": true
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:40:55.535Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "3370e2af-30ca-4568-bfe7-1a33db81809c",
+        "checks": 6,
+        "review": true,
+        "revised": 0,
+        "dropped": 1,
+        "llmModel": "gemini-3.8-flash-low",
+        "llmUsage": {
+          "prompt_tokens": 12663,
+          "completion_tokens": 341,
+          "total_tokens": 13004
+        },
+        "verdicts": [
+          {
+            "name": "swatch style updates to rgb background",
+            "verdict": "unsupported",
+            "reason": "The check inspects style.background-color expecting the hex format '#FF8800', but browsers normalize inline backgroundColor assignments to rgb format ('rgb(255, 136, 0)') or css computed color values."
+          }
+        ]
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:40:55.535Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "43440d8f-b7ca-4324-9219-97cc7087386c",
+        "testPlanId": "3370e2af-30ca-4568-bfe7-1a33db81809c",
+        "checks": 6,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T16:40:57.446Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "43440d8f-b7ca-4324-9219-97cc7087386c",
+        "name": "initial hex output is #000000",
+        "passed": true,
+        "actual": "#000000"
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-29T16:40:57.446Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "43440d8f-b7ca-4324-9219-97cc7087386c",
+        "name": "converts 255, 136, 0 to #FF8800",
+        "passed": true,
+        "actual": "#FF8800"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-29T16:40:57.446Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "43440d8f-b7ca-4324-9219-97cc7087386c",
+        "name": "error message is hidden when inputs are valid",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-29T16:40:57.446Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "43440d8f-b7ca-4324-9219-97cc7087386c",
+        "name": "value above 255 shows error message",
+        "passed": true,
+        "actual": "Invalid value"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-29T16:40:57.446Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "43440d8f-b7ca-4324-9219-97cc7087386c",
+        "name": "value below 0 shows error message",
+        "passed": true,
+        "actual": "Invalid value"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-29T16:40:57.446Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "43440d8f-b7ca-4324-9219-97cc7087386c",
+        "name": "invalid input updates hex output to Invalid value",
+        "passed": true,
+        "actual": "Invalid value"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-29T16:40:57.446Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "43440d8f-b7ca-4324-9219-97cc7087386c",
+        "status": "passed",
+        "passed": 6,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-29T16:40:57.448Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "initial hex output is #000000",
+        "actions": [],
+        "selector": "#hex-output",
+        "expected": "#000000"
+      },
+      {
+        "name": "converts 255, 136, 0 to #FF8800",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#red-input",
+            "value": "255"
+          },
+          {
+            "type": "input",
+            "selector": "#green-input",
+            "value": "136"
+          },
+          {
+            "type": "input",
+            "selector": "#blue-input",
+            "value": "0"
+          }
+        ],
+        "selector": "#hex-output",
+        "expected": "#FF8800"
+      },
+      {
+        "name": "error message is hidden when inputs are valid",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#red-input",
+            "value": "120"
+          },
+          {
+            "type": "input",
+            "selector": "#green-input",
+            "value": "120"
+          },
+          {
+            "type": "input",
+            "selector": "#blue-input",
+            "value": "120"
+          }
+        ],
+        "selector": "#error-message",
+        "expected": "false",
+        "assertion": "visible"
+      },
+      {
+        "name": "value above 255 shows error message",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#red-input",
+            "value": "256"
+          },
+          {
+            "type": "input",
+            "selector": "#green-input",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#blue-input",
+            "value": "0"
+          }
+        ],
+        "selector": "#error-message",
+        "expected": "Invalid value"
+      },
+      {
+        "name": "value below 0 shows error message",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#red-input",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#green-input",
+            "value": "-1"
+          },
+          {
+            "type": "input",
+            "selector": "#blue-input",
+            "value": "0"
+          }
+        ],
+        "selector": "#error-message",
+        "expected": "Invalid value"
+      },
+      {
+        "name": "invalid input updates hex output to Invalid value",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#red-input",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#green-input",
+            "value": "0"
+          },
+          {
+            "type": "input",
+            "selector": "#blue-input",
+            "value": "300"
+          }
+        ],
+        "selector": "#hex-output",
+        "expected": "Invalid value"
+      }
+    ],
+    "limitations": [
+      "Cannot test exact rendered OS color profile or monitor pixel output directly",
+      "Not checked: swatch style updates to rgb background: The check inspects style.background-color expecting the hex format '#FF8800', but browsers normalize inline backgroundColor assignments to rgb format ('rgb(255, 136, 0)') or css computed color values."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13131,
+      "completion_tokens": 540,
+      "total_tokens": 13671
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Color Converter</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n  <main class=\"converter-container\">\n    <header class=\"converter-header\">\n      <h1>Pixel Color Converter</h1>\n      <p>Enter RGB values (0–255) to preview color and generate Hex code.</p>\n    </header>\n\n    <div class=\"swatch-card\">\n      <div id=\"color-swatch\" class=\"color-swatch\" role=\"img\" aria-label=\"Color preview swatch\"></div>\n      <div class=\"hex-display-container\">\n        <span class=\"hex-label\">HEX CODE</span>\n        <output id=\"hex-output\" class=\"hex-value\" aria-live=\"polite\">#000000</output>\n      </div>\n    </div>\n\n    <form id=\"rgb-form\" class=\"rgb-form\" novalidate>\n      <div class=\"input-group\">\n        <label for=\"red-input\">Red (R)</label>\n        <input \n          type=\"number\" \n          id=\"red-input\" \n          name=\"red\" \n          min=\"0\" \n          max=\"255\" \n          value=\"0\" \n          placeholder=\"0-255\"\n          aria-describedby=\"error-message\"\n          required\n        >\n      </div>\n\n      <div class=\"input-group\">\n        <label for=\"green-input\">Green (G)</label>\n        <input \n          type=\"number\" \n          id=\"green-input\" \n          name=\"green\" \n          min=\"0\" \n          max=\"255\" \n          value=\"0\" \n          placeholder=\"0-255\"\n          aria-describedby=\"error-message\"\n          required\n        >\n      </div>\n\n      <div class=\"input-group\">\n        <label for=\"blue-input\">Blue (B)</label>\n        <input \n          type=\"number\" \n          id=\"blue-input\" \n          name=\"blue\" \n          min=\"0\" \n          max=\"255\" \n          value=\"0\" \n          placeholder=\"0-255\"\n          aria-describedby=\"error-message\"\n          required\n        >\n      </div>\n    </form>\n\n    <div id=\"error-message\" class=\"error-message\" role=\"alert\" hidden>\n      Invalid value\n    </div>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML document providing accessible input form controls, color swatch preview, hex output display, and error messaging."
+    },
+    {
+      "path": "styles.css",
+      "content": "/* Utility override for hidden attribute */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #0f172a;\n  --card-bg: #1e293b;\n  --text-main: #f8fafc;\n  --text-muted: #94a3b8;\n  --border-color: #334155;\n  --focus-ring: #38bdf8;\n  --error-color: #f87171;\n  --error-bg: rgba(239, 68, 68, 0.15);\n  --radius-sm: 8px;\n  --radius-md: 12px;\n  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--bg-color);\n  color: var(--text-main);\n  font-family: var(--font-family);\n  font-size: 16px;\n  line-height: 1.5;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n}\n\n.converter-container {\n  background: var(--card-bg);\n  border: 1px solid var(--border-color);\n  border-radius: var(--radius-md);\n  padding: 32px 24px;\n  width: 100%;\n  max-width: 440px;\n  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);\n}\n\n.converter-header {\n  text-align: center;\n  margin-bottom: 24px;\n}\n\n.converter-header h1 {\n  font-size: 1.5rem;\n  font-weight: 700;\n  letter-spacing: -0.025em;\n  margin-bottom: 6px;\n}\n\n.converter-header p {\n  font-size: 0.95rem;\n  color: var(--text-muted);\n}\n\n.swatch-card {\n  background: rgba(15, 23, 42, 0.6);\n  border: 1px solid var(--border-color);\n  border-radius: var(--radius-sm);\n  padding: 16px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 16px;\n  margin-bottom: 24px;\n}\n\n.color-swatch {\n  width: 100%;\n  height: 110px;\n  border-radius: var(--radius-sm);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  background-color: #000000;\n  transition: background-color 0.15s ease, opacity 0.15s ease;\n}\n\n.color-swatch.invalid {\n  background-color: #334155 !important;\n  opacity: 0.5;\n}\n\n.hex-display-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 4px;\n}\n\n.hex-label {\n  font-size: 0.75rem;\n  font-weight: 600;\n  letter-spacing: 0.05em;\n  color: var(--text-muted);\n}\n\n.hex-value {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;\n  font-size: 1.5rem;\n  font-weight: 700;\n  letter-spacing: 0.05em;\n  color: var(--text-main);\n}\n\n.hex-value.invalid {\n  color: var(--error-color);\n}\n\n.rgb-form {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 12px;\n  margin-bottom: 16px;\n}\n\n.input-group {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n}\n\n.input-group label {\n  font-size: 0.875rem;\n  font-weight: 600;\n  color: var(--text-muted);\n}\n\n.input-group input {\n  width: 100%;\n  background-color: #0f172a;\n  border: 1px solid var(--border-color);\n  border-radius: var(--radius-sm);\n  padding: 10px 12px;\n  color: var(--text-main);\n  font-size: 1rem;\n  font-family: inherit;\n  text-align: center;\n  outline: none;\n  transition: border-color 0.15s ease, box-shadow 0.15s ease;\n}\n\n.input-group input:hover {\n  border-color: #475569;\n}\n\n.input-group input:focus-visible {\n  border-color: var(--focus-ring);\n  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);\n}\n\n.input-group input:active {\n  transform: scale(0.99);\n}\n\n.input-group input.has-error {\n  border-color: var(--error-color);\n  box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.2);\n}\n\n.error-message {\n  background-color: var(--error-bg);\n  border: 1px solid var(--error-color);\n  color: var(--error-color);\n  font-size: 0.9rem;\n  font-weight: 600;\n  text-align: center;\n  padding: 10px 14px;\n  border-radius: var(--radius-sm);\n}\n\n@media (max-width: 400px) {\n  .converter-container {\n    padding: 24px 16px;\n  }\n\n  .rgb-form {\n    grid-template-columns: 1fr;\n    gap: 14px;\n  }\n\n  .input-group {\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-between;\n  }\n\n  .input-group input {\n    width: 100px;\n    text-align: right;\n  }\n}",
+      "description": "Responsive styling featuring cohesive dark palette, accessible focus indicators, clean card layout, and validation state styles."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const redInput = document.getElementById('red-input');\n  const greenInput = document.getElementById('green-input');\n  const blueInput = document.getElementById('blue-input');\n  const hexOutput = document.getElementById('hex-output');\n  const colorSwatch = document.getElementById('color-swatch');\n  const errorMessage = document.getElementById('error-message');\n\n  const inputs = [redInput, greenInput, blueInput];\n\n  function isValidChannel(valStr) {\n    if (valStr.trim() === '') {\n      return false;\n    }\n    const num = Number(valStr);\n    return !Number.isNaN(num) && Number.isInteger(num) && num >= 0 && num <= 255;\n  }\n\n  function componentToHex(c) {\n    const hex = c.toString(16).toUpperCase();\n    return hex.length === 1 ? '0' + hex : hex;\n  }\n\n  function updateConverter() {\n    const rVal = redInput.value;\n    const gVal = greenInput.value;\n    const bVal = blueInput.value;\n\n    const isRValid = isValidChannel(rVal);\n    const isGValid = isValidChannel(gVal);\n    const isBValid = isValidChannel(bVal);\n\n    redInput.classList.toggle('has-error', !isRValid);\n    greenInput.classList.toggle('has-error', !isGValid);\n    blueInput.classList.toggle('has-error', !isBValid);\n\n    if (isRValid && isGValid && isBValid) {\n      const r = Number(rVal);\n      const g = Number(gVal);\n      const b = Number(bVal);\n      const hex = `#${componentToHex(r)}${componentToHex(g)}${componentToHex(b)}`;\n\n      hexOutput.textContent = hex;\n      hexOutput.classList.remove('invalid');\n      colorSwatch.style.backgroundColor = hex;\n      colorSwatch.classList.remove('invalid');\n      colorSwatch.setAttribute('aria-label', `Color preview swatch of ${hex}`);\n      errorMessage.hidden = true;\n    } else {\n      hexOutput.textContent = 'Invalid value';\n      hexOutput.classList.add('invalid');\n      colorSwatch.classList.add('invalid');\n      colorSwatch.setAttribute('aria-label', 'Color preview unavailable due to invalid input');\n      errorMessage.textContent = 'Invalid value';\n      errorMessage.hidden = false;\n    }\n  }\n\n  inputs.forEach(input => {\n    input.addEventListener('input', updateConverter);\n    input.addEventListener('change', updateConverter);\n  });\n\n  // Initial render\n  updateConverter();\n});",
+      "description": "Client-side validation, RGB-to-Hex conversion, swatch live updates, and error messaging logic using event listeners."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Color Converter\n\nA responsive, offline browser application built with vanilla HTML, CSS, and JavaScript. It converts standard 8-bit RGB color channel values into a hex code string and renders a live color preview swatch.\n\n## Features\n\n- **Live Conversion**: Converts red, green, and blue integer values (0 to 255) to a formatted Hex code (e.g., `#FF8800`).\n- **Live Swatch**: Displays dynamic color preview swatch corresponding to the input RGB values.\n- **Strict Validation**: Displays an `Invalid value` indicator and conceals preview swatch colors whenever any input falls outside the 0–255 integer range, is left blank, or receives non-integer input.\n- **Accessible & Responsive**: Fully accessible keyboard navigation, visible focus indicators, labeled controls, and responsive layout scaling smoothly down to 360px viewport widths.\n- **Zero External Dependencies**: Operates completely offline with plain HTML, CSS, and JavaScript without frameworks, libraries, or network requests.\n\n## Getting Started\n\n1. Clone or download the repository files (`index.html`, `styles.css`, `app.js`, `README.md`) into a single directory.\n2. Open `index.html` in any modern web browser.\n3. Adjust the Red, Green, and Blue number fields to preview colors.\n\n## License\n\nMIT",
+      "description": "Project documentation including feature overview, setup instructions, and accessibility details."
+    }
+  ]
+}

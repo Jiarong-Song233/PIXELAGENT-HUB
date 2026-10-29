@@ -1,0 +1,394 @@
+{
+  "caseId": "pet-shelter",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\baseline",
+  "managerTokens": 8895,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 86,
+  "reportedTokens": 39236,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:26:18.297Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:26:18.297Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:26:34.641Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Pet Shelter"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:26:34.642Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:27:25.036Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:27:25.036Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:27:25.524Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:27:25.524Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "ab89db60-948d-4366-a853-f8a1c3e20bfc"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:27:39.224Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "ab89db60-948d-4366-a853-f8a1c3e20bfc",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:27:39.224Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "testPlanId": "ab89db60-948d-4366-a853-f8a1c3e20bfc",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Initial available counter is 6",
+        "passed": true,
+        "actual": "6"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Initial adopted counter is 0",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Initial available pet count shows 6 cards",
+        "passed": true,
+        "actual": "6"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Empty adopted message is initially visible",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Filter by Cat displays 2 cat cards",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Filter by Dog displays 2 dog cards",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Filter by Bunny displays 2 bunny cards",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Adopting first pet increments adopted count to 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Adopting first pet decrements available count to 5",
+        "passed": true,
+        "actual": "5"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "name": "Adopting pet moves card to adopted list",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:27:42.460Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "e5f067f8-4417-42bb-b039-e54d4274bb0f",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T16:27:42.462Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial available counter is 6",
+        "actions": [],
+        "selector": "#available-count",
+        "expected": "6"
+      },
+      {
+        "name": "Initial adopted counter is 0",
+        "actions": [],
+        "selector": "#adopted-count",
+        "expected": "0"
+      },
+      {
+        "name": "Initial available pet count shows 6 cards",
+        "actions": [],
+        "selector": "#available-list .pet-card",
+        "expected": "6",
+        "assertion": "count"
+      },
+      {
+        "name": "Empty adopted message is initially visible",
+        "actions": [],
+        "selector": "#empty-adopted-msg",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Filter by Cat displays 2 cat cards",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".filter-btn[data-species=\"Cat\"]"
+          }
+        ],
+        "selector": "#available-list .pet-card",
+        "expected": "2",
+        "assertion": "count"
+      },
+      {
+        "name": "Filter by Dog displays 2 dog cards",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".filter-btn[data-species=\"Dog\"]"
+          }
+        ],
+        "selector": "#available-list .pet-card",
+        "expected": "2",
+        "assertion": "count"
+      },
+      {
+        "name": "Filter by Bunny displays 2 bunny cards",
+        "actions": [
+          {
+            "type": "click",
+            "selector": ".filter-btn[data-species=\"Bunny\"]"
+          }
+        ],
+        "selector": "#available-list .pet-card",
+        "expected": "2",
+        "assertion": "count"
+      },
+      {
+        "name": "Adopting first pet increments adopted count to 1",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#available-list .btn-adopt",
+            "nth": 0
+          }
+        ],
+        "selector": "#adopted-count",
+        "expected": "1"
+      },
+      {
+        "name": "Adopting first pet decrements available count to 5",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#available-list .btn-adopt",
+            "nth": 0
+          }
+        ],
+        "selector": "#available-count",
+        "expected": "5"
+      },
+      {
+        "name": "Adopting pet moves card to adopted list",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#available-list .btn-adopt",
+            "nth": 0
+          }
+        ],
+        "selector": "#adopted-list .pet-card",
+        "expected": "1",
+        "assertion": "count"
+      }
+    ],
+    "limitations": [
+      "Canvas and pixel art visual rendering via box-shadow cannot be checked without pixel assertions."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 15254,
+      "completion_tokens": 432,
+      "total_tokens": 15686
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Pet Shelter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"shelter-card\">\n    <header class=\"shelter-header\">\n      <div class=\"pixel-icon-shelter\" aria-hidden=\"true\"></div>\n      <h1>Pixel Pet Shelter</h1>\n      <p class=\"subtitle\">Give a cute pixel companion a loving home!</p>\n    </header>\n\n    <section class=\"counter-panel\" aria-label=\"Shelter statistics\">\n      <div class=\"counter-badge\">\n        <span class=\"counter-label\">Available:</span>\n        <strong id=\"available-count\" class=\"counter-value\">6</strong>\n      </div>\n      <div class=\"counter-badge\">\n        <span class=\"counter-label\">Adopted:</span>\n        <strong id=\"adopted-count\" class=\"counter-value\">0</strong>\n      </div>\n    </section>\n\n    <section class=\"filter-section\" aria-label=\"Filter pets by species\">\n      <span id=\"filter-heading\" class=\"filter-title\">Filter Species:</span>\n      <div class=\"filter-buttons\" role=\"group\" aria-labelledby=\"filter-heading\">\n        <button type=\"button\" class=\"btn filter-btn active\" data-species=\"All\" aria-pressed=\"true\">All</button>\n        <button type=\"button\" class=\"btn filter-btn\" data-species=\"Cat\" aria-pressed=\"false\">Cat</button>\n        <button type=\"button\" class=\"btn filter-btn\" data-species=\"Dog\" aria-pressed=\"false\">Dog</button>\n        <button type=\"button\" class=\"btn filter-btn\" data-species=\"Bunny\" aria-pressed=\"false\">Bunny</button>\n      </div>\n    </section>\n\n    <section class=\"pets-section\" aria-labelledby=\"available-heading\">\n      <h2 id=\"available-heading\" class=\"section-title\">Available Pets</h2>\n      <div id=\"available-list\" class=\"pet-grid\" role=\"list\"></div>\n      <p id=\"empty-available-msg\" class=\"empty-msg\" hidden>No pets found matching the selected filter.</p>\n    </section>\n\n    <section class=\"pets-section adopted-section\" aria-labelledby=\"adopted-heading\">\n      <h2 id=\"adopted-heading\" class=\"section-title\">Adopted Pets</h2>\n      <div id=\"adopted-list\" class=\"pet-grid\" role=\"list\"></div>\n      <p id=\"empty-adopted-msg\" class=\"empty-msg\">No pets have been adopted yet.</p>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main single-page application structure with pixel shelter header, counter status badges, filter buttons, and accessible pet lists."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Hidden elements protection */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #231b38;\n  --color-card: #382c54;\n  --color-card-inner: #4b3d6d;\n  --color-accent: #f7a239;\n  --color-accent-hover: #ffb85c;\n  --color-accent-active: #de8723;\n  --color-text: #f5f3ff;\n  --color-muted: #c2bbe0;\n  --color-border: #181228;\n  --color-success: #67d686;\n  --font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--color-bg);\n  color: var(--color-text);\n  font-family: var(--font-family);\n  font-size: 16px;\n  line-height: 1.5;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  padding: 24px 16px;\n}\n\n.shelter-card {\n  background-color: var(--color-card);\n  border: 4px solid var(--color-border);\n  box-shadow: 8px 8px 0px var(--color-border);\n  width: 100%;\n  max-width: 760px;\n  padding: 24px;\n  border-radius: 4px;\n}\n\n.shelter-header {\n  text-align: center;\n  margin-bottom: 24px;\n}\n\n.pixel-icon-shelter {\n  width: 10px;\n  height: 10px;\n  margin: 0 auto 12px;\n  box-shadow:\n    -10px 0 0 var(--color-accent),\n    0 -10px 0 var(--color-accent),\n    10px 0 0 var(--color-accent),\n    -20px 10px 0 var(--color-accent),\n    -10px 10px 0 var(--color-accent),\n    0 10px 0 var(--color-accent),\n    10px 10px 0 var(--color-accent),\n    20px 10px 0 var(--color-accent),\n    -20px 20px 0 var(--color-accent),\n    20px 20px 0 var(--color-accent);\n}\n\nh1 {\n  font-size: 26px;\n  font-weight: 800;\n  letter-spacing: 0.5px;\n  color: var(--color-accent);\n  margin-bottom: 6px;\n  text-transform: uppercase;\n}\n\n.subtitle {\n  color: var(--color-muted);\n  font-size: 16px;\n}\n\n.counter-panel {\n  display: flex;\n  gap: 16px;\n  justify-content: center;\n  margin-bottom: 24px;\n  flex-wrap: wrap;\n}\n\n.counter-badge {\n  background-color: var(--color-card-inner);\n  border: 2px solid var(--color-border);\n  padding: 10px 18px;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  box-shadow: 4px 4px 0px var(--color-border);\n}\n\n.counter-label {\n  font-weight: 600;\n  color: var(--color-muted);\n}\n\n.counter-value {\n  font-size: 20px;\n  color: var(--color-accent);\n  min-width: 20px;\n  text-align: center;\n}\n\n.filter-section {\n  margin-bottom: 24px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 12px;\n}\n\n.filter-title {\n  font-weight: 700;\n  font-size: 16px;\n  color: var(--color-muted);\n}\n\n.filter-buttons {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n  justify-content: center;\n}\n\n.btn {\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 700;\n  cursor: pointer;\n  border: 2px solid var(--color-border);\n  background-color: var(--color-card-inner);\n  color: var(--color-text);\n  padding: 8px 16px;\n  box-shadow: 3px 3px 0px var(--color-border);\n  transition: transform 0.05s ease, background-color 0.1s ease;\n}\n\n.btn:hover {\n  background-color: var(--color-accent-hover);\n  color: #181228;\n}\n\n.btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0px var(--color-border);\n}\n\n.btn:focus-visible {\n  outline: 3px solid var(--color-accent);\n  outline-offset: 2px;\n}\n\n.filter-btn.active {\n  background-color: var(--color-accent);\n  color: #181228;\n}\n\n.pets-section {\n  margin-bottom: 24px;\n}\n\n.section-title {\n  font-size: 20px;\n  font-weight: 700;\n  border-bottom: 2px solid var(--color-border);\n  padding-bottom: 8px;\n  margin-bottom: 16px;\n}\n\n.pet-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));\n  gap: 16px;\n}\n\n.pet-card {\n  background-color: var(--color-card-inner);\n  border: 3px solid var(--color-border);\n  padding: 16px;\n  box-shadow: 4px 4px 0px var(--color-border);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\n\n.pet-card.adopted {\n  opacity: 0.9;\n  border-color: var(--color-success);\n}\n\n.avatar-container {\n  width: 56px;\n  height: 56px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 12px;\n  background-color: var(--color-card);\n  border: 2px solid var(--color-border);\n}\n\n/* Pixel Art via Box Shadows (4px grid) */\n.pixel-pet {\n  width: 4px;\n  height: 4px;\n}\n\n.pixel-cat {\n  box-shadow:\n    -8px -8px 0 #ff9955, 8px -8px 0 #ff9955,\n    -8px -4px 0 #ff9955, -4px -4px 0 #ff9955, 0px -4px 0 #ff9955, 4px -4px 0 #ff9955, 8px -4px 0 #ff9955,\n    -8px 0 0 #ff9955, -4px 0 0 #181228, 0 0 0 #ff9955, 4px 0 0 #181228, 8px 0 0 #ff9955,\n    -8px 4px 0 #ff9955, -4px 4px 0 #ff9955, 0 4px 0 #ff6688, 4px 4px 0 #ff9955, 8px 4px 0 #ff9955,\n    -4px 8px 0 #ff9955, 0 8px 0 #ff9955, 4px 8px 0 #ff9955;\n}\n\n.pixel-dog {\n  box-shadow:\n    -12px -4px 0 #8b5a2b, 12px -4px 0 #8b5a2b,\n    -8px -4px 0 #d2a679, -4px -4px 0 #d2a679, 0 -4px 0 #d2a679, 4px -4px 0 #d2a679, 8px -4px 0 #d2a679,\n    -12px 0 0 #8b5a2b, -8px 0 0 #d2a679, -4px 0 0 #181228, 0 0 0 #d2a679, 4px 0 0 #181228, 8px 0 0 #d2a679, 12px 0 0 #8b5a2b,\n    -8px 4px 0 #d2a679, -4px 4px 0 #d2a679, 0 4px 0 #181228, 4px 4px 0 #d2a679, 8px 4px 0 #d2a679,\n    -4px 8px 0 #d2a679, 0 8px 0 #e67e22, 4px 8px 0 #d2a679;\n}\n\n.pixel-bunny {\n  box-shadow:\n    -8px -12px 0 #f0e6ff, 8px -12px 0 #f0e6ff,\n    -8px -8px 0 #ff99bb, 8px -8px 0 #ff99bb,\n    -8px -4px 0 #f0e6ff, -4px -4px 0 #f0e6ff, 0 -4px 0 #f0e6ff, 4px -4px 0 #f0e6ff, 8px -4px 0 #f0e6ff,\n    -8px 0 0 #f0e6ff, -4px 0 0 #e83e8c, 0 0 0 #f0e6ff, 4px 0 0 #e83e8c, 8px 0 0 #f0e6ff,\n    -8px 4px 0 #f0e6ff, -4px 4px 0 #f0e6ff, 0 4px 0 #ff99bb, 4px 4px 0 #f0e6ff, 8px 4px 0 #f0e6ff,\n    -4px 8px 0 #f0e6ff, 0 8px 0 #f0e6ff, 4px 8px 0 #f0e6ff;\n}\n\n.pet-name {\n  font-size: 18px;\n  font-weight: 700;\n  margin-bottom: 4px;\n}\n\n.pet-meta {\n  font-size: 16px;\n  color: var(--color-muted);\n  margin-bottom: 12px;\n}\n\n.btn-adopt {\n  width: 100%;\n  background-color: var(--color-accent);\n  color: #181228;\n  margin-top: auto;\n}\n\n.btn-adopt:hover {\n  background-color: var(--color-accent-hover);\n}\n\n.btn-adopt:active {\n  background-color: var(--color-accent-active);\n}\n\n.adopted-badge {\n  display: inline-block;\n  background-color: var(--color-border);\n  color: var(--color-success);\n  font-weight: 700;\n  font-size: 16px;\n  padding: 6px 12px;\n  border: 1px solid var(--color-success);\n  margin-top: auto;\n}\n\n.empty-msg {\n  font-style: italic;\n  color: var(--color-muted);\n  text-align: center;\n  padding: 24px;\n  background-color: var(--color-card-inner);\n  border: 2px dashed var(--color-border);\n}\n\n@media (max-width: 480px) {\n  body {\n    padding: 12px 8px;\n  }\n\n  .shelter-card {\n    padding: 16px;\n  }\n\n  .pet-grid {\n    grid-template-columns: 1fr;\n  }\n}\n",
+      "description": "Cohesive retro-pixel theme styles, responsive grid, pixel avatar renderings with box-shadows, and interactive control states."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const pets = [\n    { id: 1, name: 'Mochi', species: 'Cat', age: '2 yrs', adopted: false },\n    { id: 2, name: 'Rusty', species: 'Dog', age: '3 yrs', adopted: false },\n    { id: 3, name: 'Clover', species: 'Bunny', age: '1 yr', adopted: false },\n    { id: 4, name: 'Luna', species: 'Cat', age: '4 yrs', adopted: false },\n    { id: 5, name: 'Barnaby', species: 'Dog', age: '1 yr', adopted: false },\n    { id: 6, name: 'Pippin', species: 'Bunny', age: '2 yrs', adopted: false }\n  ];\n\n  let currentFilter = 'All';\n\n  const availableListEl = document.getElementById('available-list');\n  const adoptedListEl = document.getElementById('adopted-list');\n  const availableCountEl = document.getElementById('available-count');\n  const adoptedCountEl = document.getElementById('adopted-count');\n  const emptyAvailableMsg = document.getElementById('empty-available-msg');\n  const emptyAdoptedMsg = document.getElementById('empty-adopted-msg');\n  const filterButtons = document.querySelectorAll('.filter-btn');\n\n  function getPixelClass(species) {\n    switch (species.toLowerCase()) {\n      case 'cat': return 'pixel-cat';\n      case 'dog': return 'pixel-dog';\n      case 'bunny': return 'pixel-bunny';\n      default: return '';\n    }\n  }\n\n  function createPetCard(pet) {\n    const card = document.createElement('article');\n    card.className = `pet-card ${pet.adopted ? 'adopted' : ''}`;\n    card.setAttribute('role', 'listitem');\n    card.setAttribute('aria-label', `${pet.name}, a ${pet.age} old ${pet.species}`);\n\n    const avatar = document.createElement('div');\n    avatar.className = 'avatar-container';\n    avatar.setAttribute('aria-hidden', 'true');\n    const pixelArt = document.createElement('div');\n    pixelArt.className = `pixel-pet ${getPixelClass(pet.species)}`;\n    avatar.appendChild(pixelArt);\n\n    const nameEl = document.createElement('h3');\n    nameEl.className = 'pet-name';\n    nameEl.textContent = pet.name;\n\n    const metaEl = document.createElement('p');\n    metaEl.className = 'pet-meta';\n    metaEl.textContent = `${pet.species} • ${pet.age}`;\n\n    card.appendChild(avatar);\n    card.appendChild(nameEl);\n    card.appendChild(metaEl);\n\n    if (!pet.adopted) {\n      const adoptBtn = document.createElement('button');\n      adoptBtn.type = 'button';\n      adoptBtn.className = 'btn btn-adopt';\n      adoptBtn.textContent = 'Adopt';\n      adoptBtn.setAttribute('aria-label', `Adopt ${pet.name}`);\n      adoptBtn.addEventListener('click', () => adoptPet(pet.id));\n      card.appendChild(adoptBtn);\n    } else {\n      const adoptedBadge = document.createElement('span');\n      adoptedBadge.className = 'adopted-badge';\n      adoptedBadge.textContent = '✓ Adopted';\n      card.appendChild(adoptedBadge);\n    }\n\n    return card;\n  }\n\n  function adoptPet(petId) {\n    const pet = pets.find(p => p.id === petId);\n    if (pet && !pet.adopted) {\n      pet.adopted = true;\n      render();\n    }\n  }\n\n  function render() {\n    const availablePets = pets.filter(p => !p.adopted);\n    const adoptedPets = pets.filter(p => p.adopted);\n\n    availableCountEl.textContent = availablePets.length;\n    adoptedCountEl.textContent = adoptedPets.length;\n\n    const filteredAvailable = availablePets.filter(p => {\n      return currentFilter === 'All' || p.species.toLowerCase() === currentFilter.toLowerCase();\n    });\n\n    availableListEl.textContent = '';\n    if (filteredAvailable.length === 0) {\n      emptyAvailableMsg.hidden = false;\n    } else {\n      emptyAvailableMsg.hidden = true;\n      filteredAvailable.forEach(pet => {\n        availableListEl.appendChild(createPetCard(pet));\n      });\n    }\n\n    adoptedListEl.textContent = '';\n    if (adoptedPets.length === 0) {\n      emptyAdoptedMsg.hidden = false;\n    } else {\n      emptyAdoptedMsg.hidden = true;\n      adoptedPets.forEach(pet => {\n        adoptedListEl.appendChild(createPetCard(pet));\n      });\n    }\n  }\n\n  filterButtons.forEach(btn => {\n    btn.addEventListener('click', () => {\n      filterButtons.forEach(b => {\n        b.classList.remove('active');\n        b.setAttribute('aria-pressed', 'false');\n      });\n      btn.classList.add('active');\n      btn.setAttribute('aria-pressed', 'true');\n      currentFilter = btn.getAttribute('data-species');\n      render();\n    });\n  });\n\n  render();\n});\n",
+      "description": "Vanilla JavaScript handling state for 6 pets, species filtering, adoption logic, DOM updates, and keyboard interactions."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Pet Shelter\n\nAn accessible, offline browser application for a pixel pet shelter built with semantic HTML, CSS, and vanilla JavaScript.\n\n## Features\n\n- **6 Built-in Pets**: Includes Mochi (Cat), Rusty (Dog), Clover (Bunny), Luna (Cat), Barnaby (Dog), and Pippin (Bunny) with age and species metadata.\n- **Pixel Art Avatars**: Zero external images or fonts. Hand-crafted pixel art generated strictly using CSS box-shadow grids.\n- **Species Filtering**: Filter available pets by species (`All`, `Cat`, `Dog`, `Bunny`) via interactive buttons.\n- **Adoption Flow**: Clicking the \"Adopt\" button immediately moves the pet to the Adopted list.\n- **Dynamic Counters**: Live counters indicating the count of Available and Adopted companions.\n- **Fully Responsive & Accessible**: Styled with a 4-color palette, keyboard navigation, clear focus states, ARIA roles/labels, and tested down to 360px viewport widths.\n\n## Local Setup\n\n1. Open `index.html` directly in any modern web browser.\n2. No build tools, packages, node modules, or internet connection are required.\n",
+      "description": "Project documentation explaining setup, features, accessibility, and offline compliance."
+    }
+  ]
+}

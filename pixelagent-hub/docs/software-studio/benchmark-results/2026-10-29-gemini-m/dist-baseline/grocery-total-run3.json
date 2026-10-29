@@ -1,0 +1,146 @@
+{
+  "caseId": "grocery-total",
+  "run": 3,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\baseline",
+  "managerTokens": 8891,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": null,
+  "finalChecks": null,
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 166,
+  "reportedTokens": 59044,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T14:31:52.026Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T14:31:52.026Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T14:32:20.078Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Grocery Budget Tracker"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T14:32:20.079Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T14:33:28.135Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T14:33:28.135Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T14:33:28.700Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T14:33:28.701Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "957ea263-69e9-4b2e-bd11-44d392c35a47"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T14:34:33.306Z",
+      "type": "test_plan_failed",
+      "data": {
+        "planId": "957ea263-69e9-4b2e-bd11-44d392c35a47",
+        "status": "failed",
+        "error": "Expected double-quoted property name in JSON at position 66 (line 1 column 67)"
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T14:34:33.306Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Grocery Budget Tracker</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <div class=\"pixel-bg-pattern\" aria-hidden=\"true\"></div>\n  <main class=\"app-container\">\n    <header class=\"app-header\">\n      <canvas id=\"pixel-icon\" width=\"48\" height=\"48\" aria-hidden=\"true\"></canvas>\n      <h1 class=\"app-title\">PIXEL GROCERY</h1>\n      <p class=\"app-subtitle\">Budget &amp; Cart Tracker</p>\n    </header>\n\n    <!-- Budget Setting Section -->\n    <section class=\"pixel-card\" aria-labelledby=\"budget-section-title\">\n      <h2 id=\"budget-section-title\" class=\"card-title\">1. Set Budget</h2>\n      <form id=\"budget-form\" class=\"input-row\" novalidate>\n        <label for=\"budget-input\" class=\"field-label\">Budget ($):</label>\n        <div class=\"input-group\">\n          <input \n            type=\"number\" \n            id=\"budget-input\" \n            class=\"pixel-input\" \n            min=\"0\" \n            step=\"0.01\" \n            placeholder=\"0.00\" \n            required\n            aria-describedby=\"budget-help\"\n          >\n          <button type=\"submit\" id=\"set-budget-btn\" class=\"pixel-btn btn-primary\">Set</button>\n        </div>\n        <span id=\"budget-help\" class=\"sr-only\">Enter your maximum budget in dollars and cents</span>\n      </form>\n    </section>\n\n    <!-- Add Item Section -->\n    <section class=\"pixel-card\" aria-labelledby=\"item-section-title\">\n      <h2 id=\"item-section-title\" class=\"card-title\">2. Add Grocery Item</h2>\n      <form id=\"add-item-form\" class=\"item-form\">\n        <div class=\"form-group\">\n          <label for=\"item-name\" class=\"field-label\">Item Name:</label>\n          <input \n            type=\"text\" \n            id=\"item-name\" \n            class=\"pixel-input\" \n            placeholder=\"e.g. Pixel Apples\" \n            required\n            autocomplete=\"off\"\n          >\n        </div>\n        <div class=\"form-row-dual\">\n          <div class=\"form-group\">\n            <label for=\"item-price\" class=\"field-label\">Price ($):</label>\n            <input \n              type=\"number\" \n              id=\"item-price\" \n              class=\"pixel-input\" \n              min=\"0.01\" \n              step=\"0.01\" \n              placeholder=\"0.00\" \n              required\n            >\n          </div>\n          <div class=\"form-group\">\n            <label for=\"item-qty\" class=\"field-label\">Quantity:</label>\n            <input \n              type=\"number\" \n              id=\"item-qty\" \n              class=\"pixel-input\" \n              min=\"1\" \n              step=\"1\" \n              value=\"1\" \n              required\n            >\n          </div>\n        </div>\n        <button type=\"submit\" id=\"add-item-btn\" class=\"pixel-btn btn-action\">+ Add to Cart</button>\n      </form>\n    </section>\n\n    <!-- Financial Status Summary Dashboard -->\n    <section class=\"pixel-card status-card\" aria-labelledby=\"summary-section-title\">\n      <h2 id=\"summary-section-title\" class=\"card-title\">3. Financial Status</h2>\n      <div class=\"status-grid\">\n        <div class=\"status-tile\">\n          <span class=\"status-label\">Budget</span>\n          <span id=\"display-budget\" class=\"status-val\">$0.00</span>\n        </div>\n        <div class=\"status-tile\">\n          <span class=\"status-label\">Total Cart</span>\n          <span id=\"display-total\" class=\"status-val\">$0.00</span>\n        </div>\n        <div class=\"status-tile\">\n          <span class=\"status-label\">Remaining</span>\n          <span id=\"display-remaining\" class=\"status-val\">$0.00</span>\n        </div>\n      </div>\n      <div id=\"budget-warning\" class=\"budget-alert\" role=\"alert\" hidden>\n        &lt;!&gt; WARNING: OVER BUDGET! &lt;!&gt;\n      </div>\n    </section>\n\n    <!-- Grocery Items List -->\n    <section class=\"pixel-card\" aria-labelledby=\"cart-section-title\">\n      <div class=\"cart-header\">\n        <h2 id=\"cart-section-title\" class=\"card-title\">Cart Items</h2>\n        <span id=\"cart-count\" class=\"badge\">0 items</span>\n      </div>\n      <div id=\"empty-cart-msg\" class=\"empty-msg\">Your cart is currently empty.</div>\n      <ul id=\"grocery-list\" class=\"grocery-items\" aria-live=\"polite\"></ul>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML file containing structure for the pixel-themed grocery budget application."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Strict display override for hidden elements */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #1c1a27;\n  --color-surface: #2d2a44;\n  --color-surface-card: #3b375a;\n  --color-primary: #5ce6b0;\n  --color-accent: #f8c547;\n  --color-danger: #ff5277;\n  --color-text: #f0f2f5;\n  --color-text-muted: #a5a2bb;\n  --pixel-border: #14121e;\n  --font-stack: 'Courier New', Courier, 'Lucida Console', Monaco, monospace;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: var(--font-stack);\n  font-size: 16px;\n  line-height: 1.5;\n  background-color: var(--color-bg);\n  color: var(--color-text);\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  padding: 24px 16px;\n  position: relative;\n  -webkit-font-smoothing: none;\n}\n\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border: 0;\n}\n\n/* Subtle CSS pixel-grid background */\n.pixel-bg-pattern {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-image: \n    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),\n    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);\n  background-size: 16px 16px;\n  pointer-events: none;\n  z-index: 0;\n}\n\n.app-container {\n  position: relative;\n  z-index: 1;\n  width: 100%;\n  max-width: 520px;\n  min-width: 320px;\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n\n/* Header */\n.app-header {\n  text-align: center;\n  padding: 12px 0 6px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 6px;\n}\n\n#pixel-icon {\n  image-rendering: pixelated;\n  margin-bottom: 4px;\n}\n\n.app-title {\n  font-size: 26px;\n  font-weight: bold;\n  letter-spacing: 2px;\n  color: var(--color-accent);\n  text-shadow: 3px 3px 0 var(--pixel-border);\n}\n\n.app-subtitle {\n  font-size: 14px;\n  color: var(--color-text-muted);\n  letter-spacing: 1px;\n  text-transform: uppercase;\n}\n\n/* Pixel-style Cards & Borders */\n.pixel-card {\n  background-color: var(--color-surface);\n  border: 4px solid var(--pixel-border);\n  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.4);\n  padding: 16px;\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n}\n\n.card-title {\n  font-size: 18px;\n  font-weight: bold;\n  color: var(--color-primary);\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  border-bottom: 2px dashed rgba(255, 255, 255, 0.15);\n  padding-bottom: 6px;\n}\n\n/* Form elements */\n.input-row {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n\n.input-group {\n  display: flex;\n  gap: 8px;\n}\n\n.item-form {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n}\n\n.form-group {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n  flex: 1;\n}\n\n.form-row-dual {\n  display: flex;\n  gap: 12px;\n}\n\n.field-label {\n  font-size: 14px;\n  font-weight: bold;\n  color: var(--color-text);\n}\n\n.pixel-input {\n  font-family: var(--font-stack);\n  font-size: 16px;\n  padding: 8px 10px;\n  background-color: var(--color-bg);\n  color: var(--color-text);\n  border: 3px solid var(--pixel-border);\n  outline: none;\n  transition: border-color 0.1s ease;\n  width: 100%;\n}\n\n.pixel-input:focus {\n  border-color: var(--color-primary);\n  box-shadow: 0 0 0 2px var(--color-primary);\n}\n\n/* Buttons with pixel pressed state */\n.pixel-btn {\n  font-family: var(--font-stack);\n  font-size: 16px;\n  font-weight: bold;\n  padding: 8px 16px;\n  border: 3px solid var(--pixel-border);\n  cursor: pointer;\n  outline: none;\n  text-transform: uppercase;\n  box-shadow: 3px 3px 0 0 var(--pixel-border);\n  transition: transform 0.05s ease, box-shadow 0.05s ease;\n  white-space: nowrap;\n}\n\n.btn-primary {\n  background-color: var(--color-primary);\n  color: #0b2e20;\n}\n\n.btn-action {\n  background-color: var(--color-accent);\n  color: #3b2802;\n  width: 100%;\n  padding: 10px;\n  margin-top: 4px;\n}\n\n.btn-remove {\n  background-color: var(--color-danger);\n  color: #ffffff;\n  padding: 4px 8px;\n  font-size: 14px;\n  box-shadow: 2px 2px 0 0 var(--pixel-border);\n}\n\n.pixel-btn:hover {\n  filter: brightness(1.1);\n}\n\n.pixel-btn:focus-visible {\n  outline: 2px solid #ffffff;\n  outline-offset: 2px;\n}\n\n.pixel-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0 0 var(--pixel-border);\n}\n\n/* Financial Dashboard */\n.status-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 8px;\n}\n\n.status-tile {\n  background-color: var(--color-surface-card);\n  border: 2px solid var(--pixel-border);\n  padding: 8px 4px;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n}\n\n.status-label {\n  font-size: 12px;\n  text-transform: uppercase;\n  color: var(--color-text-muted);\n}\n\n.status-val {\n  font-size: 16px;\n  font-weight: bold;\n  color: var(--color-text);\n  word-break: break-all;\n}\n\n/* Over-budget highlight status */\n.status-val.over-budget {\n  color: var(--color-danger) !important;\n  animation: pulse 1s infinite alternate;\n}\n\n@keyframes pulse {\n  0% { transform: scale(1); }\n  100% { transform: scale(1.04); }\n}\n\n.budget-alert {\n  background-color: var(--color-danger);\n  color: #ffffff;\n  font-weight: bold;\n  font-size: 14px;\n  text-align: center;\n  padding: 8px;\n  border: 2px solid var(--pixel-border);\n  letter-spacing: 1px;\n}\n\n/* Cart List */\n.cart-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.badge {\n  background-color: var(--color-surface-card);\n  border: 2px solid var(--pixel-border);\n  font-size: 13px;\n  padding: 2px 8px;\n  color: var(--color-accent);\n}\n\n.empty-msg {\n  color: var(--color-text-muted);\n  font-style: italic;\n  text-align: center;\n  padding: 16px 0;\n}\n\n.grocery-items {\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n\n.grocery-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: var(--color-surface-card);\n  border: 2px solid var(--pixel-border);\n  padding: 8px 12px;\n  gap: 8px;\n}\n\n.item-details {\n  display: flex;\n  flex-direction: column;\n  gap: 2px;\n}\n\n.item-title {\n  font-weight: bold;\n  font-size: 16px;\n  color: var(--color-text);\n}\n\n.item-meta {\n  font-size: 13px;\n  color: var(--color-text-muted);\n}\n\n.item-actions {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n\n.item-subtotal {\n  font-weight: bold;\n  color: var(--color-primary);\n  font-size: 15px;\n}\n\n/* Responsive adaptations for narrow screens */\n@media (max-width: 420px) {\n  .form-row-dual {\n    flex-direction: column;\n    gap: 8px;\n  }\n  .status-grid {\n    grid-template-columns: 1fr;\n  }\n}\n",
+      "description": "Pixel-art styled stylesheet using a retro cohesive 5-color palette, CSS pixel borders, responsive card layout, and interactive states."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  // State\n  let budget = 0;\n  let items = [];\n  let nextItemId = 1;\n\n  // Elements\n  const budgetForm = document.getElementById('budget-form');\n  const budgetInput = document.getElementById('budget-input');\n  const addItemForm = document.getElementById('add-item-form');\n  const itemNameInput = document.getElementById('item-name');\n  const itemPriceInput = document.getElementById('item-price');\n  const itemQtyInput = document.getElementById('item-qty');\n  \n  const displayBudget = document.getElementById('display-budget');\n  const displayTotal = document.getElementById('display-total');\n  const displayRemaining = document.getElementById('display-remaining');\n  const budgetWarning = document.getElementById('budget-warning');\n  \n  const groceryList = document.getElementById('grocery-list');\n  const emptyCartMsg = document.getElementById('empty-cart-msg');\n  const cartCount = document.getElementById('cart-count');\n  const canvas = document.getElementById('pixel-icon');\n\n  // Helper: Format numbers as $0.00\n  const formatCurrency = (amount) => {\n    return '$' + (Number(amount) || 0).toFixed(2);\n  };\n\n  // Draw cute retro pixel cart icon using HTML5 canvas without external resources\n  const drawPixelArt = () => {\n    if (!canvas || !canvas.getContext) return;\n    const ctx = canvas.getContext('2d');\n    const pixelSize = 3;\n    \n    // 16x16 pixel grocery basket representation (1=accent/cart, 2=apple/red, 3=leaf/green)\n    const grid = [\n      [0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0],\n      [0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0],\n      [0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0],\n      [0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0],\n      [0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0],\n      [0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0],\n      [0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0],\n      [0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0],\n      [0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0],\n      [0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0],\n      [0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0],\n      [0,0,0,1,1,0,0,0,0,0,1,1,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\n    ];\n\n    const colorMap = {\n      1: '#f8c547',\n      2: '#ff5277',\n      3: '#5ce6b0'\n    };\n\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    for (let r = 0; r < grid.length; r++) {\n      for (let c = 0; c < grid[r].length; c++) {\n        const colorCode = grid[r][c];\n        if (colorCode && colorMap[colorCode]) {\n          ctx.fillStyle = colorMap[colorCode];\n          ctx.fillRect(c * pixelSize, r * pixelSize, pixelSize, pixelSize);\n        }\n      }\n    }\n  };\n\n  // Recalculate totals and update budget indicators\n  const updateUI = () => {\n    const total = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);\n    const remaining = budget - total;\n    const isOverBudget = budget > 0 && total > budget;\n\n    displayBudget.textContent = formatCurrency(budget);\n    displayTotal.textContent = formatCurrency(total);\n    \n    // Format remaining (display negative cleanly)\n    if (remaining < 0) {\n      displayRemaining.textContent = '-' + formatCurrency(Math.abs(remaining));\n    } else {\n      displayRemaining.textContent = formatCurrency(remaining);\n    }\n\n    // Visual warning when running total exceeds budget\n    if (isOverBudget) {\n      displayTotal.classList.add('over-budget');\n      displayRemaining.classList.add('over-budget');\n      budgetWarning.removeAttribute('hidden');\n    } else {\n      displayTotal.classList.remove('over-budget');\n      displayRemaining.classList.remove('over-budget');\n      budgetWarning.setAttribute('hidden', '');\n    }\n\n    // Cart items counter and empty state toggle\n    cartCount.textContent = `${items.length} ${items.length === 1 ? 'item' : 'items'}`;\n    if (items.length === 0) {\n      emptyCartMsg.removeAttribute('hidden');\n    } else {\n      emptyCartMsg.setAttribute('hidden', '');\n    }\n  };\n\n  // Render grocery item list\n  const renderItems = () => {\n    groceryList.innerHTML = '';\n    items.forEach((item) => {\n      const li = document.createElement('li');\n      li.className = 'grocery-item';\n      li.setAttribute('data-id', item.id);\n\n      const detailsDiv = document.createElement('div');\n      detailsDiv.className = 'item-details';\n\n      const nameSpan = document.createElement('span');\n      nameSpan.className = 'item-title';\n      nameSpan.textContent = item.name;\n\n      const metaSpan = document.createElement('span');\n      metaSpan.className = 'item-meta';\n      metaSpan.textContent = `${formatCurrency(item.price)} × ${item.quantity}`;\n\n      detailsDiv.appendChild(nameSpan);\n      detailsDiv.appendChild(metaSpan);\n\n      const actionsDiv = document.createElement('div');\n      actionsDiv.className = 'item-actions';\n\n      const subtotalSpan = document.createElement('span');\n      subtotalSpan.className = 'item-subtotal';\n      subtotalSpan.textContent = formatCurrency(item.price * item.quantity);\n\n      const deleteBtn = document.createElement('button');\n      deleteBtn.type = 'button';\n      deleteBtn.className = 'pixel-btn btn-remove';\n      deleteBtn.textContent = '✕';\n      deleteBtn.setAttribute('aria-label', `Remove ${item.name} from cart`);\n      deleteBtn.addEventListener('click', () => removeItem(item.id));\n\n      actionsDiv.appendChild(subtotalSpan);\n      actionsDiv.appendChild(deleteBtn);\n\n      li.appendChild(detailsDiv);\n      li.appendChild(actionsDiv);\n      groceryList.appendChild(li);\n    });\n    updateUI();\n  };\n\n  // Add Item handler\n  const addItem = (name, price, quantity) => {\n    items.push({\n      id: nextItemId++,\n      name,\n      price,\n      quantity\n    });\n    renderItems();\n  };\n\n  // Remove Item handler\n  const removeItem = (id) => {\n    items = items.filter(item => item.id !== id);\n    renderItems();\n  };\n\n  // Form submit event listeners\n  budgetForm.addEventListener('submit', (e) => {\n    e.preventDefault();\n    const val = parseFloat(budgetInput.value);\n    if (!isNaN(val) && val >= 0) {\n      budget = val;\n      updateUI();\n    }\n  });\n\n  addItemForm.addEventListener('submit', (e) => {\n    e.preventDefault();\n    const name = itemNameInput.value.trim();\n    const price = parseFloat(itemPriceInput.value);\n    const qty = parseInt(itemQtyInput.value, 10);\n\n    if (name && !isNaN(price) && price >= 0 && !isNaN(qty) && qty > 0) {\n      addItem(name, price, qty);\n      itemNameInput.value = '';\n      itemPriceInput.value = '';\n      itemQtyInput.value = '1';\n      itemNameInput.focus();\n    }\n  });\n\n  // Initial rendering\n  drawPixelArt();\n  updateUI();\n});\n",
+      "description": "Vanilla JavaScript logic handling state management, calculations, over-budget indicators, input validation, and decorative canvas rendering."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Grocery Budget Tracker\n\nA retro, pixel-themed offline browser application for managing grocery lists within a set budget.\n\n## Features\n\n- **Budget Management**: Set a target grocery budget in dollars and cents.\n- **Item Entry**: Add items with name, unit price, and quantity.\n- **Financial Calculations**: Real-time computation of running total and remaining balance.\n- **Over-Budget Warning**: Automatically marks the total and remaining balance in red and displays an alert banner whenever total spending exceeds the budget.\n- **Item Removal**: Remove items with immediate recalculation.\n- **Retro Pixel Aesthetics**: 8-bit style bordered UI, pixel canvas icon, and interactive button press states.\n- **Accessibility**: Semantic HTML, screen-reader text (`.sr-only`), labeled form inputs, and keyboard navigation support.\n- **Fully Offline**: Zero network requests, npm dependencies, external stylesheets, or third-party fonts.\n\n## How to Run\n\n1. Open `index.html` in any modern web browser.\n2. Enter a budget and click **Set**.\n3. Add items with their price and quantity to start tracking.\n",
+      "description": "Documentation file detailing the Pixel Grocery Budget Tracker features and setup."
+    }
+  ]
+}

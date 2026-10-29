@@ -1,0 +1,22 @@
+[
+  {
+    "arm": "dist-baseline",
+    "settings": {
+      "strategy": "manager-coder",
+      "model": "gemini-3.8-flash-low",
+      "testerModel": "gemini-3.8-flash-low",
+      "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\baseline"
+    },
+    "directory": "dist-baseline"
+  },
+  {
+    "arm": "dist-new",
+    "settings": {
+      "strategy": "manager-coder",
+      "model": "gemini-3.8-flash-low",
+      "testerModel": "gemini-3.8-flash-low",
+      "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\new"
+    },
+    "directory": "dist-new"
+  }
+]

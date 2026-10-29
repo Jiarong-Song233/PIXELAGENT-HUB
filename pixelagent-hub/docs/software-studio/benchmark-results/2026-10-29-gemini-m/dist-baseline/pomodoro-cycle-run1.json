@@ -1,0 +1,397 @@
+{
+  "caseId": "pomodoro-cycle",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\baseline",
+  "managerTokens": 8944,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 120,
+  "reportedTokens": 50502,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T14:08:49.818Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T14:08:49.818Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T14:09:12.577Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Focus Timer"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T14:09:12.577Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T14:09:56.646Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T14:09:56.646Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T14:09:57.063Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T14:09:57.064Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "cf7ca447-8517-43bd-a722-65372853f864"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T14:10:39.250Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "cf7ca447-8517-43bd-a722-65372853f864",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T14:10:39.251Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "testPlanId": "cf7ca447-8517-43bd-a722-65372853f864",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T14:10:46.038Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Initial display shows 25:00",
+        "passed": true,
+        "actual": "25:00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Initial mode badge shows Work",
+        "passed": true,
+        "actual": "WORK"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Initial cycle count is 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Initial cycle dots count is 4",
+        "passed": true,
+        "actual": "4"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Start button is enabled initially",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Pause button is disabled initially",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Clicking Start disables Start button",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Clicking Start enables Pause button",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Pause stops timer countdown",
+        "passed": true,
+        "actual": "24:59"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "name": "Reset restores initial time",
+        "passed": true,
+        "actual": "25:00"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T14:10:46.039Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "db7d70c0-0b15-4d7b-ba7e-b991986a2d0e",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T14:10:46.042Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial display shows 25:00",
+        "actions": [],
+        "selector": "#timer-display",
+        "expected": "25:00"
+      },
+      {
+        "name": "Initial mode badge shows Work",
+        "actions": [],
+        "selector": "#mode-label",
+        "expected": "Work"
+      },
+      {
+        "name": "Initial cycle count is 1",
+        "actions": [],
+        "selector": "#cycle-count",
+        "expected": "1"
+      },
+      {
+        "name": "Initial cycle dots count is 4",
+        "actions": [],
+        "selector": ".dot",
+        "expected": "4",
+        "assertion": "count"
+      },
+      {
+        "name": "Start button is enabled initially",
+        "actions": [],
+        "selector": "#btn-start",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Pause button is disabled initially",
+        "actions": [],
+        "selector": "#btn-pause",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Clicking Start disables Start button",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-start"
+          }
+        ],
+        "selector": "#btn-start",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Clicking Start enables Pause button",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-start"
+          }
+        ],
+        "selector": "#btn-pause",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Pause stops timer countdown",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-start"
+          },
+          {
+            "type": "wait",
+            "ms": 1000
+          },
+          {
+            "type": "click",
+            "selector": "#btn-pause"
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "",
+        "assertion": "stable"
+      },
+      {
+        "name": "Reset restores initial time",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-start"
+          },
+          {
+            "type": "wait",
+            "ms": 1000
+          },
+          {
+            "type": "click",
+            "selector": "#btn-reset"
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "25:00"
+      }
+    ],
+    "limitations": [
+      "Testing full 25-minute work and 5/15-minute break transitions requires up to 100+ minutes of real-time waiting, exceeding the 8000ms per check wait limit."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13836,
+      "completion_tokens": 403,
+      "total_tokens": 14239
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Focus Timer</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <section class=\"pixel-card\" aria-label=\"Pomodoro Focus Timer\">\n      <header class=\"card-header\">\n        <h1 class=\"app-title\">PIXEL FOCUS</h1>\n        <div class=\"mode-badge\" id=\"mode-label\" aria-live=\"polite\">Work</div>\n      </header>\n\n      <div class=\"timer-display-wrap\">\n        <div class=\"timer-display\" id=\"timer-display\" role=\"timer\" aria-live=\"off\" aria-label=\"Remaining time\">25:00</div>\n      </div>\n\n      <div class=\"cycle-info\" aria-label=\"Cycle Progress\">\n        <div class=\"cycle-label\">Cycle: <span id=\"cycle-count\">1</span> / 4</div>\n        <div class=\"cycle-dots\" id=\"cycle-dots\" aria-hidden=\"true\">\n          <span class=\"dot active\"></span>\n          <span class=\"dot\"></span>\n          <span class=\"dot\"></span>\n          <span class=\"dot\"></span>\n        </div>\n      </div>\n\n      <div class=\"controls\">\n        <button type=\"button\" id=\"btn-start\" class=\"btn btn-primary\" aria-label=\"Start timer\">Start</button>\n        <button type=\"button\" id=\"btn-pause\" class=\"btn btn-secondary\" aria-label=\"Pause timer\" disabled>Pause</button>\n        <button type=\"button\" id=\"btn-reset\" class=\"btn btn-outline\" aria-label=\"Reset timer\">Reset</button>\n      </div>\n\n      <footer class=\"card-footer\">\n        <p class=\"hint-text\">Space to Start/Pause &bull; R to Reset</p>\n      </footer>\n    </section>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Accessible, semantic HTML structure for the pixel focus timer featuring status badges, timer display, cycle tracker, and controls."
+    },
+    {
+      "path": "style.css",
+      "content": "[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #1e1b2e;\n  --card-bg: #2d2640;\n  --pixel-border: #0d0b14;\n  --accent-work: #ff5e7e;\n  --accent-break: #4deeea;\n  --text-main: #f5f2f9;\n  --text-muted: #a39bb8;\n  --btn-shadow: #141120;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--bg-color);\n  background-image:\n    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);\n  background-size: 24px 24px;\n  color: var(--text-main);\n  font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;\n  font-size: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 16px;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 440px;\n  display: flex;\n  justify-content: center;\n}\n\n.pixel-card {\n  width: 100%;\n  background-color: var(--card-bg);\n  border: 4px solid var(--pixel-border);\n  box-shadow:\n    8px 8px 0px 0px var(--pixel-border),\n    inset -4px -4px 0px 0px rgba(0, 0, 0, 0.3),\n    inset 4px 4px 0px 0px rgba(255, 255, 255, 0.1);\n  padding: 24px 20px;\n  text-align: center;\n}\n\n.card-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 24px;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n\n.app-title {\n  font-size: 20px;\n  font-weight: 800;\n  letter-spacing: 2px;\n  color: var(--text-main);\n  text-shadow: 2px 2px 0px var(--pixel-border);\n}\n\n.mode-badge {\n  font-size: 14px;\n  font-weight: 700;\n  padding: 4px 10px;\n  border: 3px solid var(--pixel-border);\n  box-shadow: 2px 2px 0px 0px var(--pixel-border);\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\n.mode-badge.work {\n  background-color: var(--accent-work);\n  color: #1a060d;\n}\n\n.mode-badge.break {\n  background-color: var(--accent-break);\n  color: #032120;\n}\n\n.timer-display-wrap {\n  background-color: #121019;\n  border: 4px solid var(--pixel-border);\n  box-shadow: inset 4px 4px 0px 0px rgba(0, 0, 0, 0.5);\n  padding: 28px 16px;\n  margin-bottom: 24px;\n}\n\n.timer-display {\n  font-size: 48px;\n  font-weight: 900;\n  letter-spacing: 4px;\n  color: var(--accent-work);\n  text-shadow: 0 0 10px rgba(255, 94, 126, 0.3);\n}\n\n.timer-display.break-mode {\n  color: var(--accent-break);\n  text-shadow: 0 0 10px rgba(77, 238, 234, 0.3);\n}\n\n.cycle-info {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 24px;\n  padding: 8px 12px;\n  background: rgba(0, 0, 0, 0.2);\n  border: 2px solid var(--pixel-border);\n}\n\n.cycle-label {\n  font-size: 16px;\n  font-weight: 700;\n}\n\n.cycle-dots {\n  display: flex;\n  gap: 8px;\n}\n\n.dot {\n  width: 14px;\n  height: 14px;\n  background: #463c63;\n  border: 2px solid var(--pixel-border);\n  display: inline-block;\n}\n\n.dot.active {\n  background: var(--accent-work);\n  box-shadow: 0 0 4px var(--accent-work);\n}\n\n.controls {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 12px;\n  margin-bottom: 20px;\n}\n\n.btn {\n  appearance: none;\n  border: 3px solid var(--pixel-border);\n  padding: 12px 6px;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 700;\n  letter-spacing: 1px;\n  cursor: pointer;\n  box-shadow: 4px 4px 0px 0px var(--btn-shadow);\n  transition: transform 0.05s ease, box-shadow 0.05s ease;\n}\n\n.btn:focus-visible {\n  outline: 3px solid var(--accent-break);\n  outline-offset: 2px;\n}\n\n.btn:active:not(:disabled) {\n  transform: translate(2px, 2px);\n  box-shadow: 2px 2px 0px 0px var(--btn-shadow);\n}\n\n.btn:disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n  box-shadow: 2px 2px 0px 0px var(--btn-shadow);\n  transform: translate(1px, 1px);\n}\n\n.btn-primary {\n  background-color: var(--accent-work);\n  color: #1a060d;\n}\n\n.btn-primary:hover:not(:disabled) {\n  filter: brightness(1.1);\n}\n\n.btn-secondary {\n  background-color: var(--accent-break);\n  color: #032120;\n}\n\n.btn-secondary:hover:not(:disabled) {\n  filter: brightness(1.1);\n}\n\n.btn-outline {\n  background-color: #4a3e6a;\n  color: var(--text-main);\n}\n\n.btn-outline:hover:not(:disabled) {\n  background-color: #56487a;\n}\n\n.card-footer {\n  border-top: 2px dashed rgba(255, 255, 255, 0.15);\n  padding-top: 14px;\n}\n\n.hint-text {\n  font-size: 13px;\n  color: var(--text-muted);\n}\n\n@media (max-width: 380px) {\n  .timer-display {\n    font-size: 38px;\n  }\n  .btn {\n    font-size: 14px;\n    padding: 10px 4px;\n  }\n}\n",
+      "description": "Cohesive retro pixel-art aesthetic styling with crisp box shadows, responsive card layout, and keyboard-focus accessibility."
+    },
+    {
+      "path": "app.js",
+      "content": "(() => {\n  const WORK_SECONDS = 25 * 60;\n  const SHORT_BREAK_SECONDS = 5 * 60;\n  const LONG_BREAK_SECONDS = 15 * 60;\n  const SESSIONS_BEFORE_LONG_BREAK = 4;\n\n  let currentMode = 'WORK'; // 'WORK' or 'BREAK'\n  let completedWorkSessions = 0;\n  let currentCycle = 1;\n  let remainingSeconds = WORK_SECONDS;\n  let timerInterval = null;\n  let expectedEndTime = null;\n\n  const timerDisplay = document.getElementById('timer-display');\n  const modeLabel = document.getElementById('mode-label');\n  const cycleCountSpan = document.getElementById('cycle-count');\n  const cycleDotsContainer = document.getElementById('cycle-dots');\n  const btnStart = document.getElementById('btn-start');\n  const btnPause = document.getElementById('btn-pause');\n  const btnReset = document.getElementById('btn-reset');\n\n  function formatTime(totalSeconds) {\n    const safeSec = Math.max(0, Math.ceil(totalSeconds));\n    const minutes = Math.floor(safeSec / 60);\n    const seconds = safeSec % 60;\n    const mStr = String(minutes).padStart(2, '0');\n    const sStr = String(seconds).padStart(2, '0');\n    return `${mStr}:${sStr}`;\n  }\n\n  function renderUI() {\n    const formatted = formatTime(remainingSeconds);\n    timerDisplay.textContent = formatted;\n    document.title = `${formatted} - ${currentMode === 'WORK' ? 'Work' : 'Break'} | Pixel Focus`;\n\n    if (currentMode === 'WORK') {\n      modeLabel.textContent = 'Work';\n      modeLabel.className = 'mode-badge work';\n      timerDisplay.classList.remove('break-mode');\n    } else {\n      const isLongBreak = (completedWorkSessions % SESSIONS_BEFORE_LONG_BREAK === 0);\n      modeLabel.textContent = isLongBreak ? 'Long Break' : 'Break';\n      modeLabel.className = 'mode-badge break';\n      timerDisplay.classList.add('break-mode');\n    }\n\n    cycleCountSpan.textContent = String(currentCycle);\n\n    const dots = cycleDotsContainer.querySelectorAll('.dot');\n    dots.forEach((dot, index) => {\n      if (index < currentCycle) {\n        dot.classList.add('active');\n      } else {\n        dot.classList.remove('active');\n      }\n    });\n  }\n\n  function nextMode() {\n    if (currentMode === 'WORK') {\n      completedWorkSessions += 1;\n      currentMode = 'BREAK';\n      if (completedWorkSessions % SESSIONS_BEFORE_LONG_BREAK === 0) {\n        remainingSeconds = LONG_BREAK_SECONDS;\n      } else {\n        remainingSeconds = SHORT_BREAK_SECONDS;\n      }\n    } else {\n      currentMode = 'WORK';\n      currentCycle = (completedWorkSessions % SESSIONS_BEFORE_LONG_BREAK) + 1;\n      remainingSeconds = WORK_SECONDS;\n    }\n    expectedEndTime = Date.now() + (remainingSeconds * 1000);\n    renderUI();\n  }\n\n  function tick() {\n    const now = Date.now();\n    remainingSeconds = Math.max(0, (expectedEndTime - now) / 1000);\n    if (remainingSeconds <= 0) {\n      nextMode();\n    } else {\n      renderUI();\n    }\n  }\n\n  function startTimer() {\n    if (timerInterval) return;\n    expectedEndTime = Date.now() + (remainingSeconds * 1000);\n    timerInterval = setInterval(tick, 200);\n    btnStart.disabled = true;\n    btnPause.disabled = false;\n  }\n\n  function pauseTimer() {\n    if (!timerInterval) return;\n    clearInterval(timerInterval);\n    timerInterval = null;\n    if (expectedEndTime) {\n      remainingSeconds = Math.max(0, (expectedEndTime - Date.now()) / 1000);\n    }\n    btnStart.disabled = false;\n    btnPause.disabled = true;\n    renderUI();\n  }\n\n  function resetTimer() {\n    pauseTimer();\n    currentMode = 'WORK';\n    completedWorkSessions = 0;\n    currentCycle = 1;\n    remainingSeconds = WORK_SECONDS;\n    renderUI();\n  }\n\n  btnStart.addEventListener('click', startTimer);\n  btnPause.addEventListener('click', pauseTimer);\n  btnReset.addEventListener('click', resetTimer);\n\n  window.addEventListener('keydown', (event) => {\n    if (event.target && ['INPUT', 'TEXTAREA'].includes(event.target.tagName)) {\n      return;\n    }\n    if (event.code === 'Space') {\n      event.preventDefault();\n      if (timerInterval) {\n        pauseTimer();\n      } else {\n        startTimer();\n      }\n    } else if (event.key === 'r' || event.key === 'R') {\n      resetTimer();\n    }\n  });\n\n  renderUI();\n})();\n",
+      "description": "Standard timestamp delta countdown logic, state management for 25m work / 5m break / 15m long break cycles, and keyboard bindings."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Focus Timer\n\nA lightweight, fully offline pixel-art Pomodoro focus timer built with pure HTML, CSS, and plain JavaScript.\n\n## Features\n\n- **Interval Workflow**:\n  - 25 minutes of Work.\n  - 5 minutes of Short Break.\n  - 15 minutes of Long Break automatically triggered after every 4 completed work sessions.\n- **Cycle Tracking**: Visual cycle count and 4-block pixel progress indicator.\n- **Pixel Retro Aesthetics**: Distinct chunky border styling, retro color palette, and screen-readable high-contrast elements.\n- **Accessible & Responsive**: Keyboard controls, accessible labels, ARIA landmarks, and responsiveness down to 360px viewport width.\n- **Zero Dependencies**: Pure client-side code running strictly offline without external assets or network requests.\n\n## Controls\n\n- **Start Button / [Spacebar]**: Start countdown.\n- **Pause Button / [Spacebar]**: Pause timer without losing progress.\n- **Reset Button / [R]**: Reset back to cycle 1 Work session (25:00).\n",
+      "description": "User guide and technical documentation for the Pixel Focus Timer."
+    }
+  ]
+}

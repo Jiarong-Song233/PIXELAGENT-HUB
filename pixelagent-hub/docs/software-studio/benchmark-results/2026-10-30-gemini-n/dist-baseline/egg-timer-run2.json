@@ -1,0 +1,422 @@
+{
+  "caseId": "egg-timer",
+  "run": 2,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\baseline",
+  "managerTokens": 8998,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 88,
+  "reportedTokens": 36926,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:05:38.167Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:05:38.167Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:05:56.592Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Egg Timer"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:05:56.592Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:06:36.736Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:06:36.736Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:06:37.177Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:06:37.178Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "0ff1a65a-17f3-43ac-9e94-31ee16db5ab9"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:06:55.285Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "0ff1a65a-17f3-43ac-9e94-31ee16db5ab9",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:06:55.286Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "testPlanId": "0ff1a65a-17f3-43ac-9e94-31ee16db5ab9",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Initial display and controls state",
+        "passed": true,
+        "actual": "0:00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Controls disabled initially",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Select Soft preset sets 6:00",
+        "passed": true,
+        "actual": "6:00"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Select Medium preset sets 8:00",
+        "passed": true,
+        "actual": "8:00"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Select Hard preset sets 10:00",
+        "passed": true,
+        "actual": "10:00"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Soft timer counts down after 1s",
+        "passed": true,
+        "actual": "5:59"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Pause keeps the remaining time stable",
+        "passed": true,
+        "actual": "5:59"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Pause toggles button label to Resume",
+        "passed": true,
+        "actual": "RESUME"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Resume continues countdown",
+        "passed": true,
+        "actual": "5:59"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:07:03.476Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "name": "Done banner initially hidden",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:07:03.477Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "142f641e-c1be-4027-9fa4-b835db737fc0",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T16:07:03.480Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial display and controls state",
+        "actions": [],
+        "selector": "#timer-display",
+        "expected": "0:00"
+      },
+      {
+        "name": "Controls disabled initially",
+        "actions": [],
+        "selector": "#btn-pause-resume",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Select Soft preset sets 6:00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-soft"
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "6:00"
+      },
+      {
+        "name": "Select Medium preset sets 8:00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-medium"
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "8:00"
+      },
+      {
+        "name": "Select Hard preset sets 10:00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-hard"
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "10:00"
+      },
+      {
+        "name": "Soft timer counts down after 1s",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-soft"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "5:59"
+      },
+      {
+        "name": "Pause keeps the remaining time stable",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-soft"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          },
+          {
+            "type": "click",
+            "selector": "#btn-pause-resume"
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "",
+        "assertion": "stable"
+      },
+      {
+        "name": "Pause toggles button label to Resume",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-soft"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-pause-resume"
+          }
+        ],
+        "selector": "#btn-pause-resume",
+        "expected": "Resume"
+      },
+      {
+        "name": "Resume continues countdown",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-soft"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-pause-resume"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-pause-resume"
+          },
+          {
+            "type": "wait",
+            "ms": 1100
+          }
+        ],
+        "selector": "#timer-display",
+        "expected": "5:59"
+      },
+      {
+        "name": "Done banner initially hidden",
+        "actions": [],
+        "selector": "#message-banner",
+        "expected": "false",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Cannot test full multi-minute countdown to reach zero and trigger 'Eggs are done!' within test time limits without mocking system time or intervals.",
+      "Pixel art canvas drawing details cannot be verified via DOM text/attribute assertions."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13983,
+      "completion_tokens": 482,
+      "total_tokens": 14465
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Egg Timer</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <section class=\"card\" aria-labelledby=\"app-title\">\n      <header class=\"card-header\">\n        <h1 id=\"app-title\" class=\"title\">PIXEL EGG TIMER</h1>\n      </header>\n\n      <div class=\"art-frame\" aria-hidden=\"true\">\n        <canvas id=\"egg-canvas\" width=\"128\" height=\"128\"></canvas>\n      </div>\n\n      <section class=\"preset-group\" aria-label=\"Preset selections\">\n        <button type=\"button\" class=\"pixel-btn preset-btn\" data-time=\"360\" id=\"btn-soft\">\n          <span class=\"btn-label\">Soft</span>\n          <span class=\"btn-sub\">6 min</span>\n        </button>\n        <button type=\"button\" class=\"pixel-btn preset-btn\" data-time=\"480\" id=\"btn-medium\">\n          <span class=\"btn-label\">Medium</span>\n          <span class=\"btn-sub\">8 min</span>\n        </button>\n        <button type=\"button\" class=\"pixel-btn preset-btn\" data-time=\"600\" id=\"btn-hard\">\n          <span class=\"btn-label\">Hard</span>\n          <span class=\"btn-sub\">10 min</span>\n        </button>\n      </section>\n\n      <section class=\"timer-panel\" aria-label=\"Countdown display\">\n        <div class=\"time-readout\" id=\"timer-display\" aria-live=\"polite\">0:00</div>\n        <div class=\"progress-track\" role=\"progressbar\" id=\"progress-bar\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"0\" aria-label=\"Boiling progress\">\n          <div class=\"progress-fill\" id=\"progress-fill\"></div>\n        </div>\n      </section>\n\n      <div id=\"message-banner\" class=\"done-banner\" role=\"status\" aria-live=\"assertive\" hidden>\n        Eggs are done!\n      </div>\n\n      <section class=\"controls-group\" aria-label=\"Timer controls\">\n        <button type=\"button\" class=\"pixel-btn action-btn\" id=\"btn-pause-resume\" disabled>Pause</button>\n        <button type=\"button\" class=\"pixel-btn action-btn reset-btn\" id=\"btn-reset\" disabled>Reset</button>\n      </section>\n    </section>\n  </main>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "description": "Accessible HTML markup with pixel egg canvas, preset controls, countdown timer display, progress bar, action buttons, and live region for status announcements."
+    },
+    {
+      "path": "style.css",
+      "content": "[hidden] {\n  display: none !important;\n}\n\n:root {\n  --c-bg: #2d1e2f;\n  --c-card: #f7eedb;\n  --c-dark: #1f1a24;\n  --c-accent: #f59e0b;\n  --c-accent-dark: #b45309;\n  --c-border: #443742;\n  --c-surface: #edd8be;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--c-bg);\n  color: var(--c-dark);\n  font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;\n  font-size: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 16px;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 440px;\n  margin: 0 auto;\n}\n\n.card {\n  background-color: var(--c-card);\n  border: 4px solid var(--c-dark);\n  box-shadow: 6px 6px 0px var(--c-dark);\n  padding: 24px 20px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n\n.title {\n  font-size: 1.35rem;\n  font-weight: 800;\n  letter-spacing: 2px;\n  text-align: center;\n  color: var(--c-dark);\n  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);\n}\n\n.art-frame {\n  width: 136px;\n  height: 136px;\n  background-color: var(--c-surface);\n  border: 4px solid var(--c-dark);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.1);\n}\n\n#egg-canvas {\n  image-rendering: pixelated;\n  width: 128px;\n  height: 128px;\n}\n\n.preset-group {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 10px;\n  width: 100%;\n}\n\n.pixel-btn {\n  appearance: none;\n  border: 3px solid var(--c-dark);\n  background-color: var(--c-surface);\n  color: var(--c-dark);\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: 700;\n  padding: 10px 6px;\n  cursor: pointer;\n  box-shadow: 3px 3px 0px var(--c-dark);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  transition: none;\n}\n\n.pixel-btn:hover:not(:disabled) {\n  background-color: #fce7cf;\n}\n\n.pixel-btn:active:not(:disabled),\n.pixel-btn.active {\n  background-color: var(--c-accent);\n  box-shadow: 1px 1px 0px var(--c-dark);\n  transform: translate(2px, 2px);\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px dashed var(--c-dark);\n  outline-offset: 3px;\n}\n\n.pixel-btn:disabled {\n  opacity: 0.45;\n  cursor: not-allowed;\n  box-shadow: 1px 1px 0px var(--c-dark);\n}\n\n.btn-label {\n  font-size: 0.95rem;\n  text-transform: uppercase;\n}\n\n.btn-sub {\n  font-size: 0.75rem;\n  font-weight: 600;\n  opacity: 0.85;\n  margin-top: 4px;\n}\n\n.timer-panel {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 12px;\n}\n\n.time-readout {\n  font-size: 3rem;\n  font-weight: 900;\n  letter-spacing: 3px;\n  color: var(--c-dark);\n  line-height: 1;\n  font-variant-numeric: tabular-nums;\n}\n\n.progress-track {\n  width: 100%;\n  height: 24px;\n  background-color: var(--c-surface);\n  border: 3px solid var(--c-dark);\n  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.15);\n  overflow: hidden;\n}\n\n.progress-fill {\n  width: 0%;\n  height: 100%;\n  background-color: var(--c-accent);\n  transition: width 0.2s linear;\n}\n\n.done-banner {\n  width: 100%;\n  padding: 12px;\n  background-color: var(--c-accent);\n  border: 3px solid var(--c-dark);\n  color: var(--c-dark);\n  font-weight: 900;\n  font-size: 1.15rem;\n  text-align: center;\n  box-shadow: 3px 3px 0px var(--c-dark);\n  animation: pulse 0.7s infinite alternate;\n}\n\n@keyframes pulse {\n  0% {\n    background-color: var(--c-accent);\n  }\n  100% {\n    background-color: #fed7aa;\n  }\n}\n\n.controls-group {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 12px;\n  width: 100%;\n}\n\n.action-btn {\n  min-height: 44px;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n",
+      "description": "Chunky retro pixel-art theme styling using 4 cohesive palette colors, accessible typography, distinct focus states, and the required hidden rule."
+    },
+    {
+      "path": "script.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  let totalSeconds = 0;\n  let remainingSeconds = 0;\n  let timerInterval = null;\n  let isPaused = false;\n  let currentPreset = null;\n\n  const timerDisplay = document.getElementById('timer-display');\n  const progressBar = document.getElementById('progress-bar');\n  const progressFill = document.getElementById('progress-fill');\n  const messageBanner = document.getElementById('message-banner');\n  const btnPauseResume = document.getElementById('btn-pause-resume');\n  const btnReset = document.getElementById('btn-reset');\n  const presetButtons = document.querySelectorAll('.preset-btn');\n  const canvas = document.getElementById('egg-canvas');\n  const ctx = canvas.getContext('2d');\n\n  function drawPixelEgg(stage = 'normal') {\n    ctx.clearRect(0, 0, 16, 16);\n\n    const cShell = stage === 'done' ? '#f59e0b' : '#ffffff';\n    const cShadow = stage === 'done' ? '#d97706' : '#d1d5db';\n    const cBorder = '#1f1a24';\n    const cFace = '#1f1a24';\n\n    const eggPixels = [\n      [0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0],\n      [0,0,0,0,1,2,2,2,2,1,0,0,0,0,0,0],\n      [0,0,0,1,2,2,2,2,2,2,1,0,0,0,0,0],\n      [0,0,1,2,2,2,2,2,2,2,2,1,0,0,0,0],\n      [0,0,1,2,2,2,2,2,2,2,2,1,0,0,0,0],\n      [0,1,2,2,2,2,2,2,2,2,2,2,1,0,0,0],\n      [0,1,2,2,4,2,2,2,2,4,2,2,1,0,0,0],\n      [0,1,2,2,2,2,2,2,2,2,2,2,1,0,0,0],\n      [0,1,2,2,2,2,4,4,2,2,2,3,1,0,0,0],\n      [0,1,2,2,2,2,2,2,2,2,3,3,1,0,0,0],\n      [0,1,2,2,2,2,2,2,2,3,3,3,1,0,0,0],\n      [0,0,1,2,2,2,2,2,3,3,3,1,0,0,0,0],\n      [0,0,1,2,2,2,2,3,3,3,3,1,0,0,0,0],\n      [0,0,0,1,3,3,3,3,3,3,1,0,0,0,0,0],\n      [0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0],\n      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\n    ];\n\n    for (let y = 0; y < 16; y++) {\n      for (let x = 0; x < 16; x++) {\n        const val = eggPixels[y][x];\n        if (val === 1) ctx.fillStyle = cBorder;\n        else if (val === 2) ctx.fillStyle = cShell;\n        else if (val === 3) ctx.fillStyle = cShadow;\n        else if (val === 4) ctx.fillStyle = cFace;\n        else continue;\n        ctx.fillRect(x, y, 1, 1);\n      }\n    }\n  }\n\n  function formatTime(seconds) {\n    const m = Math.floor(seconds / 60);\n    const s = seconds % 60;\n    return `${m}:${s < 10 ? '0' : ''}${s}`;\n  }\n\n  function updateDisplay() {\n    timerDisplay.textContent = formatTime(remainingSeconds);\n    const percentage = totalSeconds > 0\n      ? Math.round(((totalSeconds - remainingSeconds) / totalSeconds) * 100)\n      : 0;\n    progressFill.style.width = `${percentage}%`;\n    progressBar.setAttribute('aria-valuenow', percentage.toString());\n  }\n\n  function stopInterval() {\n    if (timerInterval) {\n      clearInterval(timerInterval);\n      timerInterval = null;\n    }\n  }\n\n  function tick() {\n    if (remainingSeconds > 0) {\n      remainingSeconds--;\n      updateDisplay();\n      if (remainingSeconds === 0) {\n        timerFinished();\n      }\n    }\n  }\n\n  function startTimer() {\n    stopInterval();\n    isPaused = false;\n    btnPauseResume.textContent = 'Pause';\n    btnPauseResume.disabled = false;\n    btnReset.disabled = false;\n    messageBanner.hidden = true;\n    drawPixelEgg('boiling');\n    timerInterval = setInterval(tick, 1000);\n  }\n\n  function timerFinished() {\n    stopInterval();\n    messageBanner.hidden = false;\n    btnPauseResume.disabled = true;\n    drawPixelEgg('done');\n  }\n\n  function selectPreset(seconds, btnElement) {\n    presetButtons.forEach(btn => btn.classList.remove('active'));\n    btnElement.classList.add('active');\n    currentPreset = seconds;\n    totalSeconds = seconds;\n    remainingSeconds = seconds;\n    updateDisplay();\n    startTimer();\n  }\n\n  presetButtons.forEach(btn => {\n    btn.addEventListener('click', () => {\n      const seconds = parseInt(btn.getAttribute('data-time'), 10);\n      selectPreset(seconds, btn);\n    });\n  });\n\n  btnPauseResume.addEventListener('click', () => {\n    if (remainingSeconds <= 0) return;\n    if (isPaused) {\n      isPaused = false;\n      btnPauseResume.textContent = 'Pause';\n      timerInterval = setInterval(tick, 1000);\n    } else {\n      isPaused = true;\n      btnPauseResume.textContent = 'Resume';\n      stopInterval();\n    }\n  });\n\n  btnReset.addEventListener('click', () => {\n    stopInterval();\n    isPaused = false;\n    remainingSeconds = totalSeconds;\n    updateDisplay();\n    messageBanner.hidden = true;\n    btnPauseResume.textContent = 'Pause';\n    btnPauseResume.disabled = remainingSeconds === 0;\n    drawPixelEgg('normal');\n  });\n\n  // Initial render\n  drawPixelEgg('normal');\n  updateDisplay();\n});\n",
+      "description": "Timer countdown logic with drift-free resume/pause handling, custom pixel egg canvas rendering, and event listeners."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Egg Timer\n\nA zero-dependency, retro pixel-art egg timer web application with preset boiling durations.\n\n## Features\n\n- **Preset Options**: Quick buttons for Soft (6 min), Medium (8 min), and Hard (10 min) boiled eggs.\n- **Precision Countdown**: Live `m:ss` display and synchronized progress bar.\n- **Pause & Resume**: Retains remaining duration accurately when paused.\n- **Completion Notification**: Shows 'Eggs are done!' at zero alongside animated visual cues.\n- **Pixel Aesthetic**: Custom HTML5 canvas pixel art egg paired with retro chunky button borders.\n- **Full Offline Compatibility**: Requires no external fonts, libraries, or network requests.\n- **Accessible**: Built with semantic markup, ARIA roles, labeled controls, and explicit focus states.\n\n## How to Run\n\nOpen `index.html` directly in any modern web browser. No server or build step required.\n",
+      "description": "Documentation for the pixel egg timer application, instructions for running offline, accessibility notes, and design architecture."
+    }
+  ]
+}

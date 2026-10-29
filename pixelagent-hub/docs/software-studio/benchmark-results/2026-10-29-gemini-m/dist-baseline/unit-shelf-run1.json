@@ -1,0 +1,409 @@
+{
+  "caseId": "unit-shelf",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\baseline",
+  "managerTokens": 8875,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 89,
+  "reportedTokens": 37639,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:44:26.190Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:44:26.191Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:44:41.890Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Bookshelf"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:44:41.890Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:45:24.295Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:45:24.296Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:45:24.791Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:45:24.794Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "b3952328-7aa3-4467-a820-59b8d759a408"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:45:50.657Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "b3952328-7aa3-4467-a820-59b8d759a408",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:45:50.658Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "testPlanId": "b3952328-7aa3-4467-a820-59b8d759a408",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Initial load renders 8 books",
+        "passed": true,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Default sort by title ascending first book is 1984",
+        "passed": true,
+        "actual": "1984"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Toggle sort order to descending puts Ubik first by title",
+        "passed": true,
+        "actual": "Ubik"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Sort by year ascending puts 1984 published 1949 first",
+        "passed": true,
+        "actual": "1949"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Sort by year descending puts Snow Crash published 1992 first",
+        "passed": true,
+        "actual": "1992"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Sort by author ascending puts Frank Herbert first",
+        "passed": true,
+        "actual": "Dune"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Filter library by title search query",
+        "passed": true,
+        "actual": "Showing 1 of 8 books"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Filter library by author search query",
+        "passed": true,
+        "actual": "Foundation"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "name": "Empty state displays when no books match search",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:45:53.549Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "2899198c-2e54-45de-b8b6-6ee04863c806",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T13:45:53.551Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial load renders 8 books",
+        "actions": [],
+        "selector": ".pixel-book",
+        "expected": "8",
+        "assertion": "count"
+      },
+      {
+        "name": "Default sort by title ascending first book is 1984",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "title"
+          }
+        ],
+        "selector": ".pixel-book .book-spine-title",
+        "nth": 0,
+        "expected": "1984",
+        "assertion": "text"
+      },
+      {
+        "name": "Toggle sort order to descending puts Ubik first by title",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "title"
+          },
+          {
+            "type": "click",
+            "selector": "#order-toggle-btn"
+          }
+        ],
+        "selector": ".pixel-book .book-spine-title",
+        "nth": 0,
+        "expected": "Ubik",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort by year ascending puts 1984 published 1949 first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "year"
+          }
+        ],
+        "selector": ".pixel-book .book-spine-year",
+        "nth": 0,
+        "expected": "1949",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort by year descending puts Snow Crash published 1992 first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "year"
+          },
+          {
+            "type": "click",
+            "selector": "#order-toggle-btn"
+          }
+        ],
+        "selector": ".pixel-book .book-spine-year",
+        "nth": 0,
+        "expected": "1992",
+        "assertion": "text"
+      },
+      {
+        "name": "Sort by author ascending puts Frank Herbert first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-select",
+            "value": "author"
+          }
+        ],
+        "selector": ".pixel-book .book-spine-title",
+        "nth": 0,
+        "expected": "Dune",
+        "assertion": "text"
+      },
+      {
+        "name": "Filter library by title search query",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Neuromancer"
+          }
+        ],
+        "selector": "#book-count-text",
+        "expected": "Showing 1 of 8 books",
+        "assertion": "text"
+      },
+      {
+        "name": "Filter library by author search query",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Asimov"
+          }
+        ],
+        "selector": ".pixel-book .book-spine-title",
+        "nth": 0,
+        "expected": "Foundation",
+        "assertion": "text"
+      },
+      {
+        "name": "Empty state displays when no books match search",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Nonexistent Book"
+          }
+        ],
+        "selector": "#empty-state",
+        "expected": "true",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Pixel art visual styling and spine height proportions are not verified."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14237,
+      "completion_tokens": 908,
+      "total_tokens": 15145
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Bookshelf</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <header class=\"app-header\">\n      <h1 class=\"app-title\">PIXEL BOOKSHELF</h1>\n      <p class=\"app-subtitle\">A retro 8-bit library of classic reads</p>\n    </header>\n\n    <section class=\"control-panel\" aria-label=\"Book filter and sort controls\">\n      <div class=\"control-group search-group\">\n        <label for=\"search-input\" class=\"control-label\">Search Library</label>\n        <input \n          type=\"text\" \n          id=\"search-input\" \n          class=\"pixel-input\" \n          placeholder=\"Search title or author...\" \n          autocomplete=\"off\"\n        >\n      </div>\n\n      <div class=\"control-group sort-group\">\n        <label for=\"sort-select\" class=\"control-label\">Sort By</label>\n        <div class=\"sort-controls-row\">\n          <select id=\"sort-select\" class=\"pixel-select\">\n            <option value=\"title\">Title</option>\n            <option value=\"author\">Author</option>\n            <option value=\"year\">Year</option>\n          </select>\n          <button \n            id=\"order-toggle-btn\" \n            type=\"button\" \n            class=\"pixel-btn toggle-btn\" \n            aria-pressed=\"false\" \n            aria-label=\"Toggle sort order: currently ascending\"\n          >\n            ASC ▲\n          </button>\n        </div>\n      </div>\n    </section>\n\n    <section class=\"shelf-wrapper\" aria-label=\"Bookshelf\">\n      <div class=\"shelf-plank top-trim\"></div>\n      <div id=\"books-container\" class=\"bookshelf-grid\" role=\"list\" aria-live=\"polite\">\n        <!-- Book spines dynamically rendered here -->\n      </div>\n      <div class=\"shelf-plank bottom-ledge\"></div>\n    </section>\n\n    <div id=\"empty-state\" class=\"empty-message\" hidden>\n      No books found matching your query.\n    </div>\n\n    <footer class=\"shelf-stats\">\n      <span id=\"book-count-text\">Showing 8 of 8 books</span>\n    </footer>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main entry point containing semantic markup, accessible search and sort controls, pixel bookshelf container, and relative script/style links."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Mandatory rule for robust toggle/hidden state management */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #222034;\n  --color-shelf-wood: #663931;\n  --color-shelf-highlight: #8f563b;\n  --color-shelf-shadow: #45283c;\n  --color-accent: #f4b41b;\n  --color-accent-hover: #ffd93d;\n  --color-card-bg: #323c39;\n  --color-text-main: #fbf5ef;\n  --color-text-muted: #9badb7;\n  --font-stack: 'Courier New', Courier, monospace, monospace;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--color-bg);\n  color: var(--color-text-main);\n  font-family: var(--font-stack);\n  font-size: 16px;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 24px 12px;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 720px;\n  background-color: var(--color-card-bg);\n  border: 4px solid #000;\n  box-shadow: \n    8px 8px 0px #000,\n    inset 2px 2px 0px rgba(255, 255, 255, 0.2),\n    inset -2px -2px 0px rgba(0, 0, 0, 0.5);\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.app-header {\n  text-align: center;\n  border-bottom: 4px dashed #1a1e24;\n  padding-bottom: 16px;\n}\n\n.app-title {\n  font-size: 1.8rem;\n  letter-spacing: 2px;\n  color: var(--color-accent);\n  text-shadow: 2px 2px 0px #000;\n  margin-bottom: 6px;\n}\n\n.app-subtitle {\n  font-size: 1rem;\n  color: var(--color-text-muted);\n}\n\n.control-panel {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 16px;\n  background-color: #24292b;\n  padding: 16px;\n  border: 3px solid #000;\n  box-shadow: inset 2px 2px 0px #000;\n}\n\n.control-group {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n  flex: 1 1 200px;\n}\n\n.sort-controls-row {\n  display: flex;\n  gap: 8px;\n}\n\n.control-label {\n  font-size: 0.95rem;\n  font-weight: bold;\n  color: var(--color-text-main);\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\n.pixel-input,\n.pixel-select,\n.pixel-btn {\n  font-family: inherit;\n  font-size: 1rem;\n  height: 42px;\n  padding: 6px 10px;\n  color: var(--color-text-main);\n  background-color: #14171a;\n  border: 3px solid #000;\n  outline: none;\n}\n\n.pixel-input:focus-visible,\n.pixel-select:focus-visible,\n.pixel-btn:focus-visible {\n  border-color: var(--color-accent);\n  box-shadow: 0 0 0 2px var(--color-text-main);\n}\n\n.pixel-input {\n  width: 100%;\n}\n\n.pixel-select {\n  flex: 1;\n  cursor: pointer;\n}\n\n.pixel-btn {\n  cursor: pointer;\n  background-color: var(--color-shelf-wood);\n  color: var(--color-text-main);\n  font-weight: bold;\n  box-shadow: 0 3px 0 #000;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  white-space: nowrap;\n  padding: 0 16px;\n  user-select: none;\n}\n\n.pixel-btn:hover {\n  background-color: var(--color-shelf-highlight);\n}\n\n.pixel-btn:active {\n  transform: translateY(2px);\n  box-shadow: 0 1px 0 #000;\n}\n\n.shelf-wrapper {\n  position: relative;\n  background-color: #1b1928;\n  border: 4px solid #000;\n  padding: 12px 12px 0 12px;\n}\n\n.shelf-plank {\n  height: 12px;\n  background: repeating-linear-gradient(\n    90deg,\n    var(--color-shelf-wood),\n    var(--color-shelf-wood) 30px,\n    var(--color-shelf-highlight) 30px,\n    var(--color-shelf-highlight) 34px\n  );\n  border: 2px solid #000;\n}\n\n.top-trim {\n  height: 6px;\n  margin-bottom: 12px;\n  background-color: var(--color-shelf-shadow);\n}\n\n.bottom-ledge {\n  height: 16px;\n  margin-top: 0;\n  border-top: 3px solid var(--color-shelf-highlight);\n}\n\n.bookshelf-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));\n  align-items: end;\n  gap: 8px;\n  min-height: 220px;\n  padding-bottom: 2px;\n}\n\n.pixel-book {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 8px 4px;\n  border: 3px solid #000;\n  box-shadow: \n    inset 2px 0 0 rgba(255, 255, 255, 0.25),\n    inset -2px 0 0 rgba(0, 0, 0, 0.4),\n    2px 2px 0px rgba(0, 0, 0, 0.5);\n  cursor: default;\n  position: relative;\n  transition: transform 0.1s ease;\n}\n\n.pixel-book:hover {\n  transform: translateY(-8px);\n}\n\n.pixel-book:focus-visible {\n  outline: 3px solid var(--color-accent);\n  transform: translateY(-8px);\n}\n\n.book-spine-title {\n  writing-mode: vertical-rl;\n  transform: rotate(180deg);\n  font-size: 0.85rem;\n  font-weight: bold;\n  letter-spacing: 0.5px;\n  max-height: 120px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  color: #fff;\n  text-shadow: 1px 1px 0px #000;\n}\n\n.book-spine-year {\n  font-size: 0.75rem;\n  font-weight: bold;\n  background-color: rgba(0, 0, 0, 0.4);\n  padding: 2px 4px;\n  border-radius: 2px;\n  color: var(--color-accent);\n  margin-top: 4px;\n}\n\n.book-accent-stripes {\n  width: 100%;\n  height: 4px;\n  background-color: var(--color-accent);\n  margin-bottom: 6px;\n  opacity: 0.8;\n}\n\n.empty-message {\n  text-align: center;\n  padding: 24px;\n  font-size: 1.1rem;\n  background: #14171a;\n  border: 3px dashed var(--color-text-muted);\n  color: var(--color-accent);\n}\n\n.shelf-stats {\n  display: flex;\n  justify-content: flex-end;\n  font-size: 0.9rem;\n  color: var(--color-text-muted);\n}\n\n@media (max-width: 480px) {\n  .app-container {\n    padding: 16px 12px;\n  }\n  \n  .control-panel {\n    padding: 12px;\n  }\n\n  .bookshelf-grid {\n    grid-template-columns: repeat(4, 1fr);\n    gap: 6px;\n  }\n}\n",
+      "description": "Retro pixel-art styling using a cohesive palette, responsive layout down to 360px, accessible focus states, and the required hidden attribute rule."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const books = [\n    { id: 1, title: 'Neuromancer', author: 'William Gibson', year: 1984, height: 190, color: '#ac3232' },\n    { id: 2, title: 'Dune', author: 'Frank Herbert', year: 1965, height: 210, color: '#d95763' },\n    { id: 3, title: 'Snow Crash', author: 'Neal Stephenson', year: 1992, height: 185, color: '#5b6ee1' },\n    { id: 4, title: 'Foundation', author: 'Isaac Asimov', year: 1951, height: 175, color: '#37946e' },\n    { id: 5, title: '1984', author: 'George Orwell', year: 1949, height: 165, color: '#8f974a' },\n    { id: 6, title: 'Fahrenheit 451', author: 'Ray Bradbury', year: 1953, height: 180, color: '#df7126' },\n    { id: 7, title: 'Ubik', author: 'Philip K. Dick', year: 1969, height: 170, color: '#639bff' },\n    { id: 8, title: 'Solaris', author: 'Stanislaw Lem', year: 1961, height: 195, color: '#76428a' }\n  ];\n\n  let currentSortKey = 'title';\n  let isAscending = true;\n  let searchQuery = '';\n\n  const searchInput = document.getElementById('search-input');\n  const sortSelect = document.getElementById('sort-select');\n  const orderToggleBtn = document.getElementById('order-toggle-btn');\n  const booksContainer = document.getElementById('books-container');\n  const emptyState = document.getElementById('empty-state');\n  const bookCountText = document.getElementById('book-count-text');\n\n  function getFilteredAndSortedBooks() {\n    const query = searchQuery.trim().toLowerCase();\n    \n    const filtered = books.filter((book) => {\n      const matchesTitle = book.title.toLowerCase().includes(query);\n      const matchesAuthor = book.author.toLowerCase().includes(query);\n      return matchesTitle || matchesAuthor;\n    });\n\n    filtered.sort((a, b) => {\n      let valA = a[currentSortKey];\n      let valB = b[currentSortKey];\n\n      if (typeof valA === 'string') {\n        valA = valA.toLowerCase();\n        valB = valB.toLowerCase();\n        const comparison = valA.localeCompare(valB);\n        return isAscending ? comparison : -comparison;\n      }\n\n      return isAscending ? valA - valB : valB - valA;\n    });\n\n    return filtered;\n  }\n\n  function renderBooks() {\n    const displayedBooks = getFilteredAndSortedBooks();\n    booksContainer.innerHTML = '';\n\n    if (displayedBooks.length === 0) {\n      emptyState.hidden = false;\n    } else {\n      emptyState.hidden = true;\n      displayedBooks.forEach((book) => {\n        const bookEl = document.createElement('article');\n        bookEl.className = 'pixel-book';\n        bookEl.setAttribute('role', 'listitem');\n        bookEl.tabIndex = 0;\n        bookEl.style.height = `${book.height}px`;\n        bookEl.style.backgroundColor = book.color;\n        bookEl.setAttribute('aria-label', `${book.title} by ${book.author}, published in ${book.year}`);\n\n        const stripes = document.createElement('div');\n        stripes.className = 'book-accent-stripes';\n\n        const titleEl = document.createElement('span');\n        titleEl.className = 'book-spine-title';\n        titleEl.textContent = book.title;\n\n        const yearEl = document.createElement('span');\n        yearEl.className = 'book-spine-year';\n        yearEl.textContent = book.year;\n\n        bookEl.appendChild(stripes);\n        bookEl.appendChild(titleEl);\n        bookEl.appendChild(yearEl);\n        booksContainer.appendChild(bookEl);\n      });\n    }\n\n    bookCountText.textContent = `Showing ${displayedBooks.length} of ${books.length} books`;\n  }\n\n  searchInput.addEventListener('input', (event) => {\n    searchQuery = event.target.value;\n    renderBooks();\n  });\n\n  sortSelect.addEventListener('change', (event) => {\n    currentSortKey = event.target.value;\n    renderBooks();\n  });\n\n  orderToggleBtn.addEventListener('click', () => {\n    isAscending = !isAscending;\n    orderToggleBtn.setAttribute('aria-pressed', (!isAscending).toString());\n    orderToggleBtn.setAttribute(\n      'aria-label',\n      `Toggle sort order: currently ${isAscending ? 'ascending' : 'descending'}`\n    );\n    orderToggleBtn.textContent = isAscending ? 'ASC ▲' : 'DESC ▼';\n    renderBooks();\n  });\n\n  renderBooks();\n});\n",
+      "description": "Vanilla JavaScript handling the catalog of 8 books, state management, search filtering by title/author, multi-field sorting, and DOM rendering using event listeners."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Bookshelf\n\nA retro pixel-art browser application showcasing a library of 8 classic sci-fi books.\n\n## Features\n\n- **8 Built-in Classics**: Preloaded with Title, Author, and Year data.\n- **Multi-field Sorting**: Sort bookshelf items dynamically by Title, Author, or Year.\n- **Order Toggle**: Switch between Ascending and Descending order via a single accessible button.\n- **Instant Search**: Live search input filters books by title or author simultaneously.\n- **Pixel-Art Aesthetic**: Crafted with CSS pixel-art borders, themed color palettes, and interactive book spines.\n- **Zero External Dependencies**: 100% offline; uses standard HTML5, CSS3, and modern Vanilla JavaScript without external fonts or network calls.\n- **Accessible & Responsive**: Fully labeled inputs, ARIA attributes, keyboard focus states, and adaptive design down to 360px viewports.\n\n## Running the Project\n\n1. Open `index.html` in any modern web browser.\n2. No server, install step, or build process is required.\n",
+      "description": "Project documentation outlining features, design specifications, accessibility support, and instructions for running the application."
+    }
+  ]
+}

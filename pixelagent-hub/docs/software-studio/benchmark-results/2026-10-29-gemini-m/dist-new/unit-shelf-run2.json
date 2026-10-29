@@ -1,0 +1,761 @@
+{
+  "caseId": "unit-shelf",
+  "run": 2,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\new",
+  "managerTokens": 8891,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 2,
+  "compileFailures": 0,
+  "firstChecks": "9/10",
+  "finalChecks": "9/10",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 1,
+  "coderRepair": true,
+  "checkRuns": [
+    "9/10",
+    "9/10",
+    "9/10"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 163,
+  "reportedTokens": 70392,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:47:42.900Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:47:42.900Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:48:06.986Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Bookshelf"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:48:06.986Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:48:51.538Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:48:51.538Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:48:51.951Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:48:51.955Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "3926f2e1-6b6e-4abb-b23b-fa0c89c63216"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:49:06.862Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "3926f2e1-6b6e-4abb-b23b-fa0c89c63216",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:49:06.863Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "testPlanId": "3926f2e1-6b6e-4abb-b23b-fa0c89c63216",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Initial load displays all 8 books",
+        "passed": true,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Status text shows 8 of 8 books initially",
+        "passed": true,
+        "actual": "Showing 8 of 8 books"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Default sort by title ascending has 1984 as first book",
+        "passed": true,
+        "actual": "1984"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Sort by title descending puts The Hobbit first",
+        "passed": true,
+        "actual": "The Hobbit"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Sort by author ascending puts Frank Herbert before George Orwell",
+        "passed": false,
+        "actual": "Dune"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Sort by year ascending shows The Hobbit published in 1937 first",
+        "passed": true,
+        "actual": "The Hobbit"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Sort by year descending shows Snow Crash published in 1992 first",
+        "passed": true,
+        "actual": "Snow Crash"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Search filter by author name finds Neuromancer",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Search filter by title finds Fahrenheit 451",
+        "passed": true,
+        "actual": "Fahrenheit 451"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "name": "Search with no match displays empty message",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T13:49:12.044Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "ecced3c5-3871-48dd-bcc6-887a4c317189",
+        "status": "failed",
+        "passed": 9,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T13:49:12.046Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "3926f2e1-6b6e-4abb-b23b-fa0c89c63216",
+        "review": true
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-29T13:49:24.741Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "3926f2e1-6b6e-4abb-b23b-fa0c89c63216",
+        "checks": 10,
+        "review": true,
+        "revised": 1,
+        "dropped": 0,
+        "llmModel": "gemini-3.8-flash-low",
+        "llmUsage": {
+          "prompt_tokens": 13783,
+          "completion_tokens": 224,
+          "total_tokens": 14007
+        },
+        "verdicts": [
+          {
+            "name": "Sort by author ascending puts Frank Herbert before George Orwell",
+            "verdict": "check-wrong",
+            "reason": "The check selects sorting by 'author' (ascending) and asserts that the first book title (.book-spine-content at nth: 0) is '1984' (by George Orwell). However, among the 8 authors (Frank Herbert, Willi"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-29T13:49:24.741Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "testPlanId": "3926f2e1-6b6e-4abb-b23b-fa0c89c63216",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Initial load displays all 8 books",
+        "passed": true,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Status text shows 8 of 8 books initially",
+        "passed": true,
+        "actual": "Showing 8 of 8 books"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Default sort by title ascending has 1984 as first book",
+        "passed": true,
+        "actual": "1984"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Sort by title descending puts The Hobbit first",
+        "passed": true,
+        "actual": "The Hobbit"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Sort by author ascending puts Frank Herbert before George Orwell",
+        "passed": false,
+        "actual": "Dune"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Sort by year ascending shows The Hobbit published in 1937 first",
+        "passed": true,
+        "actual": "The Hobbit"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Sort by year descending shows Snow Crash published in 1992 first",
+        "passed": true,
+        "actual": "Snow Crash"
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Search filter by author name finds Neuromancer",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Search filter by title finds Fahrenheit 451",
+        "passed": true,
+        "actual": "Fahrenheit 451"
+      }
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "name": "Search with no match displays empty message",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-29T13:49:29.856Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "a4bb8774-e2b9-42e2-9b42-f35a495a877d",
+        "status": "failed",
+        "passed": 9,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-29T13:49:29.859Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 37,
+      "at": "2026-10-29T13:50:18.161Z",
+      "type": "code_ready",
+      "round": 2,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 38,
+      "at": "2026-10-29T13:50:18.161Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 39,
+      "at": "2026-10-29T13:50:18.179Z",
+      "type": "build_passed",
+      "round": 2
+    },
+    {
+      "seq": 40,
+      "at": "2026-10-29T13:50:18.180Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "testPlanId": "3926f2e1-6b6e-4abb-b23b-fa0c89c63216",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 41,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Initial load displays all 8 books",
+        "passed": true,
+        "actual": "8"
+      }
+    },
+    {
+      "seq": 42,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Status text shows 8 of 8 books initially",
+        "passed": true,
+        "actual": "Showing 8 of 8 books"
+      }
+    },
+    {
+      "seq": 43,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Default sort by title ascending has 1984 as first book",
+        "passed": true,
+        "actual": "1984"
+      }
+    },
+    {
+      "seq": 44,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Sort by title descending puts The Hobbit first",
+        "passed": true,
+        "actual": "The Hobbit"
+      }
+    },
+    {
+      "seq": 45,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Sort by author ascending puts Frank Herbert before George Orwell",
+        "passed": false,
+        "actual": "Dune"
+      }
+    },
+    {
+      "seq": 46,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Sort by year ascending shows The Hobbit published in 1937 first",
+        "passed": true,
+        "actual": "The Hobbit"
+      }
+    },
+    {
+      "seq": 47,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Sort by year descending shows Snow Crash published in 1992 first",
+        "passed": true,
+        "actual": "Snow Crash"
+      }
+    },
+    {
+      "seq": 48,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Search filter by author name finds Neuromancer",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 49,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Search filter by title finds Fahrenheit 451",
+        "passed": true,
+        "actual": "Fahrenheit 451"
+      }
+    },
+    {
+      "seq": 50,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "name": "Search with no match displays empty message",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 51,
+      "at": "2026-10-29T13:50:23.403Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "11bdab6e-74e6-4317-86c4-8cd3d95d9266",
+        "status": "failed",
+        "passed": 9,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 52,
+      "at": "2026-10-29T13:50:23.406Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v2/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial load displays all 8 books",
+        "actions": [],
+        "selector": ".book-item",
+        "expected": "8",
+        "assertion": "count"
+      },
+      {
+        "name": "Status text shows 8 of 8 books initially",
+        "actions": [],
+        "selector": "#book-count-text",
+        "expected": "Showing 8 of 8 books"
+      },
+      {
+        "name": "Default sort by title ascending has 1984 as first book",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-field",
+            "value": "title"
+          }
+        ],
+        "selector": ".book-item .book-spine-content",
+        "nth": 0,
+        "expected": "1984"
+      },
+      {
+        "name": "Sort by title descending puts The Hobbit first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-field",
+            "value": "title"
+          },
+          {
+            "type": "click",
+            "selector": "#order-toggle"
+          }
+        ],
+        "selector": ".book-item .book-spine-content",
+        "nth": 0,
+        "expected": "The Hobbit"
+      },
+      {
+        "name": "Sort by author ascending puts Frank Herbert before George Orwell",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-field",
+            "value": "author"
+          }
+        ],
+        "selector": ".book-item .book-spine-content",
+        "nth": 0,
+        "expected": "Foundation"
+      },
+      {
+        "name": "Sort by year ascending shows The Hobbit published in 1937 first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-field",
+            "value": "year"
+          }
+        ],
+        "selector": ".book-item .book-spine-content",
+        "nth": 0,
+        "expected": "The Hobbit"
+      },
+      {
+        "name": "Sort by year descending shows Snow Crash published in 1992 first",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#sort-field",
+            "value": "year"
+          },
+          {
+            "type": "click",
+            "selector": "#order-toggle"
+          }
+        ],
+        "selector": ".book-item .book-spine-content",
+        "nth": 0,
+        "expected": "Snow Crash"
+      },
+      {
+        "name": "Search filter by author name finds Neuromancer",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Gibson"
+          }
+        ],
+        "selector": ".book-item",
+        "expected": "1",
+        "assertion": "count"
+      },
+      {
+        "name": "Search filter by title finds Fahrenheit 451",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Fahrenheit"
+          }
+        ],
+        "selector": ".book-item .book-spine-content",
+        "nth": 0,
+        "expected": "Fahrenheit 451"
+      },
+      {
+        "name": "Search with no match displays empty message",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#search-input",
+            "value": "Nonexistent Book"
+          }
+        ],
+        "selector": "#empty-message",
+        "expected": "true",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Pixel art styling and custom CSS variables cannot be asserted via pixel rendering.",
+      "Hover animations and transform transitions cannot be triggered directly via DOM inspection."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14315,
+      "completion_tokens": 908,
+      "total_tokens": 15223
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    },
+    {
+      "round": 2,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Bookshelf</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"shelf-app\" role=\"main\">\n    <header class=\"shelf-header\">\n      <h1 class=\"shelf-title\">Pixel Bookshelf</h1>\n      <p class=\"shelf-subtitle\">A curated 8-bit library of classics</p>\n    </header>\n\n    <section class=\"shelf-controls\" aria-label=\"Book filter and sort controls\">\n      <div class=\"control-group\">\n        <label for=\"search-input\" class=\"control-label\">Search</label>\n        <input \n          type=\"text\" \n          id=\"search-input\" \n          class=\"pixel-input\" \n          placeholder=\"Title or author...\"\n          autocomplete=\"off\"\n        >\n      </div>\n\n      <div class=\"control-group\">\n        <label for=\"sort-field\" class=\"control-label\">Sort by</label>\n        <select id=\"sort-field\" class=\"pixel-select\">\n          <option value=\"title\">Title</option>\n          <option value=\"author\">Author</option>\n          <option value=\"year\">Year</option>\n        </select>\n      </div>\n\n      <div class=\"control-group control-group-button\">\n        <button type=\"button\" id=\"order-toggle\" class=\"pixel-btn\" aria-label=\"Toggle sort direction: Ascending\">\n          Order: <span id=\"order-label\">Ascending (&uarr;)</span>\n        </button>\n      </div>\n    </section>\n\n    <section class=\"bookcase\" aria-label=\"Bookshelf\">\n      <div class=\"shelf-plank top-edge\"></div>\n      <div id=\"books-grid\" class=\"books-display\" role=\"list\" aria-live=\"polite\"></div>\n      <div class=\"shelf-plank shelf-beam\"></div>\n      <div id=\"empty-message\" class=\"pixel-empty-state\" hidden>\n        No books matched your search.\n      </div>\n    </section>\n\n    <footer class=\"shelf-status\">\n      <span id=\"book-count-text\">Showing 8 of 8 books</span>\n    </footer>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Single-page HTML interface containing search, sort controls, and bookshelf container."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Mandatory reset rule */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #1f1b24;\n  --card-bg: #2b233a;\n  --wood-dark: #3a2215;\n  --wood-mid: #5c371d;\n  --wood-light: #8e582d;\n  --accent-gold: #f4b41a;\n  --text-main: #f5eedc;\n  --text-dim: #bda893;\n  --spine-1: #d95763;\n  --spine-2: #37946e;\n  --spine-3: #5b6ee1;\n  --spine-4: #ac3232;\n  --spine-5: #639bff;\n  --spine-6: #df7126;\n  --spine-7: #696a6a;\n  --spine-8: #8f563b;\n  --focus-ring: #ffea75;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: \"Courier New\", Courier, monospace, monospace;\n  font-size: 16px;\n  background-color: var(--bg-color);\n  color: var(--text-main);\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 24px 12px;\n}\n\n.shelf-app {\n  width: 100%;\n  max-width: 860px;\n  background-color: var(--card-bg);\n  border: 4px solid var(--wood-light);\n  box-shadow:\n    0 0 0 4px var(--wood-dark),\n    12px 12px 0 0 #0f0c14;\n  padding: 28px 24px;\n  border-radius: 2px;\n}\n\n.shelf-header {\n  text-align: center;\n  margin-bottom: 24px;\n}\n\n.shelf-title {\n  font-size: 28px;\n  color: var(--accent-gold);\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  text-shadow: 2px 2px 0 var(--wood-dark);\n  margin-bottom: 6px;\n}\n\n.shelf-subtitle {\n  font-size: 16px;\n  color: var(--text-dim);\n}\n\n.shelf-controls {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 16px;\n  align-items: flex-end;\n  justify-content: space-between;\n  background: #20182c;\n  padding: 16px;\n  border: 3px solid var(--wood-mid);\n  margin-bottom: 28px;\n}\n\n.control-group {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 200px;\n  gap: 6px;\n}\n\n.control-group-button {\n  flex: 0 1 200px;\n}\n\n.control-label {\n  font-size: 14px;\n  font-weight: bold;\n  color: var(--accent-gold);\n  text-transform: uppercase;\n}\n\n.pixel-input,\n.pixel-select,\n.pixel-btn {\n  font-family: inherit;\n  font-size: 16px;\n  color: var(--text-main);\n  background-color: #171121;\n  border: 3px solid var(--wood-light);\n  padding: 10px 12px;\n  border-radius: 0;\n  outline: none;\n  transition: border-color 0.15s ease, transform 0.05s ease;\n}\n\n.pixel-input:focus,\n.pixel-select:focus,\n.pixel-btn:focus {\n  border-color: var(--focus-ring);\n  outline: 2px solid var(--focus-ring);\n  outline-offset: 1px;\n}\n\n.pixel-btn {\n  cursor: pointer;\n  background-color: var(--wood-mid);\n  font-weight: bold;\n  text-align: center;\n  width: 100%;\n  box-shadow: 0 4px 0 0 var(--wood-dark);\n}\n\n.pixel-btn:hover {\n  background-color: #6e4222;\n}\n\n.pixel-btn:active {\n  transform: translateY(3px);\n  box-shadow: 0 1px 0 0 var(--wood-dark);\n}\n\n.bookcase {\n  background: #171220;\n  border: 4px solid var(--wood-dark);\n  padding: 20px 16px 0 16px;\n  position: relative;\n}\n\n.shelf-plank {\n  background-color: var(--wood-mid);\n  height: 16px;\n  border-top: 4px solid var(--wood-light);\n  border-bottom: 4px solid var(--wood-dark);\n  box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, 0.15);\n}\n\n.shelf-plank.top-edge {\n  margin-bottom: 20px;\n  height: 12px;\n}\n\n.shelf-beam {\n  margin-top: 0;\n}\n\n.books-display {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: flex-end;\n  justify-content: center;\n  gap: 14px;\n  min-height: 250px;\n  padding-bottom: 2px;\n}\n\n.book-item {\n  position: relative;\n  width: 76px;\n  height: var(--book-height, 220px);\n  background-color: var(--book-color, var(--spine-1));\n  border: 3px solid #140d1a;\n  box-shadow:\n    inset 4px 0 0 0 rgba(255, 255, 255, 0.25),\n    inset -4px 0 0 0 rgba(0, 0, 0, 0.4),\n    4px 0 0 0 rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 8px 4px;\n  transition: transform 0.15s ease, filter 0.15s ease;\n  outline: none;\n}\n\n.book-item:hover,\n.book-item:focus {\n  transform: translateY(-8px);\n  filter: brightness(1.15);\n  border-color: var(--focus-ring);\n  outline: 2px solid var(--focus-ring);\n  outline-offset: 2px;\n}\n\n.book-spine-dec-top,\n.book-spine-dec-bottom {\n  height: 6px;\n  width: 100%;\n  background-color: var(--accent-gold);\n  opacity: 0.85;\n  border-top: 1px solid #140d1a;\n  border-bottom: 1px solid #140d1a;\n}\n\n.book-spine-content {\n  writing-mode: vertical-rl;\n  transform: rotate(180deg);\n  font-size: 13px;\n  font-weight: bold;\n  letter-spacing: 1px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-height: 140px;\n  color: #fff;\n  text-shadow: 1px 1px 0 #000;\n  text-align: center;\n  margin: auto auto;\n}\n\n.book-year-tag {\n  font-size: 11px;\n  text-align: center;\n  color: var(--accent-gold);\n  background: rgba(0, 0, 0, 0.55);\n  padding: 2px 0;\n  font-weight: bold;\n  border-radius: 1px;\n}\n\n.pixel-empty-state {\n  text-align: center;\n  padding: 40px 16px;\n  color: var(--text-dim);\n  font-size: 18px;\n  font-style: italic;\n}\n\n.shelf-status {\n  margin-top: 18px;\n  display: flex;\n  justify-content: flex-end;\n  font-size: 14px;\n  color: var(--text-dim);\n}\n\n@media (max-width: 520px) {\n  .shelf-app {\n    padding: 16px 12px;\n  }\n\n  .shelf-controls {\n    flex-direction: column;\n    align-items: stretch;\n  }\n\n  .control-group-button {\n    flex: 1 1 auto;\n  }\n\n  .book-item {\n    width: 62px;\n  }\n\n  .book-spine-content {\n    font-size: 12px;\n  }\n}",
+      "description": "Pixel-art inspired retro styling, controls, responsive layout, and focus indicators."
+    },
+    {
+      "path": "app.js",
+      "content": "const BOOKS = [\n  { id: 1, title: \"Dune\", author: \"Frank Herbert\", year: 1965, height: 230, color: \"#d95763\" },\n  { id: 2, title: \"Neuromancer\", author: \"William Gibson\", year: 1984, height: 200, color: \"#37946e\" },\n  { id: 3, title: \"The Hobbit\", author: \"J.R.R. Tolkien\", year: 1937, height: 210, color: \"#5b6ee1\" },\n  { id: 4, title: \"Fahrenheit 451\", author: \"Ray Bradbury\", year: 1953, height: 190, color: \"#ac3232\" },\n  { id: 5, title: \"Snow Crash\", author: \"Neal Stephenson\", year: 1992, height: 240, color: \"#639bff\" },\n  { id: 6, title: \"Foundation\", author: \"Isaac Asimov\", year: 1951, height: 215, color: \"#df7126\" },\n  { id: 7, title: \"1984\", author: \"George Orwell\", year: 1949, height: 195, color: \"#696a6a\" },\n  { id: 8, title: \"Solaris\", author: \"Stanislaw Lem\", year: 1961, height: 205, color: \"#8f563b\" }\n];\n\nconst state = {\n  searchQuery: \"\",\n  sortField: \"title\",\n  isAscending: true\n};\n\nconst booksGrid = document.getElementById(\"books-grid\");\nconst emptyMessage = document.getElementById(\"empty-message\");\nconst searchInput = document.getElementById(\"search-input\");\nconst sortSelect = document.getElementById(\"sort-field\");\nconst orderToggleBtn = document.getElementById(\"order-toggle\");\nconst orderLabel = document.getElementById(\"order-label\");\nconst bookCountText = document.getElementById(\"book-count-text\");\n\nfunction getFilteredAndSortedBooks() {\n  const query = state.searchQuery.trim().toLowerCase();\n  \n  const filtered = BOOKS.filter((book) => {\n    if (!query) return true;\n    return (\n      book.title.toLowerCase().includes(query) ||\n      book.author.toLowerCase().includes(query)\n    );\n  });\n\n  filtered.sort((a, b) => {\n    const field = state.sortField;\n    let valA = a[field];\n    let valB = b[field];\n\n    if (typeof valA === \"string\") {\n      valA = valA.toLowerCase();\n      valB = valB.toLowerCase();\n    }\n\n    if (valA < valB) return state.isAscending ? -1 : 1;\n    if (valA > valB) return state.isAscending ? 1 : -1;\n    return 0;\n  });\n\n  return filtered;\n}\n\nfunction renderBooks() {\n  const books = getFilteredAndSortedBooks();\n  booksGrid.innerHTML = \"\";\n\n  if (books.length === 0) {\n    emptyMessage.hidden = false;\n  } else {\n    emptyMessage.hidden = true;\n    books.forEach((book) => {\n      const bookEl = document.createElement(\"article\");\n      bookEl.className = \"book-item\";\n      bookEl.tabIndex = 0;\n      bookEl.setAttribute(\"role\", \"listitem\");\n      bookEl.setAttribute(\n        \"aria-label\",\n        `${book.title} by ${book.author}, published in ${book.year}`\n      );\n      bookEl.style.setProperty(\"--book-height\", `${book.height}px`);\n      bookEl.style.setProperty(\"--book-color\", book.color);\n\n      bookEl.innerHTML = `\n        <div class=\"book-spine-dec-top\"></div>\n        <div class=\"book-spine-content\" title=\"${book.title} - ${book.author}\">${book.title}</div>\n        <div class=\"book-year-tag\">${book.year}</div>\n        <div class=\"book-spine-dec-bottom\"></div>\n      `;\n\n      booksGrid.appendChild(bookEl);\n    });\n  }\n\n  bookCountText.textContent = `Showing ${books.length} of ${BOOKS.length} books`;\n}\n\nsearchInput.addEventListener(\"input\", (e) => {\n  state.searchQuery = e.target.value;\n  renderBooks();\n});\n\nsortSelect.addEventListener(\"change\", (e) => {\n  state.sortField = e.target.value;\n  renderBooks();\n});\n\nsortSelect.addEventListener(\"input\", (e) => {\n  state.sortField = e.target.value;\n  renderBooks();\n});\n\norderToggleBtn.addEventListener(\"click\", () => {\n  state.isAscending = !state.isAscending;\n  const arrow = state.isAscending ? \"\\u2191\" : \"\\u2193\";\n  const text = state.isAscending ? \"Ascending\" : \"Descending\";\n  orderLabel.innerHTML = `${text} (${arrow})`;\n  orderToggleBtn.setAttribute(\"aria-label\", `Toggle sort direction: ${text}`);\n  renderBooks();\n});\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  renderBooks();\n});",
+      "description": "Vanilla JavaScript handling the 8 books state, filtering, multi-field sorting, and DOM rendering."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Bookshelf\n\nA retro pixel-art bookshelf built with vanilla HTML, CSS, and JavaScript. The app operates completely offline without external packages, network fonts, or dependencies.\n\n## Features\n\n- **8 Built-in Classics**: Preloaded with titles by Frank Herbert, William Gibson, J.R.R. Tolkien, Ray Bradbury, Neal Stephenson, Isaac Asimov, George Orwell, and Stanislaw Lem.\n- **Search Filtering**: Live query matches against both title and author.\n- **Multi-Field Sorting**: Sort dynamically by Title, Author, or Publication Year.\n- **Order Toggle**: Switch between Ascending and Descending sort with keyboard and screen reader support.\n- **Pixel Art Theme**: 8-bit wooden shelf and colored spines designed using CSS without external images.\n- **Accessibility & Responsive Design**: Keyboard-navigable books and controls, clear focus rings, and full responsiveness from 360px viewports up.\n\n## Running the Project\n\nOpen `index.html` directly in any standard modern web browser. No web server, compilation, or package manager is required.",
+      "description": "Documentation for setup, usage, keyboard accessibility, and offline architecture."
+    }
+  ]
+}

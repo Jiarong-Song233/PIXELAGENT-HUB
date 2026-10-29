@@ -1,0 +1,456 @@
+{
+  "caseId": "color-guess",
+  "run": 2,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\baseline",
+  "managerTokens": 8863,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 2,
+  "compileFailures": 0,
+  "firstChecks": "5/7",
+  "finalChecks": "7/7",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": true,
+  "checkRuns": [
+    "5/7",
+    "7/7"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 153,
+  "reportedTokens": 68684,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T14:01:04.150Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T14:01:04.150Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T14:01:24.473Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Color-Guessing Game"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T14:01:24.473Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T14:02:07.185Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T14:02:07.185Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T14:02:07.597Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T14:02:07.598Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "d6a2462c-67e3-424d-9057-2b4017212c56"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T14:02:40.794Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "d6a2462c-67e3-424d-9057-2b4017212c56",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T14:02:40.794Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "testPlanId": "d6a2462c-67e3-424d-9057-2b4017212c56",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T14:02:47.064Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "name": "Initial target RGB displays valid RGB format",
+        "passed": false,
+        "actual": "rgb(---, ---, ---)"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T14:02:47.064Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "name": "Three color swatch buttons are rendered",
+        "passed": true,
+        "actual": "3"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T14:02:47.064Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "name": "Current streak starts at zero",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T14:02:47.064Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "name": "Best streak starts displayed",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T14:02:47.064Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "name": "Play again button is hidden at round start",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T14:02:47.064Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "name": "Swatches are enabled at round start",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T14:02:47.064Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "name": "Clicking swatch triggers status message update",
+        "passed": false,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T14:02:47.064Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "8caac317-c52d-41fd-b8d0-2b766fb3b748",
+        "status": "failed",
+        "passed": 5,
+        "failed": 2,
+        "source": "in-page",
+        "error": "Uncaught SecurityError: Failed to read the 'localStorage' property from 'Window': The document is sandboxed and lacks the 'allow-same-origin' flag. (data:application/javascript;base64,KCgpID0+IHsKICAvLyBhcHAuanMKICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJET01Db250ZW50TG9hZGVkIiwgKCkgPT4gewogICAgY29uc3Qg"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T14:02:47.067Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T14:03:30.358Z",
+      "type": "code_ready",
+      "round": 2,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T14:03:30.358Z",
+      "type": "phase",
+      "round": 2,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T14:03:30.394Z",
+      "type": "build_passed",
+      "round": 2
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-29T14:03:30.394Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "testPlanId": "d6a2462c-67e3-424d-9057-2b4017212c56",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-29T14:03:32.659Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "name": "Initial target RGB displays valid RGB format",
+        "passed": true,
+        "actual": "rgb(162, 148, 99)"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-29T14:03:32.660Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "name": "Three color swatch buttons are rendered",
+        "passed": true,
+        "actual": "3"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-29T14:03:32.660Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "name": "Current streak starts at zero",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-29T14:03:32.660Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "name": "Best streak starts displayed",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-29T14:03:32.660Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "name": "Play again button is hidden at round start",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-29T14:03:32.660Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "name": "Swatches are enabled at round start",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-29T14:03:32.660Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "name": "Clicking swatch triggers status message update",
+        "passed": true,
+        "actual": "Game Over! Your streak was 0."
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-29T14:03:32.660Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "bcb28462-c4c7-4564-9319-b0c27681d1ff",
+        "status": "passed",
+        "passed": 7,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-29T14:03:32.661Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v2/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial target RGB displays valid RGB format",
+        "actions": [],
+        "selector": "#targetRgb",
+        "expected": "^rgb\\(\\d{1,3}, \\d{1,3}, \\d{1,3}\\)$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Three color swatch buttons are rendered",
+        "actions": [],
+        "selector": ".swatch-btn",
+        "expected": "3",
+        "assertion": "count"
+      },
+      {
+        "name": "Current streak starts at zero",
+        "actions": [],
+        "selector": "#currentStreak",
+        "expected": "0",
+        "assertion": "text"
+      },
+      {
+        "name": "Best streak starts displayed",
+        "actions": [],
+        "selector": "#bestStreak",
+        "expected": "^\\d+$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Play again button is hidden at round start",
+        "actions": [],
+        "selector": "#actionBtn",
+        "expected": "false",
+        "assertion": "visible"
+      },
+      {
+        "name": "Swatches are enabled at round start",
+        "actions": [],
+        "selector": "#swatch0",
+        "expected": "false",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Clicking swatch triggers status message update",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#swatch0"
+          }
+        ],
+        "selector": "#statusMessage",
+        "expected": "",
+        "assertion": "changed"
+      }
+    ],
+    "limitations": [
+      "Cannot deterministically know which of the 3 random swatches matches target RGB without inspection."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13759,
+      "completion_tokens": 256,
+      "total_tokens": 14015
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    },
+    {
+      "round": 2,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Color Guess</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"game-container\">\n    <header class=\"game-header\">\n      <h1 class=\"game-title\">Pixel Color Guess</h1>\n      <p class=\"game-instructions\">Select the swatch that matches the target RGB code:</p>\n      <div class=\"target-rgb\" id=\"targetRgb\" aria-live=\"polite\">rgb(---, ---, ---)</div>\n    </header>\n\n    <section class=\"scoreboard\" aria-label=\"Scoreboard\">\n      <div class=\"score-card\">\n        <span class=\"score-label\">Current Streak</span>\n        <span class=\"score-value\" id=\"currentStreak\">0</span>\n      </div>\n      <div class=\"score-card\">\n        <span class=\"score-label\">Best Streak</span>\n        <span class=\"score-value\" id=\"bestStreak\">0</span>\n      </div>\n    </section>\n\n    <section class=\"swatches-container\" id=\"swatchesContainer\" aria-label=\"Color choices\">\n      <button type=\"button\" class=\"swatch-btn\" id=\"swatch0\" aria-label=\"Color option 1\"></button>\n      <button type=\"button\" class=\"swatch-btn\" id=\"swatch1\" aria-label=\"Color option 2\"></button>\n      <button type=\"button\" class=\"swatch-btn\" id=\"swatch2\" aria-label=\"Color option 3\"></button>\n    </section>\n\n    <section class=\"game-status\" aria-live=\"assertive\">\n      <p id=\"statusMessage\" class=\"status-text\"></p>\n      <button type=\"button\" id=\"actionBtn\" class=\"action-btn\" hidden>Play Again</button>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML file containing the semantic markup, accessible controls, and UI layout for the pixel color-guessing game."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Required rule for elements using hidden attribute */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #0f172a;\n  --card-bg: #1e293b;\n  --text-primary: #f8fafc;\n  --text-muted: #94a3b8;\n  --accent: #38bdf8;\n  --accent-hover: #0284c7;\n  --accent-active: #0369a1;\n  --danger: #f43f5e;\n  --success: #10b981;\n  --focus-ring: #f59e0b;\n  --border-color: #334155;\n  --font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: var(--font-family);\n  font-size: 16px;\n  line-height: 1.5;\n  background-color: var(--bg-color);\n  color: var(--text-primary);\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 1.25rem;\n}\n\n.game-container {\n  background-color: var(--card-bg);\n  border: 1px solid var(--border-color);\n  border-radius: 1rem;\n  padding: 2rem;\n  width: 100%;\n  max-width: 480px;\n  min-width: 320px;\n  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);\n  display: flex;\n  flex-direction: column;\n  gap: 1.5rem;\n  text-align: center;\n}\n\n.game-header {\n  display: flex;\n  flex-direction: column;\n  gap: 0.5rem;\n}\n\n.game-title {\n  font-size: 1.75rem;\n  font-weight: 700;\n  letter-spacing: -0.025em;\n}\n\n.game-instructions {\n  font-size: 1rem;\n  color: var(--text-muted);\n}\n\n.target-rgb {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;\n  font-size: 1.35rem;\n  font-weight: 700;\n  padding: 0.75rem 1rem;\n  background-color: rgba(15, 23, 42, 0.7);\n  border: 1px solid var(--border-color);\n  border-radius: 0.5rem;\n  color: var(--accent);\n  user-select: all;\n}\n\n.scoreboard {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 1rem;\n}\n\n.score-card {\n  background-color: rgba(15, 23, 42, 0.5);\n  border: 1px solid var(--border-color);\n  border-radius: 0.5rem;\n  padding: 0.75rem;\n  display: flex;\n  flex-direction: column;\n  gap: 0.25rem;\n}\n\n.score-label {\n  font-size: 0.875rem;\n  color: var(--text-muted);\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n}\n\n.score-value {\n  font-size: 1.5rem;\n  font-weight: 700;\n  color: var(--text-primary);\n}\n\n.swatches-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 0.875rem;\n  justify-content: center;\n}\n\n.swatch-btn {\n  aspect-ratio: 1 / 1;\n  width: 100%;\n  border: 3px solid transparent;\n  border-radius: 0.75rem;\n  cursor: pointer;\n  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);\n}\n\n.swatch-btn:hover:not(:disabled) {\n  transform: translateY(-4px) scale(1.02);\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);\n  border-color: rgba(255, 255, 255, 0.5);\n}\n\n.swatch-btn:active:not(:disabled) {\n  transform: translateY(0) scale(0.98);\n}\n\n.swatch-btn:focus-visible {\n  outline: 3px solid var(--focus-ring);\n  outline-offset: 3px;\n}\n\n.swatch-btn:disabled {\n  cursor: not-allowed;\n  opacity: 0.85;\n}\n\n.game-status {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 0.75rem;\n  min-height: 4.5rem;\n  justify-content: center;\n}\n\n.status-text {\n  font-size: 1.125rem;\n  font-weight: 600;\n}\n\n.status-text.success {\n  color: var(--success);\n}\n\n.status-text.failure {\n  color: var(--danger);\n}\n\n.action-btn {\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: 600;\n  padding: 0.625rem 1.5rem;\n  border: none;\n  border-radius: 0.5rem;\n  background-color: var(--accent);\n  color: #0f172a;\n  cursor: pointer;\n  transition: background-color 0.15s ease, transform 0.1s ease;\n}\n\n.action-btn:hover {\n  background-color: var(--accent-hover);\n  color: #ffffff;\n}\n\n.action-btn:active {\n  background-color: var(--accent-active);\n  transform: scale(0.98);\n}\n\n.action-btn:focus-visible {\n  outline: 3px solid var(--focus-ring);\n  outline-offset: 2px;\n}\n\n@media (max-width: 400px) {\n  .game-container {\n    padding: 1.25rem;\n  }\n\n  .game-title {\n    font-size: 1.5rem;\n  }\n\n  .target-rgb {\n    font-size: 1.15rem;\n  }\n\n  .swatches-container {\n    gap: 0.5rem;\n  }\n}",
+      "description": "Styles for the game layout, color swatches, focus/hover states, and responsive design down to 360px."
+    },
+    {
+      "path": "app.js",
+      "content": "function initGame() {\n  const STORAGE_KEY = 'pixel_color_guess_best_streak';\n\n  const targetRgbEl = document.getElementById('targetRgb');\n  const currentStreakEl = document.getElementById('currentStreak');\n  const bestStreakEl = document.getElementById('bestStreak');\n  const swatchesContainer = document.getElementById('swatchesContainer');\n  const swatchButtons = Array.from(document.querySelectorAll('.swatch-btn'));\n  const statusMessageEl = document.getElementById('statusMessage');\n  const actionBtn = document.getElementById('actionBtn');\n\n  let currentStreak = 0;\n  let bestStreak = 0;\n  let correctIndex = 0;\n  let currentColors = [];\n  let isRoundActive = true;\n\n  function loadBestStreak() {\n    try {\n      const saved = window.localStorage ? window.localStorage.getItem(STORAGE_KEY) : null;\n      if (saved !== null) {\n        bestStreak = parseInt(saved, 10) || 0;\n      }\n    } catch (e) {\n      // Fallback if localStorage access is denied in sandboxed environments\n    }\n    bestStreakEl.textContent = bestStreak;\n  }\n\n  function updateBestStreak() {\n    if (currentStreak > bestStreak) {\n      bestStreak = currentStreak;\n      bestStreakEl.textContent = bestStreak;\n      try {\n        if (window.localStorage) {\n          window.localStorage.setItem(STORAGE_KEY, bestStreak.toString());\n        }\n      } catch (e) {\n        // Fallback if localStorage access is denied in sandboxed environments\n      }\n    }\n  }\n\n  function getRandomInt(min, max) {\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n  }\n\n  function getRandomRgb() {\n    return {\n      r: getRandomInt(0, 255),\n      g: getRandomInt(0, 255),\n      b: getRandomInt(0, 255)\n    };\n  }\n\n  function rgbToString(c) {\n    return `rgb(${c.r}, ${c.g}, ${c.b})`;\n  }\n\n  function colorDistance(c1, c2) {\n    return Math.sqrt(\n      Math.pow(c1.r - c2.r, 2) +\n      Math.pow(c1.g - c2.g, 2) +\n      Math.pow(c1.b - c2.b, 2)\n    );\n  }\n\n  function generateDistinctColor(existingColors, minDistance = 45) {\n    let color;\n    let attempts = 0;\n    do {\n      color = getRandomRgb();\n      attempts++;\n    } while (\n      attempts < 100 &&\n      existingColors.some(existing => colorDistance(color, existing) < minDistance)\n    );\n    return color;\n  }\n\n  function startNewRound() {\n    isRoundActive = true;\n    statusMessageEl.textContent = '';\n    statusMessageEl.className = 'status-text';\n    actionBtn.hidden = true;\n\n    const targetColor = getRandomRgb();\n    const colors = [targetColor];\n\n    while (colors.length < 3) {\n      colors.push(generateDistinctColor(colors));\n    }\n\n    correctIndex = getRandomInt(0, 2);\n    const randomizedColors = [];\n    const distractors = [colors[1], colors[2]];\n\n    for (let i = 0; i < 3; i++) {\n      if (i === correctIndex) {\n        randomizedColors.push(targetColor);\n      } else {\n        randomizedColors.push(distractors.pop());\n      }\n    }\n\n    currentColors = randomizedColors;\n    targetRgbEl.textContent = rgbToString(targetColor);\n\n    swatchButtons.forEach((btn, index) => {\n      btn.style.backgroundColor = rgbToString(currentColors[index]);\n      btn.disabled = false;\n      btn.setAttribute('aria-label', `Color option ${index + 1}`);\n    });\n  }\n\n  function handleGuess(index) {\n    if (!isRoundActive) return;\n\n    if (index === correctIndex) {\n      currentStreak++;\n      currentStreakEl.textContent = currentStreak;\n      updateBestStreak();\n      statusMessageEl.textContent = 'Correct! Next color...';\n      statusMessageEl.className = 'status-text success';\n\n      isRoundActive = false;\n      setTimeout(() => {\n        startNewRound();\n      }, 800);\n    } else {\n      isRoundActive = false;\n      statusMessageEl.textContent = `Game Over! Your streak was ${currentStreak}.`;\n      statusMessageEl.className = 'status-text failure';\n      currentStreak = 0;\n      currentStreakEl.textContent = currentStreak;\n\n      swatchButtons.forEach(btn => {\n        btn.disabled = true;\n      });\n\n      actionBtn.hidden = false;\n      actionBtn.focus();\n    }\n  }\n\n  swatchesContainer.addEventListener('click', (event) => {\n    const btn = event.target.closest('.swatch-btn');\n    if (!btn) return;\n    const index = swatchButtons.indexOf(btn);\n    if (index !== -1) {\n      handleGuess(index);\n    }\n  });\n\n  actionBtn.addEventListener('click', () => {\n    startNewRound();\n  });\n\n  loadBestStreak();\n  startNewRound();\n}\n\nif (document.readyState === 'loading') {\n  document.addEventListener('DOMContentLoaded', initGame);\n} else {\n  initGame();\n}",
+      "description": "Vanilla JavaScript handling RGB color generation, swatch setup, user interaction, scoring, and best streak persistence with safe storage error handling."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Color-Guessing Game\n\nA responsive, offline browser game built using vanilla HTML, CSS, and JavaScript. Players test their color perception by matching a target RGB code to one of three color swatches.\n\n## Rules & Gameplay\n1. An RGB color code (e.g., `rgb(120, 240, 50)`) is displayed prominently at the top.\n2. Three color swatches appear below the code.\n3. Click or select the swatch that corresponds to the given RGB value.\n4. **Correct Guess**: Increments your current streak and smoothly transitions to the next color challenge.\n5. **Incorrect Guess**: Ends the round, resets your current streak to zero, and allows you to restart via the \"Play Again\" button.\n6. **Best Streak**: Your all-time best streak is saved in your browser's `localStorage` and persists across sessions.\n\n## Features & Constraints\n- **Pure Vanilla Stack**: Built without any libraries, external fonts, CDNs, or build tools.\n- **Keyboard Accessible**: Full support for Tab/Enter/Space navigation on swatches and action buttons with high-contrast `:focus-visible` rings.\n- **Responsive Design**: Designed to work gracefully on screens from 360px wide up to desktop displays.\n- **Cohesive Theme**: Clean dark-mode palette using system font stacks.\n- **Color Distance Verification**: Generates visually distinct options to ensure fair gameplay.\n\n## Setup\nNo installation or server required. Open `index.html` in any modern web browser.",
+      "description": "Project documentation explaining gameplay rules, architectural details, and running instructions."
+    }
+  ]
+}

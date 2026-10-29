@@ -1,0 +1,387 @@
+{
+  "caseId": "parking-meter",
+  "run": 3,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\new",
+  "managerTokens": 8885,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 77,
+  "reportedTokens": 36812,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T15:59:56.334Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T15:59:56.335Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:00:13.200Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Parking Meter Web App"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:00:13.201Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:00:56.134Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:00:56.134Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:00:56.547Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:00:56.548Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "a16ec55f-0e1f-487c-961b-94d74e1cfbb0"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:01:08.623Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "a16ec55f-0e1f-487c-961b-94d74e1cfbb0",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:01:08.624Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "testPlanId": "a16ec55f-0e1f-487c-961b-94d74e1cfbb0",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:01:11.525Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Initial zero state displays 0:00:00",
+        "passed": true,
+        "actual": "0:00:00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Initial state shows expired banner",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Initial state has expired class on meter screen",
+        "passed": true,
+        "actual": "meter-screen expired"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Clicking Add 15 min updates time to 0:15:00",
+        "passed": true,
+        "actual": "0:15:00"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Clicking Add 15 min hides expired banner",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Clicking Add 1 hour sets time to 1:00:00",
+        "passed": true,
+        "actual": "1:00:00"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Timer counts down correctly after advancing time",
+        "passed": true,
+        "actual": "0:14:58"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Reset button clears time to 0:00:00",
+        "passed": true,
+        "actual": "0:00:00"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "name": "Reset button restores expired status banner",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:01:11.526Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "00d61868-6c85-494f-b1f0-32294ca4d4da",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:01:11.530Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial zero state displays 0:00:00",
+        "actions": [],
+        "selector": "#time-display",
+        "expected": "0:00:00"
+      },
+      {
+        "name": "Initial state shows expired banner",
+        "actions": [],
+        "selector": "#status-message",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Initial state has expired class on meter screen",
+        "actions": [],
+        "selector": "#meter-screen",
+        "expected": "expired",
+        "assertion": "attribute",
+        "attribute": "class"
+      },
+      {
+        "name": "Clicking Add 15 min updates time to 0:15:00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-add-15"
+          }
+        ],
+        "selector": "#time-display",
+        "expected": "0:15:00"
+      },
+      {
+        "name": "Clicking Add 15 min hides expired banner",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-add-15"
+          }
+        ],
+        "selector": "#status-message",
+        "expected": "false",
+        "assertion": "visible"
+      },
+      {
+        "name": "Clicking Add 1 hour sets time to 1:00:00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-add-60"
+          }
+        ],
+        "selector": "#time-display",
+        "expected": "1:00:00"
+      },
+      {
+        "name": "Timer counts down correctly after advancing time",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-add-15"
+          },
+          {
+            "type": "advance",
+            "ms": 2000
+          }
+        ],
+        "selector": "#time-display",
+        "expected": "0:14:58"
+      },
+      {
+        "name": "Reset button clears time to 0:00:00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-add-60"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-reset"
+          }
+        ],
+        "selector": "#time-display",
+        "expected": "0:00:00"
+      },
+      {
+        "name": "Reset button restores expired status banner",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-add-60"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-reset"
+          }
+        ],
+        "selector": "#status-message",
+        "expected": "true",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "1 planned check(s) were dropped because they did not match the check format.",
+      "Cannot test audio effects or physical coin insertion mechanisms as they are not implemented in the UI.",
+      "Visual CRT scanlines and subtle CSS keyframe pulse animations cannot be verified directly without pixel assertions."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14005,
+      "completion_tokens": 519,
+      "total_tokens": 14524
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Parking Meter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"meter-container\">\n    <header class=\"meter-cap\">\n      <div class=\"meter-light-housing\">\n        <span id=\"status-indicator\" class=\"meter-light\" aria-hidden=\"true\"></span>\n      </div>\n    </header>\n\n    <section class=\"meter-head\" aria-label=\"Parking Meter Head\">\n      <div class=\"meter-visor\">\n        <div id=\"meter-screen\" class=\"meter-screen\" role=\"region\" aria-live=\"polite\" aria-atomic=\"true\">\n          <div class=\"screen-scanlines\" aria-hidden=\"true\"></div>\n          <p class=\"screen-subhead\">TIME REMAINING</p>\n          <div id=\"time-display\" class=\"time-digits\">0:00:00</div>\n          <div id=\"status-message\" class=\"status-banner\" hidden>EXPIRED</div>\n        </div>\n      </div>\n\n      <div class=\"coin-slot\" aria-hidden=\"true\">\n        <span class=\"slot-opening\"></span>\n        <span class=\"slot-label\">INSERT TIME</span>\n      </div>\n\n      <div class=\"controls\" role=\"group\" aria-label=\"Parking Meter Controls\">\n        <button type=\"button\" id=\"btn-add-15\" class=\"pixel-btn\" aria-label=\"Add 15 minutes\">\n          +15 MIN\n        </button>\n        <button type=\"button\" id=\"btn-add-60\" class=\"pixel-btn\" aria-label=\"Add 1 hour\">\n          +1 HOUR\n        </button>\n        <button type=\"button\" id=\"btn-reset\" class=\"pixel-btn reset-btn\" aria-label=\"Reset meter\">\n          RESET\n        </button>\n      </div>\n    </section>\n\n    <div class=\"meter-pole\" aria-hidden=\"true\"></div>\n    <div class=\"meter-base\" aria-hidden=\"true\"></div>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main single-page structure for the pixel parking meter application."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Enforce hidden attribute precedence */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #1a1c23;\n  --color-meter-body: #475569;\n  --color-meter-dark: #334155;\n  --color-meter-border: #0f172a;\n  --color-screen-bg: #102a27;\n  --color-screen-glow: #38bdf8;\n  --color-screen-text: #67e8f9;\n  --color-expired-bg: #7f1d1d;\n  --color-expired-glow: #ef4444;\n  --color-expired-text: #fecaca;\n  --color-btn-face: #e2e8f0;\n  --color-btn-border: #94a3b8;\n  --color-btn-shadow: #64748b;\n  --color-btn-active: #cbd5e1;\n  --color-reset-face: #f87171;\n  --color-reset-shadow: #b91c1c;\n  --font-stack: \"Courier New\", Courier, monospace, monospace;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--color-bg);\n  background-image: \n    radial-gradient(#2e3440 10%, transparent 11%),\n    radial-gradient(#2e3440 10%, transparent 11%);\n  background-size: 24px 24px;\n  background-position: 0 0, 12px 12px;\n  font-family: var(--font-stack);\n  font-size: 16px;\n  color: #f8fafc;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 24px 16px;\n}\n\n.meter-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  max-width: 380px;\n}\n\n/* Top Cap & Dome */\n.meter-cap {\n  width: 160px;\n  height: 24px;\n  background: var(--color-meter-dark);\n  border: 4px solid var(--color-meter-border);\n  border-bottom: none;\n  box-shadow: inset 0 4px 0 #64748b;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.meter-light-housing {\n  width: 24px;\n  height: 12px;\n  background: #000;\n  border: 2px solid var(--color-meter-border);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.meter-light {\n  width: 16px;\n  height: 6px;\n  background: #4ade80;\n  box-shadow: 0 0 6px #4ade80;\n  transition: background 0.2s, box-shadow 0.2s;\n}\n\n.meter-light.expired {\n  background: #ef4444;\n  box-shadow: 0 0 8px #ef4444;\n}\n\n/* Main Meter Housing */\n.meter-head {\n  width: 100%;\n  background: var(--color-meter-body);\n  border: 4px solid var(--color-meter-border);\n  box-shadow:\n    inset 4px 4px 0 #94a3b8,\n    inset -4px -4px 0 #1e293b,\n    8px 8px 0 rgba(0, 0, 0, 0.4);\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.meter-visor {\n  background: #090d16;\n  padding: 12px;\n  border: 4px solid var(--color-meter-border);\n  box-shadow: inset 2px 2px 0 #000;\n}\n\n.meter-screen {\n  position: relative;\n  background-color: var(--color-screen-bg);\n  border: 4px solid #042f2e;\n  padding: 18px 12px;\n  text-align: center;\n  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.8);\n  transition: background-color 0.2s ease, border-color 0.2s ease;\n}\n\n.meter-screen.expired {\n  background-color: var(--color-expired-bg);\n  border-color: #450a0a;\n}\n\n.screen-scanlines {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: repeating-linear-gradient(\n    0deg,\n    rgba(0, 0, 0, 0.15),\n    rgba(0, 0, 0, 0.15) 2px,\n    transparent 2px,\n    transparent 4px\n  );\n  pointer-events: none;\n}\n\n.screen-subhead {\n  font-size: 0.75rem;\n  letter-spacing: 2px;\n  font-weight: bold;\n  color: #a5f3fc;\n  margin-bottom: 6px;\n  text-shadow: 1px 1px 0 #000;\n}\n\n.meter-screen.expired .screen-subhead {\n  color: #fca5a5;\n}\n\n.time-digits {\n  font-size: 2.25rem;\n  font-weight: 900;\n  letter-spacing: 3px;\n  color: var(--color-screen-text);\n  text-shadow: 0 0 6px var(--color-screen-glow), 2px 2px 0 #000;\n}\n\n.meter-screen.expired .time-digits {\n  color: var(--color-expired-text);\n  text-shadow: 0 0 8px var(--color-expired-glow), 2px 2px 0 #000;\n}\n\n.status-banner {\n  margin-top: 10px;\n  font-size: 1.25rem;\n  font-weight: 900;\n  letter-spacing: 4px;\n  color: #ffffff;\n  background-color: #dc2626;\n  padding: 4px 8px;\n  border: 2px solid #fee2e2;\n  box-shadow: 0 0 10px #ef4444;\n  animation: pulse 1s infinite alternate;\n}\n\n@keyframes pulse {\n  0% { transform: scale(0.98); opacity: 0.85; }\n  100% { transform: scale(1.02); opacity: 1; }\n}\n\n/* Coin Slot Accent */\n.coin-slot {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 6px;\n}\n\n.slot-opening {\n  width: 70px;\n  height: 8px;\n  background-color: #0b0f19;\n  border: 2px solid #000;\n  box-shadow: 0 2px 0 #64748b;\n}\n\n.slot-label {\n  font-size: 0.75rem;\n  letter-spacing: 1.5px;\n  font-weight: 700;\n  color: #94a3b8;\n}\n\n/* Controls & Buttons */\n.controls {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n}\n\n.pixel-btn {\n  appearance: none;\n  border: 3px solid var(--color-meter-border);\n  background: var(--color-btn-face);\n  color: #0f172a;\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: 900;\n  padding: 12px 16px;\n  cursor: pointer;\n  box-shadow:\n    inset -3px -3px 0 var(--color-btn-shadow),\n    inset 3px 3px 0 #ffffff,\n    4px 4px 0 #000;\n  transform: translate(0, 0);\n  transition: transform 0.05s, box-shadow 0.05s;\n}\n\n.pixel-btn:hover {\n  background: #f1f5f9;\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px dashed #38bdf8;\n  outline-offset: 3px;\n}\n\n.pixel-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow:\n    inset -2px -2px 0 var(--color-btn-shadow),\n    inset 2px 2px 0 #ffffff,\n    2px 2px 0 #000;\n}\n\n.reset-btn {\n  background: var(--color-reset-face);\n  color: #ffffff;\n  box-shadow:\n    inset -3px -3px 0 var(--color-reset-shadow),\n    inset 3px 3px 0 #fca5a5,\n    4px 4px 0 #000;\n  margin-top: 4px;\n}\n\n.reset-btn:hover {\n  background: #ef4444;\n}\n\n.reset-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow:\n    inset -2px -2px 0 var(--color-reset-shadow),\n    inset 2px 2px 0 #fca5a5,\n    2px 2px 0 #000;\n}\n\n/* Pole and Base */\n.meter-pole {\n  width: 44px;\n  height: 48px;\n  background: repeating-linear-gradient(\n    90deg,\n    #334155,\n    #334155 10px,\n    #475569 10px,\n    #475569 20px\n  );\n  border: 4px solid var(--color-meter-border);\n  border-top: none;\n  border-bottom: none;\n}\n\n.meter-base {\n  width: 120px;\n  height: 16px;\n  background: #1e293b;\n  border: 4px solid var(--color-meter-border);\n  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);\n}\n",
+      "description": "Pixel art styling, responsive centered layout, and interactive states."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  let remainingSeconds = 0;\n  let timerInterval = null;\n\n  const timeDisplay = document.getElementById('time-display');\n  const meterScreen = document.getElementById('meter-screen');\n  const statusMessage = document.getElementById('status-message');\n  const statusIndicator = document.getElementById('status-indicator');\n  const btnAdd15 = document.getElementById('btn-add-15');\n  const btnAdd60 = document.getElementById('btn-add-60');\n  const btnReset = document.getElementById('btn-reset');\n\n  function formatTime(totalSeconds) {\n    const safeSeconds = Math.max(0, totalSeconds);\n    const hours = Math.floor(safeSeconds / 3600);\n    const minutes = Math.floor((safeSeconds % 3600) / 60);\n    const seconds = safeSeconds % 60;\n\n    const formattedMinutes = String(minutes).padStart(2, '0');\n    const formattedSeconds = String(seconds).padStart(2, '0');\n\n    return `${hours}:${formattedMinutes}:${formattedSeconds}`;\n  }\n\n  function updateUI() {\n    timeDisplay.textContent = formatTime(remainingSeconds);\n\n    if (remainingSeconds <= 0) {\n      meterScreen.classList.add('expired');\n      statusIndicator.classList.add('expired');\n      statusMessage.removeAttribute('hidden');\n    } else {\n      meterScreen.classList.remove('expired');\n      statusIndicator.classList.remove('expired');\n      statusMessage.setAttribute('hidden', '');\n    }\n  }\n\n  function tick() {\n    if (remainingSeconds > 0) {\n      remainingSeconds -= 1;\n      if (remainingSeconds === 0) {\n        clearInterval(timerInterval);\n        timerInterval = null;\n      }\n      updateUI();\n    }\n  }\n\n  function startTimer() {\n    if (!timerInterval && remainingSeconds > 0) {\n      timerInterval = setInterval(tick, 1000);\n    }\n  }\n\n  function addTime(secondsToAdd) {\n    remainingSeconds += secondsToAdd;\n    updateUI();\n    startTimer();\n  }\n\n  function resetMeter() {\n    if (timerInterval) {\n      clearInterval(timerInterval);\n      timerInterval = null;\n    }\n    remainingSeconds = 0;\n    updateUI();\n  }\n\n  btnAdd15.addEventListener('click', () => {\n    addTime(15 * 60);\n  });\n\n  btnAdd60.addEventListener('click', () => {\n    addTime(60 * 60);\n  });\n\n  btnReset.addEventListener('click', () => {\n    resetMeter();\n  });\n\n  // Initial render (starts at 0, expired screen)\n  updateUI();\n});\n",
+      "description": "Vanilla JavaScript handling the parking meter countdown, time additions, reset, and expired state."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Parking Meter\n\nA retro, pixel-art styled parking meter web application created with standard HTML5, CSS3, and vanilla JavaScript.\n\n## Features\n\n- **Time Increment Buttons**: Add 15 minutes (`+15 MIN`) or 1 hour (`+1 HOUR`) with responsive tactile button states.\n- **Live Countdown Timer**: Formatted as `h:mm:ss`, counting down every second.\n- **Expiration State**: When remaining time reaches zero, the screen turns red, displays **EXPIRED**, and changes the top indicator light.\n- **Reset Button**: Instantly clears time to zero and resets meter states.\n- **Keyboard Accessible**: All controls are standard `<button>` elements with keyboard focus outlines.\n- **Zero External Dependencies**: Operates completely offline with no network requests, web fonts, or bundlers.\n- **Responsive Design**: Adapts cleanly down to 360px viewport widths.\n\n## Getting Started\n\nOpen `index.html` directly in any modern desktop or mobile web browser.\n",
+      "description": "Project overview, feature breakdown, and execution details."
+    }
+  ]
+}

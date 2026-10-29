@@ -1,0 +1,402 @@
+{
+  "caseId": "pet-shelter",
+  "run": 2,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab5\\baseline",
+  "managerTokens": 8881,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 107,
+  "reportedTokens": 41754,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T16:30:56.875Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T16:30:56.875Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T16:31:15.969Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Pet Shelter"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T16:31:15.969Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T16:32:16.643Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T16:32:16.643Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T16:32:17.190Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T16:32:17.193Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "660055f9-cae5-4482-be15-e6a394daa9b6"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T16:32:39.259Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "660055f9-cae5-4482-be15-e6a394daa9b6",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T16:32:39.260Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "testPlanId": "660055f9-cae5-4482-be15-e6a394daa9b6",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Initial available count badge shows 6",
+        "passed": true,
+        "actual": "6"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Initial adopted count badge shows 0",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "All 6 initial pet cards rendered in available list",
+        "passed": true,
+        "actual": "6"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Filter by Dogs displays 2 dog cards",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Filter by Cats displays first pet Mochi",
+        "passed": true,
+        "actual": "Mochi"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Filter by Rabbits displays species and age meta",
+        "passed": true,
+        "actual": "Rabbit • 6 mos"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Adopt first pet Barnaby moves it to adopted list",
+        "passed": true,
+        "actual": "Barnaby"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Adopt first pet decrements available counter to 5",
+        "passed": true,
+        "actual": "5"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Adopt first pet increments adopted counter to 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "name": "Filter active button state changes aria-pressed attribute",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T16:32:42.516Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "57a3956a-1046-4061-9eeb-37e501442d23",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T16:32:42.522Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial available count badge shows 6",
+        "actions": [],
+        "selector": "#available-count",
+        "expected": "6"
+      },
+      {
+        "name": "Initial adopted count badge shows 0",
+        "actions": [],
+        "selector": "#adopted-count",
+        "expected": "0"
+      },
+      {
+        "name": "All 6 initial pet cards rendered in available list",
+        "actions": [],
+        "selector": "#available-list .pet-card",
+        "expected": "6",
+        "assertion": "count"
+      },
+      {
+        "name": "Filter by Dogs displays 2 dog cards",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "button[data-species=\"Dog\"]"
+          }
+        ],
+        "selector": "#available-list .pet-card",
+        "expected": "2",
+        "assertion": "count"
+      },
+      {
+        "name": "Filter by Cats displays first pet Mochi",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "button[data-species=\"Cat\"]"
+          }
+        ],
+        "selector": "#available-list .pet-card .pet-name",
+        "nth": 0,
+        "expected": "Mochi"
+      },
+      {
+        "name": "Filter by Rabbits displays species and age meta",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "button[data-species=\"Rabbit\"]"
+          }
+        ],
+        "selector": "#available-list .pet-card .pet-meta",
+        "nth": 0,
+        "expected": "Rabbit • 6 mos"
+      },
+      {
+        "name": "Adopt first pet Barnaby moves it to adopted list",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#available-list .adopt-btn",
+            "nth": 0
+          }
+        ],
+        "selector": "#adopted-list .pet-card .pet-name",
+        "nth": 0,
+        "expected": "Barnaby"
+      },
+      {
+        "name": "Adopt first pet decrements available counter to 5",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#available-list .adopt-btn",
+            "nth": 0
+          }
+        ],
+        "selector": "#available-count",
+        "expected": "5"
+      },
+      {
+        "name": "Adopt first pet increments adopted counter to 1",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#available-list .adopt-btn",
+            "nth": 0
+          }
+        ],
+        "selector": "#adopted-count",
+        "expected": "1"
+      },
+      {
+        "name": "Filter active button state changes aria-pressed attribute",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "button[data-species=\"Cat\"]"
+          }
+        ],
+        "selector": "button[data-species=\"Cat\"]",
+        "expected": "true",
+        "assertion": "attribute",
+        "attribute": "aria-pressed"
+      }
+    ],
+    "limitations": [
+      "Canvas 2D pixel art graphics cannot be visually verified via DOM assertions",
+      "Unadopt or re-shelter actions are not implemented in the application",
+      "Persistent storage across page reloads is not supported"
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 16319,
+      "completion_tokens": 884,
+      "total_tokens": 17203
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Pet Shelter</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n  <main class=\"shelter-card\">\n    <header class=\"shelter-header\">\n      <h1 class=\"title\">🐾 Pixel Pet Shelter</h1>\n      <p class=\"subtitle\">Find your faithful retro companion today</p>\n\n      <section class=\"counter-bar\" aria-label=\"Pet statistics\">\n        <div class=\"counter-badge\">\n          <span class=\"counter-label\">Available:</span>\n          <strong id=\"available-count\" class=\"counter-value\">6</strong>\n        </div>\n        <div class=\"counter-badge\">\n          <span class=\"counter-label\">Adopted:</span>\n          <strong id=\"adopted-count\" class=\"counter-value\">0</strong>\n        </div>\n      </section>\n    </header>\n\n    <nav class=\"filter-container\" aria-label=\"Species filter\">\n      <span class=\"filter-title\">Filter by species:</span>\n      <div class=\"filter-buttons\" id=\"filter-group\" role=\"group\">\n        <button type=\"button\" class=\"filter-btn active\" data-species=\"all\" aria-pressed=\"true\">All</button>\n        <button type=\"button\" class=\"filter-btn\" data-species=\"Dog\" aria-pressed=\"false\">Dogs</button>\n        <button type=\"button\" class=\"filter-btn\" data-species=\"Cat\" aria-pressed=\"false\">Cats</button>\n        <button type=\"button\" class=\"filter-btn\" data-species=\"Rabbit\" aria-pressed=\"false\">Rabbits</button>\n      </div>\n    </nav>\n\n    <section class=\"pet-section\" aria-labelledby=\"available-heading\">\n      <h2 id=\"available-heading\" class=\"section-title\">Available Pets</h2>\n      <div id=\"available-list\" class=\"pet-grid\" role=\"region\" aria-live=\"polite\">\n        <!-- Dynamic pet cards -->\n      </div>\n      <p id=\"no-pets-msg\" class=\"empty-msg\" hidden>No pets found for this species filter.</p>\n    </section>\n\n    <section class=\"pet-section adopted-section\" aria-labelledby=\"adopted-heading\">\n      <h2 id=\"adopted-heading\" class=\"section-title\">Adopted Pets (<span id=\"adopted-section-count\">0</span>)</h2>\n      <div id=\"adopted-list\" class=\"pet-grid adopted-grid\" role=\"region\" aria-live=\"polite\">\n        <!-- Adopted pet cards -->\n      </div>\n      <p id=\"no-adopted-msg\" class=\"empty-msg\">No pets adopted yet. Click \"Adopt\" on any companion above!</p>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main HTML structure containing header counters, species filter buttons, available pets section, and adopted pets section."
+    },
+    {
+      "path": "styles.css",
+      "content": "/* Strict display rule override safeguard */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #2b213a;\n  --card-bg: #fffbf0;\n  --card-border: #4a3e63;\n  --primary: #593b76;\n  --primary-hover: #724c96;\n  --accent: #2e8b57;\n  --accent-hover: #246d44;\n  --accent-active: #1a4e31;\n  --text-dark: #231b2d;\n  --text-muted: #5e546e;\n  --badge-bg: #ece5d8;\n  --focus-ring: #ff9f1c;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--bg-color);\n  background-image:\n    radial-gradient(#3c2f52 15%, transparent 16%),\n    radial-gradient(#3c2f52 15%, transparent 16%);\n  background-size: 24px 24px;\n  background-position: 0 0, 12px 12px;\n  color: var(--text-dark);\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.5;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  padding: 24px 16px;\n}\n\n.shelter-card {\n  background-color: var(--card-bg);\n  border: 4px solid var(--card-border);\n  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.45);\n  border-radius: 12px;\n  width: 100%;\n  max-width: 860px;\n  padding: 24px;\n}\n\n.shelter-header {\n  text-align: center;\n  margin-bottom: 24px;\n  border-bottom: 2px dashed var(--card-border);\n  padding-bottom: 20px;\n}\n\n.title {\n  font-size: 1.85rem;\n  font-weight: 800;\n  color: var(--primary);\n  margin-bottom: 6px;\n  letter-spacing: -0.5px;\n}\n\n.subtitle {\n  color: var(--text-muted);\n  font-size: 1rem;\n  margin-bottom: 16px;\n}\n\n.counter-bar {\n  display: flex;\n  justify-content: center;\n  gap: 16px;\n  flex-wrap: wrap;\n}\n\n.counter-badge {\n  background: var(--badge-bg);\n  border: 2px solid var(--card-border);\n  border-radius: 8px;\n  padding: 8px 16px;\n  font-size: 1rem;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.counter-value {\n  font-size: 1.25rem;\n  color: var(--primary);\n}\n\n.filter-container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 12px;\n  margin-bottom: 28px;\n}\n\n.filter-title {\n  font-weight: 600;\n  color: var(--text-dark);\n}\n\n.filter-buttons {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n\nbutton {\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: 600;\n  cursor: pointer;\n  border: 2px solid var(--card-border);\n  border-radius: 6px;\n  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;\n}\n\nbutton:focus-visible {\n  outline: 3px solid var(--focus-ring);\n  outline-offset: 2px;\n}\n\n.filter-btn {\n  background: #ffffff;\n  color: var(--primary);\n  padding: 6px 14px;\n  box-shadow: 2px 2px 0px var(--card-border);\n}\n\n.filter-btn:hover {\n  background: #f0e8f8;\n}\n\n.filter-btn.active {\n  background: var(--primary);\n  color: #ffffff;\n  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4);\n  transform: translateY(1px);\n}\n\n.filter-btn:active {\n  transform: translateY(2px);\n  box-shadow: none;\n}\n\n.pet-section {\n  margin-bottom: 32px;\n}\n\n.section-title {\n  font-size: 1.35rem;\n  color: var(--primary);\n  margin-bottom: 16px;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.pet-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));\n  gap: 20px;\n}\n\n.pet-card {\n  background: #ffffff;\n  border: 2px solid var(--card-border);\n  border-radius: 8px;\n  padding: 16px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  box-shadow: 3px 3px 0px rgba(74, 62, 99, 0.25);\n}\n\n.pet-canvas {\n  image-rendering: pixelated;\n  background: #fdf6e2;\n  border: 2px solid var(--card-border);\n  border-radius: 6px;\n  margin-bottom: 12px;\n}\n\n.pet-name {\n  font-size: 1.2rem;\n  color: var(--text-dark);\n  margin-bottom: 4px;\n}\n\n.pet-meta {\n  color: var(--text-muted);\n  font-size: 0.95rem;\n  margin-bottom: 14px;\n}\n\n.adopt-btn {\n  width: 100%;\n  padding: 8px 16px;\n  background-color: var(--accent);\n  color: #ffffff;\n  box-shadow: 2px 2px 0px var(--card-border);\n  margin-top: auto;\n}\n\n.adopt-btn:hover {\n  background-color: var(--accent-hover);\n}\n\n.adopt-btn:active {\n  background-color: var(--accent-active);\n  transform: translateY(2px);\n  box-shadow: none;\n}\n\n.adopted-section {\n  border-top: 2px dashed var(--card-border);\n  padding-top: 24px;\n  margin-bottom: 0;\n}\n\n.adopted-card {\n  opacity: 0.9;\n  background: #f7f9f7;\n  border-color: #8fa38f;\n}\n\n.adopted-badge {\n  display: inline-block;\n  background: #e1f2e1;\n  color: var(--accent);\n  font-size: 0.85rem;\n  font-weight: 700;\n  padding: 4px 10px;\n  border-radius: 4px;\n  border: 1px solid var(--accent);\n  margin-top: auto;\n}\n\n.empty-msg {\n  text-align: center;\n  color: var(--text-muted);\n  font-style: italic;\n  padding: 20px;\n  background: rgba(255, 255, 255, 0.5);\n  border-radius: 6px;\n}\n\n@media (max-width: 480px) {\n  .shelter-card {\n    padding: 16px;\n  }\n  .pet-grid {\n    grid-template-columns: 1fr;\n  }\n  .title {\n    font-size: 1.5rem;\n  }\n}\n",
+      "description": "Retro pixel-themed responsive styling adhering to a cohesive palette, generous spacing, and explicit keyboard focus states."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener(\"DOMContentLoaded\", () => {\n  // 6 Built-in pixel pets with distinct species and pixel art maps\n  const PETS = [\n    {\n      id: \"pet-1\",\n      name: \"Barnaby\",\n      species: \"Dog\",\n      age: \"2 yrs\",\n      adopted: false,\n      palette: { \"_\": null, \"O\": \"#3e2723\", \"B\": \"#c89666\", \"D\": \"#8d5b4c\", \"W\": \"#ffffff\", \"N\": \"#1b1b1b\", \"R\": \"#e57373\" },\n      grid: [\n        \"____OO____OO____\",\n        \"___ODDO__ODDO___\",\n        \"___ODDDOODDDO___\",\n        \"__OBBBBDDBBBBO__\",\n        \"__OBBWNBBNWBBO__\",\n        \"__OBBNNBBNNBBO__\",\n        \"__OBBBBNNBBBBO__\",\n        \"___OBBBRRBBBO___\",\n        \"____OBBBBBBO____\",\n        \"_____OBBBBO_____\",\n        \"____OBBODDBO____\",\n        \"____OBBODDBO____\",\n        \"____OBBODDBO____\",\n        \"____OBBOODBO____\",\n        \"____OOO__OOO____\",\n        \"________________\"\n      ]\n    },\n    {\n      id: \"pet-2\",\n      name: \"Mochi\",\n      species: \"Cat\",\n      age: \"1 yr\",\n      adopted: false,\n      palette: { \"_\": null, \"O\": \"#263238\", \"C\": \"#ffb74d\", \"D\": \"#f57c00\", \"W\": \"#ffffff\", \"E\": \"#4caf50\", \"N\": \"#f06292\" },\n      grid: [\n        \"__OO________OO__\",\n        \"_OCCD______DCC__\",\n        \"_OCCCD____DCCC__\",\n        \"_OCCCCDDDDCCCC__\",\n        \"_OCCEWOCCCOEWO__\",\n        \"_OCCEEOCCCOEEO__\",\n        \"_OCCCCCCNNCCCC__\",\n        \"_OOCCCCDDCCCC___\",\n        \"___OCCCCCCCC____\",\n        \"___OCCCDCCCCD___\",\n        \"___OCCD_OCCC____\",\n        \"___OCCD_OCCC____\",\n        \"___OCCD_OCCC____\",\n        \"___OCCD_OCCC____\",\n        \"___OOOO_OOOO____\",\n        \"________________\"\n      ]\n    },\n    {\n      id: \"pet-3\",\n      name: \"Thumper\",\n      species: \"Rabbit\",\n      age: \"6 mos\",\n      adopted: false,\n      palette: { \"_\": null, \"O\": \"#37474f\", \"W\": \"#eceff1\", \"P\": \"#f8bbd0\", \"E\": \"#212121\", \"N\": \"#f48fb1\" },\n      grid: [\n        \"___OPP____OPP___\",\n        \"___OWP____OWP___\",\n        \"___OWP____OWP___\",\n        \"___OWP____OWP___\",\n        \"___OWP____OWP___\",\n        \"__OWWWPOOPWWWO__\",\n        \"__OWEWWWWWEWWO__\",\n        \"__OWEEWWWWEEWO__\",\n        \"__OWWWNNNWWWWO__\",\n        \"___OWWWWWWWWO___\",\n        \"___OWWWPWWWWO___\",\n        \"__OWWWWPWWWWWO__\",\n        \"__OWWWWWWWWWWO__\",\n        \"__OWPOWWWWOPWO__\",\n        \"__OOOOOOOOOOOO__\",\n        \"________________\"\n      ]\n    },\n    {\n      id: \"pet-4\",\n      name: \"Daisy\",\n      species: \"Dog\",\n      age: \"3 yrs\",\n      adopted: false,\n      palette: { \"_\": null, \"O\": \"#212121\", \"C\": \"#fff8e1\", \"E\": \"#1a237e\", \"N\": \"#212121\", \"S\": \"#fbc02d\", \"R\": \"#ef5350\" },\n      grid: [\n        \"___OO______OO___\",\n        \"__OSSO____OSSO__\",\n        \"__OSCCOOOCSSO___\",\n        \"_OSCCCCSSCCCSSO_\",\n        \"_OCCEWCCCCEWCO__\",\n        \"_OCCEECCCCEECO__\",\n        \"_OCCCCNNNNCCCO__\",\n        \"__OCCCCRRCCCCO__\",\n        \"___OCCCCCCCCCO__\",\n        \"___OCCCSSCCCCO__\",\n        \"___OCCCO_OCCO___\",\n        \"___OCCCO_OCCO___\",\n        \"___OCCCO_OCCO___\",\n        \"___OCCCO_OCCO___\",\n        \"___OOOO___OOOO__\",\n        \"________________\"\n      ]\n    },\n    {\n      id: \"pet-5\",\n      name: \"Luna\",\n      species: \"Cat\",\n      age: \"4 yrs\",\n      adopted: false,\n      palette: { \"_\": null, \"O\": \"#1a1a24\", \"F\": \"#393e46\", \"E\": \"#ffd54f\", \"P\": \"#ff80ab\", \"W\": \"#eeeeee\" },\n      grid: [\n        \"__OO________OO__\",\n        \"_OFFO______OFFO_\",\n        \"_OFFFO____OFFFO_\",\n        \"_OFFFFFFFFOFFFO_\",\n        \"_OFFEEFFFFEEFFO_\",\n        \"_OFFEWOOFFEWOFO_\",\n        \"_OFFFFFFPPFFFFO_\",\n        \"_OFFFFFFFFOFFFO_\",\n        \"__OFFFWWFFFFFO__\",\n        \"__OFFWWWWFFFO___\",\n        \"___OFFFFFFFO____\",\n        \"___OFFO__OFFO___\",\n        \"___OFFO__OFFO___\",\n        \"___OFFO__OFFO___\",\n        \"___OOOO__OOOO___\",\n        \"________________\"\n      ]\n    },\n    {\n      id: \"pet-6\",\n      name: \"Pippin\",\n      species: \"Rabbit\",\n      age: \"1 yr\",\n      adopted: false,\n      palette: { \"_\": null, \"O\": \"#3e2723\", \"B\": \"#a1887f\", \"D\": \"#6d4c41\", \"P\": \"#ffcdd2\", \"E\": \"#1b1b1b\" },\n      grid: [\n        \"___OPP____OPP___\",\n        \"___ODP____ODP___\",\n        \"___OBP____OBP___\",\n        \"___OBP____OBP___\",\n        \"___OBP____OBP___\",\n        \"__OBBBPOOPBBBO__\",\n        \"__OBEBBBBBEBBO__\",\n        \"__OBEEBBBEEBBO__\",\n        \"__OBBBPDPBBBBO__\",\n        \"___OBBBBBBBBO___\",\n        \"___OBBBDPBBBO___\",\n        \"__OBBBBDPBBBBO__\",\n        \"__OBBBBBBBBBBO__\",\n        \"__OBPOBBBBOPBO__\",\n        \"__OOOOOOOOOOOO__\",\n        \"________________\"\n      ]\n    }\n  ];\n\n  let activeFilter = \"all\";\n\n  // Elements\n  const availableList = document.getElementById(\"available-list\");\n  const adoptedList = document.getElementById(\"adopted-list\");\n  const availableCountEl = document.getElementById(\"available-count\");\n  const adoptedCountEl = document.getElementById(\"adopted-count\");\n  const adoptedSectionCountEl = document.getElementById(\"adopted-section-count\");\n  const noPetsMsg = document.getElementById(\"no-pets-msg\");\n  const noAdoptedMsg = document.getElementById(\"no-adopted-msg\");\n  const filterButtons = document.querySelectorAll(\".filter-btn\");\n\n  // Render pixel art onto canvas\n  function renderPixelCanvas(canvas, pet) {\n    const ctx = canvas.getContext(\"2d\");\n    const pixelSize = 5;\n    canvas.width = 16 * pixelSize;\n    canvas.height = 16 * pixelSize;\n\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n    pet.grid.forEach((row, y) => {\n      for (let x = 0; x < row.length; x++) {\n        const char = row[x];\n        const color = pet.palette[char];\n        if (color) {\n          ctx.fillStyle = color;\n          ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);\n        }\n      }\n    });\n  }\n\n  // Update stats counters\n  function updateCounts() {\n    const availableCount = PETS.filter(p => !p.adopted).length;\n    const adoptedCount = PETS.filter(p => p.adopted).length;\n\n    availableCountEl.textContent = availableCount;\n    adoptedCountEl.textContent = adoptedCount;\n    adoptedSectionCountEl.textContent = adoptedCount;\n  }\n\n  // Render all lists\n  function render() {\n    availableList.innerHTML = \"\";\n    adoptedList.innerHTML = \"\";\n\n    const availablePets = PETS.filter(p => !p.adopted);\n    const adoptedPets = PETS.filter(p => p.adopted);\n\n    const filteredAvailable = availablePets.filter(p => {\n      return activeFilter === \"all\" || p.species.toLowerCase() === activeFilter.toLowerCase();\n    });\n\n    // Render Available Pets\n    if (filteredAvailable.length === 0) {\n      noPetsMsg.hidden = false;\n    } else {\n      noPetsMsg.hidden = true;\n      filteredAvailable.forEach(pet => {\n        const card = document.createElement(\"article\");\n        card.className = \"pet-card\";\n        card.setAttribute(\"aria-label\", `${pet.name}, ${pet.species}, ${pet.age}`);\n\n        const canvas = document.createElement(\"canvas\");\n        canvas.className = \"pet-canvas\";\n        canvas.setAttribute(\"aria-hidden\", \"true\");\n        renderPixelCanvas(canvas, pet);\n\n        const name = document.createElement(\"h3\");\n        name.className = \"pet-name\";\n        name.textContent = pet.name;\n\n        const meta = document.createElement(\"p\");\n        meta.className = \"pet-meta\";\n        meta.textContent = `${pet.species} • ${pet.age}`;\n\n        const adoptBtn = document.createElement(\"button\");\n        adoptBtn.type = \"button\";\n        adoptBtn.className = \"adopt-btn\";\n        adoptBtn.textContent = `Adopt ${pet.name}`;\n        adoptBtn.setAttribute(\"aria-label\", `Adopt ${pet.name} the ${pet.species}`);\n\n        adoptBtn.addEventListener(\"click\", () => {\n          adoptPet(pet.id);\n        });\n\n        card.appendChild(canvas);\n        card.appendChild(name);\n        card.appendChild(meta);\n        card.appendChild(adoptBtn);\n        availableList.appendChild(card);\n      });\n    }\n\n    // Render Adopted Pets\n    if (adoptedPets.length === 0) {\n      noAdoptedMsg.hidden = false;\n    } else {\n      noAdoptedMsg.hidden = true;\n      adoptedPets.forEach(pet => {\n        const card = document.createElement(\"article\");\n        card.className = \"pet-card adopted-card\";\n        card.setAttribute(\"aria-label\", `${pet.name}, Adopted`);\n\n        const canvas = document.createElement(\"canvas\");\n        canvas.className = \"pet-canvas\";\n        canvas.setAttribute(\"aria-hidden\", \"true\");\n        renderPixelCanvas(canvas, pet);\n\n        const name = document.createElement(\"h3\");\n        name.className = \"pet-name\";\n        name.textContent = pet.name;\n\n        const meta = document.createElement(\"p\");\n        meta.className = \"pet-meta\";\n        meta.textContent = `${pet.species} • ${pet.age}`;\n\n        const statusBadge = document.createElement(\"span\");\n        statusBadge.className = \"adopted-badge\";\n        statusBadge.textContent = \"✓ Adopted\";\n\n        card.appendChild(canvas);\n        card.appendChild(name);\n        card.appendChild(meta);\n        card.appendChild(statusBadge);\n        adoptedList.appendChild(card);\n      });\n    }\n\n    updateCounts();\n  }\n\n  function adoptPet(petId) {\n    const targetPet = PETS.find(p => p.id === petId);\n    if (targetPet) {\n      targetPet.adopted = true;\n      render();\n    }\n  }\n\n  // Filter button handlers using addEventListener\n  filterButtons.forEach(btn => {\n    btn.addEventListener(\"click\", () => {\n      filterButtons.forEach(b => {\n        b.classList.remove(\"active\");\n        b.setAttribute(\"aria-pressed\", \"false\");\n      });\n\n      btn.classList.add(\"active\");\n      btn.setAttribute(\"aria-pressed\", \"true\");\n      activeFilter = btn.dataset.species;\n      render();\n    });\n  });\n\n  // Initial render\n  render();\n});\n",
+      "description": "Application logic including 6 pet profiles, pixel art canvas graphics, species filtering, adoption handling, and counter updates."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Pet Shelter\n\nA retro offline web application for browsing and adopting pixel pets.\n\n## Features\n\n- **6 Built-in Pixel Pets**: Barnaby, Mochi, Thumper, Daisy, Luna, and Pippin with distinct species (Dogs, Cats, Rabbits), names, and ages.\n- **Canvas-Drawn Pixel Art**: Each companion has custom 16x16 retro pixel graphics rendered directly on HTML5 `<canvas>` elements.\n- **Species Filtering**: Filter available pets by species (All, Dogs, Cats, Rabbits) with active state indication.\n- **Live Adoption Management**: Click \"Adopt\" on any pet to transfer them to the \"Adopted Pets\" list.\n- **Dynamic Counters**: Live count badges show both available and adopted counts at all times.\n- **Full Keyboard & Screen Reader Accessibility**: Logical tabindex flow, labeled controls, ARIA live regions, and high-visibility focus rings.\n- **Zero External Dependencies**: Standard HTML5, CSS3, and modern vanilla JavaScript running 100% offline.\n\n## Running the Project\n\nSimply open `index.html` in any modern web browser. No server, package managers, or internet connection required.\n",
+      "description": "Project documentation covering features, usage, accessibility, and offline architecture."
+    }
+  ]
+}

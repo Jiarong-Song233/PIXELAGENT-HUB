@@ -1,0 +1,403 @@
+{
+  "caseId": "plant-water",
+  "run": 3,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\new",
+  "managerTokens": 8910,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 116,
+  "reportedTokens": 52189,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T13:22:07.326Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T13:22:07.327Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T13:22:26.275Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Plant Care App"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T13:22:26.275Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T13:23:17.213Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T13:23:17.213Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T13:23:17.725Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T13:23:17.726Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "3da9c13f-eaa4-4ba7-9b45-dc99863f691e"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T13:23:54.012Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "3da9c13f-eaa4-4ba7-9b45-dc99863f691e",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T13:23:54.013Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "testPlanId": "3da9c13f-eaa4-4ba7-9b45-dc99863f691e",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Initial water count is zero",
+        "passed": true,
+        "actual": "0"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Initial moisture percent is 100%",
+        "passed": true,
+        "actual": "100%"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Initial healthy status visible",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Initial thirsty text hidden",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Moisture drains below wilt threshold over time",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Wilted status badge shows Thirsty! text",
+        "passed": true,
+        "actual": "Thirsty!"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Status badge gains wilted class below 30% moisture",
+        "passed": true,
+        "actual": "status-badge wilted"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Water button refills moisture back to 100%",
+        "passed": true,
+        "actual": "100%"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Water button restores healthy text",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "name": "Water button increments watered counter",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-29T13:23:59.169Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "8612c0cc-ccc0-41ed-9969-1585b48a23f2",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-29T13:23:59.171Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial water count is zero",
+        "actions": [],
+        "selector": "#water-count",
+        "expected": "0"
+      },
+      {
+        "name": "Initial moisture percent is 100%",
+        "actions": [],
+        "selector": "#moisture-percent",
+        "expected": "100%"
+      },
+      {
+        "name": "Initial healthy status visible",
+        "actions": [],
+        "selector": "#healthy-text",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Initial thirsty text hidden",
+        "actions": [],
+        "selector": "#thirsty-text",
+        "expected": "false",
+        "assertion": "visible"
+      },
+      {
+        "name": "Moisture drains below wilt threshold over time",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 90000
+          }
+        ],
+        "selector": "#thirsty-text",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Wilted status badge shows Thirsty! text",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 90000
+          }
+        ],
+        "selector": "#status-badge",
+        "expected": "Thirsty!"
+      },
+      {
+        "name": "Status badge gains wilted class below 30% moisture",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 90000
+          }
+        ],
+        "selector": "#status-badge",
+        "expected": "wilted",
+        "assertion": "attribute",
+        "attribute": "class"
+      },
+      {
+        "name": "Water button refills moisture back to 100%",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 90000
+          },
+          {
+            "type": "click",
+            "selector": "#water-btn"
+          }
+        ],
+        "selector": "#moisture-percent",
+        "expected": "100%"
+      },
+      {
+        "name": "Water button restores healthy text",
+        "actions": [
+          {
+            "type": "advance",
+            "ms": 90000
+          },
+          {
+            "type": "click",
+            "selector": "#water-btn"
+          }
+        ],
+        "selector": "#healthy-text",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Water button increments watered counter",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#water-btn"
+          },
+          {
+            "type": "click",
+            "selector": "#water-btn"
+          }
+        ],
+        "selector": "#water-count",
+        "expected": "2"
+      }
+    ],
+    "limitations": [
+      "Pixel plant canvas graphics rendering cannot be inspected directly without pixel/screenshot assertions."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14525,
+      "completion_tokens": 406,
+      "total_tokens": 14931
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Plant Care</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <section class=\"card\" aria-labelledby=\"app-title\">\n      <header class=\"card-header\">\n        <h1 id=\"app-title\">Pixel Plant</h1>\n        <p class=\"subtitle\">Water every 2 minutes</p>\n      </header>\n\n      <div class=\"canvas-wrapper\">\n        <canvas id=\"plant-canvas\" width=\"128\" height=\"128\" aria-label=\"Pixel art plant\"></canvas>\n        <div id=\"status-badge\" class=\"status-badge\" role=\"status\" aria-live=\"polite\">\n          <span id=\"thirsty-text\" hidden>Thirsty!</span>\n          <span id=\"healthy-text\">Happy &amp; Hydrated</span>\n        </div>\n      </div>\n\n      <section class=\"meter-section\" aria-label=\"Moisture Level\">\n        <div class=\"meter-header\">\n          <span id=\"moisture-label\">Moisture</span>\n          <span id=\"moisture-percent\" aria-live=\"polite\">100%</span>\n        </div>\n        <div class=\"progress-track\" role=\"progressbar\" aria-labelledby=\"moisture-label\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"moisture-bar-track\">\n          <div id=\"moisture-fill\" class=\"progress-fill\" style=\"width: 100%;\"></div>\n        </div>\n      </section>\n\n      <div class=\"controls\">\n        <button type=\"button\" id=\"water-btn\" class=\"btn-water\" aria-label=\"Water the plant\">\n          💧 Water Plant\n        </button>\n      </div>\n\n      <footer class=\"stats-footer\">\n        <p class=\"water-counter-text\">Watered: <strong id=\"water-count\">0</strong> times</p>\n      </footer>\n    </section>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main HTML file providing the accessible structure, canvas display, status notifications, moisture meter, and watering action button."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Enforce strict hidden rule per constraints */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #1f271b;\n  --color-card: #2d3a27;\n  --color-card-border: #415338;\n  --color-text: #e8f5e9;\n  --color-text-muted: #a5d6a7;\n  --color-accent: #4caf50;\n  --color-accent-hover: #66bb6a;\n  --color-accent-active: #388e3c;\n  --color-warning: #e57373;\n  --color-track: #151d13;\n  --focus-ring: #81c784;\n  --font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: var(--color-bg);\n  font-family: var(--font-family);\n  font-size: 16px;\n  color: var(--color-text);\n  padding: 1.5rem 1rem;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 400px;\n  min-width: 320px;\n  display: flex;\n  justify-content: center;\n}\n\n.card {\n  width: 100%;\n  background-color: var(--color-card);\n  border: 2px solid var(--color-card-border);\n  border-radius: 12px;\n  padding: 1.75rem;\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);\n  display: flex;\n  flex-direction: column;\n  gap: 1.5rem;\n}\n\n.card-header {\n  text-align: center;\n}\n\n.card-header h1 {\n  font-size: 1.75rem;\n  font-weight: 700;\n  color: var(--color-text);\n  letter-spacing: -0.02em;\n}\n\n.subtitle {\n  font-size: 0.95rem;\n  color: var(--color-text-muted);\n  margin-top: 0.25rem;\n}\n\n.canvas-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: var(--color-track);\n  border: 2px solid var(--color-card-border);\n  border-radius: 8px;\n  padding: 1rem;\n  position: relative;\n}\n\n#plant-canvas {\n  image-rendering: pixelated;\n  image-rendering: crisp-edges;\n  width: 128px;\n  height: 128px;\n}\n\n.status-badge {\n  margin-top: 0.75rem;\n  font-size: 0.95rem;\n  font-weight: 600;\n  padding: 0.25rem 0.75rem;\n  border-radius: 999px;\n  background-color: var(--color-card-border);\n  color: var(--color-text-muted);\n}\n\n.status-badge.wilted {\n  background-color: rgba(229, 115, 115, 0.2);\n  color: var(--color-warning);\n  border: 1px solid var(--color-warning);\n}\n\n.meter-section {\n  display: flex;\n  flex-direction: column;\n  gap: 0.5rem;\n}\n\n.meter-header {\n  display: flex;\n  justify-content: space-between;\n  font-size: 0.95rem;\n  color: var(--color-text-muted);\n  font-weight: 500;\n}\n\n.progress-track {\n  height: 14px;\n  background-color: var(--color-track);\n  border: 1px solid var(--color-card-border);\n  border-radius: 7px;\n  overflow: hidden;\n  position: relative;\n}\n\n.progress-fill {\n  height: 100%;\n  background-color: var(--color-accent);\n  transition: width 0.15s linear, background-color 0.3s ease;\n}\n\n.progress-fill.wilted {\n  background-color: var(--color-warning);\n}\n\n.controls {\n  display: flex;\n  justify-content: center;\n}\n\n.btn-water {\n  width: 100%;\n  font-family: inherit;\n  font-size: 1.1rem;\n  font-weight: 600;\n  padding: 0.85rem 1.25rem;\n  background-color: var(--color-accent);\n  color: #0e1e0f;\n  border: none;\n  border-radius: 8px;\n  cursor: pointer;\n  transition: background-color 0.15s ease, transform 0.08s ease;\n  outline: none;\n}\n\n.btn-water:hover {\n  background-color: var(--color-accent-hover);\n}\n\n.btn-water:active {\n  background-color: var(--color-accent-active);\n  transform: scale(0.98);\n}\n\n.btn-water:focus-visible {\n  outline: 3px solid var(--focus-ring);\n  outline-offset: 3px;\n}\n\n.stats-footer {\n  text-align: center;\n  border-top: 1px solid var(--color-card-border);\n  padding-top: 1rem;\n}\n\n.water-counter-text {\n  font-size: 1rem;\n  color: var(--color-text-muted);\n}\n\n.water-counter-text strong {\n  color: var(--color-text);\n  font-size: 1.15rem;\n}\n",
+      "description": "Styles for the game card, pixel canvas container, moisture progress bar, responsive layout, and keyboard-accessible states."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const TOTAL_DURATION_MS = 2 * 60 * 1000; // 120,000 ms (2 minutes)\n  const WILT_THRESHOLD_PERCENT = 30;\n\n  // State\n  let moisture = 100; // Percentage: 0 to 100\n  let waterCount = 0;\n  let lastTimestamp = performance.now();\n\n  // Elements\n  const canvas = document.getElementById('plant-canvas');\n  const ctx = canvas.getContext('2d');\n  const moistureFill = document.getElementById('moisture-fill');\n  const moisturePercent = document.getElementById('moisture-percent');\n  const moistureBarTrack = document.getElementById('moisture-bar-track');\n  const waterBtn = document.getElementById('water-btn');\n  const waterCountElem = document.getElementById('water-count');\n  const thirstyText = document.getElementById('thirsty-text');\n  const healthyText = document.getElementById('healthy-text');\n  const statusBadge = document.getElementById('status-badge');\n\n  // Pixel Art Palette\n  const PALETTE = {\n    pot: '#8d5524',\n    potRim: '#a66a38',\n    soil: '#3e2723',\n    stem: '#388e3c',\n    leafHealthy: '#66bb6a',\n    leafHealthyLight: '#81c784',\n    leafWilted: '#9e9d24',\n    leafWiltedDark: '#556b2f',\n    eye: '#1b1b1b'\n  };\n\n  function drawPixel(x, y, color, size = 4) {\n    ctx.fillStyle = color;\n    ctx.fillRect(x * size, y * size, size, size);\n  }\n\n  function renderPlant(isWilted) {\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n    const leafMain = isWilted ? PALETTE.leafWilted : PALETTE.leafHealthy;\n    const leafShade = isWilted ? PALETTE.leafWiltedDark : PALETTE.leafHealthyLight;\n    const stemColor = isWilted ? PALETTE.leafWiltedDark : PALETTE.stem;\n\n    // 32x32 Grid inside 128x128 canvas (size = 4)\n    // Pot drawing\n    // Rim: x: 10 to 21, y: 22 to 23\n    for (let x = 10; x <= 21; x++) {\n      drawPixel(x, 22, PALETTE.potRim);\n      drawPixel(x, 23, PALETTE.pot);\n    }\n    // Pot body\n    for (let y = 24; y <= 29; y++) {\n      const indent = Math.floor((y - 23) / 3);\n      for (let x = 11 + indent; x <= 20 - indent; x++) {\n        drawPixel(x, y, PALETTE.pot);\n      }\n    }\n    // Soil\n    for (let x = 12; x <= 19; x++) {\n      drawPixel(x, 21, PALETTE.soil);\n    }\n\n    // Plant stem & foliage\n    if (!isWilted) {\n      // Healthy upright stem\n      for (let y = 14; y <= 20; y++) {\n        drawPixel(15, y, stemColor);\n        drawPixel(16, y, stemColor);\n      }\n\n      // Left leaf\n      drawPixel(12, 14, leafShade);\n      drawPixel(13, 14, leafMain);\n      drawPixel(14, 15, leafMain);\n      drawPixel(11, 15, leafMain);\n      drawPixel(12, 16, leafMain);\n      drawPixel(13, 16, leafShade);\n      drawPixel(14, 16, stemColor);\n\n      // Right leaf\n      drawPixel(18, 13, leafShade);\n      drawPixel(19, 13, leafMain);\n      drawPixel(20, 14, leafMain);\n      drawPixel(17, 14, stemColor);\n      drawPixel(18, 15, leafMain);\n      drawPixel(19, 15, leafMain);\n\n      // Center crown sprout\n      for (let y = 8; y <= 13; y++) {\n        for (let x = 14; x <= 17; x++) {\n          const color = (x === 14 || y === 8) ? leafShade : leafMain;\n          drawPixel(x, y, color);\n        }\n      }\n\n      // Happy little face\n      drawPixel(15, 11, PALETTE.eye);\n      drawPixel(17, 11, PALETTE.eye);\n      drawPixel(16, 12, PALETTE.eye);\n    } else {\n      // Wilted droopy stem\n      drawPixel(15, 20, stemColor);\n      drawPixel(16, 20, stemColor);\n      drawPixel(14, 19, stemColor);\n      drawPixel(15, 19, stemColor);\n      drawPixel(13, 18, stemColor);\n      drawPixel(14, 18, stemColor);\n      drawPixel(12, 17, stemColor);\n      drawPixel(13, 17, stemColor);\n\n      // Wilted left leaf (drooping toward pot)\n      drawPixel(9, 21, leafShade);\n      drawPixel(10, 20, leafMain);\n      drawPixel(11, 19, leafMain);\n      drawPixel(10, 21, leafMain);\n\n      // Wilted center/right leaf (drooping down)\n      drawPixel(11, 15, leafShade);\n      drawPixel(12, 15, leafMain);\n      drawPixel(11, 16, leafMain);\n      drawPixel(10, 17, leafMain);\n      drawPixel(10, 18, leafShade);\n\n      // Drooped head\n      for (let y = 14; y <= 18; y++) {\n        for (let x = 14; x <= 17; x++) {\n          const color = (y >= 17) ? leafShade : leafMain;\n          drawPixel(x, y, color);\n        }\n      }\n\n      // Sad face\n      drawPixel(14, 15, PALETTE.eye);\n      drawPixel(16, 15, PALETTE.eye);\n      drawPixel(15, 17, PALETTE.eye);\n    }\n  }\n\n  function updateUI() {\n    const isWilted = moisture < WILT_THRESHOLD_PERCENT;\n    const clampedMoisture = Math.max(0, Math.min(100, moisture));\n\n    // Moisture bar update\n    moistureFill.style.width = clampedMoisture.toFixed(1) + '%';\n    moisturePercent.textContent = Math.round(clampedMoisture) + '%';\n    moistureBarTrack.setAttribute('aria-valuenow', Math.round(clampedMoisture));\n\n    if (isWilted) {\n      moistureFill.classList.add('wilted');\n      statusBadge.classList.add('wilted');\n      thirstyText.removeAttribute('hidden');\n      healthyText.setAttribute('hidden', '');\n    } else {\n      moistureFill.classList.remove('wilted');\n      statusBadge.classList.remove('wilted');\n      healthyText.removeAttribute('hidden');\n      thirstyText.setAttribute('hidden', '');\n    }\n\n    renderPlant(isWilted);\n  }\n\n  function gameLoop(currentTimestamp) {\n    const delta = currentTimestamp - lastTimestamp;\n    lastTimestamp = currentTimestamp;\n\n    // Moisture drains over 2 minutes (120,000ms)\n    const drainRate = 100 / TOTAL_DURATION_MS; // % per ms\n    if (moisture > 0) {\n      moisture = Math.max(0, moisture - (drainRate * delta));\n      updateUI();\n    }\n\n    requestAnimationFrame(gameLoop);\n  }\n\n  function waterPlant() {\n    moisture = 100;\n    waterCount += 1;\n    waterCountElem.textContent = waterCount;\n    updateUI();\n  }\n\n  waterBtn.addEventListener('click', waterPlant);\n\n  // Initial render and loop kick-off\n  updateUI();\n  requestAnimationFrame((ts) => {\n    lastTimestamp = ts;\n    gameLoop(ts);\n  });\n});\n",
+      "description": "Pixel plant rendering engine, 2-minute timer simulation, state management, and user interaction handling."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Plant Care App\n\nAn offline-capable, single-page pixel art plant care simulation built using pure HTML5, CSS, and vanilla JavaScript.\n\n## Features\n\n- **2-Minute Drain Timer**: Moisture steadily drains from 100% down to 0% over 120 seconds using high-precision frame timing (`requestAnimationFrame`).\n- **Dynamic Pixel Art**: Rendered onto an HTML5 Canvas using crisp pixel scaling. The plant stands upright and happy when hydrated, and droops with a wilted color scheme when moisture drops below 30%.\n- **Thirsty Warning State**: Automatically displays **'Thirsty!'** and applies warning highlight colors when moisture drops below 30%.\n- **Watering Mechanics**: Interactive **Water Plant** button replenishes moisture back to 100% and increments the lifetime watering counter.\n- **Accessibility & Design**:\n  - Built with system typography at 16px+ baseline.\n  - Enforces `[hidden] { display: none !important; }` rule for resilient state changes.\n  - Full keyboard accessibility with visible `:focus-visible` outlines.\n  - Fully responsive down to 360px viewports with zero external dependencies.\n\n## Running the Project\n\nSimply open `index.html` in any modern web browser. No server, bundler, or network access is required.\n",
+      "description": "Project documentation explaining features, setup, offline capabilities, and design specifications."
+    }
+  ]
+}

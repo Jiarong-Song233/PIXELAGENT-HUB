@@ -1,0 +1,78 @@
+{
+  "caseId": "pomodoro-cycle",
+  "run": 3,
+  "arm": "dist-new",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\new",
+  "managerTokens": 8901,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "failed",
+  "error": "localhost:8788 API error (502): {\"error\":{\"message\":\"agy exceeded 240 s and was stopped\"}}",
+  "coderRounds": 0,
+  "compileFailures": 0,
+  "firstChecks": null,
+  "finalChecks": null,
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": false,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 267,
+  "reportedTokens": 8901,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T14:17:56.747Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T14:17:56.747Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T14:18:18.063Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Focus Timer"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T14:18:18.063Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T14:22:18.722Z",
+      "type": "failed",
+      "data": {
+        "stoppedPhase": "coding",
+        "error": "localhost:8788 API error (502): {\"error\":{\"message\":\"agy exceeded 240 s and was stopped\"}}"
+      }
+    }
+  ],
+  "rounds": []
+}

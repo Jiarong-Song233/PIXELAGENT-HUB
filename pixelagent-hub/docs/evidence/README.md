@@ -2,10 +2,12 @@
 
 仓库里大部分文件是实验证据：真实模型生成的源码 ZIP、事件日志、检查计划、浏览器报告和截图。它们都保存在原位，以免破坏已有链接和 `npm run portfolio:demo -- --check` 的哈希校验。本页是唯一入口，按"先看哪个"排序。
 
-## 实验（真实模型：`deepseek-chat`、`deepseek-v4-pro`、`gpt-6-luna`）
+## 实验（真实模型：`deepseek-chat`、`deepseek-v4-pro`、`gpt-6-luna`、`gemini-3.8-flash`）
 
 | 日期 | 实验 | 一句话结论 |
 | --- | --- | --- |
+| 2026-10-29 | [虚拟时钟（留出集 M、N，Gemini）](../software-studio/benchmark-results/2026-10-30-gemini-n/README.md) | 检查可以把应用的时钟快进最多 60 分钟。通过率不变（20/21 对 20/21），但检查能到达以前到不了的结束状态：煮蛋计时器的“完成”状态 3/3 次被检查，基线 0/3。顺带修好了 Gemini 丢引号的 JSON，可用对数从 13/24 升到 21/24 |
+| 2026-10-23 | [留出集 K、L（gpt-6-luna）](../software-studio/benchmark-results/2026-10-24-luna-l/README.md) | contenteditable 输入、每个检查 16 个动作、浏览器固定 en-US/UTC：严格通过 22/24 对 17/24（p = 0.125）；内联编辑器从 0/3 到 3/3 |
 | 2026-10-22 | [返修不再交付更差的应用](../software-studio/benchmark-results/2026-10-22-keep-better/README.md) | 返修后通过的检查变少、或运行时错误变多时，退回返修前的版本。用全部保存记录统计：122 次带返修的运行里，有 6 次会因此改发更好的那一版 |
 | 2026-10-21 | [trace 在 gpt-6-luna 上复测](../software-studio/benchmark-results/2026-10-21-trace-luna/README.md) | 40 对交替运行，不花 API 费用：加 trace 31/40，基线 32/40，没有提升；每个计划的检查数还少了 21%，已撤回 |
 | 2026-10-21 | [离线检查重放](../software-studio/benchmark-results/2026-10-21-replay/README.md) | 不调用模型，用当前检查执行器重放 742 条历史记录：97% 判定不变；38 条检查由败转胜（正是这期间的修复）；唯一一条由胜转败是抛硬币式的随机检查，不算回归 |

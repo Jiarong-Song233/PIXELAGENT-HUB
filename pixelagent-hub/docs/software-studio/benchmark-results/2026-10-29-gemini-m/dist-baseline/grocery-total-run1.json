@@ -1,0 +1,472 @@
+{
+  "caseId": "grocery-total",
+  "run": 1,
+  "arm": "dist-baseline",
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab4\\baseline",
+  "managerTokens": 8968,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "7/7",
+  "finalChecks": "7/7",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "7/7"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 98,
+  "reportedTokens": 38690,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-29T14:22:20.664Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-29T14:22:20.664Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-29T14:22:45.228Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Grocery Budget Tracker"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-29T14:22:45.228Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-29T14:23:29.027Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-29T14:23:29.027Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-29T14:23:29.502Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-29T14:23:29.505Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "637700a6-bb47-4426-a712-3d0552473e91"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-29T14:23:54.558Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "637700a6-bb47-4426-a712-3d0552473e91",
+        "checks": 7
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-29T14:23:54.558Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "testPlanId": "637700a6-bb47-4426-a712-3d0552473e91",
+        "checks": 7,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-29T14:23:56.858Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "name": "initial budget and total spent display",
+        "passed": true,
+        "actual": "$ 50.00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-29T14:23:56.858Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "name": "add item and update running total",
+        "passed": true,
+        "actual": "$ 7.00"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-29T14:23:56.858Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "name": "update remaining budget after adding item",
+        "passed": true,
+        "actual": "$ 46.00"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-29T14:23:56.858Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "name": "mark total red when over budget",
+        "passed": true,
+        "actual": "stat-value over-budget"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-29T14:23:56.858Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "name": "show warning alert when over budget",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-29T14:23:56.858Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "name": "remove item updates cart count and running total",
+        "passed": true,
+        "actual": "$ 0.00"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-29T14:23:56.858Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "name": "remove item restores empty state",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-29T14:23:56.858Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "e2d03044-f835-4aed-b253-744ce3db84fa",
+        "status": "passed",
+        "passed": 7,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-29T14:23:56.860Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "initial budget and total spent display",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          }
+        ],
+        "selector": "#remaining-budget",
+        "expected": "$ 50.00"
+      },
+      {
+        "name": "add item and update running total",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Apples"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "3.50"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "2"
+          },
+          {
+            "type": "click",
+            "selector": "#add-item-btn"
+          }
+        ],
+        "selector": "#total-spent",
+        "expected": "$ 7.00"
+      },
+      {
+        "name": "update remaining budget after adding item",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Bread"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "4.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-item-btn"
+          }
+        ],
+        "selector": "#remaining-budget",
+        "expected": "$ 46.00"
+      },
+      {
+        "name": "mark total red when over budget",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "20.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Steak"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "25.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-item-btn"
+          }
+        ],
+        "selector": "#total-spent",
+        "expected": "stat-value over-budget",
+        "assertion": "attribute",
+        "attribute": "class"
+      },
+      {
+        "name": "show warning alert when over budget",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "10.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Coffee"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "15.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-item-btn"
+          }
+        ],
+        "selector": "#budget-alert",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "remove item updates cart count and running total",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Milk"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "3.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-item-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".btn-delete"
+          }
+        ],
+        "selector": "#total-spent",
+        "expected": "$ 0.00"
+      },
+      {
+        "name": "remove item restores empty state",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#budget-input",
+            "value": "50.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-name",
+            "value": "Eggs"
+          },
+          {
+            "type": "input",
+            "selector": "#item-price",
+            "value": "4.00"
+          },
+          {
+            "type": "input",
+            "selector": "#item-qty",
+            "value": "1"
+          },
+          {
+            "type": "click",
+            "selector": "#add-item-btn"
+          },
+          {
+            "type": "click",
+            "selector": ".btn-delete"
+          }
+        ],
+        "selector": "#empty-cart-msg",
+        "expected": "true",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Cannot verify pixel canvas or retro rasterization art fidelity directly without visual diffing."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14749,
+      "completion_tokens": 760,
+      "total_tokens": 15509
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Grocery Budget Tracker</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <header class=\"pixel-header\">\n      <h1 class=\"title\">🛒 Pixel Mart</h1>\n      <p class=\"subtitle\">Grocery List &amp; Budget Tracker</p>\n    </header>\n\n    <!-- Budget Config Card -->\n    <section class=\"pixel-card\" aria-labelledby=\"budget-heading\">\n      <h2 id=\"budget-heading\" class=\"card-title\">Set Budget</h2>\n      <form id=\"budget-form\" class=\"grid-form\" novalidate>\n        <div class=\"form-group full-width\">\n          <label for=\"budget-input\">Grocery Budget ($)</label>\n          <input\n            type=\"number\"\n            id=\"budget-input\"\n            name=\"budget\"\n            min=\"0\"\n            step=\"0.01\"\n            placeholder=\"50.00\"\n            value=\"50.00\"\n            required\n          >\n        </div>\n      </form>\n    </section>\n\n    <!-- Summary Dashboard -->\n    <section class=\"pixel-card dashboard\" aria-label=\"Budget Status Summary\">\n      <div class=\"stat-box\">\n        <span class=\"stat-label\">Budget</span>\n        <span id=\"budget-display\" class=\"stat-value\">$50.00</span>\n      </div>\n      <div class=\"stat-box\">\n        <span class=\"stat-label\">Total Spent</span>\n        <span id=\"total-spent\" class=\"stat-value\">$0.00</span>\n      </div>\n      <div class=\"stat-box\">\n        <span class=\"stat-label\">Remaining</span>\n        <span id=\"remaining-budget\" class=\"stat-value\">$50.00</span>\n      </div>\n    </section>\n\n    <!-- Over Budget Warning Banner -->\n    <div id=\"budget-alert\" class=\"alert-banner\" hidden role=\"alert\">\n      ⚠️ WARNING: Over Budget Limit!\n    </div>\n\n    <!-- Add Item Form -->\n    <section class=\"pixel-card\" aria-labelledby=\"add-item-heading\">\n      <h2 id=\"add-item-heading\" class=\"card-title\">Add Grocery Item</h2>\n      <form id=\"item-form\" class=\"grid-form\">\n        <div class=\"form-group full-width\">\n          <label for=\"item-name\">Item Name</label>\n          <input\n            type=\"text\"\n            id=\"item-name\"\n            name=\"itemName\"\n            placeholder=\"e.g. Crisp Apples\"\n            maxlength=\"40\"\n            required\n          >\n        </div>\n        <div class=\"form-group\">\n          <label for=\"item-price\">Price ($)</label>\n          <input\n            type=\"number\"\n            id=\"item-price\"\n            name=\"itemPrice\"\n            min=\"0.01\"\n            step=\"0.01\"\n            placeholder=\"2.50\"\n            required\n          >\n        </div>\n        <div class=\"form-group\">\n          <label for=\"item-qty\">Quantity</label>\n          <input\n            type=\"number\"\n            id=\"item-qty\"\n            name=\"itemQty\"\n            min=\"1\"\n            step=\"1\"\n            value=\"1\"\n            required\n          >\n        </div>\n        <div class=\"form-group full-width\">\n          <button type=\"submit\" id=\"add-item-btn\" class=\"pixel-btn btn-primary\">\n            + Add To Cart\n          </button>\n        </div>\n      </form>\n    </section>\n\n    <!-- Grocery List Table/Container -->\n    <section class=\"pixel-card\" aria-labelledby=\"cart-heading\">\n      <div class=\"cart-header-row\">\n        <h2 id=\"cart-heading\" class=\"card-title\">Cart Items (<span id=\"item-count\">0</span>)</h2>\n        <button type=\"button\" id=\"clear-all-btn\" class=\"pixel-btn btn-secondary\" hidden>\n          Clear All\n        </button>\n      </div>\n\n      <div id=\"empty-cart-msg\" class=\"empty-state\">\n        Your cart is empty. Enter grocery items above!\n      </div>\n\n      <ul id=\"grocery-list\" class=\"grocery-items-list\" aria-live=\"polite\"></ul>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main single-page application structure with pixel aesthetic styling and accessible controls."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Cohesive 4-Color Palette: Navy, Emerald/Sage, Light Parchment, Pixel Red */\n:root {\n  --bg-color: #1a1c23;\n  --card-bg: #272c3d;\n  --text-main: #f0f4f8;\n  --text-dim: #94a3b8;\n  --primary: #38bdf8;\n  --accent: #4ade80;\n  --danger: #f43f5e;\n  --border-outer: #0f1117;\n  --border-highlight: #475569;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n[hidden] {\n  display: none !important;\n}\n\nbody {\n  font-family: \"Courier New\", Courier, monospace, system-ui;\n  background-color: var(--bg-color);\n  color: var(--text-main);\n  font-size: 16px;\n  line-height: 1.5;\n  min-height: 100vh;\n  padding: 24px 16px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 560px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.pixel-header {\n  text-align: center;\n  padding: 12px;\n  border: 4px solid var(--border-outer);\n  background: var(--card-bg);\n  box-shadow: 4px 4px 0 var(--border-outer);\n}\n\n.title {\n  font-size: 1.75rem;\n  letter-spacing: -1px;\n  text-transform: uppercase;\n  color: var(--primary);\n}\n\n.subtitle {\n  color: var(--text-dim);\n  font-size: 1rem;\n  margin-top: 4px;\n}\n\n/* Pixel Card Styling with Chunky Borders */\n.pixel-card {\n  background: var(--card-bg);\n  border: 4px solid var(--border-outer);\n  box-shadow: 4px 4px 0 var(--border-outer);\n  padding: 18px;\n}\n\n.card-title {\n  font-size: 1.2rem;\n  margin-bottom: 14px;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n  border-bottom: 3px solid var(--border-highlight);\n  padding-bottom: 6px;\n}\n\n/* Form Layout */\n.grid-form {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 14px;\n}\n\n.full-width {\n  grid-column: 1 / -1;\n}\n\n.form-group {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n}\n\nlabel {\n  font-size: 0.9rem;\n  font-weight: bold;\n  color: var(--text-dim);\n  text-transform: uppercase;\n}\n\ninput {\n  font-family: inherit;\n  font-size: 1rem;\n  padding: 10px 12px;\n  background: #11141e;\n  color: var(--text-main);\n  border: 3px solid var(--border-highlight);\n  outline: none;\n}\n\ninput:focus {\n  border-color: var(--primary);\n  box-shadow: 0 0 0 2px var(--primary);\n}\n\n/* Pixel Buttons */\n.pixel-btn {\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: bold;\n  text-transform: uppercase;\n  padding: 12px 16px;\n  cursor: pointer;\n  border: 3px solid var(--border-outer);\n  box-shadow: 3px 3px 0 var(--border-outer);\n  transition: transform 0.05s ease, box-shadow 0.05s ease;\n}\n\n.pixel-btn:hover {\n  filter: brightness(1.1);\n}\n\n.pixel-btn:focus-visible {\n  outline: 2px dashed #fff;\n  outline-offset: 2px;\n}\n\n.pixel-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0 var(--border-outer);\n}\n\n.btn-primary {\n  background: var(--primary);\n  color: #0b1120;\n  width: 100%;\n}\n\n.btn-secondary {\n  background: #475569;\n  color: var(--text-main);\n  font-size: 0.8rem;\n  padding: 6px 10px;\n}\n\n.btn-delete {\n  background: var(--danger);\n  color: #fff;\n  font-size: 0.85rem;\n  padding: 6px 10px;\n}\n\n/* Dashboard Stats */\n.dashboard {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 12px;\n  text-align: center;\n}\n\n.stat-box {\n  background: #11141e;\n  padding: 10px 6px;\n  border: 2px solid var(--border-highlight);\n}\n\n.stat-label {\n  display: block;\n  font-size: 0.8rem;\n  color: var(--text-dim);\n  text-transform: uppercase;\n  margin-bottom: 4px;\n}\n\n.stat-value {\n  font-size: 1.15rem;\n  font-weight: bold;\n  color: var(--accent);\n}\n\n/* Over-Budget Red State */\n.over-budget {\n  color: var(--danger) !important;\n}\n\n.stat-box.over-budget-box {\n  border-color: var(--danger) !important;\n}\n\n.alert-banner {\n  background: var(--danger);\n  color: #fff;\n  font-weight: bold;\n  text-align: center;\n  padding: 10px;\n  border: 3px solid var(--border-outer);\n  box-shadow: 3px 3px 0 var(--border-outer);\n  letter-spacing: 0.5px;\n}\n\n/* Grocery Items List */\n.cart-header-row {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n}\n\n.cart-header-row .card-title {\n  margin-bottom: 0;\n  border-bottom: none;\n  padding-bottom: 0;\n}\n\n.empty-state {\n  color: var(--text-dim);\n  font-style: italic;\n  padding: 18px 0;\n  text-align: center;\n}\n\n.grocery-items-list {\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  margin-top: 12px;\n}\n\n.grocery-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background: #11141e;\n  padding: 10px 14px;\n  border: 2px solid var(--border-highlight);\n  gap: 10px;\n}\n\n.item-info {\n  display: flex;\n  flex-direction: column;\n  flex-grow: 1;\n}\n\n.item-name-text {\n  font-weight: bold;\n  word-break: break-word;\n}\n\n.item-calculation-text {\n  font-size: 0.85rem;\n  color: var(--text-dim);\n}\n\n.item-subtotal-text {\n  font-weight: bold;\n  margin-right: 8px;\n  white-space: nowrap;\n}\n\n@media (max-width: 480px) {\n  .dashboard {\n    grid-template-columns: 1fr;\n  }\n  .grid-form {\n    grid-template-columns: 1fr;\n  }\n}\n",
+      "description": "Retro pixel-art styled stylesheet using system fonts, box-shadow step borders, and cohesive 4-color palette."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener(\"DOMContentLoaded\", function () {\n  // State\n  var state = {\n    budget: 50.0,\n    items: []\n  };\n\n  // DOM references\n  var budgetInput = document.getElementById(\"budget-input\");\n  var budgetDisplay = document.getElementById(\"budget-display\");\n  var totalSpentDisplay = document.getElementById(\"total-spent\");\n  var remainingBudgetDisplay = document.getElementById(\"remaining-budget\");\n  var budgetAlert = document.getElementById(\"budget-alert\");\n  var itemForm = document.getElementById(\"item-form\");\n  var itemNameInput = document.getElementById(\"item-name\");\n  var itemPriceInput = document.getElementById(\"item-price\");\n  var itemQtyInput = document.getElementById(\"item-qty\");\n  var groceryList = document.getElementById(\"grocery-list\");\n  var emptyCartMsg = document.getElementById(\"empty-cart-msg\");\n  var itemCountDisplay = document.getElementById(\"item-count\");\n  var clearAllBtn = document.getElementById(\"clear-all-btn\");\n\n  function formatCurrency(num) {\n    var isNeg = num < 0;\n    var abs = Math.abs(num).toFixed(2);\n    return (isNeg ? \"-$ \" : \"$ \") + abs;\n  }\n\n  function render() {\n    // Calculate totals\n    var totalSpent = 0;\n    for (var i = 0; i < state.items.length; i++) {\n      totalSpent += state.items[i].price * state.items[i].quantity;\n    }\n    // Avoid floating point jitter\n    totalSpent = Math.round(totalSpent * 100) / 100;\n    var remaining = Math.round((state.budget - totalSpent) * 100) / 100;\n    var isOverBudget = remaining < 0;\n\n    // Update dashboard\n    budgetDisplay.textContent = formatCurrency(state.budget);\n    totalSpentDisplay.textContent = formatCurrency(totalSpent);\n    remainingBudgetDisplay.textContent = formatCurrency(remaining);\n    itemCountDisplay.textContent = state.items.length;\n\n    // Handle over budget color markings\n    if (isOverBudget) {\n      totalSpentDisplay.classList.add(\"over-budget\");\n      remainingBudgetDisplay.classList.add(\"over-budget\");\n      budgetAlert.removeAttribute(\"hidden\");\n    } else {\n      totalSpentDisplay.classList.remove(\"over-budget\");\n      remainingBudgetDisplay.classList.remove(\"over-budget\");\n      budgetAlert.setAttribute(\"hidden\", \"\");\n    }\n\n    // Empty state & Clear All button\n    if (state.items.length === 0) {\n      emptyCartMsg.removeAttribute(\"hidden\");\n      clearAllBtn.setAttribute(\"hidden\", \"\");\n    } else {\n      emptyCartMsg.setAttribute(\"hidden\", \"\");\n      clearAllBtn.removeAttribute(\"hidden\");\n    }\n\n    // Render grocery list items\n    groceryList.innerHTML = \"\";\n    state.items.forEach(function (item) {\n      var li = document.createElement(\"li\");\n      li.className = \"grocery-item\";\n\n      var subtotal = Math.round(item.price * item.quantity * 100) / 100;\n\n      var infoDiv = document.createElement(\"div\");\n      infoDiv.className = \"item-info\";\n\n      var nameSpan = document.createElement(\"span\");\n      nameSpan.className = \"item-name-text\";\n      nameSpan.textContent = item.name;\n\n      var calcSpan = document.createElement(\"span\");\n      calcSpan.className = \"item-calculation-text\";\n      calcSpan.textContent = formatCurrency(item.price) + \" × \" + item.quantity;\n\n      infoDiv.appendChild(nameSpan);\n      infoDiv.appendChild(calcSpan);\n\n      var subtotalSpan = document.createElement(\"span\");\n      subtotalSpan.className = \"item-subtotal-text\";\n      subtotalSpan.textContent = formatCurrency(subtotal);\n\n      var delBtn = document.createElement(\"button\");\n      delBtn.type = \"button\";\n      delBtn.className = \"pixel-btn btn-delete\";\n      delBtn.textContent = \"X\";\n      delBtn.setAttribute(\"aria-label\", \"Remove \" + item.name + \" from list\");\n      delBtn.addEventListener(\"click\", function () {\n        removeItem(item.id);\n      });\n\n      li.appendChild(infoDiv);\n      li.appendChild(subtotalSpan);\n      li.appendChild(delBtn);\n\n      groceryList.appendChild(li);\n    });\n  }\n\n  function removeItem(id) {\n    state.items = state.items.filter(function (it) {\n      return it.id !== id;\n    });\n    render();\n  }\n\n  // Event Listeners\n  budgetInput.addEventListener(\"input\", function () {\n    var val = parseFloat(budgetInput.value);\n    state.budget = isNaN(val) || val < 0 ? 0 : val;\n    render();\n  });\n\n  itemForm.addEventListener(\"submit\", function (e) {\n    e.preventDefault();\n    var name = itemNameInput.value.trim();\n    var price = parseFloat(itemPriceInput.value);\n    var qty = parseInt(itemQtyInput.value, 10);\n\n    if (!name || isNaN(price) || price <= 0 || isNaN(qty) || qty <= 0) {\n      return;\n    }\n\n    var newItem = {\n      id: Date.now().toString() + Math.random().toString(36).slice(2, 6),\n      name: name,\n      price: price,\n      quantity: qty\n    };\n\n    state.items.push(newItem);\n    itemNameInput.value = \"\";\n    itemPriceInput.value = \"\";\n    itemQtyInput.value = \"1\";\n    itemNameInput.focus();\n    render();\n  });\n\n  clearAllBtn.addEventListener(\"click\", function () {\n    if (state.items.length > 0) {\n      state.items = [];\n      render();\n    }\n  });\n\n  // Initial render\n  render();\n});",
+      "description": "Vanilla JavaScript handling state, math calculations, responsive updates, dynamic DOM rendering, and budget threshold warnings."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Grocery Budget Tracker\n\nAn offline-capable, zero-dependency browser application built with semantic HTML, CSS, and vanilla JavaScript featuring a retro 8-bit/pixel aesthetic.\n\n## Features\n\n- **Budget Management**: Define a total shopping budget with dynamic balance tracking.\n- **Item Registration**: Add grocery items with custom name, price, and quantity.\n- **Running Calculation**: Live updates to total spent and remaining balance.\n- **Over-Budget Warning**: Automatically turns total spent, remaining balance, and warning banner bright red when expenses exceed the allocated budget.\n- **Item Removal**: Remove individual items or clear the entire cart.\n- **Accessible & Responsive**: Fully keyboard accessible, explicit labeled controls, screen-reader friendly live updates, and responsive from 360px viewport widths.\n\n## Running the App\n\n1. Download or extract the project folder containing `index.html`, `style.css`, and `app.js`.\n2. Open `index.html` directly in any modern web browser (Chrome, Firefox, Safari, Edge).\n3. No server, node packages, or internet connection required.",
+      "description": "Project documentation covering offline instructions, features, and constraints compliance."
+    }
+  ]
+}
