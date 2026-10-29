@@ -264,3 +264,16 @@ test('test plans accept 16 actions per check and reject 17', () => {
   assert.equal(parseTestPlanOutput({ checks: [check], limitations: [] }).checks[0].actions.length, 16);
   assert.throws(() => parseTestPlanOutput({ checks: [{ ...check, actions: [...actions, actions[0]] }], limitations: [] }), /did not match/);
 });
+
+
+test('advance has independent bounds and normalises to type and ms', async () => {
+  const { browserCheckSchema } = await import('./schemas.js');
+  const check = { name: 'Round', actions: [{ type: 'advance', ms: 30000 }], selector: '#status', expected: 'Game over' };
+  assert.equal(browserCheckSchema.safeParse(check).success, true);
+  for (const actions of [[{ type: 'advance', ms: 50 }], [{ type: 'advance', ms: 700000 }], [{ type: 'advance', ms: 100.5 }], [{ type: 'advance', ms: 30000, selector: '#status' }], [{ type: 'advance', ms: 350000 }, { type: 'advance', ms: 350000 }]]) {
+    assert.equal(browserCheckSchema.safeParse({ ...check, actions }).success, false);
+  }
+  assert.equal(browserCheckSchema.safeParse({ ...check, actions: [{ type: 'advance', ms: 600000 }, { type: 'wait', ms: 6000 }, { type: 'wait', ms: 2000 }] }).success, true);
+  const parsed = parseTestPlanOutput({ checks: [{ ...check, actions: [{ type: 'advance', ms: 30000, selector: null, nth: null, value: 'discard' }] }], limitations: [] });
+  assert.deepEqual(parsed.checks[0].actions, check.actions);
+});

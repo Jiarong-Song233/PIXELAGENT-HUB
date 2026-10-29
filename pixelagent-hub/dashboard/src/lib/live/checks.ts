@@ -52,7 +52,7 @@ async function runInFrame(html: string, checks: BrowserCheck[], signal?: AbortSi
       if (signal?.aborted) { abort(); return; }
       signal?.addEventListener('abort', abort, { once: true });
       window.addEventListener('message', receive);
-      frame.srcdoc = prepareStudioPreview(html, nonce);
+      frame.srcdoc = prepareStudioPreview(html, nonce, { clock: checks.some((check) => check.actions.some((action) => action.type === 'advance')) });
       document.body.append(frame);
     });
   } finally {

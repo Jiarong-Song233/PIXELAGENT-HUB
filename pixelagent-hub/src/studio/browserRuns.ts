@@ -70,7 +70,9 @@ export async function executeBrowserRun(options: { root: string; run: BrowserRun
     page.on('dialog', (dialog) => void dialog.dismiss().catch(() => {}));
     page.setDefaultTimeout(2000);
     // Opaque sandbox prevents generated code accessing the trusted parent document.
+    const useClock = plan.checks.some((check) => check.actions.some((action) => action.type === 'advance'));
     const loadApp = async () => {
+      if (useClock) await page.clock.install();
       await page.setContent('<style>html,body{margin:0}iframe{border:0;width:100vw;height:100vh}</style><iframe id="app" sandbox="allow-scripts allow-forms"></iframe>');
       await page.locator('#app').evaluate((element, html) => new Promise<void>((resolve) => {
         element.addEventListener('load', () => resolve(), { once: true });
@@ -113,6 +115,7 @@ export async function executeBrowserRun(options: { root: string; run: BrowserRun
         for (const action of check.actions) {
           controller.signal.throwIfAborted();
           if (action.type === 'wait') { await page.waitForTimeout(action.ms); continue; }
+          if (action.type === 'advance') { await page.clock.runFor(action.ms); continue; }
           const target = await element(action.selector, action.nth);
           if (action.type === 'click') await target.click();
           else if (action.type === 'input') {

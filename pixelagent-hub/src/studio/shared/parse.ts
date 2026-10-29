@@ -33,7 +33,7 @@ const normaliseCheck = (check: unknown) => {
   const { assertion, attribute, nth, actions, ...rest } = check as Record<string, unknown>;
   const normalisedActions = Array.isArray(actions) ? actions.map((action) => {
     if (!action || typeof action !== 'object' || Array.isArray(action)) return action;
-    if (action.type === 'wait') return { type: action.type, ms: action.ms };
+    if (action.type === 'wait' || action.type === 'advance') return { type: action.type, ms: action.ms };
     const { nth, ...rest } = action;
     return { ...rest, ...(nth == null ? {} : { nth }) };
   }) : actions;
