@@ -1,0 +1,42 @@
+[
+  {
+    "id": "parking-meter",
+    "title": "Parking meter",
+    "description": "A pixel parking meter: Add 15 min and Add 1 hour buttons, the remaining time counts down as h:mm:ss, the screen turns red and shows 'EXPIRED' at zero, and a Reset button clears it."
+  },
+  {
+    "id": "egg-timer",
+    "title": "Egg timer",
+    "description": "A pixel egg timer with Soft (6 min), Medium (8 min) and Hard (10 min) buttons: the chosen one counts down as m:ss with a progress bar, Pause and Resume keep the remaining time, and 'Eggs are done!' appears at zero."
+  },
+  {
+    "id": "idle-miner",
+    "title": "Idle miner",
+    "description": "A pixel idle miner: gold rises by 1 every second, a Buy drill button costs 10 gold and adds +1 gold per second each, the button is disabled when you cannot afford it, and the rate per second is shown."
+  },
+  {
+    "id": "standup-timer",
+    "title": "Standup timer",
+    "description": "A pixel standup timer for a list of 4 built-in names: each person gets 90 seconds shown as m:ss, Next moves to the next person early, the current name is highlighted, and 'Standup over' appears after the last one."
+  },
+  {
+    "id": "pet-shelter",
+    "title": "Pet shelter",
+    "description": "A pixel pet shelter list of 6 built-in pets with name, species and age: filter by species with buttons, an Adopt button on each pet moves it to an Adopted list, and counts of available and adopted pets are shown."
+  },
+  {
+    "id": "rgb-hex",
+    "title": "RGB to hex",
+    "description": "A pixel color converter: three number inputs for red, green and blue from 0 to 255, the hex code like #FF8800 updates live with a swatch of that color, and values outside 0-255 show 'Invalid value'."
+  },
+  {
+    "id": "seating-chart",
+    "title": "Class seating",
+    "description": "A pixel classroom of 3 rows by 4 desks: type a student name and click an empty desk to seat them, clicking a seated desk clears it, and a counter shows how many seats are filled out of 12."
+  },
+  {
+    "id": "roman",
+    "title": "Roman numerals",
+    "description": "A pixel Roman numeral converter: a number input from 1 to 3999 shows its Roman numeral live (e.g. 1994 = MCMXCIV), a second input converts Roman back to a number, and invalid input shows 'Not valid'."
+  }
+]
