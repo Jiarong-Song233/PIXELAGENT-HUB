@@ -7,6 +7,10 @@ import { coderPrompt, STUDIO_CONSTRAINTS } from './prompts.js';
 test('model replies parse from a fenced block or bare JSON, and must be one object', () => {
   assert.deepEqual(parseModelObject('Here you go:\n```json\n{"a":1}\n```'), { a: 1 });
   assert.deepEqual(parseModelObject(' {"a":2} '), { a: 2 });
+  // A key whose opening quote was dropped is repaired; other invalid JSON still fails as before.
+  assert.deepEqual(parseModelObject('{"checks":[{"name":"x","actions":[],selector":"#count","expected":"0"}]}'), { checks: [{ name: 'x', actions: [], selector: '#count', expected: '0' }] });
+  assert.deepEqual(parseModelObject('{"text":"a,b\\":c"}'), { text: 'a,b":c' });
+  assert.throws(() => parseModelObject('{"a":1,}'), SyntaxError);
   assert.throws(() => parseModelObject('[1,2]'), /Expected a JSON object/);
 });
 
