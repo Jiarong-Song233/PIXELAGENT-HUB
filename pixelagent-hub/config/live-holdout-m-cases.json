@@ -1,0 +1,42 @@
+[
+  {
+    "id": "quiz-timer",
+    "title": "Timed quiz",
+    "description": "A pixel timed quiz of 5 built-in questions with four answers each: a 60-second countdown for the whole quiz, score shown live, and when time runs out or all questions are answered show the final score and a Play again button."
+  },
+  {
+    "id": "plant-water",
+    "title": "Plant care",
+    "description": "A pixel plant that needs water every 2 minutes: its moisture bar drains over time, a Water button refills it, the plant looks wilted below 30% and shows 'Thirsty!', and a counter shows how many times it was watered."
+  },
+  {
+    "id": "auction",
+    "title": "Auction timer",
+    "description": "A pixel auction for one item: a starting price of 10, Bid +1 and Bid +5 buttons, a 45-second countdown that restarts at 10 seconds when someone bids in the last 10 seconds, and 'Sold for N' when it ends."
+  },
+  {
+    "id": "tea-steep",
+    "title": "Tea steeper",
+    "description": "A pixel tea timer with presets Green (2:00), Black (4:00) and Herbal (6:00): pick a tea, Start counts down as m:ss, Cancel stops it, and 'Your tea is ready' appears at zero."
+  },
+  {
+    "id": "unit-shelf",
+    "title": "Bookshelf sorter",
+    "description": "A pixel bookshelf of 8 built-in books with title, author and year: sort by any of the three with a toggle for ascending or descending, and a search box that filters by title or author."
+  },
+  {
+    "id": "color-guess",
+    "title": "Color guess",
+    "description": "A pixel color-guessing game: show a random RGB value as text and three swatches, one of them matching, click the right swatch to score, a wrong click ends the round, and show the best streak."
+  },
+  {
+    "id": "pomodoro-cycle",
+    "title": "Focus cycles",
+    "description": "A pixel focus timer: 25 minutes of work then 5 minutes of break, repeated, with a cycle counter, a label showing Work or Break, Start and Pause, and a long 15-minute break after every 4 work sessions."
+  },
+  {
+    "id": "grocery-total",
+    "title": "Grocery budget",
+    "description": "A pixel grocery list with a budget: add items with a price and quantity, show the running total and what is left of the budget, mark the total red when over budget, and remove items."
+  }
+]
