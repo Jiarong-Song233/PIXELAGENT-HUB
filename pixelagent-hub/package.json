@@ -35,6 +35,7 @@
     "portfolio:demo": "node scripts/portfolio-demo.mjs",
     "replay:export": "tsx scripts/export-replay.ts",
     "checks:replay": "tsx scripts/replay-checks.ts",
+    "repair:replay": "tsx scripts/replay-repair.ts",
     "test": "node scripts/test.mjs",
     "dev": "tsx examples/content-pipeline.ts",
     "example:pipeline": "tsx examples/content-pipeline.ts",

@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- `npm run repair:replay`: an offline paired A/B of the Coder's repair round on saved failing apps, against a local model endpoint. The in-page runner records the page markup at each failed check (`page`). [Giving that markup to the Coder](docs/software-studio/benchmark-results/2026-10-30-repair-context/README.md) made no difference on 38 failing apps (19 fully fixed in both arms), so the pipeline's repair notes leave it out
+
 ## [2.9.0] — 2026-10-29
 
 ### Added

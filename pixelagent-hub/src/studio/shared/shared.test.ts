@@ -141,6 +141,14 @@ test('repair notes identify the counted selector and the compared attribute', as
   assert.ok(notes.every((note) => !note.includes('trace') && !note.includes(checks[0].trace!)));
   assert.match(notes[0], /selector=".card", assertion="count"/);
   assert.match(notes[1], /assertion="attribute", attribute="aria-valuenow"/);
+  assert.equal(notes.length, 2);
+  // Page markup captured at a failure is added only on request, for at most three failures.
+  const many = Array.from({ length: 4 }, (_, index) => ({ name: `Check ${index}`, actions: [], selector: '#a', expected: 'x' }));
+  const failures = many.map((check) => ({ name: check.name, status: 'failed' as const, actual: '', page: `<body><b id="a">${check.name}</b></body>` }));
+  assert.equal(browserFailureNotes(many, failures).length, 4);
+  const withPages = browserFailureNotes(many, failures, [], [], { pages: true });
+  assert.equal(withPages.length, 7);
+  assert.equal(withPages[4], 'Page markup when browser check "Check 0" failed (scripts and styles removed): <body><b id="a">Check 0</b></body>');
 });
 
 test('unsupported reviews require a reason, ignore passing checks and cap drops in reply order by plan size', async () => {

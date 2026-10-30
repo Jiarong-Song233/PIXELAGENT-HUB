@@ -6,14 +6,20 @@ import type { browserCheckSchema } from './schemas.js';
  * server (repair from a saved browser run) and PLAY LIVE (automatic repair round).
  */
 type PlannedCheck = { name: string; selector: string; nth?: number; expected: string; assertion?: 'text' | 'matches' | 'disabled' | 'visible' | 'count' | 'attribute' | 'changed' | 'unchanged' | 'stable'; attribute?: string; actions: z.infer<typeof browserCheckSchema>['actions'] };
-type CheckResult = { name: string; status: 'passed' | 'failed'; actual: string; error?: string };
+type CheckResult = { name: string; status: 'passed' | 'failed'; actual: string; error?: string; page?: string };
 
-export function browserFailureNotes(planned: PlannedCheck[], results: CheckResult[], runtimeErrors: string[] = [], blockedRequests: string[] = []): string[] {
+/**
+ * `pages` adds the markup captured at up to three failures. It is off in the pipeline: an offline A/B on
+ * 38 failing apps (docs/software-studio/benchmark-results/2026-10-30-repair-context) found no gain.
+ */
+export function browserFailureNotes(planned: PlannedCheck[], results: CheckResult[], runtimeErrors: string[] = [], blockedRequests: string[] = [], { pages = false } = {}): string[] {
+  const failed = results.filter((check) => check.status === 'failed');
   return [
-    ...results.filter((check) => check.status === 'failed').map((check) => {
+    ...failed.map((check) => {
       const plan = planned.find((item) => item.name === check.name)!;
       return `Browser check ${JSON.stringify(check.name)}: selector=${JSON.stringify(plan.selector)}, assertion=${JSON.stringify(plan.assertion || 'text')}${plan.attribute ? `, attribute=${JSON.stringify(plan.attribute)}` : ''}${plan.nth === undefined ? '' : `, nth=${plan.nth}`}, ${plan.assertion === 'matches' ? 'pattern' : 'expected'}=${JSON.stringify(plan.expected)}, actual=${JSON.stringify(check.actual)}, failure=${JSON.stringify(check.error || 'Assertion failed')}, actions=${JSON.stringify(plan.actions)}`;
     }),
+    ...(pages ? failed : []).filter((check) => check.page).slice(0, 3).map((check) => `Page markup when browser check ${JSON.stringify(check.name)} failed (scripts and styles removed): ${check.page}`),
     ...runtimeErrors.map((error) => `Browser runtime/console error: ${error}`),
     ...blockedRequests.map((request) => `Blocked network request from offline app: ${request}`),
   ].slice(0, 20).map((note) => note.slice(0, 2000));

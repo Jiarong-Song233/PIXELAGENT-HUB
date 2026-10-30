@@ -15,6 +15,20 @@ it('reads disabled state independently of button text and detects an incorrect s
   expect(results.map((result) => result.actual)).toEqual(['false', 'true', 'true', '4']);
 });
 
+it('records the page markup without scripts or styles when a check fails', async () => {
+  const output = { textContent: '0' };
+  const body = { outerHTML: '<body>\n  <output>0</output><script>let x = "<b>";</script><style>b{}</style>\n</body>' };
+  const document = { querySelectorAll: () => [output], body } as unknown as Document;
+  const results = await runDOMChecks(document, [
+    { name: 'Passes', actions: [], selector: 'output', expected: '0' },
+    { name: 'Fails', actions: [], selector: 'output', expected: '1' },
+  ]);
+  expect(results[0].page).toBeUndefined();
+  expect(results[1].page).toBe('<body> <output>0</output> </body>');
+  expect(readCheckResults(JSON.stringify(results))).toEqual(results);
+  expect(readCheckResults(JSON.stringify([{ ...results[1], page: 'x'.repeat(1501) }]))).toBeNull();
+});
+
 it('executes sequential DOM actions, distinguishes assertion failures and rejects ambiguous selectors', async () => {
   const output = { textContent: '0' };
   const button = { click: () => { output.textContent = String(Number(output.textContent) + 1); } };
