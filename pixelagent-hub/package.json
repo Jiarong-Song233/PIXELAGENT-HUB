@@ -1,6 +1,6 @@
 {
   "name": "pixelagent-hub",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "A lightweight, observable multi-agent orchestration framework in TypeScript with multi-provider LLM support",
   "type": "module",
   "main": "dist/src/index.js",

@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.9.0] — 2026-10-29
+
 ### Added
 - Virtual clock: a check may `advance` the app's clock by up to 60 minutes (both runners; `wait` stays capped at 8 s). On [held-out set N with gemini-3.8-flash](docs/software-studio/benchmark-results/2026-10-30-gemini-n/README.md) the pass rate is unchanged (20/21 both), but checks now reach end states they could not before: the egg timer's "done" state was checked in 3/3 runs instead of 0/3
 - `npm run agy:chat`: the benchmark shim can run on the Antigravity CLI (Gemini), for the owner's own benchmarks only
