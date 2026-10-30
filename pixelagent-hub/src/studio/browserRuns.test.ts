@@ -279,6 +279,23 @@ test('real browser reads inline styles, untransformed text and stability after a
   } finally { await rm(root, { recursive: true, force: true }); }
 });
 
+test('real browser matches style colors written in any CSS color form', { skip: process.env.RUN_STUDIO_BROWSER_TESTS !== '1' }, async () => {
+  const root = await mkdtemp(join(tmpdir(), 'browser-style-color-'));
+  try {
+    const content = '<html><body><div id="swatch" style="background-color:#00FF00;color:red">x</div></body></html>';
+    const checks = { checks: [
+      { name: 'Hex', actions: [], selector: '#swatch', assertion: 'attribute', attribute: 'style.background-color', expected: '#00FF00' },
+      { name: 'Named', actions: [], selector: '#swatch', assertion: 'attribute', attribute: 'style.background-color', expected: 'lime' },
+      { name: 'Computed', actions: [], selector: '#swatch', assertion: 'attribute', attribute: 'css.color', expected: '#f00' },
+      { name: 'Other color', actions: [], selector: '#swatch', assertion: 'attribute', attribute: 'style.background-color', expected: '#0000FF' },
+      { name: 'Not a color', actions: [], selector: '#swatch', assertion: 'attribute', attribute: 'style.color', expected: '' },
+    ], limitations: [] };
+    const run = await executeBrowserRun({ root, run: makeRun(content, checks), html: content, plan: checks, signal: new AbortController().signal, executablePath: process.env.STUDIO_BROWSER_EXECUTABLE });
+    assert.deepEqual(run.checks.map((check) => check.status), ['passed', 'passed', 'passed', 'failed', 'failed'], JSON.stringify(run));
+    assert.equal(run.checks[0].actual, 'rgb(0, 255, 0)');
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
 test('real browser captures created timers and matches attributes', { skip: process.env.RUN_STUDIO_BROWSER_TESTS !== '1' }, async () => {
   const root = await mkdtemp(join(tmpdir(), 'browser-created-pattern-'));
   try {

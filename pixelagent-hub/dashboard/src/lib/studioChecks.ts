@@ -83,7 +83,14 @@ export async function runDOMChecks(document: Document, checks: BrowserCheck[], e
       if (assertion === 'changed' && !baseline) expected = read();
       // A pattern also matches its own text literally: "rgb(255, 255, 255)" written unescaped means that string.
       const pattern = assertion === 'matches' ? new RegExp(`(?:${check.expected})|^${check.expected.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'u') : undefined;
-      const matches = (observed: string) => assertion === 'attribute' && check.attribute === 'class' ? (expected.trim() ? expected.trim().split(/\s+/).every((token) => target!.classList.contains(token)) : target!.classList.length === 0) : pattern ? pattern.test(observed) || (!check.attribute && (pattern.test(collapse(target!.textContent ?? '')) || pattern.test(collapse(untransformed(target!))))) : observed === expected || (!check.attribute && (assertion === 'text' || relative || assertion === 'stable') && (collapse(target!.textContent ?? '') === expected || collapse(untransformed(target!)) === expected));
+      // A style value and the expected value that name the same color match (#00FF00 = rgb(0, 255, 0)).
+      const sameColor = (values: string[]) => {
+        const context = document.createElement('canvas').getContext('2d');
+        if (!context || !values.every((value) => CSS.supports('color', value))) return false;
+        const [a, b] = values.map((value) => { context.fillStyle = '#000'; context.fillStyle = value; return context.fillStyle; });
+        return a === b;
+      };
+      const matches = (observed: string) => assertion === 'attribute' && /^(style|css)\./.test(check.attribute ?? '') && observed !== expected ? sameColor([observed, expected]) : assertion === 'attribute' && check.attribute === 'class' ? (expected.trim() ? expected.trim().split(/\s+/).every((token) => target!.classList.contains(token)) : target!.classList.length === 0) : pattern ? pattern.test(observed) || (!check.attribute && (pattern.test(collapse(target!.textContent ?? '')) || pattern.test(collapse(untransformed(target!))))) : observed === expected || (!check.attribute && (assertion === 'text' || relative || assertion === 'stable') && (collapse(target!.textContent ?? '') === expected || collapse(untransformed(target!)) === expected));
       if (assertion === 'stable') {
         await new Promise((resolve) => setTimeout(resolve, 100));
         target = element(check.selector, check.nth);
