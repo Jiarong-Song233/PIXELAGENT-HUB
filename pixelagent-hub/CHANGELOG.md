@@ -2,7 +2,11 @@
 
 ## [Unreleased]
 
+### Changed
+- PLAY LIVE's automatic repair asks the Coder once more when its repair returns every file unchanged, which cannot fix any check. `gpt-6-luna` did that in 20 of 40 offline repairs; [with the retry](docs/software-studio/benchmark-results/2026-10-30-repair-model/README.md) 9 of 39 failing apps were fully fixed instead of 6 (4 discordant cases against 1, not significant). In the same comparison `gemini-3.8-flash` fixed 20 of 38 against luna's 6
+
 ### Added
+- `repair:replay --arms` compares repair models or notes (`name`, `base-url`, `model`, `pages=1`, `nudge=1`) and records how many files each repair changed
 - `npm run repair:replay`: an offline paired A/B of the Coder's repair round on saved failing apps, against a local model endpoint. The in-page runner records the page markup at each failed check (`page`). [Giving that markup to the Coder](docs/software-studio/benchmark-results/2026-10-30-repair-context/README.md) made no difference on 38 failing apps (19 fully fixed in both arms), so the pipeline's repair notes leave it out
 
 ## [2.9.0] — 2026-10-29

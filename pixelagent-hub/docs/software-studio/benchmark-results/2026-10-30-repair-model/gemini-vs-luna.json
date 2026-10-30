@@ -1,0 +1,458 @@
+[
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r10-holdout-c\\mortgage-run2.json",
+    "caseId": "mortgage",
+    "before": "5/9",
+    "failing": [
+      "Standard loan total paid",
+      "Standard loan total interest",
+      "Negative amount shows error",
+      "Negative rate shows error"
+    ],
+    "withPage": 4,
+    "gemini": "9/9",
+    "luna": "7/9"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r10-holdout-c\\reaction-run1.json",
+    "caseId": "reaction",
+    "before": "5/7",
+    "failing": [
+      "Best time recorded after valid round",
+      "Last time recorded after valid round"
+    ],
+    "withPage": 2,
+    "gemini": "5/7",
+    "luna": "5/7"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r10-holdout-d\\seat-picker-run1.json",
+    "caseId": "seat-picker",
+    "before": "8/10",
+    "failing": [
+      "Select two seats sorted",
+      "Two seats total 18"
+    ],
+    "withPage": 2,
+    "gemini": "9/10",
+    "luna": "8/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r10-showcase\\pet-run3.json",
+    "caseId": "pet",
+    "before": "9/10",
+    "failing": [
+      "Mood text after feed"
+    ],
+    "withPage": 1,
+    "gemini": "9/10",
+    "luna": "9/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r10-showcase\\tip-calc-run1.json",
+    "caseId": "tip-calc",
+    "before": "9/10",
+    "failing": [
+      "Decimal bill with 10% for 2 people"
+    ],
+    "withPage": 1,
+    "gemini": "9/10",
+    "luna": "9/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r11-holdout-c\\expense-run1.json",
+    "caseId": "expense",
+    "before": "8/9",
+    "failing": [
+      "Missing payer shows error"
+    ],
+    "withPage": 1,
+    "gemini": "9/9",
+    "luna": "3/9"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r11-holdout-c\\simon-run1.json",
+    "caseId": "simon",
+    "before": "7/8",
+    "failing": [
+      "Restart resets level"
+    ],
+    "withPage": 1,
+    "luna": "7/8",
+    "gemini": "6/8"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r11-holdout-c\\simon-run2.json",
+    "caseId": "simon",
+    "before": "8/10",
+    "failing": [
+      "Wrong click shows Game over and Restart",
+      "Restart visible after game over"
+    ],
+    "withPage": 2,
+    "gemini": "10/10",
+    "luna": "8/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r11-holdout-d\\streak-clicker-run1.json",
+    "caseId": "streak-clicker",
+    "before": "3/5",
+    "failing": [
+      "Next price doubles after purchase",
+      "Auto-clicker adds one point per second"
+    ],
+    "withPage": 2,
+    "gemini": "3/5",
+    "luna": "3/5"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r11-showcase\\pet-run2.json",
+    "caseId": "pet",
+    "before": "9/10",
+    "failing": [
+      "Mood becomes Happy after feed"
+    ],
+    "withPage": 1,
+    "gemini": "10/10",
+    "luna": "8/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r11-showcase\\pet-run3.json",
+    "caseId": "pet",
+    "before": "9/10",
+    "failing": [
+      "Mood turns sleepy after play"
+    ],
+    "withPage": 1,
+    "gemini": "10/10",
+    "luna": "10/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r12-holdout-e\\typing-run2.json",
+    "caseId": "typing",
+    "before": "8/10",
+    "failing": [
+      "Result hidden initially",
+      "Restart clears input and hides result"
+    ],
+    "withPage": 2,
+    "luna": "10/10",
+    "gemini": "10/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r12-holdout-f\\accordion-faq-run1.json",
+    "caseId": "accordion-faq",
+    "before": "8/10",
+    "failing": [
+      "Opening second collapses first",
+      "Clicking open question closes it"
+    ],
+    "withPage": 2,
+    "gemini": "10/10",
+    "luna": "8/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r12-holdout-f\\accordion-faq-run2.json",
+    "caseId": "accordion-faq",
+    "before": "9/10",
+    "failing": [
+      "Arrow rotates when question 4 open"
+    ],
+    "withPage": 1,
+    "gemini": "9/10",
+    "luna": "9/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r12-holdout-f\\dice-race-run2.json",
+    "caseId": "dice-race",
+    "before": "7/8",
+    "failing": [
+      "Space rolls the die"
+    ],
+    "withPage": 1,
+    "gemini": "8/8",
+    "luna": "7/8"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r12-showcase\\memory-run1.json",
+    "caseId": "memory",
+    "before": "7/9",
+    "failing": [
+      "Mismatch flips back after delay",
+      "New Game reshuffles board"
+    ],
+    "withPage": 2,
+    "gemini": "9/9",
+    "luna": "8/9"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r13-holdout-g\\maze-run1.json",
+    "caseId": "maze",
+    "before": "7/8",
+    "failing": [
+      "Escape step count"
+    ],
+    "withPage": 1,
+    "gemini": "7/8",
+    "luna": "7/8"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r13-holdout-g\\maze-run2.json",
+    "caseId": "maze",
+    "before": "6/7",
+    "failing": [
+      "Escape step count"
+    ],
+    "withPage": 1,
+    "gemini": "6/7",
+    "luna": "6/7"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r13-holdout-g\\pomodoro-log-run2.json",
+    "caseId": "pomodoro-log",
+    "before": "7/8",
+    "failing": [
+      "Delete removes entry"
+    ],
+    "withPage": 1,
+    "gemini": "7/8",
+    "luna": "7/8"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r13-showcase\\memory-run1.json",
+    "caseId": "memory",
+    "before": "8/9",
+    "failing": [
+      "New Game reshuffles board"
+    ],
+    "withPage": 1,
+    "gemini": "9/9",
+    "luna": "8/9"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r13-showcase\\pet-run2.json",
+    "caseId": "pet",
+    "before": "9/10",
+    "failing": [
+      "Mood becomes okay after play"
+    ],
+    "withPage": 1,
+    "gemini": "10/10",
+    "luna": "9/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r8-holdout-b\\countdown-run1.json",
+    "caseId": "countdown",
+    "before": "9/10",
+    "failing": [
+      "Pause stops countdown"
+    ],
+    "withPage": 1,
+    "gemini": "9/10",
+    "luna": "9/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r8-holdout-b\\light-switch-run1.json",
+    "caseId": "light-switch",
+    "before": "6/9",
+    "failing": [
+      "Clicking a cell toggles it and its orthogonal neighbours",
+      "Corner click toggles only three cells",
+      "Board cell aria-label reflects on/off state"
+    ],
+    "withPage": 3,
+    "gemini": "6/9",
+    "luna": "7/9"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r8-holdout-b\\light-switch-run2.json",
+    "caseId": "light-switch",
+    "before": "8/9",
+    "failing": [
+      "Clicking a cell does not toggle diagonal neighbours"
+    ],
+    "withPage": 1,
+    "luna": "8/9",
+    "gemini": "7/9"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r8-showcase\\pet-run1.json",
+    "caseId": "pet",
+    "before": "5/6",
+    "failing": [
+      "Hunger bar clamps at 100 after repeated feeding"
+    ],
+    "withPage": 1,
+    "luna": "6/6",
+    "gemini": "5/6"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r8-showcase\\pet-run2.json",
+    "caseId": "pet",
+    "before": "9/10",
+    "failing": [
+      "Mood updates after repeated feeding"
+    ],
+    "withPage": 1,
+    "gemini": "9/10",
+    "luna": "9/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r8-showcase\\pet-run3.json",
+    "caseId": "pet",
+    "before": "5/6",
+    "failing": [
+      "Sleep button increases energy bar width"
+    ],
+    "withPage": 1,
+    "gemini": "6/6",
+    "luna": "5/6"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r8-showcase\\snake-run2.json",
+    "caseId": "snake",
+    "before": "6/7",
+    "failing": [
+      "Pause shows paused overlay"
+    ],
+    "withPage": 1,
+    "gemini": "7/7",
+    "luna": "6/7"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r9-holdout-b\\coin-run1.json",
+    "caseId": "coin",
+    "before": "9/10",
+    "failing": [
+      "Flip increments total count by one"
+    ],
+    "withPage": 1,
+    "luna": "10/10",
+    "gemini": "10/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r9-holdout-b\\light-switch-run1.json",
+    "caseId": "light-switch",
+    "before": "6/8",
+    "failing": [
+      "Center click toggles center and neighbors",
+      "Corner click toggles three cells"
+    ],
+    "withPage": 2,
+    "gemini": "6/8",
+    "luna": "6/8"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r9-holdout-b\\light-switch-run2.json",
+    "caseId": "light-switch",
+    "before": "6/7",
+    "failing": [
+      "Corner click leaves diagonal off"
+    ],
+    "withPage": 1,
+    "gemini": "7/7",
+    "luna": "7/7"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r9-holdout-c\\expense-run2.json",
+    "caseId": "expense",
+    "before": "9/10",
+    "failing": [
+      "Invalid amount shows error"
+    ],
+    "withPage": 1,
+    "gemini": "10/10",
+    "luna": "9/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r9-holdout-c\\mortgage-run2.json",
+    "caseId": "mortgage",
+    "before": "9/10",
+    "failing": [
+      "Reset hides results"
+    ],
+    "withPage": 1,
+    "gemini": "10/10",
+    "luna": "9/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r9-holdout-c\\simon-run1.json",
+    "caseId": "simon",
+    "before": "6/7",
+    "failing": [
+      "Wrong click shows Game over"
+    ],
+    "withPage": 1,
+    "gemini": "7/7",
+    "luna": "6/7"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\r9-showcase\\memory-run3.json",
+    "caseId": "memory",
+    "before": "7/8",
+    "failing": [
+      "First flip reveals card"
+    ],
+    "withPage": 1,
+    "gemini": "8/8",
+    "luna": "7/8"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\run\\flashcards-run2.json",
+    "caseId": "flashcards",
+    "before": "9/10",
+    "failing": [
+      "Initial state shows first word and known count"
+    ],
+    "withPage": 1,
+    "luna": "9/10",
+    "gemini": "error: Coder 502: agy exceeded 290 s and was stopped"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-holdout\\run\\tictactoe-run2.json",
+    "caseId": "tictactoe",
+    "before": "9/10",
+    "failing": [
+      "Full board with no line is a draw"
+    ],
+    "withPage": 1,
+    "luna": "9/10",
+    "gemini": "error: Bad control character in string literal in JSON at position 689 (line 4 column 638)"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-strategy\\fixed-manager-coder\\todo-run2.json",
+    "caseId": "todo",
+    "before": "8/10",
+    "failing": [
+      "Initial total zero",
+      "Delete updates total"
+    ],
+    "withPage": 2,
+    "luna": "10/10",
+    "gemini": "10/10"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-strategy\\holdout-h-coder-only\\door-lock-run1.json",
+    "caseId": "door-lock",
+    "before": "5/7",
+    "failing": [
+      "Lock after 3 wrong tries",
+      "Keys disabled while locked"
+    ],
+    "withPage": 2,
+    "luna": "5/7",
+    "gemini": "5/7"
+  },
+  {
+    "path": "docs\\software-studio\\benchmark-results\\2026-10-21-strategy\\holdout-h-coder-only\\door-lock-run2.json",
+    "caseId": "door-lock",
+    "before": "4/6",
+    "failing": [
+      "Lockout after three wrong tries",
+      "Keys disabled during lockout"
+    ],
+    "withPage": 2,
+    "luna": "4/6",
+    "gemini": "2/6"
+  }
+]
