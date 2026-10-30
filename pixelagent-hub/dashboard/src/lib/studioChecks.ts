@@ -1,5 +1,6 @@
 export type BrowserCheck = { name: string; trace?: string; actions: ({ type: 'click'; selector: string; nth?: number } | { type: 'input'; selector: string; nth?: number; value: string } | { type: 'key'; selector: string; nth?: number; key: string } | { type: 'wait'; ms: number } | { type: 'advance'; ms: number })[]; selector: string; nth?: number; expected: string; assertion?: 'text' | 'matches' | 'disabled' | 'visible' | 'count' | 'attribute' | 'changed' | 'unchanged' | 'stable'; attribute?: string };
-export type BrowserCheckResult = { name: string; status: 'passed' | 'failed'; actual: string; error?: string };
+/** `page`: on a failure, the body's markup at that moment (no scripts or styles, ≤1500 chars); see browserFailureNotes. */
+export type BrowserCheckResult = { name: string; status: 'passed' | 'failed'; actual: string; error?: string; page?: string };
 
 // This function is serialized into the sandbox. Keep all helpers local; no eval or model code.
 export async function runDOMChecks(document: Document, checks: BrowserCheck[], errorCount: () => number = () => 0): Promise<BrowserCheckResult[]> {
@@ -114,7 +115,8 @@ export async function runDOMChecks(document: Document, checks: BrowserCheck[], e
       if (!matched) throw new Error(`Expected ${JSON.stringify(check.expected)}, observed ${JSON.stringify(actual)}`);
       results.push({ name: check.name, status: 'passed', actual });
     } catch (error) {
-      results.push({ name: check.name, status: 'failed', actual, error: (error instanceof Error ? error.message : String(error)).slice(0, 2000) });
+      const page = (document.body?.outerHTML ?? '').replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, '').replace(/\s+/g, ' ').trim().slice(0, 1500);
+      results.push({ name: check.name, status: 'failed', actual, error: (error instanceof Error ? error.message : String(error)).slice(0, 2000), ...(page ? { page } : {}) });
     }
   }
   return results;
@@ -126,7 +128,8 @@ export function readCheckResults(message: string): BrowserCheckResult[] | null {
     if (!Array.isArray(results) || results.length < 1 || results.length > 10 || results.some((result) => !result
       || typeof result.name !== 'string' || result.name.length > 120 || !['passed', 'failed'].includes(result.status)
       || typeof result.actual !== 'string' || result.actual.length > 300
-      || (result.error !== undefined && (typeof result.error !== 'string' || result.error.length > 2000)))) return null;
+      || (result.error !== undefined && (typeof result.error !== 'string' || result.error.length > 2000))
+      || (result.page !== undefined && (typeof result.page !== 'string' || result.page.length > 1500)))) return null;
     return results;
   } catch { return null; }
 }
