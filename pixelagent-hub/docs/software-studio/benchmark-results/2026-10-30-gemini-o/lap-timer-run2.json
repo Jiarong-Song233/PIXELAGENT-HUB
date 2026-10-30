@@ -1,0 +1,428 @@
+{
+  "caseId": "lap-timer",
+  "run": 2,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8980,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 80,
+  "reportedTokens": 36316,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:09:12.609Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:09:12.609Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:09:30.124Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Lap Timer"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:09:30.124Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:10:07.532Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 2
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:10:07.532Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:10:07.967Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:10:07.967Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "9756b361-1c81-49a1-b906-2c139fa5950c"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:10:26.402Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "9756b361-1c81-49a1-b906-2c139fa5950c",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:10:26.403Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "testPlanId": "9756b361-1c81-49a1-b906-2c139fa5950c",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Initial display shows 00:00.0",
+        "passed": true,
+        "actual": "00:00.0"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Toggle button shows Start initially",
+        "passed": true,
+        "actual": "START"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Lap button initially disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Reset button initially disabled",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Initial laps list shows empty state",
+        "passed": true,
+        "actual": "No laps recorded yet."
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Start toggles button text to Stop",
+        "passed": true,
+        "actual": "STOP"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Timer advances and updates display format",
+        "passed": true,
+        "actual": "00:00.2"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Lap records item and lists newest first",
+        "passed": true,
+        "actual": "Lap 2FAST 00:00.1"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Fastest lap receives highlight class",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:10:30.754Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "name": "Reset clears timer and laps back to default",
+        "passed": true,
+        "actual": "00:00.0"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-30T02:10:30.755Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "8be73ecc-80e1-4a79-8947-4bd5e52ddb97",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-30T02:10:30.759Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial display shows 00:00.0",
+        "actions": [],
+        "selector": "#displayTime",
+        "expected": "00:00.0"
+      },
+      {
+        "name": "Toggle button shows Start initially",
+        "actions": [],
+        "selector": "#btnToggle",
+        "expected": "Start"
+      },
+      {
+        "name": "Lap button initially disabled",
+        "actions": [],
+        "selector": "#btnLap",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Reset button initially disabled",
+        "actions": [],
+        "selector": "#btnReset",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "Initial laps list shows empty state",
+        "actions": [],
+        "selector": "#emptyLapsState",
+        "expected": "No laps recorded yet."
+      },
+      {
+        "name": "Start toggles button text to Stop",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnToggle"
+          }
+        ],
+        "selector": "#btnToggle",
+        "expected": "Stop"
+      },
+      {
+        "name": "Timer advances and updates display format",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnToggle"
+          },
+          {
+            "type": "wait",
+            "ms": 250
+          }
+        ],
+        "selector": "#displayTime",
+        "expected": "^\\d{2}:\\d{2}\\.\\d$",
+        "assertion": "matches"
+      },
+      {
+        "name": "Lap records item and lists newest first",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnToggle"
+          },
+          {
+            "type": "wait",
+            "ms": 150
+          },
+          {
+            "type": "click",
+            "selector": "#btnLap"
+          },
+          {
+            "type": "wait",
+            "ms": 150
+          },
+          {
+            "type": "click",
+            "selector": "#btnLap"
+          }
+        ],
+        "selector": ".lap-item",
+        "nth": 0,
+        "expected": "^Lap 2.*",
+        "assertion": "matches"
+      },
+      {
+        "name": "Fastest lap receives highlight class",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnToggle"
+          },
+          {
+            "type": "wait",
+            "ms": 300
+          },
+          {
+            "type": "click",
+            "selector": "#btnLap"
+          },
+          {
+            "type": "wait",
+            "ms": 100
+          },
+          {
+            "type": "click",
+            "selector": "#btnLap"
+          }
+        ],
+        "selector": ".lap-item.fastest",
+        "expected": "1",
+        "assertion": "count"
+      },
+      {
+        "name": "Reset clears timer and laps back to default",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnToggle"
+          },
+          {
+            "type": "wait",
+            "ms": 150
+          },
+          {
+            "type": "click",
+            "selector": "#btnLap"
+          },
+          {
+            "type": "click",
+            "selector": "#btnToggle"
+          },
+          {
+            "type": "click",
+            "selector": "#btnReset"
+          }
+        ],
+        "selector": "#displayTime",
+        "expected": "00:00.0"
+      }
+    ],
+    "limitations": [
+      "Cannot verify pixel canvas or retro box-shadow rendering",
+      "Timer uses performance.now and requestAnimationFrame so advance action cannot fast-forward time"
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13732,
+      "completion_tokens": 502,
+      "total_tokens": 14234
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Lap Timer</title>\n  <style>\n    [hidden] { display: none !important; }\n\n    :root {\n      --bg-color: #1a1a24;\n      --card-bg: #28283d;\n      --accent-main: #38b764;\n      --accent-hover: #43db78;\n      --accent-active: #257942;\n      --danger-main: #e03b4b;\n      --danger-hover: #f75565;\n      --danger-active: #a12431;\n      --neutral-btn: #3e3f5e;\n      --neutral-hover: #505279;\n      --neutral-active: #2d2e46;\n      --gold-fastest: #ffd700;\n      --text-main: #ffffff;\n      --text-muted: #9aa1b8;\n      --pixel-border: #0d0d14;\n      --pixel-shadow: #12121c;\n    }\n\n    * {\n      box-sizing: border-box;\n      margin: 0;\n      padding: 0;\n    }\n\n    body {\n      font-family: 'Courier New', Courier, monospace, system-ui;\n      font-size: 16px;\n      background-color: var(--bg-color);\n      color: var(--text-main);\n      min-height: 100vh;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      padding: 16px;\n      background-image: \n        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),\n        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);\n      background-size: 16px 16px;\n    }\n\n    .timer-card {\n      background-color: var(--card-bg);\n      border: 4px solid var(--pixel-border);\n      box-shadow: 8px 8px 0px var(--pixel-shadow);\n      width: 100%;\n      max-width: 440px;\n      padding: 24px;\n      display: flex;\n      flex-direction: column;\n      gap: 20px;\n    }\n\n    header {\n      text-align: center;\n    }\n\n    h1 {\n      font-size: 24px;\n      letter-spacing: 2px;\n      text-transform: uppercase;\n      color: var(--gold-fastest);\n      text-shadow: 2px 2px 0px var(--pixel-border);\n    }\n\n    .display-box {\n      background-color: #0d0d14;\n      border: 4px solid var(--pixel-border);\n      box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.5);\n      padding: 18px;\n      text-align: center;\n    }\n\n    .display-time {\n      font-size: 40px;\n      font-weight: 700;\n      letter-spacing: 3px;\n      color: #56f390;\n      text-shadow: 0 0 4px rgba(86, 243, 144, 0.4);\n      font-variant-numeric: tabular-nums;\n      user-select: none;\n    }\n\n    .controls {\n      display: flex;\n      flex-wrap: wrap;\n      gap: 12px;\n    }\n\n    .btn {\n      flex: 1 1 calc(33.333% - 12px);\n      min-width: 90px;\n      font-family: inherit;\n      font-size: 16px;\n      font-weight: 700;\n      text-transform: uppercase;\n      color: var(--text-main);\n      background-color: var(--neutral-btn);\n      border: 3px solid var(--pixel-border);\n      box-shadow: 3px 3px 0px var(--pixel-shadow);\n      padding: 12px 8px;\n      cursor: pointer;\n      outline: none;\n      position: relative;\n      transition: transform 0.05s ease;\n    }\n\n    .btn:hover:not(:disabled) {\n      background-color: var(--neutral-hover);\n    }\n\n    .btn:active:not(:disabled) {\n      transform: translate(2px, 2px);\n      box-shadow: 1px 1px 0px var(--pixel-shadow);\n    }\n\n    .btn:focus-visible {\n      outline: 3px dashed var(--gold-fastest);\n      outline-offset: 2px;\n    }\n\n    .btn:disabled {\n      opacity: 0.45;\n      cursor: not-allowed;\n      filter: grayscale(0.8);\n    }\n\n    .btn-toggle {\n      background-color: var(--accent-main);\n    }\n\n    .btn-toggle:hover:not(:disabled) {\n      background-color: var(--accent-hover);\n    }\n\n    .btn-toggle.running {\n      background-color: var(--danger-main);\n    }\n\n    .btn-toggle.running:hover:not(:disabled) {\n      background-color: var(--danger-hover);\n    }\n\n    .btn-toggle:active:not(:disabled) {\n      background-color: var(--accent-active);\n    }\n\n    .btn-toggle.running:active:not(:disabled) {\n      background-color: var(--danger-active);\n    }\n\n    .laps-section {\n      display: flex;\n      flex-direction: column;\n      gap: 8px;\n    }\n\n    .laps-header {\n      display: flex;\n      justify-content: space-between;\n      padding: 0 8px 4px;\n      font-size: 14px;\n      font-weight: 700;\n      color: var(--text-muted);\n      border-bottom: 2px solid var(--pixel-border);\n    }\n\n    .laps-list {\n      list-style: none;\n      max-height: 220px;\n      overflow-y: auto;\n      display: flex;\n      flex-direction: column;\n      gap: 6px;\n      padding-right: 4px;\n    }\n\n    .laps-list::-webkit-scrollbar {\n      width: 8px;\n    }\n\n    .laps-list::-webkit-scrollbar-track {\n      background: #0d0d14;\n    }\n\n    .laps-list::-webkit-scrollbar-thumb {\n      background: var(--neutral-btn);\n      border: 1px solid var(--pixel-border);\n    }\n\n    .lap-item {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      padding: 10px 12px;\n      background-color: #1f1f30;\n      border: 2px solid var(--pixel-border);\n      box-shadow: 2px 2px 0px var(--pixel-shadow);\n      font-size: 16px;\n    }\n\n    .lap-item.fastest {\n      background-color: #3b371d;\n      border-color: var(--gold-fastest);\n      color: var(--gold-fastest);\n      font-weight: 700;\n    }\n\n    .fastest-badge {\n      font-size: 12px;\n      background-color: var(--gold-fastest);\n      color: #000000;\n      padding: 2px 6px;\n      margin-left: 8px;\n      text-transform: uppercase;\n      border: 1px solid var(--pixel-border);\n    }\n\n    .empty-state {\n      text-align: center;\n      color: var(--text-muted);\n      padding: 16px 0;\n      font-style: italic;\n      font-size: 14px;\n    }\n\n    @media (max-width: 360px) {\n      .timer-card {\n        padding: 16px;\n      }\n      .display-time {\n        font-size: 34px;\n      }\n      .btn {\n        flex: 1 1 100%;\n      }\n    }\n  </style>\n</head>\n<body>\n  <main class=\"timer-card\" role=\"region\" aria-label=\"Pixel Lap Timer\">\n    <header>\n      <h1>Pixel Timer</h1>\n    </header>\n\n    <section class=\"display-box\" aria-live=\"polite\">\n      <div id=\"displayTime\" class=\"display-time\" aria-label=\"Elapsed time\">00:00.0</div>\n    </section>\n\n    <nav class=\"controls\" aria-label=\"Timer Controls\">\n      <button id=\"btnToggle\" class=\"btn btn-toggle\" type=\"button\" aria-label=\"Start or Stop Timer\">Start</button>\n      <button id=\"btnLap\" class=\"btn\" type=\"button\" disabled aria-label=\"Record Lap\">Lap</button>\n      <button id=\"btnReset\" class=\"btn\" type=\"button\" disabled aria-label=\"Reset Timer\">Reset</button>\n    </nav>\n\n    <section class=\"laps-section\" aria-label=\"Recorded Laps\">\n      <div class=\"laps-header\">\n        <span>Lap #</span>\n        <span>Split Time</span>\n      </div>\n      <ol id=\"lapsList\" class=\"laps-list\" reversed>\n        <li id=\"emptyLapsState\" class=\"empty-state\">No laps recorded yet.</li>\n      </ol>\n    </section>\n  </main>\n\n  <script>\n    (function() {\n      let isRunning = false;\n      let startTime = 0;\n      let accumulatedTime = 0;\n      let previousLapTotal = 0;\n      let animationFrameId = null;\n      let laps = [];\n\n      const displayTime = document.getElementById('displayTime');\n      const btnToggle = document.getElementById('btnToggle');\n      const btnLap = document.getElementById('btnLap');\n      const btnReset = document.getElementById('btnReset');\n      const lapsList = document.getElementById('lapsList');\n      const emptyLapsState = document.getElementById('emptyLapsState');\n\n      function formatTime(ms) {\n        const totalTenths = Math.floor(ms / 100);\n        const tenths = totalTenths % 10;\n        const totalSeconds = Math.floor(totalTenths / 10);\n        const seconds = totalSeconds % 60;\n        const minutes = Math.floor(totalSeconds / 60);\n\n        const pad = (num) => String(num).padStart(2, '0');\n        return `${pad(minutes)}:${pad(seconds)}.${tenths}`;\n      }\n\n      function getElapsedTime() {\n        if (!isRunning) return accumulatedTime;\n        return accumulatedTime + (performance.now() - startTime);\n      }\n\n      function updateDisplay() {\n        displayTime.textContent = formatTime(getElapsedTime());\n        if (isRunning) {\n          animationFrameId = requestAnimationFrame(updateDisplay);\n        }\n      }\n\n      function renderLaps() {\n        if (laps.length === 0) {\n          lapsList.innerHTML = '<li id=\"emptyLapsState\" class=\"empty-state\">No laps recorded yet.</li>';\n          return;\n        }\n\n        let minDuration = Infinity;\n        laps.forEach(l => {\n          if (l.duration < minDuration) {\n            minDuration = l.duration;\n          }\n        });\n\n        lapsList.innerHTML = '';\n        laps.slice().reverse().forEach(lap => {\n          const li = document.createElement('li');\n          const isFastest = laps.length > 1 && lap.duration === minDuration;\n          \n          li.className = 'lap-item' + (isFastest ? ' fastest' : '');\n\n          const lapNumberSpan = document.createElement('span');\n          lapNumberSpan.textContent = `Lap ${lap.id}`;\n\n          if (isFastest) {\n            const badge = document.createElement('span');\n            badge.className = 'fastest-badge';\n            badge.textContent = 'FAST';\n            badge.setAttribute('aria-label', 'Fastest Lap');\n            lapNumberSpan.appendChild(badge);\n          }\n\n          const lapTimeSpan = document.createElement('span');\n          lapTimeSpan.textContent = formatTime(lap.duration);\n\n          li.appendChild(lapNumberSpan);\n          li.appendChild(lapTimeSpan);\n          lapsList.appendChild(li);\n        });\n      }\n\n      function handleToggle() {\n        if (!isRunning) {\n          isRunning = true;\n          startTime = performance.now();\n          btnToggle.textContent = 'Stop';\n          btnToggle.classList.add('running');\n          btnLap.disabled = false;\n          btnReset.disabled = true;\n          animationFrameId = requestAnimationFrame(updateDisplay);\n        } else {\n          isRunning = false;\n          accumulatedTime += (performance.now() - startTime);\n          cancelAnimationFrame(animationFrameId);\n          displayTime.textContent = formatTime(accumulatedTime);\n          btnToggle.textContent = 'Start';\n          btnToggle.classList.remove('running');\n          btnLap.disabled = true;\n          btnReset.disabled = false;\n        }\n      }\n\n      function handleLap() {\n        if (!isRunning) return;\n        const totalElapsed = getElapsedTime();\n        const lapDuration = totalElapsed - previousLapTotal;\n        previousLapTotal = totalElapsed;\n\n        const newLap = {\n          id: laps.length + 1,\n          duration: lapDuration,\n          total: totalElapsed\n        };\n\n        laps.push(newLap);\n        renderLaps();\n      }\n\n      function handleReset() {\n        if (isRunning) return;\n        accumulatedTime = 0;\n        previousLapTotal = 0;\n        laps = [];\n        displayTime.textContent = '00:00.0';\n        btnReset.disabled = true;\n        btnLap.disabled = true;\n        renderLaps();\n      }\n\n      btnToggle.addEventListener('click', handleToggle);\n      btnLap.addEventListener('click', handleLap);\n      btnReset.addEventListener('click', handleReset);\n    })();\n  </script>\n</body>\n</html>\n",
+      "description": "Main HTML file containing the semantic markup, embedded pixel CSS styling, and vanilla JavaScript timer logic."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Lap Timer\n\nA responsive, offline, pixel-themed browser lap timer app implemented using pure HTML5, CSS3, and vanilla JavaScript.\n\n## Features\n\n- **Precise Timer Display**: High-resolution timer displaying elapsed time formatted as `mm:ss.t` (minutes:seconds.tenths).\n- **Start / Stop Toggle**: Toggle control that updates button state, styling, and timer status.\n- **Lap Recording**: Records lap splits calculated from high-resolution intervals and displays them in a numbered list with the newest lap on top.\n- **Fastest Lap Highlighting**: Computes split times across all recorded laps and applies dynamic pixel highlight and badge to the fastest lap.\n- **Full Reset**: Resets timer accumulator, display (`00:00.0`), button accessibility states, and clears the lap record list.\n- **Accessibility & Pixel Aesthetics**: Labeled keyboard-accessible buttons (`Enter` / `Space`), visible focus rings, responsive down to 360px viewports, and themed retro pixel-art aesthetic without external fonts or images.\n\n## Controls\n\n- **Start / Stop**: Begins or halts time accumulation.\n- **Lap**: Records the duration since the previous lap or start. Enabled only while timer is running.\n- **Reset**: Restores display to `00:00.0` and clears recorded laps. Enabled when stopped.\n\n## Setup and Execution\n\nThis is a 100% client-side application with zero dependencies, network calls, or bundlers.\n\n1. Open `index.html` in any modern web browser.\n2. Or serve it locally using any static web server:\n   ```bash\n   npx serve .\n   ```\n",
+      "description": "Project documentation with architecture details, user controls, design system, and execution instructions."
+    }
+  ]
+}

@@ -1,0 +1,612 @@
+{
+  "caseId": "word-ladder",
+  "run": 2,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8775,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": true,
+  "checksDropped": 0,
+  "checksRevised": 1,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/10",
+    "10/10"
+  ],
+  "repairTriggered": true,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": true,
+  "elapsedSeconds": 90,
+  "reportedTokens": 49409,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:17:12.970Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:17:12.970Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:17:24.201Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Word Chain Game"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:17:24.201Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:17:58.220Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:17:58.220Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:17:58.757Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:17:58.758Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "869538ec-81c1-4293-83bd-ad1e956d4acf"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:18:15.866Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "869538ec-81c1-4293-83bd-ad1e956d4acf",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:18:15.866Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "testPlanId": "869538ec-81c1-4293-83bd-ad1e956d4acf",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:18:21.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "initial chain counter shows 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:18:21.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "initial current word shows pixel",
+        "passed": true,
+        "actual": "pixel"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "initial target hint shows letter L",
+        "passed": true,
+        "actual": "'L'"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "valid word increment chain counter to 2",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "valid word updates current word display",
+        "passed": true,
+        "actual": "logic"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "valid word updates required letter for next word",
+        "passed": true,
+        "actual": "'C'"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "reject starting word pixel with Already used",
+        "passed": false,
+        "actual": "Word must begin with 'L'."
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "reject previously added word with Already used",
+        "passed": true,
+        "actual": "Already used"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "reject word starting with wrong letter",
+        "passed": true,
+        "actual": "Word must begin with 'L'."
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "name": "restart button resets chain counter back to 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-30T02:18:21.094Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "6b70fe4b-0dfe-4a02-bd31-87d681446f10",
+        "status": "failed",
+        "passed": 9,
+        "failed": 1,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-30T02:18:21.096Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "869538ec-81c1-4293-83bd-ad1e956d4acf",
+        "review": true
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-30T02:18:37.863Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "869538ec-81c1-4293-83bd-ad1e956d4acf",
+        "checks": 10,
+        "review": true,
+        "revised": 1,
+        "dropped": 0,
+        "llmModel": "gemini-3.8-flash-low",
+        "llmUsage": {
+          "prompt_tokens": 13018,
+          "completion_tokens": 441,
+          "total_tokens": 13459
+        },
+        "verdicts": [
+          {
+            "name": "reject starting word pixel with Already used",
+            "verdict": "check-wrong",
+            "reason": "The check attempts to input 'pixel' as the first move and expects 'Already used'. However, the starting word is 'pixel', meaning the first entered word must begin with the last letter of 'pixel', whic"
+          }
+        ]
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-30T02:18:37.864Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "testPlanId": "869538ec-81c1-4293-83bd-ad1e956d4acf",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "initial chain counter shows 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "initial current word shows pixel",
+        "passed": true,
+        "actual": "pixel"
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "initial target hint shows letter L",
+        "passed": true,
+        "actual": "'L'"
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "valid word increment chain counter to 2",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "valid word updates current word display",
+        "passed": true,
+        "actual": "logic"
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "valid word updates required letter for next word",
+        "passed": true,
+        "actual": "'C'"
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "reject starting word pixel with Already used",
+        "passed": true,
+        "actual": "Already used"
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "reject previously added word with Already used",
+        "passed": true,
+        "actual": "Already used"
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "reject word starting with wrong letter",
+        "passed": true,
+        "actual": "Word must begin with 'L'."
+      }
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "name": "restart button resets chain counter back to 1",
+        "passed": true,
+        "actual": "1"
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-30T02:18:41.093Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "74da50ba-f7fe-4e1f-9932-dfd5c1549c8f",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-30T02:18:41.095Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "initial chain counter shows 1",
+        "actions": [],
+        "selector": "#chain-counter",
+        "expected": "1"
+      },
+      {
+        "name": "initial current word shows pixel",
+        "actions": [],
+        "selector": "#current-word",
+        "expected": "pixel"
+      },
+      {
+        "name": "initial target hint shows letter L",
+        "actions": [],
+        "selector": "#required-letter",
+        "expected": "'L'"
+      },
+      {
+        "name": "valid word increment chain counter to 2",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "logic"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          }
+        ],
+        "selector": "#chain-counter",
+        "expected": "2"
+      },
+      {
+        "name": "valid word updates current word display",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "logic"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          }
+        ],
+        "selector": "#current-word",
+        "expected": "logic"
+      },
+      {
+        "name": "valid word updates required letter for next word",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "logic"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          }
+        ],
+        "selector": "#required-letter",
+        "expected": "'C'"
+      },
+      {
+        "name": "reject starting word pixel with Already used",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "loop"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          },
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "pixel"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          }
+        ],
+        "selector": "#message-area",
+        "expected": "Already used"
+      },
+      {
+        "name": "reject previously added word with Already used",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "level"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          },
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "level"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          }
+        ],
+        "selector": "#message-area",
+        "expected": "Already used"
+      },
+      {
+        "name": "reject word starting with wrong letter",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "cat"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          }
+        ],
+        "selector": "#message-area",
+        "expected": "Word must begin with 'L'."
+      },
+      {
+        "name": "restart button resets chain counter back to 1",
+        "actions": [
+          {
+            "type": "input",
+            "selector": "#word-input",
+            "value": "logic"
+          },
+          {
+            "type": "click",
+            "selector": "#submit-btn"
+          },
+          {
+            "type": "click",
+            "selector": "#reset-btn"
+          }
+        ],
+        "selector": "#chain-counter",
+        "expected": "1"
+      }
+    ],
+    "limitations": [],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13552,
+      "completion_tokens": 852,
+      "total_tokens": 14404
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Word Chain Game</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"game-container\">\n    <header class=\"game-header\">\n      <h1 class=\"game-title\">Pixel Word Chain</h1>\n      <p class=\"game-subtitle\">Chain words letter-by-letter!</p>\n    </header>\n\n    <section class=\"score-board\" aria-label=\"Game stats\">\n      <div class=\"stat-box\">\n        <span class=\"stat-label\">Chain Length</span>\n        <span id=\"chain-counter\" class=\"stat-value\" aria-live=\"polite\">1</span>\n      </div>\n      <div class=\"stat-box\">\n        <span class=\"stat-label\">Current Word</span>\n        <span id=\"current-word\" class=\"stat-value highlight\" aria-live=\"polite\">pixel</span>\n      </div>\n    </section>\n\n    <section class=\"game-play\">\n      <p id=\"target-hint\" class=\"target-hint\">\n        Enter a word starting with letter <strong id=\"required-letter\">'L'</strong>\n      </p>\n\n      <form id=\"word-form\" class=\"word-form\" novalidate>\n        <label for=\"word-input\" class=\"visually-hidden\">Enter next word</label>\n        <div class=\"input-group\">\n          <input \n            type=\"text\" \n            id=\"word-input\" \n            name=\"word\" \n            class=\"text-input\" \n            placeholder=\"e.g. logic\"\n            autocomplete=\"off\" \n            autocapitalize=\"none\" \n            spellcheck=\"false\"\n            required\n          >\n          <button type=\"submit\" id=\"submit-btn\" class=\"btn btn-primary\">Submit</button>\n        </div>\n      </form>\n\n      <div id=\"message-area\" class=\"message-area\" role=\"status\" aria-live=\"assertive\"></div>\n    </section>\n\n    <section class=\"history-section\" aria-labelledby=\"history-title\">\n      <h2 id=\"history-title\" class=\"history-title\">Word Chain History</h2>\n      <ol id=\"word-list\" class=\"word-list\">\n        <li class=\"word-item\">pixel</li>\n      </ol>\n    </section>\n\n    <footer class=\"controls-footer\">\n      <button type=\"button\" id=\"reset-btn\" class=\"btn btn-secondary\">Restart Game</button>\n    </footer>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main single-page HTML layout containing semantic structure, accessibility live regions, and controls."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Hidden attribute priority rule */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #1a1c23;\n  --card-bg: #282a36;\n  --primary: #50fa7b;\n  --primary-hover: #3dd665;\n  --primary-active: #2bb050;\n  --secondary: #ff79c6;\n  --secondary-hover: #e063b0;\n  --text-main: #f8f8f2;\n  --text-dim: #bd93f9;\n  --error-color: #ff5555;\n  --border-color: #44475a;\n  --font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--bg-color);\n  color: var(--text-main);\n  font-family: var(--font-family);\n  font-size: 16px;\n  line-height: 1.5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n}\n\n.visually-hidden {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border: 0;\n}\n\n.game-container {\n  width: 100%;\n  max-width: 480px;\n  background-color: var(--card-bg);\n  border: 2px solid var(--border-color);\n  border-radius: 8px;\n  padding: 1.5rem;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);\n  display: flex;\n  flex-direction: column;\n  gap: 1.25rem;\n}\n\n.game-header {\n  text-align: center;\n}\n\n.game-title {\n  font-size: 1.6rem;\n  color: var(--primary);\n  letter-spacing: 0.05em;\n}\n\n.game-subtitle {\n  color: var(--text-dim);\n  font-size: 0.95rem;\n  margin-top: 0.25rem;\n}\n\n.score-board {\n  display: flex;\n  justify-content: space-between;\n  background-color: var(--bg-color);\n  border: 1px solid var(--border-color);\n  border-radius: 6px;\n  padding: 0.75rem 1rem;\n  gap: 0.5rem;\n}\n\n.stat-box {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  flex: 1;\n}\n\n.stat-label {\n  font-size: 0.8rem;\n  color: var(--text-dim);\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n}\n\n.stat-value {\n  font-size: 1.25rem;\n  font-weight: 700;\n}\n\n.stat-value.highlight {\n  color: var(--secondary);\n  word-break: break-all;\n}\n\n.target-hint {\n  font-size: 1rem;\n  text-align: center;\n  margin-bottom: 0.75rem;\n  color: var(--text-main);\n}\n\n.target-hint strong {\n  color: var(--primary);\n  font-size: 1.15rem;\n}\n\n.input-group {\n  display: flex;\n  gap: 0.5rem;\n}\n\n.text-input {\n  flex: 1;\n  min-width: 0;\n  padding: 0.65rem 0.85rem;\n  font-size: 1rem;\n  background-color: var(--bg-color);\n  border: 2px solid var(--border-color);\n  border-radius: 6px;\n  color: var(--text-main);\n  outline: none;\n  transition: border-color 0.2s;\n}\n\n.text-input:focus {\n  border-color: var(--primary);\n  box-shadow: 0 0 0 2px rgba(80, 250, 123, 0.25);\n}\n\n.btn {\n  padding: 0.65rem 1rem;\n  font-size: 1rem;\n  font-weight: 600;\n  border-radius: 6px;\n  border: none;\n  cursor: pointer;\n  transition: background-color 0.15s, transform 0.1s, box-shadow 0.15s;\n  white-space: nowrap;\n}\n\n.btn:focus-visible {\n  outline: 2px solid var(--text-main);\n  outline-offset: 2px;\n}\n\n.btn:active {\n  transform: translateY(1px);\n}\n\n.btn-primary {\n  background-color: var(--primary);\n  color: #111217;\n}\n\n.btn-primary:hover {\n  background-color: var(--primary-hover);\n}\n\n.btn-primary:active {\n  background-color: var(--primary-active);\n}\n\n.btn-secondary {\n  background-color: transparent;\n  color: var(--text-dim);\n  border: 1px solid var(--border-color);\n  width: 100%;\n}\n\n.btn-secondary:hover {\n  background-color: rgba(189, 147, 249, 0.1);\n  color: var(--text-main);\n  border-color: var(--text-dim);\n}\n\n.message-area {\n  min-height: 1.5rem;\n  margin-top: 0.5rem;\n  font-size: 0.95rem;\n  font-weight: 500;\n  text-align: center;\n}\n\n.message-area.error {\n  color: var(--error-color);\n}\n\n.message-area.success {\n  color: var(--primary);\n}\n\n.history-section {\n  display: flex;\n  flex-direction: column;\n  gap: 0.5rem;\n}\n\n.history-title {\n  font-size: 0.9rem;\n  color: var(--text-dim);\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n}\n\n.word-list {\n  list-style-position: inside;\n  background-color: var(--bg-color);\n  border: 1px solid var(--border-color);\n  border-radius: 6px;\n  padding: 0.75rem 1rem;\n  max-height: 150px;\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  gap: 0.25rem;\n}\n\n.word-item {\n  font-family: monospace;\n  font-size: 1rem;\n  color: var(--text-main);\n}\n\n@media (max-width: 400px) {\n  .game-container {\n    padding: 1rem;\n  }\n  \n  .input-group {\n    flex-direction: column;\n  }\n  \n  .btn {\n    width: 100%;\n  }\n}",
+      "description": "Responsive styling using a cohesive 4-color retro pixel-themed palette, system fonts, clear states, and the required [hidden] rule."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const START_WORD = 'pixel';\n  let chain = [START_WORD];\n  let usedWords = new Set([START_WORD]);\n\n  const chainCounterEl = document.getElementById('chain-counter');\n  const currentWordEl = document.getElementById('current-word');\n  const requiredLetterEl = document.getElementById('required-letter');\n  const wordFormEl = document.getElementById('word-form');\n  const wordInputEl = document.getElementById('word-input');\n  const messageAreaEl = document.getElementById('message-area');\n  const wordListEl = document.getElementById('word-list');\n  const resetBtnEl = document.getElementById('reset-btn');\n\n  function getLastWord() {\n    return chain[chain.length - 1];\n  }\n\n  function getRequiredLetter() {\n    const lastWord = getLastWord();\n    return lastWord.slice(-1).toLowerCase();\n  }\n\n  function updateUI() {\n    const lastWord = getLastWord();\n    const reqChar = getRequiredLetter();\n    \n    chainCounterEl.textContent = chain.length;\n    currentWordEl.textContent = lastWord;\n    requiredLetterEl.textContent = `'${reqChar.toUpperCase()}'`;\n  }\n\n  function showMessage(text, isError = true) {\n    messageAreaEl.textContent = text;\n    messageAreaEl.className = 'message-area ' + (isError ? 'error' : 'success');\n  }\n\n  function clearMessage() {\n    messageAreaEl.textContent = '';\n    messageAreaEl.className = 'message-area';\n  }\n\n  function addWordToHistory(word) {\n    const li = document.createElement('li');\n    li.className = 'word-item';\n    li.textContent = word;\n    wordListEl.appendChild(li);\n    wordListEl.scrollTop = wordListEl.scrollHeight;\n  }\n\n  function handleWordSubmission(e) {\n    e.preventDefault();\n    clearMessage();\n\n    const rawInput = wordInputEl.value.trim();\n    const word = rawInput.toLowerCase();\n\n    if (!word) {\n      showMessage('Please enter a word.');\n      wordInputEl.focus();\n      return;\n    }\n\n    if (!/^[a-z]+$/i.test(word)) {\n      showMessage('Words can only contain alphabetic letters.');\n      wordInputEl.focus();\n      return;\n    }\n\n    const expectedLetter = getRequiredLetter();\n    const firstLetter = word[0];\n\n    if (firstLetter !== expectedLetter) {\n      showMessage(`Word must begin with '${expectedLetter.toUpperCase()}'.`);\n      wordInputEl.focus();\n      return;\n    }\n\n    if (usedWords.has(word)) {\n      showMessage('Already used');\n      wordInputEl.focus();\n      return;\n    }\n\n    // Valid word accepted\n    usedWords.add(word);\n    chain.push(word);\n    addWordToHistory(word);\n    updateUI();\n\n    showMessage(`'${word}' accepted!`, false);\n    wordInputEl.value = '';\n    wordInputEl.focus();\n  }\n\n  function resetGame() {\n    chain = [START_WORD];\n    usedWords = new Set([START_WORD]);\n    \n    wordListEl.innerHTML = '';\n    addWordToHistory(START_WORD);\n    \n    updateUI();\n    clearMessage();\n    wordInputEl.value = '';\n    wordInputEl.focus();\n  }\n\n  wordFormEl.addEventListener('submit', handleWordSubmission);\n  resetBtnEl.addEventListener('click', resetGame);\n\n  // Initialize on load\n  updateUI();\n  wordInputEl.focus();\n});",
+      "description": "Vanilla JavaScript handling state, word validation, event listeners, and DOM updates."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Word Chain Game\n\nAn accessible, lightweight, offline browser game built using standard HTML5, CSS3, and modern vanilla JavaScript.\n\n## Rules\n1. The game starts with the base word: **pixel** (Chain length = 1).\n2. Each entered word must begin with the **last letter** of the previous word.\n3. Repeated words are strictly prohibited and will be rejected with **'Already used'**.\n4. Words must consist solely of alphabetic letters.\n5. The chain counter dynamically updates with each valid addition.\n\n## Features\n- **Zero External Dependencies**: Works completely offline with zero builds or package managers.\n- **Keyboard & Screen Reader Accessible**: Semantic HTML structure, `aria-live` announcement regions for score and feedback messages, and full keyboard navigation.\n- **Responsive Design**: Formatted cleanly from desktop displays down to 360px mobile viewports.\n- **Safe Styling**: Includes explicit `[hidden] { display: none !important; }` rule.\n\n## How to Run\nSimply open `index.html` in any modern web browser.",
+      "description": "Documentation for the Pixel Word Chain Game explaining gameplay, features, and offline setup."
+    }
+  ]
+}

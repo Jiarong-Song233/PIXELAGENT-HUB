@@ -1,0 +1,484 @@
+{
+  "caseId": "pizza-builder",
+  "run": 2,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8949,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 81,
+  "reportedTokens": 39332,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:24:56.083Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:24:56.084Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:25:09.968Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Pizza Order"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:25:09.968Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:25:52.573Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:25:52.573Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:25:53.070Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:25:53.070Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "9158f989-ca6e-4202-a3c9-be1b2cdb2ab2"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:26:12.117Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "9158f989-ca6e-4202-a3c9-be1b2cdb2ab2",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:26:12.117Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "testPlanId": "9158f989-ca6e-4202-a3c9-be1b2cdb2ab2",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:26:15.366Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Default initial total is $8.00 for Small",
+        "passed": true,
+        "actual": "$8.00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Select Medium size updates live total to $10.00",
+        "passed": true,
+        "actual": "$10.00"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Select Large size updates live total to $12.00",
+        "passed": true,
+        "actual": "$12.00"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Add toppings and verify live total calculation",
+        "passed": true,
+        "actual": "$11.00"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Topping count badge updates when toggling toppings",
+        "passed": true,
+        "actual": "3/5"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Refuse sixth topping with error message",
+        "passed": true,
+        "actual": "Max 5 toppings"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Sixth topping checkbox remains unchecked",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Order button displays order summary section",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Order summary displays correct total amount",
+        "passed": true,
+        "actual": "$11.50"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "name": "Modify order hides summary card",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-30T02:26:15.367Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "2b147b63-d7a6-4e7a-8b33-8c97eefa82eb",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-30T02:26:15.370Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Default initial total is $8.00 for Small",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Small\"]"
+          }
+        ],
+        "selector": "#totalPrice",
+        "expected": "$8.00"
+      },
+      {
+        "name": "Select Medium size updates live total to $10.00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Medium\"]"
+          }
+        ],
+        "selector": "#totalPrice",
+        "expected": "$10.00"
+      },
+      {
+        "name": "Select Large size updates live total to $12.00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Large\"]"
+          }
+        ],
+        "selector": "#totalPrice",
+        "expected": "$12.00"
+      },
+      {
+        "name": "Add toppings and verify live total calculation",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Small\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Pepperoni\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Mushrooms\"]"
+          }
+        ],
+        "selector": "#totalPrice",
+        "expected": "$11.00"
+      },
+      {
+        "name": "Topping count badge updates when toggling toppings",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Pepperoni\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Mushrooms\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Extra Cheese\"]"
+          }
+        ],
+        "selector": "#toppingCountBadge",
+        "expected": "3/5"
+      },
+      {
+        "name": "Refuse sixth topping with error message",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Pepperoni\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Mushrooms\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Extra Cheese\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Bell Peppers\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Black Olives\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Onions\"]"
+          }
+        ],
+        "selector": "#errorMessage",
+        "expected": "Max 5 toppings"
+      },
+      {
+        "name": "Sixth topping checkbox remains unchecked",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Pepperoni\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Mushrooms\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Extra Cheese\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Bell Peppers\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Black Olives\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Onions\"]"
+          }
+        ],
+        "selector": "input[value=\"Onions\"]",
+        "expected": "false",
+        "assertion": "attribute",
+        "attribute": "checked"
+      },
+      {
+        "name": "Order button displays order summary section",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Medium\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Pepperoni\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#orderBtn"
+          }
+        ],
+        "selector": "#summaryCard",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "Order summary displays correct total amount",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "input[value=\"Medium\"]"
+          },
+          {
+            "type": "click",
+            "selector": "input[value=\"Pepperoni\"]"
+          },
+          {
+            "type": "click",
+            "selector": "#orderBtn"
+          }
+        ],
+        "selector": "#summaryTotal",
+        "expected": "$11.50"
+      },
+      {
+        "name": "Modify order hides summary card",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#orderBtn"
+          },
+          {
+            "type": "click",
+            "selector": "#newOrderBtn"
+          }
+        ],
+        "selector": "#summaryCard",
+        "expected": "false",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Cannot verify CSS pixel-art shake animations or smooth scroll behavior directly."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 15153,
+      "completion_tokens": 704,
+      "total_tokens": 15857
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Pizza Order</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <div class=\"pixel-card\">\n      <header class=\"header\">\n        <div class=\"pixel-pizza-icon\" aria-hidden=\"true\"></div>\n        <h1 class=\"title\">PIXEL PIZZA</h1>\n        <p class=\"subtitle\">Craft your 8-bit slice</p>\n      </header>\n\n      <form id=\"pizzaForm\" class=\"order-form\" novalidate>\n        <!-- Size Selection -->\n        <fieldset class=\"pixel-group\">\n          <legend class=\"group-title\">1. Choose Size</legend>\n          <div class=\"options-grid sizes-grid\">\n            <label class=\"pixel-radio-label\">\n              <input type=\"radio\" name=\"pizzaSize\" value=\"Small\" data-price=\"8\" checked>\n              <span class=\"pixel-button-face\">\n                <strong>Small</strong>\n                <span class=\"price-tag\">$8.00</span>\n              </span>\n            </label>\n            <label class=\"pixel-radio-label\">\n              <input type=\"radio\" name=\"pizzaSize\" value=\"Medium\" data-price=\"10\">\n              <span class=\"pixel-button-face\">\n                <strong>Medium</strong>\n                <span class=\"price-tag\">$10.00</span>\n              </span>\n            </label>\n            <label class=\"pixel-radio-label\">\n              <input type=\"radio\" name=\"pizzaSize\" value=\"Large\" data-price=\"12\">\n              <span class=\"pixel-button-face\">\n                <strong>Large</strong>\n                <span class=\"price-tag\">$12.00</span>\n              </span>\n            </label>\n          </div>\n        </fieldset>\n\n        <!-- Topping Selection -->\n        <fieldset class=\"pixel-group\">\n          <legend class=\"group-title\">\n            2. Toppings ($1.50 ea)\n            <span class=\"counter-badge\" id=\"toppingCountBadge\">0/5</span>\n          </legend>\n\n          <div id=\"errorMessage\" class=\"error-banner\" role=\"alert\" hidden>\n            Max 5 toppings\n          </div>\n\n          <div class=\"options-grid toppings-grid\">\n            <label class=\"pixel-checkbox-label\">\n              <input type=\"checkbox\" name=\"toppings\" value=\"Pepperoni\">\n              <span class=\"pixel-button-face\">Pepperoni</span>\n            </label>\n            <label class=\"pixel-checkbox-label\">\n              <input type=\"checkbox\" name=\"toppings\" value=\"Mushrooms\">\n              <span class=\"pixel-button-face\">Mushrooms</span>\n            </label>\n            <label class=\"pixel-checkbox-label\">\n              <input type=\"checkbox\" name=\"toppings\" value=\"Extra Cheese\">\n              <span class=\"pixel-button-face\">Extra Cheese</span>\n            </label>\n            <label class=\"pixel-checkbox-label\">\n              <input type=\"checkbox\" name=\"toppings\" value=\"Bell Peppers\">\n              <span class=\"pixel-button-face\">Bell Peppers</span>\n            </label>\n            <label class=\"pixel-checkbox-label\">\n              <input type=\"checkbox\" name=\"toppings\" value=\"Black Olives\">\n              <span class=\"pixel-button-face\">Black Olives</span>\n            </label>\n            <label class=\"pixel-checkbox-label\">\n              <input type=\"checkbox\" name=\"toppings\" value=\"Onions\">\n              <span class=\"pixel-button-face\">Onions</span>\n            </label>\n            <label class=\"pixel-checkbox-label\">\n              <input type=\"checkbox\" name=\"toppings\" value=\"Sausage\">\n              <span class=\"pixel-button-face\">Sausage</span>\n            </label>\n            <label class=\"pixel-checkbox-label\">\n              <input type=\"checkbox\" name=\"toppings\" value=\"Pineapple\">\n              <span class=\"pixel-button-face\">Pineapple</span>\n            </label>\n          </div>\n        </fieldset>\n\n        <!-- Live Total and Order Action -->\n        <div class=\"price-action-container\">\n          <div class=\"total-display\" aria-live=\"polite\">\n            <span class=\"total-label\">Total:</span>\n            <span class=\"total-amount\" id=\"totalPrice\">$8.00</span>\n          </div>\n          <button type=\"submit\" id=\"orderBtn\" class=\"pixel-cta-button\">Order Now</button>\n        </div>\n      </form>\n\n      <!-- Summary Display -->\n      <section id=\"summaryCard\" class=\"summary-card\" aria-live=\"polite\" hidden>\n        <h2 class=\"summary-title\">Order Summary</h2>\n        <div class=\"summary-divider\"></div>\n        <div class=\"summary-row\">\n          <span>Size:</span>\n          <strong id=\"summarySize\">Small</strong>\n        </div>\n        <div class=\"summary-row\">\n          <span>Toppings (<span id=\"summaryToppingCount\">0</span>):</span>\n          <span id=\"summaryToppings\" class=\"summary-list\">None</span>\n        </div>\n        <div class=\"summary-divider\"></div>\n        <div class=\"summary-row total-highlight\">\n          <span>Amount Due:</span>\n          <strong id=\"summaryTotal\">$8.00</strong>\n        </div>\n        <p class=\"summary-status\">Status: Baking in 8-bit oven...</p>\n        <button type=\"button\" id=\"newOrderBtn\" class=\"pixel-secondary-button\">Modify Order</button>\n      </section>\n    </div>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML document structuring the pixel pizza order app with accessible form controls and summary area."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Mandatory rule for robust hidden element toggling */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #1c1427;\n  --color-card: #2e2140;\n  --color-crust: #e69c24;\n  --color-accent: #f25f5c;\n  --color-accent-dark: #b83330;\n  --color-text: #fff6d6;\n  --color-text-dim: #cca88b;\n  --color-border: #000000;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--color-bg);\n  color: var(--color-text);\n  font-family: \"Courier New\", Courier, monospace, system-ui;\n  font-size: 16px;\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 16px;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 480px;\n}\n\n/* Pixel Card Styling with stepped block borders */\n.pixel-card {\n  background-color: var(--color-card);\n  border: 4px solid var(--color-border);\n  box-shadow:\n    8px 8px 0px 0px #0e0717,\n    inset -4px -4px 0px 0px #1a1226,\n    inset 4px 4px 0px 0px #44325e;\n  padding: 24px 20px;\n}\n\n.header {\n  text-align: center;\n  margin-bottom: 24px;\n}\n\n/* Pure CSS Pixel Pizza Icon */\n.pixel-pizza-icon {\n  width: 32px;\n  height: 32px;\n  margin: 0 auto 12px;\n  background-color: var(--color-crust);\n  box-shadow:\n    0 -4px 0 var(--color-border),\n    0 4px 0 var(--color-border),\n    -4px 0 0 var(--color-border),\n    4px 0 0 var(--color-border),\n    -6px 6px 0 -2px var(--color-accent),\n    4px -4px 0 -2px var(--color-accent),\n    2px 4px 0 -1px #fff6d6;\n}\n\n.title {\n  font-size: 26px;\n  letter-spacing: 2px;\n  color: var(--color-crust);\n  text-shadow: 2px 2px 0 var(--color-border);\n  margin-bottom: 4px;\n}\n\n.subtitle {\n  color: var(--color-text-dim);\n  font-size: 14px;\n  letter-spacing: 1px;\n}\n\n.pixel-group {\n  border: 3px solid var(--color-border);\n  background: #251a35;\n  padding: 14px;\n  margin-bottom: 18px;\n}\n\n.group-title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 8px;\n  font-weight: bold;\n  font-size: 16px;\n  color: var(--color-crust);\n}\n\n.counter-badge {\n  background: var(--color-border);\n  color: var(--color-text);\n  padding: 2px 6px;\n  font-size: 14px;\n}\n\n/* Alert / Error Banner */\n.error-banner {\n  background: var(--color-accent);\n  color: #ffffff;\n  border: 2px solid var(--color-border);\n  padding: 8px 12px;\n  margin: 10px 0;\n  font-weight: bold;\n  font-size: 15px;\n  text-align: center;\n  letter-spacing: 1px;\n  animation: pixelShake 0.25s linear;\n}\n\n@keyframes pixelShake {\n  0%, 100% { transform: translate(0, 0); }\n  25% { transform: translate(-3px, 0); }\n  75% { transform: translate(3px, 0); }\n}\n\n/* Button-like selection grid */\n.options-grid {\n  display: grid;\n  gap: 10px;\n  margin-top: 10px;\n}\n\n.sizes-grid {\n  grid-template-columns: repeat(3, 1fr);\n}\n\n.toppings-grid {\n  grid-template-columns: repeat(2, 1fr);\n}\n\n@media (max-width: 400px) {\n  .sizes-grid {\n    grid-template-columns: 1fr;\n  }\n  .toppings-grid {\n    grid-template-columns: 1fr;\n  }\n}\n\n.pixel-radio-label,\n.pixel-checkbox-label {\n  position: relative;\n  display: block;\n  cursor: pointer;\n}\n\n.pixel-radio-label input,\n.pixel-checkbox-label input {\n  position: absolute;\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.pixel-button-face {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 48px;\n  background: #392a4e;\n  border: 2px solid var(--color-border);\n  box-shadow: 2px 2px 0px 0px var(--color-border);\n  color: var(--color-text);\n  padding: 8px;\n  font-size: 14px;\n  text-align: center;\n  user-select: none;\n  transition: background-color 0.1s ease;\n}\n\n.price-tag {\n  font-size: 13px;\n  color: var(--color-text-dim);\n  margin-top: 2px;\n}\n\n/* Hover / Focus / Checked States */\n.pixel-radio-label:hover .pixel-button-face,\n.pixel-checkbox-label:hover .pixel-button-face {\n  background: #473561;\n}\n\n.pixel-radio-label input:focus-visible + .pixel-button-face,\n.pixel-checkbox-label input:focus-visible + .pixel-button-face {\n  outline: 3px solid var(--color-crust);\n  outline-offset: 1px;\n}\n\n.pixel-radio-label input:checked + .pixel-button-face,\n.pixel-checkbox-label input:checked + .pixel-button-face {\n  background: var(--color-crust);\n  color: #1c1427;\n  box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.4);\n}\n\n.pixel-radio-label input:checked + .pixel-button-face .price-tag {\n  color: #4a340a;\n  font-weight: bold;\n}\n\n/* Bottom Bar */\n.price-action-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-top: 20px;\n  gap: 12px;\n}\n\n.total-display {\n  display: flex;\n  flex-direction: column;\n}\n\n.total-label {\n  font-size: 13px;\n  color: var(--color-text-dim);\n  text-transform: uppercase;\n}\n\n.total-amount {\n  font-size: 26px;\n  font-weight: bold;\n  color: var(--color-crust);\n  text-shadow: 1px 1px 0 var(--color-border);\n}\n\n.pixel-cta-button,\n.pixel-secondary-button {\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: bold;\n  border: 3px solid var(--color-border);\n  padding: 12px 20px;\n  cursor: pointer;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\n.pixel-cta-button {\n  background: var(--color-accent);\n  color: #ffffff;\n  box-shadow: 4px 4px 0 0 var(--color-border);\n}\n\n.pixel-cta-button:hover {\n  background: #f77472;\n}\n\n.pixel-cta-button:active {\n  transform: translate(2px, 2px);\n  box-shadow: 2px 2px 0 0 var(--color-border);\n}\n\n.pixel-cta-button:focus-visible,\n.pixel-secondary-button:focus-visible {\n  outline: 3px solid #ffffff;\n  outline-offset: 2px;\n}\n\n.pixel-secondary-button {\n  background: #392a4e;\n  color: var(--color-text);\n  width: 100%;\n  margin-top: 16px;\n  box-shadow: 3px 3px 0 0 var(--color-border);\n}\n\n.pixel-secondary-button:hover {\n  background: #473561;\n}\n\n.pixel-secondary-button:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0 0 var(--color-border);\n}\n\n/* Order Summary Card */\n.summary-card {\n  margin-top: 20px;\n  background: #251a35;\n  border: 3px dashed var(--color-crust);\n  padding: 18px;\n}\n\n.summary-title {\n  font-size: 18px;\n  color: var(--color-crust);\n  text-align: center;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\n.summary-divider {\n  height: 2px;\n  background: #392a4e;\n  margin: 12px 0;\n}\n\n.summary-row {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 8px;\n  font-size: 15px;\n}\n\n.summary-list {\n  text-align: right;\n  max-width: 60%;\n  word-break: break-word;\n  color: #ffffff;\n}\n\n.total-highlight {\n  font-size: 18px;\n  color: var(--color-crust);\n}\n\n.summary-status {\n  margin-top: 12px;\n  font-size: 13px;\n  text-align: center;\n  color: var(--color-text-dim);\n  font-style: italic;\n}\n",
+      "description": "Retro pixel-art styled CSS with responsive layout, 4-color cohesive palette, visible focus/pressed states, and accessibility rules."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const TOPPING_PRICE = 1.50;\n  const MAX_TOPPINGS = 5;\n\n  const form = document.getElementById('pizzaForm');\n  const sizeRadios = document.querySelectorAll('input[name=\"pizzaSize\"]');\n  const toppingCheckboxes = document.querySelectorAll('input[name=\"toppings\"]');\n  const totalPriceEl = document.getElementById('totalPrice');\n  const errorMessageEl = document.getElementById('errorMessage');\n  const toppingCountBadge = document.getElementById('toppingCountBadge');\n\n  const summaryCard = document.getElementById('summaryCard');\n  const summarySize = document.getElementById('summarySize');\n  const summaryToppingCount = document.getElementById('summaryToppingCount');\n  const summaryToppings = document.getElementById('summaryToppings');\n  const summaryTotal = document.getElementById('summaryTotal');\n  const newOrderBtn = document.getElementById('newOrderBtn');\n\n  let errorTimeout = null;\n\n  function getSelectedSize() {\n    const selected = document.querySelector('input[name=\"pizzaSize\"]:checked');\n    return {\n      name: selected.value,\n      price: parseFloat(selected.dataset.price)\n    };\n  }\n\n  function getSelectedToppings() {\n    return Array.from(toppingCheckboxes)\n      .filter(cb => cb.checked)\n      .map(cb => cb.value);\n  }\n\n  function calculateTotal() {\n    const size = getSelectedSize();\n    const toppings = getSelectedToppings();\n    return size.price + (toppings.length * TOPPING_PRICE);\n  }\n\n  function updateUI() {\n    const toppings = getSelectedToppings();\n    const total = calculateTotal();\n\n    totalPriceEl.textContent = `$${total.toFixed(2)}`;\n    toppingCountBadge.textContent = `${toppings.length}/${MAX_TOPPINGS}`;\n  }\n\n  function showRefusalMessage() {\n    errorMessageEl.hidden = false;\n    if (errorTimeout) {\n      clearTimeout(errorTimeout);\n    }\n    errorTimeout = setTimeout(() => {\n      errorMessageEl.hidden = true;\n    }, 2500);\n  }\n\n  // Handle size change\n  sizeRadios.forEach(radio => {\n    radio.addEventListener('change', updateUI);\n  });\n\n  // Handle topping selection with hard cap of 5\n  toppingCheckboxes.forEach(checkbox => {\n    checkbox.addEventListener('click', (e) => {\n      const checkedCount = document.querySelectorAll('input[name=\"toppings\"]:checked').length;\n\n      if (checkbox.checked && checkedCount > MAX_TOPPINGS) {\n        // Refuse 6th topping\n        e.preventDefault();\n        checkbox.checked = false;\n        showRefusalMessage();\n      } else {\n        if (!errorMessageEl.hidden) {\n          errorMessageEl.hidden = true;\n        }\n      }\n      updateUI();\n    });\n  });\n\n  // Handle Order form submission\n  form.addEventListener('submit', (e) => {\n    e.preventDefault();\n\n    const size = getSelectedSize();\n    const toppings = getSelectedToppings();\n    const total = calculateTotal();\n\n    summarySize.textContent = `${size.name} ($${size.price.toFixed(2)})`;\n    summaryToppingCount.textContent = toppings.length;\n    summaryToppings.textContent = toppings.length > 0 ? toppings.join(', ') : 'None';\n    summaryTotal.textContent = `$${total.toFixed(2)}`;\n\n    summaryCard.hidden = false;\n    summaryCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });\n  });\n\n  // Modify order button\n  newOrderBtn.addEventListener('click', () => {\n    summaryCard.hidden = true;\n    form.scrollIntoView({ behavior: 'smooth', block: 'start' });\n  });\n\n  // Initialize\n  updateUI();\n});",
+      "description": "Vanilla JavaScript handling real-time total updates, topping selection limiting to 5 with error messaging, and summary generation."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Pizza Order\n\nAn offline, responsive, single-page pizza ordering application with a retro pixel-art aesthetic.\n\n## Features\n- **Pizza Size Selection**:\n  - Small ($8.00)\n  - Medium ($10.00)\n  - Large ($12.00)\n- **Toppings Cap & Validation**:\n  - Up to 5 toppings at $1.50 each.\n  - Selecting a 6th topping is immediately refused with the message `Max 5 toppings`.\n- **Live Price Calculation**: Total price updates in real-time as sizes and toppings are toggled.\n- **Order Summary**: Clicking \"Order Now\" displays a comprehensive breakdown with size, selected toppings, and total cost.\n- **100% Offline & Accessible**: Zero external dependencies or network requests; keyboard navigable with visible focus states and WCAG-compliant styling.\n\n## Getting Started\nOpen `index.html` directly in any modern web browser.",
+      "description": "Project documentation including feature overview, offline usage, and design details."
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "caseId": "candle",
+  "run": 3,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8912,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 78,
+  "reportedTokens": 37211,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:22:12.488Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:22:12.488Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:22:27.296Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Candle Timer"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:22:27.297Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:23:05.867Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:23:05.867Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:23:06.375Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:23:06.376Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "ff743ea1-195b-4b9e-b894-48d8d82b43f0"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:23:23.168Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "ff743ea1-195b-4b9e-b894-48d8d82b43f0",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:23:23.169Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "testPlanId": "ff743ea1-195b-4b9e-b894-48d8d82b43f0",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "initial-time-shows-3:00",
+        "passed": true,
+        "actual": "3:00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "light-starts-timer-countdown",
+        "passed": true,
+        "actual": "2:58"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "candle-height-shrinks-over-time",
+        "passed": true,
+        "actual": "102px"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "blow-out-pauses-countdown",
+        "passed": true,
+        "actual": "2:57"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "status-burnt-out-appears-at-zero",
+        "passed": true,
+        "actual": "BURNT OUT"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "burnt-out-element-becomes-visible",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "timer-display-hides-at-zero",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "light-button-disabled-when-active",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "name": "blow-out-button-enabled-when-lit",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:23:27.847Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "5d1cf7d4-b644-443c-aa7d-97a5cc39bcdd",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-30T02:23:27.849Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "initial-time-shows-3:00",
+        "actions": [],
+        "selector": "#timerDisplay",
+        "expected": "3:00",
+        "assertion": "text"
+      },
+      {
+        "name": "light-starts-timer-countdown",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#lightBtn"
+          },
+          {
+            "type": "advance",
+            "ms": 2000
+          }
+        ],
+        "selector": "#timerDisplay",
+        "expected": "2:58",
+        "assertion": "text"
+      },
+      {
+        "name": "candle-height-shrinks-over-time",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#lightBtn"
+          },
+          {
+            "type": "advance",
+            "ms": 30000
+          }
+        ],
+        "selector": "#candleStick",
+        "expected": "",
+        "assertion": "changed",
+        "attribute": "style.height"
+      },
+      {
+        "name": "blow-out-pauses-countdown",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#lightBtn"
+          },
+          {
+            "type": "advance",
+            "ms": 3000
+          },
+          {
+            "type": "click",
+            "selector": "#blowOutBtn"
+          }
+        ],
+        "selector": "#timerDisplay",
+        "expected": "",
+        "assertion": "stable"
+      },
+      {
+        "name": "status-burnt-out-appears-at-zero",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#lightBtn"
+          },
+          {
+            "type": "advance",
+            "ms": 180000
+          }
+        ],
+        "selector": "#statusText",
+        "expected": "Burnt out",
+        "assertion": "text"
+      },
+      {
+        "name": "burnt-out-element-becomes-visible",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#lightBtn"
+          },
+          {
+            "type": "advance",
+            "ms": 180000
+          }
+        ],
+        "selector": "#statusText",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "timer-display-hides-at-zero",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#lightBtn"
+          },
+          {
+            "type": "advance",
+            "ms": 180000
+          }
+        ],
+        "selector": "#timerDisplay",
+        "expected": "false",
+        "assertion": "visible"
+      },
+      {
+        "name": "light-button-disabled-when-active",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#lightBtn"
+          }
+        ],
+        "selector": "#lightBtn",
+        "expected": "true",
+        "assertion": "disabled"
+      },
+      {
+        "name": "blow-out-button-enabled-when-lit",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#lightBtn"
+          }
+        ],
+        "selector": "#blowOutBtn",
+        "expected": "false",
+        "assertion": "disabled"
+      }
+    ],
+    "limitations": [
+      "Pixel flicker and ambient glow CSS animations cannot be asserted directly.",
+      "Hardware-level audio or ambient sound cannot be validated via DOM assertions."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14063,
+      "completion_tokens": 832,
+      "total_tokens": 14895
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Candle Timer</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"card-container\">\n    <header class=\"header\">\n      <h1 class=\"title\">Pixel Candle</h1>\n      <p class=\"subtitle\">A cozy 3-minute burning timer</p>\n    </header>\n\n    <section class=\"scene-stage\" aria-label=\"Pixel candle display\">\n      <div class=\"candle-assembly\" id=\"candleAssembly\">\n        <div class=\"flame-glow\" id=\"flameGlow\"></div>\n        <div class=\"pixel-flame\" id=\"pixelFlame\" aria-hidden=\"true\"></div>\n        <div class=\"pixel-wick\" id=\"pixelWick\" aria-hidden=\"true\"></div>\n        <div class=\"candle-stick\" id=\"candleStick\" style=\"height: 120px;\">\n          <div class=\"candle-highlight\"></div>\n          <div class=\"candle-wax-drips\"></div>\n        </div>\n        <div class=\"candle-base\" aria-hidden=\"true\"></div>\n      </div>\n    </section>\n\n    <section class=\"status-section\">\n      <div class=\"timer-display\" id=\"timerDisplay\" aria-live=\"polite\">3:00</div>\n      <div class=\"status-text\" id=\"statusText\" aria-live=\"assertive\" hidden>Burnt out</div>\n    </section>\n\n    <nav class=\"control-bar\" aria-label=\"Candle controls\">\n      <button type=\"button\" id=\"lightBtn\" class=\"btn btn-primary\">Light</button>\n      <button type=\"button\" id=\"blowOutBtn\" class=\"btn btn-secondary\" disabled>Blow out</button>\n      <button type=\"button\" id=\"resetBtn\" class=\"btn btn-ghost\">Reset</button>\n    </nav>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main HTML document structuring the pixel candle app, status message, timer readout, and accessible action buttons."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Hidden attribute safeguard */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-dark: #1b1622;\n  --card-bg: #272033;\n  --wax-body: #f4d38c;\n  --wax-shadow: #d4a754;\n  --flame-outer: #ff5722;\n  --flame-mid: #ffb300;\n  --flame-inner: #fff9c4;\n  --wick-color: #2d2621;\n  --text-main: #f5f2eb;\n  --text-muted: #9f96aa;\n  --btn-light: #ff9800;\n  --btn-light-hover: #fb8c00;\n  --btn-blow: #455a64;\n  --btn-blow-hover: #546e7a;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: var(--bg-dark);\n  color: var(--text-main);\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n  font-size: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 24px 16px;\n}\n\n.card-container {\n  background-color: var(--card-bg);\n  width: 100%;\n  max-width: 420px;\n  min-height: 520px;\n  border-radius: 16px;\n  padding: 32px 24px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);\n  border: 1px solid rgba(255, 255, 255, 0.08);\n}\n\n.header {\n  text-align: center;\n  margin-bottom: 24px;\n}\n\n.title {\n  font-size: 1.75rem;\n  font-weight: 700;\n  letter-spacing: 0.5px;\n  color: #fff;\n}\n\n.subtitle {\n  font-size: 0.95rem;\n  color: var(--text-muted);\n  margin-top: 4px;\n}\n\n.scene-stage {\n  width: 100%;\n  height: 220px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n  padding-bottom: 12px;\n  position: relative;\n}\n\n.candle-assembly {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n}\n\n/* Flame Glow effect */\n.flame-glow {\n  position: absolute;\n  top: -30px;\n  width: 90px;\n  height: 90px;\n  border-radius: 50%;\n  background: radial-gradient(circle, rgba(255, 179, 0, 0.35) 0%, rgba(255, 87, 34, 0.1) 50%, rgba(0, 0, 0, 0) 70%);\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  pointer-events: none;\n}\n\n.candle-assembly.lit .flame-glow {\n  opacity: 1;\n  animation: glowPulse 1.2s infinite alternate ease-in-out;\n}\n\n/* Pixel Flame constructed using CSS box-shadow */\n.pixel-flame {\n  width: 8px;\n  height: 8px;\n  background: var(--flame-inner);\n  margin-bottom: 2px;\n  position: relative;\n  opacity: 0;\n  transform-origin: bottom center;\n  box-shadow:\n    0 -8px 0 0 var(--flame-inner),\n    -8px 0px 0 0 var(--flame-mid),\n    8px 0px 0 0 var(--flame-mid),\n    0 8px 0 0 var(--flame-outer),\n    -8px 8px 0 0 var(--flame-outer),\n    8px 8px 0 0 var(--flame-outer);\n  transition: opacity 0.2s ease;\n}\n\n.candle-assembly.lit .pixel-flame {\n  opacity: 1;\n  animation: pixelFlicker 0.25s steps(2, start) infinite alternate;\n}\n\n/* Pixel Wick */\n.pixel-wick {\n  width: 4px;\n  height: 10px;\n  background-color: var(--wick-color);\n  border-radius: 1px;\n}\n\n/* Shrinking Candle Body */\n.candle-stick {\n  width: 48px;\n  background-color: var(--wax-body);\n  border-radius: 4px 4px 0 0;\n  position: relative;\n  transition: height 0.25s linear;\n  box-shadow: inset -6px 0 0 var(--wax-shadow);\n  overflow: hidden;\n}\n\n.candle-highlight {\n  position: absolute;\n  left: 6px;\n  top: 0;\n  bottom: 0;\n  width: 4px;\n  background-color: rgba(255, 255, 255, 0.4);\n}\n\n.candle-wax-drips {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 8px;\n  background: repeating-linear-gradient(\n    90deg,\n    var(--wax-body) 0px,\n    var(--wax-body) 8px,\n    var(--wax-shadow) 8px,\n    var(--wax-shadow) 12px\n  );\n}\n\n.candle-base {\n  width: 80px;\n  height: 10px;\n  background-color: #3e334a;\n  border-radius: 6px;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.1);\n}\n\n.status-section {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 70px;\n  margin-top: 16px;\n}\n\n.timer-display {\n  font-size: 2.5rem;\n  font-weight: 700;\n  font-variant-numeric: tabular-nums;\n  letter-spacing: 2px;\n  color: #fff;\n}\n\n.status-text {\n  font-size: 1.25rem;\n  font-weight: 600;\n  color: #ff6f61;\n  margin-top: 4px;\n  text-transform: uppercase;\n  letter-spacing: 1.5px;\n}\n\n.control-bar {\n  width: 100%;\n  display: flex;\n  gap: 12px;\n  margin-top: 24px;\n}\n\n.btn {\n  flex: 1;\n  padding: 12px 8px;\n  font-size: 1rem;\n  font-weight: 600;\n  border: none;\n  border-radius: 8px;\n  cursor: pointer;\n  transition: background-color 0.15s ease, transform 0.08s ease, box-shadow 0.15s ease;\n  outline-offset: 3px;\n}\n\n.btn:focus-visible {\n  outline: 2px solid #ffb300;\n}\n\n.btn:active:not(:disabled) {\n  transform: translateY(2px);\n}\n\n.btn:disabled {\n  opacity: 0.45;\n  cursor: not-allowed;\n  transform: none;\n}\n\n.btn-primary {\n  background-color: var(--btn-light);\n  color: #1b1622;\n}\n\n.btn-primary:hover:not(:disabled) {\n  background-color: var(--btn-light-hover);\n}\n\n.btn-secondary {\n  background-color: var(--btn-blow);\n  color: #fff;\n}\n\n.btn-secondary:hover:not(:disabled) {\n  background-color: var(--btn-blow-hover);\n}\n\n.btn-ghost {\n  background-color: transparent;\n  color: var(--text-muted);\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n\n.btn-ghost:hover:not(:disabled) {\n  background-color: rgba(255, 255, 255, 0.08);\n  color: #fff;\n}\n\n@keyframes pixelFlicker {\n  0% {\n    transform: scale(1) translateY(0);\n    filter: brightness(1);\n  }\n  50% {\n    transform: scale(1.08, 0.95) translateY(-1px);\n    filter: brightness(1.2);\n  }\n  100% {\n    transform: scale(0.95, 1.05) translateY(1px);\n    filter: brightness(0.9);\n  }\n}\n\n@keyframes glowPulse {\n  0% {\n    transform: scale(0.95);\n    opacity: 0.6;\n  }\n  100% {\n    transform: scale(1.08);\n    opacity: 0.85;\n  }\n}\n",
+      "description": "Styles for the pixel art candle presentation, warm cozy color palette, flicker animation, and responsive layout."
+    },
+    {
+      "path": "app.js",
+      "content": "(function () {\n  'use strict';\n\n  const TOTAL_DURATION_SECONDS = 180; // 3 minutes\n  const INITIAL_HEIGHT = 120;\n  const MIN_HEIGHT = 12;\n\n  let remainingSeconds = TOTAL_DURATION_SECONDS;\n  let timerInterval = null;\n  let isBurning = false;\n\n  // DOM references\n  const lightBtn = document.getElementById('lightBtn');\n  const blowOutBtn = document.getElementById('blowOutBtn');\n  const resetBtn = document.getElementById('resetBtn');\n  const timerDisplay = document.getElementById('timerDisplay');\n  const statusText = document.getElementById('statusText');\n  const candleAssembly = document.getElementById('candleAssembly');\n  const candleStick = document.getElementById('candleStick');\n\n  function formatTime(totalSeconds) {\n    const minutes = Math.floor(totalSeconds / 60);\n    const seconds = totalSeconds % 60;\n    const paddedSeconds = seconds < 10 ? '0' + seconds : String(seconds);\n    return `${minutes}:${paddedSeconds}`;\n  }\n\n  function updateHeight() {\n    const progress = remainingSeconds / TOTAL_DURATION_SECONDS;\n    const calculatedHeight = MIN_HEIGHT + (INITIAL_HEIGHT - MIN_HEIGHT) * progress;\n    candleStick.style.height = `${Math.round(calculatedHeight)}px`;\n  }\n\n  function updateUI() {\n    timerDisplay.textContent = formatTime(remainingSeconds);\n    updateHeight();\n\n    if (remainingSeconds <= 0) {\n      statusText.removeAttribute('hidden');\n      timerDisplay.setAttribute('hidden', '');\n      candleAssembly.classList.remove('lit');\n      lightBtn.disabled = true;\n      blowOutBtn.disabled = true;\n    } else {\n      statusText.setAttribute('hidden', '');\n      timerDisplay.removeAttribute('hidden');\n      lightBtn.disabled = isBurning;\n      blowOutBtn.disabled = !isBurning;\n    }\n  }\n\n  function tick() {\n    if (remainingSeconds > 0) {\n      remainingSeconds -= 1;\n      updateUI();\n      if (remainingSeconds <= 0) {\n        pauseTimer();\n      }\n    } else {\n      pauseTimer();\n    }\n  }\n\n  function startTimer() {\n    if (isBurning || remainingSeconds <= 0) return;\n    isBurning = true;\n    candleAssembly.classList.add('lit');\n    updateUI();\n    timerInterval = setInterval(tick, 1000);\n  }\n\n  function pauseTimer() {\n    if (!isBurning) return;\n    isBurning = false;\n    if (timerInterval) {\n      clearInterval(timerInterval);\n      timerInterval = null;\n    }\n    candleAssembly.classList.remove('lit');\n    updateUI();\n  }\n\n  function resetTimer() {\n    pauseTimer();\n    remainingSeconds = TOTAL_DURATION_SECONDS;\n    candleStick.style.height = `${INITIAL_HEIGHT}px`;\n    statusText.setAttribute('hidden', '');\n    timerDisplay.removeAttribute('hidden');\n    updateUI();\n  }\n\n  // Event Listeners\n  lightBtn.addEventListener('click', startTimer);\n  blowOutBtn.addEventListener('click', pauseTimer);\n  resetBtn.addEventListener('click', resetTimer);\n\n  // Keyboard Accessibility: Space/Enter trigger buttons natively; hotkeys 'L' and 'B'\n  window.addEventListener('keydown', function (e) {\n    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;\n    if (e.key === 'l' || e.key === 'L') {\n      if (!lightBtn.disabled) startTimer();\n    } else if (e.key === 'b' || e.key === 'B') {\n      if (!blowOutBtn.disabled) pauseTimer();\n    } else if (e.key === 'r' || e.key === 'R') {\n      resetTimer();\n    }\n  });\n\n  // Initial render\n  updateUI();\n})();\n",
+      "description": "Countdown timer logic, height shrinkage calculations, and event handlers for Light, Blow out, and Reset."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Candle Timer\n\nA 3-minute offline pixel candle timer built using vanilla HTML5, CSS3, and modern JavaScript with zero external dependencies.\n\n## Features\n\n- **3-Minute Duration**: Accurate 180-second countdown displaying `m:ss`.\n- **Pixel Art Visuals**: Pure CSS pixel art flame and candle body with animated flicker and ambient glow.\n- **Shrinking Height**: The candle's height shrinks proportionally as time elapses, leaving a small stub when finished.\n- **Interactive Controls**:\n  - **Light**: Starts or resumes burning the candle.\n  - **Blow out**: Pauses burning and extinguishes the flame.\n  - **Reset**: Restores full candle height and 3-minute timer.\n- **Burnt Out State**: When the countdown reaches `0:00`, the flame extinguishes and \"Burnt out\" appears.\n- **Keyboard Accessible**: Full tab navigation with clear focus outlines, plus keyboard shortcuts (`L` to Light, `B` to Blow out, `R` to Reset).\n- **Responsive & Standalone**: Works cleanly in any modern browser from 360px wide upward without build steps or network connectivity.\n\n## Getting Started\n\nOpen `index.html` directly in any web browser.\n",
+      "description": "Documentation for the Pixel Candle Timer project explaining controls, features, and offline zero-dependency architecture."
+    }
+  ]
+}
