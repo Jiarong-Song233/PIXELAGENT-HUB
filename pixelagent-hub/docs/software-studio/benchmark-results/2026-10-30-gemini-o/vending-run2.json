@@ -1,0 +1,413 @@
+{
+  "caseId": "vending",
+  "run": 2,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8945,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "10/10",
+  "finalChecks": "10/10",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "10/10"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 111,
+  "reportedTokens": 38169,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:13:21.690Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:13:21.690Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:13:38.456Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Vending Machine Web App"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:13:38.457Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:14:54.518Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:14:54.518Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:14:55.011Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:14:55.012Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "245e26a7-6173-4c29-91a7-77d9ba4e37ef"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:15:06.195Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "245e26a7-6173-4c29-91a7-77d9ba4e37ef",
+        "checks": 10
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:15:06.196Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "testPlanId": "245e26a7-6173-4c29-91a7-77d9ba4e37ef",
+        "checks": 10,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Initial credit display shows zero",
+        "passed": true,
+        "actual": "$0.00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Initial status message is READY",
+        "passed": true,
+        "actual": "READY"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Initial tray display is EMPTY",
+        "passed": true,
+        "actual": "EMPTY"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Insert 0.25 increases credit to 0.25",
+        "passed": true,
+        "actual": "$0.25"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Insert 1.00 increases credit to 1.00",
+        "passed": true,
+        "actual": "$1.00"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Accumulate credit with 1.00 and 0.25",
+        "passed": true,
+        "actual": "$1.25"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Clicking snack without sufficient credit shows error",
+        "passed": true,
+        "actual": "Not enough credit"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Purchasing Bit Candy (0.75) with 1.00 shows change and status",
+        "passed": true,
+        "actual": "Dispensed Bit Candy! Change: $0.25"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Purchasing Bit Candy (0.75) updates tray contents",
+        "passed": true,
+        "actual": "Bit Candy + $0.25 Change"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "name": "Purchasing resets credit balance to 0.00",
+        "passed": true,
+        "actual": "$0.00"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-30T02:15:09.400Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "41a81538-3ee1-4a28-a410-861c23cb8b4d",
+        "status": "passed",
+        "passed": 10,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-30T02:15:09.402Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial credit display shows zero",
+        "actions": [],
+        "selector": "#creditDisplay",
+        "expected": "$0.00"
+      },
+      {
+        "name": "Initial status message is READY",
+        "actions": [],
+        "selector": "#statusMsg",
+        "expected": "READY"
+      },
+      {
+        "name": "Initial tray display is EMPTY",
+        "actions": [],
+        "selector": "#trayText",
+        "expected": "EMPTY"
+      },
+      {
+        "name": "Insert 0.25 increases credit to 0.25",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnInsert25"
+          }
+        ],
+        "selector": "#creditDisplay",
+        "expected": "$0.25"
+      },
+      {
+        "name": "Insert 1.00 increases credit to 1.00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnInsert100"
+          }
+        ],
+        "selector": "#creditDisplay",
+        "expected": "$1.00"
+      },
+      {
+        "name": "Accumulate credit with 1.00 and 0.25",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnInsert100"
+          },
+          {
+            "type": "click",
+            "selector": "#btnInsert25"
+          }
+        ],
+        "selector": "#creditDisplay",
+        "expected": "$1.25"
+      },
+      {
+        "name": "Clicking snack without sufficient credit shows error",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnInsert25"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-card[data-id=\"1\"]"
+          }
+        ],
+        "selector": "#statusMsg",
+        "expected": "Not enough credit"
+      },
+      {
+        "name": "Purchasing Bit Candy (0.75) with 1.00 shows change and status",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnInsert100"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-card[data-id=\"3\"]"
+          }
+        ],
+        "selector": "#statusMsg",
+        "expected": "Dispensed Bit Candy! Change: $0.25"
+      },
+      {
+        "name": "Purchasing Bit Candy (0.75) updates tray contents",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnInsert100"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-card[data-id=\"3\"]"
+          }
+        ],
+        "selector": "#trayText",
+        "expected": "Bit Candy + $0.25 Change"
+      },
+      {
+        "name": "Purchasing resets credit balance to 0.00",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btnInsert100"
+          },
+          {
+            "type": "click",
+            "selector": "#btnInsert100"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-card[data-id=\"4\"]"
+          }
+        ],
+        "selector": "#creditDisplay",
+        "expected": "$0.00"
+      }
+    ],
+    "limitations": [
+      "Pixel art rendered on HTML5 canvas cannot be directly inspected or verified."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14689,
+      "completion_tokens": 524,
+      "total_tokens": 15213
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Vending Machine</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"machine-container\" role=\"region\" aria-label=\"Pixel Vending Machine\">\n    <header class=\"machine-header\">\n      <h1 class=\"machine-title\">PIXEL SNACKS</h1>\n      <p class=\"machine-subtitle\">Insert coins &amp; select snack</p>\n    </header>\n\n    <!-- Display / Showcase Window -->\n    <section class=\"showcase\" aria-label=\"Snack Display\">\n      <div class=\"snack-grid\" id=\"snackGrid\" role=\"group\" aria-label=\"Available snacks\">\n        <!-- Buttons injected dynamically or accessible fallback -->\n        <button type=\"button\" class=\"snack-card\" data-id=\"1\" aria-label=\"Pixel Cola, price $1.25\">\n          <span class=\"code-tag\">A1</span>\n          <canvas class=\"pixel-art\" data-snack=\"soda\" width=\"40\" height=\"40\" aria-hidden=\"true\"></canvas>\n          <span class=\"snack-name\">Pixel Cola</span>\n          <span class=\"snack-price\">$1.25</span>\n        </button>\n        <button type=\"button\" class=\"snack-card\" data-id=\"2\" aria-label=\"Cyber Chips, price $1.50\">\n          <span class=\"code-tag\">A2</span>\n          <canvas class=\"pixel-art\" data-snack=\"chips\" width=\"40\" height=\"40\" aria-hidden=\"true\"></canvas>\n          <span class=\"snack-name\">Cyber Chips</span>\n          <span class=\"snack-price\">$1.50</span>\n        </button>\n        <button type=\"button\" class=\"snack-card\" data-id=\"3\" aria-label=\"Bit Candy, price $0.75\">\n          <span class=\"code-tag\">B1</span>\n          <canvas class=\"pixel-art\" data-snack=\"candy\" width=\"40\" height=\"40\" aria-hidden=\"true\"></canvas>\n          <span class=\"snack-name\">Bit Candy</span>\n          <span class=\"snack-price\">$0.75</span>\n        </button>\n        <button type=\"button\" class=\"snack-card\" data-id=\"4\" aria-label=\"Retro Choc, price $2.00\">\n          <span class=\"code-tag\">B2</span>\n          <canvas class=\"pixel-art\" data-snack=\"choc\" width=\"40\" height=\"40\" aria-hidden=\"true\"></canvas>\n          <span class=\"snack-name\">Retro Choc</span>\n          <span class=\"snack-price\">$2.00</span>\n        </button>\n      </div>\n    </section>\n\n    <!-- Interaction Panel -->\n    <section class=\"control-panel\" aria-label=\"Vending Controls\">\n      <div class=\"display-screen\" role=\"status\" aria-live=\"polite\">\n        <div class=\"credit-row\">\n          <span class=\"label\">CREDIT:</span>\n          <span class=\"value\" id=\"creditDisplay\">$0.00</span>\n        </div>\n        <div class=\"status-message\" id=\"statusMsg\">READY</div>\n      </div>\n\n      <div class=\"coin-controls\">\n        <p class=\"section-label\">COIN SLOT</p>\n        <div class=\"button-row\">\n          <button type=\"button\" class=\"pixel-btn\" id=\"btnInsert25\" aria-label=\"Insert 25 cents\">\n            + Insert $0.25\n          </button>\n          <button type=\"button\" class=\"pixel-btn\" id=\"btnInsert100\" aria-label=\"Insert 1 dollar\">\n            + Insert $1.00\n          </button>\n        </div>\n      </div>\n\n      <div class=\"delivery-tray\" aria-label=\"Dispense Tray\">\n        <span class=\"tray-label\">PUSH TRAY</span>\n        <div class=\"tray-slot\" id=\"traySlot\">\n          <span class=\"tray-contents\" id=\"trayText\">EMPTY</span>\n        </div>\n      </div>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML file containing the markup for the pixel-art vending machine, snacks grid, coin controls, status readouts, and canvas graphics."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Strict hidden rule constraint */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-dark: #1f1b2c;\n  --machine-body: #3c3453;\n  --machine-accent: #6b5c8f;\n  --panel-bg: #12101a;\n  --screen-green: #5af78e;\n  --screen-bg: #091a10;\n  --accent-yellow: #f1fa8c;\n  --accent-red: #ff5555;\n  --text-main: #f8f8f2;\n  --border-dark: #12101a;\n  --font-family: 'Courier New', Courier, monospace, system-ui;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--bg-dark);\n  color: var(--text-main);\n  font-family: var(--font-family);\n  font-size: 16px;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 16px;\n}\n\n/* Main Cabinet */\n.machine-container {\n  background-color: var(--machine-body);\n  border: 4px solid var(--border-dark);\n  box-shadow:\n    inset 4px 4px 0 #584c7a,\n    inset -4px -4px 0 #282238,\n    8px 8px 0 rgba(0, 0, 0, 0.4);\n  width: 100%;\n  max-width: 440px;\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n\n.machine-header {\n  text-align: center;\n  border-bottom: 3px solid var(--border-dark);\n  padding-bottom: 12px;\n}\n\n.machine-title {\n  font-size: 1.5rem;\n  letter-spacing: 2px;\n  color: var(--accent-yellow);\n  text-shadow: 2px 2px 0 var(--border-dark);\n}\n\n.machine-subtitle {\n  font-size: 0.85rem;\n  color: var(--text-main);\n  margin-top: 4px;\n  opacity: 0.9;\n}\n\n/* Snack Showcase */\n.showcase {\n  background-color: var(--panel-bg);\n  border: 4px solid var(--border-dark);\n  padding: 12px;\n  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);\n}\n\n.snack-grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 12px;\n}\n\n.snack-card {\n  background-color: var(--machine-accent);\n  border: 3px solid var(--border-dark);\n  color: var(--text-main);\n  padding: 8px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  cursor: pointer;\n  font-family: inherit;\n  font-size: 0.9rem;\n  position: relative;\n  transition: transform 0.08s ease, background-color 0.1s ease;\n  outline: none;\n}\n\n.snack-card:hover {\n  background-color: #7b6ba3;\n  transform: translateY(-2px);\n}\n\n.snack-card:focus-visible {\n  border-color: var(--accent-yellow);\n  box-shadow: 0 0 0 3px var(--accent-yellow);\n}\n\n.snack-card:active {\n  transform: translateY(2px);\n  background-color: #554873;\n}\n\n.code-tag {\n  position: absolute;\n  top: 4px;\n  left: 4px;\n  font-size: 0.75rem;\n  background: var(--border-dark);\n  padding: 1px 4px;\n  border-radius: 2px;\n}\n\n.pixel-art {\n  image-rendering: pixelated;\n  margin: 6px 0;\n  background: rgba(0, 0, 0, 0.15);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n\n.snack-name {\n  font-weight: bold;\n  margin-bottom: 2px;\n  text-align: center;\n}\n\n.snack-price {\n  font-size: 0.85rem;\n  color: var(--accent-yellow);\n}\n\n/* Control Panel */\n.control-panel {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n}\n\n.display-screen {\n  background-color: var(--screen-bg);\n  border: 3px solid var(--border-dark);\n  padding: 10px;\n  color: var(--screen-green);\n  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);\n}\n\n.credit-row {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  font-size: 1.1rem;\n  font-weight: bold;\n}\n\n.status-message {\n  margin-top: 6px;\n  font-size: 0.95rem;\n  min-height: 1.4em;\n  word-break: break-word;\n}\n\n.status-message.error {\n  color: var(--accent-red);\n}\n\n.coin-controls {\n  background: rgba(0, 0, 0, 0.15);\n  padding: 8px;\n  border: 2px solid var(--border-dark);\n}\n\n.section-label {\n  font-size: 0.8rem;\n  color: var(--accent-yellow);\n  margin-bottom: 6px;\n  text-align: center;\n  letter-spacing: 1px;\n}\n\n.button-row {\n  display: flex;\n  gap: 8px;\n}\n\n.pixel-btn {\n  flex: 1;\n  background-color: var(--machine-accent);\n  color: var(--text-main);\n  border: 3px solid var(--border-dark);\n  font-family: inherit;\n  font-size: 0.95rem;\n  font-weight: bold;\n  padding: 10px 6px;\n  cursor: pointer;\n  outline: none;\n  transition: transform 0.08s ease, background-color 0.1s ease;\n}\n\n.pixel-btn:hover {\n  background-color: #7b6ba3;\n}\n\n.pixel-btn:focus-visible {\n  border-color: var(--accent-yellow);\n  box-shadow: 0 0 0 3px var(--accent-yellow);\n}\n\n.pixel-btn:active {\n  transform: translateY(2px);\n  background-color: #554873;\n}\n\n/* Dispense Tray */\n.delivery-tray {\n  background-color: var(--panel-bg);\n  border: 3px solid var(--border-dark);\n  padding: 8px;\n  text-align: center;\n}\n\n.tray-label {\n  font-size: 0.75rem;\n  color: #888;\n  letter-spacing: 2px;\n  display: block;\n  margin-bottom: 4px;\n}\n\n.tray-slot {\n  background-color: #000;\n  border: 2px solid var(--border-dark);\n  padding: 10px;\n  min-height: 38px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.tray-contents {\n  font-size: 0.9rem;\n  color: var(--accent-yellow);\n}\n\n/* Responsive adjustments */\n@media (max-width: 380px) {\n  .machine-container {\n    padding: 14px;\n  }\n  .snack-card {\n    font-size: 0.8rem;\n    padding: 6px;\n  }\n  .pixel-btn {\n    font-size: 0.85rem;\n    padding: 8px 4px;\n  }\n}",
+      "description": "CSS stylesheet containing the cohesive pixel palette, retro chunky borders, focus/hover states, and responsive layout."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  // State stored in integer cents to avoid floating point inaccuracies\n  let creditCents = 0;\n\n  const snacks = [\n    { id: '1', code: 'A1', name: 'Pixel Cola', priceCents: 125, type: 'soda' },\n    { id: '2', code: 'A2', name: 'Cyber Chips', priceCents: 150, type: 'chips' },\n    { id: '3', code: 'B1', name: 'Bit Candy', priceCents: 75, type: 'candy' },\n    { id: '4', code: 'B2', name: 'Retro Choc', priceCents: 200, type: 'choc' }\n  ];\n\n  // Elements\n  const creditDisplay = document.getElementById('creditDisplay');\n  const statusMsg = document.getElementById('statusMsg');\n  const btnInsert25 = document.getElementById('btnInsert25');\n  const btnInsert100 = document.getElementById('btnInsert100');\n  const trayText = document.getElementById('trayText');\n  const snackButtons = document.querySelectorAll('.snack-card');\n\n  function formatCurrency(cents) {\n    return '$' + (cents / 100).toFixed(2);\n  }\n\n  function updateCreditDisplay() {\n    creditDisplay.textContent = formatCurrency(creditCents);\n  }\n\n  function setStatus(message, isError = false) {\n    statusMsg.textContent = message;\n    if (isError) {\n      statusMsg.classList.add('error');\n    } else {\n      statusMsg.classList.remove('error');\n    }\n  }\n\n  function addCredit(cents) {\n    creditCents += cents;\n    updateCreditDisplay();\n    setStatus(`Inserted ${formatCurrency(cents)}. Select a snack.`);\n  }\n\n  function handleSnackSelect(snackId) {\n    const snack = snacks.find(s => s.id === snackId);\n    if (!snack) return;\n\n    if (creditCents >= snack.priceCents) {\n      const changeCents = creditCents - snack.priceCents;\n      creditCents = 0;\n      updateCreditDisplay();\n\n      const changeStr = formatCurrency(changeCents);\n      setStatus(`Dispensed ${snack.name}! Change: ${changeStr}`);\n      trayText.textContent = `${snack.name} + ${changeStr} Change`;\n    } else {\n      setStatus('Not enough credit', true);\n    }\n  }\n\n  // Event Listeners\n  btnInsert25.addEventListener('click', () => addCredit(25));\n  btnInsert100.addEventListener('click', () => addCredit(100));\n\n  snackButtons.forEach(button => {\n    button.addEventListener('click', () => {\n      const snackId = button.getAttribute('data-id');\n      handleSnackSelect(snackId);\n    });\n  });\n\n  // Draw 8x8 pixel art snacks onto canvases\n  function renderPixelArt() {\n    const canvases = document.querySelectorAll('canvas.pixel-art');\n    const colorMap = {\n      '.': 'transparent',\n      'R': '#ff5555',\n      'D': '#bd2e2e',\n      'Y': '#f1fa8c',\n      'O': '#ffb86c',\n      'B': '#8be9fd',\n      'W': '#f8f8f2',\n      'C': '#6f42c1',\n      'M': '#693e1b'\n    };\n\n    const sprites = {\n      soda: [\n        '..WW....',\n        '.RDRD...',\n        '.RDRD...',\n        '.RWWD...',\n        '.RDRD...',\n        '.RDRD...',\n        '.RDRD...',\n        '..DD....'\n      ],\n      chips: [\n        '..YYYY..',\n        '.YYYYYY.',\n        '.YOOOOY.',\n        '.YOOOOY.',\n        '.YOOOOY.',\n        '.YYYYYY.',\n        '..YYYY..',\n        '........'\n      ],\n      candy: [\n        '........',\n        '.W....W.',\n        '..BWWWB..',\n        '..BCWCB..',\n        '..BCWCB..',\n        '..BWWWB..',\n        '.W....W.',\n        '........'\n      ],\n      choc: [\n        '..MMMM..',\n        '.MMMMMM.',\n        '.MM.MM..',\n        '.MMMMMM.',\n        '.MM.MM..',\n        '.MMMMMM.',\n        '.MMMMMM.',\n        '..MMMM..'\n      ]\n    };\n\n    canvases.forEach(canvas => {\n      const type = canvas.getAttribute('data-snack');\n      const sprite = sprites[type];\n      if (!sprite) return;\n      const ctx = canvas.getContext('2d');\n      const pixelSize = canvas.width / 8;\n\n      ctx.clearRect(0, 0, canvas.width, canvas.height);\n      for (let row = 0; row < 8; row++) {\n        for (let col = 0; col < 8; col++) {\n          const char = sprite[row][col];\n          const fill = colorMap[char];\n          if (fill && fill !== 'transparent') {\n            ctx.fillStyle = fill;\n            ctx.fillRect(col * pixelSize, row * pixelSize, pixelSize, pixelSize);\n          }\n        }\n      }\n    });\n  }\n\n  renderPixelArt();\n  updateCreditDisplay();\n});",
+      "description": "Vanilla JavaScript handling integer-cent credit arithmetic, snack dispensing, change calculation, status announcements, and canvas pixel-art rendering."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Vending Machine Web App\n\nAn offline, single-page pixel-art vending machine built with vanilla HTML, CSS, and JavaScript.\n\n## Features\n\n- **4 Themed Snacks**:\n  - Pixel Cola ($1.25)\n  - Cyber Chips ($1.50)\n  - Bit Candy ($0.75)\n  - Retro Choc ($2.00)\n- **Coin Insertion**: Supports adding `$0.25` and `$1.00` denominations.\n- **Dispensing & Change**: Dispenses the purchased snack and displays the exact change returned.\n- **Error Feedback**: Displays `Not enough credit` if funds are insufficient.\n- **Pixel Aesthetic**: Custom HTML5 Canvas pixel icons and arcade cabinet design using pure CSS.\n- **Accessibility**: Labeled controls with keyboard focus states and `aria-live` status regions.\n- **Offline & Zero-Dependency**: Runs natively in any standard browser without network or package requirements.\n\n## Getting Started\n\nOpen `index.html` directly in any modern web browser.",
+      "description": "Project documentation explaining how to launch and test the pixel vending machine app."
+    }
+  ]
+}

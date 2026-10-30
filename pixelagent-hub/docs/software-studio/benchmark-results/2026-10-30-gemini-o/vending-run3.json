@@ -1,0 +1,421 @@
+{
+  "caseId": "vending",
+  "run": 3,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8990,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 60,
+  "reportedTokens": 36958,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:15:11.540Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:15:11.540Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:15:23.683Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Vending Machine"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:15:23.683Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:15:55.662Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:15:55.662Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:15:56.170Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:15:56.171Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "d53226db-bd35-406b-bed3-2fe82a51e5d8"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:16:07.606Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "d53226db-bd35-406b-bed3-2fe82a51e5d8",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:16:07.606Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "testPlanId": "d53226db-bd35-406b-bed3-2fe82a51e5d8",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Check initial credit display",
+        "passed": true,
+        "actual": "$0.00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Insert $0.25 button updates credit",
+        "passed": true,
+        "actual": "$0.25"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Insert $1.00 button updates credit",
+        "passed": true,
+        "actual": "$1.00"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Accumulate credit with multiple insertions",
+        "passed": true,
+        "actual": "$1.25"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Show not enough credit message when balance is insufficient",
+        "passed": true,
+        "actual": "Not enough credit"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Dispense exact change and item for Byte Candy",
+        "passed": true,
+        "actual": "Dispensed Byte Candy! Change: $0.00"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Dispense Pixel Soda and show surplus change",
+        "passed": true,
+        "actual": "Dispensed Pixel Soda! Change: $0.75"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Dispensed item chute updates item name",
+        "passed": true,
+        "actual": "* Bit Chips *"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "name": "Credit resets to zero after successful purchase",
+        "passed": true,
+        "actual": "$0.00"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:16:10.498Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "5b99852c-4f0b-44ce-8683-87c696a58b5e",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-30T02:16:10.500Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Check initial credit display",
+        "actions": [],
+        "selector": "#credit-display",
+        "expected": "$0.00"
+      },
+      {
+        "name": "Insert $0.25 button updates credit",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-25"
+          }
+        ],
+        "selector": "#credit-display",
+        "expected": "$0.25"
+      },
+      {
+        "name": "Insert $1.00 button updates credit",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          }
+        ],
+        "selector": "#credit-display",
+        "expected": "$1.00"
+      },
+      {
+        "name": "Accumulate credit with multiple insertions",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-insert-25"
+          }
+        ],
+        "selector": "#credit-display",
+        "expected": "$1.25"
+      },
+      {
+        "name": "Show not enough credit message when balance is insufficient",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-25"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-btn[data-id=\"s3\"]"
+          }
+        ],
+        "selector": "#message-box",
+        "expected": "Not enough credit"
+      },
+      {
+        "name": "Dispense exact change and item for Byte Candy",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-25"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-insert-25"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-insert-25"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-btn[data-id=\"s3\"]"
+          }
+        ],
+        "selector": "#message-box",
+        "expected": "Dispensed Byte Candy! Change: $0.00"
+      },
+      {
+        "name": "Dispense Pixel Soda and show surplus change",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-btn[data-id=\"s1\"]"
+          }
+        ],
+        "selector": "#message-box",
+        "expected": "Dispensed Pixel Soda! Change: $0.75"
+      },
+      {
+        "name": "Dispensed item chute updates item name",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-btn[data-id=\"s2\"]"
+          }
+        ],
+        "selector": "#dispensed-item",
+        "expected": "* Bit Chips *"
+      },
+      {
+        "name": "Credit resets to zero after successful purchase",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": ".snack-btn[data-id=\"s4\"]"
+          }
+        ],
+        "selector": "#credit-display",
+        "expected": "$0.00"
+      }
+    ],
+    "limitations": [
+      "Does not test audio effects or CSS keyframe animations for coin drop and tray dropIn."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 13805,
+      "completion_tokens": 959,
+      "total_tokens": 14764
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Vending Machine</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"machine-container\">\n    <header class=\"machine-header\">\n      <h1>Pixel Snack Machine</h1>\n    </header>\n\n    <!-- Display & Info Panel -->\n    <section class=\"screen-panel\" aria-label=\"Vending Machine Display\">\n      <div class=\"screen-row\">\n        <span class=\"label\">CREDIT:</span>\n        <span id=\"credit-display\" class=\"value\" aria-live=\"polite\">$0.00</span>\n      </div>\n      <div id=\"message-box\" class=\"message-box\" aria-live=\"assertive\" role=\"status\">\n        Insert coins to begin\n      </div>\n    </section>\n\n    <!-- Snack Selection Grid -->\n    <section class=\"snack-grid\" aria-label=\"Snack Selection\">\n      <button type=\"button\" class=\"snack-btn\" data-id=\"s1\" data-name=\"Pixel Soda\" data-price=\"125\" aria-label=\"Pixel Soda, Price $1.25\">\n        <div class=\"snack-icon icon-soda\" aria-hidden=\"true\"></div>\n        <span class=\"snack-name\">Pixel Soda</span>\n        <span class=\"snack-price\">$1.25</span>\n      </button>\n\n      <button type=\"button\" class=\"snack-btn\" data-id=\"s2\" data-name=\"Bit Chips\" data-price=\"150\" aria-label=\"Bit Chips, Price $1.50\">\n        <div class=\"snack-icon icon-chips\" aria-hidden=\"true\"></div>\n        <span class=\"snack-name\">Bit Chips</span>\n        <span class=\"snack-price\">$1.50</span>\n      </button>\n\n      <button type=\"button\" class=\"snack-btn\" data-id=\"s3\" data-name=\"Byte Candy\" data-price=\"75\" aria-label=\"Byte Candy, Price $0.75\">\n        <div class=\"snack-icon icon-candy\" aria-hidden=\"true\"></div>\n        <span class=\"snack-name\">Byte Candy</span>\n        <span class=\"snack-price\">$0.75</span>\n      </button>\n\n      <button type=\"button\" class=\"snack-btn\" data-id=\"s4\" data-name=\"Mega Bar\" data-price=\"200\" aria-label=\"Mega Bar, Price $2.00\">\n        <div class=\"snack-icon icon-bar\" aria-hidden=\"true\"></div>\n        <span class=\"snack-name\">Mega Bar</span>\n        <span class=\"snack-price\">$2.00</span>\n      </button>\n    </section>\n\n    <!-- Coin Controls -->\n    <section class=\"controls-panel\" aria-label=\"Coin Insertion\">\n      <button type=\"button\" id=\"btn-insert-25\" class=\"coin-btn\">Insert $0.25</button>\n      <button type=\"button\" id=\"btn-insert-100\" class=\"coin-btn\">Insert $1.00</button>\n    </section>\n\n    <!-- Dispense Tray -->\n    <section class=\"dispense-chute\" aria-label=\"Dispenser Slot\">\n      <div class=\"chute-opening\">\n        <span id=\"dispensed-item\" class=\"dispensed-item\">[ Empty Slot ]</span>\n      </div>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML file containing the semantic markup for the pixel vending machine interface."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Ensure hidden attribute works correctly */\n[hidden] {\n  display: none !important;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n:root {\n  --bg-color: #2b2b38;\n  --machine-body: #d9455f;\n  --machine-shadow: #991f3d;\n  --screen-bg: #111e25;\n  --screen-text: #5af07b;\n  --screen-warn: #fbd043;\n  --snack-bg: #f7ebe1;\n  --snack-border: #4a2828;\n  --btn-gold: #ebb128;\n  --btn-gold-shadow: #a8760c;\n  --text-dark: #221b1b;\n}\n\nbody {\n  font-family: \"Courier New\", Courier, monospace, monospace;\n  font-size: 16px;\n  background-color: var(--bg-color);\n  color: var(--text-dark);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  padding: 16px;\n}\n\n.machine-container {\n  background: var(--machine-body);\n  border: 4px solid var(--text-dark);\n  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.4),\n              inset -6px -6px 0px 0px var(--machine-shadow);\n  border-radius: 4px;\n  width: 100%;\n  max-width: 440px;\n  padding: 24px 20px;\n  display: flex;\n  flex-direction: column;\n  gap: 18px;\n}\n\n.machine-header h1 {\n  font-size: 1.25rem;\n  text-align: center;\n  color: #fff;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  text-shadow: 2px 2px 0 var(--text-dark);\n}\n\n/* Screen Panel */\n.screen-panel {\n  background-color: var(--screen-bg);\n  border: 4px solid var(--text-dark);\n  padding: 12px 14px;\n  box-shadow: inset 3px 3px 0 0 rgba(0, 0, 0, 0.7);\n}\n\n.screen-row {\n  display: flex;\n  justify-content: space-between;\n  font-size: 1.2rem;\n  font-weight: bold;\n  color: var(--screen-text);\n  margin-bottom: 8px;\n}\n\n.message-box {\n  font-size: 0.95rem;\n  color: var(--screen-warn);\n  min-height: 24px;\n  word-break: break-word;\n}\n\n/* Snack Grid */\n.snack-grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 12px;\n}\n\n.snack-btn {\n  background: var(--snack-bg);\n  border: 3px solid var(--snack-border);\n  box-shadow: 4px 4px 0 0 var(--text-dark);\n  padding: 12px 8px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 6px;\n  cursor: pointer;\n  font-family: inherit;\n  font-weight: bold;\n  transition: transform 0.05s ease;\n}\n\n.snack-btn:hover {\n  background: #fff8f0;\n}\n\n.snack-btn:focus-visible {\n  outline: 3px solid #fff;\n  outline-offset: 2px;\n}\n\n.snack-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 2px 2px 0 0 var(--text-dark);\n}\n\n.snack-name {\n  font-size: 0.95rem;\n  color: var(--text-dark);\n}\n\n.snack-price {\n  font-size: 1rem;\n  color: #a31d1d;\n}\n\n/* Pixel Icons (Pure CSS) */\n.snack-icon {\n  width: 24px;\n  height: 32px;\n  position: relative;\n}\n\n.icon-soda {\n  background: #3978a8;\n  border-radius: 2px 2px 4px 4px;\n  border: 2px solid var(--text-dark);\n}\n.icon-soda::before {\n  content: \"\";\n  position: absolute;\n  top: 6px;\n  left: 2px;\n  right: 2px;\n  height: 8px;\n  background: #ef476f;\n}\n\n.icon-chips {\n  background: #ffd166;\n  border-radius: 3px;\n  border: 2px solid var(--text-dark);\n}\n.icon-chips::before {\n  content: \"\";\n  position: absolute;\n  top: 10px;\n  left: 3px;\n  right: 3px;\n  height: 4px;\n  background: #e76f51;\n}\n\n.icon-candy {\n  background: #06d6a0;\n  border-radius: 6px;\n  border: 2px solid var(--text-dark);\n  height: 20px;\n  margin-top: 6px;\n}\n\n.icon-bar {\n  background: #8b5a2b;\n  border: 2px solid var(--text-dark);\n  height: 18px;\n  margin-top: 8px;\n}\n.icon-bar::before {\n  content: \"\";\n  position: absolute;\n  left: 2px;\n  top: 2px;\n  width: 8px;\n  height: 10px;\n  background: #ba8c63;\n}\n\n/* Coin Controls */\n.controls-panel {\n  display: flex;\n  gap: 12px;\n}\n\n.coin-btn {\n  flex: 1;\n  background: var(--btn-gold);\n  border: 3px solid var(--text-dark);\n  box-shadow: 0 4px 0 0 var(--btn-gold-shadow),\n              0 4px 0 3px var(--text-dark);\n  color: var(--text-dark);\n  font-family: inherit;\n  font-weight: bold;\n  font-size: 1rem;\n  padding: 12px 6px;\n  cursor: pointer;\n  transition: transform 0.05s ease;\n}\n\n.coin-btn:hover {\n  background: #fcd34d;\n}\n\n.coin-btn:focus-visible {\n  outline: 3px solid #fff;\n  outline-offset: 2px;\n}\n\n.coin-btn:active {\n  transform: translateY(4px);\n  box-shadow: 0 0 0 0 var(--btn-gold-shadow),\n              0 0 0 3px var(--text-dark);\n}\n\n/* Dispenser Chute */\n.dispense-chute {\n  background: #1e1e24;\n  border: 4px solid var(--text-dark);\n  padding: 14px;\n  box-shadow: inset 0 6px 0 0 rgba(0, 0, 0, 0.6);\n}\n\n.chute-opening {\n  text-align: center;\n  min-height: 32px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.dispensed-item {\n  color: #a0aec0;\n  font-size: 0.95rem;\n  font-weight: bold;\n}\n\n.dispensed-item.active {\n  color: #fff;\n  animation: dropIn 0.2s ease-out;\n}\n\n@keyframes dropIn {\n  0% {\n    transform: translateY(-8px);\n    opacity: 0;\n  }\n  100% {\n    transform: translateY(0);\n    opacity: 1;\n  }\n}\n\n/* Viewport adjustments */\n@media (max-width: 360px) {\n  .machine-container {\n    padding: 16px 12px;\n  }\n  .snack-btn {\n    padding: 8px 4px;\n  }\n  .coin-btn {\n    font-size: 0.9rem;\n  }\n}",
+      "description": "CSS stylesheet applying the pixel-art aesthetic, cohesive color palette, responsive layout, and interactive states."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  let creditCents = 0;\n\n  // Elements\n  const creditDisplay = document.getElementById('credit-display');\n  const messageBox = document.getElementById('message-box');\n  const dispensedItem = document.getElementById('dispensed-item');\n  const btnInsert25 = document.getElementById('btn-insert-25');\n  const btnInsert100 = document.getElementById('btn-insert-100');\n  const snackButtons = document.querySelectorAll('.snack-btn');\n\n  function formatCurrency(cents) {\n    return '$' + (cents / 100).toFixed(2);\n  }\n\n  function updateCreditDisplay() {\n    creditDisplay.textContent = formatCurrency(creditCents);\n  }\n\n  function addCredit(cents) {\n    creditCents += cents;\n    updateCreditDisplay();\n    messageBox.textContent = `Added ${formatCurrency(cents)}. Credit: ${formatCurrency(creditCents)}`;\n  }\n\n  function handleSnackClick(event) {\n    const button = event.currentTarget;\n    const snackName = button.getAttribute('data-name');\n    const priceCents = parseInt(button.getAttribute('data-price'), 10);\n\n    if (creditCents >= priceCents) {\n      const changeCents = creditCents - priceCents;\n      creditCents = 0;\n      updateCreditDisplay();\n\n      messageBox.textContent = `Dispensed ${snackName}! Change: ${formatCurrency(changeCents)}`;\n      dispensedItem.textContent = `* ${snackName} *`;\n      dispensedItem.classList.add('active');\n    } else {\n      messageBox.textContent = 'Not enough credit';\n    }\n  }\n\n  // Attach coin insertion listeners\n  btnInsert25.addEventListener('click', () => addCredit(25));\n  btnInsert100.addEventListener('click', () => addCredit(100));\n\n  // Attach snack selection listeners\n  snackButtons.forEach((btn) => {\n    btn.addEventListener('click', handleSnackClick);\n  });\n});",
+      "description": "Vanilla JavaScript handling credit management, event listeners, snack dispensing, and change calculation in integer cents."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Vending Machine\n\nA standalone, retro pixel-styled vending machine built using HTML, CSS, and vanilla JavaScript.\n\n## Features\n\n- **4 Selectable Snacks**:\n  - Pixel Soda ($1.25)\n  - Bit Chips ($1.50)\n  - Byte Candy ($0.75)\n  - Mega Bar ($2.00)\n- **Coin Insertion**:\n  - Insert $0.25 button\n  - Insert $1.00 button\n- **Dispensing & Change Logic**:\n  - Dispenses the item and returns change if credit is sufficient.\n  - Displays `Not enough credit` if the balance is too low.\n  - Uses integer-based calculations (cents) to avoid floating-point inaccuracies.\n- **Zero External Dependencies**:\n  - Pure HTML5, CSS3, and vanilla JavaScript without external libraries or fonts.\n  - CSS-drawn pixel-art style badges for snacks.\n  - Works entirely offline.\n- **Accessibility & Responsiveness**:\n  - Semantic buttons with ARIA labels and live region announcements.\n  - Visible keyboard focus rings and active pressed states.\n  - Fully responsive design scaling down to 360px viewports.\n\n## Project Structure\n\n- `index.html` - Vending machine semantic structure and screen layout.\n- `style.css` - Pixel-art theme, 4-color palette, responsiveness, and state styles.\n- `app.js` - Credit calculation, coin actions, snack dispensing, and DOM updates.\n- `README.md` - Documentation and project guide.\n\n## How to Run\n\nOpen `index.html` in any modern web browser. No local server or build tools required.",
+      "description": "Documentation detailing the project features, structure, accessibility considerations, and usage instructions."
+    }
+  ]
+}

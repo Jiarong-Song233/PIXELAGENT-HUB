@@ -1,0 +1,430 @@
+{
+  "caseId": "sudoku-mini",
+  "run": 3,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8953,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "8/8",
+  "finalChecks": "8/8",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "8/8"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 68,
+  "reportedTokens": 37192,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:30:55.382Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:30:55.382Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:31:08.233Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel 4x4 Sudoku"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:31:08.233Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:31:44.647Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:31:44.647Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:31:45.213Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:31:45.214Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "14604128-fcf3-4706-b1fe-def52ec4a7a6"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:31:58.773Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "14604128-fcf3-4706-b1fe-def52ec4a7a6",
+        "checks": 8
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:31:58.773Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "testPlanId": "14604128-fcf3-4706-b1fe-def52ec4a7a6",
+        "checks": 8,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "name": "initial puzzle load clues and solved banner hidden",
+        "passed": true,
+        "actual": "false"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "name": "valid digit input accepts 1-4",
+        "passed": true,
+        "actual": "2"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "name": "non-allowed digit rejected",
+        "passed": true,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "name": "row conflict turns cell red with conflict class",
+        "passed": true,
+        "actual": "cell conflict"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "name": "column conflict turns cell red with conflict class",
+        "passed": true,
+        "actual": "cell conflict"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "name": "2x2 box conflict turns cell red with conflict class",
+        "passed": true,
+        "actual": "cell conflict"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "name": "full and valid grid reveals solved banner",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "name": "clear inputs empties editable cells",
+        "passed": true,
+        "actual": ""
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:32:01.443Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "addd6d8e-aa86-4457-9740-202decbb2897",
+        "status": "passed",
+        "passed": 8,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:32:01.445Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "initial puzzle load clues and solved banner hidden",
+        "actions": [],
+        "selector": "#solvedBanner",
+        "expected": "false",
+        "assertion": "visible"
+      },
+      {
+        "name": "valid digit input accepts 1-4",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell:not(.clue) input",
+            "nth": 0,
+            "value": "2"
+          }
+        ],
+        "selector": ".cell:not(.clue) input",
+        "nth": 0,
+        "expected": "2",
+        "assertion": "attribute",
+        "attribute": "value"
+      },
+      {
+        "name": "non-allowed digit rejected",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell:not(.clue) input",
+            "nth": 0,
+            "value": "9"
+          }
+        ],
+        "selector": ".cell:not(.clue) input",
+        "nth": 0,
+        "expected": "",
+        "assertion": "attribute",
+        "attribute": "value"
+      },
+      {
+        "name": "row conflict turns cell red with conflict class",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell[data-row='0'][data-col='1'] input",
+            "value": "1"
+          }
+        ],
+        "selector": ".cell[data-row='0'][data-col='1']",
+        "expected": "conflict",
+        "assertion": "attribute",
+        "attribute": "class"
+      },
+      {
+        "name": "column conflict turns cell red with conflict class",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell[data-row='1'][data-col='0'] input",
+            "value": "1"
+          }
+        ],
+        "selector": ".cell[data-row='1'][data-col='0']",
+        "expected": "conflict",
+        "assertion": "attribute",
+        "attribute": "class"
+      },
+      {
+        "name": "2x2 box conflict turns cell red with conflict class",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell[data-row='1'][data-col='1'] input",
+            "value": "1"
+          }
+        ],
+        "selector": ".cell[data-row='1'][data-col='1']",
+        "expected": "conflict",
+        "assertion": "attribute",
+        "attribute": "class"
+      },
+      {
+        "name": "full and valid grid reveals solved banner",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell[data-row='0'][data-col='1'] input",
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='0'][data-col='2'] input",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='1'][data-col='0'] input",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='1'][data-col='1'] input",
+            "value": "4"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='1'][data-col='3'] input",
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='2'][data-col='0'] input",
+            "value": "2"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='2'][data-col='2'] input",
+            "value": "4"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='2'][data-col='3'] input",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='3'][data-col='1'] input",
+            "value": "3"
+          },
+          {
+            "type": "input",
+            "selector": ".cell[data-row='3'][data-col='2'] input",
+            "value": "2"
+          }
+        ],
+        "selector": "#solvedBanner",
+        "expected": "true",
+        "assertion": "visible"
+      },
+      {
+        "name": "clear inputs empties editable cells",
+        "actions": [
+          {
+            "type": "input",
+            "selector": ".cell[data-row='0'][data-col='1'] input",
+            "value": "2"
+          },
+          {
+            "type": "click",
+            "selector": "#clearBtn"
+          }
+        ],
+        "selector": ".cell[data-row='0'][data-col='1'] input",
+        "expected": "",
+        "assertion": "attribute",
+        "attribute": "value"
+      }
+    ],
+    "limitations": [
+      "Exact visual pixel rendition and retro font rendering cannot be asserted directly via DOM checks.",
+      "Arrow key synthetic navigation between cells is not tested with DOM key actions due to browser focus model variations."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14050,
+      "completion_tokens": 794,
+      "total_tokens": 14844
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel 4x4 Sudoku</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"game-container\">\n    <header class=\"game-header\">\n      <h1 class=\"game-title\">Pixel 4x4 Sudoku</h1>\n      <p class=\"game-desc\">Fill empty cells with digits 1–4. No repeats in any row, column, or 2x2 box!</p>\n    </header>\n\n    <section class=\"board-card\" aria-label=\"Sudoku Game Board\">\n      <div id=\"solvedBanner\" class=\"solved-banner\" role=\"status\" aria-live=\"polite\" hidden>\n        Solved!\n      </div>\n      <div id=\"sudokuGrid\" class=\"grid\" role=\"grid\" aria-label=\"4 by 4 Sudoku Grid\"></div>\n    </section>\n\n    <footer class=\"controls\">\n      <button id=\"resetBtn\" type=\"button\" class=\"btn\">Reset Puzzle</button>\n      <button id=\"clearBtn\" type=\"button\" class=\"btn btn-secondary\">Clear Inputs</button>\n    </footer>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main single-page structure for the Pixel 4x4 Sudoku game featuring accessible input grid, controls, and solved banner."
+    },
+    {
+      "path": "style.css",
+      "content": "[hidden] {\n  display: none !important;\n}\n\n:root {\n  --bg-color: #2b2b36;\n  --card-bg: #1c1c24;\n  --primary: #ffd166;\n  --text-main: #f4f4f9;\n  --text-dim: #9aa0a6;\n  --clue-bg: #2d2f3f;\n  --editable-bg: #13141a;\n  --error-bg: #ff5252;\n  --error-text: #ffffff;\n  --success-color: #06d6a0;\n  --border-color: #4a4e69;\n  --thick-border: #ffd166;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: \"Courier New\", Courier, monospace, system-ui, sans-serif;\n  font-size: 16px;\n  background-color: var(--bg-color);\n  color: var(--text-main);\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 16px;\n}\n\n.game-container {\n  background: var(--card-bg);\n  border: 4px solid var(--border-color);\n  box-shadow: 6px 6px 0px #0e0e13;\n  width: 100%;\n  max-width: 440px;\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n\n.game-header {\n  text-align: center;\n}\n\n.game-title {\n  font-size: 1.5rem;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  color: var(--primary);\n  margin-bottom: 8px;\n  text-shadow: 2px 2px 0px #000;\n}\n\n.game-desc {\n  font-size: 0.95rem;\n  color: var(--text-dim);\n  line-height: 1.4;\n}\n\n.board-card {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n}\n\n.solved-banner {\n  width: 100%;\n  text-align: center;\n  background-color: var(--success-color);\n  color: #0d3b2e;\n  font-weight: bold;\n  font-size: 1.3rem;\n  padding: 10px;\n  margin-bottom: 16px;\n  border: 3px solid #049f76;\n  box-shadow: 3px 3px 0px #000;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  animation: popIn 0.25s ease-out;\n}\n\n@keyframes popIn {\n  0% { transform: scale(0.9); opacity: 0; }\n  100% { transform: scale(1); opacity: 1; }\n}\n\n.grid {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(4, 1fr);\n  gap: 2px;\n  background-color: var(--thick-border);\n  border: 4px solid var(--thick-border);\n  box-shadow: 4px 4px 0px #000;\n  width: 100%;\n  max-width: 320px;\n  aspect-ratio: 1 / 1;\n}\n\n.cell {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  background: var(--editable-bg);\n}\n\n/* 2x2 Box Separation Boundaries */\n.cell:nth-child(4n + 2) {\n  margin-right: 2px;\n}\n.cell:nth-child(n + 5):nth-child(-n + 8) {\n  margin-bottom: 2px;\n}\n\n.cell input {\n  width: 100%;\n  height: 100%;\n  background: transparent;\n  border: none;\n  text-align: center;\n  font-size: 1.75rem;\n  font-family: inherit;\n  font-weight: bold;\n  color: var(--primary);\n  outline: none;\n  cursor: text;\n  caret-color: var(--primary);\n}\n\n.cell input:focus {\n  background: #252839;\n  box-shadow: inset 0 0 0 2px var(--primary);\n}\n\n.cell.clue input {\n  background: var(--clue-bg);\n  color: #ffffff;\n  cursor: not-allowed;\n  user-select: none;\n}\n\n.cell.conflict input {\n  background-color: var(--error-bg) !important;\n  color: var(--error-text) !important;\n}\n\n.controls {\n  display: flex;\n  gap: 12px;\n  width: 100%;\n  justify-content: center;\n}\n\n.btn {\n  flex: 1;\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: bold;\n  padding: 10px 16px;\n  border: 3px solid #000;\n  background-color: var(--primary);\n  color: #111;\n  cursor: pointer;\n  box-shadow: 3px 3px 0px #000;\n  transition: transform 0.1s, box-shadow 0.1s;\n}\n\n.btn:hover {\n  transform: translate(-1px, -1px);\n  box-shadow: 4px 4px 0px #000;\n}\n\n.btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 1px 1px 0px #000;\n}\n\n.btn:focus-visible {\n  outline: 2px dashed #ffffff;\n  outline-offset: 2px;\n}\n\n.btn-secondary {\n  background-color: #4a4e69;\n  color: #ffffff;\n}\n\n@media (max-width: 360px) {\n  .game-container {\n    padding: 16px;\n  }\n  .grid {\n    max-width: 260px;\n  }\n  .cell input {\n    font-size: 1.4rem;\n  }\n  .btn {\n    font-size: 0.9rem;\n    padding: 8px 10px;\n  }\n}",
+      "description": "Retro pixel-themed responsive styles, visual conflict indicators, and accessibility states."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  // Built-in 4x4 Sudoku Puzzle (0 represents empty cells)\n  // Solution:\n  // 1 2 | 3 4\n  // 3 4 | 1 2\n  // ----+----\n  // 2 1 | 4 3\n  // 4 3 | 2 1\n  const INITIAL_PUZZLE = [\n    [1, 0, 0, 4],\n    [0, 0, 1, 0],\n    [0, 1, 0, 0],\n    [4, 0, 0, 1]\n  ];\n\n  const gridElement = document.getElementById('sudokuGrid');\n  const solvedBanner = document.getElementById('solvedBanner');\n  const resetBtn = document.getElementById('resetBtn');\n  const clearBtn = document.getElementById('clearBtn');\n\n  const inputs = [];\n\n  function createGrid() {\n    gridElement.innerHTML = '';\n    inputs.length = 0;\n\n    for (let r = 0; r < 4; r++) {\n      for (let c = 0; c < 4; c++) {\n        const cell = document.createElement('div');\n        cell.classList.add('cell');\n        cell.setAttribute('role', 'gridcell');\n        cell.dataset.row = r;\n        cell.dataset.col = c;\n\n        const input = document.createElement('input');\n        input.type = 'text';\n        input.inputMode = 'numeric';\n        input.maxLength = 1;\n        input.setAttribute('aria-label', `Row ${r + 1}, Column ${c + 1}`);\n\n        const initialValue = INITIAL_PUZZLE[r][c];\n        if (initialValue !== 0) {\n          input.value = initialValue;\n          input.readOnly = true;\n          input.tabIndex = -1;\n          cell.classList.add('clue');\n        } else {\n          input.value = '';\n        }\n\n        cell.appendChild(input);\n        gridElement.appendChild(cell);\n        inputs.push(input);\n\n        input.addEventListener('keydown', (e) => handleNavigation(e, r, c));\n        input.addEventListener('input', (e) => handleInput(e, input));\n      }\n    }\n    validateGrid();\n  }\n\n  function handleInput(e, input) {\n    const val = input.value;\n    if (!/^[1-4]$/.test(val)) {\n      input.value = '';\n    }\n    validateGrid();\n  }\n\n  function handleNavigation(e, r, c) {\n    let nextR = r;\n    let nextC = c;\n\n    switch (e.key) {\n      case 'ArrowUp':\n        nextR = Math.max(0, r - 1);\n        break;\n      case 'ArrowDown':\n        nextR = Math.min(3, r + 1);\n        break;\n      case 'ArrowLeft':\n        nextC = Math.max(0, c - 1);\n        break;\n      case 'ArrowRight':\n        nextC = Math.min(3, c + 1);\n        break;\n      case 'Backspace':\n        if (!inputIsClue(r, c) && e.target.value === '') {\n          // Allow natural backspacing\n        }\n        return;\n      default:\n        return;\n    }\n\n    e.preventDefault();\n    focusCell(nextR, nextC);\n  }\n\n  function focusCell(r, c) {\n    const idx = r * 4 + c;\n    if (inputs[idx]) {\n      inputs[idx].focus();\n      inputs[idx].select();\n    }\n  }\n\n  function inputIsClue(r, c) {\n    return INITIAL_PUZZLE[r][c] !== 0;\n  }\n\n  function validateGrid() {\n    const board = [];\n    const cells = gridElement.querySelectorAll('.cell');\n\n    // Clear previous conflicts\n    cells.forEach((cell) => cell.classList.remove('conflict'));\n\n    // Read board values\n    for (let r = 0; r < 4; r++) {\n      const rowVals = [];\n      for (let c = 0; c < 4; c++) {\n        const val = inputs[r * 4 + c].value;\n        rowVals.push(val ? parseInt(val, 10) : 0);\n      }\n      board.push(rowVals);\n    }\n\n    const conflictingIndices = new Set();\n\n    // Check rows\n    for (let r = 0; r < 4; r++) {\n      const seen = new Map();\n      for (let c = 0; c < 4; c++) {\n        const val = board[r][c];\n        if (val !== 0) {\n          if (seen.has(val)) {\n            conflictingIndices.add(r * 4 + c);\n            conflictingIndices.add(r * 4 + seen.get(val));\n          } else {\n            seen.set(val, c);\n          }\n        }\n      }\n    }\n\n    // Check columns\n    for (let c = 0; c < 4; c++) {\n      const seen = new Map();\n      for (let r = 0; r < 4; r++) {\n        const val = board[r][c];\n        if (val !== 0) {\n          if (seen.has(val)) {\n            conflictingIndices.add(r * 4 + c);\n            conflictingIndices.add(seen.get(val) * 4 + c);\n          } else {\n            seen.set(val, r);\n          }\n        }\n      }\n    }\n\n    // Check 2x2 boxes\n    for (let boxRow = 0; boxRow < 2; boxRow++) {\n      for (let boxCol = 0; boxCol < 2; boxCol++) {\n        const seen = new Map();\n        for (let r = 0; r < 2; r++) {\n          for (let c = 0; c < 2; c++) {\n            const currR = boxRow * 2 + r;\n            const currC = boxCol * 2 + c;\n            const val = board[currR][currC];\n            if (val !== 0) {\n              if (seen.has(val)) {\n                conflictingIndices.add(currR * 4 + currC);\n                conflictingIndices.add(seen.get(val));\n              } else {\n                seen.set(val, currR * 4 + currC);\n              }\n            }\n          }\n        }\n      }\n    }\n\n    // Apply conflict classes\n    conflictingIndices.forEach((index) => {\n      cells[index].classList.add('conflict');\n    });\n\n    // Check win condition: complete and no conflicts\n    let isFull = true;\n    for (let r = 0; r < 4; r++) {\n      for (let c = 0; c < 4; c++) {\n        if (board[r][c] === 0) {\n          isFull = false;\n          break;\n        }\n      }\n    }\n\n    if (isFull && conflictingIndices.size === 0) {\n      solvedBanner.removeAttribute('hidden');\n    } else {\n      solvedBanner.setAttribute('hidden', '');\n    }\n  }\n\n  resetBtn.addEventListener('click', () => {\n    createGrid();\n  });\n\n  clearBtn.addEventListener('click', () => {\n    for (let r = 0; r < 4; r++) {\n      for (let c = 0; c < 4; c++) {\n        if (!inputIsClue(r, c)) {\n          inputs[r * 4 + c].value = '';\n        }\n      }\n    }\n    validateGrid();\n  });\n\n  createGrid();\n});",
+      "description": "Vanilla JavaScript handling the puzzle grid, keyboard input, real-time conflict highlights, and completion check."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel 4x4 Sudoku\n\nA lightweight, offline, pixel-themed 4x4 Sudoku web application built with vanilla HTML, CSS, and JavaScript.\n\n## Features\n- **Built-in Puzzle**: Starts with pre-filled clue numbers.\n- **Real-Time Duplicate Highlighting**: Any cell violating Sudoku rules in its row, column, or 2x2 box is highlighted with a red alert background.\n- **Solved Announcement**: A celebratory \"Solved!\" banner appears automatically when all cells are correctly filled without rule violations.\n- **Accessibility & Controls**:\n  - Arrow keys (Up, Down, Left, Right) navigate across cells.\n  - Only digits 1–4 are accepted.\n  - Full keyboard accessibility and screen-reader labeled cells.\n  - `Reset Puzzle` and `Clear Inputs` controls.\n- **Zero External Dependencies**: Operates completely offline with no network calls or external libraries.\n\n## Running Locally\n1. Clone or download this directory.\n2. Open `index.html` directly in any modern web browser.\n3. Enjoy solving!",
+      "description": "Documentation for setup, gameplay rules, and project details."
+    }
+  ]
+}

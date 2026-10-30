@@ -1,0 +1,377 @@
+{
+  "caseId": "vending",
+  "run": 1,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8999,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "8/8",
+  "finalChecks": "8/8",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "8/8"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 85,
+  "reportedTokens": 38899,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:11:56.682Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:11:56.682Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:12:15.593Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Vending Machine"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:12:15.593Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:13:01.404Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:13:01.404Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:13:01.910Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:13:01.912Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "b4b22c4d-f1b0-4e3a-8760-f81cfd3a7e26"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:13:15.961Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "b4b22c4d-f1b0-4e3a-8760-f81cfd3a7e26",
+        "checks": 8
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:13:15.962Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "testPlanId": "b4b22c4d-f1b0-4e3a-8760-f81cfd3a7e26",
+        "checks": 8,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "name": "Initial credit display",
+        "passed": true,
+        "actual": "$0.00"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "name": "Insert 0.25 increases credit",
+        "passed": true,
+        "actual": "$0.25"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "name": "Insert 1.00 increases credit",
+        "passed": true,
+        "actual": "$1.00"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "name": "Clicking unaffordable snack shows not enough credit",
+        "passed": true,
+        "actual": "Not enough credit"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "name": "Dispenses snack and shows exact change",
+        "passed": true,
+        "actual": "Dispensed Pixel Chips! Change: $0.75"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "name": "Dispensed item tray receives snack badge",
+        "passed": true,
+        "actual": "* Bit Candy *"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "name": "Credit resets to zero after purchase",
+        "passed": true,
+        "actual": "$0.00"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "name": "Exact change 0.00 on equal credit",
+        "passed": true,
+        "actual": "Dispensed Mega Cookie! Change: $0.00"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:13:18.555Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "aeeae72d-0a2a-4f36-98ec-91dcb1d8cab0",
+        "status": "passed",
+        "passed": 8,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:13:18.559Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial credit display",
+        "actions": [],
+        "selector": "#credit-display",
+        "expected": "$0.00"
+      },
+      {
+        "name": "Insert 0.25 increases credit",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-25"
+          }
+        ],
+        "selector": "#credit-display",
+        "expected": "$0.25"
+      },
+      {
+        "name": "Insert 1.00 increases credit",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          }
+        ],
+        "selector": "#credit-display",
+        "expected": "$1.00"
+      },
+      {
+        "name": "Clicking unaffordable snack shows not enough credit",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "button[data-id=\"chips\"]"
+          }
+        ],
+        "selector": "#status-message",
+        "expected": "Not enough credit"
+      },
+      {
+        "name": "Dispenses snack and shows exact change",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "button[data-id=\"chips\"]"
+          }
+        ],
+        "selector": "#status-message",
+        "expected": "Dispensed Pixel Chips! Change: $0.75"
+      },
+      {
+        "name": "Dispensed item tray receives snack badge",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "button[data-id=\"candy\"]"
+          }
+        ],
+        "selector": "#dispensed-tray",
+        "expected": "* Bit Candy *"
+      },
+      {
+        "name": "Credit resets to zero after purchase",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "button[data-id=\"candy\"]"
+          }
+        ],
+        "selector": "#credit-display",
+        "expected": "$0.00"
+      },
+      {
+        "name": "Exact change 0.00 on equal credit",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-insert-100"
+          },
+          {
+            "type": "click",
+            "selector": "button[data-id=\"cookie\"]"
+          }
+        ],
+        "selector": "#status-message",
+        "expected": "Dispensed Mega Cookie! Change: $0.00"
+      }
+    ],
+    "limitations": [],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 15046,
+      "completion_tokens": 443,
+      "total_tokens": 15489
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Vending Machine</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"vending-cabinet\" role=\"region\" aria-label=\"Pixel Vending Machine\">\n    <header class=\"cabinet-header\">\n      <h1 class=\"machine-title\">PIXEL SNACKS</h1>\n    </header>\n\n    <!-- Display Showcase -->\n    <section class=\"window-frame\" aria-label=\"Snack Showcase\">\n      <div class=\"snack-grid\" role=\"group\" aria-label=\"Available Snacks\">\n        <button type=\"button\" class=\"snack-slot\" data-id=\"chips\" data-name=\"Pixel Chips\" data-price=\"1.25\" aria-label=\"Buy Pixel Chips for $1.25\">\n          <span class=\"pixel-art art-chips\" aria-hidden=\"true\"></span>\n          <span class=\"snack-name\">Chips</span>\n          <span class=\"snack-cost\">$1.25</span>\n        </button>\n\n        <button type=\"button\" class=\"snack-slot\" data-id=\"soda\" data-name=\"8-Bit Soda\" data-price=\"1.50\" aria-label=\"Buy 8-Bit Soda for $1.50\">\n          <span class=\"pixel-art art-soda\" aria-hidden=\"true\"></span>\n          <span class=\"snack-name\">Soda</span>\n          <span class=\"snack-cost\">$1.50</span>\n        </button>\n\n        <button type=\"button\" class=\"snack-slot\" data-id=\"candy\" data-name=\"Bit Candy\" data-price=\"0.75\" aria-label=\"Buy Bit Candy for $0.75\">\n          <span class=\"pixel-art art-candy\" aria-hidden=\"true\"></span>\n          <span class=\"snack-name\">Candy</span>\n          <span class=\"snack-cost\">$0.75</span>\n        </button>\n\n        <button type=\"button\" class=\"snack-slot\" data-id=\"cookie\" data-name=\"Mega Cookie\" data-price=\"2.00\" aria-label=\"Buy Mega Cookie for $2.00\">\n          <span class=\"pixel-art art-cookie\" aria-hidden=\"true\"></span>\n          <span class=\"snack-name\">Cookie</span>\n          <span class=\"snack-cost\">$2.00</span>\n        </button>\n      </div>\n    </section>\n\n    <!-- Control Panel -->\n    <section class=\"control-panel\" aria-label=\"Machine Controls and Status\">\n      <div class=\"screen\" aria-live=\"polite\">\n        <div class=\"screen-row\">\n          <span class=\"screen-label\">CREDIT:</span>\n          <span id=\"credit-display\" class=\"screen-value\">$0.00</span>\n        </div>\n        <div id=\"status-message\" class=\"screen-status\">Insert coins to begin</div>\n      </div>\n\n      <div class=\"coin-controls\">\n        <button type=\"button\" id=\"btn-insert-25\" class=\"pixel-btn coin-btn\" aria-label=\"Insert 25 cents\">\n          Insert 0.25\n        </button>\n        <button type=\"button\" id=\"btn-insert-100\" class=\"pixel-btn coin-btn\" aria-label=\"Insert 1 dollar\">\n          Insert 1.00\n        </button>\n      </div>\n    </section>\n\n    <!-- Dispenser Chute -->\n    <section class=\"chute-area\" aria-label=\"Dispense Chute\">\n      <div class=\"chute-flap\">\n        <span class=\"chute-label\">PUSH</span>\n      </div>\n      <div id=\"dispensed-tray\" class=\"dispensed-tray\" aria-live=\"assertive\" aria-label=\"Dispensed Item Tray\"></div>\n    </section>\n  </main>\n\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "description": "Main HTML file containing the semantic structure, pixel-art styling, and vanilla JavaScript logic for the pixel vending machine."
+    },
+    {
+      "path": "style.css",
+      "content": "/* ==========================================================================\n   Pixel Vending Machine Stylesheet\n   Palette:\n   1. Dark Navy/Slate (Base Shadow): #1a1c23\n   2. Retro Teal/Cyan (Main Cabinet): #2b5c68\n   3. Golden Yellow (Accent/Highlights): #f6d258\n   4. CRT Screen Green (Display Glow): #4deeea\n   5. Deep Red/Orange (Snack Accent): #e0533c\n   ========================================================================== */\n\n:root {\n  --col-dark: #1a1c23;\n  --col-cabinet: #2b5c68;\n  --col-cabinet-dark: #1b3d46;\n  --col-cabinet-light: #3d7988;\n  --col-accent: #f6d258;\n  --col-screen-bg: #0d1a1b;\n  --col-screen-text: #4deeea;\n  --col-screen-dim: #267977;\n  --col-card: #fdfdfd;\n  --col-red: #e0533c;\n  --col-cookie: #c4823f;\n  --border-thick: 4px solid var(--col-dark);\n  --pixel-shadow: 4px 4px 0px var(--col-dark);\n}\n\n[hidden] {\n  display: none !important;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  min-height: 100vh;\n  background-color: #232733;\n  background-image:\n    radial-gradient(circle at 50% 50%, #2f3546 15%, transparent 16%),\n    radial-gradient(circle at 0% 0%, #282d3b 25%, transparent 26%);\n  background-size: 32px 32px;\n  font-family: \"Courier New\", Courier, monospace, monospace;\n  font-size: 16px;\n  color: var(--col-dark);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1.5rem 1rem;\n}\n\n/* Cabinet Layout */\n.vending-cabinet {\n  width: 100%;\n  max-width: 440px;\n  background-color: var(--col-cabinet);\n  border: var(--border-thick);\n  border-top-color: var(--col-cabinet-light);\n  border-left-color: var(--col-cabinet-light);\n  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.45);\n  padding: 1rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n}\n\n.cabinet-header {\n  background-color: var(--col-cabinet-dark);\n  border: var(--border-thick);\n  padding: 0.6rem;\n  text-align: center;\n  box-shadow: inset 2px 2px 0px rgba(255, 255, 255, 0.15);\n}\n\n.machine-title {\n  font-size: 1.35rem;\n  font-weight: 900;\n  letter-spacing: 2px;\n  color: var(--col-accent);\n  text-shadow: 2px 2px 0px var(--col-dark);\n}\n\n/* Showcase Window */\n.window-frame {\n  background: #111e22;\n  border: var(--border-thick);\n  padding: 0.85rem;\n  box-shadow: inset 4px 4px 0px rgba(0, 0, 0, 0.6);\n}\n\n.snack-grid {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 0.75rem;\n}\n\n/* Snack Buttons */\n.snack-slot {\n  appearance: none;\n  background-color: #21353b;\n  border: 3px solid #142226;\n  border-top-color: #3b5a63;\n  border-left-color: #3b5a63;\n  padding: 0.6rem 0.4rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 0.4rem;\n  cursor: pointer;\n  font-family: inherit;\n  color: #fff;\n  box-shadow: var(--pixel-shadow);\n  transition: transform 0.05s ease, background-color 0.1s ease;\n}\n\n.snack-slot:hover {\n  background-color: #2f4b54;\n  border-color: var(--col-accent);\n}\n\n.snack-slot:focus-visible {\n  outline: 3px solid var(--col-accent);\n  outline-offset: 2px;\n}\n\n.snack-slot:active {\n  transform: translate(2px, 2px);\n  box-shadow: 2px 2px 0px var(--col-dark);\n}\n\n.snack-name {\n  font-size: 0.95rem;\n  font-weight: bold;\n  letter-spacing: 0.5px;\n}\n\n.snack-cost {\n  font-size: 0.95rem;\n  font-weight: 900;\n  background: var(--col-dark);\n  color: var(--col-accent);\n  padding: 0.1rem 0.4rem;\n  border: 1px solid var(--col-accent);\n}\n\n/* Pure CSS Pixel Icons */\n.pixel-art {\n  display: inline-block;\n  width: 28px;\n  height: 28px;\n  image-rendering: pixelated;\n}\n\n/* Chips Bag */\n.art-chips {\n  background:\n    linear-gradient(var(--col-red), var(--col-red)) 4px 4px / 20px 22px no-repeat,\n    linear-gradient(var(--col-accent), var(--col-accent)) 8px 10px / 12px 6px no-repeat;\n  box-shadow:\n    inset -3px 0 0 rgba(0, 0, 0, 0.3),\n    0 0 0 2px var(--col-dark);\n}\n\n/* Soda Can */\n.art-soda {\n  background:\n    linear-gradient(#8892b0, #8892b0) 6px 2px / 16px 4px no-repeat,\n    linear-gradient(var(--col-screen-text), #1c7c7a) 6px 6px / 16px 20px no-repeat;\n  border-radius: 2px;\n  box-shadow:\n    inset 2px 0 0 rgba(255, 255, 255, 0.4),\n    0 0 0 2px var(--col-dark);\n}\n\n/* Bit Candy */\n.art-candy {\n  width: 26px;\n  height: 26px;\n  background:\n    linear-gradient(45deg, var(--col-accent) 25%, #f272a1 25%, #f272a1 50%, var(--col-accent) 50%, var(--col-accent) 75%, #f272a1 75%);\n  border-radius: 50%;\n  box-shadow:\n    0 0 0 2px var(--col-dark),\n    inset -2px -2px 0 rgba(0, 0, 0, 0.3);\n}\n\n/* Mega Cookie */\n.art-cookie {\n  width: 26px;\n  height: 26px;\n  background: var(--col-cookie);\n  border-radius: 50%;\n  box-shadow:\n    inset 4px 4px 0 #3a1e05,\n    inset -6px -6px 0 #3a1e05,\n    inset 2px -4px 0 #3a1e05,\n    0 0 0 2px var(--col-dark);\n}\n\n/* Screen and Coin Controls */\n.control-panel {\n  display: flex;\n  flex-direction: column;\n  gap: 0.85rem;\n}\n\n.screen {\n  background-color: var(--col-screen-bg);\n  border: var(--border-thick);\n  padding: 0.75rem;\n  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.8);\n}\n\n.screen-row {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 2px dashed var(--col-screen-dim);\n  padding-bottom: 0.4rem;\n  margin-bottom: 0.4rem;\n}\n\n.screen-label {\n  font-size: 1rem;\n  color: var(--col-screen-dim);\n  font-weight: bold;\n}\n\n.screen-value {\n  font-size: 1.25rem;\n  font-weight: 900;\n  color: var(--col-screen-text);\n  text-shadow: 0 0 6px rgba(77, 238, 234, 0.4);\n}\n\n.screen-status {\n  font-size: 1rem;\n  font-weight: bold;\n  color: var(--col-accent);\n  min-height: 1.4rem;\n  line-height: 1.4;\n}\n\n.coin-controls {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n}\n\n.pixel-btn {\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: 900;\n  color: var(--col-dark);\n  background-color: var(--col-accent);\n  border: var(--border-thick);\n  border-top-color: #ffefa3;\n  border-left-color: #ffefa3;\n  padding: 0.65rem 0.5rem;\n  cursor: pointer;\n  box-shadow: var(--pixel-shadow);\n  transition: transform 0.05s ease, background-color 0.1s ease;\n}\n\n.pixel-btn:hover {\n  background-color: #ffd866;\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px solid #fff;\n  outline-offset: 2px;\n}\n\n.pixel-btn:active {\n  transform: translate(2px, 2px);\n  box-shadow: 2px 2px 0px var(--col-dark);\n}\n\n/* Chute Area */\n.chute-area {\n  background-color: var(--col-cabinet-dark);\n  border: var(--border-thick);\n  padding: 0.65rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 0.5rem;\n}\n\n.chute-flap {\n  width: 100%;\n  background-color: #122126;\n  border: 3px solid #081114;\n  text-align: center;\n  padding: 0.4rem;\n  box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.1);\n}\n\n.chute-label {\n  font-size: 0.9rem;\n  font-weight: 900;\n  letter-spacing: 3px;\n  color: #557984;\n}\n\n.dispensed-tray {\n  width: 100%;\n  min-height: 32px;\n  text-align: center;\n  font-weight: bold;\n  font-size: 0.95rem;\n  color: var(--col-screen-text);\n}\n\n.dispensed-badge {\n  display: inline-block;\n  background-color: var(--col-dark);\n  border: 2px solid var(--col-screen-text);\n  padding: 0.2rem 0.6rem;\n  animation: popIn 0.2s ease-out;\n}\n\n@keyframes popIn {\n  from {\n    transform: scale(0.8);\n    opacity: 0;\n  }\n  to {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n",
+      "description": "Retro pixel-art styled CSS layout, cohesive 4-color palette, responsive container, and focus/hover/active states."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  // State stored in cents to prevent floating-point rounding issues\n  let currentCreditCents = 0;\n\n  // DOM references\n  const creditDisplay = document.getElementById('credit-display');\n  const statusMessage = document.getElementById('status-message');\n  const dispensedTray = document.getElementById('dispensed-tray');\n  const btnInsert25 = document.getElementById('btn-insert-25');\n  const btnInsert100 = document.getElementById('btn-insert-100');\n  const snackButtons = document.querySelectorAll('.snack-slot');\n\n  /**\n   * Format integer cents into currency string: e.g. 125 -> \"$1.25\"\n   * @param {number} cents\n   * @returns {string}\n   */\n  function formatCurrency(cents) {\n    return `$${(cents / 100).toFixed(2)}`;\n  }\n\n  /**\n   * Update credit display on screen\n   */\n  function updateCreditDisplay() {\n    creditDisplay.textContent = formatCurrency(currentCreditCents);\n  }\n\n  /**\n   * Insert coin handler\n   * @param {number} centsToAdd\n   */\n  function insertCredit(centsToAdd) {\n    currentCreditCents += centsToAdd;\n    updateCreditDisplay();\n    statusMessage.textContent = `Inserted ${formatCurrency(centsToAdd)}`;\n  }\n\n  /**\n   * Attempt snack purchase\n   * @param {HTMLButtonElement} button\n   */\n  function handleSnackClick(button) {\n    const snackName = button.getAttribute('data-name') || 'Snack';\n    const priceDecimal = parseFloat(button.getAttribute('data-price') || '0');\n    const priceCents = Math.round(priceDecimal * 100);\n\n    if (currentCreditCents >= priceCents) {\n      const changeCents = currentCreditCents - priceCents;\n      currentCreditCents = 0;\n      updateCreditDisplay();\n\n      const changeFormatted = formatCurrency(changeCents);\n      statusMessage.textContent = `Dispensed ${snackName}! Change: ${changeFormatted}`;\n\n      // Render dispensed badge in the tray\n      dispensedTray.innerHTML = `<span class=\"dispensed-badge\">* ${snackName} *</span>`;\n    } else {\n      statusMessage.textContent = 'Not enough credit';\n    }\n  }\n\n  // Event listeners for inserting credit\n  btnInsert25.addEventListener('click', () => {\n    insertCredit(25);\n  });\n\n  btnInsert100.addEventListener('click', () => {\n    insertCredit(100);\n  });\n\n  // Event listeners for snacks\n  snackButtons.forEach(button => {\n    button.addEventListener('click', () => {\n      handleSnackClick(button);\n    });\n  });\n\n  // Initial render\n  updateCreditDisplay();\n});\n",
+      "description": "State management for credit tracking in cents, coin insertion handlers, snack purchase validation, dispensing, and change calculation."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Vending Machine\n\nA retro pixel-art browser vending machine created with pure HTML, CSS, and vanilla JavaScript.\n\n## Features\n\n- **Inventory & Pricing**:\n  - Pixel Chips: `$1.25`\n  - 8-Bit Soda: `$1.50`\n  - Bit Candy: `$0.75`\n  - Mega Cookie: `$2.00`\n- **Coin Insertion**:\n  - `Insert 0.25`: Adds 25¢ credit.\n  - `Insert 1.00`: Adds $1.00 credit.\n- **Transaction Logic**:\n  - Accurate integer-cent calculation to prevent floating point inaccuracies.\n  - If affordable, dispenses the item into the bottom tray, clears credit, and displays the exact change returned.\n  - If unaffordable, displays `\"Not enough credit\"`.\n- **Pixel Design & Accessibility**:\n  - Responsive cabinet UI with retro CRT monitor display.\n  - Keyboard accessible controls with high-contrast `:focus-visible` and pressed active states.\n  - Fully self-contained without external assets, frameworks, or web fonts.\n\n## Running the Project\n\nOpen `index.html` in any modern web browser. No server or build process is required.\n",
+      "description": "Documentation for the pixel vending machine application including features, pricing, and execution steps."
+    }
+  ]
+}

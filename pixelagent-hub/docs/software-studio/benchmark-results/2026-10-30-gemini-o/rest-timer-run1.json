@@ -1,0 +1,416 @@
+{
+  "caseId": "rest-timer",
+  "run": 1,
+  "strategy": "manager-coder",
+  "dist": "D:\\Temp\\claude\\D--Projects-PIXELAGENT-HUB--claude-worktrees-codex-quota-integration-2a76fa\\19dfc165-150d-47a4-b92b-c6f1c982c8e9\\scratchpad\\ab6\\site",
+  "managerTokens": 8900,
+  "model": "gemini-3.8-flash-low",
+  "testerModel": "gemini-3.8-flash-low",
+  "status": "ready_for_review",
+  "coderRounds": 1,
+  "compileFailures": 0,
+  "firstChecks": "9/9",
+  "finalChecks": "9/9",
+  "reviewTriggered": false,
+  "checksDropped": 0,
+  "checksRevised": 0,
+  "coderRepair": false,
+  "checkRuns": [
+    "9/9"
+  ],
+  "repairTriggered": false,
+  "repairReverted": false,
+  "fullPass": true,
+  "rescuedByRepair": false,
+  "elapsedSeconds": 76,
+  "reportedTokens": 37634,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T02:36:00.270Z",
+      "type": "queued",
+      "data": {
+        "strategy": "manager-coder",
+        "repair": false,
+        "revision": false,
+        "retry": false,
+        "source": "browser",
+        "provider": "localhost:8788",
+        "model": "gemini-3.8-flash-low"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-30T02:36:00.270Z",
+      "type": "phase",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-30T02:36:12.843Z",
+      "type": "plan_ready",
+      "data": {
+        "projectName": "Pixel Workout Timer"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-30T02:36:12.843Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "coding"
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-30T02:36:55.806Z",
+      "type": "code_ready",
+      "round": 1,
+      "data": {
+        "files": 4
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-30T02:36:55.806Z",
+      "type": "phase",
+      "round": 1,
+      "data": {
+        "phase": "building"
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-30T02:36:56.321Z",
+      "type": "build_passed",
+      "round": 1
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-30T02:36:56.322Z",
+      "type": "test_plan_started",
+      "data": {
+        "planId": "0b855269-8dd7-4e7e-a3dd-e4593230abdd"
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-30T02:37:12.641Z",
+      "type": "test_plan_ready",
+      "data": {
+        "planId": "0b855269-8dd7-4e7e-a3dd-e4593230abdd",
+        "checks": 9
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-30T02:37:12.641Z",
+      "type": "browser_run_started",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "testPlanId": "0b855269-8dd7-4e7e-a3dd-e4593230abdd",
+        "checks": 9,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Initial set indicator shows Set 1 of 3",
+        "passed": true,
+        "actual": "SET 1 / 3"
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Initial phase indicates Work",
+        "passed": true,
+        "actual": "WORK"
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Initial work countdown starts at 40",
+        "passed": true,
+        "actual": "40"
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Clicking skip advances to Rest phase",
+        "passed": true,
+        "actual": "REST"
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Rest phase countdown sets to 20 seconds",
+        "passed": true,
+        "actual": "20"
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Second skip moves to Set 2 Work phase",
+        "passed": true,
+        "actual": "SET 2 / 3"
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Running countdown decrements timer",
+        "passed": true,
+        "actual": "38"
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Skipping through all 3 sets displays Workout complete message",
+        "passed": true,
+        "actual": "Workout complete"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_check",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "name": "Workout complete view is visible at end",
+        "passed": true,
+        "actual": "true"
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-30T02:37:15.565Z",
+      "type": "browser_run_finished",
+      "data": {
+        "runId": "c9b108a2-e9e9-484e-ad18-cad37af344d7",
+        "status": "passed",
+        "passed": 9,
+        "failed": 0,
+        "source": "in-page"
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-30T02:37:15.567Z",
+      "type": "ready_for_review",
+      "data": {
+        "previewFile": "v1/dist/index.html"
+      }
+    }
+  ],
+  "plan": {
+    "checks": [
+      {
+        "name": "Initial set indicator shows Set 1 of 3",
+        "actions": [],
+        "selector": "#set-display",
+        "expected": "SET 1 / 3"
+      },
+      {
+        "name": "Initial phase indicates Work",
+        "actions": [],
+        "selector": "#phase-display",
+        "expected": "WORK"
+      },
+      {
+        "name": "Initial work countdown starts at 40",
+        "actions": [],
+        "selector": "#countdown-display",
+        "expected": "40"
+      },
+      {
+        "name": "Clicking skip advances to Rest phase",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          }
+        ],
+        "selector": "#phase-display",
+        "expected": "REST"
+      },
+      {
+        "name": "Rest phase countdown sets to 20 seconds",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          }
+        ],
+        "selector": "#countdown-display",
+        "expected": "20"
+      },
+      {
+        "name": "Second skip moves to Set 2 Work phase",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          }
+        ],
+        "selector": "#set-display",
+        "expected": "SET 2 / 3"
+      },
+      {
+        "name": "Running countdown decrements timer",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-toggle"
+          },
+          {
+            "type": "advance",
+            "ms": 2000
+          }
+        ],
+        "selector": "#countdown-display",
+        "expected": "38"
+      },
+      {
+        "name": "Skipping through all 3 sets displays Workout complete message",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          }
+        ],
+        "selector": "#complete-message",
+        "expected": "Workout complete"
+      },
+      {
+        "name": "Workout complete view is visible at end",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          },
+          {
+            "type": "click",
+            "selector": "#btn-skip"
+          }
+        ],
+        "selector": "#complete-view",
+        "expected": "true",
+        "assertion": "visible"
+      }
+    ],
+    "limitations": [
+      "Canvas pixel art animations and illustrations cannot be verified by DOM element assertions."
+    ],
+    "isolation": "fresh",
+    "llmUsage": {
+      "prompt_tokens": 14490,
+      "completion_tokens": 462,
+      "total_tokens": 14952
+    },
+    "llmModel": "gemini-3.8-flash-low",
+    "llmProvider": "custom"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "build": "passed",
+      "errors": []
+    }
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Pixel Workout Timer</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"app-container\">\n    <header class=\"timer-header\">\n      <h1 class=\"title\">PIXEL TIMER</h1>\n      <p class=\"subtitle\">3 SETS &bull; 40S WORK &bull; 20S REST</p>\n    </header>\n\n    <section class=\"screen-card\" aria-label=\"Workout Monitor\">\n      <!-- Active Workout Display -->\n      <div id=\"active-view\" class=\"view-section\">\n        <div class=\"status-bar\">\n          <span id=\"set-display\" class=\"badge\" aria-label=\"Current set\">SET 1 / 3</span>\n          <span id=\"phase-display\" class=\"badge phase-work\" aria-label=\"Current phase\">WORK</span>\n        </div>\n\n        <div class=\"canvas-container\">\n          <canvas id=\"pixel-canvas\" width=\"128\" height=\"128\" aria-hidden=\"true\"></canvas>\n        </div>\n\n        <div class=\"countdown-box\" aria-live=\"polite\">\n          <span id=\"countdown-display\" class=\"countdown-digits\">40</span>\n          <span class=\"unit-label\">SECONDS</span>\n        </div>\n      </div>\n\n      <!-- Workout Complete Display -->\n      <div id=\"complete-view\" class=\"view-section\" hidden>\n        <div class=\"trophy-badge\">★ ★ ★</div>\n        <h2 id=\"complete-message\" class=\"complete-text\">Workout complete</h2>\n        <p class=\"complete-subtext\">Great job pushing through all 3 sets!</p>\n      </div>\n\n      <!-- Controls Area -->\n      <nav class=\"controls-bar\" aria-label=\"Timer controls\">\n        <button type=\"button\" id=\"btn-toggle\" class=\"pixel-btn btn-primary\" aria-label=\"Start or pause timer\">START</button>\n        <button type=\"button\" id=\"btn-skip\" class=\"pixel-btn btn-secondary\" aria-label=\"Skip to next phase\">SKIP</button>\n        <button type=\"button\" id=\"btn-reset\" class=\"pixel-btn btn-outline\" aria-label=\"Reset workout\">RESET</button>\n      </nav>\n    </section>\n\n    <footer class=\"timer-footer\">\n      <p class=\"hint\">[Space] Start/Pause &bull; [S] Skip &bull; [R] Reset</p>\n    </footer>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "description": "Main HTML file featuring the pixel timer interface, status displays, countdown, control buttons, and canvas illustration."
+    },
+    {
+      "path": "style.css",
+      "content": "/* Enforce hidden attribute per specification */\n[hidden] {\n  display: none !important;\n}\n\n:root {\n  --color-bg: #1a1a24;\n  --color-card: #28283a;\n  --color-dark: #0f0f15;\n  --color-work: #ff5964;\n  --color-rest: #35a7ff;\n  --color-text: #fffcf9;\n  --color-accent: #f8c537;\n  --font-main: 'Courier New', Courier, monospace, monospace;\n}\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: var(--color-bg);\n  color: var(--color-text);\n  font-family: var(--font-main);\n  font-size: 16px;\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 16px;\n}\n\n.app-container {\n  width: 100%;\n  max-width: 440px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 16px;\n}\n\n.timer-header {\n  text-align: center;\n}\n\n.title {\n  font-size: 28px;\n  letter-spacing: 2px;\n  color: var(--color-accent);\n  text-shadow: 2px 2px 0px var(--color-dark);\n  margin-bottom: 4px;\n}\n\n.subtitle {\n  font-size: 14px;\n  opacity: 0.85;\n  letter-spacing: 1px;\n}\n\n.screen-card {\n  width: 100%;\n  background-color: var(--color-card);\n  border: 4px solid var(--color-dark);\n  box-shadow: 6px 6px 0px var(--color-dark);\n  padding: 24px 20px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n\n.view-section {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 16px;\n}\n\n.status-bar {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 10px;\n}\n\n.badge {\n  font-size: 16px;\n  font-weight: bold;\n  padding: 6px 12px;\n  border: 3px solid var(--color-dark);\n  background-color: var(--color-dark);\n  color: var(--color-text);\n  box-shadow: 2px 2px 0px var(--color-dark);\n}\n\n.phase-work {\n  background-color: var(--color-work);\n  color: #fff;\n}\n\n.phase-rest {\n  background-color: var(--color-rest);\n  color: #fff;\n}\n\n.canvas-container {\n  width: 128px;\n  height: 128px;\n  background-color: var(--color-dark);\n  border: 3px solid var(--color-dark);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n#pixel-canvas {\n  image-rendering: pixelated;\n  width: 128px;\n  height: 128px;\n}\n\n.countdown-box {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.countdown-digits {\n  font-size: 56px;\n  font-weight: 900;\n  line-height: 1;\n  color: var(--color-accent);\n  text-shadow: 3px 3px 0px var(--color-dark);\n}\n\n.unit-label {\n  font-size: 13px;\n  letter-spacing: 2px;\n  margin-top: 4px;\n  opacity: 0.8;\n}\n\n.trophy-badge {\n  font-size: 32px;\n  color: var(--color-accent);\n  text-shadow: 2px 2px 0px var(--color-dark);\n}\n\n.complete-text {\n  font-size: 26px;\n  text-align: center;\n  color: var(--color-accent);\n  text-shadow: 2px 2px 0px var(--color-dark);\n}\n\n.complete-subtext {\n  font-size: 15px;\n  text-align: center;\n  opacity: 0.9;\n}\n\n.controls-bar {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n\n.pixel-btn {\n  flex: 1 1 calc(33.333% - 10px);\n  min-width: 90px;\n  padding: 12px 8px;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: bold;\n  cursor: pointer;\n  border: 3px solid var(--color-dark);\n  box-shadow: 3px 3px 0px var(--color-dark);\n  transition: transform 0.05s ease, box-shadow 0.05s ease;\n  outline: none;\n  text-align: center;\n}\n\n.pixel-btn:hover {\n  filter: brightness(1.15);\n}\n\n.pixel-btn:focus-visible {\n  outline: 3px solid var(--color-text);\n  outline-offset: 2px;\n}\n\n.pixel-btn:active {\n  transform: translate(3px, 3px);\n  box-shadow: 0px 0px 0px var(--color-dark);\n}\n\n.btn-primary {\n  background-color: var(--color-accent);\n  color: var(--color-dark);\n}\n\n.btn-secondary {\n  background-color: var(--color-work);\n  color: #fff;\n}\n\n.btn-outline {\n  background-color: var(--color-dark);\n  color: var(--color-text);\n}\n\n.timer-footer {\n  text-align: center;\n}\n\n.hint {\n  font-size: 13px;\n  opacity: 0.7;\n}\n\n@media (max-width: 380px) {\n  .countdown-digits {\n    font-size: 46px;\n  }\n  .title {\n    font-size: 24px;\n  }\n  .pixel-btn {\n    font-size: 14px;\n    padding: 10px 4px;\n  }\n}\n",
+      "description": "Retro pixel-art theme styling using a 4-color palette, chunky borders, responsive card layout, and button state interactions."
+    },
+    {
+      "path": "app.js",
+      "content": "document.addEventListener('DOMContentLoaded', () => {\n  const TOTAL_SETS = 3;\n  const WORK_SECONDS = 40;\n  const REST_SECONDS = 20;\n\n  let currentSet = 1;\n  let currentPhase = 'Work'; // 'Work' | 'Rest'\n  let timeLeft = WORK_SECONDS;\n  let isRunning = false;\n  let timerInterval = null;\n  let isComplete = false;\n  let animTick = 0;\n\n  // DOM Elements\n  const activeView = document.getElementById('active-view');\n  const completeView = document.getElementById('complete-view');\n  const setDisplay = document.getElementById('set-display');\n  const phaseDisplay = document.getElementById('phase-display');\n  const countdownDisplay = document.getElementById('countdown-display');\n  const btnToggle = document.getElementById('btn-toggle');\n  const btnSkip = document.getElementById('btn-skip');\n  const btnReset = document.getElementById('btn-reset');\n  const canvas = document.getElementById('pixel-canvas');\n  const ctx = canvas.getContext('2d');\n\n  function drawPixelArt() {\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    const scale = 8;\n    const offsetBounce = isRunning && currentPhase === 'Work' ? (Math.floor(animTick / 2) % 2) * 2 : 0;\n    const restOffset = isRunning && currentPhase === 'Rest' ? (Math.floor(animTick / 4) % 2) : 0;\n\n    const colorPrimary = currentPhase === 'Work' ? '#ff5964' : '#35a7ff';\n    const colorSkin = '#f8c537';\n    const colorDark = '#0f0f15';\n\n    function drawPixel(x, y, color) {\n      ctx.fillStyle = color;\n      ctx.fillRect(x * scale, (y + offsetBounce + restOffset) * scale, scale, scale);\n    }\n\n    // Head\n    for (let x = 6; x <= 9; x++) {\n      for (let y = 2; y <= 5; y++) {\n        drawPixel(x, y, colorSkin);\n      }\n    }\n    // Eyes\n    drawPixel(7, 3, colorDark);\n    drawPixel(9, 3, colorDark);\n\n    // Torso\n    for (let x = 6; x <= 9; x++) {\n      for (let y = 6; y <= 9; y++) {\n        drawPixel(x, y, colorPrimary);\n      }\n    }\n\n    // Arms & Animation (Work = jumping jacks / lifting weights, Rest = relaxed)\n    if (currentPhase === 'Work') {\n      if (animTick % 2 === 0) {\n        // Arms up\n        drawPixel(5, 5, colorSkin);\n        drawPixel(4, 4, colorSkin);\n        drawPixel(10, 5, colorSkin);\n        drawPixel(11, 4, colorSkin);\n        // Dumbbells\n        drawPixel(4, 3, colorDark);\n        drawPixel(11, 3, colorDark);\n        // Legs spread\n        drawPixel(5, 10, colorDark);\n        drawPixel(4, 11, colorDark);\n        drawPixel(10, 10, colorDark);\n        drawPixel(11, 11, colorDark);\n      } else {\n        // Arms middle\n        drawPixel(5, 7, colorSkin);\n        drawPixel(4, 8, colorSkin);\n        drawPixel(10, 7, colorSkin);\n        drawPixel(11, 8, colorSkin);\n        // Dumbbells\n        drawPixel(4, 9, colorDark);\n        drawPixel(11, 9, colorDark);\n        // Legs together\n        drawPixel(7, 10, colorDark);\n        drawPixel(7, 11, colorDark);\n        drawPixel(8, 10, colorDark);\n        drawPixel(8, 11, colorDark);\n      }\n    } else {\n      // Rest phase relaxed pose\n      drawPixel(5, 7, colorSkin);\n      drawPixel(5, 8, colorSkin);\n      drawPixel(10, 7, colorSkin);\n      drawPixel(10, 8, colorSkin);\n      drawPixel(7, 10, colorDark);\n      drawPixel(7, 11, colorDark);\n      drawPixel(8, 10, colorDark);\n      drawPixel(8, 11, colorDark);\n    }\n  }\n\n  function updateUI() {\n    if (isComplete) {\n      activeView.hidden = true;\n      completeView.hidden = false;\n      btnToggle.hidden = true;\n      btnSkip.hidden = true;\n      btnReset.textContent = 'RESTART';\n      btnReset.focus();\n      return;\n    }\n\n    activeView.hidden = false;\n    completeView.hidden = true;\n    btnToggle.hidden = false;\n    btnSkip.hidden = false;\n    btnReset.textContent = 'RESET';\n\n    setDisplay.textContent = `SET ${currentSet} / ${TOTAL_SETS}`;\n    phaseDisplay.textContent = currentPhase.toUpperCase();\n\n    if (currentPhase === 'Work') {\n      phaseDisplay.className = 'badge phase-work';\n    } else {\n      phaseDisplay.className = 'badge phase-rest';\n    }\n\n    countdownDisplay.textContent = timeLeft < 10 ? `0${timeLeft}` : `${timeLeft}`;\n    btnToggle.textContent = isRunning ? 'PAUSE' : 'START';\n\n    drawPixelArt();\n  }\n\n  function advancePhase() {\n    if (currentPhase === 'Work') {\n      currentPhase = 'Rest';\n      timeLeft = REST_SECONDS;\n    } else {\n      if (currentSet < TOTAL_SETS) {\n        currentSet++;\n        currentPhase = 'Work';\n        timeLeft = WORK_SECONDS;\n      } else {\n        finishWorkout();\n        return;\n      }\n    }\n    animTick = 0;\n    updateUI();\n  }\n\n  function finishWorkout() {\n    stopTimer();\n    isComplete = true;\n    updateUI();\n  }\n\n  function tick() {\n    animTick++;\n    if (timeLeft > 1) {\n      timeLeft--;\n      updateUI();\n    } else {\n      advancePhase();\n    }\n  }\n\n  function startTimer() {\n    if (isComplete) return;\n    isRunning = true;\n    updateUI();\n    timerInterval = setInterval(tick, 1000);\n  }\n\n  function stopTimer() {\n    isRunning = false;\n    if (timerInterval) {\n      clearInterval(timerInterval);\n      timerInterval = null;\n    }\n    updateUI();\n  }\n\n  function toggleTimer() {\n    if (isRunning) {\n      stopTimer();\n    } else {\n      startTimer();\n    }\n  }\n\n  function skipPhase() {\n    if (isComplete) return;\n    advancePhase();\n  }\n\n  function resetTimer() {\n    stopTimer();\n    currentSet = 1;\n    currentPhase = 'Work';\n    timeLeft = WORK_SECONDS;\n    isComplete = false;\n    animTick = 0;\n    updateUI();\n    btnToggle.focus();\n  }\n\n  // Event Listeners\n  btnToggle.addEventListener('click', toggleTimer);\n  btnSkip.addEventListener('click', skipPhase);\n  btnReset.addEventListener('click', resetTimer);\n\n  // Keyboard Accessibility\n  window.addEventListener('keydown', (e) => {\n    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;\n    if (e.code === 'Space') {\n      e.preventDefault();\n      if (!isComplete) toggleTimer();\n    } else if (e.key === 's' || e.key === 'S') {\n      e.preventDefault();\n      if (!isComplete) skipPhase();\n    } else if (e.key === 'r' || e.key === 'R') {\n      e.preventDefault();\n      resetTimer();\n    }\n  });\n\n  // Initial Render\n  updateUI();\n});\n",
+      "description": "Vanilla JavaScript handling workout state machine, interval ticking, skip logic, completion screen, and animated pixel art canvas."
+    },
+    {
+      "path": "README.md",
+      "content": "# Pixel Workout Timer\n\nA retro pixel-art interval workout timer application built with pure HTML, CSS, and vanilla JavaScript.\n\n## Features\n\n- **Workout Sequence**: 3 Sets of 40 seconds Work and 20 seconds Rest.\n- **Status Indicators**: Clear set display (`SET 1 / 3`), phase label (`WORK` or `REST`), and prominent countdown timer.\n- **Skip Control**: Fast-forward through any active interval directly to the next phase or set.\n- **Workout Complete Screen**: Clear message displayed at the conclusion of all 3 sets.\n- **Pixel-Art Aesthetic**: Canvas-based animated pixel avatar and 8-bit chunky UI.\n- **Accessibility**: ARIA labels, live announcement regions, visible focus rings, and full keyboard shortcuts:\n  - `Space`: Start / Pause\n  - `S`: Skip phase\n  - `R`: Reset workout\n- **100% Offline**: Zero external stylesheets, scripts, CDNs, or network requests.\n",
+      "description": "User guide and architecture notes for the Pixel Workout Timer app."
+    }
+  ]
+}
