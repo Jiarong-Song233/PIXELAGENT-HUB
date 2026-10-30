@@ -187,6 +187,14 @@ export async function executeBrowserRun(options: { root: string; run: BrowserRun
                   return true;
                 }));
             matched = assertion === 'attribute' && check.attribute === 'class' ? await target.evaluate((element, expected) => expected.trim() ? expected.trim().split(/\s+/).every((token) => element.classList.contains(token)) : element.classList.length === 0, expected) : pattern ? pattern.test(actual) : actual === expected;
+            // A style value and the expected value that name the same color match (#00FF00 = rgb(0, 255, 0)).
+            // Inline on purpose, as above: canvas normalises both without touching the app's DOM.
+            if (!matched && assertion === 'attribute' && /^(style|css)\./.test(check.attribute ?? '')) matched = await target.evaluate((_, values) => {
+              const context = document.createElement('canvas').getContext('2d');
+              if (!context || !values.every((value) => CSS.supports('color', value))) return false;
+              const [a, b] = values.map((value) => { context.fillStyle = '#000'; context.fillStyle = value; return context.fillStyle; });
+              return a === b;
+            }, [actual, expected]);
             if (assertion === 'changed') matched = !matched;
           }
           if (steady ? !matched : matched) break;

@@ -8,6 +8,7 @@
 - `input` actions work on contenteditable elements, a check may have 16 actions, and check browsers run with locale en-US and time zone UTC. On held-out set L with gpt-6-luna this scored [22/24 strict against 17/24](docs/software-studio/benchmark-results/2026-10-24-luna-l/README.md); the contenteditable idea went from 0/3 to 3/3
 
 ### Fixed
+- `style.*` and `css.*` attribute checks match any two values that name the same color, so `#00FF00`, `lime` and `rgb(0, 255, 0)` are equal. The browser reports colors as `rgb()`, which failed both arms' RGB-to-hex runs on [set N](docs/software-studio/benchmark-results/2026-10-30-gemini-n/README.md)
 - Model replies whose JSON keys lost their quotes (`"actions":[],selector:"#count"`, about a quarter of gemini-3.8-flash replies) are repaired after `JSON.parse` fails, and a bare JSON object is parsed whole even when a string inside it holds a fenced block. 339 of 340 saved Gemini replies parse ([set M](docs/software-studio/benchmark-results/2026-10-29-gemini-m/README.md) lost 11 of 24 pairs to this)
 - `codex:chat` kills a Codex run after 240 s (`--timeout`), so one hung call no longer blocks the queue. `benchmark-live.ts` turns a failed forward into a failed call instead of crashing, and still writes its summaries when `git` cannot run
 
