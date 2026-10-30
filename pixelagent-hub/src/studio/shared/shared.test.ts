@@ -151,6 +151,15 @@ test('repair notes identify the counted selector and the compared attribute', as
   assert.equal(withPages[4], 'Page markup when browser check "Check 0" failed (scripts and styles removed): <body><b id="a">Check 0</b></body>');
 });
 
+test('a repair that returns every file unchanged is detected, in any order', async () => {
+  const { unchangedFiles } = await import('./repair.js');
+  const files = [{ path: 'index.html', content: '<b>1</b>' }, { path: 'app.js', content: 'x = 1;' }];
+  assert.equal(unchangedFiles([...files].reverse(), files), true);
+  assert.equal(unchangedFiles([files[0], { ...files[1], content: 'x = 2;' }], files), false);
+  assert.equal(unchangedFiles([files[0]], files), false);
+  assert.equal(unchangedFiles([...files, { path: 'README.md', content: '' }], files), false);
+});
+
 test('unsupported reviews require a reason, ignore passing checks and cap drops in reply order by plan size', async () => {
   const { parseTesterReview } = await import('./parse.js');
   const reply = { verdicts: [

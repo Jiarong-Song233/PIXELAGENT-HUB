@@ -1,6 +1,6 @@
 import { strToU8, zipSync } from 'fflate';
 import { coderPrompt, invalidCodeReplyNote, invalidPlanFeedback, invalidReviewFeedback, isInvalidPlanError, isInvalidReplyError, managerPrompt, testerPrompt, testerReviewPrompt, REPAIR_INSTRUCTIONS, STUDIO_CONSTRAINTS, STUDIO_DELIVERABLE, type Prompt } from '@studio-shared/prompts';
-import { browserFailureNotes } from '@studio-shared/repair';
+import { UNCHANGED_REPAIR_NOTE, browserFailureNotes, unchangedFiles } from '@studio-shared/repair';
 import { dependencyNote, unsupportedDependencies } from '@studio-shared/dependencies';
 import type { BrowserCheck, BrowserCheckResult } from '../studioChecks';
 import { parseCodeOutput, parseModelObject, parsePlanOutput, parseTestPlanOutput, parseTesterReview } from '@studio-shared/parse';
@@ -160,6 +160,13 @@ async function codeUntilBuilt(entry: Entry, signal: AbortSignal, phase: (name: s
     project.rounds.push(attempt);
     project.generationMetrics = metrics(entry);
     emit(entry, 'code_ready', { files: code.output.files.length }, round);
+    // A repair that returns every file unchanged cannot fix a check: say so and ask once more.
+    if (start.previousFiles.length && unchangedFiles(code.output.files, start.previousFiles)) {
+      attempt.build = { status: 'failed', errors: [UNCHANGED_REPAIR_NOTE], checkedFiles: [], browserVerified: false };
+      emit(entry, 'build_failed', { errors: summarizeErrors([UNCHANGED_REPAIR_NOTE]) }, round);
+      revisionNotes = [...start.revisionNotes, UNCHANGED_REPAIR_NOTE];
+      continue;
+    }
     // Real packages are unsupported; like a compile error, the reason goes back to the Coder.
     const dependencies = unsupportedDependencies(code.output.dependencies);
     phase('building', round);

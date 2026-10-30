@@ -6,6 +6,7 @@
 
 | 日期 | 实验 | 一句话结论 |
 | --- | --- | --- |
+| 2026-10-30 | [谁来返修，以及什么都没改的返修](../software-studio/benchmark-results/2026-10-30-repair-model/README.md) | 同样 40 个失败的应用：Gemini 完全修好 20/38，gpt-6-luna 只有 6/38。luna 有一半的返修原样交回所有文件；遇到这种情况再要一次，修好数从 6 变成 9（4 对 1，不显著），PLAY LIVE 已采用 |
 | 2026-10-30 | [让 Coder 看到失败时的页面](../software-studio/benchmark-results/2026-10-30-repair-context/README.md) | 历史上 144 次返修里有 106 次分数纹丝不动。离线配对 A/B：同样 38 个失败的应用，返修时附上检查失败那一刻的页面 HTML，完全修好 19 个，不附也是 19 个，没有提升，因此流程里不加 |
 | 2026-10-30 | [v2.9.0 在留出集 O 上（Gemini）](../software-studio/benchmark-results/2026-10-30-gemini-o/README.md) | 8 个新想法 × 3 次：24 次全部可用，严格通过 23/24。唯一的失败是真实的应用 bug：内置的 4×4 数独题无解，“Solved!” 永远不会出现，检查没有冤枉正确的应用 |
 | 2026-10-29 | [虚拟时钟（留出集 M、N，Gemini）](../software-studio/benchmark-results/2026-10-30-gemini-n/README.md) | 检查可以把应用的时钟快进最多 60 分钟。通过率不变（20/21 对 20/21），但检查能到达以前到不了的结束状态：煮蛋计时器的“完成”状态 3/3 次被检查，基线 0/3。顺带修好了 Gemini 丢引号的 JSON，可用对数从 13/24 升到 21/24 |

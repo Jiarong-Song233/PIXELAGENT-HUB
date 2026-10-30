@@ -24,3 +24,13 @@ export function browserFailureNotes(planned: PlannedCheck[], results: CheckResul
     ...blockedRequests.map((request) => `Blocked network request from offline app: ${request}`),
   ].slice(0, 20).map((note) => note.slice(0, 2000));
 }
+
+type SourceFiles = readonly { path: string; content: string }[];
+
+/** True when a repair returned exactly the files it was asked to repair: it cannot change any check. */
+export function unchangedFiles(next: SourceFiles, previous: SourceFiles): boolean {
+  return next.length === previous.length && next.every((file) => previous.some((old) => old.path === file.path && old.content === file.content));
+}
+
+export const UNCHANGED_REPAIR_NOTE = 'Your previous repair returned every file unchanged, so the same browser checks would fail again. Find the code that causes the failures above and change it.';
+

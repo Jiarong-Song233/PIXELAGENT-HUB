@@ -8,6 +8,9 @@ vi.mock('./checks', () => ({ runInPageChecks: (...args: unknown[]) => checks(...
 
 const plan = { projectName: 'Pixel Counter', goal: 'Count', phases: [{ id: 'p1', name: 'Build', tasks: ['UI'], assignee: 'coder', priority: 'high' }], estimatedRounds: 1, risks: [] };
 const code = { language: 'javascript', files: [{ path: 'index.html', content: '<button id="add">+1</button>', description: 'UI' }], explanation: 'ok', dependencies: [] };
+// A repair reply differs from the first build: a repair that changes nothing is sent back once.
+const repaired = { ...code, files: [{ ...code.files[0], content: '<button id="add">+1</button><!-- repaired -->' }] };
+const coderReply = (init: RequestInit) => (JSON.parse(String(init.body)).messages[1].content as string).includes('Repair the existing app') ? repaired : code;
 const testPlan = { checks: [{ name: 'Adds one', trace: 'count starts 0; +1 → 1', actions: [{ type: 'click', selector: '#add' }], selector: '#count', expected: '1' }], limitations: [] };
 
 /** A DeepSeek-style SSE body that splits the reply across chunks, with usage in the last one. */
@@ -196,7 +199,7 @@ it('remembers only what the visitor asked for', async () => {
 it('a failed in-page check goes back to the Coder once, then the same checks run again', async () => {
   fetchMock.mockImplementation(async (_url: string, init: RequestInit) => {
     const system: string = JSON.parse(String(init.body)).messages[0].content;
-    return sse(system.includes('project manager') ? plan : system.includes('test planner') ? testPlan : code);
+    return sse(system.includes('project manager') ? plan : system.includes('test planner') ? testPlan : coderReply(init));
   });
   build.mockResolvedValue({ status: 'passed', errors: [], checkedFiles: ['index.html'], html: '<html></html>' });
   checks.mockResolvedValueOnce({ results: [{ name: 'Adds one', status: 'failed', actual: '2', error: 'Expected "1", observed "2"' }], errors: [] })
@@ -214,6 +217,28 @@ it('a failed in-page check goes back to the Coder once, then the same checks run
   const { project } = await live.liveRequest('GET', `/api/studio/projects/${projectId}`) as { project: { status: string; previewFile: string; rounds: unknown[] } };
   expect(project).toMatchObject({ status: 'ready_for_review', previewFile: 'v2/dist/index.html' });
   expect(checks).toHaveBeenCalledTimes(2);
+});
+
+it('a repair that returns every file unchanged is sent back once with a note', async () => {
+  let repairs = 0;
+  fetchMock.mockImplementation(async (_url: string, init: RequestInit) => {
+    const system: string = JSON.parse(String(init.body)).messages[0].content;
+    if (system.includes('project manager')) return sse(plan);
+    if (system.includes('test planner')) return sse(testPlan);
+    return sse(coderReply(init) === repaired && repairs++ === 0 ? code : coderReply(init));
+  });
+  build.mockResolvedValue({ status: 'passed', errors: [], checkedFiles: ['index.html'], html: '<html></html>' });
+  checks.mockResolvedValueOnce({ results: [{ name: 'Adds one', status: 'failed', actual: '2', error: 'Expected "1", observed "2"' }], errors: [] })
+    .mockResolvedValueOnce({ results: [{ name: 'Adds one', status: 'passed', actual: '1' }], errors: [] });
+  const { projectId } = await live.liveRequest('POST', '/api/studio/projects', JSON.stringify({ description: 'A counter' })) as { projectId: string };
+  const events = await runToEnd(projectId);
+  const types = events.map((event) => event.type);
+  expect(types.slice(types.indexOf('browser_run_finished'))).toEqual(['browser_run_finished', 'test_plan_started', 'test_plan_ready', 'phase', 'code_ready', 'build_failed', 'phase', 'code_ready', 'phase', 'build_passed', 'browser_run_started', 'browser_check', 'browser_run_finished', 'ready_for_review']);
+  const retry = JSON.parse(String((fetchMock.mock.calls.at(-1)![1] as RequestInit).body)).messages[1].content as string;
+  expect(retry).toContain('Your previous repair returned every file unchanged');
+  expect(retry).toContain('Browser check \\"Adds one\\"');
+  const { project } = await live.liveRequest('GET', `/api/studio/projects/${projectId}`) as { project: { previewFile: string } };
+  expect(project.previewFile).toBe('v3/dist/index.html');
 });
 
 it.each([
@@ -297,7 +322,7 @@ it('a custom provider runs without a key against the server the visitor entered'
 const review = (verdict: 'check-wrong' | 'app-wrong' | 'unsupported') => ({ verdicts: [{ name: 'Adds one', correctAppPasses: verdict === 'app-wrong', reason: verdict === 'check-wrong' ? 'The check never clicked the button.' : verdict === 'unsupported' ? 'Cannot read canvas pixels.' : 'The app adds two.', ...(verdict === 'check-wrong' ? { check: { name: 'Adds one', actions: [{ type: 'click', selector: '#add' }], selector: '#count', expected: '1' } } : {}) }] });
 const routed = (verdict: 'check-wrong' | 'app-wrong' | 'unsupported') => async (_url: string, init: RequestInit) => {
   const system: string = JSON.parse(String(init.body)).messages[0].content;
-  return sse(system.includes('project manager') ? plan : system.includes('You review failing browser checks') ? review(verdict) : system.includes('test planner') ? testPlan : code);
+  return sse(system.includes('project manager') ? plan : system.includes('You review failing browser checks') ? review(verdict) : system.includes('test planner') ? testPlan : coderReply(init));
 };
 
 it('a check the Tester judges wrong is corrected and rerun, without sending the app back to the Coder', async () => {
