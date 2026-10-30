@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lap-timer",
+    "title": "Lap timer",
+    "description": "A pixel lap timer: Start/Stop toggles a running time shown as mm:ss.t, Lap records the current time in a numbered list with the newest first, the fastest lap is highlighted, and Reset clears everything."
+  },
+  {
+    "id": "vending",
+    "title": "Vending machine",
+    "description": "A pixel vending machine with 4 snacks priced 1.25, 1.50, 0.75 and 2.00: Insert 0.25 and Insert 1.00 buttons add credit, clicking a snack you can afford dispenses it and shows the change, otherwise it shows 'Not enough credit'."
+  },
+  {
+    "id": "word-ladder",
+    "title": "Word chain",
+    "description": "A pixel word chain game: type a word whose first letter is the last letter of the previous word (starting from 'pixel'), repeated words are rejected with 'Already used', and a counter shows the chain length."
+  },
+  {
+    "id": "candle",
+    "title": "Candle timer",
+    "description": "A pixel candle that burns for 3 minutes: Light starts it, the candle's height shrinks as time passes, Blow out pauses it, the remaining time shows as m:ss, and 'Burnt out' appears at zero."
+  },
+  {
+    "id": "pizza-builder",
+    "title": "Pizza builder",
+    "description": "A pixel pizza order: choose Small (8), Medium (10) or Large (12) and toggle up to 5 toppings at 1.50 each, the total updates live, a sixth topping is refused with 'Max 5 toppings', and Order shows a summary."
+  },
+  {
+    "id": "sudoku-mini",
+    "title": "Mini sudoku",
+    "description": "A pixel 4x4 sudoku with a built-in puzzle: empty cells take digits 1-4, a cell that repeats a digit in its row, column or 2x2 box turns red, and 'Solved!' appears when the grid is full and valid."
+  },
+  {
+    "id": "traffic-count",
+    "title": "Traffic counter",
+    "description": "A pixel traffic counter with Car, Bus and Bike buttons: each click adds one to that type, a total and each type's percentage of the total are shown, and Undo removes the last click."
+  },
+  {
+    "id": "rest-timer",
+    "title": "Workout rest timer",
+    "description": "A pixel workout timer: 3 sets of 40 seconds work and 20 seconds rest, the current phase (Work or Rest) and set number are shown with a countdown, Skip moves to the next phase, and 'Workout complete' appears at the end."
+  }
+]
