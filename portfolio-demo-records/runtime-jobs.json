@@ -1,0 +1,15 @@
+[
+  {
+    "jobId": "job-1791370302677-task-1791370302661",
+    "taskId": "task-1791370302661",
+    "mode": "company",
+    "status": "succeeded",
+    "queuedAt": "2026-10-07T10:51:42.678Z",
+    "attempts": 1,
+    "maxRetries": 0,
+    "startedAt": "2026-10-07T10:51:42.679Z",
+    "queueWaitMs": 1,
+    "finishedAt": "2026-10-07T10:51:42.705Z",
+    "runDurationMs": 25
+  }
+]

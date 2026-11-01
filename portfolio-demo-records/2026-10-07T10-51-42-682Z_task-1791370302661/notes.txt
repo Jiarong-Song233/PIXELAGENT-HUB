@@ -1,0 +1,3 @@
+manager_planning_done
+research_done
+final_approved
