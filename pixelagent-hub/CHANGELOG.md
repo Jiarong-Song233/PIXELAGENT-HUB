@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.10.0] — 2026-11-02
+
 ### Changed
 - PLAY LIVE's automatic repair asks the Coder once more when its repair returns every file unchanged, which cannot fix any check. `gpt-6-luna` did that in 20 of 40 offline repairs; [with the retry](docs/software-studio/benchmark-results/2026-10-30-repair-model/README.md) 9 of 39 failing apps were fully fixed instead of 6 (4 discordant cases against 1, not significant). In the same comparison `gemini-3.8-flash` fixed 20 of 38 against luna's 6
 
